@@ -1,0 +1,23 @@
+﻿# Logs & runtime
+*.log
+*.pid
+*.err
+*.out
+
+# OS
+Thumbs.db
+.DS_Store
+desktop.ini
+
+# Editor / tooling
+.claude/
+.vscode/
+.idea/
+
+# Temp
+*.tmp
+*.bak
+~$*
+
+# Push script (chứa PAT khi chạy)
+push-to-github.ps1
