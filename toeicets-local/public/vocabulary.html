@@ -1,0 +1,260 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>TOEIC Quest — Từ vựng</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=10"/>
+  <style>
+    .flashcard {
+      perspective: 1200px;
+      max-width: 520px;
+      margin: 0 auto;
+      height: 320px;
+      cursor: pointer;
+    }
+    .flashcard-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform .6s;
+      transform-style: preserve-3d;
+    }
+    .flashcard.flipped .flashcard-inner { transform: rotateY(180deg); }
+    .flashcard-face {
+      position: absolute;
+      inset: 0;
+      backface-visibility: hidden;
+      border-radius: 20px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      border: 3px solid;
+    }
+    .flashcard-front {
+      background: white;
+      border-color: var(--blue);
+      color: var(--text);
+    }
+    .flashcard-back {
+      background: var(--green);
+      color: white;
+      border-color: var(--green-dark);
+      transform: rotateY(180deg);
+    }
+    .flashcard-face .big-word {
+      font-size: 36px;
+      font-weight: 900;
+      margin-bottom: 12px;
+      line-height: 1.2;
+    }
+    .flashcard-face .meaning {
+      font-size: 22px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .flashcard-face .usage {
+      font-size: 14px;
+      opacity: 0.95;
+      max-width: 380px;
+      line-height: 1.5;
+    }
+    .flashcard-hint {
+      text-align: center;
+      color: var(--text-mute);
+      font-size: 13px;
+      margin-top: 12px;
+    }
+    .flashcard-nav {
+      display: flex;
+      justify-content: center;
+      gap: 12px;
+      margin-top: 20px;
+      align-items: center;
+    }
+    .flashcard-nav .counter {
+      font-weight: 800;
+      color: var(--text-soft);
+    }
+    .category-card {
+      padding: 20px;
+      text-align: center;
+      cursor: pointer;
+      transition: transform .15s;
+      text-decoration: none;
+      color: var(--text);
+    }
+    .category-card:hover { transform: translateY(-2px); }
+    .category-card .icon { font-size: 48px; margin-bottom: 6px; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=10"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=10"></script>
+  <script src="/js/csv.js?v=10"></script>
+  <script>
+  (async () => {
+    const state = State.load();
+    const { sidebar, topbar } = renderShell({ active: 'vocab', state });
+    const root = document.getElementById('app');
+    const params = new URLSearchParams(location.search);
+    const cat = params.get('cat');
+
+    const CATEGORIES = [
+      { id: 'conjunctions', icon: '🔗', title: 'Liên từ',     desc: '80+ liên từ TOEIC', csv: '/data/vocabulary/conjunctions.csv', frontKey: 'Liên từ', backKey: 'Dịch nghĩa tiếng Việt', usageKey: 'Cách dùng' },
+    ];
+
+    function escapeHtml(s) {
+      return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    }
+
+    function renderHome() {
+      const cards = CATEGORIES.map(c => `
+        <a class="card category-card" href="?cat=${c.id}">
+          <div class="icon">${c.icon}</div>
+          <h3 style="font-size:17px;font-weight:800;margin-bottom:4px;">${c.title}</h3>
+          <p style="font-size:13px;color:var(--text-mute);">${c.desc}</p>
+        </a>`).join('');
+      root.innerHTML = sidebar + `
+        <main class="main">
+          ${topbar}
+          <h2 style="font-size:28px;font-weight:900;margin-bottom:4px;">📖 Từ vựng TOEIC</h2>
+          <p style="color:var(--text-mute);margin-bottom:24px;">Học từ vựng theo chuyên đề với flashcards. Click để lật thẻ, dùng nút để chuyển từ.</p>
+          <div class="stats-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+            ${cards}
+          </div>
+          <div class="card" style="margin-top:20px;background:var(--green-soft);border-color:var(--green);">
+            <h3 style="margin-bottom:8px;">💡 Mẹo học flashcards</h3>
+            <p style="font-size:14px;line-height:1.7;">
+              • <b>Click thẻ</b> để lật xem nghĩa<br/>
+              • Bấm "Biết rồi 👍" hoặc "Chưa nhớ 🤔" để chuyển từ tiếp theo<br/>
+              • Tiến độ được lưu tự động vào trình duyệt
+            </p>
+          </div>
+        </main>`;
+    }
+
+    async function renderCategory(catId) {
+      const c = CATEGORIES.find(x => x.id === catId);
+      if (!c) { renderHome(); return; }
+
+      let words;
+      try {
+        words = await CSV.load(c.csv);
+      } catch (e) {
+        root.innerHTML = sidebar + `<main class="main">${topbar}
+          <div class="center"><div class="big">😢</div><h2>Không tải được</h2><p>${e.message}</p>
+          <a href="/vocabulary" class="btn ghost">Quay lại</a></div></main>`;
+        return;
+      }
+      if (!words.length) {
+        root.innerHTML = sidebar + `<main class="main">${topbar}
+          <div class="center"><div class="big">📭</div><h2>Chưa có từ vựng</h2>
+          <a href="/vocabulary" class="btn ghost">Quay lại</a></div></main>`;
+        return;
+      }
+
+      // Track progress in localStorage
+      const progressKey = 'toeicets_vocab_' + catId;
+      let known = new Set(JSON.parse(localStorage.getItem(progressKey) || '[]'));
+      let idx = 0;
+
+      function renderCard() {
+        const w = words[idx];
+        const front = w[c.frontKey] || '';
+        const back = w[c.backKey] || '';
+        const usage = c.usageKey ? (w[c.usageKey] || '') : '';
+        const isKnown = known.has(front);
+
+        root.innerHTML = sidebar + `
+          <main class="main">
+            ${topbar}
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:24px;">
+              <a href="/vocabulary" class="btn ghost small">← Quay lại</a>
+              <h2 style="font-size:22px;font-weight:900;">${c.icon} ${c.title}</h2>
+              <span style="flex:1"></span>
+              <span class="stat-pill" style="color:var(--green);">⭐ ${known.size}/${words.length}</span>
+            </div>
+
+            <div class="progress-bar"><div class="fill" style="width:${Math.round((idx+1)/words.length*100)}%"></div></div>
+
+            <div class="flashcard" id="card">
+              <div class="flashcard-inner">
+                <div class="flashcard-face flashcard-front">
+                  <div class="big-word">${escapeHtml(front)}</div>
+                  <p style="color:var(--text-mute);">Click để xem nghĩa</p>
+                </div>
+                <div class="flashcard-face flashcard-back">
+                  <div class="meaning">${escapeHtml(back)}</div>
+                  ${usage ? `<div class="usage">${escapeHtml(usage)}</div>` : ''}
+                </div>
+              </div>
+            </div>
+            <p class="flashcard-hint">💡 Click vào thẻ để lật ${isKnown ? '· ⭐ Đã thuộc' : ''}</p>
+
+            <div class="flashcard-nav">
+              <button class="btn ghost small" id="prev" ${idx===0?'disabled':''}>← Trước</button>
+              <span class="counter">${idx+1} / ${words.length}</span>
+              <button class="btn red small" id="hard">🤔 Chưa nhớ</button>
+              <button class="btn small" id="easy">👍 Biết rồi</button>
+              <button class="btn blue small" id="next" ${idx>=words.length-1?'disabled':''}>Tiếp →</button>
+            </div>
+          </main>`;
+
+        // Wire flip
+        document.getElementById('card').addEventListener('click', () => {
+          document.getElementById('card').classList.toggle('flipped');
+        });
+
+        function next() {
+          if (idx < words.length - 1) { idx++; renderCard(); }
+          else { renderDone(); }
+        }
+        function prev() {
+          if (idx > 0) { idx--; renderCard(); }
+        }
+        document.getElementById('prev').addEventListener('click', prev);
+        document.getElementById('next').addEventListener('click', next);
+        document.getElementById('easy').addEventListener('click', () => {
+          known.add(front);
+          localStorage.setItem(progressKey, JSON.stringify([...known]));
+          next();
+        });
+        document.getElementById('hard').addEventListener('click', () => {
+          known.delete(front);
+          localStorage.setItem(progressKey, JSON.stringify([...known]));
+          next();
+        });
+      }
+
+      function renderDone() {
+        root.innerHTML = sidebar + `
+          <main class="main">${topbar}
+            <div class="modal" style="margin:40px auto;">
+              <div style="font-size:80px;">🎉</div>
+              <h2>Hoàn thành ${c.title}!</h2>
+              <p style="color:var(--text-mute);margin-top:8px;">${known.size}/${words.length} từ đã thuộc</p>
+              <div class="row">
+                <button class="btn ghost" onclick="location.reload()">Học lại</button>
+                <a class="btn" href="/vocabulary">Quay lại</a>
+              </div>
+            </div>
+          </main>`;
+      }
+
+      renderCard();
+    }
+
+    if (cat) renderCategory(cat); else renderHome();
+  })();
+  </script>
+</body>
+</html>

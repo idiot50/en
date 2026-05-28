@@ -1,0 +1,98 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>TOEIC Quest — Trang chủ</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=10"/>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=10"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=10"></script>
+  <script>
+    const state = State.load();
+    const { sidebar, topbar } = renderShell({ active: 'home', state });
+
+    const allTests = Catalog.all();
+    let nextTest = null;
+    for (const t of allTests) {
+      const p = State.testProgress(state, t.id);
+      if (p.status !== 'done') { nextTest = t; break; }
+    }
+    const nextYearLabel = nextTest ? (Catalog.YEARS.find(y => y.id === nextTest.year)?.label || nextTest.year) : '';
+
+    const doneCount = allTests.filter(t => State.testProgress(state, t.id).status === 'done').length;
+    const answered = Object.values(state.tests).reduce((a, t) => a + (t.answered || 0), 0);
+    const correct = Object.values(state.tests).reduce((a, t) => a + (t.correct || 0), 0);
+    const accuracy = answered > 0 ? Math.round(correct/answered*100) : 0;
+
+    const goalProgress = Math.min(100, Math.round(state.todayAnswered / state.dailyGoal * 100));
+
+    document.getElementById('app').innerHTML = sidebar + `
+      <main class="main">
+        ${topbar}
+        <div class="hero card">
+          <img class="mascot" src="/img/mascot.png" alt="mascot"/>
+          <div style="flex:1">
+            <h2>Chào mừng trở lại! 👋</h2>
+            <p>Tiếp tục hành trình chinh phục TOEIC. Mỗi câu đúng = +10 XP.</p>
+            ${nextTest ? `
+              <a class="btn gold" href="/test.html?year=${encodeURIComponent(nextTest.year)}&n=${nextTest.n}">
+                ▶ Tiếp tục: ${nextYearLabel} • ${nextTest.label}
+              </a>` : `
+              <a class="btn gold" href="/tests">🏆 Bạn đã hoàn thành tất cả đề!</a>`}
+          </div>
+        </div>
+
+        <h3 class="section-title">Nhiệm vụ hôm nay</h3>
+        <div class="card">
+          <div class="card-row">
+            <div style="font-size:40px">🎯</div>
+            <div style="flex:1">
+              <div style="font-weight:800;font-size:16px;">Hoàn thành ${state.dailyGoal} câu hỏi</div>
+              <div style="color:var(--text-mute);font-size:13px;">${state.todayAnswered} / ${state.dailyGoal} câu đã làm hôm nay</div>
+              <div class="progress-bar"><div class="fill" style="width:${goalProgress}%"></div></div>
+            </div>
+            <div style="font-weight:900;font-size:24px;color:var(--green);">+50 XP</div>
+          </div>
+        </div>
+
+        <h3 class="section-title">Thống kê của bạn</h3>
+        <div class="stats-grid">
+          <div class="stat-card streak"><div class="big">🔥 ${state.streak}</div><div class="label">Ngày streak</div></div>
+          <div class="stat-card xp"><div class="big">⚡ ${state.xp}</div><div class="label">Tổng XP</div></div>
+          <div class="stat-card tests"><div class="big">🎯 ${doneCount}/60</div><div class="label">Đề hoàn thành</div></div>
+          <div class="stat-card accuracy"><div class="big">✅ ${accuracy}%</div><div class="label">Độ chính xác</div></div>
+        </div>
+
+        <h3 class="section-title">Bắt đầu nhanh</h3>
+        <div class="stats-grid">
+          <a class="stat-card" href="/tests?year=2026" style="text-decoration:none;cursor:pointer;">
+            <div style="font-size:36px;">🆕</div>
+            <div style="font-weight:800;margin-top:6px;">TOEIC 2026</div>
+            <div class="label">Đề mới nhất</div>
+          </a>
+          <a class="stat-card" href="/tests?year=Economy" style="text-decoration:none;cursor:pointer;">
+            <div style="font-size:36px;">📖</div>
+            <div style="font-weight:800;margin-top:6px;">TOEIC Cơ bản</div>
+            <div class="label">10 đề luyện cho người mới</div>
+          </a>
+          <a class="stat-card" href="/tests" style="text-decoration:none;cursor:pointer;">
+            <div style="font-size:36px;">🗺️</div>
+            <div style="font-weight:800;margin-top:6px;">Tất cả 60 đề</div>
+            <div class="label">Bản đồ học tập</div>
+          </a>
+        </div>
+      </main>
+    `;
+  </script>
+</body>
+</html>

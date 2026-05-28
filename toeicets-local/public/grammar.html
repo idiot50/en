@@ -1,0 +1,146 @@
+﻿<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>TOEIC Quest — Ngữ pháp</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=10"/>
+  <style>
+    .grammar-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
+    .grammar-table th, .grammar-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; text-align: left; font-size: 14px; }
+    .grammar-table th { background: var(--green-soft); color: var(--green-dark); font-weight: 800; }
+    .grammar-table tr:hover { background: var(--bg-alt); }
+    .grammar-table td { line-height: 1.5; white-space: pre-line; }
+    .topic-card { padding: 24px; text-align: center; cursor: pointer; transition: transform .15s; text-decoration: none; }
+    .topic-card:hover { transform: translateY(-2px); }
+    .topic-card .icon { font-size: 56px; margin-bottom: 8px; }
+    .topic-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 4px; color: var(--text); }
+    .topic-card p { font-size: 13px; color: var(--text-mute); }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=10"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=10"></script>
+  <script src="/js/csv.js?v=10"></script>
+  <script>
+  (async () => {
+    const state = State.load();
+    const { sidebar, topbar } = renderShell({ active: 'grammar', state });
+    const root = document.getElementById('app');
+    const params = new URLSearchParams(location.search);
+    const topic = params.get('topic');
+
+    const TOPICS = [
+      { id: 'tenses',          icon: '⏰', title: 'Các thì',         desc: '10 thì cơ bản',         csv: '/data/grammar/tenses.csv' },
+      { id: 'pronouns',        icon: '👤', title: 'Đại từ',           desc: 'Pronouns',             csv: '/data/grammar/pronouns.csv' },
+      { id: 'part-of-speech',  icon: '📝', title: 'Từ loại',           desc: 'N, V, Adj, Adv, Prep', csv: null },
+      { id: 'passive',         icon: '🔄', title: 'Câu bị động',       desc: 'Passive voice',         csv: '/data/grammar/passive.csv' },
+      { id: 'conditional',     icon: '🤔', title: 'Câu điều kiện',     desc: 'Loại 0, 1, 2, 3',       csv: '/data/grammar/conditional.csv' },
+      { id: 'comparison',      icon: '⚖️', title: 'Câu so sánh',       desc: 'Comparison',            csv: null }
+    ];
+
+    function escapeHtml(s) {
+      return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    }
+
+    function renderHome() {
+      const cards = TOPICS.map(t => `
+        <a class="card topic-card" href="?topic=${t.id}">
+          <div class="icon">${t.icon}</div>
+          <h3>${t.title}</h3>
+          <p>${t.desc}</p>
+        </a>`).join('');
+      root.innerHTML = sidebar + `
+        <main class="main">
+          ${topbar}
+          <h2 style="font-size:28px;font-weight:900;margin-bottom:4px;">📚 Ngữ pháp TOEIC</h2>
+          <p style="color:var(--text-mute);margin-bottom:24px;">Bộ tổng hợp ngữ pháp thường gặp trong đề thi TOEIC.</p>
+          <div class="stats-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
+            ${cards}
+          </div>
+        </main>`;
+    }
+
+    async function renderTopic(topicId) {
+      const t = TOPICS.find(x => x.id === topicId);
+      if (!t) { renderHome(); return; }
+
+      let bodyHtml = '';
+      if (t.csv) {
+        try {
+          const rows = await CSV.load(t.csv);
+          if (rows.length) {
+            const headers = Object.keys(rows[0]).filter(h => h);
+            const head = `<tr>${headers.map(h => `<th>${escapeHtml(h)}</th>`).join('')}</tr>`;
+            const body = rows.map(r =>
+              `<tr>${headers.map(h => `<td>${escapeHtml(r[h]||'')}</td>`).join('')}</tr>`
+            ).join('');
+            bodyHtml = `<table class="grammar-table">${head}${body}</table>`;
+          }
+        } catch (e) {
+          bodyHtml = `<p style="color:var(--red)">Không tải được dữ liệu: ${e.message}</p>`;
+        }
+      } else if (t.id === 'part-of-speech') {
+        bodyHtml = `
+          <table class="grammar-table">
+            <tr><th>Từ loại</th><th>Vị trí thường gặp</th><th>Ví dụ</th></tr>
+            <tr><td>Danh từ (Noun - N)</td><td>Sau mạo từ (a, an, the), sau tính từ, sau giới từ, làm chủ ngữ/tân ngữ</td><td>The <b>book</b> is on the table.</td></tr>
+            <tr><td>Động từ (Verb - V)</td><td>Sau chủ ngữ, sau trạng từ chỉ tần suất</td><td>She <b>works</b> hard.</td></tr>
+            <tr><td>Tính từ (Adjective - Adj)</td><td>Trước danh từ, sau động từ to be / linking verbs</td><td>A <b>beautiful</b> day.</td></tr>
+            <tr><td>Trạng từ (Adverb - Adv)</td><td>Bổ nghĩa cho động từ, tính từ hoặc trạng từ khác. Thường đuôi <b>-ly</b></td><td>He runs <b>quickly</b>.</td></tr>
+            <tr><td>Giới từ (Preposition - Prep)</td><td>Đứng trước danh từ/cụm danh từ</td><td><b>In</b> the morning, <b>on</b> Monday.</td></tr>
+          </table>
+          <div class="card" style="background:var(--green-soft);border-color:var(--green);margin-top:16px;">
+            <h3 style="margin-bottom:8px;">💡 Mẹo nhận biết qua đuôi từ</h3>
+            <p style="line-height:1.7;font-size:14px;">
+              <b>Danh từ</b>: -tion, -sion, -ment, -ness, -ity, -er, -or, -ist, -ship<br/>
+              <b>Tính từ</b>: -ful, -less, -ous, -able, -ible, -ive, -al, -ic, -y<br/>
+              <b>Trạng từ</b>: -ly (hầu như luôn)<br/>
+              <b>Động từ</b>: -ize, -ise, -ify, -ate, -en
+            </p>
+          </div>`;
+      } else if (t.id === 'comparison') {
+        bodyHtml = `
+          <table class="grammar-table">
+            <tr><th>Loại</th><th>Công thức</th><th>Ví dụ</th></tr>
+            <tr><td>So sánh bằng</td><td>S + V + <b>as</b> + adj/adv + <b>as</b> + N/Pronoun</td><td>He is <b>as tall as</b> his brother.</td></tr>
+            <tr><td>So sánh không bằng</td><td>S + V + <b>not as</b> + adj/adv + <b>as</b> + N/Pronoun</td><td>This book is <b>not as interesting as</b> that one.</td></tr>
+            <tr><td>So sánh hơn (tính từ ngắn)</td><td>S + V + adj/adv + <b>-er</b> + than + N</td><td>She is <b>taller than</b> me.</td></tr>
+            <tr><td>So sánh hơn (tính từ dài)</td><td>S + V + <b>more</b> + adj/adv + than + N</td><td>This is <b>more expensive than</b> that.</td></tr>
+            <tr><td>So sánh nhất (tính từ ngắn)</td><td>S + V + the + adj/adv + <b>-est</b></td><td>He is <b>the tallest</b> in the class.</td></tr>
+            <tr><td>So sánh nhất (tính từ dài)</td><td>S + V + the <b>most</b> + adj/adv</td><td>This is <b>the most expensive</b> car.</td></tr>
+            <tr><td>So sánh kép</td><td>The + comparative + S + V, the + comparative + S + V</td><td><b>The more</b> you study, <b>the better</b> you get.</td></tr>
+          </table>
+          <div class="card" style="background:#FFF7E0;border-color:var(--gold);margin-top:16px;">
+            <h3 style="margin-bottom:8px;">⚠️ Bất quy tắc</h3>
+            <p style="line-height:1.7;font-size:14px;">
+              <b>good</b> → better → best<br/>
+              <b>bad</b> → worse → worst<br/>
+              <b>far</b> → farther/further → farthest/furthest<br/>
+              <b>many/much</b> → more → most<br/>
+              <b>little</b> → less → least
+            </p>
+          </div>`;
+      }
+
+      root.innerHTML = sidebar + `
+        <main class="main">
+          ${topbar}
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+            <a href="/grammar" class="btn ghost small">← Quay lại</a>
+            <h2 style="font-size:24px;font-weight:900;">${t.icon} ${t.title}</h2>
+          </div>
+          <div class="card" style="overflow-x:auto;">${bodyHtml}</div>
+        </main>`;
+    }
+
+    if (topic) renderTopic(topic); else renderHome();
+  })();
+  </script>
+</body>
+</html>
