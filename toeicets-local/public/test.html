@@ -1,0 +1,903 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Bài thi</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .sub-q { padding: 16px 0; border-top: 1px dashed var(--border); }
+    .sub-q:first-of-type { border-top: none; padding-top: 0; }
+    .sub-q .q-num { font-size: 12px; font-weight: 800; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .sub-q .q-text { font-size: 17px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+    .sub-q .options { margin-bottom: 8px; }
+    .group-toolbar { position: sticky; bottom: 0; background: linear-gradient(to top, var(--bg-alt) 80%, transparent); padding: 16px 0; display: flex; gap: 12px; align-items: center; z-index: 5; }
+    .pick-count { font-weight: 800; color: var(--text-soft); }
+    .btn[disabled] { opacity: 0.5; cursor: not-allowed; box-shadow: 0 4px 0 var(--border); background: var(--text-mute); }
+    details summary { cursor: pointer; font-weight: 700; }
+    .reveal-block { margin-top: 14px; padding: 14px; border-radius: 10px; background: var(--bg-alt); border-left: 4px solid var(--blue); }
+    .reveal-block .heading { font-weight: 800; font-size: 13px; color: var(--text-mute); text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+    .reveal-block .body { font-size: 14px; line-height: 1.6; white-space: pre-line; max-height: 280px; overflow-y: auto; }
+    /* Blind mode: Part 1, 2 — hide question + option text during audio. Show only A/B/C/D circles. */
+    .sub-q.blind .q-text { display: none; }
+    .sub-q.blind .options {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      gap: 20px;
+      padding: 24px 0;
+      margin-bottom: 0;
+    }
+    .sub-q.blind .option {
+      width: 80px;
+      height: 80px;
+      padding: 0;
+      border-radius: 50%;
+      justify-content: center;
+      gap: 0;
+    }
+    .sub-q.blind .option > span:not(.letter) { display: none; }
+    .sub-q.blind .option .letter {
+      width: 100%;
+      height: 100%;
+      background: transparent;
+      border: none;
+      font-size: 32px;
+      font-weight: 900;
+    }
+    .sub-q.blind .option.selected { background: var(--blue); border-color: var(--blue-dark); }
+    .sub-q.blind .option.selected .letter { color: white; }
+    /* ===== Test timer + sticky header so the clock stays visible across all questions ===== */
+    .player-header { position: sticky; top: 0; z-index: 10; background: var(--bg-alt); padding: 10px 0; margin-bottom: 12px; border-bottom: 2px solid var(--border); }
+    .test-timer { font-weight: 900; font-size: 15px; padding: 6px 12px; border-radius: 12px; background: white; border: 2px solid var(--border); color: var(--text); white-space: nowrap; }
+    .test-timer.warning { background: #ffe0e0; color: #e02020; animation: timer-pulse 1s ease-in-out infinite; }
+    @keyframes timer-pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+    .timer-chooser { display: flex; gap: 10px; flex-wrap: wrap; align-items: center; }
+    .timer-opt { display: inline-flex; align-items: center; gap: 6px; font-weight: 700; cursor: pointer; padding: 8px 14px; border: 2px solid var(--border); border-radius: 12px; }
+    .timer-opt input { cursor: pointer; }
+    #tmin-wrap input { width: 70px; padding: 6px 8px; border: 2px solid var(--border); border-radius: 10px; font-family: inherit; font-weight: 700; font-size: 15px; }
+    /* ===== Result grid (end-of-part review) ===== */
+    .q-result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 8px; margin-top: 8px; }
+    .q-result { padding: 10px 0; border-radius: 10px; font-weight: 800; font-size: 15px; border: 2px solid var(--border); cursor: pointer; color: white; }
+    .q-result.correct { background: var(--green); border-color: var(--green-dark); }
+    .q-result.wrong { background: var(--red); border-color: #c0392b; }
+    .q-result.blank { background: var(--text-mute); border-color: var(--border); }
+    .q-result:hover { filter: brightness(1.08); }
+    .q-card .option[disabled] { cursor: default; opacity: 1; }
+    /* Part 7: passage (2/3) | questions (1/3) split, full screen width */
+    .main.main-wide { max-width:none; }
+    .main-wide .player { max-width:none; }
+    .q-split { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:18px; align-items:start; margin-bottom:16px; }
+    .q-split .q-card { margin-bottom:0; }
+    .q-split-pass { position:sticky; top:66px; max-height:calc(100vh - 96px); overflow-y:auto; }
+    .q-split-pass .q-passage { max-height:none; overflow:visible; border-left:none; background:transparent; padding:0; margin-bottom:0; font-size:15.5px; }
+    .q-split-pass .q-image { max-height:none; }
+    @media (max-width:860px) { .main.main-wide { max-width:100%; } .q-split { grid-template-columns:1fr; } .q-split-pass { position:static; max-height:44vh; } .q-split-pass .q-passage { max-height:none; } }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/csv.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=10"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
+  <script>
+  (async () => {
+    const params = new URLSearchParams(location.search);
+    const year = params.get('year') || '2025';
+    const n = parseInt(params.get('n') || '1', 10);
+    const partParam = params.get('part');
+    const testKey = `${year}/test${n}`;
+
+    let state = State.load();
+    const { sidebar, topbar } = renderShell({ active: 'tests', state });
+    const root = document.getElementById('app');
+
+    // Unlock the audio channel on a user gesture so Listening audio can autoplay after async render
+    let _audioUnlocked = false;
+    function unlockAudio() {
+      if (_audioUnlocked) return;
+      _audioUnlocked = true;
+      try {
+        const s = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=');
+        s.volume = 0;
+        const p = s.play();
+        if (p && p.catch) p.catch(() => {});
+      } catch (e) {}
+    }
+
+    const yearLabel = (Catalog.YEARS.find(y => y.id === year)?.label) || year;
+
+    // ====== PART SELECTOR ======
+    function renderPartPicker() {
+      const progress = State.testProgress(state, testKey);
+      const savedMode = localStorage.getItem('toeicets_timer_mode') || 'off';
+      const savedMin = parseInt(localStorage.getItem('toeicets_timer_min') || '60', 10) || 60;
+      const partCards = [1,2,3,4,5,6,7].map(p => {
+        const done = (state.tests[testKey]?.completedParts || []).includes(p);
+        const section = p<=4 ? 'Listening' : 'Reading';
+        const icon = done ? '⭐' : (p<=4?'🎧':'📖');
+        return `
+          <a class="stat-card" href="?year=${encodeURIComponent(year)}&n=${n}&part=${p}" style="text-decoration:none;">
+            <div style="font-size:36px">${icon}</div>
+            <div style="font-weight:800;margin-top:6px;">Part ${p}</div>
+            <div class="label">${section}${done?' • Hoàn thành':''}</div>
+          </a>`;
+      }).join('');
+
+      root.innerHTML = sidebar + `
+        <main class="main">
+          ${topbar}
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:16px;">
+            <a href="/tests?year=${encodeURIComponent(year)}" class="btn ghost small">← Quay lại</a>
+            <div>
+              <h2 style="font-size:24px;font-weight:900;">${yearLabel} • Đề ${n}</h2>
+              <p style="color:var(--text-mute);font-size:13px;">${progress.parts}/7 part hoàn thành • ${progress.percent}%</p>
+            </div>
+          </div>
+          <h3 class="section-title">⏱ Đồng hồ làm bài</h3>
+          <div class="card" style="padding:16px;margin-bottom:8px;">
+            <div class="timer-chooser">
+              <label class="timer-opt"><input type="radio" name="tmode" value="off" ${savedMode==='off'?'checked':''}/> ⛔ Tắt</label>
+              <label class="timer-opt"><input type="radio" name="tmode" value="up" ${savedMode==='up'?'checked':''}/> ⏱ Đếm lên (00:00 ↑)</label>
+              <label class="timer-opt"><input type="radio" name="tmode" value="down" ${savedMode==='down'?'checked':''}/> ⏳ Đếm ngược</label>
+              <span id="tmin-wrap"><input type="number" id="tmin" min="1" max="180" value="${savedMin}"/> phút</span>
+            </div>
+            <p style="font-size:13px;color:var(--text-mute);margin-top:10px;line-height:1.5;">
+              Đồng hồ hiển thị khi làm bài. Khi <b>đếm ngược</b> về 0, bài làm sẽ tự động kết thúc.
+            </p>
+          </div>
+
+          <h3 class="section-title">📝 Làm cả đề (thi thử)</h3>
+          <div class="card" style="padding:16px;margin-bottom:8px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:2px solid var(--gold);background:linear-gradient(135deg,#fff9e6,#fff);">
+            <div style="font-size:34px;">📝</div>
+            <div style="flex:1;min-width:180px;">
+              <div style="font-weight:800;">Làm cả đề — 200 câu, 7 part liên tục</div>
+              <div style="color:var(--text-mute);font-size:13px;">Đồng hồ đếm ngược 120 phút · chấm tổng &amp; ước lượng điểm 990</div>
+            </div>
+            <button class="btn gold" id="start-full">▶ Bắt đầu thi thử</button>
+          </div>
+
+          <h3 class="section-title">Hoặc chọn part để luyện riêng</h3>
+          <div class="stats-grid" style="grid-template-columns:repeat(auto-fit,minmax(140px,1fr));">
+            ${partCards}
+          </div>
+
+          <h3 class="section-title" style="margin-top:24px;">📄 Đáp án &amp; giải thích chi tiết</h3>
+          <div class="card" style="padding:18px;">
+            <p style="font-size:14px;color:var(--text-mute);margin-bottom:14px;line-height:1.6;">
+              Xem đáp án và lời giải tiếng Việt từng câu. Có nút "Tải / In PDF" để lưu về máy làm tài liệu ôn tập.
+            </p>
+            <div style="display:flex;gap:10px;flex-wrap:wrap;">
+              <a class="btn gold" href="/answer-key.html?year=${encodeURIComponent(year)}&n=${n}" target="_blank" style="text-decoration:none;">
+                📄 Xem đáp án toàn bộ đề
+              </a>
+              <a class="btn ghost small" href="/answer-key.html?year=${encodeURIComponent(year)}&n=${n}&part=1" target="_blank" style="text-decoration:none;">Part 1</a>
+              <a class="btn ghost small" href="/answer-key.html?year=${encodeURIComponent(year)}&n=${n}&part=2" target="_blank" style="text-decoration:none;">Part 2</a>
+              <a class="btn ghost small" href="/answer-key.html?year=${encodeURIComponent(year)}&n=${n}&part=3" target="_blank" style="text-decoration:none;">Part 3</a>
+              <a class="btn ghost small" href="/answer-key.html?year=${encodeURIComponent(year)}&n=${n}&part=4" target="_blank" style="text-decoration:none;">Part 4</a>
+              <a class="btn ghost small" href="/answer-key.html?year=${encodeURIComponent(year)}&n=${n}&part=5" target="_blank" style="text-decoration:none;">Part 5</a>
+              <a class="btn ghost small" href="/answer-key.html?year=${encodeURIComponent(year)}&n=${n}&part=6" target="_blank" style="text-decoration:none;">Part 6</a>
+              <a class="btn ghost small" href="/answer-key.html?year=${encodeURIComponent(year)}&n=${n}&part=7" target="_blank" style="text-decoration:none;">Part 7</a>
+            </div>
+          </div>
+        </main>`;
+
+      // Wire timer chooser
+      const minWrap = document.getElementById('tmin-wrap');
+      const minInput = document.getElementById('tmin');
+      function syncMinWrap() {
+        const m = root.querySelector('input[name="tmode"]:checked')?.value;
+        minWrap.style.display = (m === 'down') ? '' : 'none';
+      }
+      root.querySelectorAll('input[name="tmode"]').forEach(r => {
+        r.addEventListener('change', () => {
+          localStorage.setItem('toeicets_timer_mode', r.value);
+          syncMinWrap();
+        });
+      });
+      minInput.addEventListener('change', () => {
+        let v = parseInt(minInput.value, 10);
+        if (!v || v < 1) v = 1;
+        if (v > 180) v = 180;
+        minInput.value = v;
+        localStorage.setItem('toeicets_timer_min', v);
+      });
+      syncMinWrap();
+
+      // Open a part IN-PAGE (no reload) so the click's user gesture allows audio autoplay
+      root.querySelectorAll('a.stat-card[href*="part="]').forEach(a => {
+        a.addEventListener('click', (e) => {
+          e.preventDefault();
+          unlockAudio();   // play a silent blip within this gesture so later audio can autoplay
+          const href = a.getAttribute('href');
+          const p = parseInt(new URLSearchParams(href.slice(href.indexOf('?'))).get('part'), 10);
+          history.pushState({ part: p }, '', href);
+          renderPlayer(p);
+        });
+      });
+
+      const fullBtn = document.getElementById('start-full');
+      if (fullBtn) fullBtn.addEventListener('click', () => {
+        unlockAudio();
+        history.pushState({ full: 1 }, '', `?year=${encodeURIComponent(year)}&n=${n}&full=1`);
+        startFullTest();
+      });
+    }
+
+    // ====== UTILITIES ======
+    function escapeHtml(s) {
+      return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;')
+                          .replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    }
+    function nl2br(s) { return escapeHtml(s).replace(/\n/g, '<br/>'); }
+    function highlightBlanks(t) { return escapeHtml(t).replace(/-{3,}|_{3,}/g, '<mark>______</mark>'); }
+    const AUDIO_BASE_URL = 'https://f005.backblazeb2.com/file/toeic-audio-nguyengiaphuc';
+    function normalizeAsset(v, subdir) {
+      if (!v) return null;
+      const s = String(v).trim();
+      if (!s) return null;
+      if (/^https?:\/\//i.test(s)) return s.replace(/^https?:\/\/data\.toeicets\.com\//i, '/data/');
+      const path = `/data/${year}/test${n}/${subdir}/${s}`;
+      if (subdir === 'audio') return AUDIO_BASE_URL + path;
+      return path;
+    }
+    const audioPath = v => normalizeAsset(v, 'audio');
+    const imagePath = v => normalizeAsset(v, 'image');
+    const optsLetters = q => ['A','B','C','D'].filter(L => q[L] !== undefined && q[L] !== '');
+    const correctLetter = q => (q.Answer||'').trim().toUpperCase().charAt(0);
+    const qNumber = q => (q['Question Number']||'').toString().replace(/\.0+$/,'');
+
+    // Group consecutive questions sharing Audio (parts 3,4) or Text (parts 6,7).
+    // For Reading parts 6/7 the passage Text is only stored on the FIRST question of
+    // each group — subsequent questions in the same passage have empty Text and
+    // must inherit from the previous group.
+    function buildGroups(questions, partNum) {
+      if (partNum === 1 || partNum === 2 || partNum === 5) {
+        return questions.map(q => [q]);
+      }
+      const groups = [];
+      let cur = []; let curKey = null;
+      for (const q of questions) {
+        const k = partNum <= 4 ? (q.Audio || '') : (q.Text || '');
+        // Reading 6/7: empty Text means "continue current passage"
+        if (partNum >= 6 && !k && cur.length) {
+          cur.push(q);
+          continue;
+        }
+        if (k !== curKey || !cur.length) {
+          if (cur.length) groups.push(cur);
+          cur = [q]; curKey = k;
+        } else {
+          cur.push(q);
+        }
+      }
+      if (cur.length) groups.push(cur);
+      return groups;
+    }
+
+    // ====== TEST PLAYER ======
+    async function renderPlayer(partNum) {
+      const csvUrl = `/data/${encodeURIComponent(year)}/test${n}/test${n}-part${partNum}.csv`;
+      let questions;
+      try {
+        questions = await CSV.load(csvUrl);
+      } catch (e) {
+        root.innerHTML = sidebar + `<main class="main">${topbar}
+          <div class="center"><div class="big">😢</div><h2>Không tải được Part ${partNum}</h2>
+          <p>${e.message}</p>
+          <a href="?year=${encodeURIComponent(year)}&n=${n}" class="btn ghost">Quay lại</a>
+          </div></main>`;
+        return;
+      }
+      if (!questions.length) {
+        root.innerHTML = sidebar + `<main class="main">${topbar}
+          <div class="center"><div class="big">📭</div><h2>Part ${partNum} chưa có dữ liệu</h2>
+          <a href="?year=${encodeURIComponent(year)}&n=${n}" class="btn ghost">Quay lại</a>
+          </div></main>`;
+        return;
+      }
+
+      const groups = buildGroups(questions, partNum);
+      const isListening = partNum <= 4;
+      const isBlind = partNum === 1 || partNum === 2;   // hide options/question text until submit
+      const totalQs = questions.length;
+
+      let groupIdx = 0;
+      let sessionCorrect = 0;
+      let hearts = 5;
+      let answeredSoFar = 0;
+      const results = [];   // per-question outcomes for the review screen
+      const picksByQ = {};  // every selection the user makes, keyed by question number (even without "Kiểm tra")
+      let historyLogged = false;   // log this part to account history at most once
+      // Build the full-part result list from picksByQ. Called on completion or timeout.
+      function buildResults() {
+        results.length = 0;
+        groups.forEach(g => {
+          const gImg = imagePath(g[0].Image);
+          const gText = g[0].Text || '';
+          g.forEach(q => {
+            const qn = qNumber(q);
+            const chosen = picksByQ[qn] || null;
+            const correct = correctLetter(q);
+            results.push({
+              qNum: qn, part: partNum, year, n,
+              audioFile: g[0].Audio || '', imageFile: q.Image || g[0].Image || '',
+              question: q.Question || '',
+              image: imagePath(q.Image) || gImg || null,
+              options: optsLetters(q).map(L => ({ L, text: q[L] || '' })),
+              chosen, correct, isCorrect: chosen === correct, explain: q.Explain || '',
+              script: gText || '', translation: q.Transcript || q.Translate || ''
+            });
+          });
+        });
+      }
+
+      // ====== Timer (test-level, persists across question groups) ======
+      const timerMode = localStorage.getItem('toeicets_timer_mode') || 'off';
+      const timerMin = parseInt(localStorage.getItem('toeicets_timer_min') || '60', 10) || 60;
+      let timerSeconds = timerMode === 'down' ? Math.max(1, timerMin) * 60 : 0;
+      let timerInterval = null;
+      let timedOut = false;
+      function fmtTime(s) {
+        const m = Math.floor(s / 60), sec = s % 60;
+        return `${String(m).padStart(2,'0')}:${String(sec).padStart(2,'0')}`;
+      }
+      function paintTimer() {
+        if (timerMode === 'off') return;
+        const el = document.getElementById('test-timer');
+        if (!el) return;
+        el.style.display = '';
+        if (timerMode === 'down') {
+          el.innerHTML = `⏳ ${fmtTime(timerSeconds)}`;
+          el.classList.toggle('warning', timerSeconds <= 60);
+        } else {
+          el.innerHTML = `⏱ ${fmtTime(timerSeconds)}`;
+        }
+      }
+      function stopTimer() {
+        if (timerInterval) { clearInterval(timerInterval); timerInterval = null; }
+      }
+      function startTimer() {
+        if (timerMode === 'off' || timerInterval) return;
+        timerInterval = setInterval(() => {
+          if (timerMode === 'down') {
+            timerSeconds--;
+            if (timerSeconds <= 0) { timerSeconds = 0; paintTimer(); stopTimer(); onTimeUp(); return; }
+          } else {
+            timerSeconds++;
+          }
+          paintTimer();
+        }, 1000);
+      }
+      function onTimeUp() {
+        timedOut = true;
+        cancelAutoNext();
+        buildResults();   // grade the whole part from the user's selections so far
+        State.markPartComplete(state, testKey, partNum);
+        state = State.load();
+        renderResults();
+      }
+
+      // Result summary: correct/wrong counts + per-question grid (click a number to review)
+      function renderResults() {
+        stopTimer();
+        try { QuizCore.ErrorBox.addFromResults(results); } catch (e) {}
+        const total = results.length;
+        const correctCount = results.filter(r => r.isCorrect).length;
+        const blankCount = results.filter(r => r.chosen == null).length;
+        const wrongCount = total - correctCount - blankCount;
+        const answeredCount = total - blankCount;
+        const xpGained = correctCount * 10;
+        const acc = answeredCount ? Math.round(correctCount / answeredCount * 100) : 0;
+        if (!historyLogged && answeredCount > 0 && window.Auth && Auth.addHistory) {
+          historyLogged = true;
+          Auth.addHistory({ type: 'part', testKey, part: partNum, total, correct: correctCount, wrong: wrongCount, blank: blankCount });
+        }
+        const grid = total ? results.map((r, idx) => {
+          const st = r.chosen == null ? 'blank' : (r.isCorrect ? 'correct' : 'wrong');
+          const lbl = st === 'correct' ? 'Đúng' : st === 'wrong' ? 'Sai' : 'Chưa làm';
+          return `<button class="q-result ${st}" data-idx="${idx}" title="Câu ${r.qNum} — ${lbl}">${r.qNum}</button>`;
+        }).join('')
+          : '<p style="color:var(--text-mute);">Chưa có câu nào.</p>';
+        root.innerHTML = sidebar + `
+          <main class="main">${topbar}
+            <div class="modal" style="margin:40px auto;max-width:680px;">
+              <div style="font-size:80px;">${timedOut ? '⏰' : '🏆'}</div>
+              <h2>${timedOut ? 'Hết giờ!' : `Hoàn thành Part ${partNum}!`}</h2>
+              <p style="color:var(--text-mute);margin-top:8px;">Đúng ${correctCount} • Sai ${wrongCount}${blankCount ? ` • Chưa làm ${blankCount}` : ''} • Tổng ${total} câu</p>
+              <div class="stats-grid" style="margin-top:24px;">
+                <div class="stat-card"><div class="big" style="color:var(--green);">✅ ${correctCount}</div><div class="label">Câu đúng</div></div>
+                <div class="stat-card"><div class="big" style="color:var(--red);">❌ ${wrongCount}</div><div class="label">Câu sai</div></div>
+                ${blankCount ? `<div class="stat-card"><div class="big" style="color:var(--text-mute);">⬜ ${blankCount}</div><div class="label">Chưa làm</div></div>` : ''}
+                <div class="stat-card xp"><div class="big">+${xpGained}</div><div class="label">XP nhận được</div></div>
+                <div class="stat-card accuracy"><div class="big">${acc}%</div><div class="label">Độ chính xác</div></div>
+              </div>
+              <h3 class="section-title" style="margin-top:24px;text-align:left;">Chi tiết từng câu — bấm để xem lại</h3>
+              <div class="q-result-grid">${grid}</div>
+              <div class="row" style="margin-top:24px;">
+                <a class="btn ghost" href="?year=${encodeURIComponent(year)}&n=${n}">Chọn part khác</a>
+                <a class="btn" href="/tests?year=${encodeURIComponent(year)}">Tiếp tục bản đồ</a>
+              </div>
+            </div>
+          </main>`;
+        root.querySelectorAll('.q-result').forEach(b => {
+          b.addEventListener('click', () => renderReview(parseInt(b.dataset.idx, 10)));
+        });
+      }
+
+      // Single-question review: correct answer, the user's (wrong) choice, and explanation
+      function renderReview(idx) {
+        const r = results[idx];
+        if (!r) { renderResults(); return; }
+        const st = r.chosen == null ? 'blank' : (r.isCorrect ? 'correct' : 'wrong');
+        const optsHtml = r.options.map(o => {
+          let cls = 'option';
+          if (o.L === r.correct) cls += ' correct';
+          else if (o.L === r.chosen) cls += ' wrong';
+          return `<button class="${cls}" disabled><span class="letter">${o.L}</span><span>${escapeHtml(o.text)}</span></button>`;
+        }).join('');
+        const imgHtml = r.image ? `<img class="q-image" src="${r.image}" alt="image"/>` : '';
+        const qTextHtml = r.question ? `<div class="q-text">${highlightBlanks(r.question)}</div>` : '';
+        const verdictHtml = st === 'correct'
+          ? `<div class="feedback correct"><div class="heading">🎉 Đúng — Đáp án: ${r.correct}</div></div>`
+          : st === 'blank'
+          ? `<div class="feedback wrong"><div class="heading">⬜ Chưa trả lời — Đáp án đúng: ${r.correct}</div></div>`
+          : `<div class="feedback wrong"><div class="heading">❌ Sai — Bạn chọn: ${r.chosen} • Đáp án đúng: ${r.correct}</div></div>`;
+        const explainHtml = r.explain ? `<div class="reveal-block"><div class="heading">💡 Giải thích</div><div class="body">${nl2br(r.explain)}</div></div>` : '';
+        const scriptHtml = r.script ? `<div class="reveal-block"><div class="heading">📜 Script</div><div class="body">${nl2br(r.script)}</div></div>` : '';
+        const transHtml = r.translation ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(r.translation)}</div></div>` : '';
+        root.innerHTML = sidebar + `
+          <main class="main">
+            <div class="player">
+              <div class="player-header">
+                <button class="close" id="rev-back" title="Về danh sách kết quả">←</button>
+                <div style="font-weight:900;flex:1;">Xem lại • Câu ${r.qNum} • Part ${r.part}</div>
+                <div class="test-timer ${st === 'correct' ? '' : 'warning'}">${st === 'correct' ? '✅ Đúng' : st === 'blank' ? '⬜ Chưa làm' : '❌ Sai'}</div>
+              </div>
+              <div class="q-card">
+                ${imgHtml}
+                ${qTextHtml}
+                <div class="options">${optsHtml}</div>
+                ${verdictHtml}
+                ${explainHtml}
+                ${scriptHtml}
+                ${transHtml}
+              </div>
+              <div class="group-toolbar">
+                <button class="btn ghost" id="rev-prev" ${idx <= 0 ? 'disabled' : ''}>← Câu trước</button>
+                <button class="btn ghost small" id="rev-list">Danh sách</button>
+                <span style="flex:1"></span>
+                <button class="btn blue" id="rev-next" ${idx >= results.length - 1 ? 'disabled' : ''}>Câu sau →</button>
+              </div>
+            </div>
+          </main>`;
+        document.getElementById('rev-back').onclick = () => renderResults();
+        document.getElementById('rev-list').onclick = () => renderResults();
+        const prev = document.getElementById('rev-prev');
+        if (prev && idx > 0) prev.onclick = () => renderReview(idx - 1);
+        const next = document.getElementById('rev-next');
+        if (next && idx < results.length - 1) next.onclick = () => renderReview(idx + 1);
+        window.scrollTo({ top: 0 });
+      }
+
+      let autoNext = localStorage.getItem('toeicets_autonext') === '1';
+      let autoNextTimer = null;
+      function setAutoNext(v) { autoNext = v; localStorage.setItem('toeicets_autonext', v ? '1' : '0'); }
+      function cancelAutoNext() {
+        if (autoNextTimer) { clearTimeout(autoNextTimer); autoNextTimer = null; }
+        const cd = document.getElementById('autonext-cd');
+        if (cd) cd.remove();
+      }
+
+      function renderGroup() {
+        cancelAutoNext();
+        if (groupIdx >= groups.length) {
+          // Done — build the full-part results from selections and show the summary
+          stopTimer();
+          buildResults();
+          State.markPartComplete(state, testKey, partNum);
+          state = State.load();
+          renderResults();
+          return;
+        }
+
+        const group = groups[groupIdx];
+        const isGrouped = group.length > 1;
+        const firstQ = group[0];
+        const sharedAudio = audioPath(firstQ.Audio);
+        const sharedImage = imagePath(firstQ.Image);   // Part 1 + some Part 7
+        const sharedText = firstQ.Text || '';            // passage/script
+        // Range label
+        const startN = qNumber(firstQ);
+        const endN = qNumber(group[group.length-1]);
+        const rangeLabel = startN === endN ? `Câu ${startN}` : `Câu ${startN}-${endN}`;
+
+        // Top progress bar
+        const totalGroups = groups.length;
+        const progressPct = Math.round(groupIdx / totalGroups * 100);
+
+        // Header HTML (sticky-ish player header)
+        const headerHtml = `
+          <div class="player-header">
+            <a class="close" href="?year=${encodeURIComponent(year)}&n=${n}" title="Thoát">✕</a>
+            <div class="progress-bar"><div class="fill" style="width:${progressPct}%"></div></div>
+            <label class="stat-pill" style="cursor:pointer;user-select:none;" title="Tự động chuyển sau 5s">
+              <input type="checkbox" id="autonext-toggle" ${autoNext?'checked':''} style="margin-right:4px;"/>
+              ⏭ Auto
+            </label>
+            <div class="test-timer" id="test-timer" style="display:none;"></div>
+            <div class="hearts">❤️ ${hearts}</div>
+          </div>`;
+
+        // Audio (autoplay so flow is hands-free)
+        const audioHtml = sharedAudio ? `<audio controls autoplay preload="auto" src="${sharedAudio}"></audio>` : '';
+
+        // Image (Part 1, some Part 7)
+        const imageHtml = sharedImage ? `<img class="q-image" src="${sharedImage}" alt="image"/>` : '';
+
+        // Passage: for Reading parts always visible. For Listening, hidden until submit.
+        const passageReading = (!isListening && sharedText)
+          ? `<div class="q-passage">${nl2br(sharedText)}</div>` : '';
+        // Listening passage hidden initially, revealed after submit
+        const passageListeningHidden = (isListening && sharedText)
+          ? `<div id="hidden-script" style="display:none;"></div>` : '';
+
+        // Sub-questions. In "blind" mode (Part 1, 2) we hide the option text + question
+        // until the user submits — mirroring real TOEIC Listening behavior.
+        const subQsHtml = group.map((q, i) => {
+          const letters = optsLetters(q);
+          const optsHtml = letters.map(L => `
+            <button class="option" data-qi="${i}" data-letter="${L}">
+              <span class="letter">${L}</span>
+              <span>${escapeHtml(q[L]||'')}</span>
+            </button>`).join('');
+          const qText = q.Question ? `<div class="q-text">${highlightBlanks(q.Question)}</div>` : '';
+          return `
+            <div class="sub-q ${isBlind?'blind':''}" data-qi="${i}">
+              <div class="q-num">Câu ${qNumber(q)} • Part ${partNum}</div>
+              ${qText}
+              <div class="options" id="opts-${i}">${optsHtml}</div>
+              <div id="fb-${i}"></div>
+            </div>`;
+        }).join('');
+
+        // Toolbar with submit button
+        const submitText = isGrouped
+          ? `Kiểm tra (<span id="pick-count">0</span>/${group.length})`
+          : 'Kiểm tra';
+        const toolbarHtml = `
+          <div class="group-toolbar" id="toolbar">
+            <span class="pick-count" id="pick-status">Chọn đáp án cho ${group.length} câu</span>
+            <span style="flex:1"></span>
+            <button class="btn" id="submit" disabled>${submitText}</button>
+          </div>`;
+
+        // Part 7 (reading) with a passage → two columns: passage | questions.
+        const useSplit = partNum === 7 && !!(passageReading || imageHtml);
+        const cardHtml = useSplit
+          ? `<div class="q-split">
+               <div class="q-card q-split-pass">${imageHtml}${passageReading}</div>
+               <div class="q-card q-split-q">${subQsHtml}</div>
+             </div>`
+          : `<div class="q-card">
+                ${audioHtml}
+                ${imageHtml}
+                ${passageReading}
+                ${passageListeningHidden}
+                ${subQsHtml}
+              </div>`;
+        root.innerHTML = sidebar + `
+          <main class="main${useSplit ? ' main-wide' : ''}">
+            <div class="player">
+              ${headerHtml}
+              ${cardHtml}
+              ${toolbarHtml}
+            </div>
+          </main>`;
+
+        // Wire auto-next toggle
+        document.getElementById('autonext-toggle').addEventListener('change', e => setAutoNext(e.target.checked));
+
+        // Timer: repaint into the freshly-rendered header; start ticking on first group
+        paintTimer();
+        startTimer();
+
+        // Shared transition helpers (used by audio-ended + submit handlers)
+        const isLast = groupIdx + 1 >= groups.length;
+        const nextLabel = isLast ? 'Hoàn thành ✓' : 'Tiếp →';
+        function goNext() {
+          cancelAutoNext();
+          groupIdx++;
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+          renderGroup();
+        }
+        function startAutoNextCountdown() {
+          cancelAutoNext();
+          // Make sure a countdown chip exists
+          let cd = document.getElementById('autonext-cd');
+          if (!cd) {
+            cd = document.createElement('span');
+            cd.id = 'autonext-cd';
+            cd.className = 'stat-pill';
+            cd.style.marginRight = 'auto';
+            const toolbar = document.getElementById('toolbar');
+            // insert right after pick-status if present, otherwise prepend
+            toolbar.prepend(cd);
+          }
+          let seconds = 5;
+          const render = () => {
+            cd.innerHTML = `⏭ Tự chuyển sau <b>${seconds}</b>s · <a href="#" id="cd-cancel" style="color:var(--blue);">Hủy</a>`;
+            const cancelEl = document.getElementById('cd-cancel');
+            if (cancelEl) cancelEl.onclick = (e) => { e.preventDefault(); cancelAutoNext(); };
+          };
+          render();
+          const tick = () => {
+            seconds--;
+            if (seconds < 0) { goNext(); return; }
+            render();
+            autoNextTimer = setTimeout(tick, 1000);
+          };
+          autoNextTimer = setTimeout(tick, 1000);
+        }
+        // Show a Next ("skip") button in the toolbar. Idempotent.
+        function ensureNextButton(label) {
+          const tb = document.getElementById('toolbar');
+          if (!tb) return;
+          let btn = document.getElementById('next');
+          if (!btn) {
+            btn = document.createElement('button');
+            btn.className = 'btn blue';
+            btn.id = 'next';
+            btn.textContent = label;
+            btn.addEventListener('click', goNext);
+            tb.appendChild(btn);
+          } else {
+            btn.textContent = label;
+          }
+        }
+
+        // Idempotent: reveal Next button + auto-next countdown once
+        let nextRevealed = false;
+        function revealNext() {
+          if (nextRevealed) return;
+          nextRevealed = true;
+          ensureNextButton(nextLabel);
+          if (autoNext) startAutoNextCountdown();
+        }
+
+        // Listening: audio 'ended' triggers reveal
+        const audioEl = document.querySelector('.player audio');
+        if (audioEl) {
+          audioEl.addEventListener('ended', revealNext);
+          // Browsers block autoplay-with-sound until a user gesture. Try to play;
+          // if blocked, start on the user's first tap/click anywhere on the page.
+          const tryPlay = () => { const p = audioEl.play(); if (p && p.catch) p.catch(() => {}); };
+          tryPlay();
+          document.addEventListener('pointerdown', tryPlay, { once: true });
+        }
+
+        // Pick state
+        const picks = {};
+        function updateSubmit() {
+          const picked = Object.keys(picks).length;
+          const pcEl = document.getElementById('pick-count');
+          if (pcEl) pcEl.textContent = picked;
+          const submitBtn = document.getElementById('submit');
+          const statusEl = document.getElementById('pick-status');
+          if (picked >= group.length) {
+            submitBtn.removeAttribute('disabled');
+            if (statusEl) statusEl.textContent = '✓ Đã chọn xong';
+            // Reading parts (no audio): reveal Next + countdown once all picks made
+            if (!sharedAudio) revealNext();
+          } else {
+            submitBtn.setAttribute('disabled', 'true');
+            if (statusEl) statusEl.textContent = `Còn ${group.length - picked} câu chưa chọn`;
+          }
+        }
+        updateSubmit();
+
+        // Option clicks (selection only - no immediate reveal)
+        document.querySelectorAll('.sub-q .option').forEach(btn => {
+          btn.addEventListener('click', () => {
+            // If already submitted (have feedback in this sub-q), do nothing
+            if (document.getElementById('fb-' + btn.dataset.qi).innerHTML) return;
+            const qi = btn.dataset.qi;
+            picks[qi] = btn.dataset.letter;
+            picksByQ[qNumber(group[Number(qi)])] = btn.dataset.letter;   // remember selection for end-of-part grading
+            // Toggle visual selected
+            document.querySelectorAll(`#opts-${qi} .option`).forEach(b => b.classList.remove('selected'));
+            btn.classList.add('selected');
+            updateSubmit();
+          });
+        });
+
+        // Submit handler (immediate feedback for practice; selections are also tracked in picksByQ)
+        document.getElementById('submit').addEventListener('click', () => {
+          // Reveal blind mode (Part 1, 2): show full option text + question text
+          if (isBlind) {
+            document.querySelectorAll('.sub-q.blind').forEach(el => el.classList.remove('blind'));
+          }
+          // Reveal answers + transcript
+          let groupCorrect = 0;
+          group.forEach((q, i) => {
+            const chosen = picks[i];
+            const correct = correctLetter(q);
+            const isCorrect = chosen === correct;
+            if (isCorrect) groupCorrect++;
+            // Mark options
+            document.querySelectorAll(`#opts-${i} .option`).forEach(b => {
+              const L = b.dataset.letter;
+              b.classList.remove('selected');
+              if (L === correct) b.classList.add('correct');
+              if (L === chosen && !isCorrect) b.classList.add('wrong');
+            });
+            // Feedback box
+            const explain = q.Explain || '';
+            const fbHtml = `
+              <div class="feedback ${isCorrect?'correct':'wrong'}">
+                <div class="heading">${isCorrect ? '🎉 Chính xác! +10 XP' : `❌ Chưa đúng — Đáp án: ${correct}`}</div>
+                ${explain ? `<div>${nl2br(explain)}</div>` : ''}
+              </div>`;
+            document.getElementById('fb-' + i).innerHTML = fbHtml;
+            // Record
+            State.recordAnswer(state, testKey, partNum, isCorrect);
+            if (!isCorrect) hearts = Math.max(0, hearts - 1);
+            answeredSoFar++;
+          });
+          state = State.load();
+          sessionCorrect += groupCorrect;
+
+          // Update hearts in header
+          const heartsEl = document.querySelector('.hearts');
+          if (heartsEl) heartsEl.innerHTML = `❤️ ${hearts}`;
+
+          // Reveal hidden script (Listening)
+          const hidden = document.getElementById('hidden-script');
+          if (hidden && sharedText) {
+            // Insert reveal blocks: Script (Text) + Transcript (translation if present)
+            const scriptHtml = `
+              <div class="reveal-block">
+                <div class="heading">📜 Script (audio)</div>
+                <div class="body">${nl2br(sharedText)}</div>
+              </div>`;
+            // Try to combine transcripts from all sub-questions
+            const transcripts = group.map(q => q.Transcript || q.Translate || '').filter(t => t);
+            const uniqueTrans = [...new Set(transcripts)];
+            const transHtml = uniqueTrans.length
+              ? `<div class="reveal-block" style="border-left-color:var(--green);">
+                  <div class="heading">🇻🇳 Bản dịch</div>
+                  <div class="body">${nl2br(uniqueTrans.join('\n\n'))}</div>
+                </div>` : '';
+            hidden.style.display = 'block';
+            hidden.innerHTML = scriptHtml + transHtml;
+          } else if (!isListening) {
+            // Reading: optionally show translation if available
+            const transcripts = group.map(q => q.Transcript || q.Translate || '').filter(t => t);
+            const uniqueTrans = [...new Set(transcripts)];
+            if (uniqueTrans.length) {
+              const t = document.createElement('div');
+              t.className = 'reveal-block';
+              t.style.borderLeftColor = 'var(--green)';
+              t.innerHTML = `<div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(uniqueTrans.join('\n\n'))}</div>`;
+              // Insert before toolbar
+              document.querySelector('.q-card').appendChild(t);
+            }
+          }
+
+          // Replace toolbar: show score + Next button (auto-next countdown if enabled)
+          document.getElementById('toolbar').innerHTML = `
+            <span class="pick-count">${groupCorrect}/${group.length} đúng</span>
+            <span style="flex:1"></span>`;
+          ensureNextButton(nextLabel);
+          if (autoNext) startAutoNextCountdown();
+
+          // Scroll to first sub-q's feedback
+          const firstFb = document.getElementById('fb-0');
+          if (firstFb) firstFb.scrollIntoView({ behavior: 'smooth', block: 'nearest' });
+        });
+      }
+
+      renderGroup();
+    }
+
+    // ====== FULL TEST (all 7 parts, 120-min timer, combined + estimated TOEIC score) ======
+    async function startFullTest() {
+      root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+        <div style="font-size:60px;">📝</div><h2>Đang tải cả đề…</h2>
+        <p style="color:var(--text-mute);">7 part · ~200 câu</p></div></main>`;
+      const partsArr = [1,2,3,4,5,6,7];
+      let cards = [];
+      try {
+        const csvs = await Promise.all(partsArr.map(p =>
+          CSV.load(`/data/${encodeURIComponent(year)}/test${n}/test${n}-part${p}.csv`).catch(() => null)));
+        partsArr.forEach((p, i) => {
+          const rows = csvs[i];
+          if (!rows || !rows.length) return;
+          buildGroups(rows, p).forEach(g => cards.push({ part: p, year, n, srcLabel: `Part ${p}`, questions: g }));
+        });
+      } catch (e) {}
+      if (!cards.length) {
+        root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+          <div style="font-size:60px;">😢</div><h2>Không tải được đề</h2>
+          <a class="btn ghost" href="?year=${encodeURIComponent(year)}&n=${n}">Quay lại</a></div></main>`;
+        return;
+      }
+      // TOEIC score conversion table: Index = #correct (0–100), Value1 = LC score, Value2 = RC score
+      let lc = [], rc = [];
+      try {
+        (await CSV.load('/data/score.csv')).forEach(r => {
+          const i = parseInt(r.Index, 10);
+          if (!isNaN(i)) { lc[i] = parseInt(r.Value1, 10) || 0; rc[i] = parseInt(r.Value2, 10) || 0; }
+        });
+      } catch (e) {}
+      function scoreFn(results) {
+        if (!lc.length) return '';
+        const lcC = results.filter(r => r.part <= 4 && r.isCorrect).length;
+        const rcC = results.filter(r => r.part >= 5 && r.isCorrect).length;
+        const L = lc[Math.min(lcC, 100)] || 0, R = rc[Math.min(rcC, 100)] || 0;
+        return `<div class="card" style="margin-top:18px;background:linear-gradient(135deg,#eaf6ff,#f3fff0);">
+          <h3 class="section-title" style="margin-top:0;">📊 Điểm TOEIC ước lượng</h3>
+          <div class="stats-grid">
+            <div class="stat-card"><div class="big" style="color:var(--blue);">🎧 ${L}</div><div class="label">Listening</div></div>
+            <div class="stat-card"><div class="big" style="color:var(--green);">📖 ${R}</div><div class="label">Reading</div></div>
+            <div class="stat-card xp"><div class="big">${L + R}</div><div class="label">Tổng (≤ 990)</div></div>
+          </div>
+          <p style="font-size:12px;color:var(--text-mute);margin-top:6px;">Ước lượng theo bảng quy đổi; câu chưa làm tính như sai.</p>
+        </div>`;
+      }
+      QuizCore.startQuiz({
+        root, sidebar, cards, minutes: 120,
+        icon: '🏁', title: 'Kết quả đề full (ước lượng điểm)',
+        backUrl: `?year=${encodeURIComponent(year)}&n=${n}`, backLabel: 'Làm đề khác',
+        scoreFn,
+        onFinish: (s) => {
+          const st = State.load();
+          partsArr.forEach(p => State.markPartComplete(st, testKey, p));
+          if (window.Auth && Auth.addHistory) Auth.addHistory({ type: 'full', testKey, total: s.total, correct: s.correct, wrong: s.wrong, blank: s.blank });
+        }
+      });
+    }
+
+    // Route
+    if (params.get('full') === '1') startFullTest();
+    else if (partParam) renderPlayer(parseInt(partParam, 10));
+    else renderPartPicker();
+
+    // Back/forward: re-route within the page (part / full selection uses pushState)
+    window.addEventListener('popstate', () => {
+      const sp = new URLSearchParams(location.search);
+      if (sp.get('full') === '1') startFullTest();
+      else if (sp.get('part')) renderPlayer(parseInt(sp.get('part'), 10));
+      else renderPartPicker();
+    });
+  })();
+  </script>
+  <script>
+    if (window.VocabNotes) VocabNotes.enableCapture();
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(e => console.warn('SW reg failed:', e));
+      });
+    }
+  </script>
+</body>
+</html>

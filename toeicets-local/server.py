@@ -23,12 +23,20 @@ class Handler(http.server.SimpleHTTPRequestHandler):
         # SPA-like route mapping: /grammar -> grammar.html, etc.
         routes = {
             '/': '/index.html',
+            '/tests': '/tests.html',
+            '/test': '/test.html',
+            '/quick': '/quick.html',
+            '/roadmap': '/roadmap.html',
+            '/study': '/study.html',
+            '/drill': '/drill.html',
+            '/notes': '/notes.html',
+            '/part2': '/part2.html',
+            '/dictation': '/dictation.html',
+            '/mistakes': '/mistakes.html',
+            '/login': '/login.html',
+            '/profile': '/profile.html',
             '/grammar': '/grammar.html',
             '/vocabulary': '/vocabulary.html',
-            '/leaderboard': '/leaderboard.html',
-            '/more': '/more.html',
-            '/grammar-list': '/grammar-list.html',
-            '/privacy': '/privacy.html',
         }
         if path in routes:
             self.path = routes[path] + (('?' + parsed.query) if parsed.query else '')

@@ -1,4 +1,4 @@
-﻿# Logs & runtime
+# Logs & runtime
 *.log
 *.pid
 *.err
@@ -21,3 +21,13 @@ desktop.ini
 
 # Push script (chứa PAT khi chạy)
 push-to-github.ps1
+
+# Hugging Face Space — repo Git riêng (remote HF), không nhúng vào repo này
+hf-space/
+
+# Ảnh chụp màn hình / snapshot khi debug
+toeicets-local/*.png
+toeicets-local/render-snapshot.html
+
+# Dependencies
+node_modules/

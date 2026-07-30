@@ -31,7 +31,12 @@ const State = (() => {
     }
   }
 
-  function save(s) { localStorage.setItem(KEY, JSON.stringify(s)); }
+  function save(s) {
+    localStorage.setItem(KEY, JSON.stringify(s));
+    if (typeof window !== 'undefined' && window.__stateSaved) {
+      try { window.__stateSaved(s); } catch (e) {}
+    }
+  }
 
   function recordAnswer(s, testKey, partNumber, correct) {
     if (!s.tests[testKey]) s.tests[testKey] = { answered: 0, correct: 0, completedParts: [] };

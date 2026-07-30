@@ -1,8 +1,15 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
   <title>TOEIC Quest — Trang chủ</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
   <link rel="alternate icon" href="/favicon.ico"/>
@@ -10,14 +17,22 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=10"/>
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
 </head>
 <body>
   <div class="app" id="app"></div>
-  <script src="/js/state.js?v=10"></script>
+  <script src="/js/state.js?v=11"></script>
   <script src="/js/catalog.js?v=10"></script>
-  <script src="/js/layout.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
   <script>
+    function render() {
+    const esc = s => String(s == null ? '' : s).replace(/[&<>"]/g, c => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]));
+    const au = (typeof window !== 'undefined') ? window.__authUser : null;
     const state = State.load();
     const { sidebar, topbar } = renderShell({ active: 'home', state });
 
@@ -39,10 +54,20 @@
     document.getElementById('app').innerHTML = sidebar + `
       <main class="main">
         ${topbar}
+        ${au ? '' : `
+        <div class="card" style="display:flex;align-items:center;gap:14px;flex-wrap:wrap;background:linear-gradient(135deg,#eaf6ff,#f3fff0);">
+          <div style="font-size:34px;">🔐</div>
+          <div style="flex:1;min-width:180px;">
+            <div style="font-weight:800;">Đăng nhập để lưu tiến trình</div>
+            <div style="color:var(--text-mute);font-size:13px;">Đồng bộ XP &amp; lịch sử học trên mọi thiết bị.</div>
+          </div>
+          <a class="btn" href="/login">Đăng nhập</a>
+          <a class="btn ghost" href="/login?tab=register">Đăng ký</a>
+        </div>`}
         <div class="hero card">
           <img class="mascot" src="/img/mascot.png" alt="mascot"/>
           <div style="flex:1">
-            <h2>Chào mừng trở lại! 👋</h2>
+            <h2>${au ? `Chào mừng trở lại, ${esc(au.name)}! 👋` : 'Chào mừng trở lại! 👋'}</h2>
             <p>Tiếp tục hành trình chinh phục TOEIC. Mỗi câu đúng = +10 XP.</p>
             ${nextTest ? `
               <a class="btn gold" href="/test.html?year=${encodeURIComponent(nextTest.year)}&n=${nextTest.n}">
@@ -75,6 +100,11 @@
 
         <h3 class="section-title">Bắt đầu nhanh</h3>
         <div class="stats-grid">
+          <a class="stat-card" href="/quick" style="text-decoration:none;cursor:pointer;border-color:var(--gold);background:linear-gradient(135deg,#fff9e6,#fff);">
+            <div style="font-size:36px;">⚡</div>
+            <div style="font-weight:800;margin-top:6px;">Kiểm tra nhanh</div>
+            <div class="label">15 phút • câu ngẫu nhiên</div>
+          </a>
           <a class="stat-card" href="/tests?year=2026" style="text-decoration:none;cursor:pointer;">
             <div style="font-size:36px;">🆕</div>
             <div style="font-weight:800;margin-top:6px;">TOEIC 2026</div>
@@ -91,8 +121,49 @@
             <div class="label">Bản đồ học tập</div>
           </a>
         </div>
+
+        <h3 id="support" class="section-title">💝 Ủng hộ tác giả &amp; liên hệ</h3>
+        <div class="card">
+          <p style="margin:0 0 8px;color:var(--text-mute);font-size:14px;line-height:1.6;">
+            Site đang chạy <b>hoàn toàn miễn phí</b> nhờ Hugging Face Spaces (HTML/ảnh) + Backblaze B2 (audio MP3, ~2 GB).
+            Khi nhiều người dùng, băng thông audio có thể vượt mức free và cần thuê thêm host trả phí.
+            Nếu bạn thấy site hữu ích cho việc luyện TOEIC, một ly cà phê nhỏ qua QR bên dưới sẽ giúp duy trì site lâu dài. 🙏
+          </p>
+          <p style="margin:0 0 16px;color:var(--text-mute);font-size:14px;line-height:1.6;">
+            Có góp ý, báo lỗi, hoặc đề xuất tính năng? Liên hệ qua Telegram nhé!
+          </p>
+          <div style="display:flex;gap:20px;flex-wrap:wrap;justify-content:center;">
+            <div style="text-align:center;background:#fff;padding:14px;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.08);">
+              <img src="/img/qr-donate.png" alt="QR ủng hộ" style="width:200px;height:200px;display:block;border-radius:8px;"/>
+              <div style="margin-top:10px;font-weight:800;color:#e02020;font-size:15px;">💰 Quét để ủng hộ</div>
+              <div style="font-size:12px;color:#888;margin-top:2px;">Chuyển khoản qua ví điện tử</div>
+            </div>
+            <a href="https://t.me/ngp5786" target="_blank" rel="noopener" style="text-decoration:none;background:#fff;padding:14px;border-radius:14px;box-shadow:0 2px 12px rgba(0,0,0,0.08);transition:transform .15s,box-shadow .15s;display:inline-block;">
+              <div style="width:200px;height:200px;display:flex;flex-direction:column;align-items:center;justify-content:center;background:linear-gradient(135deg,#0088cc 0%,#005f8a 100%);border-radius:8px;color:white;">
+                <div style="font-size:72px;line-height:1;">✈️</div>
+                <div style="font-weight:900;font-size:22px;margin-top:10px;letter-spacing:0.5px;">@ngp5786</div>
+                <div style="font-size:11px;margin-top:6px;opacity:0.9;">Click để chat</div>
+              </div>
+              <div style="margin-top:10px;font-weight:800;color:#0088cc;font-size:15px;text-align:center;">💬 Liên hệ Telegram</div>
+              <div style="font-size:12px;color:#888;margin-top:2px;text-align:center;">Góp ý &middot; báo lỗi &middot; trao đổi</div>
+            </a>
+          </div>
+          <p style="margin:16px 0 0;color:var(--text-mute);font-size:12px;text-align:center;font-style:italic;">
+            Mọi sự ủng hộ dù nhỏ đều rất trân trọng. Cảm ơn bạn đã đồng hành! ❤️
+          </p>
+        </div>
       </main>
     `;
+    }
+    render();
+    if (window.Auth && Auth.onChange) Auth.onChange(function () { render(); });
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(e => console.warn('SW reg failed:', e));
+      });
+    }
   </script>
 </body>
 </html>

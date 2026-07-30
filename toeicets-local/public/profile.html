@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <title>TOEIC Quest — Hồ sơ</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .hist-item { display: flex; align-items: center; gap: 12px; padding: 12px 0; border-top: 1px solid var(--border); }
+    .hist-item:first-child { border-top: none; }
+    .hist-ic { font-size: 26px; }
+    .hist-main { flex: 1; }
+    .hist-title { font-weight: 800; }
+    .hist-sub { font-size: 12px; color: var(--text-mute); }
+    .hist-score { font-weight: 900; color: var(--green-dark); white-space: nowrap; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+
+    function fmtDate(ts) {
+      try {
+        const d = ts && ts.toDate ? ts.toDate() : (ts ? new Date(ts) : null);
+        if (!d) return '';
+        return d.toLocaleString('vi-VN', { day: '2-digit', month: '2-digit', year: 'numeric', hour: '2-digit', minute: '2-digit' });
+      } catch (e) { return ''; }
+    }
+
+    function histRow(h) {
+      const isQuick = h.type === 'quick';
+      const ic = isQuick ? '⚡' : '🎯';
+      const title = isQuick
+        ? `Kiểm tra nhanh · ${h.mode === 'reading' ? 'Reading' : h.mode === 'listening' ? 'Listening' : 'Trộn'}`
+        : `${h.testKey || ''} · Part ${h.part || ''}`;
+      const total = h.total || 0;
+      const sub = `${fmtDate(h.at)} · Đúng ${h.correct || 0}/${total}${h.blank ? ` · Chưa làm ${h.blank}` : ''}`;
+      const acc = total ? Math.round((h.correct || 0) / total * 100) : 0;
+      return `<div class="hist-item"><div class="hist-ic">${ic}</div>
+        <div class="hist-main"><div class="hist-title">${title}</div><div class="hist-sub">${sub}</div></div>
+        <div class="hist-score">${acc}%</div></div>`;
+    }
+
+    async function render(user) {
+      const state = State.load();
+      const { sidebar } = renderShell({ active: 'profile', state });
+      const name = (window.__authUser && window.__authUser.name) || (user.email || '').split('@')[0];
+      const testsDone = Object.values(state.tests || {}).filter(t => (t.completedParts || []).length >= 7).length;
+      const answered = Object.values(state.tests || {}).reduce((a, t) => a + (t.answered || 0), 0);
+      const correct = Object.values(state.tests || {}).reduce((a, t) => a + (t.correct || 0), 0);
+      const acc = answered ? Math.round(correct / answered * 100) : 0;
+
+      root.innerHTML = sidebar + `
+        <main class="main">
+          <div class="card" style="display:flex;align-items:center;gap:16px;">
+            <div style="font-size:56px;">👤</div>
+            <div style="flex:1;">
+              <h2 style="font-size:22px;">${name}</h2>
+              <p style="color:var(--text-mute);font-size:13px;">${user.email || ''}</p>
+            </div>
+            <button class="btn ghost small" id="logout">Đăng xuất</button>
+          </div>
+
+          <h3 class="section-title">Thống kê</h3>
+          <div class="stats-grid">
+            <div class="stat-card streak"><div class="big">🔥 ${state.streak}</div><div class="label">Ngày streak</div></div>
+            <div class="stat-card xp"><div class="big">⚡ ${state.xp}</div><div class="label">Tổng XP</div></div>
+            <div class="stat-card tests"><div class="big">🎯 ${testsDone}/60</div><div class="label">Đề hoàn thành</div></div>
+            <div class="stat-card accuracy"><div class="big">✅ ${acc}%</div><div class="label">Độ chính xác</div></div>
+          </div>
+
+          <h3 class="section-title">Lịch sử học gần đây</h3>
+          <div class="card" id="history"><p style="color:var(--text-mute);">Đang tải lịch sử…</p></div>
+        </main>`;
+
+      document.getElementById('logout').addEventListener('click', async () => {
+        await Auth.logout();
+        location.href = '/';
+      });
+
+      const list = await Auth.getHistory(50);
+      const box = document.getElementById('history');
+      if (!box) return;
+      box.innerHTML = list.length ? list.map(histRow).join('')
+        : '<p style="color:var(--text-mute);">Chưa có lịch sử. Hãy làm một bài thi hoặc kiểm tra nhanh!</p>';
+    }
+
+    // Render instantly from the cached user (never show a blank page); Firebase confirms after.
+    if (window.__authUser) render(window.__authUser);
+    if (window.Auth && Auth.onChange) {
+      Auth.onChange(user => {
+        if (user) {
+          render({ uid: user.uid, email: user.email, name: (window.__authUser && window.__authUser.name) || user.displayName || (user.email || '').split('@')[0] });
+        } else if (!window.__authUser) {
+          location.replace('/login?next=/profile');
+        }
+      });
+    } else if (!window.__authUser) {
+      location.replace('/login?next=/profile');
+    }
+  })();
+  </script>
+</body>
+</html>

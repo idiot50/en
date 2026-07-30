@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <title>TOEIC Quest — Đăng nhập</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .auth-card { max-width: 420px; margin: 24px auto; }
+    .auth-tabs { display: flex; gap: 8px; margin-bottom: 16px; }
+    .auth-tab { flex: 1; padding: 10px; border: 2px solid var(--border); border-radius: 12px; background: white; font-weight: 800; cursor: pointer; }
+    .auth-tab.active { border-color: var(--green); background: #f3fff0; }
+    .auth-field { margin-bottom: 12px; }
+    .auth-field label { display: block; font-weight: 700; font-size: 13px; margin-bottom: 4px; color: var(--text-soft); }
+    .auth-field input { width: 100%; padding: 12px; border: 2px solid var(--border); border-radius: 12px; font-family: inherit; font-size: 15px; }
+    .auth-msg { font-size: 13px; margin: 8px 0; min-height: 18px; }
+    .auth-msg.err { color: #e02020; }
+    .auth-msg.ok { color: var(--green-dark); }
+    .auth-sep { text-align: center; color: var(--text-mute); margin: 14px 0; font-size: 13px; }
+    .btn.google { width: 100%; background: white; color: #3c4043; border: 2px solid var(--border); box-shadow: 0 4px 0 var(--border); font-size: 16px; padding: 14px; display: flex; align-items: center; justify-content: center; gap: 10px; }
+    .btn.google .g-ic { color: #4285f4; font-weight: 900; font-size: 19px; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+    const { sidebar } = renderShell({ active: 'login', state: State.load() });
+    let mode = (new URLSearchParams(location.search).get('tab') === 'register') ? 'register' : 'login';
+
+    function render() {
+      const isReg = mode === 'register';
+      root.innerHTML = sidebar + `
+        <main class="main">
+          <div class="card auth-card">
+            <h2 style="text-align:center;margin-bottom:6px;">🔐 Tài khoản TOEIC Quest</h2>
+            <p style="text-align:center;color:var(--text-mute);font-size:13px;margin-bottom:16px;">Đăng nhập để lưu tiến trình &amp; lịch sử học trên mọi thiết bị.</p>
+            <button class="btn google" id="google"><span class="g-ic">G</span> Tiếp tục với Google</button>
+            <div class="auth-sep">— hoặc dùng email —</div>
+            <div class="auth-tabs">
+              <div class="auth-tab ${!isReg?'active':''}" data-m="login">Đăng nhập</div>
+              <div class="auth-tab ${isReg?'active':''}" data-m="register">Đăng ký</div>
+            </div>
+            ${isReg ? `<div class="auth-field"><label>Tên hiển thị</label><input id="f-name" type="text" placeholder="Tên của bạn"/></div>` : ''}
+            <div class="auth-field"><label>Email</label><input id="f-email" type="email" placeholder="email@example.com"/></div>
+            <div class="auth-field"><label>Mật khẩu</label><input id="f-pw" type="password" placeholder="Tối thiểu 6 ký tự"/></div>
+            <div class="auth-msg" id="msg"></div>
+            <button class="btn ghost" id="submit" style="width:100%;">${isReg?'Đăng ký bằng email':'Đăng nhập bằng email'}</button>
+          </div>
+        </main>`;
+      root.querySelectorAll('.auth-tab').forEach(t => t.addEventListener('click', () => { mode = t.dataset.m; render(); }));
+      document.getElementById('submit').addEventListener('click', submit);
+      document.getElementById('google').addEventListener('click', google);
+      [ 'f-email', 'f-pw' ].forEach(id => {
+        const el = document.getElementById(id);
+        el.addEventListener('keydown', e => { if (e.key === 'Enter') submit(); });
+      });
+    }
+
+    function msg(text, ok) {
+      const m = document.getElementById('msg');
+      m.textContent = text; m.className = 'auth-msg ' + (ok ? 'ok' : 'err');
+    }
+    let redirected = false;
+    function done() {
+      if (redirected) return;
+      redirected = true;
+      const back = new URLSearchParams(location.search).get('next') || '/';
+      location.replace(back);   // replace so Back doesn't return to the login page
+    }
+    function friendly(e) {
+      const c = (e && e.code) || '';
+      if (c.includes('email-already-in-use')) return 'Email đã được đăng ký. Hãy đăng nhập.';
+      if (c.includes('invalid-email')) return 'Email không hợp lệ.';
+      if (c.includes('weak-password')) return 'Mật khẩu quá yếu (tối thiểu 6 ký tự).';
+      if (c.includes('wrong-password') || c.includes('invalid-credential')) return 'Sai email hoặc mật khẩu.';
+      if (c.includes('user-not-found')) return 'Tài khoản không tồn tại.';
+      if (c.includes('popup-closed')) return 'Bạn đã đóng cửa sổ đăng nhập Google.';
+      return (e && e.message) || 'Có lỗi xảy ra, thử lại.';
+    }
+    async function submit() {
+      const email = document.getElementById('f-email').value.trim();
+      const pw = document.getElementById('f-pw').value;
+      if (!email || !pw) { msg('Nhập email và mật khẩu.'); return; }
+      msg('Đang xử lý…', true);
+      try {
+        if (mode === 'register') {
+          const name = (document.getElementById('f-name') || {}).value || '';
+          await Auth.register(email, pw, name.trim());
+        } else {
+          await Auth.login(email, pw);
+        }
+        msg('Thành công! Đang chuyển…', true);
+        setTimeout(done, 600);
+      } catch (e) { msg(friendly(e)); }
+    }
+    async function google() {
+      msg('Đang mở Google…', true);
+      try { await Auth.loginGoogle(); msg('Thành công!', true); setTimeout(done, 400); }
+      catch (e) { msg(friendly(e)); }
+    }
+
+    // If already logged in, go straight in
+    Auth.onChange(u => { if (u) done(); });
+    render();
+  })();
+  </script>
+</body>
+</html>

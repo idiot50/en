@@ -1,13 +1,20 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="vi">
 <head>
   <meta charset="UTF-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
   <title>TOEIC Quest — Ngữ pháp</title>
   <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
   <link rel="alternate icon" href="/favicon.ico"/>
   <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="/css/style.css?v=10"/>
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
   <style>
     .grammar-table { width: 100%; border-collapse: collapse; margin-top: 12px; }
     .grammar-table th, .grammar-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); vertical-align: top; text-align: left; font-size: 14px; }
@@ -19,14 +26,68 @@
     .topic-card .icon { font-size: 56px; margin-bottom: 8px; }
     .topic-card h3 { font-size: 17px; font-weight: 800; margin-bottom: 4px; color: var(--text); }
     .topic-card p { font-size: 13px; color: var(--text-mute); }
+    /* Part 5 grammar category cards */
+    .p5-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(210px,1fr)); gap:12px; margin-top:12px; }
+    .p5-card { display:flex; align-items:center; gap:12px; padding:14px 16px; border:2px solid var(--border); border-radius:14px; background:white; cursor:pointer; text-decoration:none; color:var(--text); transition:all .12s; }
+    .p5-card:hover { border-color:var(--green); transform:translateY(-2px); box-shadow:0 4px 0 var(--green-dark); }
+    .p5-card .ic { font-size:32px; }
+    .p5-card .t { font-weight:800; font-size:15px; }
+    .p5-card .d { font-size:12px; color:var(--text-mute); }
+    .p5-card .cnt { margin-left:auto; font-weight:900; color:var(--green-dark); background:var(--green-soft); border-radius:20px; padding:3px 11px; font-size:13px; white-space:nowrap; }
+    .ct-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .ct-chip { border:2px solid var(--border); background:white; border-radius:12px; padding:9px 16px; font-weight:800; cursor:pointer; font-size:15px; }
+    .ct-chip.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    /* 2026 exam grammar syllabus */
+    .g26-list { margin:0 0 0 18px; line-height:1.7; font-size:14.5px; }
+    .g26-list li { margin-bottom:6px; }
+    .g26-ex { background:white; border:2px solid var(--border); border-radius:14px; padding:14px 16px; margin-bottom:12px; }
+    .g26-ex-src { font-size:11.5px; font-weight:800; color:var(--text-mute); text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px; }
+    .g26-ex-q { font-size:16px; font-weight:700; line-height:1.5; margin-bottom:10px; }
+    .g26-ex-q mark { background:#FFF6C8; padding:0 4px; border-radius:4px; }
+    .g26-opts { display:grid; gap:5px; }
+    .g26-opt { padding:6px 11px; border-radius:9px; font-size:14px; line-height:1.4; background:var(--bg-alt); }
+    .g26-opt.ok { background:#f0ffe6; border:1.5px solid var(--green); color:var(--green-dark); font-weight:700; }
+    .g26-why { margin-top:9px; padding:9px 12px; border-radius:9px; background:#f4faff; border-left:3px solid var(--blue); font-size:13.5px; line-height:1.6; }
+    .g-notes { line-height:1.7; font-size:14px; }
+    .g-notes b { color:var(--green-dark); }
+    .g-notes ul { margin:6px 0 0 18px; }
+    .g-notes li { margin-bottom:4px; }
+    /* quiz player (shared look with drill.html) */
+    .sub-q { padding:16px 0; border-top:1px dashed var(--border); }
+    .sub-q:first-of-type { border-top:none; padding-top:0; }
+    .sub-q .q-num { font-size:12px; font-weight:800; color:var(--text-mute); text-transform:uppercase; letter-spacing:.5px; margin-bottom:4px; }
+    .sub-q .q-text { font-size:17px; font-weight:700; margin-bottom:10px; line-height:1.5; }
+    .group-toolbar { position:sticky; bottom:0; background:linear-gradient(to top,var(--bg-alt) 80%,transparent); padding:16px 0; display:flex; gap:10px; align-items:center; z-index:5; flex-wrap:wrap; }
+    .pick-count { font-weight:800; color:var(--text-soft); font-size:13px; }
+    .btn[disabled] { opacity:.5; cursor:not-allowed; box-shadow:0 4px 0 var(--border); background:var(--text-mute); }
+    .reveal-block { margin-top:14px; padding:14px; border-radius:10px; background:var(--bg-alt); border-left:4px solid var(--blue); }
+    .reveal-block .heading { font-weight:800; font-size:13px; color:var(--text-mute); text-transform:uppercase; margin-bottom:6px; letter-spacing:.5px; }
+    .reveal-block .body { font-size:14px; line-height:1.6; white-space:pre-line; max-height:280px; overflow-y:auto; }
+    .player-header { position:sticky; top:0; z-index:10; background:var(--bg-alt); padding:10px 0; margin-bottom:12px; border-bottom:2px solid var(--border); display:flex; align-items:center; gap:12px; }
+    .test-timer { font-weight:900; font-size:15px; padding:6px 12px; border-radius:12px; background:white; border:2px solid var(--border); color:var(--text); white-space:nowrap; }
+    .test-timer.warning { background:#ffe0e0; color:#e02020; animation:timer-pulse 1s ease-in-out infinite; }
+    @keyframes timer-pulse { 0%,100%{opacity:1;} 50%{opacity:.5;} }
+    .q-result-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(46px,1fr)); gap:8px; margin-top:8px; }
+    .q-result { padding:10px 0; border-radius:10px; font-weight:800; font-size:15px; border:2px solid var(--border); cursor:pointer; color:white; }
+    .q-result.correct { background:var(--green); border-color:var(--green-dark); }
+    .q-result.wrong { background:var(--red); border-color:#c0392b; }
+    .q-result.blank { background:var(--text-mute); border-color:var(--border); }
+    .q-card .option[disabled] { cursor:default; opacity:1; }
   </style>
 </head>
 <body>
   <div class="app" id="app"></div>
-  <script src="/js/state.js?v=10"></script>
+  <script src="/js/state.js?v=11"></script>
   <script src="/js/catalog.js?v=10"></script>
-  <script src="/js/layout.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=10"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (async () => {
     const state = State.load();
@@ -63,7 +124,250 @@
           <div class="stats-grid" style="grid-template-columns:repeat(auto-fit,minmax(180px,1fr));gap:14px;">
             ${cards}
           </div>
+          <div style="margin-top:32px;">
+            <h2 style="font-size:22px;font-weight:900;">🎓 Ngữ pháp trọng tâm đề 2026 — Part 5 &amp; 6</h2>
+            <p style="color:var(--text-mute);margin:6px 0 4px;line-height:1.6;">
+              Phân tích <b>toàn bộ 460 câu điền từ Part 5 + Part 6</b> của 10 đề 2026 và rút ra
+              <b>21 điểm ngữ pháp phủ 100% số câu</b>. Học hết mục này là đủ kiến thức làm trọn vẹn phần điền từ.
+              Mỗi điểm có <b>quy tắc, bẫy thường gặp và ví dụ thật lấy từ đề</b>.
+            </p>
+            <div class="p5-grid" id="g26-grid"><p style="color:var(--text-mute);padding:12px;">Đang tải…</p></div>
+          </div>
+          <div style="margin-top:32px;">
+            <h2 style="font-size:22px;font-weight:900;">🎯 Ngữ pháp Part 5 — luyện theo chủ điểm</h2>
+            <p style="color:var(--text-mute);margin:6px 0 4px;line-height:1.6;">
+              Tổng hợp <b>mọi điểm ngữ pháp</b> rút ra từ toàn bộ câu Part 5 trong 60 đề. Chọn một chủ điểm để xem lý thuyết cốt lõi rồi <b>luyện tập trực tiếp</b> — chấm đúng/sai &amp; giải thích ngay từng câu.
+            </p>
+            <div class="p5-grid" id="p5-grid"><p style="color:var(--text-mute);padding:12px;">Đang tải chủ điểm…</p></div>
+          </div>
         </main>`;
+      loadP5Index().then(idx => {
+        const grid = document.getElementById('p5-grid');
+        if (!grid) return;
+        if (!idx || !idx.cats) { grid.innerHTML = '<p style="color:var(--red);padding:12px;">Không tải được danh sách chủ điểm.</p>'; return; }
+        grid.innerHTML = idx.cats.map(c => `
+          <a class="p5-card" href="?topic=p5cat&cat=${c.id}">
+            <span class="ic">${c.icon}</span>
+            <span><span class="t">${escapeHtml(c.name)}</span><br/><span class="d">${escapeHtml(c.desc)}</span></span>
+            <span class="cnt">${c.count} câu</span>
+          </a>`).join('');
+      });
+      loadG26().then(d => {
+        const grid = document.getElementById('g26-grid');
+        if (!grid) return;
+        if (!d || !d.points) { grid.innerHTML = '<p style="color:var(--red);padding:12px;">Không tải được dữ liệu.</p>'; return; }
+        grid.innerHTML = d.points.map(p => `
+          <a class="p5-card" href="?topic=g26&pt=${encodeURIComponent(p.id)}">
+            <span class="ic">${p.icon}</span>
+            <span><span class="t">${escapeHtml(p.name)}</span><br/><span class="d">${p.count} câu · ${p.pct}% đề</span></span>
+            <span class="cnt">${p.pct}%</span>
+          </a>`).join('');
+      });
+    }
+
+    // ---------- 2026 exam grammar syllabus ----------
+    let _g26 = null;
+    async function loadG26() {
+      if (_g26) return _g26;
+      try {
+        const r = await fetch('/data/grammar/exam2026/grammar-points.json', { cache: 'no-store' });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        _g26 = await r.json();
+      } catch (e) { _g26 = null; }
+      return _g26;
+    }
+
+    async function renderG26(ptId) {
+      const d = await loadG26();
+      if (!d || !d.points) { renderHome(); return; }
+      const i = d.points.findIndex(x => x.id === ptId);
+      if (i < 0) { renderHome(); return; }
+      const p = d.points[i];
+      const prev = d.points[i - 1], next = d.points[i + 1];
+      const li = arr => (arr || []).map(s => `<li>${escapeHtml(s)}</li>`).join('');
+      const exHtml = (p.examples || []).map((e, k) => {
+        const opts = ['A', 'B', 'C', 'D'].filter(L => e.options && e.options[L]).map(L => {
+          const ok = L === e.ans;
+          return `<div class="g26-opt ${ok ? 'ok' : ''}">${ok ? '✓ ' : ''}<b>${L}.</b> ${escapeHtml(e.options[L])}</div>`;
+        }).join('');
+        return `<div class="g26-ex">
+            <div class="g26-ex-src">${escapeHtml(e.src || '')}</div>
+            <div class="g26-ex-q">${escapeHtml(e.q || '').replace(/-{3,}|_{3,}/g, '<mark>______</mark>')}</div>
+            <div class="g26-opts">${opts}</div>
+            ${e.why ? `<div class="g26-why">💡 ${escapeHtml(e.why)}</div>` : ''}
+          </div>`;
+      }).join('');
+      root.innerHTML = sidebar + `
+        <main class="main">
+          ${topbar}
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+            <a href="/grammar" class="btn ghost small">← Danh sách</a>
+            <h2 style="font-size:23px;font-weight:900;">${p.icon} ${escapeHtml(p.name)}</h2>
+            <span class="cnt" style="font-weight:900;color:var(--green-dark);background:var(--green-soft);border-radius:20px;padding:3px 11px;font-size:13px;">${p.count} câu · ${p.pct}%</span>
+          </div>
+          <div class="card" style="border-color:var(--blue);background:#f4faff;">
+            <p style="margin:0;line-height:1.6;font-size:14.5px;">${escapeHtml(p.summary || '')}</p>
+          </div>
+          <div class="card" style="margin-top:14px;border-color:var(--green);">
+            <h3 style="margin:0 0 8px;">✅ Quy tắc cần nhớ</h3>
+            <ul class="g26-list">${li(p.rules)}</ul>
+          </div>
+          <div class="card" style="margin-top:14px;border-color:var(--red);">
+            <h3 style="margin:0 0 8px;color:var(--red);">⚠️ Bẫy thường gặp</h3>
+            <ul class="g26-list">${li(p.traps)}</ul>
+          </div>
+          <h3 class="section-title" style="text-align:left;">📄 Ví dụ thật từ đề 2026</h3>
+          ${exHtml}
+          <div class="row" style="margin-top:20px;flex-wrap:wrap;gap:10px;">
+            ${prev ? `<a class="btn ghost small" href="?topic=g26&pt=${encodeURIComponent(prev.id)}">← ${escapeHtml(prev.name)}</a>` : ''}
+            ${next ? `<a class="btn ghost small" href="?topic=g26&pt=${encodeURIComponent(next.id)}">${escapeHtml(next.name)} →</a>` : ''}
+            <span style="flex:1"></span>
+            <a class="btn" href="/drill">🔁 Luyện Part 5</a>
+          </div>
+        </main>`;
+      window.scrollTo({ top: 0 });
+    }
+
+    // ---------- Part 5 grammar practice ----------
+    let _p5idx = null;
+    async function loadP5Index() {
+      if (_p5idx) return _p5idx;
+      try { _p5idx = await (await fetch('/data/grammar/part5/_index.json')).json(); } catch (e) { _p5idx = null; }
+      return _p5idx;
+    }
+    const P5_NOTES = {
+      'wordform-noun': `<b>Danh từ (Noun)</b> — chỉ người, vật, sự việc.
+        <ul><li>Vị trí: sau <b>a/an/the</b>, sau <b>tính từ</b>, sau <b>giới từ</b>; làm chủ ngữ/tân ngữ.</li>
+        <li>Đuôi thường gặp: <b>-tion, -sion, -ment, -ness, -ity, -ance/-ence, -ship, -ism, -ist, -er/-or</b>.</li>
+        <li>Chú ý danh từ đếm được/không đếm được, số ít ↔ số nhiều (a report ↔ reports).</li></ul>`,
+      'wordform-adj': `<b>Tính từ (Adjective)</b> — bổ nghĩa cho danh từ.
+        <ul><li>Vị trí: <b>trước danh từ</b> (a <u>useful</u> tool) hoặc <b>sau to be / linking verb</b> (seem, become, remain…).</li>
+        <li>Đuôi: <b>-ful, -less, -ous, -ive, -able/-ible, -al, -ic, -ary, -ant/-ent</b>.</li>
+        <li>Phân biệt <b>-ing</b> (chủ động: interesting) ↔ <b>-ed</b> (bị động: interested).</li></ul>`,
+      'wordform-adv': `<b>Trạng từ (Adverb)</b> — bổ nghĩa cho động từ, tính từ, trạng từ khác hoặc cả câu.
+        <ul><li>Đuôi <b>-ly</b> (hầu như luôn): quickly, carefully.</li>
+        <li>Vị trí linh hoạt; hay đứng giữa trợ động từ và động từ chính, hoặc bổ nghĩa cho tính từ (<u>highly</u> effective).</li>
+        <li>Trạng từ tần suất/mức độ: very, quite, too, enough, always, often.</li></ul>`,
+      'verb': `<b>Động từ: Thì &amp; Dạng</b>
+        <ul><li>Chia thì theo dấu hiệu thời gian; <b>hòa hợp chủ ngữ–động từ</b> (he <u>works</u>, they <u>work</u>).</li>
+        <li>Bị động: <b>be + V3/ed</b>. Hoàn thành: <b>have/has + V3</b>. Tiếp diễn: <b>be + V-ing</b>.</li>
+        <li><b>to-V</b> vs <b>V-ing</b> sau động từ (want to do; enjoy doing); động từ khuyết thiếu + V nguyên thể.</li></ul>`,
+      'prep': `<b>Giới từ (Prepositions)</b>
+        <ul><li>Thời gian: <b>in</b> (tháng/năm), <b>on</b> (ngày), <b>at</b> (giờ), during, by, until, for, since, within.</li>
+        <li>Nơi chốn: in/on/at, above, below, between, among, across.</li>
+        <li>Đi kèm động từ/tính từ/danh từ (collocation): interested <b>in</b>, responsible <b>for</b>, increase <b>in</b>.</li></ul>`,
+      'conj': `<b>Liên từ &amp; Từ nối</b>
+        <ul><li>Liên từ kết hợp: and, but, or, so, yet, nor.</li>
+        <li>Liên từ phụ thuộc (+ mệnh đề): because, although, while, if, unless, when, before, after.</li>
+        <li>Trạng từ nối: however, therefore, moreover, nevertheless.</li>
+        <li>⚠️ Phân biệt <b>liên từ + mệnh đề</b> vs <b>giới từ + danh từ</b>: because ↔ because of; although ↔ despite.</li></ul>`,
+      'pronoun': `<b>Đại từ (Pronouns)</b>
+        <ul><li>Chủ ngữ (I, he, they) ↔ tân ngữ (me, him, them).</li>
+        <li>Sở hữu: tính từ sở hữu <b>my/his/their</b> (+ danh từ) ↔ đại từ sở hữu <b>mine/his/theirs</b>.</li>
+        <li>Phản thân: myself, himself, themselves (chủ ngữ = tân ngữ).</li>
+        <li>Bất định: each, every, all, some, any, none, one, another, other(s).</li></ul>`,
+      'relative': `<b>Mệnh đề quan hệ (Relative clauses)</b>
+        <ul><li><b>who/whom</b> (người), <b>which</b> (vật), <b>that</b> (cả hai), <b>whose</b> (sở hữu), where/when.</li>
+        <li>Mệnh đề xác định (không dấu phẩy) ↔ không xác định (có dấu phẩy, không dùng <b>that</b>).</li>
+        <li>Đại từ quan hệ làm chủ ngữ thì <b>không lược bỏ</b>; làm tân ngữ có thể lược bỏ.</li></ul>`,
+      'comparison': `<b>So sánh (Comparison)</b>
+        <ul><li>Bằng: <b>as + adj/adv + as</b>.</li>
+        <li>Hơn: tính từ ngắn <b>+ -er + than</b>; tính từ dài <b>more + adj + than</b>.</li>
+        <li>Nhất: <b>the + -est</b> / <b>the most + adj</b>.</li>
+        <li>So sánh kép: <b>the + comp…, the + comp…</b>. Bất quy tắc: good→better→best.</li></ul>`,
+      'vocab': `<b>Từ vựng: Chọn từ đúng nghĩa (Word choice)</b>
+        <ul><li>4 phương án <b>cùng từ loại</b> nhưng khác nghĩa — chọn theo <b>ngữ cảnh</b> và <b>collocation</b>.</li>
+        <li>Chú ý cụm từ cố định: make a decision, meet a deadline, status update.</li>
+        <li>Đọc kỹ danh từ/động từ đi kèm giới từ để loại trừ phương án sai.</li></ul>`
+    };
+
+    function p5Error(msg) {
+      root.innerHTML = sidebar + `
+        <main class="main">${topbar}
+          <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;">
+            <a href="/grammar" class="btn ghost small">← Quay lại</a>
+          </div>
+          <div class="card" style="border-color:var(--red);">
+            <h3 style="margin-top:0;color:var(--red);">⚠️ Không tải được câu luyện tập</h3>
+            <p style="line-height:1.6;">${msg}</p>
+            <button class="btn" id="p5-retry" style="margin-top:8px;">↻ Thử lại</button>
+            <a class="btn ghost" href="/grammar" style="margin-left:8px;">Chọn chủ điểm khác</a>
+          </div>
+        </main>`;
+      const rb = document.getElementById('p5-retry');
+      if (rb) rb.addEventListener('click', () => location.reload());
+    }
+
+    async function renderP5Cat(catId) {
+      const idx = await loadP5Index();
+      const meta = idx && idx.cats && idx.cats.find(c => c.id === catId);
+      if (!meta) { renderHome(); return; }
+      if (!window.QuizCore) { p5Error('Bộ máy luyện tập chưa nạp xong (có thể do bản lưu cũ). Hãy tải lại trang bằng <b>Ctrl+Shift+R</b>.'); return; }
+      let items = null;
+      try {
+        const res = await fetch('/data/grammar/part5/' + catId + '.json', { cache: 'no-store' });
+        if (!res.ok) throw new Error('HTTP ' + res.status);
+        items = await res.json();
+      } catch (e) {
+        p5Error('Lỗi tải dữ liệu chủ điểm (' + (e && e.message || e) + '). Kiểm tra kết nối rồi thử lại.');
+        return;
+      }
+      if (!Array.isArray(items) || !items.length) { p5Error('Chủ điểm này chưa có câu hỏi.'); return; }
+      const total = items.length;
+      const COUNTS = [10, 20, 40, 'all'];
+      let count = 20;
+
+      function draw() {
+        root.innerHTML = sidebar + `
+          <main class="main">
+            ${topbar}
+            <div style="display:flex;align-items:center;gap:12px;margin-bottom:14px;flex-wrap:wrap;">
+              <a href="/grammar" class="btn ghost small">← Chủ điểm khác</a>
+              <h2 style="font-size:23px;font-weight:900;">${meta.icon} ${escapeHtml(meta.name)}</h2>
+              <span class="cnt" style="font-weight:900;color:var(--green-dark);background:var(--green-soft);border-radius:20px;padding:3px 11px;font-size:13px;">${total} câu</span>
+            </div>
+            <div class="card" style="border-color:var(--green);background:var(--green-soft);">
+              <h3 style="margin:0 0 8px;">💡 Ngữ pháp cần biết</h3>
+              <div class="g-notes">${P5_NOTES[catId] || ''}</div>
+            </div>
+            <div class="card" style="margin-top:14px;">
+              <h3 class="section-title" style="margin-top:0;">Luyện tập — chọn số câu</h3>
+              <div class="ct-row">
+                ${COUNTS.map(c => `<button class="ct-chip ${c === count ? 'active' : ''}" data-c="${c}">${c === 'all' ? 'Tất cả (' + total + ')' : c + ' câu'}</button>`).join('')}
+              </div>
+              <p style="font-size:12.5px;color:var(--text-mute);margin-top:8px;">Câu hỏi lấy ngẫu nhiên trong ${total} câu thuộc chủ điểm này. Trả lời xong <b>hiện đáp án &amp; giải thích ngay</b>. Câu sai tự vào <b>Sổ lỗi sai</b> để ôn lại.</p>
+              <button class="btn gold" id="p5-start" style="margin-top:12px;">▶ Bắt đầu luyện</button>
+            </div>
+          </main>`;
+        root.querySelectorAll('.ct-chip').forEach(ch => ch.addEventListener('click', () => {
+          count = ch.dataset.c === 'all' ? 'all' : parseInt(ch.dataset.c, 10);
+          root.querySelectorAll('.ct-chip').forEach(x => x.classList.toggle('active', x.dataset.c === String(count)));
+        }));
+        document.getElementById('p5-start').addEventListener('click', startPractice);
+      }
+
+      function startPractice() {
+        const pool = items.slice();
+        for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+        const n = count === 'all' ? pool.length : Math.min(count, pool.length);
+        const cards = pool.slice(0, n).map(x => ({
+          part: 5, year: x.y, n: x.n, srcLabel: x.src,
+          questions: [{ 'Question Number': x.qn, Question: x.q, A: x.A, B: x.B, C: x.C, D: x.D, Answer: x.ans, Explain: x.ex }]
+        }));
+        QuizCore.startQuiz({
+          root, sidebar, cards,
+          minutes: Math.max(10, Math.ceil(cards.length * 1.0)),
+          instantFeedback: true,
+          noteButton: (ctx) => VocabNotes.openModal({ src: (ctx && ctx.src) || '' }),
+          icon: meta.icon, title: `Kết quả: ${meta.name}`,
+          backUrl: '/grammar?topic=p5cat&cat=' + catId, backLabel: 'Luyện tiếp',
+          onFinish: (s) => {
+            if (window.Auth && Auth.addHistory) Auth.addHistory({ type: 'grammar-p5', cat: catId, total: s.total, correct: s.correct, wrong: s.wrong, blank: s.blank });
+          }
+        });
+      }
+
+      draw();
     }
 
     async function renderTopic(topicId) {
@@ -139,8 +443,21 @@
         </main>`;
     }
 
-    if (topic) renderTopic(topic); else renderHome();
+    // Route FIRST so the page always renders even if a helper failed to load.
+    const catParam = params.get('cat');
+    if (topic === 'p5cat') renderP5Cat(catParam);
+    else if (topic === 'g26') renderG26(params.get('pt'));
+    else if (topic) renderTopic(topic);
+    else renderHome();
+    try { if (window.VocabNotes) VocabNotes.enableCapture(); } catch (e) { console.warn('VocabNotes capture off:', e); }
   })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(e => console.warn('SW reg failed:', e));
+      });
+    }
   </script>
 </body>
 </html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Bản đồ bài thi</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script>
+    const state = State.load();
+    const { sidebar, topbar } = renderShell({ active: 'tests', state });
+
+    const params = new URLSearchParams(location.search);
+    const selectedYear = params.get('year') || Catalog.YEARS[0].id;
+
+    const tabs = Catalog.YEARS.map(y =>
+      `<a class="year-tab ${y.id===selectedYear?'active':''}" href="?year=${encodeURIComponent(y.id)}">${y.label}</a>`
+    ).join('');
+
+    const tests = Catalog.tests(selectedYear);
+    const positions = ['center','right','right','center','left','left','center','right','right','center'];
+    const nodes = tests.map((t, i) => {
+      const p = State.testProgress(state, t.id);
+      const cls = p.status === 'done' ? 'done' : (p.status === 'current' ? 'current' : '');
+      const url = `/test.html?year=${encodeURIComponent(t.year)}&n=${t.n}`;
+      return `
+        <div class="slot ${positions[i]}">
+          <a href="${url}" class="test-node ${cls}" title="${t.year} ${t.label} — ${p.percent}%">
+            ${t.n}
+            <div class="small-label">${p.parts}/7</div>
+          </a>
+        </div>`;
+    }).join('');
+
+    const doneInYear = tests.filter(t => State.testProgress(state, t.id).status === 'done').length;
+    const yearLabel = Catalog.YEARS.find(y => y.id === selectedYear).label;
+
+    document.getElementById('app').innerHTML = sidebar + `
+      <main class="main">
+        ${topbar}
+        <h2 style="font-size:28px;font-weight:900;margin-bottom:4px;">🗺️ Bản đồ bài thi</h2>
+        <p style="color:var(--text-mute);margin-bottom:20px;">Chinh phục lần lượt 60 đề thi. Mỗi đề có 7 Part.</p>
+
+        <div class="year-tabs">${tabs}</div>
+
+        <div class="card">
+          <div class="card-row" style="margin-bottom:16px;">
+            <div style="font-size:40px;">${selectedYear==='Economy'?'🌱':'🎓'}</div>
+            <div style="flex:1">
+              <h2 style="margin:0">${yearLabel}</h2>
+              <p style="color:var(--text-mute);">${doneInYear}/10 đề hoàn thành</p>
+              <div class="progress-bar"><div class="fill" style="width:${doneInYear*10}%"></div></div>
+            </div>
+          </div>
+
+          <div class="test-zig">${nodes}</div>
+        </div>
+
+        <p style="text-align:center;color:var(--text-mute);font-size:13px;margin-top:20px;">
+          💡 Click vào số đề để bắt đầu hoặc tiếp tục.
+        </p>
+      </main>
+    `;
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(e => console.warn('SW reg failed:', e));
+      });
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Ôn theo Part</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .sub-q { padding: 16px 0; border-top: 1px dashed var(--border); }
+    .sub-q:first-of-type { border-top: none; padding-top: 0; }
+    .sub-q .q-num { font-size: 12px; font-weight: 800; color: var(--text-mute); text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 4px; }
+    .sub-q .q-text { font-size: 17px; font-weight: 700; margin-bottom: 10px; line-height: 1.4; }
+    /* Blind mode: Part 1, 2 — hide question + option text while listening */
+    .sub-q.blind .q-text { display: none; }
+    .sub-q.blind .options { display: flex; flex-direction: row; justify-content: center; flex-wrap: wrap; gap: 20px; padding: 24px 0; margin-bottom: 0; }
+    .sub-q.blind .option { width: 80px; height: 80px; padding: 0; border-radius: 50%; justify-content: center; gap: 0; }
+    .sub-q.blind .option > span:not(.letter) { display: none; }
+    .sub-q.blind .option .letter { width: 100%; height: 100%; background: transparent; border: none; font-size: 32px; font-weight: 900; }
+    .sub-q.blind .option.selected { background: var(--blue); border-color: var(--blue-dark); }
+    .sub-q.blind .option.selected .letter { color: white; }
+    .group-toolbar { position: sticky; bottom: 0; background: linear-gradient(to top, var(--bg-alt) 80%, transparent); padding: 16px 0; display: flex; gap: 10px; align-items: center; z-index: 5; flex-wrap: wrap; }
+    .pick-count { font-weight: 800; color: var(--text-soft); font-size: 13px; }
+    .btn[disabled] { opacity: 0.5; cursor: not-allowed; box-shadow: 0 4px 0 var(--border); background: var(--text-mute); }
+    .reveal-block { margin-top: 14px; padding: 14px; border-radius: 10px; background: var(--bg-alt); border-left: 4px solid var(--blue); }
+    .reveal-block .heading { font-weight: 800; font-size: 13px; color: var(--text-mute); text-transform: uppercase; margin-bottom: 6px; letter-spacing: 0.5px; }
+    .reveal-block .body { font-size: 14px; line-height: 1.6; white-space: pre-line; max-height: 280px; overflow-y: auto; }
+    .player-header { position: sticky; top: 0; z-index: 10; background: var(--bg-alt); padding: 10px 0; margin-bottom: 12px; border-bottom: 2px solid var(--border); }
+    .test-timer { font-weight: 900; font-size: 15px; padding: 6px 12px; border-radius: 12px; background: white; border: 2px solid var(--border); color: var(--text); white-space: nowrap; }
+    .test-timer.warning { background: #ffe0e0; color: #e02020; animation: timer-pulse 1s ease-in-out infinite; }
+    @keyframes timer-pulse { 0%,100% { opacity: 1; } 50% { opacity: .5; } }
+    .q-result-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(46px, 1fr)); gap: 8px; margin-top: 8px; }
+    .q-result { padding: 10px 0; border-radius: 10px; font-weight: 800; font-size: 15px; border: 2px solid var(--border); cursor: pointer; color: white; }
+    .q-result.correct { background: var(--green); border-color: var(--green-dark); }
+    .q-result.wrong { background: var(--red); border-color: #c0392b; }
+    .q-result.blank { background: var(--text-mute); border-color: var(--border); }
+    .q-result:hover { filter: brightness(1.08); }
+    .q-card .option[disabled] { cursor: default; opacity: 1; }
+    /* part & count choosers */
+    .pt-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(150px, 1fr)); gap: 10px; margin-top: 8px; }
+    .pt-card { border: 3px solid var(--border); border-radius: 14px; padding: 13px; cursor: pointer; text-align: center; background: white; transition: all .12s; }
+    .pt-card:hover { border-color: var(--blue); }
+    .pt-card.active { border-color: var(--green); background: #f3fff0; box-shadow: 0 3px 0 var(--green-dark); }
+    .pt-card .ic { font-size: 30px; }
+    .pt-card .t { font-weight: 800; margin-top: 4px; font-size: 14px; }
+    .pt-card .d { font-size: 11.5px; color: var(--text-mute); margin-top: 2px; }
+    .ct-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .ct-chip { border: 2px solid var(--border); background: white; border-radius: 12px; padding: 10px 18px; font-weight: 800; cursor: pointer; font-size: 15px; }
+    .ct-chip.active { border-color: var(--green); background: #f3fff0; color: var(--green-dark); }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/csv.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=10"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+    const { sidebar } = renderShell({ active: 'drill', state: State.load() });
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+    const PARTS = [
+      { p: 1, ic: '🖼', t: 'Part 1', d: 'Mô tả hình ảnh' },
+      { p: 2, ic: '💬', t: 'Part 2', d: 'Hỏi – đáp' },
+      { p: 3, ic: '🗣', t: 'Part 3', d: 'Hội thoại' },
+      { p: 4, ic: '📢', t: 'Part 4', d: 'Bài nói chuyện' },
+      { p: 5, ic: '✏️', t: 'Part 5', d: 'Hoàn thành câu' },
+      { p: 6, ic: '📄', t: 'Part 6', d: 'Hoàn thành đoạn' },
+      { p: 7, ic: '📖', t: 'Part 7', d: 'Đọc hiểu' }
+    ];
+    const COUNTS = [5, 10, 15, 20, 30];
+    let part = parseInt(localStorage.getItem('toeicets_drill_part') || '5', 10);
+    let count = parseInt(localStorage.getItem('toeicets_drill_count') || '10', 10);
+    if (COUNTS.indexOf(count) === -1) count = 10;
+
+    // Vocab capture: highlight any word -> "📒 Ghi từ" bubble -> prefilled note modal
+    VocabNotes.enableCapture();
+
+    function renderPicker() {
+      root.innerHTML = sidebar + `<main class="main">
+        <h2 style="font-size:26px;font-weight:900;">🔁 Ôn tập theo Part</h2>
+        <p style="color:var(--text-mute);margin:6px 0 16px;line-height:1.6;">
+          Chọn Part và số câu — câu hỏi bốc ngẫu nhiên từ 60 đề. Làm <b>như thi thật</b>: chọn đáp án
+          <b>chưa lộ đúng/sai</b>, đổi lại thoải mái; xong bấm <b>✓ Kiểm tra</b> để xem số câu đúng/sai và
+          <b>review lại toàn bộ bài làm</b> kèm giải thích.
+          Gặp từ mới? <b>Bôi đen từ đó</b> — nghĩa, loại từ &amp; cách đọc <b>hiện ngay tại chỗ</b>, bấm <b>➕ Ghi vào sổ</b> nếu muốn lưu.
+        </p>
+        <div class="card" style="padding:18px;">
+          <h3 class="section-title" style="margin-top:0;">1️⃣ Chọn Part</h3>
+          <div class="pt-grid">
+            ${PARTS.map(x => `<div class="pt-card ${x.p === part ? 'active' : ''}" data-p="${x.p}">
+              <div class="ic">${x.ic}</div><div class="t">${x.t}</div><div class="d">${x.d}</div></div>`).join('')}
+          </div>
+          <h3 class="section-title">2️⃣ Số câu hỏi</h3>
+          <div class="ct-row">
+            ${COUNTS.map(c => `<button class="ct-chip ${c === count ? 'active' : ''}" data-c="${c}">${c} câu</button>`).join('')}
+          </div>
+          <p style="font-size:12px;color:var(--text-mute);margin-top:8px;">Part 3/4/6/7 giữ nguyên cụm câu theo bài nghe/đoạn văn nên số câu có thể lệch nhẹ (~).</p>
+          <button class="btn gold" id="start" style="margin-top:14px;">▶ Bắt đầu ôn</button>
+          <a class="btn ghost small" href="/notes" style="margin-left:10px;">📒 Sổ từ vựng (${VocabNotes.count()})</a>
+        </div>
+      </main>`;
+      root.querySelectorAll('.pt-card').forEach(c => c.addEventListener('click', () => {
+        part = parseInt(c.dataset.p, 10);
+        localStorage.setItem('toeicets_drill_part', part);
+        root.querySelectorAll('.pt-card').forEach(x => x.classList.toggle('active', parseInt(x.dataset.p, 10) === part));
+      }));
+      root.querySelectorAll('.ct-chip').forEach(c => c.addEventListener('click', () => {
+        count = parseInt(c.dataset.c, 10);
+        localStorage.setItem('toeicets_drill_count', count);
+        root.querySelectorAll('.ct-chip').forEach(x => x.classList.toggle('active', parseInt(x.dataset.c, 10) === count));
+      }));
+      document.getElementById('start').addEventListener('click', start);
+    }
+
+    async function start() {
+      // unlock audio within the click gesture (for listening parts)
+      try { const s = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA='); s.volume = 0; const p = s.play(); if (p && p.catch) p.catch(()=>{}); } catch (e) {}
+      root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+        <div style="font-size:60px;">🔁</div><h2>Đang bốc ${count} câu Part ${part}…</h2>
+        <p style="color:var(--text-mute);">Ngẫu nhiên từ 60 đề</p></div></main>`;
+      let cards = [];
+      try { cards = await QuizCore.sample('p' + part, count); } catch (e) {}
+      if (!cards || !cards.length) {
+        root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+          <div style="font-size:60px;">😢</div><h2>Không bốc được câu hỏi</h2>
+          <a class="btn ghost" href="/drill">Quay lại</a></div></main>`;
+        return;
+      }
+      const totalQ = cards.reduce((a, c) => a + c.questions.length, 0);
+      QuizCore.startQuiz({
+        root, sidebar, cards,
+        minutes: Math.max(10, Math.ceil(totalQ * 1.2)),
+        noteButton: (ctx) => VocabNotes.openModal({ src: (ctx && ctx.src) || '' }),
+        icon: '🔁', title: `Kết quả ôn Part ${part}`,
+        backUrl: '/drill', backLabel: 'Ôn lượt khác',
+        onFinish: (s) => {
+          if (window.Auth && Auth.addHistory) Auth.addHistory({ type: 'drill', part, total: s.total, correct: s.correct, wrong: s.wrong, blank: s.blank });
+        }
+      });
+    }
+
+    renderPicker();
+  })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js').catch(()=>{}); });
+    }
+  </script>
+</body>
+</html>

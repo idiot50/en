@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — 100 câu Part 2</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .player-header { position:sticky; top:0; z-index:10; background:var(--bg-alt); padding:10px 0; margin-bottom:12px; border-bottom:2px solid var(--border); display:flex; align-items:center; gap:12px; }
+    .player-header .close { width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:16px; background:white; border:2px solid var(--border); cursor:pointer; font-weight:800; text-decoration:none; color:var(--text-soft); }
+    /* chooser */
+    .md-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); gap:12px; margin-top:8px; }
+    .md-card { border:3px solid var(--border); border-radius:16px; padding:16px; cursor:pointer; text-align:center; background:white; transition:all .12s; }
+    .md-card:hover { border-color:var(--blue); }
+    .md-card.active { border-color:var(--green); background:#f3fff0; box-shadow:0 4px 0 var(--green-dark); }
+    .md-card .ic { font-size:34px; }
+    .md-card .t { font-weight:800; margin-top:6px; }
+    .md-card .d { font-size:12px; color:var(--text-mute); margin-top:4px; line-height:1.4; }
+    .ct-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .ct-chip { border:2px solid var(--border); background:white; border-radius:12px; padding:9px 16px; font-weight:800; cursor:pointer; font-size:15px; }
+    .ct-chip.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    /* audio bar */
+    .au-bar { display:flex; gap:8px; align-items:center; flex-wrap:wrap; background:white; border:2px solid var(--border); border-radius:14px; padding:10px 14px; margin-bottom:16px; }
+    .au-bar .au-slot { flex:1; min-width:200px; display:flex; }
+    .au-bar .au-slot audio { width:100%; height:38px; }
+    .spd { border:2px solid var(--border); background:var(--bg-alt); border-radius:9px; padding:6px 10px; font-weight:800; cursor:pointer; font-size:12.5px; }
+    .spd.active { border-color:var(--blue); color:var(--blue-dark); background:#eaf6ff; }
+    /* answer circles (blind, like the real test) */
+    .abc { display:flex; justify-content:center; gap:22px; flex-wrap:wrap; padding:20px 0 6px; }
+    .abc button { width:88px; height:88px; border-radius:50%; border:3px solid var(--border); border-bottom-width:5px; background:white; font-size:34px; font-weight:900; cursor:pointer; color:var(--text); transition:all .12s; }
+    .abc button:hover:not(:disabled) { background:var(--bg-alt); border-color:var(--blue); }
+    .abc button.picked { background:var(--blue); border-color:var(--blue-dark); color:white; }
+    .abc button.correct { background:var(--green); border-color:var(--green-dark); color:white; }
+    .abc button.wrong { background:var(--red); border-color:#c0392b; color:white; }
+    .abc button:disabled { cursor:default; }
+    /* script reveal */
+    .sc { background:white; border:2px solid var(--border); border-radius:14px; padding:16px 18px; margin-top:14px; }
+    .sc .q { font-weight:800; font-size:16.5px; line-height:1.5; }
+    .sc .vi { color:var(--text-mute); font-size:14px; margin-top:3px; line-height:1.5; }
+    .sc .opt { padding:8px 12px; border-radius:10px; margin-top:8px; line-height:1.5; font-size:14.5px; }
+    .sc .opt.ok { background:#f0ffe6; border:1.5px solid var(--green); }
+    .sc .opt .vi { margin-top:2px; }
+    .sc .lbl { font-weight:800; }
+    .feedback { margin-top:14px; padding:12px 16px; border-radius:12px; font-size:15px; font-weight:700; }
+    .feedback.correct { background:#f0ffe6; border:2px solid var(--green); color:var(--green-dark); }
+    .feedback.wrong { background:#fff0f0; border:2px solid var(--red); color:var(--red-dark); }
+    .group-toolbar { position:sticky; bottom:0; background:linear-gradient(to top,var(--bg-alt) 80%,transparent); padding:16px 0; display:flex; gap:10px; align-items:center; z-index:5; flex-wrap:wrap; }
+    .pick-count { font-weight:800; color:var(--text-soft); font-size:13px; }
+    .q-result-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(46px,1fr)); gap:8px; margin-top:8px; }
+    .q-result { padding:10px 0; border-radius:10px; font-weight:800; font-size:15px; border:2px solid var(--border); cursor:pointer; color:white; }
+    .q-result.correct { background:var(--green); border-color:var(--green-dark); }
+    .q-result.wrong { background:var(--red); border-color:#c0392b; }
+    .q-result.blank { background:var(--text-mute); border-color:var(--border); }
+    .prog-wrap { background:var(--bg-alt); border:2px solid var(--border); border-radius:14px; padding:14px 16px; margin-top:14px; }
+    .prog-bar { height:14px; background:white; border:2px solid var(--border); border-radius:10px; overflow:hidden; margin-top:8px; }
+    .prog-bar .fill { height:100%; background:var(--green); }
+    .hint { font-size:12.5px; color:var(--text-mute); line-height:1.6; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+    const { sidebar } = renderShell({ active: 'part2', state: State.load() });
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    const AUDIO_DIR = '/data/part2-100/audio/';
+
+    // ---------- persistent progress (per question: last result + attempts) ----------
+    const PKEY = 'toeicets_p2100_v1';
+    function loadProg() { try { return JSON.parse(localStorage.getItem(PKEY) || '{}'); } catch (e) { return {}; } }
+    function saveProg(p) { try { localStorage.setItem(PKEY, JSON.stringify(p)); } catch (e) {} }
+    function markResult(n, ok) {
+      const p = loadProg();
+      const e = p[n] || { seen: 0, ok: 0, bad: 0 };
+      e.seen++; if (ok) e.ok++; else e.bad++;
+      e.last = ok ? 1 : 0;
+      p[n] = e; saveProg(p);
+    }
+
+    let ALL = null;
+    async function loadData() {
+      if (ALL) return ALL;
+      const res = await fetch('/data/part2-100/questions.json', { cache: 'no-store' });
+      if (!res.ok) throw new Error('HTTP ' + res.status);
+      ALL = await res.json();
+      return ALL;
+    }
+
+    // ---------- reusable blessed audio (same trick as Dictation: keeps autoplay rights) ----------
+    const SILENT = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
+    let p2Audio = null;
+    function blessAudio() {
+      if (!p2Audio) {
+        p2Audio = document.createElement('audio');
+        p2Audio.id = 'p2-audio'; p2Audio.controls = true; p2Audio.preload = 'auto';
+      }
+      try { p2Audio.src = SILENT; const p = p2Audio.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
+      return p2Audio;
+    }
+
+    let speed = 1;
+    const MODES = [
+      { id: 'seq',   ic: '📖', t: 'Học tuần tự',   d: 'Đi từ câu 1 → 100, theo đúng thứ tự sách' },
+      { id: 'rand',  ic: '🎲', t: 'Ngẫu nhiên',    d: 'Xáo trộn câu hỏi — sát cảm giác thi thật' },
+      { id: 'wrong', ic: '🩹', t: 'Ôn câu sai',    d: 'Chỉ những câu bạn từng trả lời sai' }
+    ];
+    const COUNTS = [10, 20, 50, 100];
+    let mode = localStorage.getItem('toeicets_p2_mode') || 'seq';
+    let count = parseInt(localStorage.getItem('toeicets_p2_count') || '10', 10);
+    if (COUNTS.indexOf(count) === -1) count = 10;
+
+    // ---------- chooser ----------
+    async function renderPicker() {
+      root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:40px 0;text-align:center;">
+        <div style="font-size:48px;">🎧</div><h2>Đang tải bộ đề…</h2></div></main>`;
+      let data;
+      try { data = await loadData(); }
+      catch (e) {
+        root.innerHTML = sidebar + `<main class="main"><div class="card" style="border-color:var(--red);margin-top:24px;">
+          <h3 style="margin-top:0;color:var(--red);">⚠️ Không tải được bộ câu hỏi</h3>
+          <p>${esc(String(e.message || e))} — kiểm tra kết nối rồi thử lại.</p>
+          <button class="btn" onclick="location.reload()">↻ Thử lại</button></div></main>`;
+        return;
+      }
+      const prog = loadProg();
+      const doneCnt = Object.keys(prog).length;
+      const okCnt = Object.values(prog).filter(x => x.last === 1).length;
+      const wrongList = data.filter(x => prog[x.n] && prog[x.n].last === 0);
+      const pct = Math.round(doneCnt / data.length * 100);
+
+      root.innerHTML = sidebar + `<main class="main">
+        <h2 style="font-size:26px;font-weight:900;">🎧 100 câu Part 2 — luyện phản xạ</h2>
+        <p style="color:var(--text-mute);margin:6px 0 14px;line-height:1.6;">
+          Bộ <b>100 câu hỏi–đáp Part 2</b> (YBM 실전토익 LC 1000 Vol.2 — đề bổ sung luyện điểm tuyệt đối).
+          Nghe câu hỏi rồi chọn <b>A / B / C</b> — <b>không nhìn chữ</b>, đúng như thi thật. Trả lời xong hiện ngay
+          <b>đáp án, script tiếng Anh và bản dịch tiếng Việt</b>.
+        </p>
+        <div class="prog-wrap">
+          <div style="display:flex;align-items:center;gap:12px;flex-wrap:wrap;">
+            <b>Tiến độ của bạn:</b>
+            <span class="pick-count">Đã làm ${doneCnt}/${data.length} câu • Đang đúng ${okCnt} • Cần ôn lại ${wrongList.length}</span>
+          </div>
+          <div class="prog-bar"><div class="fill" style="width:${pct}%"></div></div>
+        </div>
+        <div class="card" style="padding:18px;margin-top:14px;">
+          <h3 class="section-title" style="margin-top:0;">1️⃣ Chọn cách học</h3>
+          <div class="md-grid">
+            ${MODES.map(m => `<div class="md-card ${m.id === mode ? 'active' : ''}" data-m="${m.id}">
+              <div class="ic">${m.ic}</div><div class="t">${m.t}</div><div class="d">${m.d}</div>
+              ${m.id === 'wrong' ? `<div class="d" style="color:var(--red);font-weight:800;">${wrongList.length} câu</div>` : ''}
+            </div>`).join('')}
+          </div>
+          <h3 class="section-title">2️⃣ Số câu mỗi lượt</h3>
+          <div class="ct-row">
+            ${COUNTS.map(c => `<button class="ct-chip ${c === count ? 'active' : ''}" data-c="${c}">${c} câu</button>`).join('')}
+          </div>
+          <p class="hint" style="margin-top:10px;">
+            💡 Mẹo Part 2: nghe kỹ <b>từ để hỏi đầu câu</b> (Who/When/Where/Why/How/What) — nó quyết định loại câu trả lời.
+            Cảnh giác đáp án chứa <b>từ phát âm giống</b> câu hỏi: đó thường là bẫy.
+          </p>
+          <button class="btn gold" id="start" style="margin-top:12px;">▶ Bắt đầu luyện</button>
+          ${doneCnt ? '<button class="btn ghost small" id="reset-prog" style="margin-left:10px;">Xoá tiến độ</button>' : ''}
+        </div>
+      </main>`;
+
+      root.querySelectorAll('.md-card').forEach(c => c.addEventListener('click', () => {
+        mode = c.dataset.m; localStorage.setItem('toeicets_p2_mode', mode);
+        root.querySelectorAll('.md-card').forEach(x => x.classList.toggle('active', x.dataset.m === mode));
+      }));
+      root.querySelectorAll('.ct-chip').forEach(c => c.addEventListener('click', () => {
+        count = parseInt(c.dataset.c, 10); localStorage.setItem('toeicets_p2_count', count);
+        root.querySelectorAll('.ct-chip').forEach(x => x.classList.toggle('active', parseInt(x.dataset.c, 10) === count));
+      }));
+      const rp = document.getElementById('reset-prog');
+      if (rp) rp.addEventListener('click', () => { localStorage.removeItem(PKEY); renderPicker(); });
+      document.getElementById('start').addEventListener('click', start);
+    }
+
+    // ---------- session ----------
+    let items = [], idx = 0, picks = {};
+    function start() {
+      blessAudio();                       // unlock audio inside this click
+      const prog = loadProg();
+      let pool = ALL.slice();
+      if (mode === 'wrong') {
+        pool = pool.filter(x => prog[x.n] && prog[x.n].last === 0);
+        if (!pool.length) { alert('Chưa có câu sai nào để ôn. Hãy luyện một lượt trước nhé!'); return; }
+      }
+      if (mode === 'rand' || mode === 'wrong') {
+        for (let i = pool.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [pool[i], pool[j]] = [pool[j], pool[i]]; }
+      } else {
+        // sequential: continue from the first not-yet-answered question
+        const firstNew = pool.findIndex(x => !prog[x.n]);
+        if (firstNew > 0) pool = pool.slice(firstNew).concat(pool.slice(0, firstNew));
+      }
+      items = pool.slice(0, Math.min(count, pool.length));
+      idx = 0; picks = {};
+      renderItem();
+    }
+
+    function audioBar() {
+      return `<div class="au-bar">
+        <span class="au-slot" id="p2-au-slot"></span>
+        <button class="spd" id="p2-back5" title="Lùi lại 5 giây">↩ 5s</button>
+        <button class="spd ${speed === 0.75 ? 'active' : ''}" data-s="0.75">🐢 0.75x</button>
+        <button class="spd ${speed === 1 ? 'active' : ''}" data-s="1">1x</button>
+        <button class="spd ${speed === 1.25 ? 'active' : ''}" data-s="1.25">⚡ 1.25x</button>
+        <button class="spd" id="p2-replay" title="Nghe lại từ đầu">🔁 Nghe lại</button>
+      </div>`;
+    }
+
+    function wireAudio(url) {
+      const slot = document.getElementById('p2-au-slot');
+      if (!slot) return;
+      const au = p2Audio || blessAudio();
+      slot.appendChild(au);
+      const tryPlay = () => { const p = au.play(); if (p && p.catch) p.catch(() => {}); };
+      au.onerror = null;
+      au.src = url; au.load(); au.playbackRate = speed; tryPlay();
+      document.addEventListener('pointerdown', function once() {
+        document.removeEventListener('pointerdown', once);
+        if (au.isConnected && au.paused && au.currentTime === 0) tryPlay();
+      });
+      const b5 = document.getElementById('p2-back5');
+      if (b5) b5.addEventListener('click', () => { au.currentTime = Math.max(0, au.currentTime - 5); if (au.paused) tryPlay(); });
+      const rp = document.getElementById('p2-replay');
+      if (rp) rp.addEventListener('click', () => { au.currentTime = 0; tryPlay(); });
+      root.querySelectorAll('.spd[data-s]').forEach(b => b.addEventListener('click', () => {
+        speed = parseFloat(b.dataset.s); au.playbackRate = speed;
+        root.querySelectorAll('.spd[data-s]').forEach(x => x.classList.toggle('active', x === b));
+      }));
+    }
+
+    function renderItem() {
+      if (idx >= items.length) return renderDone();
+      const it = items[idx];
+      const answered = picks[it.n] != null;
+      root.innerHTML = sidebar + `<main class="main">
+        <div class="player-header">
+          <a class="close" href="/part2" title="Thoát">✕</a>
+          <div style="font-weight:900;flex:1;">🎧 Câu ${idx + 1}/${items.length}
+            <span style="color:var(--text-mute);font-weight:700;font-size:12.5px;">· Câu số ${it.n}/100${it.v ? ' · ' + esc(it.v) : ''}</span></div>
+        </div>
+        ${audioBar()}
+        <p class="hint" style="text-align:center;margin-bottom:0;">Nghe câu hỏi rồi chọn câu trả lời phù hợp nhất:</p>
+        <div class="abc" id="p2-abc">
+          ${['A','B','C'].map(L => `<button data-l="${L}">${L}</button>`).join('')}
+        </div>
+        <div id="p2-after"></div>
+        <div class="group-toolbar">
+          <span class="pick-count" id="p2-status">Chưa chọn</span>
+          <span style="flex:1"></span>
+          <button class="btn blue" id="p2-next" style="display:none;">${idx + 1 >= items.length ? 'Xem kết quả ✓' : 'Câu tiếp →'}</button>
+        </div>
+      </main>`;
+      wireAudio(AUDIO_DIR + it.au);
+      const abc = document.getElementById('p2-abc');
+      abc.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
+        if (picks[it.n] != null) return;
+        pick(it, b.dataset.l);
+      }));
+      if (answered) pick(it, picks[it.n], true);
+      window.scrollTo({ top: 0 });
+    }
+
+    function pick(it, letter, restoring) {
+      picks[it.n] = letter;
+      const ok = letter === it.ans;
+      if (!restoring) markResult(it.n, ok);
+      const abc = document.getElementById('p2-abc');
+      abc.querySelectorAll('button').forEach(b => {
+        b.disabled = true;
+        if (b.dataset.l === it.ans) b.classList.add('correct');
+        else if (b.dataset.l === letter) b.classList.add('wrong');
+      });
+      const optHtml = ['A','B','C'].map(L => {
+        const isOk = L === it.ans;
+        return `<div class="opt ${isOk ? 'ok' : ''}">
+          <span class="lbl">${isOk ? '✓ ' : ''}${L}.</span> ${esc(it[L])}
+          <div class="vi">${esc(it['v' + L] || '')}</div>
+        </div>`;
+      }).join('');
+      document.getElementById('p2-after').innerHTML = `
+        <div class="feedback ${ok ? 'correct' : 'wrong'}">
+          ${ok ? '🎉 Chính xác!' : '❌ Chưa đúng — Đáp án: ' + it.ans + ' (bạn chọn ' + letter + ')'}
+        </div>
+        <div class="sc">
+          <div class="q">🗣 ${esc(it.q)}</div>
+          <div class="vi">${esc(it.vq || '')}</div>
+          <div style="margin-top:10px;">${optHtml}</div>
+        </div>`;
+      const st = document.getElementById('p2-status');
+      if (st) st.textContent = ok ? '✅ Đúng' : '❌ Sai — đáp án ' + it.ans;
+      const nx = document.getElementById('p2-next');
+      if (nx) { nx.style.display = ''; nx.onclick = () => { idx++; renderItem(); }; }
+      try { State.recordAnswer(State.load(), 'part2', 0, ok); } catch (e) {}
+    }
+
+    function renderDone() {
+      const total = items.length;
+      const correct = items.filter(x => picks[x.n] === x.ans).length;
+      const wrong = total - correct;
+      const acc = total ? Math.round(correct / total * 100) : 0;
+      const grid = items.map((x, i) => {
+        const p = picks[x.n];
+        const stt = p == null ? 'blank' : (p === x.ans ? 'correct' : 'wrong');
+        return `<button class="q-result ${stt}" data-i="${i}" title="Câu số ${x.n}">${x.n}</button>`;
+      }).join('');
+      root.innerHTML = sidebar + `<main class="main">
+        <div class="modal" style="margin:40px auto;max-width:680px;">
+          <div style="font-size:70px;">🎧</div>
+          <h2>Kết quả — 100 câu Part 2</h2>
+          <p style="color:var(--text-mute);margin-top:8px;">Đúng ${correct} • Sai ${wrong} • Tổng ${total} câu</p>
+          <div class="stats-grid" style="margin-top:22px;">
+            <div class="stat-card"><div class="big" style="color:var(--green);">✅ ${correct}</div><div class="label">Câu đúng</div></div>
+            <div class="stat-card"><div class="big" style="color:var(--red);">❌ ${wrong}</div><div class="label">Câu sai</div></div>
+            <div class="stat-card accuracy"><div class="big">${acc}%</div><div class="label">Độ chính xác</div></div>
+          </div>
+          <h3 class="section-title" style="margin-top:22px;text-align:left;">Bấm số câu để nghe &amp; xem lại</h3>
+          <div class="q-result-grid">${grid}</div>
+          <div class="row" style="margin-top:22px;">
+            <button class="btn gold" id="p2-redo">↻ Làm lại</button>
+            <a class="btn ghost" href="/part2">Lượt khác</a>
+            <a class="btn" href="/">Về trang chủ</a>
+          </div>
+        </div>
+      </main>`;
+      root.querySelectorAll('.q-result').forEach(b => b.addEventListener('click', () => { idx = parseInt(b.dataset.i, 10); renderItem(); }));
+      document.getElementById('p2-redo').addEventListener('click', () => { picks = {}; idx = 0; renderItem(); });
+      if (window.Auth && Auth.addHistory) Auth.addHistory({ type: 'part2-100', total, correct, wrong, blank: 0 });
+    }
+
+    renderPicker();
+  })();
+  </script>
+  <script>
+    if (window.VocabNotes) VocabNotes.enableCapture();
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js').catch(() => {}); });
+    }
+  </script>
+</body>
+</html>

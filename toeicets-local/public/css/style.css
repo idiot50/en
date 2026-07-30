@@ -25,7 +25,7 @@
 }
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
-html, body { font-family: var(--font); color: var(--text); background: var(--bg-alt); height: 100%; }
+html, body { font-family: var(--font); color: var(--text); background: var(--bg-alt); min-height: 100%; }
 body { font-size: 16px; line-height: 1.5; -webkit-font-smoothing: antialiased; }
 a { color: inherit; text-decoration: none; }
 button { font-family: inherit; cursor: pointer; }
@@ -37,12 +37,14 @@ img { display: block; max-width: 100%; }
 /* Sidebar (desktop) */
 .sidebar {
   width: 240px;
+  flex: 0 0 240px;
   background: white;
   border-right: var(--border-thick) solid var(--border);
   padding: 24px 16px;
   position: sticky;
   top: 0;
   height: 100vh;
+  overflow-y: auto;
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -71,7 +73,7 @@ img { display: block; max-width: 100%; }
 .nav-link .icon { font-size: 22px; }
 
 /* Main */
-.main { flex: 1; padding: 24px 32px; max-width: 1100px; margin: 0 auto; width: 100%; }
+.main { flex: 1; min-width: 0; padding: 24px 32px; max-width: 1100px; margin: 0 auto; width: 100%; }
 
 /* Top header bar (sticky) */
 .topbar {
@@ -114,6 +116,7 @@ img { display: block; max-width: 100%; }
   display: flex;
   gap: 20px;
   align-items: center;
+  min-width: 0;
   background: linear-gradient(135deg, #58CC02 0%, #4CAF50 100%);
   color: white;
   border: var(--border-thick) solid #4A9F00;
@@ -129,6 +132,7 @@ img { display: block; max-width: 100%; }
   align-items: center;
   justify-content: center;
   gap: 8px;
+  max-width: 100%;
   padding: 12px 22px;
   border-radius: 14px;
   font-weight: 800;
@@ -141,6 +145,8 @@ img { display: block; max-width: 100%; }
   box-shadow: 0 4px 0 var(--green-dark);
   transition: all .1s;
   user-select: none;
+  white-space: normal;
+  text-align: center;
 }
 .btn:hover { filter: brightness(1.05); }
 .btn:active { transform: translateY(2px); box-shadow: 0 2px 0 var(--green-dark); }
@@ -159,7 +165,7 @@ img { display: block; max-width: 100%; }
 /* ===== Stats grid ===== */
 .stats-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(180px, 100%), 1fr));
   gap: 12px;
   margin-bottom: 24px;
 }
@@ -504,6 +510,9 @@ audio { width: 100%; margin-bottom: 16px; outline: none; }
     height: auto;
     width: 100%;
     flex-direction: row;
+    flex: none;
+    overflow-x: auto;
+    overflow-y: hidden;
     border-top: var(--border-thick) solid var(--border);
     border-right: none;
     padding: 8px;
@@ -521,7 +530,24 @@ audio { width: 100%; margin-bottom: 16px; outline: none; }
     justify-content: center;
   }
   .main { padding: 16px; padding-bottom: 100px; max-width: 100%; }
+  .topbar { justify-content: center; flex-wrap: wrap; gap: 8px; }
+  .hero { align-items: flex-start; }
   .hero img.mascot { width: 70px; height: 70px; }
   .hero h2 { font-size: 18px; }
   .test-node { width: 64px; height: 64px; font-size: 18px; }
+}
+
+@media (max-width: 520px) {
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .card-row {
+    align-items: flex-start;
+    flex-wrap: wrap;
+  }
+  .stats-grid {
+    grid-template-columns: 1fr;
+  }
 }

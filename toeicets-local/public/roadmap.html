@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Lộ trình 650</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .rm .goal-head { display:flex; flex-wrap:wrap; align-items:center; gap:10px 16px; }
+    .rm .goal-head h2 { font-size:26px; font-weight:900; }
+    .rm .arrow { color:var(--green); }
+    .rm .chips { display:flex; flex-wrap:wrap; gap:8px; margin-top:10px; }
+    .rm .chip { font-size:12.5px; font-weight:700; background:var(--bg-alt); border:1px solid var(--border); border-radius:8px; padding:6px 11px; }
+    .rm .chip.warn { background:#ffe9dd; border-color:#f3c4a6; color:#c0531c; }
+    .rm .howto { background:#eef9ff; border:1px solid #bfe6fb; border-left:4px solid var(--blue); border-radius:10px; padding:12px 14px; font-size:13.5px; margin:14px 0; }
+    .rm .overall { background:white; border:2px solid var(--border); border-radius:14px; padding:16px; margin:16px 0; }
+    .rm .pbar { height:14px; background:var(--bg-alt); border-radius:8px; overflow:hidden; margin-top:8px; }
+    .rm .pbar .fill { height:100%; background:linear-gradient(90deg,#7BD93B,var(--green)); border-radius:8px; transition:width .25s; }
+    .rm .ladder { display:flex; align-items:flex-end; gap:6px; height:150px; padding:12px 10px 0; background:white; border:2px solid var(--border); border-radius:14px; overflow-x:auto; margin:14px 0; }
+    .rm .bar { flex:1 0 56px; display:flex; flex-direction:column; align-items:center; gap:5px; height:100%; justify-content:flex-end; }
+    .rm .bar .col { width:100%; border-radius:6px 6px 2px 2px; background:linear-gradient(180deg,#7BD93B,var(--green)); }
+    .rm .bar.goal .col { background:linear-gradient(180deg,#FFB24D,#E07b1e); }
+    .rm .bar .s { font-weight:800; font-size:12.5px; }
+    .rm .bar .w { font-size:10.5px; color:var(--text-mute); }
+    .rm .daily { display:flex; flex-direction:column; gap:9px; }
+    .rm .slot { display:grid; grid-template-columns:160px 1fr 44px; align-items:center; gap:10px; }
+    .rm .slot .lab { font-weight:800; font-size:14px; }
+    .rm .slot .track { height:12px; background:var(--bg-alt); border-radius:6px; overflow:hidden; }
+    .rm .slot .f { height:100%; background:linear-gradient(90deg,#7BD93B,var(--green)); border-radius:6px; }
+    .rm .slot .min { font-weight:800; font-size:13px; color:var(--text-soft); text-align:right; }
+    @media(max-width:560px){ .rm .slot { grid-template-columns:1fr 44px; } .rm .slot .track { grid-column:1 / -1; order:3; } }
+    .rm .launch { display:flex; flex-wrap:wrap; gap:8px; align-items:center; margin-top:14px; border-top:1px dashed var(--border); padding-top:12px; }
+    .rm .week { background:white; border:2px solid var(--border); border-radius:16px; padding:18px; margin-bottom:14px; }
+    .rm .week.current { border-color:var(--green); box-shadow:0 0 0 3px rgba(88,204,2,.15); }
+    .rm .week.done { opacity:.72; }
+    .rm .whead { display:flex; align-items:center; gap:12px; flex-wrap:wrap; border-bottom:1px solid var(--border); padding-bottom:12px; margin-bottom:12px; }
+    .rm .wnum { font-size:26px; font-weight:900; color:var(--green); line-height:1; }
+    .rm .week.peak .wnum { color:#E07b1e; }
+    .rm .wphase { font-size:18px; font-weight:800; flex:1; min-width:160px; }
+    .rm .wdate { font-size:12px; color:var(--text-mute); font-weight:700; }
+    .rm .now-tag { font-size:11px; font-weight:800; color:white; background:var(--green); padding:3px 9px; border-radius:20px; }
+    .rm .wtarget { font-size:12.5px; font-weight:800; color:var(--green-dark); background:var(--bg-alt); padding:5px 11px; border-radius:20px; }
+    .rm .week.peak .wtarget { color:#c0531c; }
+    .rm h4 { font-size:11px; letter-spacing:.1em; text-transform:uppercase; color:var(--text-mute); font-weight:800; margin:0 0 8px; }
+    .rm .tasks { list-style:none; display:flex; flex-direction:column; gap:4px; padding:0; margin:0 0 12px; }
+    .rm .tasks li { display:flex; gap:10px; align-items:center; font-size:14.5px; padding:7px; border-radius:10px; }
+    .rm .tasks li:hover { background:var(--bg-alt); }
+    .rm .tasks input { width:22px; height:22px; flex:none; accent-color:var(--green); cursor:pointer; }
+    .rm .tasks label { cursor:pointer; color:var(--text); line-height:1.45; flex:1; }
+    .rm .tasks input:checked + label { color:var(--text-mute); text-decoration:line-through; }
+    .rm .go { flex:none; font-size:12px; font-weight:800; color:var(--green-dark); background:rgba(88,204,2,.12); border:1.5px solid rgba(88,204,2,.55); border-radius:9px; padding:6px 11px; white-space:nowrap; }
+    .rm .go:hover { background:var(--green); color:white; }
+    .rm .milestone { background:var(--bg-alt); border-radius:10px; padding:10px 14px; font-size:13.5px; }
+    .rm .milestone b { color:var(--green-dark); }
+    .rm .wprog { font-size:12px; font-weight:800; color:var(--text-mute); }
+    .rm .rules { display:grid; grid-template-columns:1fr 1fr; gap:10px; }
+    @media(max-width:600px){ .rm .rules { grid-template-columns:1fr; } }
+    .rm .rule { display:flex; gap:10px; background:white; border:2px solid var(--border); border-radius:12px; padding:12px 14px; font-size:13.5px; }
+    .rm .rule .n { font-weight:900; color:var(--green); }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script>
+  (function () {
+    const G = 'https://ngpnamdinh-toeic-guide.static.hf.space';
+    const root = document.getElementById('app');
+    const { sidebar, topbar } = renderShell({ active: 'roadmap', state: State.load() });
+
+    const RKEY = 'toeicets_roadmap_v1';
+    let prog = {};
+    try { prog = JSON.parse(localStorage.getItem(RKEY) || '{}'); } catch (e) { prog = {}; }
+    const save = () => localStorage.setItem(RKEY, JSON.stringify(prog));
+
+    // tasks: { t: text, u: link (optional). Relative = app page, http = guide (new tab) }
+    const WEEKS = [
+      { n:'01', phase:'Chẩn đoán & vá nền', start:'2026-06-09', end:'2026-06-15', target:'~500', peak:false,
+        tasks:[
+          { t:'Ngày 1: làm 1 đề full để biết điểm thật + Part yếu nhất', u:'/test?year=2025&n=1&full=1' },
+          { t:'Ôn ngữ pháp lõi: từ loại, thì, giới từ, mệnh đề quan hệ', u:'/study' },
+          { t:'Học từ vựng 30 từ/ngày — chủ đề Office & Business', u:'/study' },
+          { t:'Nắm chiến thuật Part 1, 2, 5', u:G+'/meo-lam-part-5-toeic' } ],
+        milestone:'Biết điểm xuất phát chính xác · ~200 từ mới · Part 5 đúng ≥ 18/30' },
+      { n:'02', phase:'Chiến thuật từng Part', start:'2026-06-16', end:'2026-06-22', target:'~530', peak:false,
+        tasks:[
+          { t:'Listening sâu: Part 3 & 4 — shadowing + đọc transcript', u:'/tests' },
+          { t:'Reading: Part 6 & 7 đoạn đơn, skimming/scanning', u:'/tests' },
+          { t:'Học từ vựng tiếp 30 từ/ngày → mốc 1.000 từ', u:'/study' },
+          { t:'Học bắt paraphrase (đáp án viết khác lời thoại)', u:G+'/meo-lam-part-7-toeic' } ],
+        milestone:'1.000 từ · Part 3+4 đúng ≥ 35/69 · 1 đề mini (100 câu)' },
+      { n:'03', phase:'Luyện theo Part + canh giờ', start:'2026-06-23', end:'2026-06-29', target:'~555', peak:false,
+        tasks:[
+          { t:'Mỗi ngày 1 Part bấm giờ (xoay vòng cả 7 Part)', u:'/tests' },
+          { t:'Part 7 double passage — nối thông tin 2 văn bản', u:'/tests' },
+          { t:'Part 5 tốc độ: mục tiêu 20 giây/câu', u:G+'/meo-lam-part-5-toeic' },
+          { t:'Cuối tuần: đề full #2, so với đề chẩn đoán', u:'/tests' } ],
+        milestone:'Đề full #2 đạt ≥ 555 · xác định 2 Part yếu nhất' },
+      { n:'04', phase:'Tăng khối lượng & fix điểm yếu', start:'2026-06-30', end:'2026-07-06', target:'~580', peak:false,
+        tasks:[
+          { t:'Dồn lực 2 Part yếu: +50 câu Part đó mỗi ngày', u:'/tests' },
+          { t:'2 đề mini (100 câu)/tuần — 1 LC, 1 RC riêng', u:'/tests' },
+          { t:'Học từ vựng từ chính các đề đã làm', u:'/study' },
+          { t:'Rèn sức bền: làm liền 60–75 phút bấm giờ', u:'/quick' } ],
+        milestone:'Đề full đạt ≥ 580 · sổ lỗi ≥ 60 mục' },
+      { n:'05', phase:'Đề full đều đặn', start:'2026-07-07', end:'2026-07-13', target:'~605', peak:true,
+        tasks:[
+          { t:'3 đề full/tuần — 1 đề đúng điều kiện thi (2 tiếng)', u:'/tests' },
+          { t:'Sau mỗi đề: phân tích lỗi theo nhóm pattern', u:'/profile' },
+          { t:'Reading: ép tốc độ để luôn kịp Part 7', u:'/tests' },
+          { t:'Listening: bỏ transcript khi nghe lần đầu', u:'/tests' } ],
+        milestone:'3 đề full/tuần, điểm trung bình ≥ 600' },
+      { n:'06', phase:'Đỉnh cường độ & tốc độ', start:'2026-07-14', end:'2026-07-20', target:'~630', peak:true,
+        tasks:[
+          { t:'Xen kẽ: ngày đề full → ngày luyện Part yếu', u:'/tests' },
+          { t:'Đoán nhanh – bỏ qua đúng lúc: không quá 40 giây/câu', u:'/quick' },
+          { t:'Ôn lại toàn bộ sổ lỗi 6 tuần' },
+          { t:'Từ vựng chỉ còn ôn lại (15′)', u:'/study' } ],
+        milestone:'Đề full ổn định ≥ 630 · không lặp lỗi cũ' },
+      { n:'07', phase:'Chốt phong độ & mô phỏng thi', start:'2026-07-21', end:'2026-07-27', target:'650+', peak:true,
+        tasks:[
+          { t:'2–3 đề full mô phỏng đúng khung giờ thi', u:'/tests' },
+          { t:'Chỉ ôn lại, KHÔNG nạp kiến thức mới' },
+          { t:'Rà chiến thuật từng Part + sổ lỗi lần cuối', u:G+'/lo-trinh-toeic-650' },
+          { t:'Đăng ký ca thi sớm nếu chưa' } ],
+        milestone:'≥ 2 đề full liên tiếp đạt 650+ → sẵn sàng thi' },
+      { n:'★', phase:'Giảm tải & ngày thi', start:'2026-07-28', end:'2026-07-31', target:'Giữ sức', peak:false,
+        tasks:[
+          { t:'3 ngày trước: không làm đề mới, chỉ xem sổ lỗi & vocab' },
+          { t:'Ngủ đủ 7–8 tiếng, tập dậy đúng khung giờ thi' },
+          { t:'Ngày thi: mang CMND/CCCD + giấy báo, đến sớm 30′' },
+          { t:'Không bỏ trống câu nào (không trừ điểm câu sai)' } ],
+        milestone:'Mục tiêu ngày D: 650+ — bình tĩnh, bám chiến thuật đã luyện' }
+    ];
+
+    function todayISO() { const d = new Date(); return d.getFullYear()+'-'+String(d.getMonth()+1).padStart(2,'0')+'-'+String(d.getDate()).padStart(2,'0'); }
+    const fmt = iso => { const [y,m,d]=iso.split('-'); return d+'/'+m; };
+
+    function totals() {
+      let total=0, done=0;
+      WEEKS.forEach((w,wi)=>w.tasks.forEach((_,ti)=>{ total++; if(prog['w'+wi+'t'+ti]) done++; }));
+      return { total, done, pct: total?Math.round(done/total*100):0 };
+    }
+    const weekDone = wi => WEEKS[wi].tasks.every((_,ti)=>prog['w'+wi+'t'+ti]);
+    const weekCount = wi => WEEKS[wi].tasks.filter((_,ti)=>prog['w'+wi+'t'+ti]).length;
+
+    function goLink(u){
+      if(!u) return '';
+      const ext = u.indexOf('http')===0;
+      return `<a class="go" href="${u}"${ext?' target="_blank" rel="noopener"':''}>Học ngay →</a>`;
+    }
+
+    function ladder(){
+      const rows=[['500','34%','W1'],['530','46%','W2'],['555','56%','W3'],['580','66%','W4'],['605','76%','W5'],['630','88%','W6'],['650','97%','W7'],['650+','100%','THI']];
+      return '<div class="ladder">'+rows.map((r,i)=>`<div class="bar ${i===7?'goal':''}"><span class="s">${r[0]}</span><div class="col" style="height:${r[1]}"></div><span class="w">${r[2]}</span></div>`).join('')+'</div>';
+    }
+
+    function render(){
+      const t = totals();
+      const today = todayISO();
+      const weeksHtml = WEEKS.map((w,wi)=>{
+        const isCurrent = today >= w.start && today <= w.end;
+        const isDone = weekDone(wi);
+        const cls = 'week'+(w.peak?' peak':'')+(isCurrent?' current':'')+(isDone?' done':'');
+        const tasks = w.tasks.map((tk,ti)=>{
+          const id='w'+wi+'t'+ti;
+          return `<li><input type="checkbox" id="${id}" data-k="${id}" ${prog[id]?'checked':''}/><label for="${id}">${tk.t}</label>${goLink(tk.u)}</li>`;
+        }).join('');
+        return `<div class="${cls}">
+          <div class="whead">
+            <span class="wnum">${w.n}</span>
+            <span class="wphase">${w.phase}</span>
+            ${isCurrent?'<span class="now-tag">TUẦN NÀY</span>':''}
+            <span class="wdate">${fmt(w.start)} – ${fmt(w.end)}</span>
+            <span class="wtarget">${w.target}</span>
+          </div>
+          <h4>Việc cần làm — tick ô khi xong <span class="wprog">(${weekCount(wi)}/${w.tasks.length})</span></h4>
+          <ul class="tasks">${tasks}</ul>
+          <div class="milestone"><b>Mốc:</b> ${w.milestone}</div>
+        </div>`;
+      }).join('');
+
+      root.innerHTML = sidebar + `
+        <main class="main">
+          ${topbar}
+          <div class="rm">
+            <div class="goal-head"><h2>📈 Lộ trình TOEIC <span class="arrow">500 → 650</span></h2></div>
+            <p style="color:var(--text-mute);margin:6px 0 0;">7 tuần · 3 giờ/ngày · 09/06 → 31/07.</p>
+            <div class="chips">
+              <span class="chip">3 giờ/ngày</span><span class="chip">6 buổi/tuần</span><span class="chip">≈150 giờ</span><span class="chip warn">Deadline 31/07</span>
+            </div>
+
+            <div class="howto">💡 <b>Cách dùng:</b> mỗi việc có nút <b>"Học ngay →"</b> mở thẳng bài luyện trong app. Làm xong thì <b>tick vào ô vuông</b> bên trái — tiến độ tự lưu lại.</div>
+
+            <div class="overall">
+              <div style="display:flex;justify-content:space-between;align-items:baseline;">
+                <b>Tiến độ tổng</b><b id="rm-pct" style="color:var(--green-dark);">${t.done}/${t.total} việc · ${t.pct}%</b>
+              </div>
+              <div class="pbar"><div class="fill" id="rm-fill" style="width:${t.pct}%"></div></div>
+            </div>
+
+            <h3 class="section-title">Mục tiêu điểm theo tuần</h3>
+            ${ladder()}
+
+            <h3 class="section-title">Khung 3 giờ mỗi ngày</h3>
+            <div class="overall">
+              <div class="daily">
+                <div class="slot"><span class="lab">Từ vựng</span><div class="track"><div class="f" style="width:14%"></div></div><span class="min">25′</span></div>
+                <div class="slot"><span class="lab">Ngữ pháp · Part 5–6</span><div class="track"><div class="f" style="width:14%"></div></div><span class="min">25′</span></div>
+                <div class="slot"><span class="lab">Listening · Part 1–4</span><div class="track"><div class="f" style="width:28%"></div></div><span class="min">50′</span></div>
+                <div class="slot"><span class="lab">Reading · Part 7</span><div class="track"><div class="f" style="width:25%"></div></div><span class="min">45′</span></div>
+                <div class="slot"><span class="lab">Chữa lỗi & sổ lỗi</span><div class="track"><div class="f" style="width:19%"></div></div><span class="min">35′</span></div>
+              </div>
+              <div class="launch">
+                <span style="font-weight:800;font-size:13px;">Mở nhanh:</span>
+                <a class="go" href="/vocabulary">📚 Từ vựng</a>
+                <a class="go" href="/grammar">📗 Ngữ pháp</a>
+                <a class="go" href="/tests">🎯 Luyện đề</a>
+                <a class="go" href="/quick">⚡ Kiểm tra nhanh</a>
+              </div>
+            </div>
+
+            <h3 class="section-title">Lộ trình 7 tuần</h3>
+            ${weeksHtml}
+
+            <h3 class="section-title">Quy tắc khắc nghiệt</h3>
+            <div class="rules">
+              <div class="rule"><span class="n">1</span><div><b>Đều đặn &gt; cường độ.</b> Bỏ buổi là phá nhịp.</div></div>
+              <div class="rule"><span class="n">2</span><div><b>Sổ lỗi là vũ khí.</b> Mỗi câu sai: lỗi gì, vì sao, từ mới.</div></div>
+              <div class="rule"><span class="n">3</span><div><b>Luôn bấm giờ</b> khi luyện bất kỳ Part nào.</div></div>
+              <div class="rule"><span class="n">4</span><div><b>Nghe mỗi ngày</b> — phần lên điểm nhanh nhất.</div></div>
+              <div class="rule"><span class="n">5</span><div><b>1 ngày nghỉ/tuần</b> có kế hoạch để não hồi.</div></div>
+              <div class="rule"><span class="n">6</span><div><b>Mỗi tuần 1 mock</b> để đo có đúng lộ trình.</div></div>
+            </div>
+            <div style="height:24px;"></div>
+          </div>
+        </main>`;
+
+      root.querySelectorAll('.tasks input[type=checkbox]').forEach(cb=>{
+        cb.addEventListener('change', ()=>{ prog[cb.dataset.k] = cb.checked; save(); render(); });
+      });
+    }
+
+    render();
+  })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js').catch(()=>{}); });
+    }
+  </script>
+</body>
+</html>

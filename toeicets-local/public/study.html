@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Học &amp; Ôn</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    /* hero ôn tập */
+    .st-hero { display:flex; align-items:center; gap:16px; flex-wrap:wrap; background:linear-gradient(135deg,#eaf6ff,#f3fff0); border:2px solid var(--border); border-radius:16px; padding:18px; margin-bottom:18px; }
+    .st-hero .big-ic { font-size:44px; }
+    .st-hero .t { font-weight:900; font-size:18px; }
+    .st-hero .d { font-size:13px; color:var(--text-mute); }
+    /* deck rows */
+    .deck { display:flex; align-items:center; gap:12px; background:white; border:2px solid var(--border); border-radius:14px; padding:13px 16px; margin-bottom:10px; flex-wrap:wrap; }
+    .deck .nm { font-weight:800; font-size:15px; flex:1; min-width:170px; }
+    .deck .pg { font-size:12px; color:var(--text-mute); font-weight:700; white-space:nowrap; }
+    .deck .bar { width:110px; height:9px; background:var(--bg-alt); border-radius:5px; overflow:hidden; }
+    .deck .bar .f { height:100%; background:linear-gradient(90deg,#7BD93B,var(--green)); }
+    .deck .acts { display:flex; gap:8px; }
+    .deck .mini { font-size:12.5px; font-weight:800; border:2px solid var(--border); background:var(--bg-alt); border-radius:9px; padding:7px 12px; cursor:pointer; }
+    .deck .mini.learn { border-color:rgba(88,204,2,.55); background:rgba(88,204,2,.1); color:var(--green-dark); }
+    .deck .mini.learn:hover { background:var(--green); color:white; }
+    .deck .mini.game:hover { border-color:var(--blue); color:var(--blue-dark); }
+    /* flashcard */
+    .fc-wrap { perspective:1200px; max-width:520px; margin:18px auto; }
+    .fc { position:relative; width:100%; min-height:260px; transform-style:preserve-3d; transition:transform .45s; cursor:pointer; }
+    .fc.flip { transform:rotateY(180deg); }
+    .fc .face { position:absolute; inset:0; backface-visibility:hidden; -webkit-backface-visibility:hidden; background:white; border:3px solid var(--border); border-radius:20px; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:10px; padding:24px; text-align:center; }
+    .fc .face.back { transform:rotateY(180deg); border-color:var(--green); overflow-y:auto; justify-content:flex-start; }
+    .fc .w { font-size:30px; font-weight:900; }
+    .fc .ipa { color:var(--blue-dark); font-size:16px; }
+    .fc .mean { font-size:19px; font-weight:800; color:var(--green-dark); white-space:pre-line; }
+    .fc .ex { font-size:13.5px; color:var(--text-soft); font-style:italic; margin-top:8px; white-space:pre-line; text-align:left; }
+    .fc .hint { position:absolute; bottom:10px; left:0; right:0; font-size:11px; color:var(--text-mute); }
+    .fc .tag { font-size:11px; font-weight:800; color:var(--text-mute); text-transform:uppercase; letter-spacing:.08em; }
+    /* quiz */
+    .qz-prompt { text-align:center; margin:22px 0 6px; }
+    .qz-prompt .p { font-size:26px; font-weight:900; }
+    .qz-prompt .s { font-size:14px; color:var(--text-mute); margin-top:4px; }
+    .qz-opts { display:flex; flex-direction:column; gap:10px; max-width:560px; margin:16px auto; }
+    .qz-opt { display:flex; align-items:center; gap:12px; background:white; border:2px solid var(--border); border-radius:14px; padding:14px 16px; font-weight:700; font-size:15px; cursor:pointer; text-align:left; }
+    .qz-opt:hover { border-color:var(--blue); }
+    .qz-opt.right { border-color:var(--green); background:#f0ffe6; }
+    .qz-opt.wrong { border-color:var(--red); background:#fff0f0; }
+    .qz-opt[disabled] { cursor:default; }
+    .qz-opt .lt { width:30px; height:30px; flex:none; display:flex; align-items:center; justify-content:center; background:var(--bg-alt); border-radius:8px; font-weight:900; }
+    /* session header */
+    .ss-head { position:sticky; top:0; z-index:10; background:var(--bg-alt); display:flex; align-items:center; gap:12px; padding:10px 0; margin-bottom:8px; border-bottom:2px solid var(--border); }
+    .ss-head .close { width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:16px; background:white; border:2px solid var(--border); font-weight:800; cursor:pointer; }
+    .ss-head .progress-bar { flex:1; height:14px; }
+    .combo { font-weight:900; font-size:14px; color:#E07b1e; white-space:nowrap; }
+    /* self grade */
+    .sg-row { display:flex; gap:12px; justify-content:center; margin:16px 0; }
+    /* match game */
+    .mt-grid { display:grid; grid-template-columns:repeat(auto-fill,minmax(150px,1fr)); gap:10px; margin:16px 0; }
+    .mt-tile { min-height:76px; background:white; border:2px solid var(--border); border-radius:12px; padding:10px; font-weight:700; font-size:13.5px; cursor:pointer; display:flex; align-items:center; justify-content:center; text-align:center; transition:all .15s; }
+    .mt-tile:hover { border-color:var(--blue); }
+    .mt-tile.sel { border-color:var(--blue); background:#eaf6ff; }
+    .mt-tile.ok { border-color:var(--green); background:#f0ffe6; opacity:.45; pointer-events:none; }
+    .mt-tile.no { border-color:var(--red); background:#fff0f0; animation:shake .3s; }
+    @keyframes shake { 0%,100%{transform:translateX(0)} 25%{transform:translateX(-5px)} 75%{transform:translateX(5px)} }
+    .result-emoji { font-size:76px; }
+    @media (prefers-reduced-motion: reduce) { .fc { transition:none; } .mt-tile.no { animation:none; } }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/csv.js?v=10"></script>
+  <script src="/js/study-core.js?v=1"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+    const { sidebar, topbar } = renderShell({ active: 'study', state: State.load() });
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+
+    function award(correct) {
+      const st = State.load();
+      State.recordAnswer(st, 'study', 0, correct);
+    }
+    function logHistory(entry) {
+      if (window.Auth && Auth.addHistory) Auth.addHistory(Object.assign({ type: 'study' }, entry));
+    }
+
+    // ============ PICKER ============
+    async function renderPicker() {
+      root.innerHTML = sidebar + `<main class="main">${topbar}
+        <h2 style="font-size:26px;font-weight:900;">🧠 Học &amp; Ôn — nhớ lâu bằng lặp lại ngắt quãng</h2>
+        <p style="color:var(--text-mute);margin:6px 0 16px;line-height:1.6;">
+          Học 10 thẻ mới mỗi phiên → hệ thống tự nhắc ôn đúng lúc sắp quên (1 → 2 → 4 → 7 → 15 ngày).
+          Trả lời đúng thẻ giãn xa, sai quay về đầu. Kiên trì ôn mỗi ngày là cách duy nhất để nhớ bền.
+        </p>
+        <div class="st-hero">
+          <div class="big-ic">🔔</div>
+          <div style="flex:1;min-width:170px;">
+            <div class="t" id="due-t">Đang đếm thẻ đến hạn…</div>
+            <div class="d">Thẻ đến hạn hôm nay từ tất cả bộ đã học</div>
+          </div>
+          <button class="btn gold" id="btn-review" disabled>🔔 Ôn ngay</button>
+        </div>
+        <h3 class="section-title">📚 Từ vựng</h3>
+        <div id="vocab-decks"><p style="color:var(--text-mute);">Đang tải…</p></div>
+        <h3 class="section-title">📗 Ngữ pháp (thẻ công thức)</h3>
+        <div id="grammar-decks"></div>
+        <p style="font-size:12.5px;color:var(--text-mute);margin-top:14px;">💡 "Thuộc" = trả lời đúng liên tiếp tới hộp 4/5. Mỗi câu đúng +10 XP, tính vào nhiệm vụ ngày &amp; streak 🔥.</p>
+      </main>`;
+
+      const vbox = document.getElementById('vocab-decks');
+      const gbox = document.getElementById('grammar-decks');
+      vbox.innerHTML = ''; gbox.innerHTML = '';
+      for (const d of Study.DECKS) {
+        const cards = await Study.loadDeck(d.id);
+        const pg = Study.deckProgress(cards, d.id);
+        const due = Study.dueCards(cards, d.id).length;
+        const pct = pg.total ? Math.round(pg.known / pg.total * 100) : 0;
+        const row = document.createElement('div');
+        row.className = 'deck';
+        row.innerHTML = `
+          <div class="nm">${d.name}${due ? ` <span style="color:#E07b1e;">· ${due} chờ ôn</span>` : ''}</div>
+          <div class="bar"><div class="f" style="width:${pct}%"></div></div>
+          <div class="pg">${pg.known}/${pg.total} thuộc</div>
+          <div class="acts">
+            <button class="mini learn" data-a="learn">📖 Học ${d.batch} thẻ</button>
+            ${d.type === 'vocab' ? '<button class="mini game" data-a="match">🎮 Ghép cặp</button>' : ''}
+          </div>`;
+        row.querySelector('[data-a="learn"]').addEventListener('click', () => startLearn(d));
+        const g = row.querySelector('[data-a="match"]');
+        if (g) g.addEventListener('click', () => startMatch(d));
+        (d.type === 'vocab' ? vbox : gbox).appendChild(row);
+      }
+      const all = await Study.allDue();
+      const bt = document.getElementById('btn-review');
+      const dt = document.getElementById('due-t');
+      if (!bt || !dt) return;
+      if (all.length) {
+        dt.textContent = `${all.length} thẻ đến hạn ôn hôm nay`;
+        bt.removeAttribute('disabled');
+        bt.addEventListener('click', () => startReview(all));
+      } else {
+        dt.textContent = 'Không có thẻ nào chờ ôn 🎉';
+        bt.textContent = '✓ Đã ôn xong';
+      }
+    }
+
+    // ============ session shell ============
+    function shell(innerHtml, pct, comboN) {
+      return sidebar + `<main class="main">
+        <div class="ss-head">
+          <button class="close" id="ss-close" title="Thoát">✕</button>
+          <div class="progress-bar"><div class="fill" style="width:${pct}%"></div></div>
+          <span class="combo">${comboN >= 2 ? '🔥 x' + comboN : ''}</span>
+        </div>
+        ${innerHtml}
+      </main>`;
+    }
+    function wireClose() {
+      document.getElementById('ss-close').addEventListener('click', () => { if (confirm('Thoát phiên học? Thẻ đã trả lời vẫn được lưu.')) renderPicker(); });
+    }
+
+    // ============ LEARN: preview flashcards → quiz ============
+    async function startLearn(deck) {
+      const cards = await Study.loadDeck(deck.id);
+      const fresh = Study.newCards(cards, deck.id, deck.batch);
+      if (!fresh.length) {
+        alert('Bạn đã học hết bộ này! Hãy dùng "Ôn ngay" để củng cố.');
+        return;
+      }
+      runSession(deck, cards, fresh, true);
+    }
+
+    // ============ REVIEW (all decks) ============
+    function startReview(allDueList) {
+      // group per item; deckCards needed for MCQ distractors
+      reviewQueueRun(allDueList);
+    }
+    async function reviewQueueRun(list) {
+      let i = 0, correctN = 0, combo = 0, best = 0;
+      const total = list.length;
+      const again = [];   // wrong first-showings, re-asked ONCE at the end (retry items never re-queue)
+
+      async function step() {
+        if (i >= list.length) {
+          if (again.length) { list = list.concat(Study.shuffle(again.splice(0))); return step(); }
+          return finish();
+        }
+        const item = list[i];
+        const deck = item.deck, card = item.card;
+        const pct = Math.round(i / list.length * 100);
+        if (deck.type === 'grammar') renderSelfGrade(deck, card, pct, combo, onAnswer);
+        else {
+          const deckCards = await Study.loadDeck(deck.id);
+          renderMcq(deck, card, Study.mcq(card, deckCards), pct, combo, onAnswer);
+        }
+        function onAnswer(ok) {
+          if (!item.retry) {
+            // Grade + XP + score only on the FIRST showing — a retry is reinforcement, not a new answer
+            Study.grade(deck.id, card.key, ok);
+            award(ok);
+            if (ok) correctN++;
+            else again.push({ deck, card, retry: true });
+          }
+          if (ok) { combo++; best = Math.max(best, combo); }
+          else combo = 0;
+          i++;
+          step();
+        }
+      }
+      function finish() {
+        logHistory({ mode: 'review', total, correct: correctN });
+        renderDone('🔔 Ôn tập xong!', total, correctN, best);
+      }
+      step();
+    }
+
+    // ============ shared learn session ============
+    async function runSession(deck, deckCards, sessionCards, isLearn) {
+      let phase = isLearn ? 'preview' : 'quiz';
+      let i = 0, correctN = 0, combo = 0, best = 0;
+      const wrongOnce = {};   // key -> true if missed at least once (grade as not-first-try)
+      let queue = sessionCards.slice();
+
+      function next() {
+        if (phase === 'preview') {
+          if (i >= queue.length) { phase = 'quiz'; i = 0; queue = Study.shuffle(queue.slice()); return next(); }
+          return renderPreview();
+        }
+        if (i >= queue.length) {
+          const missed = queue.filter(c => wrongOnce[c.key] && !wrongOnce['done|' + c.key]);
+          if (missed.length) { missed.forEach(c => wrongOnce['done|' + c.key] = true); queue = Study.shuffle(missed); i = 0; return next(); }
+          logHistory({ mode: 'learn', deck: deck.id, total: sessionCards.length, correct: correctN });
+          return renderDone('📖 Học xong ' + sessionCards.length + ' thẻ mới!', sessionCards.length, correctN, best);
+        }
+        const card = queue[i];
+        const pct = Math.round(i / queue.length * 100);
+        if (deck.type === 'grammar') renderSelfGrade(deck, card, pct, combo, onAnswer);
+        else renderMcq(deck, card, Study.mcq(card, deckCards), pct, combo, onAnswer);
+        function onAnswer(ok) {
+          const firstTry = !wrongOnce[card.key];
+          if (ok) {
+            // Grade only the first showing; a requeued correct answer is reinforcement
+            if (firstTry) { Study.grade(deck.id, card.key, true); correctN++; }
+            award(true);
+            combo++; best = Math.max(best, combo);
+          } else {
+            // First miss: enter SRS as lapsed (box 1, due tomorrow) so the card isn't lost
+            if (firstTry) Study.grade(deck.id, card.key, false);
+            wrongOnce[card.key] = true;
+            award(false);
+            combo = 0;
+          }
+          i++;
+          next();
+        }
+      }
+
+      function renderPreview() {
+        const c = queue[i];
+        const topic = c.topic ? `<div class="tag">${esc(c.topic)}</div>` : '';
+        root.innerHTML = shell(`
+          <p style="text-align:center;color:var(--text-mute);font-size:13px;margin-top:10px;">Thẻ mới ${i + 1}/${queue.length} — chạm thẻ để lật</p>
+          <div class="fc-wrap"><div class="fc" id="fc">
+            <div class="face front">${topic}<div class="w">${esc(c.front)}</div>${c.ipa ? `<div class="ipa">${esc(c.ipa)}</div>` : ''}<div class="hint">👆 Chạm để xem nghĩa</div></div>
+            <div class="face back">${topic}<div class="w" style="font-size:20px;">${esc(c.front)}</div><div class="mean">${esc(c.back)}</div>${c.ex ? `<div class="ex">${esc(c.ex)}</div>` : ''}</div>
+          </div></div>
+          <div style="display:flex;justify-content:center;gap:12px;">
+            <button class="btn blue" id="fc-next">${i + 1 >= queue.length ? 'Vào quiz →' : 'Thẻ tiếp →'}</button>
+          </div>`, Math.round(i / queue.length * 50), 0);
+        wireClose();
+        document.getElementById('fc').addEventListener('click', function () { this.classList.toggle('flip'); });
+        document.getElementById('fc-next').addEventListener('click', () => { i++; next(); });
+      }
+
+      next();
+    }
+
+    // ============ MCQ view ============
+    function renderMcq(deck, card, q, pct, combo, done) {
+      const opts = q.options.map((o, k) => `
+        <button class="qz-opt" data-c="${o.correct ? 1 : 0}"><span class="lt">${'ABCD'[k]}</span><span>${esc(o.text)}</span></button>`).join('');
+      root.innerHTML = shell(`
+        <div class="qz-prompt"><div class="p">${esc(q.prompt)}</div><div class="s">${esc(q.promptSub)}</div></div>
+        <div class="qz-opts">${opts}</div>`, pct, combo);
+      wireClose();
+      let answered = false;
+      root.querySelectorAll('.qz-opt').forEach(b => b.addEventListener('click', () => {
+        if (answered) return;
+        answered = true;
+        const ok = b.dataset.c === '1';
+        b.classList.add(ok ? 'right' : 'wrong');
+        root.querySelectorAll('.qz-opt').forEach(x => { x.setAttribute('disabled', '1'); if (x.dataset.c === '1') x.classList.add('right'); });
+        setTimeout(() => done(ok), ok ? 650 : 1400);
+      }));
+    }
+
+    // ============ grammar self-grade ============
+    function renderSelfGrade(deck, card, pct, combo, done) {
+      root.innerHTML = shell(`
+        <p style="text-align:center;color:var(--text-mute);font-size:13px;margin-top:10px;">${esc(deck.name)} — nhớ lại rồi chạm thẻ để kiểm tra</p>
+        <div class="fc-wrap"><div class="fc" id="fc">
+          <div class="face front"><div class="w" style="font-size:24px;">${esc(card.front)}</div><div class="hint">👆 Chạm để xem đáp án</div></div>
+          <div class="face back"><div class="mean" style="font-size:14.5px;text-align:left;">${esc(card.back)}</div></div>
+        </div></div>
+        <div class="sg-row" id="sg" style="visibility:hidden;">
+          <button class="btn ghost" id="sg-no">😵 Chưa nhớ</button>
+          <button class="btn" id="sg-yes">😎 Đã nhớ</button>
+        </div>`, pct, combo);
+      wireClose();
+      document.getElementById('fc').addEventListener('click', function () {
+        this.classList.toggle('flip');
+        document.getElementById('sg').style.visibility = 'visible';
+      });
+      document.getElementById('sg-yes').addEventListener('click', () => done(true));
+      document.getElementById('sg-no').addEventListener('click', () => done(false));
+    }
+
+    // ============ MATCH game ============
+    async function startMatch(deck) {
+      const cards = await Study.loadDeck(deck.id);
+      if (cards.length < 6) { alert('Bộ này chưa đủ thẻ để chơi.'); return; }
+      // Prefer cards being learned; fill with random
+      const started = cards.filter(c => Study.cardState(deck.id, c.key));
+      const pool = Study.shuffle(started.slice()).concat(Study.shuffle(cards.filter(c => !Study.cardState(deck.id, c.key))));
+      const pairs = pool.slice(0, 6);
+      const tiles = Study.shuffle(pairs.map((c, i) => ({ pid: i, side: 'w', text: c.front }))
+        .concat(pairs.map((c, i) => ({ pid: i, side: 'm', text: c.back.split('\n')[0] }))));
+      let sel = null, found = 0, wrongN = 0;
+      const t0 = Date.now();
+
+      root.innerHTML = shell(`
+        <h3 style="text-align:center;margin-top:12px;">🎮 Ghép từ với nghĩa</h3>
+        <p style="text-align:center;color:var(--text-mute);font-size:13px;">Chọn 1 từ rồi chọn nghĩa đúng của nó</p>
+        <div class="mt-grid">${tiles.map((t, idx) => `<button class="mt-tile" data-i="${idx}">${esc(t.text)}</button>`).join('')}</div>`, 0, 0);
+      wireClose();
+
+      root.querySelectorAll('.mt-tile').forEach(el => el.addEventListener('click', () => {
+        const idx = +el.dataset.i, t = tiles[idx];
+        if (el.classList.contains('ok')) return;
+        if (sel === null) { sel = idx; el.classList.add('sel'); return; }
+        if (sel === idx) { el.classList.remove('sel'); sel = null; return; }
+        const pEl = root.querySelector(`.mt-tile[data-i="${sel}"]`), p = tiles[sel];
+        if (p.side === t.side) {   // picked another tile of the same kind -> just move the selection
+          pEl.classList.remove('sel'); el.classList.add('sel'); sel = idx; return;
+        }
+        sel = null; pEl.classList.remove('sel');
+        if (p.pid === t.pid && p.side !== t.side) {
+          pEl.classList.add('ok'); el.classList.add('ok');
+          found++; award(true);
+          if (found >= pairs.length) {
+            const secs = Math.round((Date.now() - t0) / 1000);
+            logHistory({ mode: 'match', deck: deck.id, total: pairs.length, correct: pairs.length });
+            setTimeout(() => renderDone(`🎮 Ghép xong trong ${secs} giây!`, pairs.length, pairs.length - Math.min(wrongN, pairs.length), 0, `Sai ${wrongN} lần`), 350);
+          }
+        } else {
+          wrongN++;
+          el.classList.add('no'); pEl.classList.add('no');
+          setTimeout(() => { el.classList.remove('no'); pEl.classList.remove('no'); }, 350);
+        }
+      }));
+    }
+
+    // ============ done ============
+    function renderDone(title, total, correctN, bestCombo, subtitle) {
+      const st = State.load();
+      root.innerHTML = sidebar + `<main class="main">
+        <div class="modal" style="margin:40px auto;max-width:560px;">
+          <div class="result-emoji">${correctN >= total ? '🏆' : correctN >= total * 0.7 ? '🎉' : '💪'}</div>
+          <h2>${title}</h2>
+          <p style="color:var(--text-mute);margin-top:6px;">${subtitle || `Đúng ngay lần đầu ${correctN}/${total}`}${bestCombo >= 2 ? ` · chuỗi tốt nhất 🔥x${bestCombo}` : ''}</p>
+          <div class="stats-grid" style="margin-top:22px;">
+            <div class="stat-card xp"><div class="big">⚡ ${st.xp}</div><div class="label">Tổng XP</div></div>
+            <div class="stat-card streak"><div class="big">🔥 ${st.streak}</div><div class="label">Ngày streak</div></div>
+            <div class="stat-card"><div class="big">🎯 ${st.todayAnswered}/${st.dailyGoal}</div><div class="label">Nhiệm vụ hôm nay</div></div>
+          </div>
+          <div class="row" style="margin-top:22px;">
+            <a class="btn ghost" href="/study">Về danh sách bộ thẻ</a>
+            <button class="btn" id="dn-more">Học tiếp ➜</button>
+          </div>
+        </div>
+      </main>`;
+      document.getElementById('dn-more').addEventListener('click', renderPicker);
+    }
+
+    renderPicker();
+  })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js').catch(()=>{}); });
+    }
+  </script>
+</body>
+</html>

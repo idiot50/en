@@ -1,0 +1,674 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Chép chính tả</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .player-header { position: sticky; top: 0; z-index: 10; background: var(--bg-alt); padding: 10px 0; margin-bottom: 12px; border-bottom: 2px solid var(--border); display:flex; align-items:center; gap:12px; }
+    .player-header .close { width:32px; height:32px; display:flex; align-items:center; justify-content:center; border-radius:16px; background:white; border:2px solid var(--border); cursor:pointer; font-weight:800; text-decoration:none; color:var(--text-soft); }
+    /* mode chooser */
+    .md-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(180px,1fr)); gap:12px; margin-top:8px; }
+    .md-card { border:3px solid var(--border); border-radius:16px; padding:16px; cursor:pointer; text-align:center; background:white; transition:all .12s; }
+    .md-card:hover { border-color:var(--blue); }
+    .md-card.active { border-color:var(--green); background:#f3fff0; box-shadow:0 4px 0 var(--green-dark); }
+    .md-card .ic { font-size:36px; }
+    .md-card .t { font-weight:800; margin-top:6px; }
+    .md-card .d { font-size:12px; color:var(--text-mute); margin-top:4px; line-height:1.4; }
+    .ct-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .ct-chip { border:2px solid var(--border); background:white; border-radius:12px; padding:10px 18px; font-weight:800; cursor:pointer; font-size:15px; }
+    .ct-chip.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    /* audio bar */
+    .au-bar { display:flex; gap:8px; align-items:center; flex-wrap:wrap; background:white; border:2px solid var(--border); border-radius:14px; padding:10px 14px; margin-bottom:14px; position:sticky; top:56px; z-index:9; }
+    .au-bar .au-slot { flex:1; min-width:200px; display:flex; }
+    .au-bar .au-slot audio { width:100%; height:38px; }
+    .spd { border:2px solid var(--border); background:var(--bg-alt); border-radius:9px; padding:6px 10px; font-weight:800; cursor:pointer; font-size:12.5px; }
+    .spd.active { border-color:var(--blue); color:var(--blue-dark); background:#eaf6ff; }
+    /* cloze script */
+    .dt-script { background:white; border:2px solid var(--border); border-radius:16px; padding:20px; font-size:16px; line-height:2.2; white-space:pre-line; }
+    .dt-blank { border:none; border-bottom:2.5px solid var(--blue); background:#f4faff; border-radius:6px 6px 0 0; font-family:inherit; font-size:15px; font-weight:700; padding:2px 6px; margin:0 2px; text-align:center; outline:none; }
+    .dt-blank:focus { background:#eaf6ff; }
+    .dt-ok { color:var(--green-dark); font-weight:800; border-bottom:2.5px solid var(--green); padding:2px 4px; }
+    .dt-bad { color:#c0392b; font-weight:800; border-bottom:2.5px solid var(--red); padding:2px 4px; }
+    .dt-bad s { opacity:.6; font-weight:600; }
+    /* Part 3/4: whole-sentence gaps */
+    .dt-turn { margin-bottom:12px; }
+    .dt-sp { color:var(--blue-dark); margin-right:4px; }
+    .dt-shown { }
+    .dt-sent-slot { display:block; margin:8px 0 10px; }
+    .dt-sent-tag { display:inline-block; font-size:11.5px; font-weight:800; color:var(--blue-dark); background:#eaf6ff; border-radius:8px; padding:2px 9px; margin-bottom:4px; }
+    textarea.dt-sent { display:block; width:100%; border:2px dashed var(--blue); border-radius:12px; background:#f7fcff; padding:10px 12px; font-family:inherit; font-size:15px; line-height:1.5; resize:vertical; outline:none; }
+    textarea.dt-sent:focus { background:#eaf6ff; border-style:solid; }
+    .dt-sent-res { display:block; margin:8px 0 10px; border-left:4px solid var(--border); padding-left:12px; }
+    .dt-sent-score { font-size:12.5px; font-weight:800; color:var(--red); margin-bottom:3px; }
+    .dt-sent-score.good { color:var(--green-dark); }
+    .dt-sent-typed { font-size:13px; color:var(--text-mute); margin-bottom:4px; }
+    .dt-sent-res .dt-diff { border:none; padding:0; background:transparent; font-size:16px; }
+    /* Part 3/4: reference questions + choices shown under the script */
+    .dt-qs { margin-top:14px; background:white; border:2px solid var(--border); border-radius:14px; padding:4px 16px 14px; }
+    .dt-qs > summary { cursor:pointer; font-weight:800; padding:12px 0; font-size:14px; color:var(--blue-dark); list-style:none; }
+    .dt-qs > summary::-webkit-details-marker { display:none; }
+    .dt-qs > summary::before { content:'▸ '; }
+    .dt-qs[open] > summary::before { content:'▾ '; }
+    .dt-q { padding:12px 0; border-top:1px dashed var(--border); }
+    .dt-q:first-of-type { border-top:none; }
+    .dt-q-text { font-weight:700; margin-bottom:8px; line-height:1.4; }
+    .dt-opt { padding:5px 10px; border-radius:8px; font-size:14px; margin-bottom:4px; line-height:1.4; }
+    .dt-opt.ok { background:#f0ffe6; border:1.5px solid var(--green); color:var(--green-dark); font-weight:700; }
+    .reveal-block { margin-top:14px; padding:14px; border-radius:10px; background:var(--bg-alt); border-left:4px solid var(--blue); }
+    .reveal-block .heading { font-weight:800; font-size:13px; color:var(--text-mute); text-transform:uppercase; margin-bottom:6px; letter-spacing:.5px; }
+    .reveal-block .body { font-size:14px; line-height:1.6; white-space:pre-line; max-height:280px; overflow-y:auto; }
+    .group-toolbar { position:sticky; bottom:0; background:linear-gradient(to top, var(--bg-alt) 80%, transparent); padding:16px 0; display:flex; gap:10px; align-items:center; z-index:5; flex-wrap:wrap; }
+    .missed { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+    .missed button { border:2px solid var(--border); background:white; border-radius:10px; padding:6px 11px; font-weight:800; cursor:pointer; font-size:13px; }
+    .missed button:hover { border-color:var(--green); color:var(--green-dark); }
+    /* P2 typing */
+    .dt-type { width:100%; min-height:84px; border:2px solid var(--border); border-radius:14px; padding:14px; font-family:inherit; font-size:16px; resize:vertical; }
+    .dt-diff { font-size:17px; line-height:1.9; background:white; border:2px solid var(--border); border-radius:14px; padding:16px; }
+    .feedback { margin-top:12px; padding:12px 16px; border-radius:12px; font-size:14.5px; }
+    .feedback.correct { background:#f0ffe6; border:2px solid var(--green); }
+    .feedback.wrong { background:#fff0f0; border:2px solid var(--red); }
+    .pick-count { font-weight:800; color:var(--text-soft); font-size:13px; }
+    .au-diag { flex-basis:100%; font-size:12px; line-height:1.5; background:#1e1e1e; color:#d4f0ff; border-radius:8px; padding:8px 10px; margin-top:4px; font-family:ui-monospace,Menlo,Consolas,monospace; white-space:pre-wrap; word-break:break-all; display:none; }
+    .au-diag.show { display:block; }
+    .au-diag a { color:#7fd0ff; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/csv.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=10"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+    const { sidebar } = renderShell({ active: 'dictation', state: State.load() });
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    VocabNotes.enableCapture();
+
+    const STOP = new Set(('the a an to of in on at and or but is are was were be been being it he she we you they i this that these those for with as by from his her its their our your my will would can could shall should may might must has have had do does did not no yes so if then than there here what when where who whom whose which how me him them us am s t re ve ll d don didn doesn isn aren wasn weren won').split(' '));
+    const MODES = [
+      { id: 'p2', ic: '💬', t: 'Part 2 — Gõ cả câu', d: 'Nghe câu hỏi ngắn, gõ lại nguyên văn' },
+      { id: 'p3', ic: '🗣', t: 'Part 3 — Điền khuyết', d: 'Hội thoại, điền từ còn thiếu vào script' },
+      { id: 'p4', ic: '📢', t: 'Part 4 — Điền khuyết', d: 'Bài nói, điền từ còn thiếu vào script' }
+    ];
+    const COUNTS = [1, 2, 3, 5];
+    // Part 3/4 gap size: blank out individual words, or whole sentences (type them back)
+    const GAPS = [
+      { id: 'word', ic: '🔤', t: 'Khuyết từ', d: 'Ẩn một số từ trong script — điền vào ô trống' },
+      { id: 'sent', ic: '📝', t: 'Khuyết cả câu', d: 'Ẩn nguyên câu — nghe và gõ lại toàn bộ câu' }
+    ];
+    let mode = localStorage.getItem('toeicets_dict_mode') || 'p3';
+    let count = parseInt(localStorage.getItem('toeicets_dict_count') || '2', 10);
+    if (COUNTS.indexOf(count) === -1) count = 2;
+    let gap = localStorage.getItem('toeicets_dict_gap') || 'word';
+    if (gap !== 'word' && gap !== 'sent') gap = 'word';
+    let speed = 1;
+
+    // ---------- picker ----------
+    function renderPicker() {
+      root.innerHTML = sidebar + `<main class="main">
+        <h2 style="font-size:26px;font-weight:900;">✍️ Nghe chép chính tả</h2>
+        <p style="color:var(--text-mute);margin:6px 0 16px;line-height:1.6;">
+          Phương pháp tăng điểm Listening nhanh nhất cho mục tiêu 650: nghe audio đề thật rồi
+          <b>gõ lại từ còn thiếu</b>. Chỗ nào nghe trượt sẽ lộ ra ngay — lưu từ đó vào sổ để ôn.
+        </p>
+        <div class="card" style="padding:18px;">
+          <h3 class="section-title" style="margin-top:0;">1️⃣ Chọn dạng bài</h3>
+          <div class="md-grid">
+            ${MODES.map(m => `<div class="md-card ${m.id === mode ? 'active' : ''}" data-m="${m.id}">
+              <div class="ic">${m.ic}</div><div class="t">${m.t}</div><div class="d">${m.d}</div></div>`).join('')}
+          </div>
+          <div id="gap-wrap" style="display:${mode === 'p2' ? 'none' : ''};">
+            <h3 class="section-title">2️⃣ Mức khoảng trống</h3>
+            <div class="md-grid">
+              ${GAPS.map(g => `<div class="md-card gap-card ${g.id === gap ? 'active' : ''}" data-g="${g.id}">
+                <div class="ic">${g.ic}</div><div class="t">${g.t}</div><div class="d">${g.d}</div></div>`).join('')}
+            </div>
+          </div>
+          <h3 class="section-title">${mode === 'p2' ? '2️⃣' : '3️⃣'} Số bài</h3>
+          <div class="ct-row">
+            ${COUNTS.map(c => `<button class="ct-chip ${c === count ? 'active' : ''}" data-c="${c}">${c} bài</button>`).join('')}
+          </div>
+          <button class="btn gold" id="start" style="margin-top:16px;">▶ Bắt đầu</button>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-mute);margin-top:12px;">💡 Nghe được tối đa 5 lần/bài. Đổi tốc độ 0.75x khi khó, thử 1.25x khi đã quen — vào phòng thi sẽ thấy đề "chậm lại".</p>
+      </main>`;
+      root.querySelectorAll('.md-card[data-m]').forEach(c => c.addEventListener('click', () => {
+        mode = c.dataset.m; localStorage.setItem('toeicets_dict_mode', mode);
+        root.querySelectorAll('.md-card[data-m]').forEach(x => x.classList.toggle('active', x.dataset.m === mode));
+        renderPicker();   // gap chooser only applies to Part 3/4
+      }));
+      root.querySelectorAll('.gap-card').forEach(c => c.addEventListener('click', () => {
+        gap = c.dataset.g; localStorage.setItem('toeicets_dict_gap', gap);
+        root.querySelectorAll('.gap-card').forEach(x => x.classList.toggle('active', x.dataset.g === gap));
+      }));
+      root.querySelectorAll('.ct-chip').forEach(c => c.addEventListener('click', () => {
+        count = parseInt(c.dataset.c, 10); localStorage.setItem('toeicets_dict_count', count);
+        root.querySelectorAll('.ct-chip').forEach(x => x.classList.toggle('active', parseInt(x.dataset.c, 10) === count));
+      }));
+      document.getElementById('start').addEventListener('click', start);
+    }
+
+    // ---------- helpers ----------
+    const norm = w => String(w || '').toLowerCase().replace(/[^a-z']/g, '');
+    function tokenize(text) {   // keep whitespace + words separate: ["Hello", " ", "world", ..."]
+      return String(text || '').split(/(\s+)/);
+    }
+    function wordCore(tok) {    // "office," -> {pre:'', core:'office', suf:','}
+      const m = tok.match(/^([^A-Za-z']*)([A-Za-z'][A-Za-z']*)([^A-Za-z']*)$/);
+      return m ? { pre: m[1], core: m[2], suf: m[3] } : null;
+    }
+    function pickBlanks(tokens) {
+      const eligible = [];
+      tokens.forEach((tok, i) => {
+        const wc = wordCore(tok);
+        if (!wc) return;
+        const nm = norm(wc.core);
+        if (nm.length >= 3 && !STOP.has(nm)) eligible.push(i);
+      });
+      const want = Math.max(4, Math.min(12, Math.round(eligible.length * 0.2)));
+      const step = Math.max(1, Math.floor(eligible.length / want));
+      const out = [];
+      for (let k = Math.floor(step / 2); k < eligible.length && out.length < want; k += step) out.push(eligible[k]);
+      return new Set(out);
+    }
+    // Split a Part 3/4 script into speaker turns and sentences, so whole sentences can be
+    // blanked out. Returns [{sp:'W: ', parts:[{text, blank:bool}]}] preserving order.
+    function splitTurns(text) {
+      return String(text || '').split('\n').filter(l => l.trim()).map(line => {
+        const m = line.match(/^\s*([WM](?:-[A-Za-z]{2})?\s*:\s*)/);
+        const sp = m ? m[1] : '';
+        const body = m ? line.slice(m[0].length) : line;
+        const sents = body.split(/(?<=[.?!])\s+/).map(s => s.trim()).filter(Boolean);
+        return { sp, parts: sents.map(text => ({ text, blank: false })) };
+      });
+    }
+    const wordsOf = s => String(s || '').split(/\s+/).filter(Boolean);
+    // Mark ~1/3 of the long-enough sentences (spread out, min 1, max 4) as blanks.
+    function pickSentenceBlanks(turns) {
+      const all = [];
+      turns.forEach((t, ti) => t.parts.forEach((p, pi) => { if (wordsOf(p.text).length >= 4) all.push([ti, pi]); }));
+      if (!all.length) { // fall back: blank the longest sentence available
+        turns.forEach((t, ti) => t.parts.forEach((p, pi) => all.push([ti, pi])));
+      }
+      const want = Math.max(1, Math.min(4, Math.round(all.length / 3)));
+      const step = Math.max(1, Math.floor(all.length / want));
+      let n = 0;
+      for (let k = Math.floor(step / 2); k < all.length && n < want; k += step) {
+        turns[all[k][0]].parts[all[k][1]].blank = true; n++;
+      }
+      return n;
+    }
+    function lcsMatch(target, typed) {   // arrays of normalized words -> Set of matched target indices
+      const m = target.length, nn = typed.length;
+      const dp = Array.from({ length: m + 1 }, () => new Array(nn + 1).fill(0));
+      for (let i = m - 1; i >= 0; i--) for (let j = nn - 1; j >= 0; j--)
+        dp[i][j] = target[i] === typed[j] ? dp[i + 1][j + 1] + 1 : Math.max(dp[i + 1][j], dp[i][j + 1]);
+      const hit = new Set();
+      let i = 0, j = 0;
+      while (i < m && j < nn) {
+        if (target[i] === typed[j]) { hit.add(i); i++; j++; }
+        else if (dp[i + 1][j] >= dp[i][j + 1]) i++;
+        else j++;
+      }
+      return hit;
+    }
+    function award(ok) { const st = State.load(); State.recordAnswer(st, 'dictation', 0, ok); }
+    // ONE reusable <audio> element, "blessed" by playing a silent clip inside the user's
+    // click. A blessed element keeps its right to play() even if sampling takes long
+    // (first visit loads many CSVs and Chrome's activation window expires after ~5s).
+    const SILENT = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
+    let dtAudio = null;
+    function blessAudio() {
+      if (!dtAudio) {
+        dtAudio = document.createElement('audio');
+        dtAudio.id = 'dt-audio';
+        dtAudio.controls = true;
+        dtAudio.preload = 'auto';
+      }
+      try { dtAudio.src = SILENT; const p = dtAudio.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
+      return dtAudio;
+    }
+    function audioBar() {
+      return `<div class="au-bar">
+        <span class="au-slot" id="dt-au-slot"></span>
+        <button class="spd" id="dt-back5" title="Lùi lại 5 giây">↩ 5s</button>
+        <button class="spd ${speed === 0.75 ? 'active' : ''}" data-s="0.75">🐢 0.75x</button>
+        <button class="spd ${speed === 1 ? 'active' : ''}" data-s="1">1x</button>
+        <button class="spd ${speed === 1.25 ? 'active' : ''}" data-s="1.25">⚡ 1.25x</button>
+        <button class="spd" id="dt-reload-btn" title="Tải lại audio">🔄 Tải lại</button>
+        <span class="pick-count" id="dt-plays">Còn 5 lần nghe</span>
+        <pre class="au-diag" id="dt-diag"></pre>
+      </div>`;
+    }
+    // MediaError.code → human name (helps classify "no audio / bad path / network")
+    const MEDIA_ERR = { 1: 'ABORTED (bị huỷ)', 2: 'NETWORK (lỗi mạng khi tải)', 3: 'DECODE (file hỏng/không giải mã được)', 4: 'SRC_NOT_SUPPORTED (URL sai/404 hoặc định dạng không hỗ trợ)' };
+    const NET_STATE = { 0: 'EMPTY', 1: 'IDLE', 2: 'LOADING', 3: 'NO_SOURCE' };
+    const RDY_STATE = { 0: 'HAVE_NOTHING', 1: 'HAVE_METADATA', 2: 'HAVE_CURRENT', 3: 'HAVE_FUTURE', 4: 'HAVE_ENOUGH' };
+    function diagFmt(args) { return Array.prototype.slice.call(args).map(a => (typeof a === 'object' ? JSON.stringify(a) : String(a))).join(' '); }
+    function diagWrite(text, append) {
+      try { console.log('[dictation-audio]', text); } catch (e) {}
+      const box = document.getElementById('dt-diag');
+      if (!box) return;
+      box.classList.add('show');
+      if (append) box.textContent += '\n' + text; else box.textContent = text;   // status = single line
+    }
+    function diagLog() { diagWrite(diagFmt(arguments), false); }   // replace: current status only
+    function diagAdd() { diagWrite(diagFmt(arguments), true); }    // append: multi-line error report
+    // Probe the URL directly to separate "path wrong / 404" from "network/CORS down".
+    async function probeUrl(u) {
+      // 1) real GET (readable status). B2 public files usually send CORS *, so this works.
+      try {
+        const r = await fetch(u, { method: 'GET', headers: { Range: 'bytes=0-1' }, cache: 'no-store' });
+        return { via: 'fetch', ok: r.ok, status: r.status, statusText: r.statusText, type: r.type };
+      } catch (e1) {
+        // 2) fetch threw → could be CORS OR genuine network fail. Retry no-cors to tell them apart:
+        //    if no-cors resolves, the server IS reachable (it was a CORS-read block, not a dead link).
+        try {
+          await fetch(u, { method: 'GET', mode: 'no-cors', cache: 'no-store' });
+          return { via: 'no-cors', ok: null, note: 'Server phản hồi nhưng chặn đọc CORS (audio vẫn phát được bình thường)' };
+        } catch (e2) {
+          return { via: 'fail', ok: false, error: String((e2 && e2.message) || e2) };
+        }
+      }
+    }
+
+    function wireAudio(url) {
+      const slot = document.getElementById('dt-au-slot');
+      if (!slot) return;
+      const au = dtAudio || blessAudio();
+      slot.appendChild(au);                    // move the blessed element into this item
+      au.removeAttribute('data-locked');
+      const diagBox = document.getElementById('dt-diag');
+      if (diagBox) { diagBox.textContent = ''; diagBox.classList.remove('show'); }
+      let plays = 5;
+      const playsEl = () => document.getElementById('dt-plays');
+      const setPlaysText = () => { const el = playsEl(); if (el) el.textContent = plays > 0 ? `Còn ${plays} lần nghe` : 'Hết lượt nghe — kiểm tra thôi!'; };
+      const tryPlay = () => {
+        const p = au.play();
+        if (p && p.catch) p.catch(err => diagLog('play() bị chặn:', (err && err.name) || err, '→ bấm ▶ để nghe'));
+      };
+      // on* assignment (not addEventListener) so listeners don't stack across items
+      au.onplaying = () => diagLog('✔ đang phát OK');
+      au.onstalled = () => diagLog('stalled — dữ liệu về chậm');
+      au.onplay = () => { if (plays <= 0 || au.getAttribute('data-locked')) au.pause(); };
+      au.onended = () => { plays--; setPlaysText(); if (plays <= 0) au.setAttribute('data-locked', '1'); };
+      au.onerror = async () => {
+        if (!au.src || au.src.indexOf('data:') === 0) return;   // ignore the silent blip
+        const me = au.error || {};
+        diagLog('❌ LỖI AUDIO');                                   // first line replaces status
+        diagAdd('URL: ' + url);
+        diagAdd('MediaError.code: ' + (me.code || '?') + ' → ' + (MEDIA_ERR[me.code] || 'không rõ'));
+        if (me.message) diagAdd('message: ' + me.message);
+        diagAdd('networkState: ' + au.networkState + ' ' + (NET_STATE[au.networkState] || '') + ' | readyState: ' + au.readyState + ' ' + (RDY_STATE[au.readyState] || ''));
+        const el = playsEl();
+        if (el) el.innerHTML = '⚠️ Lỗi tải audio — <a href="#" id="dt-reload" style="color:var(--red);font-weight:800;text-decoration:underline;">thử lại</a>';
+        const rl = document.getElementById('dt-reload');
+        if (rl) rl.addEventListener('click', (e) => { e.preventDefault(); reload(); });
+        diagAdd('Đang kiểm tra đường dẫn…');
+        const probe = await probeUrl(url);
+        diagAdd('Probe: ' + JSON.stringify(probe));
+        if (probe.status === 404 || probe.status === 403) diagAdd('→ NGUYÊN NHÂN: file audio không tồn tại trên server (sai đường dẫn/tên file).');
+        else if (probe.via === 'fail') diagAdd('→ NGUYÊN NHÂN: không kết nối được (mất mạng hoặc server audio down).');
+        else if (probe.via === 'no-cors' || (probe.ok && (me.code === 3 || me.code === 4))) diagAdd('→ File tải được nhưng phát lỗi: có thể định dạng/giải mã. Thử "Tải lại".');
+      };
+      function reload() {
+        diagLog('🔄 Tải lại…');
+        const bust = url + (url.indexOf('?') === -1 ? '?' : '&') + 'r=' + Date.now();
+        au.removeAttribute('data-locked');
+        au.src = bust;
+        au.load();
+        au.playbackRate = speed;
+        setPlaysText();
+        tryPlay();
+      }
+      au.src = url;
+      au.load();
+      au.playbackRate = speed;
+      tryPlay();
+      document.addEventListener('pointerdown', function once() {
+        document.removeEventListener('pointerdown', once);
+        if (au.isConnected && au.paused && au.currentTime === 0 && !au.getAttribute('data-locked')) tryPlay();
+      });
+      const back5 = document.getElementById('dt-back5');
+      if (back5) back5.addEventListener('click', () => {
+        au.currentTime = Math.max(0, au.currentTime - 5);
+        if (au.paused && !au.getAttribute('data-locked')) tryPlay();
+      });
+      const reloadBtn = document.getElementById('dt-reload-btn');
+      if (reloadBtn) reloadBtn.addEventListener('click', reload);
+      root.querySelectorAll('.spd[data-s]').forEach(b => b.addEventListener('click', () => {
+        speed = parseFloat(b.dataset.s);
+        au.playbackRate = speed;
+        root.querySelectorAll('.spd[data-s]').forEach(x => x.classList.toggle('active', x === b));
+      }));
+    }
+
+    // ---------- session ----------
+    let items = [], idx = 0, totalBlanks = 0, totalHit = 0;
+    async function start() {
+      blessAudio();   // unlock the reusable audio element within this click
+      root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+        <div style="font-size:60px;">✍️</div><h2>Đang chọn bài nghe…</h2></div></main>`;
+      let cards = [];
+      try { cards = await QuizCore.sample(mode, mode === 'p2' ? count : count * 3); } catch (e) {}
+      // p2: one card per sentence; p3/4: one card per script (group) — need `count` scripts with usable audio+text
+      items = [];
+      for (const c of cards) {
+        const first = c.questions[0];
+        const text = mode === 'p2' ? (first.Question || '') : (first.Text || '');
+        if (!first.Audio || !text || text.length < (mode === 'p2' ? 10 : 60)) continue;
+        items.push(c);
+        if (items.length >= count) break;
+      }
+      if (!items.length) {
+        root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+          <div style="font-size:60px;">😢</div><h2>Không tìm được bài phù hợp</h2><a class="btn ghost" href="/dictation">Quay lại</a></div></main>`;
+        return;
+      }
+      idx = 0; totalBlanks = 0; totalHit = 0;
+      renderItem();
+    }
+
+    function audioUrlOf(card) {
+      // quiz-core resolves audio per environment (B2 on production, /data locally)
+      return QuizCore.assetUrl(card.year, card.n, 'audio', card.questions[0].Audio);
+    }
+
+    function renderItem() {
+      if (idx >= items.length) return renderDone();
+      const card = items[idx];
+      const url = audioUrlOf(card);
+      const src = `${card.srcLabel} • Part ${card.part}`;
+      const head = `
+        <div class="player-header">
+          <a class="close" href="/dictation" title="Thoát">✕</a>
+          <div style="font-weight:900;flex:1;">✍️ Bài ${idx + 1}/${items.length} <span style="color:var(--text-mute);font-weight:700;font-size:12.5px;">· ${esc(src)}</span></div>
+        </div>`;
+      if (mode === 'p2') renderTyping(card, url, head);
+      else if (gap === 'sent') renderClozeSentence(card, url, head);
+      else renderCloze(card, url, head);
+      window.scrollTo({ top: 0 });
+    }
+
+    // ---------- Part 3/4: cloze ----------
+    // Reference comprehension questions + choices (correct one highlighted) so the
+    // learner has context of what to listen for. Shared by both gap modes.
+    function questionsBlock(card) {
+      if (!card.questions.some(q => q.Question)) return '';
+      const qsHtml = card.questions.map(q => {
+        const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
+        const opts = ['A', 'B', 'C', 'D'].filter(L => (q[L] || '').trim()).map(L => {
+          const ok = L === correct;
+          return `<div class="dt-opt ${ok ? 'ok' : ''}">${ok ? '✓ ' : ''}<b>${L}.</b> ${esc(q[L] || '')}</div>`;
+        }).join('');
+        const qn = (q['Question Number'] || '').toString().replace(/\.0+$/, '');
+        return `<div class="dt-q"><div class="dt-q-text">${qn ? esc(qn) + '. ' : ''}${esc(q.Question || '')}</div><div class="dt-q-opts">${opts}</div></div>`;
+      }).join('');
+      return `<details class="dt-qs" open>
+          <summary>📋 Câu hỏi &amp; đáp án (bám nội dung khi nghe)</summary>
+          ${qsHtml}
+        </details>`;
+    }
+
+    // ---------- Part 3/4: whole-sentence gaps ----------
+    function renderClozeSentence(card, url, head) {
+      const first = card.questions[0];
+      const turns = splitTurns(first.Text);
+      const nBlank = pickSentenceBlanks(turns);
+      let bIdx = 0;
+      const bodyHtml = turns.map(t => {
+        const inner = t.parts.map(p => {
+          if (!p.blank) return `<span class="dt-shown">${esc(p.text)}</span>`;
+          const i = bIdx++;
+          const wc = wordsOf(p.text).length;
+          return `<span class="dt-sent-slot">
+              <span class="dt-sent-tag">Câu trống ${i + 1} · ${wc} từ</span>
+              <textarea class="dt-sent" data-i="${i}" rows="2" placeholder="Nghe và gõ lại cả câu này…" autocomplete="off" autocapitalize="off" spellcheck="false"></textarea>
+            </span>`;
+        }).join(' ');
+        return `<div class="dt-turn">${t.sp ? `<b class="dt-sp">${esc(t.sp)}</b>` : ''}${inner}</div>`;
+      }).join('');
+      const targets = [];
+      turns.forEach(t => t.parts.forEach(p => { if (p.blank) targets.push(p.text); }));
+
+      root.innerHTML = sidebar + `<main class="main">${head}
+        ${audioBar()}
+        <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">Nghe và <b>gõ lại ${nBlank} câu bị ẩn</b> (gõ nguyên văn cả câu). Ctrl+Enter để kiểm tra.</p>
+        <div class="dt-script" id="dt-script" style="line-height:1.9;">${bodyHtml}</div>
+        ${questionsBlock(card)}
+        <div id="dt-after"></div>
+        <div class="group-toolbar">
+          <span class="pick-count" id="dt-count">0/${nBlank} câu đã gõ</span>
+          <span style="flex:1"></span>
+          <button class="btn" id="dt-check">Kiểm tra</button>
+        </div>
+      </main>`;
+      wireAudio(url);
+      const areas = Array.from(root.querySelectorAll('.dt-sent'));
+      const cnt = document.getElementById('dt-count');
+      areas.forEach(a => {
+        a.addEventListener('input', () => {
+          cnt.textContent = `${areas.filter(x => x.value.trim()).length}/${nBlank} câu đã gõ`;
+        });
+        a.addEventListener('keydown', e => { if (e.key === 'Enter' && (e.ctrlKey || e.metaKey)) document.getElementById('dt-check').click(); });
+      });
+
+      document.getElementById('dt-check').addEventListener('click', () => {
+        let totWords = 0, hitWords = 0; const missedWords = [];
+        areas.forEach(a => {
+          const i = parseInt(a.dataset.i, 10);
+          const tgtRaw = wordsOf(targets[i]);
+          const tgt = tgtRaw.map(norm).filter(Boolean);
+          const typed = wordsOf(a.value).map(norm).filter(Boolean);
+          const hit = lcsMatch(tgt, typed);
+          // rebuild the sentence: matched words green, missed words red
+          let k = -1;
+          const diff = tgtRaw.map(w => {
+            if (!norm(w)) return esc(w);
+            k++;
+            if (hit.has(k)) return `<span class="dt-ok">${esc(w)}</span>`;
+            const c = wordCore(w);
+            if (c && !STOP.has(norm(c.core))) missedWords.push(c.core);
+            return `<span class="dt-bad">${esc(w)}</span>`;
+          }).join(' ');
+          totWords += tgt.length; hitWords += hit.size;
+          const pct = tgt.length ? Math.round(hit.size / tgt.length * 100) : 0;
+          const box = document.createElement('div');
+          box.className = 'dt-sent-res';
+          box.innerHTML = `<div class="dt-sent-score ${pct >= 80 ? 'good' : ''}">${hit.size}/${tgt.length} từ đúng · ${pct}%</div>
+            ${a.value.trim() ? `<div class="dt-sent-typed">Bạn gõ: <s>${esc(a.value.trim())}</s></div>` : ''}
+            <div class="dt-diff">${diff}</div>`;
+          a.parentNode.replaceChild(box, a);
+          award(pct >= 80);
+        });
+        totalBlanks += totWords; totalHit += hitWords;
+        const pctAll = totWords ? Math.round(hitWords / totWords * 100) : 0;
+        const uniq = Array.from(new Set(missedWords)).slice(0, 20);
+        const missedHtml = uniq.length ? `
+          <div class="reveal-block" style="border-left-color:var(--red);">
+            <div class="heading">👂 Từ nghe trượt — bấm để lưu vào sổ</div>
+            <div class="missed">${uniq.map(w => `<button data-w="${esc(w)}">➕ ${esc(w)}</button>`).join('')}</div>
+          </div>` : '';
+        document.getElementById('dt-after').innerHTML = `
+          <div class="feedback ${pctAll >= 80 ? 'correct' : 'wrong'}"><b>${hitWords}/${totWords} từ đúng — ${pctAll}%</b>${pctAll === 100 ? ' — nghe quá chuẩn! 🎉' : ''}</div>
+          ${missedHtml}
+          ${first.Transcript ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${QuizCore.nl2br(first.Transcript)}</div></div>` : ''}`;
+        document.getElementById('dt-after').querySelectorAll('.missed button').forEach(b =>
+          b.addEventListener('click', () => VocabNotes.openModal({ w: b.dataset.w, lookup: true, src: 'Chép chính tả • ' + card.srcLabel })));
+        const au = document.getElementById('dt-audio');
+        if (au) { au.removeAttribute('data-locked'); const pe = document.getElementById('dt-plays'); if (pe) pe.textContent = 'Nghe lại thoải mái'; }
+        const tb = root.querySelector('.group-toolbar');
+        tb.innerHTML = `<span class="pick-count">${pctAll}% chính xác</span><span style="flex:1"></span>
+          <button class="btn blue" id="dt-next">${idx + 1 >= items.length ? 'Xong ✓' : 'Bài tiếp →'}</button>`;
+        document.getElementById('dt-next').addEventListener('click', () => { idx++; renderItem(); });
+      });
+    }
+
+    function renderCloze(card, url, head) {
+      const first = card.questions[0];
+      const tokens = tokenize(first.Text);
+      const blanks = pickBlanks(tokens);
+      const html = tokens.map((tok, i) => {
+        if (!blanks.has(i)) return esc(tok);
+        const wc = wordCore(tok);
+        return `${esc(wc.pre)}<input class="dt-blank" data-i="${i}" size="${Math.max(3, wc.core.length)}" autocomplete="off" autocapitalize="off" spellcheck="false"/>${esc(wc.suf)}`;
+      }).join('');
+      const qsBlock = questionsBlock(card);
+      root.innerHTML = sidebar + `<main class="main">${head}
+        ${audioBar()}
+        <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">Nghe và điền <b>${blanks.size} từ còn thiếu</b>. Enter để nhảy ô kế tiếp.</p>
+        <div class="dt-script" id="dt-script">${html}</div>
+        ${qsBlock}
+        <div id="dt-after"></div>
+        <div class="group-toolbar">
+          <span class="pick-count" id="dt-count">0/${blanks.size} ô đã điền</span>
+          <span style="flex:1"></span>
+          <button class="btn" id="dt-check">Kiểm tra</button>
+        </div>
+      </main>`;
+      wireAudio(url);
+      const inputs = Array.from(root.querySelectorAll('.dt-blank'));
+      const cnt = document.getElementById('dt-count');
+      inputs.forEach((inp, k) => {
+        inp.addEventListener('input', () => {
+          const filled = inputs.filter(x => x.value.trim()).length;
+          cnt.textContent = `${filled}/${blanks.size} ô đã điền`;
+        });
+        inp.addEventListener('keydown', e => {
+          if (e.key === 'Enter') { e.preventDefault(); (inputs[k + 1] || document.getElementById('dt-check')).focus(); }
+        });
+      });
+      document.getElementById('dt-check').addEventListener('click', () => {
+        let hit = 0; const missedWords = [];
+        inputs.forEach(inp => {
+          const i = parseInt(inp.dataset.i, 10);
+          const wc = wordCore(tokens[i]);
+          const ok = norm(inp.value) === norm(wc.core);
+          const rep = document.createElement('span');
+          if (ok) { rep.className = 'dt-ok'; rep.textContent = wc.core; hit++; }
+          else {
+            rep.className = 'dt-bad';
+            rep.innerHTML = (inp.value.trim() ? `<s>${esc(inp.value.trim())}</s> ` : '') + esc(wc.core);
+            missedWords.push(wc.core);
+          }
+          inp.replaceWith(rep);
+          award(ok);
+        });
+        totalBlanks += inputs.length; totalHit += hit;
+        const missedHtml = missedWords.length ? `
+          <div class="reveal-block" style="border-left-color:var(--red);">
+            <div class="heading">👂 Từ nghe trượt — bấm để lưu vào sổ</div>
+            <div class="missed">${missedWords.map(w => `<button data-w="${esc(w)}">➕ ${esc(w)}</button>`).join('')}</div>
+          </div>` : '';
+        document.getElementById('dt-after').innerHTML = `
+          <div class="feedback ${hit === inputs.length ? 'correct' : 'wrong'}"><b>${hit}/${inputs.length} từ đúng</b>${hit === inputs.length ? ' — nghe quá chuẩn! 🎉' : ''}</div>
+          ${missedHtml}
+          ${first.Transcript ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${QuizCore.nl2br(first.Transcript)}</div></div>` : ''}`;
+        document.getElementById('dt-after').querySelectorAll('.missed button').forEach(b =>
+          b.addEventListener('click', () => VocabNotes.openModal({ w: b.dataset.w, lookup: true, src: 'Chép chính tả • ' + card.srcLabel })));
+        const au = document.getElementById('dt-audio');
+        if (au) { au.removeAttribute('data-locked'); document.getElementById('dt-plays').textContent = 'Nghe lại thoải mái'; }
+        const tb = root.querySelector('.group-toolbar');
+        tb.innerHTML = `<span class="pick-count">${hit}/${inputs.length} đúng</span><span style="flex:1"></span>
+          <button class="btn blue" id="dt-next">${idx + 1 >= items.length ? 'Xong ✓' : 'Bài tiếp →'}</button>`;
+        document.getElementById('dt-next').addEventListener('click', () => { idx++; renderItem(); });
+      });
+    }
+
+    // ---------- Part 2: type the sentence ----------
+    function renderTyping(card, url, head) {
+      const q = card.questions[0];
+      root.innerHTML = sidebar + `<main class="main">${head}
+        ${audioBar()}
+        <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">Nghe và <b>gõ lại nguyên văn câu hỏi</b> (không cần gõ 3 đáp án).</p>
+        <textarea class="dt-type" id="dt-type" placeholder="Gõ câu bạn nghe được…" autocapitalize="off" spellcheck="false"></textarea>
+        <div id="dt-after"></div>
+        <div class="group-toolbar">
+          <span style="flex:1"></span>
+          <button class="btn" id="dt-check">Kiểm tra</button>
+        </div>
+      </main>`;
+      wireAudio(url);
+      document.getElementById('dt-check').addEventListener('click', () => {
+        const typedRaw = document.getElementById('dt-type').value;
+        const targetTokens = tokenize(q.Question).filter(t => wordCore(t));
+        const targetNorm = targetTokens.map(t => norm(wordCore(t).core));
+        const typedNorm = typedRaw.split(/\s+/).map(norm).filter(Boolean);
+        const hitSet = lcsMatch(targetNorm, typedNorm);
+        const pct = targetNorm.length ? Math.round(hitSet.size / targetNorm.length * 100) : 0;
+        const diffHtml = targetTokens.map((t, i) => {
+          const wc = wordCore(t);
+          return `<span class="${hitSet.has(i) ? 'dt-ok' : 'dt-bad'}">${esc(wc.core)}</span>${esc(wc.suf)} `;
+        }).join('');
+        targetNorm.forEach((_, i) => award(hitSet.has(i)));
+        totalBlanks += targetNorm.length; totalHit += hitSet.size;
+        const opts = ['A', 'B', 'C'].filter(L => q[L]).map(L =>
+          `<div style="margin:3px 0;${L === (q.Answer || '').trim().toUpperCase().charAt(0) ? 'font-weight:800;color:var(--green-dark);' : ''}">${L}. ${esc(q[L])}</div>`).join('');
+        document.getElementById('dt-after').innerHTML = `
+          <div class="feedback ${pct >= 80 ? 'correct' : 'wrong'}"><b>Nghe đúng ${hitSet.size}/${targetNorm.length} từ (${pct}%)</b></div>
+          <div class="dt-diff" style="margin-top:10px;">${diffHtml}</div>
+          <div class="reveal-block"><div class="heading">💬 3 đáp án của câu này (đúng: ${esc((q.Answer || '').trim())})</div>${opts}</div>
+          ${q.Explain ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">💡 Giải thích</div><div class="body">${QuizCore.nl2br(q.Explain)}</div></div>` : ''}`;
+        const au = document.getElementById('dt-audio');
+        if (au) { au.removeAttribute('data-locked'); document.getElementById('dt-plays').textContent = 'Nghe lại thoải mái'; }
+        const tb = root.querySelector('.group-toolbar');
+        tb.innerHTML = `<span class="pick-count">${pct}% chính xác</span><span style="flex:1"></span>
+          <button class="btn blue" id="dt-next">${idx + 1 >= items.length ? 'Xong ✓' : 'Bài tiếp →'}</button>`;
+        document.getElementById('dt-next').addEventListener('click', () => { idx++; renderItem(); });
+      });
+    }
+
+    // ---------- done ----------
+    function renderDone() {
+      const pct = totalBlanks ? Math.round(totalHit / totalBlanks * 100) : 0;
+      const st = State.load();
+      if (window.Auth && Auth.addHistory) Auth.addHistory({ type: 'dictation', mode, total: totalBlanks, correct: totalHit, wrong: totalBlanks - totalHit, blank: 0 });
+      root.innerHTML = sidebar + `<main class="main">
+        <div class="modal" style="margin:40px auto;max-width:560px;">
+          <div style="font-size:76px;">${pct >= 85 ? '🏆' : pct >= 60 ? '🎉' : '💪'}</div>
+          <h2>Chép chính tả xong!</h2>
+          <p style="color:var(--text-mute);margin-top:6px;">Nghe đúng ${totalHit}/${totalBlanks} từ · ${pct}%</p>
+          <div class="stats-grid" style="margin-top:22px;">
+            <div class="stat-card xp"><div class="big">⚡ ${st.xp}</div><div class="label">Tổng XP</div></div>
+            <div class="stat-card streak"><div class="big">🔥 ${st.streak}</div><div class="label">Ngày streak</div></div>
+            <div class="stat-card accuracy"><div class="big">${pct}%</div><div class="label">Độ chính xác</div></div>
+          </div>
+          <div class="row" style="margin-top:22px;">
+            <a class="btn ghost" href="/dictation">Làm bài khác</a>
+            <a class="btn" href="/notes">📒 Xem sổ từ</a>
+          </div>
+        </div>
+      </main>`;
+    }
+
+    renderPicker();
+  })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js').catch(()=>{}); });
+    }
+  </script>
+</body>
+</html>

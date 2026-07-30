@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <title>Đáp án chi tiết — TOEIC Quest</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --green: #58CC02; --green-dark: #58A700; --green-soft: #D7FFB8;
+      --blue: #1CB0F6; --blue-dark: #1899D6;
+      --red: #FF4B4B; --red-soft: #FFE0E0;
+      --gold: #FFC800; --gold-dark: #E6A700;
+      --text: #3C3C3C; --text-soft: #777; --text-mute: #AFAFAF;
+      --border: #E5E5E5; --bg: #FFFFFF; --bg-alt: #F7F7F7;
+      --font: 'Nunito', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: var(--font); color: var(--text); background: var(--bg-alt); font-size: 15px; line-height: 1.5; }
+    a { color: var(--blue-dark); }
+
+    .toolbar {
+      position: sticky; top: 0; z-index: 100;
+      background: white; border-bottom: 2px solid var(--border);
+      padding: 14px 20px; display: flex; gap: 12px; align-items: center; flex-wrap: wrap;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+    }
+    .toolbar h1 { font-size: 18px; font-weight: 900; flex: 1; min-width: 200px; }
+    .btn {
+      display: inline-flex; align-items: center; gap: 6px;
+      padding: 8px 18px; border-radius: 999px; font-weight: 800; font-size: 14px;
+      border: none; cursor: pointer; font-family: inherit; text-decoration: none;
+    }
+    .btn.primary { background: var(--green); color: white; box-shadow: 0 3px 0 var(--green-dark); }
+    .btn.primary:hover { transform: translateY(-1px); box-shadow: 0 4px 0 var(--green-dark); }
+    .btn.ghost { background: var(--bg-alt); color: var(--text); border: 2px solid var(--border); }
+    .btn.ghost:hover { background: white; }
+
+    main { max-width: 900px; margin: 24px auto; padding: 0 16px; }
+
+    .test-header {
+      background: linear-gradient(135deg, var(--green), var(--green-dark));
+      color: white; padding: 24px; border-radius: 16px; margin-bottom: 24px; text-align: center;
+    }
+    .test-header h2 { font-size: 26px; font-weight: 900; }
+    .test-header p { font-size: 14px; opacity: 0.9; margin-top: 4px; }
+    .test-header .url { font-size: 12px; opacity: 0.75; margin-top: 10px; font-style: italic; }
+
+    .part {
+      background: white; border-radius: 14px; padding: 24px;
+      margin-bottom: 20px; box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+    }
+    .part-title {
+      font-size: 22px; font-weight: 900; color: var(--green-dark);
+      padding-bottom: 12px; border-bottom: 3px solid var(--green-soft); margin-bottom: 16px;
+    }
+    .part-title .meta { font-size: 13px; font-weight: 600; color: var(--text-mute); margin-left: 8px; }
+
+    .group {
+      margin-bottom: 28px; padding-bottom: 20px; border-bottom: 1px dashed var(--border);
+    }
+    .group:last-child { border-bottom: none; }
+    .group-header {
+      background: var(--bg-alt); padding: 12px 16px; border-radius: 8px; margin-bottom: 14px;
+      font-size: 14px;
+    }
+    .group-header .audio-ref { font-weight: 800; color: var(--blue-dark); }
+    .passage {
+      background: #FFFDF0; border: 1px solid #FCE38A; padding: 14px 18px;
+      border-radius: 8px; font-size: 14px; line-height: 1.7; white-space: pre-line;
+      margin-bottom: 14px;
+    }
+    .passage-vi {
+      background: #F0F8FF; border: 1px solid #BFDBFE; padding: 12px 16px;
+      border-radius: 8px; font-size: 13px; line-height: 1.7; white-space: pre-line;
+      margin-bottom: 14px; color: var(--text-soft); font-style: italic;
+    }
+
+    .q {
+      margin: 16px 0; padding: 16px; background: var(--bg-alt); border-radius: 10px;
+      border-left: 4px solid var(--green);
+    }
+    .q-head {
+      display: flex; gap: 10px; align-items: baseline; margin-bottom: 10px;
+    }
+    .q-num {
+      background: var(--green); color: white; padding: 3px 12px;
+      border-radius: 999px; font-weight: 900; font-size: 13px; min-width: 40px; text-align: center;
+    }
+    .q-text { font-size: 15px; font-weight: 700; line-height: 1.5; }
+
+    .opts { margin: 8px 0; }
+    .opt {
+      padding: 8px 14px; margin: 4px 0; border-radius: 8px;
+      display: flex; gap: 10px; align-items: flex-start; font-size: 14px;
+      border: 1px solid var(--border);
+    }
+    .opt .letter {
+      font-weight: 900; min-width: 24px; height: 24px; border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      background: white; border: 1px solid var(--border);
+    }
+    .opt.correct { background: var(--green-soft); border-color: var(--green); }
+    .opt.correct .letter { background: var(--green); color: white; border-color: var(--green); }
+    .opt.correct .text { color: var(--green-dark); font-weight: 700; }
+
+    .explain {
+      margin-top: 12px; padding: 14px 16px; background: white;
+      border-radius: 8px; border-left: 4px solid var(--blue);
+    }
+    .explain-label {
+      font-size: 12px; font-weight: 900; color: var(--blue-dark);
+      text-transform: uppercase; letter-spacing: 0.5px; margin-bottom: 6px;
+    }
+    .explain-body { font-size: 14px; line-height: 1.7; white-space: pre-line; color: var(--text); }
+
+    .loading { text-align: center; padding: 60px 20px; color: var(--text-mute); }
+    .error { background: var(--red-soft); color: var(--red); padding: 20px; border-radius: 10px; text-align: center; }
+
+    /* ===== PRINT STYLES ===== */
+    @media print {
+      @page { size: A4; margin: 12mm 10mm; }
+      body { background: white; font-size: 11pt; }
+      .toolbar, .no-print { display: none !important; }
+      main { max-width: 100%; margin: 0; padding: 0; }
+      .test-header { background: white !important; color: var(--text) !important; border: 2px solid var(--text); padding: 12px; margin-bottom: 16px; }
+      .test-header .url { color: var(--text-soft); }
+      .part { box-shadow: none; padding: 0; margin-bottom: 12px; page-break-before: always; }
+      .part:first-child { page-break-before: auto; }
+      .part-title { font-size: 16pt; color: var(--text) !important; border-bottom-color: var(--text); padding-bottom: 6px; }
+      .group { page-break-inside: avoid; }
+      .q { background: white; border: 1px solid #ccc; page-break-inside: avoid; padding: 10px; margin: 8px 0; border-left: 3px solid #666; }
+      .q-num { background: white !important; color: black !important; border: 1px solid black; }
+      .opt { padding: 4px 8px; margin: 2px 0; }
+      .opt.correct { background: white !important; border: 2px solid black; }
+      .opt.correct .letter { background: black !important; color: white !important; }
+      .opt.correct .text { color: black !important; }
+      .explain { background: #f5f5f5 !important; border-left: 2px solid #555; padding: 8px 10px; }
+      .passage { background: #fffce0 !important; }
+      .passage-vi { background: #f0f5fa !important; }
+      a[href]:after { content: ""; }
+    }
+
+    @media (max-width: 600px) {
+      .toolbar { padding: 10px; }
+      .toolbar h1 { font-size: 16px; }
+      .btn { padding: 6px 14px; font-size: 13px; }
+      main { padding: 0 8px; }
+      .part { padding: 16px; }
+    }
+  </style>
+</head>
+<body>
+  <div class="toolbar no-print">
+    <h1 id="topTitle">📄 Đang tải đáp án...</h1>
+    <a class="btn ghost" href="#" onclick="history.back();return false;">← Quay lại</a>
+    <button id="dlBtn" class="btn primary" onclick="downloadPDF()">💾 Tải PDF</button>
+    <button class="btn ghost" onclick="window.print()" title="Mở print dialog browser, save as PDF">🖨️ In</button>
+  </div>
+
+  <div id="pdfStatus" class="no-print" style="display:none;position:fixed;bottom:20px;right:20px;background:#0088cc;color:white;padding:14px 20px;border-radius:12px;box-shadow:0 4px 12px rgba(0,0,0,0.2);z-index:200;font-weight:700;">
+    ⏳ Đang tạo PDF...
+  </div>
+
+  <main>
+    <div id="content" class="loading">Đang tải dữ liệu đề thi...</div>
+  </main>
+
+  <script src="/js/csv.js?v=10"></script>
+  <script>
+    // Read params once globally so download fn có thể dùng
+    const PARAMS = new URLSearchParams(location.search);
+    const YEAR = PARAMS.get('year') || '2025';
+    const N = parseInt(PARAMS.get('n') || '1', 10);
+    const ONLY_PART = PARAMS.get('part') ? parseInt(PARAMS.get('part'), 10) : null;
+
+    function loadScript(src) {
+      return new Promise((resolve, reject) => {
+        const s = document.createElement('script');
+        s.src = src;
+        s.onload = () => resolve();
+        s.onerror = () => reject(new Error('Không tải được thư viện PDF. Thử lại hoặc dùng nút In.'));
+        document.head.appendChild(s);
+      });
+    }
+
+    async function downloadPDF() {
+      const btn = document.getElementById('dlBtn');
+      const status = document.getElementById('pdfStatus');
+      const orig = btn.textContent;
+      btn.disabled = true;
+      btn.textContent = '⏳ Đang tải thư viện...';
+      status.style.display = 'block';
+
+      try {
+        if (!window.html2pdf) {
+          await loadScript('https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.10.3/html2pdf.bundle.min.js');
+        }
+        btn.textContent = '⏳ Đang sinh PDF... (10-30s)';
+        status.textContent = '⏳ Đang sinh PDF, vui lòng chờ 10-30 giây...';
+
+        const target = document.querySelector('main');
+        const filename = `dap-an-${YEAR}-test${N}${ONLY_PART?'-part'+ONLY_PART:''}.pdf`;
+        const opt = {
+          margin:      [8, 7, 10, 7],
+          filename:    filename,
+          image:       { type: 'jpeg', quality: 0.92 },
+          html2canvas: { scale: 1.5, useCORS: true, logging: false, letterRendering: true },
+          jsPDF:       { unit: 'mm', format: 'a4', orientation: 'portrait', compress: true },
+          pagebreak:   { mode: ['css', 'legacy'], avoid: '.q' }
+        };
+        await window.html2pdf().set(opt).from(target).save();
+
+        status.textContent = '✅ Đã tải PDF thành công!';
+        setTimeout(() => status.style.display = 'none', 2500);
+      } catch (e) {
+        status.style.background = '#FF4B4B';
+        status.textContent = '❌ Lỗi: ' + e.message;
+        setTimeout(() => { status.style.display = 'none'; status.style.background = '#0088cc'; }, 5000);
+      } finally {
+        btn.textContent = orig;
+        btn.disabled = false;
+      }
+    }
+
+    (async () => {
+      const year = YEAR;
+      const n = N;
+      const onlyPart = ONLY_PART;
+
+      const PART_INFO = {
+        1: { name: 'Part 1', en: 'Photographs', vi: 'Mô tả tranh', count: 6, section: 'Listening' },
+        2: { name: 'Part 2', en: 'Question-Response', vi: 'Hỏi đáp', count: 25, section: 'Listening' },
+        3: { name: 'Part 3', en: 'Conversations', vi: 'Hội thoại', count: 39, section: 'Listening' },
+        4: { name: 'Part 4', en: 'Short Talks', vi: 'Bài nói', count: 30, section: 'Listening' },
+        5: { name: 'Part 5', en: 'Incomplete Sentences', vi: 'Hoàn thành câu', count: 30, section: 'Reading' },
+        6: { name: 'Part 6', en: 'Text Completion', vi: 'Hoàn thành đoạn văn', count: 16, section: 'Reading' },
+        7: { name: 'Part 7', en: 'Reading Comprehension', vi: 'Đọc hiểu', count: 54, section: 'Reading' }
+      };
+
+      function escapeHtml(s) {
+        return String(s||'').replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;');
+      }
+
+      function renderQuestion(q, partNum) {
+        const num = String(q['Question Number']||'').replace(/\.0+$/,'');
+        const correct = (q.Answer||'').trim().toUpperCase().charAt(0);
+        const letters = ['A','B','C','D'].filter(L => q[L] !== undefined && q[L] !== '');
+
+        const opts = letters.map(L => {
+          const isCorrect = L === correct;
+          return `
+            <div class="opt ${isCorrect?'correct':''}">
+              <div class="letter">${L}</div>
+              <div class="text">${escapeHtml(q[L])}</div>
+            </div>`;
+        }).join('');
+
+        return `
+          <div class="q">
+            <div class="q-head">
+              <span class="q-num">Câu ${num}</span>
+              <div class="q-text">${escapeHtml(q.Question || '(không có câu hỏi)')}</div>
+            </div>
+            <div class="opts">${opts}</div>
+            ${q.Explain ? `
+              <div class="explain">
+                <div class="explain-label">💡 Giải thích đáp án ${correct}</div>
+                <div class="explain-body">${escapeHtml(q.Explain)}</div>
+              </div>` : ''}
+          </div>`;
+      }
+
+      function buildGroups(qs, partNum) {
+        if (partNum === 1 || partNum === 2 || partNum === 5) {
+          return qs.map(q => [q]);
+        }
+        const groups = [];
+        let cur = []; let curKey = null;
+        for (const q of qs) {
+          const k = partNum <= 4 ? (q.Audio || '') : (q.Text || '');
+          if (partNum >= 6 && !k && cur.length) { cur.push(q); continue; }
+          if (k !== curKey || !cur.length) {
+            if (cur.length) groups.push(cur);
+            cur = [q]; curKey = k;
+          } else { cur.push(q); }
+        }
+        if (cur.length) groups.push(cur);
+        return groups;
+      }
+
+      function renderGroup(group, partNum) {
+        const first = group[0];
+        let header = '';
+        if (partNum >= 3 && partNum <= 4 && first.Audio) {
+          header = `<div class="group-header">
+            🎧 <span class="audio-ref">Audio: ${escapeHtml(first.Audio)}</span>
+          </div>`;
+          if (first.Question && first.Question.includes('\n') && group[0]['Transcript']) {
+            // Part 3, 4: first column "Question" thường chứa transcript audio (script)
+            // Sửa: hiển thị transcript từ field Transcript nếu có, hoặc Question nếu nó là kịch bản dài
+          }
+          // Show audio script (English) - thường nằm trong Question field cho part 3,4 nhưng cấu trúc khác nhau
+          if (first.Text) {
+            header += `<div class="passage">${escapeHtml(first.Text)}</div>`;
+          }
+          if (first.Transcript) {
+            header += `<div class="passage-vi">🇻🇳 ${escapeHtml(first.Transcript)}</div>`;
+          }
+        } else if (partNum >= 6 && first.Text) {
+          header = `<div class="passage">${escapeHtml(first.Text)}</div>`;
+          if (first.Transcript) {
+            header += `<div class="passage-vi">🇻🇳 Dịch: ${escapeHtml(first.Transcript)}</div>`;
+          }
+        }
+        const qs = group.map(q => renderQuestion(q, partNum)).join('');
+        return `<div class="group">${header}${qs}</div>`;
+      }
+
+      async function loadPart(partNum) {
+        const url = `/data/${encodeURIComponent(year)}/test${n}/test${n}-part${partNum}.csv`;
+        try {
+          const qs = await CSV.load(url);
+          return qs;
+        } catch (e) {
+          return null;
+        }
+      }
+
+      async function render() {
+        const yearLabel = ({ '2022':'TOEIC 2022','2023':'TOEIC 2023','2024':'TOEIC 2024','2025':'TOEIC 2025','2026':'TOEIC 2026','Economy':'Economy' })[year] || year;
+        const titleText = onlyPart
+          ? `Đáp án ${yearLabel} • Test ${n} • Part ${onlyPart}`
+          : `Đáp án ${yearLabel} • Test ${n} • Toàn bộ`;
+        document.getElementById('topTitle').textContent = `📄 ${titleText}`;
+        document.title = `${titleText} — TOEIC Quest`;
+
+        const partsToLoad = onlyPart ? [onlyPart] : [1,2,3,4,5,6,7];
+
+        const today = new Date();
+        const dateStr = today.getDate().toString().padStart(2,'0') + '/' + (today.getMonth()+1).toString().padStart(2,'0') + '/' + today.getFullYear();
+
+        let html = `
+          <div class="test-header">
+            <h2>📋 ${yearLabel} — Test ${n}</h2>
+            <p>Đáp án chi tiết ${onlyPart ? `Part ${onlyPart}` : 'toàn bộ 7 Parts'}</p>
+            <div class="url">Sinh ngày ${dateStr} từ ngpnamdinh-toeic-moihoc.static.hf.space</div>
+          </div>
+        `;
+
+        for (const p of partsToLoad) {
+          const info = PART_INFO[p];
+          const qs = await loadPart(p);
+          if (!qs || !qs.length) {
+            html += `<div class="part"><div class="part-title">${info.name} <span class="meta">${info.section}</span></div><p style="color:var(--text-mute);">⚠️ Không tìm thấy dữ liệu Part ${p}.</p></div>`;
+            continue;
+          }
+          const groups = buildGroups(qs, p);
+          const partBody = groups.map(g => renderGroup(g, p)).join('');
+          html += `
+            <div class="part">
+              <div class="part-title">${info.name}: ${info.en} <span class="meta">(${info.vi}, ${qs.length} câu — ${info.section})</span></div>
+              ${partBody}
+            </div>`;
+        }
+
+        document.getElementById('content').innerHTML = html;
+      }
+
+      try {
+        await render();
+      } catch (e) {
+        document.getElementById('content').innerHTML = `<div class="error">⚠️ Lỗi tải dữ liệu: ${escapeHtml(e.message)}</div>`;
+      }
+    })();
+  </script>
+</body>
+</html>

@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Sổ từ vựng</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .nb-tools { display:flex; gap:10px; flex-wrap:wrap; align-items:center; margin:14px 0; }
+    .nb-tools input[type=search] { flex:1; min-width:180px; padding:11px 14px; border:2px solid var(--border); border-radius:12px; font-family:inherit; font-size:14.5px; }
+    .nb-item { display:flex; gap:12px; align-items:flex-start; background:white; border:2px solid var(--border); border-radius:14px; padding:13px 16px; margin-bottom:10px; }
+    .nb-main { flex:1; min-width:0; }
+    .nb-w { font-weight:900; font-size:17px; }
+    .nb-type { font-size:12px; font-weight:800; color:var(--blue-dark); background:#eaf6ff; border-radius:8px; padding:2px 8px; margin-left:6px; white-space:nowrap; }
+    .nb-ipa { color:var(--blue-dark); font-size:13.5px; margin-left:8px; }
+    .nb-mean { font-size:14.5px; color:var(--text-soft); margin-top:3px; }
+    .nb-src { font-size:11.5px; color:var(--text-mute); margin-top:3px; }
+    .nb-del { border:2px solid var(--border); background:var(--bg-alt); border-radius:9px; padding:6px 10px; cursor:pointer; font-size:13px; }
+    .nb-del:hover { border-color:var(--red); color:var(--red); }
+    .nb-tts { border:2px solid var(--border); background:white; border-radius:9px; padding:6px 10px; cursor:pointer; font-size:14px; }
+    .nb-tts:hover { border-color:var(--blue); }
+    .nb-w.nb-sent { font-size:14.5px; font-style:italic; font-weight:700; }
+    .nb-add { background:var(--bg-alt); border-radius:12px; padding:14px; margin-bottom:14px; }
+    .nb-add .row { display:grid; grid-template-columns:1fr 1fr; gap:8px; margin-bottom:8px; }
+    @media(max-width:560px){ .nb-add .row { grid-template-columns:1fr; } }
+    .nb-add input, .nb-add select { width:100%; padding:9px 11px; border:2px solid var(--border); border-radius:10px; font-family:inherit; font-size:14px; }
+    details summary { cursor:pointer; font-weight:800; }
+    /* top-level tabs */
+    .nt-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; border-bottom:2px solid var(--border); padding-bottom:10px; }
+    .nt-tab { border:2px solid var(--border); background:white; border-radius:13px; padding:10px 16px; font-weight:800; cursor:pointer; font-size:14.5px; font-family:inherit; color:var(--text-soft); }
+    .nt-tab:hover { border-color:var(--blue); }
+    .nt-tab.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); box-shadow:0 3px 0 var(--green-dark); }
+    .nt-tab .nt-n { background:var(--green-soft); color:var(--green-dark); border-radius:20px; padding:1px 8px; font-size:12.5px; margin-left:4px; }
+    /* 2026 exam vocabulary pack */
+    .vp-tabs { display:flex; gap:7px; flex-wrap:wrap; margin:10px 0 12px; }
+    .vp-tab { border:2px solid var(--border); background:white; border-radius:11px; padding:8px 13px; font-weight:800; cursor:pointer; font-size:13.5px; }
+    .vp-tab.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    .vp-item { display:flex; gap:11px; align-items:flex-start; background:white; border:2px solid var(--border); border-radius:13px; padding:11px 14px; margin-bottom:9px; }
+    .vp-main { flex:1; min-width:0; }
+    .vp-w { font-weight:900; font-size:16.5px; }
+    .vp-pos { font-size:11.5px; font-weight:800; color:var(--blue-dark); background:#eaf6ff; border-radius:7px; padding:2px 7px; margin-left:6px; }
+    .vp-ipa { color:var(--blue-dark); font-size:13px; margin-left:7px; }
+    .vp-freq { font-size:11px; font-weight:800; color:var(--text-mute); margin-left:7px; }
+    .vp-vi { font-size:14.5px; color:var(--text-soft); margin-top:2px; }
+    .vp-colloc { font-size:12.5px; color:var(--green-dark); margin-top:3px; }
+    .vp-ex { font-size:12.5px; color:var(--text-mute); margin-top:4px; line-height:1.5; font-style:italic; }
+    .vp-btn { border:2px solid var(--border); background:white; border-radius:9px; padding:6px 10px; cursor:pointer; font-size:13px; white-space:nowrap; }
+    .vp-btn:hover { border-color:var(--green); color:var(--green-dark); }
+    .vp-btn.added { background:var(--green-soft); border-color:var(--green); color:var(--green-dark); cursor:default; }
+    .vp-item.tricky { border-color:#f0b429; background:#fffdf5; }
+    .vp-tricky { font-size:11px; font-weight:800; color:#a1670a; background:#fff2cf; border-radius:7px; padding:2px 7px; margin-left:6px; white-space:nowrap; }
+    .vp-note { font-size:12.5px; color:var(--blue-dark); margin-top:3px; line-height:1.5; }
+    .vp-filters { display:flex; gap:7px; flex-wrap:wrap; align-items:center; margin-bottom:10px; }
+    .vp-f { border:2px solid var(--border); background:white; border-radius:20px; padding:5px 12px; font-weight:800; cursor:pointer; font-size:12.5px; font-family:inherit; }
+    .vp-f.active { border-color:#f0b429; background:#fff8e6; color:#a1670a; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+    const { sidebar, topbar } = renderShell({ active: 'notes', state: State.load() });
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    let filter = '';
+
+    function rows() {
+      const all = VocabNotes.list();
+      const f = filter.toLowerCase();
+      const vis = f ? all.map((n, i) => ({ n, i })).filter(x =>
+        (x.n.w + ' ' + x.n.mean + ' ' + x.n.type).toLowerCase().indexOf(f) !== -1)
+        : all.map((n, i) => ({ n, i }));
+      if (!all.length) return '<p style="color:var(--text-mute);">Chưa có mục nào. Vào <a href="/drill" style="color:var(--blue-dark);text-decoration:underline;">Ôn theo Part</a>, <b>bôi đen từ hoặc cả câu</b> để tra &amp; lưu nhanh, hoặc thêm thủ công bên trên.</p>';
+      if (!vis.length) return '<p style="color:var(--text-mute);">Không có từ nào khớp tìm kiếm.</p>';
+      return vis.map(x => {
+        const isSent = x.n.type === '(câu)';
+        return `
+        <div class="nb-item">
+          <div class="nb-main">
+            <div><span class="nb-w${isSent ? ' nb-sent' : ''}">${isSent ? '“' + esc(x.n.w) + '”' : esc(x.n.w)}</span>${x.n.type ? `<span class="nb-type">${isSent ? '🗨 câu' : esc(x.n.type)}</span>` : ''}${x.n.ipa ? `<span class="nb-ipa">${esc(x.n.ipa)}</span>` : ''}</div>
+            <div class="nb-mean">${esc(x.n.mean)}</div>
+            ${x.n.src || x.n.at ? `<div class="nb-src">${esc([x.n.src, x.n.at].filter(Boolean).join(' · '))}</div>` : ''}
+          </div>
+          <button class="nb-tts" data-i="${x.i}" title="Phát âm">🔊</button>
+          <button class="nb-del" data-i="${x.i}" title="Xoá">🗑</button>
+        </div>`;
+      }).join('');
+    }
+
+    function render() {
+      const n = VocabNotes.count();
+      if (tab === 'pack') { renderPackTab(n); return; }
+      root.innerHTML = sidebar + `<main class="main">${topbar}
+        ${tabBar(n)}
+        <h2 style="font-size:26px;font-weight:900;">📒 Sổ từ vựng của tôi <span style="color:var(--green-dark);">(${n})</span></h2>
+        <p style="color:var(--text-mute);margin:6px 0 10px;">Từ &amp; câu bạn ghi lại khi luyện đề — bấm 🔊 để nghe phát âm.</p>
+        <details class="nb-add"${n === 0 ? ' open' : ''}>
+          <summary>➕ Thêm từ thủ công</summary>
+          <div style="margin-top:10px;">
+            <div class="row">
+              <input id="ad-w" type="text" placeholder="Từ vựng *"/>
+              <select id="ad-t">
+                <option value="">Loại từ —</option>
+                <option value="(n) danh từ">(n) danh từ</option>
+                <option value="(v) động từ">(v) động từ</option>
+                <option value="(adj) tính từ">(adj) tính từ</option>
+                <option value="(adv) trạng từ">(adv) trạng từ</option>
+                <option value="(prep) giới từ">(prep) giới từ</option>
+                <option value="(conj) liên từ">(conj) liên từ</option>
+                <option value="(phr) cụm từ">(phr) cụm từ</option>
+              </select>
+            </div>
+            <div class="row">
+              <input id="ad-m" type="text" placeholder="Nghĩa tiếng Việt *"/>
+              <input id="ad-i" type="text" placeholder="Cách đọc, vd /prəˈpoʊzl/"/>
+            </div>
+            <button class="btn small" id="ad-save">💾 Lưu từ</button>
+          </div>
+        </details>
+        <div class="nb-tools">
+          <input type="search" id="nb-q" placeholder="🔍 Tìm từ hoặc nghĩa…" value="${esc(filter)}"/>
+          <a class="btn ghost small" href="/drill">🔁 Ôn theo Part</a>
+          <a class="btn ghost small" href="/study">🧠 Học &amp; Ôn</a>
+        </div>
+        <div id="nb-list">${rows()}</div>
+      </main>`;
+      wireTabs();
+
+      const q = document.getElementById('nb-q');
+      q.addEventListener('input', () => { filter = q.value; document.getElementById('nb-list').innerHTML = rows(); wireDel(); });
+      document.getElementById('ad-save').addEventListener('click', () => {
+        const w = document.getElementById('ad-w').value.trim();
+        const m = document.getElementById('ad-m').value.trim();
+        if (!w || !m) { alert('Cần nhập ít nhất Từ vựng và Nghĩa.'); return; }
+        VocabNotes.add({ w, type: document.getElementById('ad-t').value, mean: m, ipa: document.getElementById('ad-i').value, src: 'thêm thủ công' });
+        render();
+      });
+      wireDel();
+    }
+    // ---------- top-level tabs (avoid scrolling past a long notebook) ----------
+    let tab = localStorage.getItem('toeicets_notes_tab') || 'mine';
+    function tabBar(n) {
+      return `<div class="nt-tabs">
+        <button class="nt-tab ${tab === 'mine' ? 'active' : ''}" data-t="mine">📒 Sổ của tôi <span class="nt-n">${n}</span></button>
+        <button class="nt-tab ${tab === 'pack' ? 'active' : ''}" data-t="pack">📦 Bộ từ vựng đề 2026</button>
+      </div>`;
+    }
+    function wireTabs() {
+      root.querySelectorAll('.nt-tab').forEach(b => b.addEventListener('click', () => {
+        tab = b.dataset.t; localStorage.setItem('toeicets_notes_tab', tab);
+        window.scrollTo({ top: 0 }); render();
+      }));
+    }
+    function renderPackTab(n) {
+      root.innerHTML = sidebar + `<main class="main">${topbar}
+        ${tabBar(n)}
+        <h2 style="font-size:24px;font-weight:900;">📦 Bộ từ vựng đề 2026 — theo từng Part</h2>
+        <p style="color:var(--text-mute);margin:6px 0 0;line-height:1.6;font-size:14px;">
+          <b>484 từ</b> rút từ 10 đề 2026, chọn theo <b>độ khó × giá trị đọc hiểu</b> — đã loại hết từ cơ bản
+          mà bạn chắc chắn biết. Gồm <b>60 từ có nghĩa TOEIC khác nghĩa thường</b> (⚠️) và <b>46 cụm/phrasal verb</b>.
+          Mỗi từ có loại từ · phiên âm · nghĩa · cụm đi kèm · mẹo dùng · câu ví dụ thật từ đề. Bấm <b>➕</b> để đưa vào sổ.
+        </p>
+        <div id="vp-box"><p style="color:var(--text-mute);padding:10px;">Đang tải bộ từ vựng…</p></div>
+      </main>`;
+      wireTabs();
+      renderPack();
+    }
+
+    // ---------- 2026 exam vocabulary pack ----------
+    const POS_VI = { n: '(n) danh từ', v: '(v) động từ', adj: '(adj) tính từ', adv: '(adv) trạng từ', prep: '(prep) giới từ', phr: '(phr) cụm từ' };
+    let _pack = null, packPart = parseInt(localStorage.getItem('toeicets_pack_part') || '7', 10), packFilter = 'all';
+    async function loadPack() {
+      if (_pack) return _pack;
+      try {
+        const r = await fetch('/data/vocab/exam2026/lexicon.json', { cache: 'no-store' });
+        if (!r.ok) throw new Error('HTTP ' + r.status);
+        _pack = await r.json();
+      } catch (e) { _pack = null; }
+      return _pack;
+    }
+    function inNotebook(w) {
+      const t = String(w || '').trim().toLowerCase();
+      return VocabNotes.list().some(n => (n.w || '').trim().toLowerCase() === t);
+    }
+    async function renderPack() {
+      const box = document.getElementById('vp-box');
+      if (!box) return;
+      const d = await loadPack();
+      if (!d || !d.parts) { box.innerHTML = '<p style="color:var(--red);padding:10px;">Không tải được bộ từ vựng.</p>'; return; }
+      const cur = d.parts.find(p => p.part === packPart) || d.parts[0];
+      packPart = cur.part;
+      const tabs = d.parts.map(p => `<button class="vp-tab ${p.part === packPart ? 'active' : ''}" data-p="${p.part}">Part ${p.part} <span style="opacity:.6;">(${p.words.length})</span></button>`).join('');
+      const nTricky = cur.words.filter(w => w.tricky).length;
+      const nPhr = cur.words.filter(w => w.pos === 'phr').length;
+      const shown = cur.words.filter(w => packFilter === 'all' || (packFilter === 'tricky' && w.tricky) || (packFilter === 'phr' && w.pos === 'phr'));
+      const items = shown.map((w, i) => {
+        const has = inNotebook(w.w);
+        return `<div class="vp-item${w.tricky ? ' tricky' : ''}">
+          <div class="vp-main">
+            <div><span class="vp-w">${esc(w.w)}</span><span class="vp-pos">${esc(POS_VI[w.pos] || w.pos)}</span>${w.ipa ? `<span class="vp-ipa">${esc(w.ipa)}</span>` : ''}${w.freq ? `<span class="vp-freq">×${w.freq}</span>` : ''}${w.tricky ? '<span class="vp-tricky">⚠️ nghĩa TOEIC khác nghĩa thường</span>' : ''}</div>
+            <div class="vp-vi">${esc(w.vi)}</div>
+            ${w.colloc && w.colloc.length ? `<div class="vp-colloc">🔗 ${w.colloc.map(c => esc(c)).join(' · ')}</div>` : ''}
+            ${w.note ? `<div class="vp-note">💡 ${esc(w.note)}</div>` : ''}
+            ${w.ex ? `<div class="vp-ex">“${esc(w.ex)}”</div>` : ''}
+          </div>
+          <button class="vp-btn vp-tts" data-i="${i}" title="Phát âm">🔊</button>
+          <button class="vp-btn vp-add ${has ? 'added' : ''}" data-i="${i}" ${has ? 'disabled' : ''}>${has ? '✓ Đã có' : '➕ Ghi'}</button>
+        </div>`;
+      }).join('');
+      const addedAll = shown.length && shown.every(w => inNotebook(w.w));
+      box.innerHTML = `
+        <div class="vp-tabs">${tabs}</div>
+        <div class="vp-filters">
+          <button class="vp-f ${packFilter === 'all' ? 'active' : ''}" data-f="all">Tất cả (${cur.words.length})</button>
+          <button class="vp-f ${packFilter === 'tricky' ? 'active' : ''}" data-f="tricky">⚠️ Nghĩa khác thường (${nTricky})</button>
+          <button class="vp-f ${packFilter === 'phr' ? 'active' : ''}" data-f="phr">🔗 Cụm &amp; phrasal verb (${nPhr})</button>
+        </div>
+        <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
+          <b style="font-size:15px;">${esc(cur.label)}</b>
+          <span style="flex:1"></span>
+          <button class="btn ghost small" id="vp-all" ${addedAll ? 'disabled' : ''}>${addedAll ? '✓ Đã thêm hết' : '➕ Thêm ' + shown.length + ' từ đang hiện vào sổ'}</button>
+        </div>
+        <div>${items || '<p style="color:var(--text-mute);padding:10px;">Không có từ nào trong bộ lọc này.</p>'}</div>`;
+      box.querySelectorAll('.vp-tab').forEach(t => t.addEventListener('click', () => {
+        packPart = parseInt(t.dataset.p, 10);
+        localStorage.setItem('toeicets_pack_part', packPart);
+        renderPack();
+      }));
+      box.querySelectorAll('.vp-f').forEach(b => b.addEventListener('click', () => {
+        packFilter = b.dataset.f; renderPack();
+      }));
+      box.querySelectorAll('.vp-tts').forEach(b => b.addEventListener('click', () => {
+        const w = shown[parseInt(b.dataset.i, 10)];
+        if (w) VocabNotes.speak(w.w);
+      }));
+      box.querySelectorAll('.vp-add').forEach(b => b.addEventListener('click', () => {
+        const w = shown[parseInt(b.dataset.i, 10)];
+        if (!w) return;
+        VocabNotes.add({ w: w.w, type: POS_VI[w.pos] || w.pos, mean: w.vi, ipa: w.ipa, src: 'Bộ đề 2026 • Part ' + cur.part });
+        render();
+      }));
+      const all = document.getElementById('vp-all');
+      if (all) all.addEventListener('click', () => {
+        shown.forEach(w => {
+          if (!inNotebook(w.w)) VocabNotes.add({ w: w.w, type: POS_VI[w.pos] || w.pos, mean: w.vi, ipa: w.ipa, src: 'Bộ đề 2026 • Part ' + cur.part });
+        });
+        render();
+      });
+    }
+
+    function wireDel() {
+      root.querySelectorAll('.nb-del').forEach(b => b.addEventListener('click', () => {
+        VocabNotes.remove(parseInt(b.dataset.i, 10));
+        render();
+      }));
+      root.querySelectorAll('.nb-tts').forEach(b => b.addEventListener('click', () => {
+        const n = VocabNotes.list()[parseInt(b.dataset.i, 10)];
+        if (n) VocabNotes.speak(n.w);
+      }));
+    }
+
+    render();
+  })();
+  </script>
+</body>
+</html>

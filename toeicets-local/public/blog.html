@@ -1,0 +1,339 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Blog: Tất tần tật về TOEIC</title>
+  <meta name="description" content="Giới thiệu TOEIC, cấu trúc đề, thang điểm, và tổng hợp link học TOEIC phổ biến tại Việt Nam (DOL, ELSA, KIRA, ETS...). Lộ trình ôn thi 3 tháng."/>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .blog-wrap { max-width: 860px; margin: 0 auto; padding: 0 4px; }
+    .blog-wrap .card { padding: 24px; }
+    .blog-wrap h1 { font-size: 28px; line-height: 1.25; margin-bottom: 10px; color: var(--text); }
+    .blog-wrap h2 { font-size: 22px; margin: 28px 0 12px; color: var(--green-dark); display: flex; align-items: center; gap: 8px; }
+    .blog-wrap h3 { font-size: 16px; margin: 18px 0 8px; color: var(--text); font-weight: 800; }
+    .blog-wrap p, .blog-wrap li { font-size: 15px; line-height: 1.7; color: var(--text); }
+    .blog-wrap ul, .blog-wrap ol { padding-left: 22px; margin: 6px 0 12px; }
+    .blog-wrap li { margin-bottom: 4px; }
+    .blog-wrap a.ext { color: var(--blue-dark); font-weight: 700; text-decoration: underline; }
+    .blog-wrap a.ext:hover { color: var(--green-dark); }
+    .blog-wrap .lead { font-size: 17px; color: var(--text-soft); margin-bottom: 8px; }
+    .blog-wrap .meta { color: var(--text-mute); font-size: 13px; margin-bottom: 20px; }
+    .blog-wrap .callout {
+      background: var(--green-soft); border-left: 4px solid var(--green);
+      padding: 14px 16px; border-radius: 8px; margin: 14px 0; font-size: 14px;
+    }
+    .blog-wrap .warn {
+      background: #FFF4D6; border-left: 4px solid var(--gold-dark);
+      padding: 14px 16px; border-radius: 8px; margin: 14px 0; font-size: 14px;
+    }
+    .resource-grid { display: grid; grid-template-columns: 1fr; gap: 10px; margin: 10px 0 8px; }
+    @media (min-width: 720px) { .resource-grid { grid-template-columns: 1fr 1fr; } }
+    .resource {
+      background: white; border: 1px solid var(--border); border-radius: 12px;
+      padding: 12px 14px; display: flex; gap: 10px; align-items: flex-start;
+      transition: transform .15s, box-shadow .15s;
+    }
+    .resource:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.08); border-color: var(--green); }
+    .resource .icon { font-size: 26px; line-height: 1; }
+    .resource .body { flex: 1; min-width: 0; }
+    .resource .title { font-weight: 800; font-size: 14px; color: var(--text); margin-bottom: 2px; }
+    .resource .title a { color: var(--blue-dark); }
+    .resource .title a:hover { text-decoration: underline; }
+    .resource .desc { font-size: 12px; color: var(--text-mute); line-height: 1.5; }
+    .badge {
+      display: inline-block; font-size: 10px; font-weight: 800; padding: 1px 7px;
+      border-radius: 8px; margin-left: 4px; vertical-align: middle; letter-spacing: .3px;
+    }
+    .badge.free { background: var(--green-soft); color: var(--green-dark); }
+    .badge.paid { background: #FFE0E0; color: var(--red-dark); }
+    .badge.freemium { background: #E0F0FF; color: var(--blue-dark); }
+    .badge.vn { background: #FFF4D6; color: var(--gold-dark); }
+    .toc { background: var(--bg-alt); padding: 16px 20px; border-radius: 12px; margin: 20px 0; }
+    .toc h3 { font-size: 14px; margin: 0 0 8px; color: var(--text-soft); font-weight: 800; text-transform: uppercase; letter-spacing: 1px; }
+    .toc ol { margin: 0; padding-left: 22px; }
+    .toc ol li a { color: var(--text); font-size: 14px; font-weight: 600; line-height: 1.9; }
+    .toc ol li a:hover { color: var(--green-dark); }
+    .score-table { width: 100%; border-collapse: collapse; margin: 8px 0 12px; font-size: 14px; }
+    .score-table th, .score-table td { padding: 10px 12px; border-bottom: 1px solid var(--border); text-align: left; }
+    .score-table th { background: var(--green-soft); color: var(--green-dark); font-weight: 800; }
+    .score-table tr:hover { background: var(--bg-alt); }
+    .cta-card { background: linear-gradient(135deg, var(--green) 0%, var(--green-dark) 100%); color: white; padding: 24px; border-radius: 16px; margin: 24px 0; text-align: center; }
+    .cta-card h3 { color: white; font-size: 22px; margin-bottom: 8px; }
+    .cta-card p { color: rgba(255,255,255,0.92); font-size: 15px; margin-bottom: 14px; }
+    .cta-card .btn { display: inline-block; background: white; color: var(--green-dark); padding: 10px 28px; border-radius: 999px; font-weight: 800; font-size: 15px; text-decoration: none; box-shadow: 0 3px 0 rgba(0,0,0,0.15); }
+    .cta-card .btn:hover { transform: translateY(-1px); }
+    .footer-note { color: var(--text-mute); font-size: 12px; font-style: italic; text-align: center; margin: 18px 0 0; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=12"></script>
+  <script>
+    const state = State.load();
+    const { sidebar, topbar } = renderShell({ active: 'blog', state });
+    document.getElementById('app').innerHTML = sidebar + `
+      <main class="main">
+        ${topbar}
+        <div class="blog-wrap">
+          <div class="card">
+            <h1>📘 TOEIC là gì? Cách ôn thi và tổng hợp tài nguyên học TOEIC tốt nhất 2026</h1>
+            <p class="meta">Cập nhật: 05/2026 · Đọc trong ~8 phút</p>
+            <p class="lead">Bài viết này tổng hợp mọi thứ bạn cần biết về TOEIC — từ cấu trúc đề, thang điểm, cho đến danh sách <b>các trang học, app, sách, kênh YouTube uy tín</b> mà người Việt thường dùng. Phù hợp cho cả người mới bắt đầu và người đang ôn nước rút.</p>
+
+            <div class="toc">
+              <h3>Nội dung</h3>
+              <ol>
+                <li><a href="#what">TOEIC là gì?</a></li>
+                <li><a href="#format">Cấu trúc đề thi TOEIC</a></li>
+                <li><a href="#score">Thang điểm và quy đổi</a></li>
+                <li><a href="#sites">Trang học TOEIC online phổ biến</a></li>
+                <li><a href="#practice">Trang luyện đề miễn phí</a></li>
+                <li><a href="#youtube">Kênh YouTube nên xem</a></li>
+                <li><a href="#apps">App học TOEIC trên điện thoại</a></li>
+                <li><a href="#books">Sách ôn TOEIC kinh điển</a></li>
+                <li><a href="#community">Cộng đồng học TOEIC</a></li>
+                <li><a href="#tips">Lộ trình ôn thi 3 tháng</a></li>
+              </ol>
+            </div>
+
+            <h2 id="what">🎯 TOEIC là gì?</h2>
+            <p><b>TOEIC</b> (Test of English for International Communication) là bài thi đánh giá khả năng tiếng Anh trong môi trường công sở quốc tế, do tổ chức <a class="ext" href="https://www.ets.org/toeic" target="_blank" rel="noopener">ETS (Educational Testing Service)</a> phát triển. Đây là chứng chỉ tiếng Anh được công nhận tại hơn 160 quốc gia.</p>
+            <p>Tại Việt Nam, TOEIC được sử dụng phổ biến cho:</p>
+            <ul>
+              <li><b>Tốt nghiệp đại học</b>: nhiều trường yêu cầu TOEIC 450–650 để xét chuẩn đầu ra</li>
+              <li><b>Tuyển dụng</b>: ngân hàng, doanh nghiệp FDI, công ty công nghệ thường yêu cầu TOEIC 600+</li>
+              <li><b>Xét lương / thăng chức</b> trong nhiều cơ quan nhà nước và doanh nghiệp</li>
+              <li><b>Chứng minh năng lực</b> khi xin du học, làm việc nước ngoài</li>
+            </ul>
+            <p>Đơn vị đại diện chính thức của ETS tại Việt Nam là <a class="ext" href="https://iigvietnam.com/" target="_blank" rel="noopener">IIG Việt Nam</a>. Lệ phí thi TOEIC 4 kỹ năng hiện khoảng 1.6–2.0 triệu VND.</p>
+
+            <h2 id="format">📝 Cấu trúc đề thi TOEIC</h2>
+            <p>Đề TOEIC <b>Listening &amp; Reading</b> (phổ biến nhất) gồm <b>200 câu trắc nghiệm</b>, làm trong <b>2 tiếng</b>:</p>
+            <h3>Phần Listening — 45 phút, 100 câu</h3>
+            <ul>
+              <li><b>Part 1</b> — Mô tả hình ảnh (6 câu)</li>
+              <li><b>Part 2</b> — Hỏi đáp (25 câu)</li>
+              <li><b>Part 3</b> — Đoạn hội thoại (39 câu)</li>
+              <li><b>Part 4</b> — Bài nói chuyện (30 câu)</li>
+            </ul>
+            <h3>Phần Reading — 75 phút, 100 câu</h3>
+            <ul>
+              <li><b>Part 5</b> — Hoàn thành câu (30 câu)</li>
+              <li><b>Part 6</b> — Hoàn thành đoạn văn (16 câu)</li>
+              <li><b>Part 7</b> — Đọc hiểu (54 câu)</li>
+            </ul>
+            <div class="callout">
+              💡 <b>Mẹo:</b> Phần Reading <i>không phát lại</i> — bạn tự quản lý thời gian. Phần Listening thì audio chỉ phát 1 lần duy nhất, không tua được.
+            </div>
+
+            <h2 id="score">📊 Thang điểm TOEIC và quy đổi</h2>
+            <p>Mỗi kỹ năng (LC, RC) chấm từ 5–495 điểm, tổng tối đa 990. Dưới đây là bảng quy đổi sang khung CEFR (Châu Âu):</p>
+            <table class="score-table">
+              <thead>
+                <tr><th>Điểm TOEIC</th><th>CEFR</th><th>Mô tả</th></tr>
+              </thead>
+              <tbody>
+                <tr><td>10 – 249</td><td>A1</td><td>Sơ cấp, giao tiếp rất hạn chế</td></tr>
+                <tr><td>250 – 549</td><td>A2</td><td>Trung cấp thấp, giao tiếp cơ bản</td></tr>
+                <tr><td>550 – 784</td><td>B1</td><td>Trung cấp, công sở cơ bản — phổ biến đầu ra ĐH</td></tr>
+                <tr><td>785 – 944</td><td>B2</td><td>Trung cao, làm việc tốt trong môi trường tiếng Anh</td></tr>
+                <tr><td>945 – 990</td><td>C1</td><td>Cao cấp, gần như người bản xứ</td></tr>
+              </tbody>
+            </table>
+
+            <h2 id="sites">🌐 Trang học TOEIC online phổ biến tại Việt Nam</h2>
+            <div class="resource-grid">
+              <div class="resource">
+                <div class="icon">🎓</div><div class="body">
+                <div class="title"><a class="ext" href="https://www.dolenglish.vn/" target="_blank" rel="noopener">DOL English (Đình Lực)</a> <span class="badge vn">VN</span> <span class="badge freemium">Free+Paid</span></div>
+                <div class="desc">Phương pháp Linearthinking độc đáo, blog kiến thức rất đầy đủ. Có khóa học trả phí + nhiều bài free.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🏫</div><div class="body">
+                <div class="title"><a class="ext" href="https://mshoa.com/" target="_blank" rel="noopener">Anh ngữ Ms Hoa</a> <span class="badge vn">VN</span> <span class="badge paid">Paid</span></div>
+                <div class="desc">Chuỗi trung tâm TOEIC lớn, có lộ trình từ 0 đến 990. Tài liệu trên web cũng có nhiều bài miễn phí.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🚀</div><div class="body">
+                <div class="title"><a class="ext" href="https://stepup.edu.vn/" target="_blank" rel="noopener">StepUp English</a> <span class="badge vn">VN</span> <span class="badge freemium">Free+Paid</span></div>
+                <div class="desc">Học online qua app + có cộng đồng học viên active trên Facebook/Discord.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">📡</div><div class="body">
+                <div class="title"><a class="ext" href="https://topica.vn/" target="_blank" rel="noopener">Topica Native</a> <span class="badge vn">VN</span> <span class="badge paid">Paid</span></div>
+                <div class="desc">Học 1-1 với giáo viên bản xứ qua video call. Có gói TOEIC riêng.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🌍</div><div class="body">
+                <div class="title"><a class="ext" href="https://www.examenglish.com/TOEIC/" target="_blank" rel="noopener">ExamEnglish — TOEIC</a> <span class="badge free">Free</span></div>
+                <div class="desc">Trang quốc tế, đề mẫu free, có giải thích chi tiết. Phù hợp luyện theo từng Part.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">📰</div><div class="body">
+                <div class="title"><a class="ext" href="https://test-english.com/" target="_blank" rel="noopener">Test-English</a> <span class="badge free">Free</span></div>
+                <div class="desc">Quiz luyện grammar + vocab theo level. Không chuyên TOEIC nhưng cực ích cho nền tảng.</div>
+              </div></div>
+            </div>
+
+            <h2 id="practice">🧪 Trang luyện đề thi thử miễn phí</h2>
+            <div class="resource-grid">
+              <div class="resource">
+                <div class="icon">📝</div><div class="body">
+                <div class="title"><a class="ext" href="https://www.4tests.com/exams/toeic" target="_blank" rel="noopener">4Tests.com — TOEIC</a> <span class="badge free">Free</span></div>
+                <div class="desc">Hơn 100 mini test free, đăng ký nhanh.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🎧</div><div class="body">
+                <div class="title"><a class="ext" href="https://english-test.net/toeic/" target="_blank" rel="noopener">English-Test.net</a> <span class="badge free">Free</span></div>
+                <div class="desc">Đầy đủ practice cho từng Part. Giao diện cũ nhưng nội dung tốt.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🆓</div><div class="body">
+                <div class="title"><a class="ext" href="https://toeicpractice.com/" target="_blank" rel="noopener">TOEIC Practice Test Online</a> <span class="badge free">Free</span></div>
+                <div class="desc">Đề full + chấm điểm tự động. Tài khoản free đủ dùng.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">📚</div><div class="body">
+                <div class="title"><a class="ext" href="/tests">TOEIC Quest (site này)</a> <span class="badge free">Free</span></div>
+                <div class="desc">60 bộ đề luyện tập + audio + đáp án. Chạy offline-friendly, không quảng cáo.</div>
+              </div></div>
+            </div>
+
+            <h2 id="youtube">📺 Kênh YouTube nên xem</h2>
+            <div class="resource-grid">
+              <div class="resource">
+                <div class="icon">▶️</div><div class="body">
+                <div class="title"><a class="ext" href="https://www.youtube.com/@KIRAEnglish" target="_blank" rel="noopener">KIRA English</a> <span class="badge vn">VN</span> <span class="badge free">Free</span></div>
+                <div class="desc">Một trong các kênh TOEIC Việt Nam đông sub nhất. Giải đề + tips ngữ pháp/từ vựng.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">▶️</div><div class="body">
+                <div class="title"><a class="ext" href="https://www.youtube.com/@dolenglishvn" target="_blank" rel="noopener">DOL English Channel</a> <span class="badge vn">VN</span> <span class="badge free">Free</span></div>
+                <div class="desc">Video bài học, giải đề, chiến lược ôn thi từ team DOL.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🇬🇧</div><div class="body">
+                <div class="title"><a class="ext" href="https://www.youtube.com/@bbclearningenglish" target="_blank" rel="noopener">BBC Learning English</a> <span class="badge free">Free</span></div>
+                <div class="desc">Không chuyên TOEIC nhưng phát âm chuẩn, nội dung phong phú cho luyện Listening hằng ngày.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🇺🇸</div><div class="body">
+                <div class="title"><a class="ext" href="https://learningenglish.voanews.com/" target="_blank" rel="noopener">VOA Learning English</a> <span class="badge free">Free</span></div>
+                <div class="desc">News đọc chậm, có transcript. Tuyệt vời cho shadowing và build vocab.</div>
+              </div></div>
+            </div>
+
+            <h2 id="apps">📱 App học TOEIC trên điện thoại</h2>
+            <div class="resource-grid">
+              <div class="resource">
+                <div class="icon">🗣️</div><div class="body">
+                <div class="title"><a class="ext" href="https://elsaspeak.com/" target="_blank" rel="noopener">ELSA Speak</a> <span class="badge vn">VN-founded</span> <span class="badge freemium">Free+Paid</span></div>
+                <div class="desc">AI chấm phát âm chuẩn từng âm vị. Có gói TOEIC riêng. Phù hợp người yếu Listening/Speaking.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🦉</div><div class="body">
+                <div class="title"><a class="ext" href="https://www.duolingo.com/" target="_blank" rel="noopener">Duolingo</a> <span class="badge freemium">Free+Paid</span></div>
+                <div class="desc">Gamification cực mạnh, học ngắn 5–15 phút/ngày. Không chuyên TOEIC nhưng cực ích duy trì thói quen.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🍰</div><div class="body">
+                <div class="title"><a class="ext" href="https://mycake.me/" target="_blank" rel="noopener">Cake</a> <span class="badge free">Free</span></div>
+                <div class="desc">Học qua video clip ngắn từ phim/show. Cực ích cho Listening Part 3-4.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🃏</div><div class="body">
+                <div class="title"><a class="ext" href="https://quizlet.com/" target="_blank" rel="noopener">Quizlet</a> <span class="badge freemium">Free+Paid</span></div>
+                <div class="desc">Flashcard online. Search "TOEIC 600" hoặc "TOEIC 800" sẽ có hàng nghìn set sẵn từ cộng đồng.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">🧠</div><div class="body">
+                <div class="title"><a class="ext" href="https://apps.ankiweb.net/" target="_blank" rel="noopener">Anki</a> <span class="badge free">Free</span></div>
+                <div class="desc">Flashcard spaced-repetition huyền thoại. Hơi khó dùng nhưng hiệu quả nhất cho học từ dài hạn.</div>
+              </div></div>
+              <div class="resource">
+                <div class="icon">📰</div><div class="body">
+                <div class="title"><a class="ext" href="https://www.memrise.com/" target="_blank" rel="noopener">Memrise</a> <span class="badge freemium">Free+Paid</span></div>
+                <div class="desc">Học từ vựng qua video native speaker. Có khóa "Business English" hữu ích.</div>
+              </div></div>
+            </div>
+
+            <h2 id="books">📚 Sách ôn TOEIC kinh điển</h2>
+            <ol>
+              <li><b>ETS TOEIC LC + RC 1200</b> — sách "kinh thánh" của TOEIC, chứa đề cực sát đề thật. Nên bắt đầu từ đây.</li>
+              <li><b>Hackers TOEIC Reading / Listening Start</b> — Hàn Quốc, giáo trình rất logic, phù hợp người mới.</li>
+              <li><b>Big Step TOEIC 1, 2, 3</b> — chia level rõ ràng (300+ / 500+ / 700+).</li>
+              <li><b>Tactics for TOEIC</b> (Oxford) — chiến thuật làm bài theo từng Part.</li>
+              <li><b>Longman New Real TOEIC</b> — đề thi thật được tổng hợp lại.</li>
+              <li><b>600 Essential Words for TOEIC</b> — Barron's, 600 từ cốt lõi nhất.</li>
+            </ol>
+
+            <h2 id="community">👥 Cộng đồng học TOEIC</h2>
+            <ul>
+              <li><b>Reddit</b> — <a class="ext" href="https://www.reddit.com/r/EnglishLearning/" target="_blank" rel="noopener">r/EnglishLearning</a> (đông), <a class="ext" href="https://www.reddit.com/r/TOEIC/" target="_blank" rel="noopener">r/TOEIC</a> (ít người hơn nhưng tập trung)</li>
+              <li><b>Facebook</b> — Search "Học TOEIC", "Group TOEIC", "TOEIC Master" — có hàng chục group lớn, đăng câu hỏi sẽ có người trả lời nhanh</li>
+              <li><b>Discord</b> — Server "English Learning" (link đổi liên tục, search trên disboard.org)</li>
+            </ul>
+
+            <h2 id="tips">📅 Lộ trình ôn TOEIC 3 tháng (mục tiêu 600+)</h2>
+            <h3>Tháng 1 — Xây nền tảng</h3>
+            <ul>
+              <li>Học <b>1500 từ vựng TOEIC cốt lõi</b> (Quizlet/Anki): 15 từ/ngày</li>
+              <li>Ôn lại ngữ pháp cơ bản: thì, câu điều kiện, bị động, mệnh đề quan hệ</li>
+              <li>Mỗi ngày 30 phút Listening (VOA, BBC 6-minute English)</li>
+              <li>Đọc 1 bài đọc TOEIC mỗi tối (không cần đo thời gian)</li>
+            </ul>
+            <h3>Tháng 2 — Làm quen format</h3>
+            <ul>
+              <li>Làm từng Part riêng lẻ: 1 Part/ngày, có chấm sai/đúng và rút kinh nghiệm</li>
+              <li>Học chiến thuật làm bài (Tactics for TOEIC hoặc clip KIRA English)</li>
+              <li>Listening shadow technique: chọn 1 audio 5–10 phút, nghe + lặp lại 10 lần</li>
+              <li>Cuối tuần: 1 mini test (50 câu) để check tiến độ</li>
+            </ul>
+            <h3>Tháng 3 — Luyện đề + tốc độ</h3>
+            <ul>
+              <li><b>2 đề full/tuần</b> trong điều kiện giống thi thật (2 tiếng, không tra)</li>
+              <li>Sau mỗi đề: phân tích sai ở Part nào → tập trung Part đó</li>
+              <li>Học các "trick" thường gặp (paraphrase trong Listening, scanning trong Part 7)</li>
+              <li>Tuần cuối: nghỉ ngơi 1-2 ngày, chỉ ôn nhẹ + ngủ đủ</li>
+            </ul>
+            <div class="callout">
+              ⚡ <b>Nguyên tắc:</b> Đều đặn 60 phút/ngày &gt; cày 5 tiếng cuối tuần. Não cần thời gian "ngấm" giữa các buổi học.
+            </div>
+
+            <div class="cta-card">
+              <h3>🎯 Sẵn sàng luyện đề?</h3>
+              <p>Site có 60 bộ đề luyện tập kèm audio và đáp án. Bắt đầu với đề mới nhất hoặc bộ Economy dành cho người mới.</p>
+              <a class="btn" href="/tests">📝 Vào mục Bài thi</a>
+            </div>
+
+            <p class="footer-note">
+              ⓘ Các link bên trên là tham khảo từ cộng đồng học TOEIC. Tác giả không liên kết hay nhận hoa hồng từ bất kỳ bên nào.
+              Hãy tự đánh giá chất lượng và mức học phí (nếu có) trước khi đăng ký. Chúc bạn ôn thi hiệu quả! 🍀
+            </p>
+          </div>
+        </div>
+      </main>
+    `;
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(e => console.warn('SW reg failed:', e));
+      });
+    }
+  </script>
+</body>
+</html>
