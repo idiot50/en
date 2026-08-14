@@ -35,6 +35,11 @@
     @media(max-width:560px){ .nb-add .row { grid-template-columns:1fr; } }
     .nb-add input, .nb-add select { width:100%; padding:9px 11px; border:2px solid var(--border); border-radius:10px; font-family:inherit; font-size:14px; }
     details summary { cursor:pointer; font-weight:800; }
+    /* export bar */
+    .dl-bar { display:flex; align-items:center; gap:8px; flex-wrap:wrap; background:var(--bg-alt); border:2px dashed var(--border); border-radius:13px; padding:10px 14px; margin-bottom:14px; }
+    .dl-lbl { font-size:13.5px; color:var(--text-soft); }
+    .dl-btn { border:2px solid var(--border); background:white; border-radius:10px; padding:7px 12px; font-weight:800; cursor:pointer; font-size:13px; font-family:inherit; color:var(--text); white-space:nowrap; }
+    .dl-btn:hover { border-color:var(--green); color:var(--green-dark); background:#f3fff0; }
     /* top-level tabs */
     .nt-tabs { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:16px; border-bottom:2px solid var(--border); padding-bottom:10px; }
     .nt-tab { border:2px solid var(--border); background:white; border-radius:13px; padding:10px 16px; font-weight:800; cursor:pointer; font-size:14.5px; font-family:inherit; color:var(--text-soft); }
@@ -68,8 +73,9 @@
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=1"></script>
   <script src="/js/catalog.js?v=10"></script>
-  <script src="/js/layout.js?v=12"></script>
+  <script src="/js/layout.js?v=13"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
@@ -141,12 +147,27 @@
           <a class="btn ghost small" href="/drill">🔁 Ôn theo Part</a>
           <a class="btn ghost small" href="/study">🧠 Học &amp; Ôn</a>
         </div>
+        ${n ? `<div class="dl-bar">
+          <b class="dl-lbl">⬇ Tải sổ về máy<span id="dl-count"></span>:</b>
+          <button class="dl-btn" data-fmt="csv" title="Mở bằng Excel / Google Sheets">📊 Excel (CSV)</button>
+          <button class="dl-btn" data-fmt="anki" title="Nhập vào Anki hoặc Quizlet">🧠 Anki / Quizlet</button>
+          <button class="dl-btn" data-fmt="txt" title="Văn bản thường, dễ in">📄 Văn bản (TXT)</button>
+          <button class="dl-btn" data-fmt="json" title="Bản sao lưu đầy đủ">💾 Sao lưu (JSON)</button>
+        </div>` : ''}
         <div id="nb-list">${rows()}</div>
       </main>`;
       wireTabs();
 
+      const dlCount = () => {
+        const el = document.getElementById('dl-count');
+        if (!el) return;
+        const k = exportRows().length;
+        el.textContent = filter.trim() ? ` (${k} từ đang lọc)` : ` (${k} từ)`;
+      };
+      dlCount();
+      root.querySelectorAll('.dl-btn').forEach(b => b.addEventListener('click', () => exportNotes(b.dataset.fmt)));
       const q = document.getElementById('nb-q');
-      q.addEventListener('input', () => { filter = q.value; document.getElementById('nb-list').innerHTML = rows(); wireDel(); });
+      q.addEventListener('input', () => { filter = q.value; document.getElementById('nb-list').innerHTML = rows(); wireDel(); dlCount(); });
       document.getElementById('ad-save').addEventListener('click', () => {
         const w = document.getElementById('ad-w').value.trim();
         const m = document.getElementById('ad-m').value.trim();
@@ -156,6 +177,52 @@
       });
       wireDel();
     }
+    // ---------- export the notebook to a file ----------
+    function download(name, text, mime) {
+      try {
+        const blob = new Blob([text], { type: mime + ';charset=utf-8' });
+        const url = URL.createObjectURL(blob);
+        const a = document.createElement('a');
+        a.href = url; a.download = name;
+        document.body.appendChild(a); a.click();
+        setTimeout(() => { URL.revokeObjectURL(url); a.remove(); }, 1500);
+      } catch (e) { alert('Không tải được file: ' + (e && e.message || e)); }
+    }
+    const csvCell = v => '"' + String(v == null ? '' : v).replace(/"/g, '""').replace(/\r?\n/g, ' ') + '"';
+    function today() { return new Date().toISOString().slice(0, 10); }
+    // Rows currently shown (respects the search box) so what you see is what you get.
+    function exportRows() {
+      const all = VocabNotes.list();
+      const f = filter.trim().toLowerCase();
+      return f ? all.filter(n => (n.w + ' ' + n.mean + ' ' + n.type).toLowerCase().indexOf(f) !== -1) : all;
+    }
+    function exportNotes(fmt) {
+      const list = exportRows();
+      if (!list.length) { alert('Không có từ nào để tải.'); return; }
+      const stamp = today();
+      if (fmt === 'csv') {
+        // BOM so Excel opens Vietnamese correctly
+        const head = ['Từ vựng', 'Loại từ', 'Nghĩa tiếng Việt', 'Phiên âm', 'Nguồn', 'Ngày lưu'];
+        const body = list.map(n => [n.w, n.type, n.mean, n.ipa, n.src, n.at].map(csvCell).join(','));
+        download(`so-tu-vung-${stamp}.csv`, '﻿' + head.map(csvCell).join(',') + '\r\n' + body.join('\r\n'), 'text/csv');
+      } else if (fmt === 'anki') {
+        // Tab-separated: front = word (+ipa), back = meaning (+type). Import as 2 fields.
+        const body = list.map(n => {
+          const front = n.w + (n.ipa ? ' ' + n.ipa : '');
+          const back = (n.type ? n.type + ' ' : '') + n.mean;
+          return front.replace(/\t/g, ' ') + '\t' + back.replace(/\t/g, ' ');
+        }).join('\n');
+        download(`so-tu-vung-anki-${stamp}.txt`, body, 'text/plain');
+      } else if (fmt === 'txt') {
+        const body = list.map((n, i) =>
+          `${i + 1}. ${n.w}${n.type ? ' ' + n.type : ''}${n.ipa ? ' ' + n.ipa : ''}\n   ${n.mean}${n.src ? '\n   (' + n.src + ')' : ''}`
+        ).join('\n\n');
+        download(`so-tu-vung-${stamp}.txt`, `SỔ TỪ VỰNG TOEIC — ${list.length} mục — ${stamp}\n\n${body}\n`, 'text/plain');
+      } else {
+        download(`so-tu-vung-backup-${stamp}.json`, JSON.stringify(list, null, 1), 'application/json');
+      }
+    }
+
     // ---------- top-level tabs (avoid scrolling past a long notebook) ----------
     let tab = localStorage.getItem('toeicets_notes_tab') || 'mine';
     function tabBar(n) {
@@ -237,6 +304,7 @@
         <div style="display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:10px;">
           <b style="font-size:15px;">${esc(cur.label)}</b>
           <span style="flex:1"></span>
+          <button class="dl-btn" id="vp-dl" title="Tải ${shown.length} từ đang hiện ra file Excel">⬇ Tải CSV</button>
           <button class="btn ghost small" id="vp-all" ${addedAll ? 'disabled' : ''}>${addedAll ? '✓ Đã thêm hết' : '➕ Thêm ' + shown.length + ' từ đang hiện vào sổ'}</button>
         </div>
         <div>${items || '<p style="color:var(--text-mute);padding:10px;">Không có từ nào trong bộ lọc này.</p>'}</div>`;
@@ -248,6 +316,15 @@
       box.querySelectorAll('.vp-f').forEach(b => b.addEventListener('click', () => {
         packFilter = b.dataset.f; renderPack();
       }));
+      const vpDl = document.getElementById('vp-dl');
+      if (vpDl) vpDl.addEventListener('click', () => {
+        if (!shown.length) { alert('Không có từ nào để tải.'); return; }
+        const head = ['Từ vựng', 'Loại từ', 'Phiên âm', 'Nghĩa tiếng Việt', 'Tần suất', 'Cụm đi kèm', 'Ví dụ', 'Nguồn'];
+        const body = shown.map(w => [w.w, POS_VI[w.pos] || w.pos, w.ipa, w.vi, w.freq,
+          (w.colloc || []).join('; '), w.ex, w.src].map(csvCell).join(','));
+        download(`tu-vung-2026-part${cur.part}-${today()}.csv`,
+          '﻿' + head.map(csvCell).join(',') + '\r\n' + body.join('\r\n'), 'text/csv');
+      });
       box.querySelectorAll('.vp-tts').forEach(b => b.addEventListener('click', () => {
         const w = shown[parseInt(b.dataset.i, 10)];
         if (w) VocabNotes.speak(w.w);

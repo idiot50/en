@@ -75,12 +75,22 @@
     .q-result.blank { background: var(--text-mute); border-color: var(--border); }
     .q-result:hover { filter: brightness(1.08); }
     .q-card .option[disabled] { cursor: default; opacity: 1; }
+    /* review: all questions of a group shown together */
+    .rv-q { padding:18px 0; border-top:2px dashed var(--border); }
+    .rv-q:first-of-type { border-top:none; padding-top:6px; }
+    .rv-q.cur { background:#fffdf3; border-radius:12px; padding:14px; margin:8px -8px; box-shadow:inset 0 0 0 2px #ffe08a; }
+    .rv-q .q-num { font-size:12px; font-weight:800; color:var(--text-mute); text-transform:uppercase; letter-spacing:.5px; margin-bottom:6px; }
     /* Part 7: passage (2/3) | questions (1/3) split, full screen width */
     .main.main-wide { max-width:none; }
     .main-wide .player { max-width:none; }
     .q-split { display:grid; grid-template-columns:minmax(0,2fr) minmax(0,1fr); gap:18px; align-items:start; margin-bottom:16px; }
     .q-split .q-card { margin-bottom:0; }
-    .q-split-pass { position:sticky; top:66px; max-height:calc(100vh - 96px); overflow-y:auto; }
+    .q-split-pass { position:sticky; top:64px; max-height:calc(100vh - 168px); overflow-y:auto;
+      overscroll-behavior:contain; scrollbar-gutter:stable; }
+    .q-split-pass::-webkit-scrollbar { width:11px; }
+    .q-split-pass::-webkit-scrollbar-track { background:#eef2f4; border-radius:7px; }
+    .q-split-pass::-webkit-scrollbar-thumb { background:#b9c6cf; border-radius:7px; border:2px solid #eef2f4; }
+    .q-split-pass::-webkit-scrollbar-thumb:hover { background:#94a6b2; }
     .q-split-pass .q-passage { max-height:none; overflow:visible; border-left:none; background:transparent; padding:0; margin-bottom:0; font-size:15.5px; }
     .q-split-pass .q-image { max-height:none; }
     @media (max-width:860px) { .main.main-wide { max-width:100%; } .q-split { grid-template-columns:1fr; } .q-split-pass { position:static; max-height:44vh; } .q-split-pass .q-passage { max-height:none; } }
@@ -89,15 +99,16 @@
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=1"></script>
   <script src="/js/catalog.js?v=10"></script>
-  <script src="/js/layout.js?v=12"></script>
+  <script src="/js/layout.js?v=13"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="/js/firebase-init.js?v=1"></script>
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
-  <script src="/js/quiz-core.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=15"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (async () => {
@@ -255,7 +266,13 @@
       if (!v) return null;
       const s = String(v).trim();
       if (!s) return null;
-      if (/^https?:\/\//i.test(s)) return s.replace(/^https?:\/\/data\.toeicets\.com\//i, '/data/');
+      // Absolute data.toeicets.com URLs (the 2026 set) still have to go through the
+      // same audio-on-B2 / images-on-origin split as bare filenames do.
+      if (/^https?:\/\//i.test(s)) {
+        const rel = s.replace(/^https?:\/\/data\.toeicets\.com\//i, '');
+        if (rel === s) return s;
+        return subdir === 'audio' ? `${AUDIO_BASE_URL}/data/${rel}` : `/data/${rel}`;
+      }
       const path = `/data/${year}/test${n}/${subdir}/${s}`;
       if (subdir === 'audio') return AUDIO_BASE_URL + path;
       return path;
@@ -327,11 +344,12 @@
       let answeredSoFar = 0;
       const results = [];   // per-question outcomes for the review screen
       const picksByQ = {};  // every selection the user makes, keyed by question number (even without "Kiểm tra")
+      const skippedQ = {};  // question numbers skipped because their audio would not load
       let historyLogged = false;   // log this part to account history at most once
       // Build the full-part result list from picksByQ. Called on completion or timeout.
       function buildResults() {
         results.length = 0;
-        groups.forEach(g => {
+        groups.forEach((g, gi) => {
           const gImg = imagePath(g[0].Image);
           const gText = g[0].Text || '';
           g.forEach(q => {
@@ -339,12 +357,13 @@
             const chosen = picksByQ[qn] || null;
             const correct = correctLetter(q);
             results.push({
-              qNum: qn, part: partNum, year, n,
+              qNum: qn, part: partNum, year, n, gid: gi,
               audioFile: g[0].Audio || '', imageFile: q.Image || g[0].Image || '',
               question: q.Question || '',
               image: imagePath(q.Image) || gImg || null,
               options: optsLetters(q).map(L => ({ L, text: q[L] || '' })),
               chosen, correct, isCorrect: chosen === correct, explain: q.Explain || '',
+              skipped: !!skippedQ[qn],
               script: gText || '', translation: q.Transcript || q.Translate || ''
             });
           });
@@ -400,10 +419,13 @@
       // Result summary: correct/wrong counts + per-question grid (click a number to review)
       function renderResults() {
         stopTimer();
-        try { QuizCore.ErrorBox.addFromResults(results); } catch (e) {}
-        const total = results.length;
-        const correctCount = results.filter(r => r.isCorrect).length;
-        const blankCount = results.filter(r => r.chosen == null).length;
+        const graded = results.filter(r => !r.skipped);   // câu lỗi audio: không chấm, không ghi lịch sử
+        try { QuizCore.ErrorBox.addFromResults(graded); } catch (e) {}
+        try { if (window.Hist) Hist.addResults(graded, 'test'); } catch (e) {}
+        const skipCount = results.length - graded.length;
+        const total = graded.length;
+        const correctCount = graded.filter(r => r.isCorrect).length;
+        const blankCount = graded.filter(r => r.chosen == null).length;
         const wrongCount = total - correctCount - blankCount;
         const answeredCount = total - blankCount;
         const xpGained = correctCount * 10;
@@ -412,7 +434,7 @@
           historyLogged = true;
           Auth.addHistory({ type: 'part', testKey, part: partNum, total, correct: correctCount, wrong: wrongCount, blank: blankCount });
         }
-        const grid = total ? results.map((r, idx) => {
+        const grid = total ? graded.map((r, idx) => {
           const st = r.chosen == null ? 'blank' : (r.isCorrect ? 'correct' : 'wrong');
           const lbl = st === 'correct' ? 'Đúng' : st === 'wrong' ? 'Sai' : 'Chưa làm';
           return `<button class="q-result ${st}" data-idx="${idx}" title="Câu ${r.qNum} — ${lbl}">${r.qNum}</button>`;
@@ -424,6 +446,7 @@
               <div style="font-size:80px;">${timedOut ? '⏰' : '🏆'}</div>
               <h2>${timedOut ? 'Hết giờ!' : `Hoàn thành Part ${partNum}!`}</h2>
               <p style="color:var(--text-mute);margin-top:8px;">Đúng ${correctCount} • Sai ${wrongCount}${blankCount ? ` • Chưa làm ${blankCount}` : ''} • Tổng ${total} câu</p>
+              ${skipCount ? `<p style="color:var(--text-mute);font-size:13px;margin-top:4px;">⏭ Đã bỏ qua ${skipCount} câu vì không tải được file nghe — không tính vào kết quả.</p>` : ''}
               <div class="stats-grid" style="margin-top:24px;">
                 <div class="stat-card"><div class="big" style="color:var(--green);">✅ ${correctCount}</div><div class="label">Câu đúng</div></div>
                 <div class="stat-card"><div class="big" style="color:var(--red);">❌ ${wrongCount}</div><div class="label">Câu sai</div></div>
@@ -445,58 +468,93 @@
       }
 
       // Single-question review: correct answer, the user's (wrong) choice, and explanation
+      // Review one item. Questions sharing a clip or passage (Part 3/4/6/7) are shown
+      // TOGETHER - all 3-4 of them, including the ones answered correctly.
       function renderReview(idx) {
-        const r = results[idx];
+        const list = results.filter(x => !x.skipped);
+        const r = list[idx];
         if (!r) { renderResults(); return; }
+        const mates = list.filter(x => x.gid != null && x.gid === r.gid);
+        const group = mates.length > 1 ? mates : [r];
+        const isGroup = group.length > 1;
+        const first = group[0], last = group[group.length - 1];
+        const okN = group.filter(x => x.isCorrect).length;
         const st = r.chosen == null ? 'blank' : (r.isCorrect ? 'correct' : 'wrong');
-        const optsHtml = r.options.map(o => {
-          let cls = 'option';
-          if (o.L === r.correct) cls += ' correct';
-          else if (o.L === r.chosen) cls += ' wrong';
-          return `<button class="${cls}" disabled><span class="letter">${o.L}</span><span>${escapeHtml(o.text)}</span></button>`;
+
+        const audioUrl = first.audioFile ? audioPath(first.audioFile) : null;
+        const imgUrl = first.image || null;
+        const script = group.map(x => x.script).find(Boolean) || '';
+        const trans = Array.from(new Set(group.map(x => x.translation).filter(Boolean)));
+
+        const qBlocks = group.map(x => {
+          const s2 = x.chosen == null ? 'blank' : (x.isCorrect ? 'correct' : 'wrong');
+          const opts = x.options.map(o => {
+            let cls = 'option';
+            if (o.L === x.correct) cls += ' correct';
+            else if (o.L === x.chosen) cls += ' wrong';
+            return `<button class="${cls}" disabled><span class="letter">${o.L}</span><span>${escapeHtml(o.text)}</span></button>`;
+          }).join('');
+          const verdict = s2 === 'correct'
+            ? `<div class="feedback correct"><div class="heading">🎉 Đúng — Đáp án: ${x.correct}</div></div>`
+            : s2 === 'blank'
+              ? `<div class="feedback wrong"><div class="heading">⬜ Chưa trả lời — Đáp án đúng: ${x.correct}</div></div>`
+              : `<div class="feedback wrong"><div class="heading">❌ Sai — Bạn chọn: ${x.chosen} • Đáp án đúng: ${x.correct}</div></div>`;
+          const explain = x.explain ? `<div class="reveal-block"><div class="heading">💡 Giải thích</div><div class="body">${nl2br(x.explain)}</div></div>` : '';
+          const isCur = x === r;
+          const tag = s2 === 'correct' ? '· ✅ đúng' : s2 === 'blank' ? '· ⬜ chưa làm' : '· ❌ sai';
+          return `<div class="rv-q${isCur ? ' cur' : ''}"${isCur ? ' id="rv-cur"' : ''}>
+              ${isGroup ? `<div class="q-num">Câu ${x.qNum} ${tag}${isCur ? ' · đang xem' : ''}</div>` : ''}
+              ${x.question ? `<div class="q-text">${highlightBlanks(x.question)}</div>` : ''}
+              <div class="options">${opts}</div>
+              ${verdict}${explain}
+            </div>`;
         }).join('');
-        const imgHtml = r.image ? `<img class="q-image" src="${r.image}" alt="image"/>` : '';
-        const qTextHtml = r.question ? `<div class="q-text">${highlightBlanks(r.question)}</div>` : '';
-        const verdictHtml = st === 'correct'
-          ? `<div class="feedback correct"><div class="heading">🎉 Đúng — Đáp án: ${r.correct}</div></div>`
-          : st === 'blank'
-          ? `<div class="feedback wrong"><div class="heading">⬜ Chưa trả lời — Đáp án đúng: ${r.correct}</div></div>`
-          : `<div class="feedback wrong"><div class="heading">❌ Sai — Bạn chọn: ${r.chosen} • Đáp án đúng: ${r.correct}</div></div>`;
-        const explainHtml = r.explain ? `<div class="reveal-block"><div class="heading">💡 Giải thích</div><div class="body">${nl2br(r.explain)}</div></div>` : '';
-        const scriptHtml = r.script ? `<div class="reveal-block"><div class="heading">📜 Script</div><div class="body">${nl2br(r.script)}</div></div>` : '';
-        const transHtml = r.translation ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(r.translation)}</div></div>` : '';
+
+        let prevIdx = -1;
+        for (let i = idx - 1; i >= 0; i--) { if (list[i].gid !== r.gid) { prevIdx = i; break; } }
+        let nextIdx = -1;
+        for (let i = idx + 1; i < list.length; i++) { if (list[i].gid !== r.gid) { nextIdx = i; break; } }
+
+        const rangeLbl = isGroup ? `Câu ${first.qNum}–${last.qNum}` : `Câu ${r.qNum}`;
+        const badge = isGroup
+          ? `<div class="test-timer ${okN === group.length ? '' : 'warning'}">${okN}/${group.length} đúng</div>`
+          : `<div class="test-timer ${st === 'correct' ? '' : 'warning'}">${st === 'correct' ? '✅ Đúng' : st === 'blank' ? '⬜ Chưa làm' : '❌ Sai'}</div>`;
+
         root.innerHTML = sidebar + `
           <main class="main">
             <div class="player">
               <div class="player-header">
                 <button class="close" id="rev-back" title="Về danh sách kết quả">←</button>
-                <div style="font-weight:900;flex:1;">Xem lại • Câu ${r.qNum} • Part ${r.part}</div>
-                <div class="test-timer ${st === 'correct' ? '' : 'warning'}">${st === 'correct' ? '✅ Đúng' : st === 'blank' ? '⬜ Chưa làm' : '❌ Sai'}</div>
+                <div style="font-weight:900;flex:1;">Xem lại • ${rangeLbl} • Part ${r.part}</div>
+                ${badge}
               </div>
               <div class="q-card">
-                ${imgHtml}
-                ${qTextHtml}
-                <div class="options">${optsHtml}</div>
-                ${verdictHtml}
-                ${explainHtml}
-                ${scriptHtml}
-                ${transHtml}
+                ${audioUrl ? `<audio controls preload="none" src="${audioUrl}"></audio>` : ''}
+                ${imgUrl ? `<img class="q-image" src="${imgUrl}" alt="image"/>` : ''}
+                ${script ? `<div class="reveal-block"><div class="heading">📜 ${r.part <= 4 ? 'Script bài nghe' : 'Đoạn văn'}</div><div class="body">${nl2br(script)}</div></div>` : ''}
+                ${isGroup ? `<p style="font-size:12.5px;color:var(--text-mute);margin:12px 0 0;">Cả cụm ${group.length} câu của bài nghe/đoạn văn này:</p>` : ''}
+                ${qBlocks}
+                ${trans.length ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(trans.join(String.fromCharCode(10, 10)))}</div></div>` : ''}
               </div>
               <div class="group-toolbar">
-                <button class="btn ghost" id="rev-prev" ${idx <= 0 ? 'disabled' : ''}>← Câu trước</button>
+                <button class="btn ghost" id="rev-prev" ${prevIdx < 0 ? 'disabled' : ''}>← ${isGroup ? 'Cụm trước' : 'Câu trước'}</button>
                 <button class="btn ghost small" id="rev-list">Danh sách</button>
                 <span style="flex:1"></span>
-                <button class="btn blue" id="rev-next" ${idx >= results.length - 1 ? 'disabled' : ''}>Câu sau →</button>
+                <button class="btn blue" id="rev-next" ${nextIdx < 0 ? 'disabled' : ''}>${isGroup ? 'Cụm sau' : 'Câu sau'} →</button>
               </div>
             </div>
           </main>`;
         document.getElementById('rev-back').onclick = () => renderResults();
         document.getElementById('rev-list').onclick = () => renderResults();
         const prev = document.getElementById('rev-prev');
-        if (prev && idx > 0) prev.onclick = () => renderReview(idx - 1);
+        if (prev && prevIdx >= 0) prev.onclick = () => renderReview(prevIdx);
         const next = document.getElementById('rev-next');
-        if (next && idx < results.length - 1) next.onclick = () => renderReview(idx + 1);
+        if (next && nextIdx >= 0) next.onclick = () => renderReview(nextIdx);
         window.scrollTo({ top: 0 });
+        if (isGroup) {
+          const cur = document.getElementById('rv-cur');
+          if (cur && group.indexOf(r) > 0) setTimeout(() => cur.scrollIntoView({ block: 'center' }), 60);
+        }
       }
 
       let autoNext = localStorage.getItem('toeicets_autonext') === '1';
@@ -693,6 +751,30 @@
           const tryPlay = () => { const p = audioEl.play(); if (p && p.catch) p.catch(() => {}); };
           tryPlay();
           document.addEventListener('pointerdown', tryPlay, { once: true });
+          // Clip missing / failed to download: offer retry + skip. A skipped group is not
+          // graded, does not affect hearts, and never reaches the practice history.
+          audioEl.onerror = () => {
+            if (document.getElementById('au-err')) return;
+            const card = document.querySelector('.q-card');
+            if (!card) return;
+            const box = document.createElement('div');
+            box.id = 'au-err';
+            box.style.cssText = 'background:#fff0f0;border:2px solid var(--red);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:14px;line-height:1.6;';
+            box.innerHTML = '<b style="color:var(--red);">⚠️ Không tải được file nghe của câu này.</b>' +
+              '<div style="margin-top:9px;"><button class="btn ghost small" id="au-retry">🔄 Thử lại</button>' +
+              '<button class="btn small" id="au-skip" style="margin-left:8px;">⏭ Bỏ qua câu này</button></div>' +
+              '<div style="font-size:12.5px;color:var(--text-mute);margin-top:8px;">Bỏ qua thì câu này không tính đúng/sai và không vào lịch sử luyện tập.</div>';
+            card.insertBefore(box, card.firstChild);
+            document.getElementById('au-retry').onclick = () => {
+              box.remove();
+              audioEl.src = sharedAudio + (sharedAudio.indexOf('?') === -1 ? '?' : '&') + 'r=' + Date.now();
+              audioEl.load(); tryPlay();
+            };
+            document.getElementById('au-skip').onclick = () => {
+              group.forEach(q => { skippedQ[qNumber(q)] = true; });
+              cancelAutoNext(); goNext();
+            };
+          };
         }
 
         // Pick state
@@ -865,7 +947,7 @@
         </div>`;
       }
       QuizCore.startQuiz({
-        root, sidebar, cards, minutes: 120,
+        root, sidebar, cards, minutes: 120, feature: 'test',
         icon: '🏁', title: 'Kết quả đề full (ước lượng điểm)',
         backUrl: `?year=${encodeURIComponent(year)}&n=${n}`, backLabel: 'Làm đề khác',
         scoreFn,

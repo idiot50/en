@@ -4,8 +4,8 @@
 //   - Data (CSV, images đề): network-first with cache fallback
 //   - Audio (B2 bucket, external): network-only (too large to cache 2GB)
 
-const CACHE_NAME = 'toeic-quest-v27';
-const RUNTIME_CACHE = 'toeic-runtime-v27';
+const CACHE_NAME = 'toeic-quest-v36';
+const RUNTIME_CACHE = 'toeic-runtime-v36';
 
 // Pre-cache on install (app shell)
 const APP_SHELL = [
@@ -21,6 +21,7 @@ const APP_SHELL = [
   '/dictation.html',
   '/part2.html',
   '/mistakes.html',
+  '/history.html',
   '/login.html',
   '/profile.html',
   '/grammar.html',
@@ -28,10 +29,11 @@ const APP_SHELL = [
   '/blog.html',
   '/css/style.css?v=11',
   '/js/state.js?v=11',
+  '/js/history.js?v=1',
   '/js/catalog.js?v=10',
-  '/js/layout.js?v=12',
+  '/js/layout.js?v=13',
   '/js/csv.js?v=10',
-  '/js/quiz-core.js?v=10',
+  '/js/quiz-core.js?v=15',
   '/js/study-core.js?v=1',
   '/js/vocab-notes.js?v=5',
   '/js/firebase-init.js?v=1',
@@ -83,6 +85,19 @@ self.addEventListener('fetch', event => {
     return; // network-only by default
   }
 
+  // Skip ALL audio, including same-origin MP3s under /data/ (e.g. /data/part2-100/audio/).
+  // Two reasons:
+  //  1. On Hugging Face these files are served from Git LFS, which answers with a 302 to a
+  //     CDN host. fetch() follows it, so the Response has redirected === true — and
+  //     cache.put() REJECTS a redirected response. That rejection used to bubble out of the
+  //     stale-while-revalidate handler and made respondWith() fail, so the audio simply
+  //     never loaded ("nhiều file nghe không tải được").
+  //  2. Caching ~34 MB of MP3s in Cache Storage is wasteful; audio streams fine from network.
+  if (url.pathname.endsWith('.mp3') || url.pathname.endsWith('.m4a') || url.pathname.endsWith('.ogg') ||
+      url.pathname.endsWith('.wav') || req.destination === 'audio') {
+    return; // network-only
+  }
+
   // Let the browser/network handle Google Fonts + Firebase (SDK/Auth/Firestore) directly — never cache
   if (url.hostname.endsWith('googleapis.com') || url.hostname.endsWith('gstatic.com') ||
       url.hostname.endsWith('firebaseio.com') || url.hostname.endsWith('firebaseapp.com')) {
@@ -117,15 +132,21 @@ self.addEventListener('fetch', event => {
 });
 
 // Strategies
+// cache.put() throws on a redirected response (and on partial 206s), which would otherwise
+// reject the whole handler and break the request. Always store through this helper.
+async function safePut(cache, request, response) {
+  if (!response || !response.ok || response.redirected || response.status === 206 ||
+      response.type === 'opaque' || response.type === 'opaqueredirect') return;
+  try { await cache.put(request, response.clone()); } catch (err) { /* never break the fetch */ }
+}
+
 async function cacheFirst(request) {
   const cached = await caches.match(request);
   if (cached) return cached;
   try {
     const response = await fetch(request);
-    if (response.ok) {
-      const cache = await caches.open(RUNTIME_CACHE);
-      cache.put(request, response.clone());
-    }
+    const cache = await caches.open(RUNTIME_CACHE);
+    await safePut(cache, request, response);
     return response;
   } catch (err) {
     return cached || new Response('Offline', { status: 503 });
@@ -135,10 +156,8 @@ async function cacheFirst(request) {
 async function networkFirst(request) {
   try {
     const response = await fetch(request);
-    if (response.ok) {
-      const cache = await caches.open(RUNTIME_CACHE);
-      cache.put(request, response.clone());
-    }
+    const cache = await caches.open(RUNTIME_CACHE);
+    await safePut(cache, request, response);
     return response;
   } catch (err) {
     const cached = await caches.match(request);
@@ -149,10 +168,9 @@ async function networkFirst(request) {
 async function staleWhileRevalidate(request) {
   const cache = await caches.open(RUNTIME_CACHE);
   const cached = await cache.match(request);
-  const fetchPromise = fetch(request).then(response => {
-    if (response.ok) cache.put(request, response.clone());
-    return response;
-  }).catch(() => cached);
+  const fetchPromise = fetch(request)
+    .then(async response => { await safePut(cache, request, response); return response; })
+    .catch(() => cached);
   return cached || fetchPromise;
 }
 

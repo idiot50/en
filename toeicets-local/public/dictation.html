@@ -66,6 +66,23 @@
     .dt-q-text { font-weight:700; margin-bottom:8px; line-height:1.4; }
     .dt-opt { padding:5px 10px; border-radius:8px; font-size:14px; margin-bottom:4px; line-height:1.4; }
     .dt-opt.ok { background:#f0ffe6; border:1.5px solid var(--green); color:var(--green-dark); font-weight:700; }
+    /* tickable answer choices (key hidden until "Kiểm tra") */
+    .dt-choice { display:flex; gap:9px; align-items:flex-start; width:100%; text-align:left; padding:8px 11px; margin-bottom:6px;
+      border:2px solid var(--border); border-radius:11px; background:white; font-family:inherit; font-size:14px; line-height:1.45; cursor:pointer; color:var(--text); }
+    .dt-choice:hover:not(:disabled) { border-color:var(--blue); background:#f7fcff; }
+    .dt-choice .cl { flex:none; width:23px; height:23px; border-radius:7px; background:var(--bg-alt); border:2px solid var(--border);
+      display:flex; align-items:center; justify-content:center; font-weight:900; font-size:12px; }
+    .dt-choice.picked { border-color:var(--blue-dark); background:#eaf6ff; }
+    .dt-choice.picked .cl { background:var(--blue); border-color:var(--blue-dark); color:white; }
+    .dt-choice.right { border-color:var(--green); background:#f0ffe6; color:var(--green-dark); font-weight:700; }
+    .dt-choice.right .cl { background:var(--green); border-color:var(--green); color:white; }
+    .dt-choice.bad { border-color:var(--red); background:#fff0f0; color:var(--red-dark); }
+    .dt-choice.bad .cl { background:var(--red); border-color:var(--red); color:white; }
+    .dt-choice:disabled { cursor:default; }
+    .dt-q-res { display:inline-block; font-size:13px; font-weight:800; margin-top:4px; }
+    .dt-q-res.good { color:var(--green-dark); }
+    .dt-q-res.bad { color:var(--red); }
+    .dt-q-res.miss { color:var(--text-mute); }
     .reveal-block { margin-top:14px; padding:14px; border-radius:10px; background:var(--bg-alt); border-left:4px solid var(--blue); }
     .reveal-block .heading { font-weight:800; font-size:13px; color:var(--text-mute); text-transform:uppercase; margin-bottom:6px; letter-spacing:.5px; }
     .reveal-block .body { font-size:14px; line-height:1.6; white-space:pre-line; max-height:280px; overflow-y:auto; }
@@ -88,15 +105,16 @@
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=1"></script>
   <script src="/js/catalog.js?v=10"></script>
-  <script src="/js/layout.js?v=12"></script>
+  <script src="/js/layout.js?v=13"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="/js/firebase-init.js?v=1"></script>
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
-  <script src="/js/quiz-core.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=15"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (function () {
@@ -233,6 +251,8 @@
       }
       return hit;
     }
+    const partNo = () => (mode === 'p2' ? 2 : mode === 'p4' ? 4 : 3);
+    const PASS_PCT = 80;   // chép đúng trên 80% -> tính là câu đúng trong Lịch sử luyện tập
     function award(ok) { const st = State.load(); State.recordAnswer(st, 'dictation', 0, ok); }
     // ONE reusable <audio> element, "blessed" by playing a silent clip inside the user's
     // click. A blessed element keeps its right to play() even if sampling takes long
@@ -322,9 +342,18 @@
         if (me.message) diagAdd('message: ' + me.message);
         diagAdd('networkState: ' + au.networkState + ' ' + (NET_STATE[au.networkState] || '') + ' | readyState: ' + au.readyState + ' ' + (RDY_STATE[au.readyState] || ''));
         const el = playsEl();
-        if (el) el.innerHTML = '⚠️ Lỗi tải audio — <a href="#" id="dt-reload" style="color:var(--red);font-weight:800;text-decoration:underline;">thử lại</a>';
+        if (el) el.innerHTML = '⚠️ Lỗi tải audio — <a href="#" id="dt-reload" style="color:var(--red);font-weight:800;text-decoration:underline;">thử lại</a>' +
+          ' · <a href="#" id="dt-skip" style="color:var(--red);font-weight:800;text-decoration:underline;">bỏ qua bài này</a>';
         const rl = document.getElementById('dt-reload');
         if (rl) rl.addEventListener('click', (e) => { e.preventDefault(); reload(); });
+        // Bỏ qua: sang bài kế tiếp, KHÔNG chấm điểm và không ghi vào lịch sử luyện tập.
+        const sk = document.getElementById('dt-skip');
+        if (sk) sk.addEventListener('click', (e) => {
+          e.preventDefault();
+          skippedItems++;
+          if (idx + 1 >= items.length) { renderDone(); return; }
+          idx++; renderItem();
+        });
         diagAdd('Đang kiểm tra đường dẫn…');
         const probe = await probeUrl(url);
         diagAdd('Probe: ' + JSON.stringify(probe));
@@ -365,7 +394,7 @@
     }
 
     // ---------- session ----------
-    let items = [], idx = 0, totalBlanks = 0, totalHit = 0;
+    let items = [], idx = 0, totalBlanks = 0, totalHit = 0, skippedItems = 0;
     async function start() {
       blessAudio();   // unlock the reusable audio element within this click
       root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
@@ -386,7 +415,7 @@
           <div style="font-size:60px;">😢</div><h2>Không tìm được bài phù hợp</h2><a class="btn ghost" href="/dictation">Quay lại</a></div></main>`;
         return;
       }
-      idx = 0; totalBlanks = 0; totalHit = 0;
+      idx = 0; totalBlanks = 0; totalHit = 0; skippedItems = 0;
       renderItem();
     }
 
@@ -411,24 +440,64 @@
       window.scrollTo({ top: 0 });
     }
 
-    // ---------- Part 3/4: cloze ----------
-    // Reference comprehension questions + choices (correct one highlighted) so the
-    // learner has context of what to listen for. Shared by both gap modes.
+    // ---------- Part 3/4: comprehension questions answered alongside the dictation ----------
+    // Questions are shown WITHOUT revealing the key; the learner ticks an answer and
+    // everything is graded together when "Kiểm tra" is pressed.
+    let qPicks = {};        // question index -> chosen letter (reset for every exercise)
     function questionsBlock(card) {
       if (!card.questions.some(q => q.Question)) return '';
-      const qsHtml = card.questions.map(q => {
-        const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
-        const opts = ['A', 'B', 'C', 'D'].filter(L => (q[L] || '').trim()).map(L => {
-          const ok = L === correct;
-          return `<div class="dt-opt ${ok ? 'ok' : ''}">${ok ? '✓ ' : ''}<b>${L}.</b> ${esc(q[L] || '')}</div>`;
-        }).join('');
+      const qsHtml = card.questions.map((q, qi) => {
+        const opts = ['A', 'B', 'C', 'D'].filter(L => (q[L] || '').trim()).map(L =>
+          `<button type="button" class="dt-choice" data-qi="${qi}" data-l="${L}">
+             <span class="cl">${L}</span><span>${esc(q[L] || '')}</span>
+           </button>`).join('');
         const qn = (q['Question Number'] || '').toString().replace(/\.0+$/, '');
-        return `<div class="dt-q"><div class="dt-q-text">${qn ? esc(qn) + '. ' : ''}${esc(q.Question || '')}</div><div class="dt-q-opts">${opts}</div></div>`;
+        return `<div class="dt-q" data-qi="${qi}">
+            <div class="dt-q-text">${qn ? esc(qn) + '. ' : ''}${esc(q.Question || '')}</div>
+            <div class="dt-q-opts">${opts}</div>
+            <div class="dt-q-fb" id="dt-qfb-${qi}"></div>
+          </div>`;
       }).join('');
       return `<details class="dt-qs" open>
-          <summary>📋 Câu hỏi &amp; đáp án (bám nội dung khi nghe)</summary>
+          <summary>📋 Câu hỏi — nghe rồi chọn đáp án (chấm cùng lúc với bài chép)</summary>
           ${qsHtml}
         </details>`;
+    }
+    // Wire the choice buttons. Selection is changeable until the exercise is checked.
+    function wireQuestions() {
+      qPicks = {};
+      root.querySelectorAll('.dt-choice').forEach(b => b.addEventListener('click', () => {
+        if (b.disabled) return;
+        const qi = b.dataset.qi;
+        qPicks[qi] = b.dataset.l;
+        root.querySelectorAll(`.dt-choice[data-qi="${qi}"]`).forEach(x => x.classList.toggle('picked', x === b));
+      }));
+    }
+    // Grade them together with the dictation; returns {n, ok} so the summary can show it.
+    function gradeQuestions(card) {
+      let n = 0, ok = 0;
+      card.questions.forEach((q, qi) => {
+        if (!q.Question) return;
+        const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
+        const chosen = qPicks[qi] || null;
+        n++;
+        const good = chosen === correct;
+        if (good) ok++;
+        root.querySelectorAll(`.dt-choice[data-qi="${qi}"]`).forEach(b => {
+          b.disabled = true;
+          b.classList.remove('picked');
+          if (b.dataset.l === correct) b.classList.add('right');
+          else if (b.dataset.l === chosen) b.classList.add('bad');
+        });
+        const fb = document.getElementById('dt-qfb-' + qi);
+        if (fb) fb.innerHTML = chosen == null
+          ? `<span class="dt-q-res miss">⬜ Chưa chọn — đáp án đúng: <b>${correct}</b></span>`
+          : good ? '<span class="dt-q-res good">✅ Chính xác</span>'
+                 : `<span class="dt-q-res bad">❌ Sai — bạn chọn ${chosen}, đáp án đúng: <b>${correct}</b></span>`;
+        // mỗi câu hỏi là một câu Part 3/4 thật -> ghi vào lịch sử luyện tập
+        try { if (window.Hist && chosen != null) Hist.add(partNo(), good, 'dictation'); } catch (e) {}
+      });
+      return { n, ok };
     }
 
     // ---------- Part 3/4: whole-sentence gaps ----------
@@ -465,6 +534,7 @@
         </div>
       </main>`;
       wireAudio(url);
+      wireQuestions();
       const areas = Array.from(root.querySelectorAll('.dt-sent'));
       const cnt = document.getElementById('dt-count');
       areas.forEach(a => {
@@ -504,6 +574,9 @@
         });
         totalBlanks += totWords; totalHit += hitWords;
         const pctAll = totWords ? Math.round(hitWords / totWords * 100) : 0;
+        // Lịch sử: cả bài chép chính tả tính là MỘT câu; đúng trên 80% mới tính là câu đúng.
+        try { if (window.Hist) Hist.add(partNo(), pctAll > PASS_PCT, 'dictation'); } catch (e) {}
+        const qres = gradeQuestions(card);
         const uniq = Array.from(new Set(missedWords)).slice(0, 20);
         const missedHtml = uniq.length ? `
           <div class="reveal-block" style="border-left-color:var(--red);">
@@ -511,7 +584,7 @@
             <div class="missed">${uniq.map(w => `<button data-w="${esc(w)}">➕ ${esc(w)}</button>`).join('')}</div>
           </div>` : '';
         document.getElementById('dt-after').innerHTML = `
-          <div class="feedback ${pctAll >= 80 ? 'correct' : 'wrong'}"><b>${hitWords}/${totWords} từ đúng — ${pctAll}%</b>${pctAll === 100 ? ' — nghe quá chuẩn! 🎉' : ''}</div>
+          <div class="feedback ${pctAll >= 80 ? 'correct' : 'wrong'}"><b>${hitWords}/${totWords} từ đúng — ${pctAll}%</b>${pctAll === 100 ? ' — nghe quá chuẩn! 🎉' : ''}${qres.n ? ` · Câu hỏi: <b>${qres.ok}/${qres.n} đúng</b>` : ''}</div>
           ${missedHtml}
           ${first.Transcript ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${QuizCore.nl2br(first.Transcript)}</div></div>` : ''}`;
         document.getElementById('dt-after').querySelectorAll('.missed button').forEach(b =>
@@ -548,6 +621,7 @@
         </div>
       </main>`;
       wireAudio(url);
+      wireQuestions();
       const inputs = Array.from(root.querySelectorAll('.dt-blank'));
       const cnt = document.getElementById('dt-count');
       inputs.forEach((inp, k) => {
@@ -576,13 +650,16 @@
           award(ok);
         });
         totalBlanks += inputs.length; totalHit += hit;
+        const pctItem = inputs.length ? Math.round(hit / inputs.length * 100) : 0;
+        try { if (window.Hist) Hist.add(partNo(), pctItem > PASS_PCT, 'dictation'); } catch (e) {}
+        const qres = gradeQuestions(card);
         const missedHtml = missedWords.length ? `
           <div class="reveal-block" style="border-left-color:var(--red);">
             <div class="heading">👂 Từ nghe trượt — bấm để lưu vào sổ</div>
             <div class="missed">${missedWords.map(w => `<button data-w="${esc(w)}">➕ ${esc(w)}</button>`).join('')}</div>
           </div>` : '';
         document.getElementById('dt-after').innerHTML = `
-          <div class="feedback ${hit === inputs.length ? 'correct' : 'wrong'}"><b>${hit}/${inputs.length} từ đúng</b>${hit === inputs.length ? ' — nghe quá chuẩn! 🎉' : ''}</div>
+          <div class="feedback ${hit === inputs.length ? 'correct' : 'wrong'}"><b>${hit}/${inputs.length} từ đúng</b>${hit === inputs.length ? ' — nghe quá chuẩn! 🎉' : ''}${qres.n ? ` · Câu hỏi: <b>${qres.ok}/${qres.n} đúng</b>` : ''}</div>
           ${missedHtml}
           ${first.Transcript ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${QuizCore.nl2br(first.Transcript)}</div></div>` : ''}`;
         document.getElementById('dt-after').querySelectorAll('.missed button').forEach(b =>
@@ -610,6 +687,7 @@
         </div>
       </main>`;
       wireAudio(url);
+      wireQuestions();
       document.getElementById('dt-check').addEventListener('click', () => {
         const typedRaw = document.getElementById('dt-type').value;
         const targetTokens = tokenize(q.Question).filter(t => wordCore(t));
@@ -623,6 +701,7 @@
         }).join('');
         targetNorm.forEach((_, i) => award(hitSet.has(i)));
         totalBlanks += targetNorm.length; totalHit += hitSet.size;
+        try { if (window.Hist) Hist.add(2, pct > PASS_PCT, 'dictation'); } catch (e) {}
         const opts = ['A', 'B', 'C'].filter(L => q[L]).map(L =>
           `<div style="margin:3px 0;${L === (q.Answer || '').trim().toUpperCase().charAt(0) ? 'font-weight:800;color:var(--green-dark);' : ''}">${L}. ${esc(q[L])}</div>`).join('');
         document.getElementById('dt-after').innerHTML = `
@@ -649,6 +728,7 @@
           <div style="font-size:76px;">${pct >= 85 ? '🏆' : pct >= 60 ? '🎉' : '💪'}</div>
           <h2>Chép chính tả xong!</h2>
           <p style="color:var(--text-mute);margin-top:6px;">Nghe đúng ${totalHit}/${totalBlanks} từ · ${pct}%</p>
+          ${skippedItems ? `<p style="color:var(--text-mute);font-size:13px;margin-top:4px;">⏭ Bỏ qua ${skippedItems} bài vì không tải được audio — không tính vào kết quả.</p>` : ''}
           <div class="stats-grid" style="margin-top:22px;">
             <div class="stat-card xp"><div class="big">⚡ ${st.xp}</div><div class="label">Tổng XP</div></div>
             <div class="stat-card streak"><div class="big">🔥 ${st.streak}</div><div class="label">Ngày streak</div></div>

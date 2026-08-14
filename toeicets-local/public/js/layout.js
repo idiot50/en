@@ -34,6 +34,9 @@ function renderShell({ active, state }) {
       <a class="nav-link ${active==='mistakes'?'active':''}" href="/mistakes">
         <span class="icon">🩹</span><span>Sổ lỗi sai</span>
       </a>
+      <a class="nav-link ${active==='history'?'active':''}" href="/history">
+        <span class="icon">📅</span><span>Lịch sử luyện tập</span>
+      </a>
       <a class="nav-link ${active==='roadmap'?'active':''}" href="/roadmap">
         <span class="icon">📈</span><span>Lộ trình 650</span>
       </a>

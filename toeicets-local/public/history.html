@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Lịch sử luyện tập</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .hs-tabs { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; }
+    .hs-tab { border:2px solid var(--border); background:white; border-radius:12px; padding:8px 15px; font-weight:800; cursor:pointer; font-size:13.5px; font-family:inherit; color:var(--text-soft); }
+    .hs-tab.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    /* bar chart */
+    .hs-chart { display:flex; align-items:flex-end; gap:6px; height:150px; background:var(--bg-alt); border:2px solid var(--border); border-radius:14px; padding:14px 12px 8px; overflow-x:auto; }
+    .hs-bar { flex:1; min-width:22px; display:flex; flex-direction:column; justify-content:flex-end; align-items:center; height:100%; cursor:pointer; }
+    .hs-bar .stack { width:100%; max-width:38px; display:flex; flex-direction:column-reverse; border-radius:6px 6px 0 0; overflow:hidden; }
+    .hs-bar .ok { background:var(--green); }
+    .hs-bar .no { background:var(--red); }
+    .hs-bar .lb { font-size:10px; font-weight:800; color:var(--text-mute); margin-top:5px; white-space:nowrap; }
+    .hs-bar .vv { font-size:10.5px; font-weight:900; color:var(--text-soft); margin-bottom:3px; }
+    .hs-bar:hover .stack { outline:2px solid var(--blue); outline-offset:1px; }
+    .hs-bar.sel .lb { color:var(--green-dark); }
+    /* table */
+    .hs-table { width:100%; border-collapse:collapse; margin-top:10px; background:white; border:2px solid var(--border); border-radius:14px; overflow:hidden; }
+    .hs-table th, .hs-table td { padding:10px 12px; text-align:left; font-size:14px; border-bottom:1px solid var(--border); }
+    .hs-table th { background:var(--green-soft); color:var(--green-dark); font-weight:800; font-size:12.5px; text-transform:uppercase; letter-spacing:.4px; }
+    .hs-table tr:last-child td { border-bottom:none; }
+    .hs-table tr.clk { cursor:pointer; }
+    .hs-table tr.clk:hover { background:var(--bg-alt); }
+    .hs-table td.num { font-weight:800; text-align:right; white-space:nowrap; }
+    .ok-t { color:var(--green-dark); }
+    .no-t { color:var(--red); }
+    .pct-bar { display:inline-block; width:70px; height:9px; border-radius:5px; background:#ffdfe0; overflow:hidden; vertical-align:middle; margin-right:7px; }
+    .pct-bar i { display:block; height:100%; background:var(--green); }
+    .hs-empty { color:var(--text-mute); background:var(--bg-alt); border:2px dashed var(--border); border-radius:14px; padding:22px; text-align:center; line-height:1.7; }
+    .hs-back { margin-bottom:12px; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=1"></script>
+  <script src="/js/catalog.js?v=10"></script>
+  <script src="/js/layout.js?v=13"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+    const { sidebar, topbar } = renderShell({ active: 'history', state: State.load() });
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    const PART_LABEL = {
+      0: 'Từ vựng / Ngữ pháp (thẻ ghi nhớ)',
+      1: 'Part 1 — Mô tả hình ảnh', 2: 'Part 2 — Hỏi &amp; đáp', 3: 'Part 3 — Hội thoại',
+      4: 'Part 4 — Bài nói', 5: 'Part 5 — Hoàn thành câu', 6: 'Part 6 — Hoàn thành đoạn',
+      7: 'Part 7 — Đọc hiểu'
+    };
+    const VN_DAY = ['Chủ nhật','Thứ 2','Thứ 3','Thứ 4','Thứ 5','Thứ 6','Thứ 7'];
+    function fmtDate(iso) {
+      const [y, m, d] = iso.split('-').map(Number);
+      const dt = new Date(y, m - 1, d);
+      const t = Hist.todayISO();
+      const yest = (() => { const n = new Date(); n.setDate(n.getDate() - 1); return Hist.todayISO(n); })();
+      if (iso === t) return 'Hôm nay';
+      if (iso === yest) return 'Hôm qua';
+      return `${VN_DAY[dt.getDay()]}, ${String(d).padStart(2,'0')}/${String(m).padStart(2,'0')}/${y}`;
+    }
+    function pctCell(ok, n) {
+      const p = n ? Math.round(ok / n * 100) : 0;
+      return `<span class="pct-bar"><i style="width:${p}%"></i></span><b>${p}%</b>`;
+    }
+    let range = parseInt(localStorage.getItem('toeicets_hist_range') || '7', 10);
+
+    // ---------- overview ----------
+    function render() {
+      const t = Hist.totals();
+      const today = Hist.day(Hist.todayISO());
+      const bars = Hist.lastDays(range);
+      const maxN = Math.max(1, ...bars.map(b => b.total.n));
+      const chart = bars.map(b => {
+        const h = Math.round(b.total.n / maxN * 100);
+        const okH = b.total.n ? Math.round(b.total.ok / b.total.n * h) : 0;
+        const [, mm, dd] = b.date.split('-');
+        return `<div class="hs-bar ${b.date === Hist.todayISO() ? 'sel' : ''}" data-d="${b.date}" title="${esc(fmtDate(b.date))}: ${b.total.n} câu, đúng ${b.total.ok}">
+            <span class="vv">${b.total.n || ''}</span>
+            <span class="stack" style="height:${h}%">
+              <i class="ok" style="height:${okH}%"></i><i class="no" style="height:${h - okH}%"></i>
+            </span>
+            <span class="lb">${dd}/${mm}</span>
+          </div>`;
+      }).join('');
+
+      const dayRows = Hist.days().slice(0, 60).map(d => `
+        <tr class="clk" data-d="${d.date}">
+          <td><b>${esc(fmtDate(d.date))}</b><div style="font-size:11.5px;color:var(--text-mute);font-weight:700;">${d.date}</div></td>
+          <td class="num">${d.total.n}</td>
+          <td class="num ok-t">${d.total.ok}</td>
+          <td class="num no-t">${d.total.wrong}</td>
+          <td class="num">${pctCell(d.total.ok, d.total.n)}</td>
+          <td style="font-size:12px;color:var(--text-mute);">${Object.keys(d.parts).sort().map(p => `P${p}:${d.parts[p].n}`).join(' · ')}</td>
+          <td style="text-align:right;font-weight:900;color:var(--blue-dark);">›</td>
+        </tr>`).join('');
+
+      root.innerHTML = sidebar + `<main class="main">${topbar}
+        <h2 style="font-size:26px;font-weight:900;">📅 Lịch sử luyện tập</h2>
+        <p style="color:var(--text-mute);margin:6px 0 4px;line-height:1.6;">
+          Mọi câu bạn làm ở <b>tất cả chức năng</b> (Bài thi · Ôn theo Part · Kiểm tra nhanh · 100 câu Part 2 ·
+          Chép chính tả · Sổ lỗi sai · Luyện ngữ pháp · Học &amp; Ôn) đều được ghi lại theo ngày và theo Part.
+          <br/><span style="font-size:12.5px;">✍️ <b>Chép chính tả</b>: mỗi bài (1 câu Part 2 hoặc 1 đoạn Part 3/4) tính là
+          <b>1 câu</b> — chép đúng <b>trên 80%</b> tính là câu đúng, dưới mức đó tính là câu sai.</span>
+        </p>
+        <div class="stats-grid" style="margin-top:16px;">
+          <div class="stat-card"><div class="big">${today.total.n}</div><div class="label">Câu hôm nay</div></div>
+          <div class="stat-card"><div class="big ok-t">✅ ${today.total.ok}</div><div class="label">Đúng hôm nay</div></div>
+          <div class="stat-card"><div class="big no-t">❌ ${today.total.wrong}</div><div class="label">Sai hôm nay</div></div>
+          <div class="stat-card accuracy"><div class="big">${today.total.pct}%</div><div class="label">Chính xác hôm nay</div></div>
+          <div class="stat-card xp"><div class="big">🔥 ${Hist.streak()}</div><div class="label">Ngày liên tiếp</div></div>
+        </div>
+        ${t.total.n ? `
+        <h3 class="section-title">Biểu đồ số câu mỗi ngày <span style="font-weight:700;font-size:12.5px;color:var(--text-mute);">— xanh = đúng, đỏ = sai · bấm cột để xem chi tiết</span></h3>
+        <div class="hs-tabs">
+          ${[7, 14, 30].map(r => `<button class="hs-tab ${range === r ? 'active' : ''}" data-r="${r}">${r} ngày</button>`).join('')}
+        </div>
+        <div class="hs-chart">${chart}</div>
+
+        <h3 class="section-title">Tổng cộng theo Part <span style="font-weight:700;font-size:12.5px;color:var(--text-mute);">— ${t.days} ngày · ${t.total.n} câu</span></h3>
+        <table class="hs-table">
+          <tr><th>Phần</th><th style="text-align:right;">Số câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th></tr>
+          ${Object.keys(t.parts).sort().map(p => {
+            const e = t.parts[p];
+            return `<tr><td>${PART_LABEL[p] || 'Part ' + p}</td><td class="num">${e.n}</td>
+              <td class="num ok-t">${e.ok}</td><td class="num no-t">${e.n - e.ok}</td><td class="num">${pctCell(e.ok, e.n)}</td></tr>`;
+          }).join('')}
+        </table>
+
+        <h3 class="section-title">Tổng cộng theo chức năng</h3>
+        <table class="hs-table">
+          <tr><th>Chức năng</th><th style="text-align:right;">Số câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th></tr>
+          ${Object.keys(t.feats).sort((a, b) => t.feats[b].n - t.feats[a].n).map(f => {
+            const e = t.feats[f], m = Hist.FEATS[f] || Hist.FEATS.other;
+            return `<tr><td>${m.icon} ${esc(m.label)}</td><td class="num">${e.n}</td>
+              <td class="num ok-t">${e.ok}</td><td class="num no-t">${e.n - e.ok}</td><td class="num">${pctCell(e.ok, e.n)}</td></tr>`;
+          }).join('')}
+        </table>
+
+        <h3 class="section-title">Từng ngày <span style="font-weight:700;font-size:12.5px;color:var(--text-mute);">— bấm một ngày để xem chi tiết</span></h3>
+        <table class="hs-table">
+          <tr><th>Ngày</th><th style="text-align:right;">Câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th><th>Theo Part</th><th></th></tr>
+          ${dayRows}
+        </table>
+        <div style="margin-top:18px;display:flex;gap:10px;flex-wrap:wrap;">
+          <button class="btn ghost small" id="hs-csv">⬇ Tải lịch sử (CSV)</button>
+          <button class="btn ghost small" id="hs-clear" style="color:var(--red);">🗑 Xoá lịch sử</button>
+        </div>
+        ` : `<div class="hs-empty" style="margin-top:18px;">
+          Chưa có dữ liệu nào. Hãy làm vài câu ở <a href="/drill" style="color:var(--blue-dark);font-weight:800;">🔁 Ôn theo Part</a>,
+          <a href="/part2" style="color:var(--blue-dark);font-weight:800;">🎧 100 câu Part 2</a> hoặc
+          <a href="/quick" style="color:var(--blue-dark);font-weight:800;">⚡ Kiểm tra nhanh</a> — kết quả sẽ hiện ở đây theo ngày.
+        </div>`}
+      </main>`;
+
+      root.querySelectorAll('.hs-tab').forEach(b => b.addEventListener('click', () => {
+        range = parseInt(b.dataset.r, 10);
+        localStorage.setItem('toeicets_hist_range', range);
+        render();
+      }));
+      root.querySelectorAll('.hs-bar, tr.clk').forEach(el => el.addEventListener('click', () => {
+        const d = el.dataset.d;
+        if (d) { history.pushState({ d }, '', '/history?d=' + d); renderDay(d); }
+      }));
+      const csv = document.getElementById('hs-csv');
+      if (csv) csv.addEventListener('click', exportCsv);
+      const clr = document.getElementById('hs-clear');
+      if (clr) clr.addEventListener('click', () => {
+        if (!confirm('Xoá toàn bộ lịch sử luyện tập? Không khôi phục được.')) return;
+        Hist.clear(); render();
+      });
+    }
+
+    // ---------- one day ----------
+    function renderDay(dateISO) {
+      const d = Hist.day(dateISO);
+      const partRows = Object.keys(d.parts).sort().map(p => {
+        const e = d.parts[p];
+        return `<tr><td>${PART_LABEL[p] || 'Part ' + p}</td><td class="num">${e.n}</td>
+          <td class="num ok-t">${e.ok}</td><td class="num no-t">${e.n - e.ok}</td><td class="num">${pctCell(e.ok, e.n)}</td></tr>`;
+      }).join('');
+      const featRows = Object.keys(d.feats).sort((a, b) => d.feats[b].n - d.feats[a].n).map(f => {
+        const e = d.feats[f], m = Hist.FEATS[f] || Hist.FEATS.other;
+        return `<tr><td>${m.icon} ${esc(m.label)}</td><td class="num">${e.n}</td>
+          <td class="num ok-t">${e.ok}</td><td class="num no-t">${e.n - e.ok}</td><td class="num">${pctCell(e.ok, e.n)}</td></tr>`;
+      }).join('');
+      root.innerHTML = sidebar + `<main class="main">
+        <div class="hs-back"><button class="btn ghost small" id="hs-back">← Tất cả các ngày</button></div>
+        <h2 style="font-size:24px;font-weight:900;">📅 ${esc(fmtDate(dateISO))}</h2>
+        <p style="color:var(--text-mute);margin:4px 0 0;font-weight:700;">${dateISO}</p>
+        ${d.total.n ? `
+        <div class="stats-grid" style="margin-top:16px;">
+          <div class="stat-card"><div class="big">${d.total.n}</div><div class="label">Tổng số câu</div></div>
+          <div class="stat-card"><div class="big ok-t">✅ ${d.total.ok}</div><div class="label">Câu đúng</div></div>
+          <div class="stat-card"><div class="big no-t">❌ ${d.total.wrong}</div><div class="label">Câu sai</div></div>
+          <div class="stat-card accuracy"><div class="big">${d.total.pct}%</div><div class="label">Độ chính xác</div></div>
+        </div>
+        <h3 class="section-title">Theo Part</h3>
+        <table class="hs-table">
+          <tr><th>Phần</th><th style="text-align:right;">Số câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th></tr>
+          ${partRows}
+        </table>
+        <h3 class="section-title">Theo chức năng</h3>
+        <table class="hs-table">
+          <tr><th>Chức năng</th><th style="text-align:right;">Số câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th></tr>
+          ${featRows}
+        </table>` : '<div class="hs-empty" style="margin-top:18px;">Ngày này bạn chưa làm câu nào.</div>'}
+      </main>`;
+      document.getElementById('hs-back').onclick = () => { history.pushState({}, '', '/history'); render(); window.scrollTo({ top: 0 }); };
+      window.scrollTo({ top: 0 });
+    }
+
+    function exportCsv() {
+      const cell = v => '"' + String(v == null ? '' : v).replace(/"/g, '""') + '"';
+      const head = ['Ngày', 'Phần', 'Số câu', 'Đúng', 'Sai', 'Chính xác %'];
+      const rows = [];
+      Hist.days().forEach(d => {
+        Object.keys(d.parts).sort().forEach(p => {
+          const e = d.parts[p];
+          rows.push([d.date, (PART_LABEL[p] || 'Part ' + p).replace(/&amp;/g, '&'), e.n, e.ok, e.n - e.ok,
+            e.n ? Math.round(e.ok / e.n * 100) : 0].map(cell).join(','));
+        });
+      });
+      if (!rows.length) { alert('Chưa có dữ liệu để tải.'); return; }
+      const blob = new Blob(['﻿' + head.map(cell).join(',') + '\r\n' + rows.join('\r\n')], { type: 'text/csv;charset=utf-8' });
+      const a = document.createElement('a');
+      a.href = URL.createObjectURL(blob);
+      a.download = 'lich-su-luyen-tap-' + Hist.todayISO() + '.csv';
+      document.body.appendChild(a); a.click();
+      setTimeout(() => { URL.revokeObjectURL(a.href); a.remove(); }, 1500);
+    }
+
+    function route() {
+      const d = new URLSearchParams(location.search).get('d');
+      if (d) renderDay(d); else render();
+    }
+    window.addEventListener('popstate', route);
+    route();
+  })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => { navigator.serviceWorker.register('/service-worker.js').catch(() => {}); });
+    }
+  </script>
+</body>
+</html>

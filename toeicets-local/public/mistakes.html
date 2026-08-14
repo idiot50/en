@@ -56,20 +56,40 @@
     .er-filter { display:flex; gap:8px; flex-wrap:wrap; margin:12px 0; }
     .er-chip { border:2px solid var(--border); background:white; border-radius:10px; padding:7px 13px; font-weight:800; cursor:pointer; font-size:13px; }
     .er-chip.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    /* clickable list rows */
+    .er-item.link { cursor:pointer; transition:all .12s; }
+    .er-item.link:hover { border-color:var(--blue); transform:translateY(-1px); box-shadow:0 3px 0 var(--blue-dark); }
+    .er-open { flex:none; align-self:center; font-weight:900; color:var(--blue-dark); font-size:18px; }
+    /* detail view */
+    .dt-head { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:14px; }
+    .dt-meta { display:flex; gap:8px; flex-wrap:wrap; margin-bottom:14px; }
+    .dt-tag { font-size:12px; font-weight:800; border-radius:9px; padding:5px 11px; background:var(--bg-alt); color:var(--text-soft); border:2px solid var(--border); }
+    .dt-tag.bad { background:#fff0f0; color:#c0392b; border-color:#f3c0c0; }
+    .dt-tag.ok { background:#f0ffe6; color:var(--green-dark); border-color:var(--green); }
+    .dt-opt { display:flex; gap:10px; align-items:flex-start; padding:11px 14px; border-radius:12px; border:2px solid var(--border); background:white; margin-bottom:8px; font-size:15px; line-height:1.45; }
+    .dt-opt .L { font-weight:900; width:26px; height:26px; border-radius:8px; background:var(--bg-alt); border:2px solid var(--border); display:flex; align-items:center; justify-content:center; flex:none; font-size:13px; }
+    .dt-opt.correct { background:#f0ffe6; border-color:var(--green); color:var(--green-dark); font-weight:700; }
+    .dt-opt.correct .L { background:var(--green); border-color:var(--green); color:white; }
+    .dt-opt.chosen { background:#fff0f0; border-color:var(--red); color:var(--red-dark); }
+    .dt-opt.chosen .L { background:var(--red); border-color:var(--red); color:white; }
+    .dt-badge { margin-left:auto; font-size:11.5px; font-weight:800; white-space:nowrap; align-self:center; }
+    .dt-img { max-width:100%; max-height:340px; border-radius:12px; border:2px solid var(--border); margin-bottom:14px; }
+    .dt-nav { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:20px; }
   </style>
 </head>
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=1"></script>
   <script src="/js/catalog.js?v=10"></script>
-  <script src="/js/layout.js?v=12"></script>
+  <script src="/js/layout.js?v=13"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="/js/firebase-init.js?v=1"></script>
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
-  <script src="/js/quiz-core.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=15"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (function () {
@@ -94,12 +114,13 @@
       const listHtml = !all.length
         ? '<p style="color:var(--text-mute);">Chưa có câu sai nào được ghi. Cứ luyện ở <a href="/drill" style="color:var(--blue-dark);text-decoration:underline;">Ôn theo Part</a>, <a href="/quick" style="color:var(--blue-dark);text-decoration:underline;">Kiểm tra nhanh</a> hoặc <a href="/tests" style="color:var(--blue-dark);text-decoration:underline;">Bài thi</a> — câu trả lời sai sẽ tự động vào đây.</p>'
         : vis.slice(0, 100).map(e => `
-          <div class="er-item">
+          <div class="er-item link" data-open="${esc(e.id)}" title="Bấm để xem lại câu này">
             <div class="er-main">
               <div class="er-q">${esc((e.d.q || '(Câu hình/nghe Part ' + e.d.part + ')').slice(0, 140))}</div>
               <div class="er-meta">${esc((e.d.year === 'Economy' ? 'Cơ bản' : e.d.year) + ' • Đề ' + e.d.n + ' • Part ' + e.d.part + ' • Câu ' + e.d.qNum)} · sai ${e.wrong} lần · đáp án: ${esc(e.d.a)}</div>
             </div>
             ${boxChip(e)}
+            <span class="er-open">›</span>
             <button class="er-del" data-id="${esc(e.id)}" title="Bỏ theo dõi">🗑</button>
           </div>`).join('');
 
@@ -118,7 +139,7 @@
           <button class="btn gold" id="er-review" ${c.due ? '' : 'disabled'}>🔔 Ôn ${c.due} câu đến hạn</button>
           ${!c.due && c.active ? '<span style="font-size:13px;color:var(--text-mute);margin-left:10px;">Chưa có câu đến hạn — quay lại vào ngày ôn nhé.</span>' : ''}
         </div>
-        <h3 class="section-title">Danh sách câu sai</h3>
+        <h3 class="section-title">Danh sách câu sai <span style="font-weight:700;font-size:13px;color:var(--text-mute);">— bấm vào một câu để xem lại đầy đủ</span></h3>
         <div class="er-filter">
           <button class="er-chip ${partFilter === 0 ? 'active' : ''}" data-p="0">Tất cả (${all.length})</button>
           ${partsPresent.map(p => `<button class="er-chip ${partFilter === p ? 'active' : ''}" data-p="${p}">Part ${p} (${all.filter(e => e.d.part === p).length})</button>`).join('')}
@@ -127,13 +148,103 @@
       </main>`;
 
       root.querySelectorAll('.er-chip').forEach(b => b.addEventListener('click', () => { partFilter = parseInt(b.dataset.p, 10); render(); }));
-      root.querySelectorAll('.er-del').forEach(b => b.addEventListener('click', () => {
+      root.querySelectorAll('.er-del').forEach(b => b.addEventListener('click', ev => {
+        ev.stopPropagation();                       // don't open the detail view
         if (!confirm('Bỏ theo dõi câu này?')) return;
         EB.removeId(b.dataset.id);
         render();
       }));
+      // Row -> detail view (deep-linkable via ?q=<id>)
+      root.querySelectorAll('.er-item.link').forEach(el => el.addEventListener('click', () => {
+        const id = el.dataset.open;
+        history.pushState({ q: id }, '', '/mistakes?q=' + encodeURIComponent(id));
+        renderDetail(id);
+      }));
       const rv = document.getElementById('er-review');
       if (rv && c.due) rv.addEventListener('click', startReview);
+    }
+
+    // ---------- detail: review one wrong answer in full ----------
+    function visibleList() {
+      const all = EB.entries().sort((a, b) => (a.grad === b.grad ? (a.due < b.due ? -1 : 1) : (a.grad ? 1 : -1)));
+      return partFilter ? all.filter(e => e.d.part === partFilter) : all;
+    }
+    function goList() {
+      history.pushState({}, '', '/mistakes');
+      render();
+      window.scrollTo({ top: 0 });
+    }
+    function renderDetail(id) {
+      const list = visibleList();
+      const i = list.findIndex(x => x.id === id);
+      const e = i >= 0 ? list[i] : EB.entries().find(x => x.id === id);
+      if (!e) { goList(); return; }
+      const d = e.d;
+      const prev = i > 0 ? list[i - 1] : null;
+      const next = i >= 0 && i < list.length - 1 ? list[i + 1] : null;
+      const srcLabel = (d.year === 'Economy' ? 'Cơ bản' : d.year) + ' • Đề ' + d.n + ' • Part ' + d.part + ' • Câu ' + d.qNum;
+      const audioUrl = d.au ? QuizCore.assetUrl(d.year, d.n, 'audio', d.au) : null;
+      const imgUrl = d.im ? QuizCore.assetUrl(d.year, d.n, 'image', d.im) : null;
+      const opts = (d.o || []).map(o => {
+        const isOk = o.L === d.a, isPick = d.c && o.L === d.c && !isOk;
+        return `<div class="dt-opt ${isOk ? 'correct' : ''}${isPick ? ' chosen' : ''}">
+            <span class="L">${esc(o.L)}</span><span>${esc(o.text || '')}</span>
+            ${isOk ? '<span class="dt-badge" style="color:var(--green-dark);">✓ Đáp án đúng</span>' : ''}
+            ${isPick ? '<span class="dt-badge" style="color:var(--red);">✗ Bạn đã chọn</span>' : ''}
+          </div>`;
+      }).join('');
+      root.innerHTML = sidebar + `<main class="main">
+        <div class="dt-head">
+          <button class="btn ghost small" id="dt-back">← Danh sách</button>
+          <h2 style="font-size:20px;font-weight:900;flex:1;min-width:200px;">🩹 Xem lại câu sai</h2>
+          <span style="font-size:12.5px;color:var(--text-mute);font-weight:800;">${i >= 0 ? (i + 1) + '/' + list.length : ''}</span>
+        </div>
+        <div class="dt-meta">
+          <span class="dt-tag">${esc(srcLabel)}</span>
+          <span class="dt-tag bad">Sai ${e.wrong} lần</span>
+          ${e.grad ? '<span class="dt-tag ok">🏅 Đã thuộc</span>' : `<span class="dt-tag">Hộp ${e.box} · ôn lại ${esc(e.due)}</span>`}
+        </div>
+        <div class="q-card">
+          ${audioUrl ? `<audio controls preload="none" src="${esc(audioUrl)}"></audio>` : ''}
+          ${imgUrl ? `<img class="dt-img" src="${esc(imgUrl)}" alt="Hình câu hỏi"/>` : ''}
+          ${d.s ? `<div class="reveal-block"><div class="heading">📜 ${d.part <= 4 ? 'Script bài nghe' : 'Đoạn văn'}</div><div class="body">${QuizCore.nl2br(d.s)}</div></div>` : ''}
+          <div class="q-text" style="font-size:18px;font-weight:800;margin:16px 0 12px;line-height:1.5;">
+            ${d.q ? QuizCore.highlightBlanks(d.q) : '<span style="color:var(--text-mute);">(Câu nghe/hình — nghe audio ở trên)</span>'}
+          </div>
+          ${opts || '<p style="color:var(--text-mute);">Không lưu được các lựa chọn của câu này.</p>'}
+          ${d.e ? `<div class="reveal-block" style="border-left-color:var(--gold,#ffc800);margin-top:16px;"><div class="heading">💡 Giải thích</div><div class="body">${QuizCore.nl2br(d.e)}</div></div>` : ''}
+          ${d.tr ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${QuizCore.nl2br(d.tr)}</div></div>` : ''}
+        </div>
+        <div class="dt-nav">
+          <button class="btn ghost" id="dt-prev" ${prev ? '' : 'disabled'}>← Câu trước</button>
+          <button class="btn ghost" id="dt-next" ${next ? '' : 'disabled'}>Câu sau →</button>
+          <span style="flex:1"></span>
+          <button class="btn gold" id="dt-redo">🔁 Làm lại câu này</button>
+          <button class="btn ghost small" id="dt-drop" style="color:var(--red);">🗑 Bỏ theo dõi</button>
+        </div>
+      </main>`;
+      document.getElementById('dt-back').onclick = goList;
+      const pv = document.getElementById('dt-prev');
+      if (pv && prev) pv.onclick = () => { history.replaceState({ q: prev.id }, '', '/mistakes?q=' + encodeURIComponent(prev.id)); renderDetail(prev.id); window.scrollTo({ top: 0 }); };
+      const nx = document.getElementById('dt-next');
+      if (nx && next) nx.onclick = () => { history.replaceState({ q: next.id }, '', '/mistakes?q=' + encodeURIComponent(next.id)); renderDetail(next.id); window.scrollTo({ top: 0 }); };
+      document.getElementById('dt-drop').onclick = () => {
+        if (!confirm('Bỏ theo dõi câu này?')) return;
+        EB.removeId(id); goList();
+      };
+      document.getElementById('dt-redo').onclick = () => {
+        try { const s = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA='); s.volume = 0; const p = s.play(); if (p && p.catch) p.catch(()=>{}); } catch (er) {}
+        const cards = EB.toCards([e]);
+        if (!cards.length) { alert('Không dựng lại được câu này.'); return; }
+        QuizCore.startQuiz({
+          root, sidebar, cards, minutes: 5, instantFeedback: true, feature: 'mistakes',
+          noteButton: (ctx) => VocabNotes.openModal({ src: (ctx && ctx.src) || '' }),
+          icon: '🩹', title: 'Kết quả ôn lại',
+          backUrl: '/mistakes?q=' + encodeURIComponent(id), backLabel: 'Về câu này',
+          onResults: (rs) => rs.forEach(r => { if (EB.idOf(r) === id) EB.grade(id, r.chosen != null && r.isCorrect); })
+        });
+      };
+      window.scrollTo({ top: 0 });
     }
 
     function startReview() {
@@ -145,7 +256,7 @@
       due.forEach(e => { idsByKey[e.id] = true; });
       const cards = EB.toCards(due);
       QuizCore.startQuiz({
-        root, sidebar, cards,
+        root, sidebar, cards, feature: 'mistakes',
         minutes: Math.max(10, Math.ceil(due.length * 1.5)),
         instantFeedback: true,
         noteButton: (ctx) => VocabNotes.openModal({ src: (ctx && ctx.src) || '' }),
@@ -163,7 +274,13 @@
       });
     }
 
-    render();
+    // Deep-link: /mistakes?q=<id> opens that question directly; Back returns to the list.
+    function route() {
+      const q = new URLSearchParams(location.search).get('q');
+      if (q) renderDetail(q); else render();
+    }
+    window.addEventListener('popstate', route);
+    route();
   })();
   </script>
   <script>

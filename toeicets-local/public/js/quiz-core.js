@@ -20,7 +20,13 @@ window.QuizCore = (function () {
     if (!v) return null;
     const s = String(v).trim();
     if (!s) return null;
-    if (/^https?:\/\//i.test(s)) return s.replace(/^https?:\/\/data\.toeicets\.com\//i, '/data/');
+    // Absolute data.toeicets.com URLs (the 2026 set) still have to go through the
+    // same audio-on-B2 / images-on-origin split as bare filenames do.
+    if (/^https?:\/\//i.test(s)) {
+      const rel = s.replace(/^https?:\/\/data\.toeicets\.com\//i, '');
+      if (rel === s) return s;
+      return subdir === 'audio' ? `${AUDIO_BASE_URL}/data/${rel}` : `/data/${rel}`;
+    }
     const path = `/data/${year}/test${n}/${subdir}/${s}`;
     return subdir === 'audio' ? (AUDIO_BASE_URL + path) : path;
   }
@@ -42,6 +48,25 @@ window.QuizCore = (function () {
 
   const PARTS_BY_MODE = { reading: [5, 6, 7], listening: [1, 2, 3, 4], mixed: [1, 2, 3, 4, 5, 6, 7] };
 
+  // Question share of each part in a real TOEIC (Listening 6/25/39/30, Reading 30/16/54).
+  // Drawing shuffled (test × part) pairs uniformly does NOT reproduce this: a card is one
+  // group, and groups differ wildly in size — a Part 5 card is 1 question while a Part 6
+  // card is 4 — so Part 5 landed at ~11% of a Reading set instead of ~30%.
+  const PART_WEIGHT = { 1: 6, 2: 25, 3: 39, 4: 30, 5: 30, 6: 16, 7: 54 };
+
+  // Split `target` questions across `parts` in proportion to PART_WEIGHT. Largest-remainder
+  // so the quotas add up to exactly `target` instead of drifting on rounding.
+  function partQuotas(parts, target) {
+    const sum = parts.reduce((s, p) => s + (PART_WEIGHT[p] || 1), 0);
+    const rows = parts.map(p => ({ p, exact: target * (PART_WEIGHT[p] || 1) / sum }));
+    const quota = {};
+    let used = 0;
+    for (const r of rows) { quota[r.p] = Math.floor(r.exact); used += quota[r.p]; }
+    rows.sort((a, b) => (b.exact % 1) - (a.exact % 1));
+    for (let i = 0; used < target; i++, used++) quota[rows[i % rows.length].p]++;
+    return quota;
+  }
+
   // ---------- sampler: returns array of "cards" (each = {part,year,n,srcLabel,questions[]}) ----------
   // mode: 'reading' | 'listening' | 'mixed' | 'p1'..'p7' | array of part numbers
   async function sample(mode, target) {
@@ -49,38 +74,70 @@ window.QuizCore = (function () {
     if (Array.isArray(mode)) parts = mode;
     else if (/^p[1-7]$/.test(String(mode))) parts = [parseInt(String(mode).slice(1), 10)];
     else parts = PARTS_BY_MODE[mode] || PARTS_BY_MODE.mixed;
-    const pairs = [];
-    for (const t of Catalog.all()) for (const p of parts) pairs.push({ year: t.year, n: t.n, part: p, label: `${t.year === 'Economy' ? 'Cơ bản' : t.year} • ${t.label}` });
-    shuffle(pairs);
+
+    // One shuffled queue of (test, part) pairs per part; drawn from in quota order below.
+    const queues = {};
+    for (const p of parts) queues[p] = [];
+    for (const t of Catalog.all()) for (const p of parts) {
+      queues[p].push({ year: t.year, n: t.n, part: p, label: `${t.year === 'Economy' ? 'Cơ bản' : t.year} • ${t.label}` });
+    }
+    for (const p of parts) shuffle(queues[p]);
+
+    const need = partQuotas(parts, target);
     const cache = {};
     const cards = [];
     let qCount = 0;
+
     // Rotate across group sizes (largest first) so e.g. Part 7 mixes 5/4/3/2-question
-    // passages instead of whatever uniform luck returns.
+    // passages instead of whatever uniform luck returns. Counted per part, so Part 5's
+    // fixed size-1 groups don't skew Part 7's rotation.
     const sizeSeen = {};
-    function pickGroup(groups) {
+    function pickGroup(groups, part, room) {
+      const fits = groups.filter(g => g.length <= room);
+      if (!fits.length) {
+        // Nothing fits the room left — take a smallest group so we overshoot as little as
+        // possible, instead of letting the size rotation below reach for the largest.
+        const min = Math.min(...groups.map(g => g.length));
+        const smallest = groups.filter(g => g.length === min);
+        return smallest[Math.floor(Math.random() * smallest.length)];
+      }
+      const pool = fits;
+      const seen = sizeSeen[part] || (sizeSeen[part] = {});
       const bySize = {};
-      groups.forEach(g => { (bySize[g.length] = bySize[g.length] || []).push(g); });
-      const sizes = Object.keys(bySize).map(Number)
-        .sort((a, b) => (sizeSeen[a] || 0) - (sizeSeen[b] || 0) || b - a);
-      const size = sizes[0];
-      sizeSeen[size] = (sizeSeen[size] || 0) + 1;
+      pool.forEach(g => { (bySize[g.length] = bySize[g.length] || []).push(g); });
+      const size = Object.keys(bySize).map(Number)
+        .sort((a, b) => (seen[a] || 0) - (seen[b] || 0) || b - a)[0];
+      seen[size] = (seen[size] || 0) + 1;
       const arr = bySize[size];
       return arr[Math.floor(Math.random() * arr.length)];
     }
-    for (const pr of pairs) {
-      if (qCount >= target) break;
+
+    while (qCount < target) {
+      // Always serve the part furthest behind its quota; parts whose queue ran dry drop out,
+      // and their unfilled share is absorbed by the rest so we still reach `target`.
+      // Deliberately NOT gated on "quota must fit a whole block": that gate makes the totals
+      // land exactly on target but starves the coarse parts (a 3-question Part 4 talk never
+      // fits a 2-slot quota, so Part 4 vanishes). A question or two of overshoot is the
+      // cheaper trade against a set that is missing a part outright.
+      const live = parts.filter(p => queues[p].length);
+      if (!live.length) break;
+      const p = live.sort((a, b) => (need[b] - need[a]) || (Math.random() - 0.5))[0];
+      const pr = queues[p].shift();
       const url = `/data/${encodeURIComponent(pr.year)}/test${pr.n}/test${pr.n}-part${pr.part}.csv`;
       let rows;
       try { rows = cache[url] || (cache[url] = await CSV.load(url)); } catch (e) { continue; }
       if (!rows || !rows.length) continue;
       const groups = buildGroups(rows, pr.part);
       if (!groups.length) continue;
-      const g = pickGroup(groups);
+      // Room is bounded by the whole set too, not just this part's quota — Part 7 has some
+      // very large multi-passage groups that would otherwise blow past `target` in one card.
+      const g = pickGroup(groups, pr.part, Math.max(1, Math.min(need[p], target - qCount)));
       cards.push({ part: pr.part, year: pr.year, n: pr.n, srcLabel: pr.label, questions: g });
+      need[p] -= g.length;
       qCount += g.length;
     }
-    return cards;
+    // Quota order groups the parts together; shuffle back so the quiz still feels mixed.
+    return shuffle(cards);
   }
 
   // ---------- player ----------
@@ -95,6 +152,7 @@ window.QuizCore = (function () {
       items.push({ uid: `${ci}.${qi}`, card, q });
     }));
     const picks = {};           // uid -> chosen letter
+    const skipped = {};         // uid -> true when the clip could not be loaded (not counted anywhere)
     let cardIdx = 0;
     let timerSeconds = minutes * 60;
     let timerInterval = null;
@@ -125,10 +183,17 @@ window.QuizCore = (function () {
       const st = document.createElement('style');
       st.id = 'qc-split-style';
       st.textContent =
+        '.rv-q{padding:18px 0;border-top:2px dashed var(--border);}' +
+        '.rv-q:first-of-type{border-top:none;padding-top:6px;}' +
+        '.rv-q.cur{background:#fffdf3;border-radius:12px;padding:14px;margin:8px -8px;box-shadow:inset 0 0 0 2px #ffe08a;}' +
         '.main.main-wide{max-width:none;}.main-wide .player{max-width:none;}' +   // Part 7 uses the full screen width
         '.q-split{display:grid;grid-template-columns:minmax(0,2fr) minmax(0,1fr);gap:18px;align-items:start;margin-bottom:16px;}' +
         '.q-split .q-card{margin-bottom:0;}' +
-        '.q-split-pass{position:sticky;top:66px;max-height:calc(100vh - 96px);overflow-y:auto;}' +
+        '.q-split-pass{position:sticky;top:64px;max-height:calc(100vh - 168px);overflow-y:auto;overscroll-behavior:contain;scrollbar-gutter:stable;}' +
+        '.q-split-pass::-webkit-scrollbar{width:11px;}' +
+        '.q-split-pass::-webkit-scrollbar-track{background:#eef2f4;border-radius:7px;}' +
+        '.q-split-pass::-webkit-scrollbar-thumb{background:#b9c6cf;border-radius:7px;border:2px solid #eef2f4;}' +
+        '.q-split-pass::-webkit-scrollbar-thumb:hover{background:#94a6b2;}' +
         '.q-split-pass .q-passage{max-height:none;overflow:visible;border-left:none;background:transparent;padding:0;margin-bottom:0;font-size:15.5px;}' +
         '.q-split-pass .q-image{max-height:none;}' +
         '@media(max-width:860px){.main.main-wide{max-width:100%;}.q-split{grid-template-columns:1fr;}.q-split-pass{position:static;max-height:44vh;}.q-split-pass .q-passage{max-height:none;}}';
@@ -356,7 +421,46 @@ window.QuizCore = (function () {
         const tryPlay = () => { const p = audioEl.play(); if (p && p.catch) p.catch(() => {}); };
         tryPlay();
         document.addEventListener('pointerdown', tryPlay, { once: true });
+        // Clip missing / failed to download: offer retry + skip. A skipped group is not
+        // graded and never reaches the history or the error box.
+        audioEl.onerror = () => showAudioError(audioEl, sharedAudio);
       }
+    }
+
+    // Banner shown when a listening clip cannot be loaded.
+    function showAudioError(audioEl, url) {
+      if (!audioEl || document.getElementById('au-err')) return;
+      const card = audioEl.closest('.q-card') || root.querySelector('.q-card');
+      if (!card) return;
+      const box = document.createElement('div');
+      box.id = 'au-err';
+      box.style.cssText = 'background:#fff0f0;border:2px solid var(--red,#ff4b4b);border-radius:12px;padding:12px 14px;margin-bottom:14px;font-size:14px;line-height:1.6;';
+      box.innerHTML = `<b style="color:var(--red,#ff4b4b);">⚠️ Không tải được file nghe của câu này.</b>
+        <div style="color:var(--text-mute);font-size:12.5px;margin:4px 0 10px;word-break:break-all;">${escapeHtml(url || '')}</div>
+        <button class="btn ghost small" id="au-retry">🔄 Thử lại</button>
+        <button class="btn small" id="au-skip" style="margin-left:8px;">⏭ Bỏ qua câu này</button>
+        <div style="font-size:12.5px;color:var(--text-mute);margin-top:8px;">Bỏ qua thì câu này <b>không bị tính</b> là đúng hay sai, và không vào lịch sử luyện tập.</div>`;
+      card.insertBefore(box, card.firstChild);
+      document.getElementById('au-retry').onclick = () => {
+        box.remove();
+        const bust = url + (url.indexOf('?') === -1 ? '?' : '&') + 'r=' + Date.now();
+        audioEl.src = bust; audioEl.load();
+        const p = audioEl.play(); if (p && p.catch) p.catch(() => {});
+      };
+      document.getElementById('au-skip').onclick = () => skipCurrentCard();
+    }
+
+    // Mark every question of the current card as skipped and move on.
+    function skipCurrentCard() {
+      const card = cards[cardIdx];
+      if (card) {
+        card.questions.forEach(q => {
+          const it = items.find(x => x.card === card && x.q === q);
+          if (it) { skipped[it.uid] = true; delete picks[it.uid]; }
+        });
+      }
+      if (cardIdx >= cards.length - 1) { finish(); return; }
+      cardIdx++; window.scrollTo({ top: 0 }); renderCard();
     }
 
     function buildResults() {
@@ -366,12 +470,14 @@ window.QuizCore = (function () {
         return {
           srcLabel: it.card.srcLabel, part: it.card.part, qNum: qNumber(it.q),
           year: it.card.year, n: it.card.n,
+          gid: String(it.uid).split('.')[0],   // group index: questions sharing one clip/passage
           audioFile: it.card.questions[0].Audio || '',
           imageFile: it.q.Image || it.card.questions[0].Image || '',
           question: it.q.Question || '',
           image: assetUrl(it.card.year, it.card.n, 'image', it.q.Image) || (it.card.questions[0] === it.q ? null : null),
           options: optsLetters(it.q).map(L => ({ L, text: it.q[L] || '' })),
           chosen, correct, isCorrect: chosen === correct,
+          skipped: !!skipped[it.uid],          // clip could not be loaded -> not graded at all
           explain: it.q.Explain || '',
           script: it.card.questions[0].Text || '',
           translation: it.q.Transcript || it.q.Translate || ''
@@ -383,6 +489,7 @@ window.QuizCore = (function () {
     function restart() {
       stopTimer();
       Object.keys(picks).forEach(k => delete picks[k]);
+      Object.keys(skipped).forEach(k => delete skipped[k]);
       cardIdx = 0;
       timerSeconds = minutes * 60;
       finished = false;
@@ -395,21 +502,27 @@ window.QuizCore = (function () {
       finished = true;
       stopTimer();
       const results = buildResults();
-      // Count XP via State for answered questions
+      // Questions whose audio never loaded are excluded from grading, XP, the error box
+      // and the daily history — they were not really attempted.
+      const graded = results.filter(r => !r.skipped);
       const st = State.load();
-      results.forEach(r => { if (r.chosen != null) State.recordAnswer(st, 'quick', 0, r.isCorrect); });
-      // Every answered-but-wrong question lands in the error box for spaced re-review
-      try { ErrorBox.addFromResults(results); } catch (e) {}
-      if (opts.onResults) { try { opts.onResults(results); } catch (e) {} }
+      graded.forEach(r => { if (r.chosen != null) State.recordAnswer(st, 'quick', 0, r.isCorrect); });
+      try { ErrorBox.addFromResults(graded); } catch (e) {}
+      try { if (window.Hist) Hist.addResults(graded, opts.feature || 'other'); } catch (e) {}
+      if (opts.onResults) { try { opts.onResults(graded); } catch (e) {} }
       if (opts.onFinish) {
-        const correct = results.filter(r => r.isCorrect).length;
-        const blank = results.filter(r => r.chosen == null).length;
-        opts.onFinish({ total: results.length, correct, wrong: results.length - correct - blank, blank });
+        const correct = graded.filter(r => r.isCorrect).length;
+        const blank = graded.filter(r => r.chosen == null).length;
+        opts.onFinish({ total: graded.length, correct, wrong: graded.length - correct - blank, blank,
+                        skipped: results.length - graded.length });
       }
       renderResults(results);
     }
 
-    function renderResults(results) {
+    function renderResults(all) {
+      // Skipped (audio failed) questions are shown separately and excluded from the stats.
+      const results = all.filter(r => !r.skipped);
+      const skipCount = all.length - results.length;
       const total = results.length;
       const correctCount = results.filter(r => r.isCorrect).length;
       const blankCount = results.filter(r => r.chosen == null).length;
@@ -429,6 +542,7 @@ window.QuizCore = (function () {
             <div style="font-size:80px;">${opts.icon || '⚡'}</div>
             <h2>${opts.title || 'Kết quả kiểm tra nhanh'}</h2>
             <p style="color:var(--text-mute);margin-top:8px;">Đúng ${correctCount} • Sai ${wrongCount}${blankCount ? ` • Chưa làm ${blankCount}` : ''} • Tổng ${total} câu</p>
+            ${skipCount ? `<p style="color:var(--text-mute);font-size:13px;margin-top:4px;">⏭ Đã bỏ qua ${skipCount} câu vì không tải được file nghe — không tính vào kết quả.</p>` : ''}
             <div class="stats-grid" style="margin-top:24px;">
               <div class="stat-card"><div class="big" style="color:var(--green);">✅ ${correctCount}</div><div class="label">Câu đúng</div></div>
               <div class="stat-card"><div class="big" style="color:var(--red);">❌ ${wrongCount}</div><div class="label">Câu sai</div></div>
@@ -454,51 +568,96 @@ window.QuizCore = (function () {
       root.querySelectorAll('.q-result').forEach(b => b.addEventListener('click', () => renderReview(results, parseInt(b.dataset.idx, 10))));
     }
 
+    // Review one item. Questions that share a clip or a passage (Part 3/4/6/7) are shown
+    // TOGETHER — the whole set of 3-4 questions, including the ones answered correctly —
+    // so the group can be re-read as a unit.
     function renderReview(results, idx) {
       const r = results[idx];
       if (!r) { renderResults(results); return; }
+      ensureSplitStyle();   // also carries the .rv-q styles used below
+      const mates = results.filter(x => x.gid != null && x.gid === r.gid);
+      const group = mates.length > 1 ? mates : [r];
+      const isGroup = group.length > 1;
+      const first = group[0], last = group[group.length - 1];
+
+      const audioUrl = first.audioFile ? assetUrl(first.year, first.n, 'audio', first.audioFile) : null;
+      const imgUrl = first.imageFile ? assetUrl(first.year, first.n, 'image', first.imageFile) : null;
+      const script = group.map(x => x.script).find(Boolean) || '';
+      // Translations can differ per question; show the group's distinct ones together.
+      const trans = Array.from(new Set(group.map(x => x.translation).filter(Boolean)));
+
+      const okN = group.filter(x => x.isCorrect).length;
       const stt = r.chosen == null ? 'blank' : (r.isCorrect ? 'correct' : 'wrong');
-      const optsHtml = r.options.map(o => {
-        let cls = 'option';
-        if (o.L === r.correct) cls += ' correct';
-        else if (o.L === r.chosen) cls += ' wrong';
-        return `<button class="${cls}" disabled><span class="letter">${o.L}</span><span>${escapeHtml(o.text)}</span></button>`;
+
+      const qBlocks = group.map((x, k) => {
+        const s2 = x.chosen == null ? 'blank' : (x.isCorrect ? 'correct' : 'wrong');
+        const opts = x.options.map(o => {
+          let cls = 'option';
+          if (o.L === x.correct) cls += ' correct';
+          else if (o.L === x.chosen) cls += ' wrong';
+          return `<button class="${cls}" disabled><span class="letter">${o.L}</span><span>${escapeHtml(o.text)}</span></button>`;
+        }).join('');
+        const verdict = s2 === 'correct'
+          ? `<div class="feedback correct"><div class="heading">🎉 Đúng — Đáp án: ${x.correct}</div></div>`
+          : s2 === 'blank'
+            ? `<div class="feedback wrong"><div class="heading">⬜ Chưa trả lời — Đáp án đúng: ${x.correct}</div></div>`
+            : `<div class="feedback wrong"><div class="heading">❌ Sai — Bạn chọn: ${x.chosen} • Đáp án đúng: ${x.correct}</div></div>`;
+        const explain = x.explain ? `<div class="reveal-block"><div class="heading">💡 Giải thích</div><div class="body">${nl2br(x.explain)}</div></div>` : '';
+        const isCur = x === r;
+        return `<div class="rv-q${isCur ? ' cur' : ''}"${isCur ? ' id="rv-cur"' : ''}>
+            ${isGroup ? `<div class="q-num" style="font-size:12px;font-weight:800;color:var(--text-mute);text-transform:uppercase;letter-spacing:.5px;margin-bottom:6px;">
+                 Câu ${x.qNum} ${s2 === 'correct' ? '· ✅ đúng' : s2 === 'blank' ? '· ⬜ chưa làm' : '· ❌ sai'}${isCur ? ' · đang xem' : ''}</div>` : ''}
+            ${x.question ? `<div class="q-text">${highlightBlanks(x.question)}</div>` : ''}
+            <div class="options">${opts}</div>
+            ${verdict}${explain}
+          </div>`;
       }).join('');
-      const verdict = stt === 'correct'
-        ? `<div class="feedback correct"><div class="heading">🎉 Đúng — Đáp án: ${r.correct}</div></div>`
-        : stt === 'blank'
-          ? `<div class="feedback wrong"><div class="heading">⬜ Chưa trả lời — Đáp án đúng: ${r.correct}</div></div>`
-          : `<div class="feedback wrong"><div class="heading">❌ Sai — Bạn chọn: ${r.chosen} • Đáp án đúng: ${r.correct}</div></div>`;
-      const qTextHtml = r.question ? `<div class="q-text">${highlightBlanks(r.question)}</div>` : '';
-      const explainHtml = r.explain ? `<div class="reveal-block"><div class="heading">💡 Giải thích</div><div class="body">${nl2br(r.explain)}</div></div>` : '';
-      const scriptHtml = r.script ? `<div class="reveal-block"><div class="heading">📜 Script / Đoạn văn</div><div class="body">${nl2br(r.script)}</div></div>` : '';
-      const transHtml = r.translation ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(r.translation)}</div></div>` : '';
+
+      const headTitle = isGroup
+        ? `${r.srcLabel} • Part ${r.part} • Câu ${first.qNum}–${last.qNum}`
+        : `${r.srcLabel} • Part ${r.part} • Câu ${r.qNum}`;
+      const headBadge = isGroup
+        ? `<div class="test-timer ${okN === group.length ? '' : 'warning'}">${okN}/${group.length} đúng</div>`
+        : `<div class="test-timer ${stt === 'correct' ? '' : 'warning'}">${stt === 'correct' ? '✅ Đúng' : stt === 'blank' ? '⬜ Chưa làm' : '❌ Sai'}</div>`;
+
+      // Jump to the previous/next GROUP (or question when it stands alone)
+      const prevIdx = (() => { for (let i = idx - 1; i >= 0; i--) if (results[i].gid !== r.gid) return i; return -1; })();
+      const nextIdx = (() => { for (let i = idx + 1; i < results.length; i++) if (results[i].gid !== r.gid) return i; return -1; })();
+
       root.innerHTML = sidebar + `
         <main class="main">
           <div class="player">
             <div class="player-header">
               <button class="close" id="rv-back" title="Về danh sách">←</button>
-              <div style="font-weight:900;flex:1;">${r.srcLabel} • Part ${r.part} • Câu ${r.qNum}</div>
-              <div class="test-timer ${stt === 'correct' ? '' : 'warning'}">${stt === 'correct' ? '✅ Đúng' : stt === 'blank' ? '⬜ Chưa làm' : '❌ Sai'}</div>
+              <div style="font-weight:900;flex:1;">${headTitle}</div>
+              ${headBadge}
             </div>
             <div class="q-card">
-              ${qTextHtml}
-              <div class="options">${optsHtml}</div>
-              ${verdict}${explainHtml}${scriptHtml}${transHtml}
+              ${audioUrl ? `<audio controls preload="none" src="${audioUrl}"></audio>` : ''}
+              ${imgUrl ? `<img class="q-image" src="${imgUrl}" alt="image"/>` : ''}
+              ${script ? `<div class="reveal-block"><div class="heading">📜 ${r.part <= 4 ? 'Script bài nghe' : 'Đoạn văn'}</div><div class="body">${nl2br(script)}</div></div>` : ''}
+              ${isGroup ? `<p style="font-size:12.5px;color:var(--text-mute);margin:12px 0 0;">Cả cụm ${group.length} câu của bài nghe/đoạn văn này:</p>` : ''}
+              ${qBlocks}
+              ${trans.length ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(trans.join(String.fromCharCode(10, 10)))}</div></div>` : ''}
             </div>
             <div class="group-toolbar">
-              <button class="btn ghost" id="rv-prev" ${idx <= 0 ? 'disabled' : ''}>← Câu trước</button>
+              <button class="btn ghost" id="rv-prev" ${prevIdx < 0 ? 'disabled' : ''}>← ${isGroup ? 'Cụm trước' : 'Câu trước'}</button>
               <button class="btn ghost small" id="rv-list">Danh sách</button>
               <span style="flex:1"></span>
-              <button class="btn blue" id="rv-next" ${idx >= results.length - 1 ? 'disabled' : ''}>Câu sau →</button>
+              <button class="btn blue" id="rv-next" ${nextIdx < 0 ? 'disabled' : ''}>${isGroup ? 'Cụm sau' : 'Câu sau'} →</button>
             </div>
           </div>
         </main>`;
       document.getElementById('rv-back').onclick = () => renderResults(results);
       document.getElementById('rv-list').onclick = () => renderResults(results);
-      const p = document.getElementById('rv-prev'); if (p && idx > 0) p.onclick = () => renderReview(results, idx - 1);
-      const nx = document.getElementById('rv-next'); if (nx && idx < results.length - 1) nx.onclick = () => renderReview(results, idx + 1);
+      const p = document.getElementById('rv-prev'); if (p && prevIdx >= 0) p.onclick = () => renderReview(results, prevIdx);
+      const nx = document.getElementById('rv-next'); if (nx && nextIdx >= 0) nx.onclick = () => renderReview(results, nextIdx);
       window.scrollTo({ top: 0 });
+      // If the user opened a specific question of a group, bring it into view.
+      if (isGroup) {
+        const cur = document.getElementById('rv-cur');
+        if (cur && group.indexOf(r) > 0) setTimeout(() => cur.scrollIntoView({ block: 'center' }), 60);
+      }
     }
 
     renderCard();
@@ -538,6 +697,7 @@ window.QuizCore = (function () {
           d: {
             year: r.year, n: r.n, part: r.part, qNum: r.qNum,
             q: r.question || '', o: r.options || [], a: r.correct || '',
+            c: r.chosen || '',                     // what you picked, so the review can show it
             e: (r.explain || '').slice(0, 4000), s: (r.script || '').slice(0, 5000),
             tr: (r.translation || '').slice(0, 5000), au: r.audioFile || '', im: r.imageFile || ''
           }

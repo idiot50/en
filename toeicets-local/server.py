@@ -33,6 +33,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             '/part2': '/part2.html',
             '/dictation': '/dictation.html',
             '/mistakes': '/mistakes.html',
+            '/history': '/history.html',
             '/login': '/login.html',
             '/profile': '/profile.html',
             '/grammar': '/grammar.html',

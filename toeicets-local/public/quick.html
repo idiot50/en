@@ -61,15 +61,16 @@
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=1"></script>
   <script src="/js/catalog.js?v=10"></script>
-  <script src="/js/layout.js?v=12"></script>
+  <script src="/js/layout.js?v=13"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
   <script src="/js/firebase-init.js?v=1"></script>
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
-  <script src="/js/quiz-core.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=15"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (function () {
@@ -77,8 +78,11 @@
     let state = State.load();
     const { sidebar } = renderShell({ active: 'quick', state });
 
-    // Default question targets per mode (tuned for ~15 minutes)
-    const TARGET = { reading: 20, listening: 12, mixed: 15 };
+    // Question target and clock, per mode. Reading gets a longer sitting because
+    // Part 6/7 passages cost real reading time, not just recall.
+    const TARGET = { reading: 25, listening: 12, mixed: 15 };
+    const MINUTES = { reading: 25, listening: 15, mixed: 15 };
+    const minutesFor = m => MINUTES[m] || 15;
     let mode = localStorage.getItem('toeicets_quick_mode') || 'reading';
 
     function renderChooser() {
@@ -88,18 +92,18 @@
         </div>`;
       root.innerHTML = sidebar + `
         <main class="main">
-          <h2 style="font-size:26px;font-weight:900;">⚡ Kiểm tra nhanh 15 phút</h2>
+          <h2 style="font-size:26px;font-weight:900;">⚡ Kiểm tra nhanh</h2>
           <p style="color:var(--text-mute);margin:6px 0 18px;line-height:1.6;">
-            Câu hỏi lấy ngẫu nhiên từ toàn bộ 60 đề. Đồng hồ đếm ngược 15 phút — hết giờ tự nộp bài. Chọn loại câu rồi bắt đầu.
+            Câu hỏi lấy ngẫu nhiên từ toàn bộ 60 đề. Đồng hồ đếm ngược theo loại câu bạn chọn — hết giờ tự nộp bài.
           </p>
           <div class="card" style="padding:18px;">
             <h3 class="section-title" style="margin-top:0;">Chọn loại câu</h3>
             <div class="mode-grid">
-              ${card('reading', '📖', 'Chỉ Reading', 'Part 5/6/7 — không audio, làm nhanh (~20 câu)')}
-              ${card('listening', '🎧', 'Chỉ Listening', 'Part 1/2/3/4 — có audio (~12 câu)')}
-              ${card('mixed', '🎲', 'Trộn cả hai', 'Nghe + đọc, sát đề thật (~15 câu)')}
+              ${card('reading', '📖', 'Chỉ Reading', 'Part 5/6/7 — không audio (~25 câu · 25 phút)')}
+              ${card('listening', '🎧', 'Chỉ Listening', 'Part 1/2/3/4 — có audio (~12 câu · 15 phút)')}
+              ${card('mixed', '🎲', 'Trộn cả hai', 'Nghe + đọc, sát đề thật (~15 câu · 15 phút)')}
             </div>
-            <button class="btn gold" id="start" style="margin-top:18px;">▶ Bắt đầu (15 phút)</button>
+            <button class="btn gold" id="start" style="margin-top:18px;">▶ Bắt đầu (${minutesFor(mode)} phút)</button>
           </div>
         </main>`;
       root.querySelectorAll('.mode-card').forEach(c => {
@@ -107,6 +111,7 @@
           mode = c.dataset.mode;
           localStorage.setItem('toeicets_quick_mode', mode);
           root.querySelectorAll('.mode-card').forEach(x => x.classList.toggle('active', x.dataset.mode === mode));
+          document.getElementById('start').textContent = `▶ Bắt đầu (${minutesFor(mode)} phút)`;
         });
       });
       document.getElementById('start').addEventListener('click', start);
@@ -130,7 +135,7 @@
         return;
       }
       QuizCore.startQuiz({
-        root, sidebar, cards, minutes: 15,
+        root, sidebar, cards, minutes: minutesFor(mode), feature: 'quick',
         onFinish: (s) => {
           // Feature 1 (later): Auth.addHistory({ type:'quick', mode, ...s })
           if (window.Auth && window.Auth.addHistory) {

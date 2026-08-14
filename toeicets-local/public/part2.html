@@ -70,8 +70,9 @@
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=1"></script>
   <script src="/js/catalog.js?v=10"></script>
-  <script src="/js/layout.js?v=12"></script>
+  <script src="/js/layout.js?v=13"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
@@ -197,7 +198,7 @@
     }
 
     // ---------- session ----------
-    let items = [], idx = 0, picks = {};
+    let items = [], idx = 0, picks = {}, skippedN = {};
     function start() {
       blessAudio();                       // unlock audio inside this click
       const prog = loadProg();
@@ -214,7 +215,7 @@
         if (firstNew > 0) pool = pool.slice(firstNew).concat(pool.slice(0, firstNew));
       }
       items = pool.slice(0, Math.min(count, pool.length));
-      idx = 0; picks = {};
+      idx = 0; picks = {}; skippedN = {};
       renderItem();
     }
 
@@ -229,13 +230,39 @@
       </div>`;
     }
 
-    function wireAudio(url) {
+    function wireAudio(url, it0) {
       const slot = document.getElementById('p2-au-slot');
       if (!slot) return;
       const au = p2Audio || blessAudio();
       slot.appendChild(au);
       const tryPlay = () => { const p = au.play(); if (p && p.catch) p.catch(() => {}); };
-      au.onerror = null;
+      // Clip missing / failed: offer retry + skip. A skipped question is not graded and
+      // does not go into progress or the practice history.
+      au.onerror = () => {
+        if (!au.src || au.src.indexOf('data:') === 0) return;
+        if (document.getElementById('p2-au-err')) return;
+        const bar = document.querySelector('.au-bar');
+        if (!bar) return;
+        const box = document.createElement('div');
+        box.id = 'p2-au-err';
+        box.style.cssText = 'flex-basis:100%;background:#fff0f0;border:2px solid var(--red);border-radius:11px;padding:10px 12px;margin-top:6px;font-size:13.5px;line-height:1.6;';
+        box.innerHTML = `<b style="color:var(--red);">⚠️ Không tải được file nghe của câu này.</b>
+          <div style="margin-top:8px;">
+            <button class="spd" id="p2-au-retry">🔄 Thử lại</button>
+            <button class="spd" id="p2-au-skip" style="margin-left:6px;border-color:var(--red);color:var(--red);">⏭ Bỏ qua câu này</button>
+          </div>
+          <div style="color:var(--text-mute);font-size:12px;margin-top:6px;">Bỏ qua thì câu này không tính đúng/sai và không vào lịch sử.</div>`;
+        bar.appendChild(box);
+        document.getElementById('p2-au-retry').onclick = () => {
+          box.remove();
+          au.src = url + (url.indexOf('?') === -1 ? '?' : '&') + 'r=' + Date.now();
+          au.load(); au.playbackRate = speed; tryPlay();
+        };
+        document.getElementById('p2-au-skip').onclick = () => {
+          skippedN[it0.n] = true;          // không chấm, không ghi tiến độ/lịch sử
+          idx++; renderItem();
+        };
+      };
       au.src = url; au.load(); au.playbackRate = speed; tryPlay();
       document.addEventListener('pointerdown', function once() {
         document.removeEventListener('pointerdown', once);
@@ -273,7 +300,7 @@
           <button class="btn blue" id="p2-next" style="display:none;">${idx + 1 >= items.length ? 'Xem kết quả ✓' : 'Câu tiếp →'}</button>
         </div>
       </main>`;
-      wireAudio(AUDIO_DIR + it.au);
+      wireAudio(AUDIO_DIR + it.au, it);
       const abc = document.getElementById('p2-abc');
       abc.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
         if (picks[it.n] != null) return;
@@ -314,14 +341,17 @@
       const nx = document.getElementById('p2-next');
       if (nx) { nx.style.display = ''; nx.onclick = () => { idx++; renderItem(); }; }
       try { State.recordAnswer(State.load(), 'part2', 0, ok); } catch (e) {}
+      try { if (!restoring && window.Hist) Hist.add(2, ok, 'part2'); } catch (e) {}
     }
 
     function renderDone() {
-      const total = items.length;
-      const correct = items.filter(x => picks[x.n] === x.ans).length;
+      const scored = items.filter(x => !skippedN[x.n]);   // bỏ qua câu lỗi audio
+      const skipCount = items.length - scored.length;
+      const total = scored.length;
+      const correct = scored.filter(x => picks[x.n] === x.ans).length;
       const wrong = total - correct;
       const acc = total ? Math.round(correct / total * 100) : 0;
-      const grid = items.map((x, i) => {
+      const grid = scored.map((x, i) => {
         const p = picks[x.n];
         const stt = p == null ? 'blank' : (p === x.ans ? 'correct' : 'wrong');
         return `<button class="q-result ${stt}" data-i="${i}" title="Câu số ${x.n}">${x.n}</button>`;
@@ -331,6 +361,7 @@
           <div style="font-size:70px;">🎧</div>
           <h2>Kết quả — 100 câu Part 2</h2>
           <p style="color:var(--text-mute);margin-top:8px;">Đúng ${correct} • Sai ${wrong} • Tổng ${total} câu</p>
+          ${skipCount ? `<p style="color:var(--text-mute);font-size:13px;margin-top:4px;">⏭ Bỏ qua ${skipCount} câu vì không tải được file nghe.</p>` : ''}
           <div class="stats-grid" style="margin-top:22px;">
             <div class="stat-card"><div class="big" style="color:var(--green);">✅ ${correct}</div><div class="label">Câu đúng</div></div>
             <div class="stat-card"><div class="big" style="color:var(--red);">❌ ${wrong}</div><div class="label">Câu sai</div></div>
@@ -345,8 +376,8 @@
           </div>
         </div>
       </main>`;
-      root.querySelectorAll('.q-result').forEach(b => b.addEventListener('click', () => { idx = parseInt(b.dataset.i, 10); renderItem(); }));
-      document.getElementById('p2-redo').addEventListener('click', () => { picks = {}; idx = 0; renderItem(); });
+      root.querySelectorAll('.q-result').forEach(b => b.addEventListener('click', () => { idx = items.indexOf(scored[parseInt(b.dataset.i, 10)]); renderItem(); }));
+      document.getElementById('p2-redo').addEventListener('click', () => { picks = {}; skippedN = {}; idx = 0; renderItem(); });
       if (window.Auth && Auth.addHistory) Auth.addHistory({ type: 'part2-100', total, correct, wrong, blank: 0 });
     }
 
