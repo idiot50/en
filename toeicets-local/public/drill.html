@@ -56,6 +56,10 @@
     .ct-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
     .ct-chip { border: 2px solid var(--border); background: white; border-radius: 12px; padding: 10px 18px; font-weight: 800; cursor: pointer; font-size: 15px; }
     .ct-chip.active { border-color: var(--green); background: #f3fff0; color: var(--green-dark); }
+    .ct-chip.full { border-style: dashed; }
+    .ct-chip.full.active { border-style: solid; }
+    .ct-chip.full .n { font-weight: 700; font-size: 13px; color: var(--text-mute); }
+    .ct-chip.full.active .n { color: var(--green-dark); }
   </style>
 </head>
 <body>
@@ -88,9 +92,14 @@
       { p: 7, ic: '📖', t: 'Part 7', d: 'Đọc hiểu' }
     ];
     const COUNTS = [5, 10, 15, 20, 30];
+    // Số câu của mỗi part trong một đề TOEIC thật — dùng cho lựa chọn "Cả part".
+    const FULL_BY_PART = { 1: 6, 2: 25, 3: 39, 4: 30, 5: 30, 6: 16, 7: 54 };
     let part = parseInt(localStorage.getItem('toeicets_drill_part') || '5', 10);
-    let count = parseInt(localStorage.getItem('toeicets_drill_count') || '10', 10);
-    if (COUNTS.indexOf(count) === -1) count = 10;
+    if (!FULL_BY_PART[part]) part = 5;
+    // count is kept as a string: một trong COUNTS, hoặc 'full' = cả part.
+    let count = String(localStorage.getItem('toeicets_drill_count') || '10');
+    if (count !== 'full' && COUNTS.indexOf(parseInt(count, 10)) === -1) count = '10';
+    const askCount = () => count === 'full' ? FULL_BY_PART[part] : parseInt(count, 10);
 
     // Vocab capture: highlight any word -> "📒 Ghi từ" bubble -> prefilled note modal
     VocabNotes.enableCapture();
@@ -99,7 +108,7 @@
       root.innerHTML = sidebar + `<main class="main">
         <h2 style="font-size:26px;font-weight:900;">🔁 Ôn tập theo Part</h2>
         <p style="color:var(--text-mute);margin:6px 0 16px;line-height:1.6;">
-          Chọn Part và số câu — câu hỏi bốc ngẫu nhiên từ 60 đề. Làm <b>như thi thật</b>: chọn đáp án
+          Chọn Part và số câu — hoặc <b>cả part</b>, đủ số câu như đề thật. Câu hỏi bốc ngẫu nhiên từ 60 đề. Làm <b>như thi thật</b>: chọn đáp án
           <b>chưa lộ đúng/sai</b>, đổi lại thoải mái; xong bấm <b>✓ Kiểm tra</b> để xem số câu đúng/sai và
           <b>review lại toàn bộ bài làm</b> kèm giải thích.
           Gặp từ mới? <b>Bôi đen từ đó</b> — nghĩa, loại từ &amp; cách đọc <b>hiện ngay tại chỗ</b>, bấm <b>➕ Ghi vào sổ</b> nếu muốn lưu.
@@ -112,9 +121,10 @@
           </div>
           <h3 class="section-title">2️⃣ Số câu hỏi</h3>
           <div class="ct-row">
-            ${COUNTS.map(c => `<button class="ct-chip ${c === count ? 'active' : ''}" data-c="${c}">${c} câu</button>`).join('')}
+            ${COUNTS.map(c => `<button class="ct-chip ${String(c) === count ? 'active' : ''}" data-c="${c}">${c} câu</button>`).join('')}
+            <button class="ct-chip full ${count === 'full' ? 'active' : ''}" data-c="full">📚 Cả part <span class="n">(${FULL_BY_PART[part]} câu)</span></button>
           </div>
-          <p style="font-size:12px;color:var(--text-mute);margin-top:8px;">Part 3/4/6/7 giữ nguyên cụm câu theo bài nghe/đoạn văn nên số câu có thể lệch nhẹ (~).</p>
+          <p style="font-size:12px;color:var(--text-mute);margin-top:8px;"><b>Cả part</b> = đủ số câu của part đó trong một đề thi thật (Part 1: 6 · 2: 25 · 3: 39 · 4: 30 · 5: 30 · 6: 16 · 7: 54). Part 3/4/6/7 giữ nguyên cụm câu theo bài nghe/đoạn văn nên số câu có thể lệch nhẹ (~).</p>
           <button class="btn gold" id="start" style="margin-top:14px;">▶ Bắt đầu ôn</button>
           <a class="btn ghost small" href="/notes" style="margin-left:10px;">📒 Sổ từ vựng (${VocabNotes.count()})</a>
         </div>
@@ -123,11 +133,13 @@
         part = parseInt(c.dataset.p, 10);
         localStorage.setItem('toeicets_drill_part', part);
         root.querySelectorAll('.pt-card').forEach(x => x.classList.toggle('active', parseInt(x.dataset.p, 10) === part));
+        const fullN = root.querySelector('.ct-chip.full .n');
+        if (fullN) fullN.textContent = `(${FULL_BY_PART[part]} câu)`;
       }));
       root.querySelectorAll('.ct-chip').forEach(c => c.addEventListener('click', () => {
-        count = parseInt(c.dataset.c, 10);
+        count = c.dataset.c;
         localStorage.setItem('toeicets_drill_count', count);
-        root.querySelectorAll('.ct-chip').forEach(x => x.classList.toggle('active', parseInt(x.dataset.c, 10) === count));
+        root.querySelectorAll('.ct-chip').forEach(x => x.classList.toggle('active', x.dataset.c === count));
       }));
       document.getElementById('start').addEventListener('click', start);
     }
@@ -135,11 +147,12 @@
     async function start() {
       // unlock audio within the click gesture (for listening parts)
       try { const s = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA='); s.volume = 0; const p = s.play(); if (p && p.catch) p.catch(()=>{}); } catch (e) {}
+      const want = askCount();
       root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
-        <div style="font-size:60px;">🔁</div><h2>Đang bốc ${count} câu Part ${part}…</h2>
+        <div style="font-size:60px;">🔁</div><h2>Đang bốc ${count === 'full' ? `cả Part ${part} — ${want} câu` : `${want} câu Part ${part}`}…</h2>
         <p style="color:var(--text-mute);">Ngẫu nhiên từ 60 đề</p></div></main>`;
       let cards = [];
-      try { cards = await QuizCore.sample('p' + part, count); } catch (e) {}
+      try { cards = await QuizCore.sample('p' + part, want); } catch (e) {}
       if (!cards || !cards.length) {
         root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
           <div style="font-size:60px;">😢</div><h2>Không bốc được câu hỏi</h2>
