@@ -1,4 +1,4 @@
-// QuizCore — shared engine for the 15-minute quick quiz (and reusable test helpers).
+// QuizCore — shared engine for the 20-minute quick quiz (and reusable test helpers).
 // Depends on globals: Catalog, CSV, State. Renders into a root element provided by the page.
 window.QuizCore = (function () {
   const AUDIO_BASE_URL = 'https://f005.backblazeb2.com/file/toeic-audio-nguyengiaphuc';
