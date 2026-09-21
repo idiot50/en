@@ -108,7 +108,7 @@
   <script src="/js/firebase-init.js?v=1"></script>
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
-  <script src="/js/quiz-core.js?v=15"></script>
+  <script src="/js/quiz-core.js?v=16"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (async () => {
@@ -261,22 +261,9 @@
     }
     function nl2br(s) { return escapeHtml(s).replace(/\n/g, '<br/>'); }
     function highlightBlanks(t) { return escapeHtml(t).replace(/-{3,}|_{3,}/g, '<mark>______</mark>'); }
-    const AUDIO_BASE_URL = 'https://f005.backblazeb2.com/file/toeic-audio-nguyengiaphuc';
-    function normalizeAsset(v, subdir) {
-      if (!v) return null;
-      const s = String(v).trim();
-      if (!s) return null;
-      // Absolute data.toeicets.com URLs (the 2026 set) still have to go through the
-      // same audio-on-B2 / images-on-origin split as bare filenames do.
-      if (/^https?:\/\//i.test(s)) {
-        const rel = s.replace(/^https?:\/\/data\.toeicets\.com\//i, '');
-        if (rel === s) return s;
-        return subdir === 'audio' ? `${AUDIO_BASE_URL}/data/${rel}` : `/data/${rel}`;
-      }
-      const path = `/data/${year}/test${n}/${subdir}/${s}`;
-      if (subdir === 'audio') return AUDIO_BASE_URL + path;
-      return path;
-    }
+    // Audio on B2, images on jsDelivr — see the comment on assetUrl in quiz-core.js for
+    // why neither may be served from this Space directly. Delegated so there is one rule.
+    const normalizeAsset = (v, subdir) => QuizCore.assetUrl(year, n, subdir, v);
     const audioPath = v => normalizeAsset(v, 'audio');
     const imagePath = v => normalizeAsset(v, 'image');
     const optsLetters = q => ['A','B','C','D'].filter(L => q[L] !== undefined && q[L] !== '');

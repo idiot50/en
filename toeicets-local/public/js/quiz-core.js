@@ -2,6 +2,17 @@
 // Depends on globals: Catalog, CSV, State. Renders into a root element provided by the page.
 window.QuizCore = (function () {
   const AUDIO_BASE_URL = 'https://f005.backblazeb2.com/file/toeic-audio-nguyengiaphuc';
+  // Images are served from the GitHub mirror through jsDelivr, not from this Space.
+  // Every image here is a Git-LFS object, and on a HF Space an LFS file answers with a
+  // 302 to us.aws.cdn.hf.co carrying `Cache-Control: no-store`. The browser may never
+  // cache it and safePut() in the service worker refuses redirected responses, so a
+  // Part 3/4 graphic was re-fetched from us-east on every single view (~1.3-3s measured,
+  // never faster) and on a weak connection frequently never arrived at all. jsDelivr
+  // serves the same bytes off a Singapore edge with no redirect and a 7-day cache; the
+  // capture-phase listener below falls back to this Space's own copy if it is unreachable.
+  // The offline twin serves these files itself, so it stays on same-origin paths.
+  const IMAGE_BASE_URL = /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)
+    ? '' : 'https://cdn.jsdelivr.net/gh/idiot50/en@main/toeicets-local/public';
 
   // ---------- helpers ----------
   function escapeHtml(s) {
@@ -21,14 +32,27 @@ window.QuizCore = (function () {
     const s = String(v).trim();
     if (!s) return null;
     // Absolute data.toeicets.com URLs (the 2026 set) still have to go through the
-    // same audio-on-B2 / images-on-origin split as bare filenames do.
+    // same audio-on-B2 / images-on-jsDelivr split as bare filenames do.
     if (/^https?:\/\//i.test(s)) {
       const rel = s.replace(/^https?:\/\/data\.toeicets\.com\//i, '');
       if (rel === s) return s;
-      return subdir === 'audio' ? `${AUDIO_BASE_URL}/data/${rel}` : `/data/${rel}`;
+      return `${subdir === 'audio' ? AUDIO_BASE_URL : IMAGE_BASE_URL}/data/${rel}`;
     }
     const path = `/data/${year}/test${n}/${subdir}/${s}`;
-    return subdir === 'audio' ? (AUDIO_BASE_URL + path) : path;
+    return (subdir === 'audio' ? AUDIO_BASE_URL : IMAGE_BASE_URL) + path;
+  }
+
+  // An <img> error does not bubble, so listen in the capture phase. One retry per image:
+  // after the swap the src no longer carries the jsDelivr prefix, so this cannot loop.
+  if (IMAGE_BASE_URL && typeof document !== 'undefined' && !window.__qcImgFallback) {
+    window.__qcImgFallback = true;
+    document.addEventListener('error', e => {
+      const el = e.target;
+      if (!el || el.tagName !== 'IMG') return;
+      const src = el.getAttribute('src') || '';
+      if (src.indexOf(IMAGE_BASE_URL) !== 0) return;
+      el.src = src.slice(IMAGE_BASE_URL.length);   // this Space's own copy
+    }, true);
   }
 
   // Group consecutive questions sharing Audio (3,4) or Text (6,7); 1/2/5 are singletons.
