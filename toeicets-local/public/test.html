@@ -108,7 +108,7 @@
   <script src="/js/firebase-init.js?v=1"></script>
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
-  <script src="/js/quiz-core.js?v=16"></script>
+  <script src="/js/quiz-core.js?v=17"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (async () => {
@@ -271,32 +271,10 @@
     const qNumber = q => (q['Question Number']||'').toString().replace(/\.0+$/,'');
 
     // Group consecutive questions sharing Audio (parts 3,4) or Text (parts 6,7).
-    // For Reading parts 6/7 the passage Text is only stored on the FIRST question of
-    // each group — subsequent questions in the same passage have empty Text and
-    // must inherit from the previous group.
-    function buildGroups(questions, partNum) {
-      if (partNum === 1 || partNum === 2 || partNum === 5) {
-        return questions.map(q => [q]);
-      }
-      const groups = [];
-      let cur = []; let curKey = null;
-      for (const q of questions) {
-        const k = partNum <= 4 ? (q.Audio || '') : (q.Text || '');
-        // Reading 6/7: empty Text means "continue current passage"
-        if (partNum >= 6 && !k && cur.length) {
-          cur.push(q);
-          continue;
-        }
-        if (k !== curKey || !cur.length) {
-          if (cur.length) groups.push(cur);
-          cur = [q]; curKey = k;
-        } else {
-          cur.push(q);
-        }
-      }
-      if (cur.length) groups.push(cur);
-      return groups;
-    }
+    // Grouping lives in QuizCore so this page and the quiz players cannot drift apart:
+    // passage Text sits on a group's first row only, and a Part 7 set kept as a scan has
+    // no Text at all and has to open its own group. See buildGroups() there.
+    const buildGroups = (questions, partNum) => QuizCore.buildGroups(questions, partNum);
 
     // ====== TEST PLAYER ======
     async function renderPlayer(partNum) {
@@ -337,7 +315,7 @@
       function buildResults() {
         results.length = 0;
         groups.forEach((g, gi) => {
-          const gImg = imagePath(g[0].Image);
+          const gImg = imagePath(QuizCore.groupImage(g));
           const gText = g[0].Text || '';
           g.forEach(q => {
             const qn = qNumber(q);
@@ -345,7 +323,7 @@
             const correct = correctLetter(q);
             results.push({
               qNum: qn, part: partNum, year, n, gid: gi,
-              audioFile: g[0].Audio || '', imageFile: q.Image || g[0].Image || '',
+              audioFile: g[0].Audio || '', imageFile: q.Image || QuizCore.groupImage(g),
               question: q.Question || '',
               image: imagePath(q.Image) || gImg || null,
               options: optsLetters(q).map(L => ({ L, text: q[L] || '' })),
@@ -569,7 +547,7 @@
         const isGrouped = group.length > 1;
         const firstQ = group[0];
         const sharedAudio = audioPath(firstQ.Audio);
-        const sharedImage = imagePath(firstQ.Image);   // Part 1 + some Part 7
+        const sharedImages = QuizCore.groupImages(group).map(imagePath).filter(Boolean);   // Part 1 + some Part 7
         const sharedText = firstQ.Text || '';            // passage/script
         // Range label
         const startN = qNumber(firstQ);
@@ -597,7 +575,7 @@
         const audioHtml = sharedAudio ? `<audio controls autoplay preload="auto" src="${sharedAudio}"></audio>` : '';
 
         // Image (Part 1, some Part 7)
-        const imageHtml = sharedImage ? `<img class="q-image" src="${sharedImage}" alt="image"/>` : '';
+        const imageHtml = sharedImages.map(u => `<img class="q-image" src="${u}" alt="image"/>`).join('');
 
         // Passage: for Reading parts always visible. For Listening, hidden until submit.
         const passageReading = (!isListening && sharedText)

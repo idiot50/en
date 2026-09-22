@@ -55,6 +55,35 @@ window.QuizCore = (function () {
     }, true);
   }
 
+  // Every graphic a group owns, in order, de-duplicated: a scanned Part 7 set can span
+  // two pages (2026 / test 1, questions 191-195), and the graphic is not always on the
+  // group's first row.
+  function groupImages(qs) {
+    const out = [];
+    for (const q of qs || []) {
+      const v = (q.Image || '').trim();
+      if (v && out.indexOf(v) === -1) out.push(v);
+    }
+    return out;
+  }
+  const groupImage = qs => groupImages(qs)[0] || '';
+
+  // In a real Part 7 the questions from 176 up are fixed sets of five — 176-180, 181-185,
+  // 186-190, 191-195, 196-200 — and a group must never straddle one of those boundaries.
+  const P7_SET_START = [176, 181, 186, 191, 196];
+
+  // A Part 7 passage kept as a scan carries no Text at all, so "empty Text continues the
+  // previous passage" glued it onto whatever came before: questions 186-190 were served
+  // with the scan of 191-195 beside them. Such a row opens a new group instead — unless it
+  // is a further page of the scan the group already shows, or it falls inside one of the
+  // fixed sets above, where the image is one document of a set whose others are text.
+  function startsImageGroup(q, cur) {
+    if (!(q.Image || '').trim()) return false;
+    if (cur.some(r => (r.Image || '').trim())) return false;
+    const n = parseInt(String(q['Question Number'] || '').replace(/.0+$/, ''), 10);
+    return n >= 176 ? P7_SET_START.indexOf(n) !== -1 : true;
+  }
+
   // Group consecutive questions sharing Audio (3,4) or Text (6,7); 1/2/5 are singletons.
   function buildGroups(questions, partNum) {
     if (partNum === 1 || partNum === 2 || partNum === 5) return questions.map(q => [q]);
@@ -62,7 +91,11 @@ window.QuizCore = (function () {
     let cur = [], curKey = null;
     for (const q of questions) {
       const k = partNum <= 4 ? (q.Audio || '') : (q.Text || '');
-      if (partNum >= 6 && !k && cur.length) { cur.push(q); continue; }
+      if (partNum >= 6 && !k && cur.length) {
+        if (!(partNum === 7 && startsImageGroup(q, cur))) { cur.push(q); continue; }
+        groups.push(cur); cur = [q]; curKey = k;
+        continue;
+      }
       if (k !== curKey || !cur.length) { if (cur.length) groups.push(cur); cur = [q]; curKey = k; }
       else cur.push(q);
     }
@@ -232,12 +265,13 @@ window.QuizCore = (function () {
       const isBlind = partNum === 1 || partNum === 2;   // hide question + option text while listening
       const first = card.questions[0];
       const sharedAudio = assetUrl(card.year, card.n, 'audio', first.Audio);
-      const sharedImage = assetUrl(card.year, card.n, 'image', first.Image);
+      const sharedImages = groupImages(card.questions)
+        .map(v => assetUrl(card.year, card.n, 'image', v)).filter(Boolean);
       const sharedText = first.Text || '';
       const progressPct = Math.round(cardIdx / cards.length * 100);
 
       const audioHtml = sharedAudio ? `<audio controls autoplay preload="auto" src="${sharedAudio}"></audio>` : '';
-      const imageHtml = sharedImage ? `<img class="q-image" src="${sharedImage}" alt="image"/>` : '';
+      const imageHtml = sharedImages.map(u => `<img class="q-image" src="${u}" alt="image"/>`).join('');
       const passageHtml = (!isListening && sharedText) ? `<div class="q-passage">${nl2br(sharedText)}</div>` : '';
 
       const subQs = card.questions.map((q, i) => {
@@ -496,7 +530,7 @@ window.QuizCore = (function () {
           year: it.card.year, n: it.card.n,
           gid: String(it.uid).split('.')[0],   // group index: questions sharing one clip/passage
           audioFile: it.card.questions[0].Audio || '',
-          imageFile: it.q.Image || it.card.questions[0].Image || '',
+          imageFile: it.q.Image || groupImage(it.card.questions),
           question: it.q.Question || '',
           image: assetUrl(it.card.year, it.card.n, 'image', it.q.Image) || (it.card.questions[0] === it.q ? null : null),
           options: optsLetters(it.q).map(L => ({ L, text: it.q[L] || '' })),
@@ -775,5 +809,6 @@ window.QuizCore = (function () {
     return { addFromResults, grade, entries, dueList, counts, toCards, idOf, removeId };
   })();
 
-  return { sample, startQuiz, escapeHtml, nl2br, highlightBlanks, PARTS_BY_MODE, ErrorBox, assetUrl };
+  return { sample, startQuiz, escapeHtml, nl2br, highlightBlanks, PARTS_BY_MODE, ErrorBox, assetUrl,
+           buildGroups, groupImage, groupImages };
 })();
