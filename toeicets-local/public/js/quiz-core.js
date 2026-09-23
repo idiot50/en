@@ -209,6 +209,31 @@ window.QuizCore = (function () {
     return shuffle(cards);
   }
 
+  // Rebuild the cards of a saved run. Only question identities were stored, so the CSVs are
+  // reloaded and the rows picked back out in their original order — which also means a redo
+  // serves exactly the same questions. A card whose data has since changed is dropped rather
+  // than served half-empty.
+  async function cardsFromSession(session) {
+    const cards = [], replay = [];
+    const cache = {};
+    for (const c of (session && session.cards) || []) {
+      const url = `/data/${encodeURIComponent(c.y)}/test${c.n}/test${c.n}-part${c.p}.csv`;
+      let rows;
+      try { rows = cache[url] || (cache[url] = await CSV.load(url)); } catch (e) { continue; }
+      const byNum = {};
+      for (const r of rows) byNum[qNumber(r)] = r;
+      const questions = (c.qs || []).map(q => byNum[String(q)]).filter(Boolean);
+      if (questions.length !== (c.qs || []).length) continue;
+      cards.push({
+        part: c.p, year: c.y, n: c.n,
+        srcLabel: `${c.y === 'Economy' ? 'Cơ bản' : c.y} • Đề ${c.n}`,
+        questions
+      });
+      replay.push(c.picks || []);
+    }
+    return { cards, replay };
+  }
+
   // ---------- player ----------
   // opts: { root, sidebar, cards, minutes, onFinish(summary) }
   function startQuiz(opts) {
@@ -584,7 +609,8 @@ window.QuizCore = (function () {
         const correct = graded.filter(r => r.isCorrect).length;
         const blank = graded.filter(r => r.chosen == null).length;
         opts.onFinish({ total: graded.length, correct, wrong: graded.length - correct - blank, blank,
-                        skipped: results.length - graded.length });
+                        skipped: results.length - graded.length,
+                        secs: Math.max(0, minutes * 60 - timerSeconds) });
       }
       renderResults(results);
     }
@@ -730,6 +756,20 @@ window.QuizCore = (function () {
       }
     }
 
+    // Reopening a saved run: put the answers back and go straight to the results screen,
+    // which already knows how to review every question and how to redo the set. Deliberately
+    // not routed through finish() — a replay is not a new attempt, so nothing is logged to
+    // the history, the error box or XP a second time.
+    if (opts.replay) {
+      cards.forEach((card, ci) => card.questions.forEach((q, qi) => {
+        const L = (opts.replay[ci] || [])[qi];
+        if (L) picks[`${ci}.${qi}`] = L;
+      }));
+      finished = true;
+      renderResults(buildResults());
+      return;
+    }
+
     renderCard();
   }
 
@@ -821,6 +861,6 @@ window.QuizCore = (function () {
     return { addFromResults, grade, entries, dueList, counts, toCards, idOf, removeId };
   })();
 
-  return { sample, startQuiz, escapeHtml, nl2br, highlightBlanks, PARTS_BY_MODE, ErrorBox, assetUrl,
-           buildGroups, groupImage, groupImages };
+  return { sample, startQuiz, cardsFromSession, escapeHtml, nl2br, highlightBlanks, PARTS_BY_MODE,
+           ErrorBox, assetUrl, buildGroups, groupImage, groupImages };
 })();
