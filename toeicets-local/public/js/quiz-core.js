@@ -84,14 +84,26 @@ window.QuizCore = (function () {
     return n >= 176 ? P7_SET_START.indexOf(n) !== -1 : true;
   }
 
+  // A row with no question number is scrape residue — the 2026 files end with five blank
+  // rows in every Part 6 and one in test 8's Part 3. They have no text and no options, and
+  // inheriting the group key they used to ride along as extra "questions" that could only
+  // ever be graded blank.
+  const isRealQuestion = q => !!String((q && q['Question Number']) || '').trim();
+
   // Group consecutive questions sharing Audio (3,4) or Text (6,7); 1/2/5 are singletons.
+  // The shared value sits on the group's first row and the rest are empty — that is how
+  // the Economy set writes Audio and how every set writes Text — so an empty key always
+  // means "still the same clip/passage".
   function buildGroups(questions, partNum) {
-    if (partNum === 1 || partNum === 2 || partNum === 5) return questions.map(q => [q]);
+    const qs = (questions || []).filter(isRealQuestion);
+    if (partNum === 1 || partNum === 2 || partNum === 5) return qs.map(q => [q]);
     const groups = [];
     let cur = [], curKey = null;
-    for (const q of questions) {
-      const k = partNum <= 4 ? (q.Audio || '') : (q.Text || '');
-      if (partNum >= 6 && !k && cur.length) {
+    for (const q of qs) {
+      // Trimmed: 2025 / test 9 stores question 100's clip as "…mp3 " with a trailing
+      // space, which split it off from the two questions sharing that same clip.
+      const k = (partNum <= 4 ? (q.Audio || '') : (q.Text || '')).trim();
+      if (!k && cur.length) {
         if (!(partNum === 7 && startsImageGroup(q, cur))) { cur.push(q); continue; }
         groups.push(cur); cur = [q]; curKey = k;
         continue;
