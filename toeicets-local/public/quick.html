@@ -56,6 +56,12 @@
     .mode-card .ic { font-size: 40px; }
     .mode-card .t { font-weight: 800; margin-top: 6px; }
     .mode-card .d { font-size: 12px; color: var(--text-mute); margin-top: 4px; line-height: 1.4; }
+    /* time chooser */
+    .tm-row { display: flex; gap: 8px; flex-wrap: wrap; margin-top: 8px; }
+    .tm-chip { border: 2px solid var(--border); background: white; border-radius: 12px; padding: 10px 18px; font-weight: 800; cursor: pointer; font-size: 15px; font-family: inherit; color: var(--text-soft); }
+    .tm-chip.active { border-color: var(--green); background: #f3fff0; color: var(--green-dark); }
+    .tm-chip .q { display: block; font-weight: 700; font-size: 11.5px; color: var(--text-mute); margin-top: 2px; }
+    .tm-chip.active .q { color: var(--green-dark); }
   </style>
 </head>
 <body>
@@ -71,7 +77,7 @@
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
   <script src="/js/quiz-core.js?v=19"></script>
-  <script src="/js/sessions.js?v=2"></script>
+  <script src="/js/sessions.js?v=3"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (function () {
@@ -79,33 +85,42 @@
     let state = State.load();
     const { sidebar } = renderShell({ active: 'quick', state });
 
-    // One 20-minute sitting for every mode. The question target is that clock divided by a
-    // realistic pace for the parts involved: Reading runs near real-exam speed (~45s a
-    // question), Listening stays looser so a clip can be replayed, Mixed sits between.
-    const MINUTES = 20;
-    const TARGET = { reading: 26, listening: 20, mixed: 24 };
+    // Pick how long you have; the number of questions follows from it at real-exam pace —
+    // Listening 100 questions in 45 minutes, Reading 100 in 65, and Mixed the whole paper,
+    // 200 in 110. So the clock, not a fixed count, is what you choose.
+    const MINUTES = [10, 20, 30];
+    const PACE = { listening: 100 / 45, reading: 100 / 65, mixed: 200 / 110 };
     const TAG = { reading: '📖 Reading', listening: '🎧 Listening', mixed: '🎲 Trộn' };
+    const targetFor = (m, mins) => Math.max(5, Math.round(mins * (PACE[m] || PACE.mixed)));
     let mode = localStorage.getItem('toeicets_quick_mode') || 'reading';
+    let minutes = parseInt(localStorage.getItem('toeicets_quick_minutes') || '20', 10);
+    if (MINUTES.indexOf(minutes) === -1) minutes = 20;
 
     function renderChooser() {
       const card = (m, ic, t, d) => `
         <div class="mode-card ${mode === m ? 'active' : ''}" data-mode="${m}">
-          <div class="ic">${ic}</div><div class="t">${t}</div><div class="d">${d}</div>
+          <div class="ic">${ic}</div><div class="t">${t}</div>
+          <div class="d">${d} <span class="mc-n">(~${targetFor(m, minutes)} câu)</span></div>
         </div>`;
       root.innerHTML = sidebar + `
         <main class="main">
           <h2 style="font-size:26px;font-weight:900;">⚡ Kiểm tra nhanh</h2>
           <p style="color:var(--text-mute);margin:6px 0 18px;line-height:1.6;">
-            Câu hỏi lấy ngẫu nhiên từ toàn bộ 60 đề. Mỗi lượt 20 phút — hết giờ tự nộp bài.
+            Câu hỏi lấy ngẫu nhiên từ toàn bộ 60 đề. Chọn <b>bạn có bao nhiêu phút</b> — số câu tự tính theo
+            tốc độ đề thật (nghe 100 câu/45 phút, đọc 100 câu/65 phút). Hết giờ tự nộp bài.
           </p>
           <div class="card" style="padding:18px;">
-            <h3 class="section-title" style="margin-top:0;">Chọn loại câu</h3>
+            <h3 class="section-title" style="margin-top:0;">1️⃣ Chọn loại câu</h3>
             <div class="mode-grid">
-              ${card('reading', '📖', 'Chỉ Reading', 'Part 5/6/7 — không audio (~26 câu · 20 phút)')}
-              ${card('listening', '🎧', 'Chỉ Listening', 'Part 1/2/3/4 — có audio (~20 câu · 20 phút)')}
-              ${card('mixed', '🎲', 'Trộn cả hai', 'Nghe + đọc, sát đề thật (~24 câu · 20 phút)')}
+              ${card('reading', '📖', 'Chỉ Reading', 'Part 5/6/7 — không audio')}
+              ${card('listening', '🎧', 'Chỉ Listening', 'Part 1/2/3/4 — có audio')}
+              ${card('mixed', '🎲', 'Trộn cả hai', 'Nghe + đọc, sát đề thật')}
             </div>
-            <button class="btn gold" id="start" style="margin-top:18px;">▶ Bắt đầu (${MINUTES} phút)</button>
+            <h3 class="section-title">2️⃣ Bạn có bao nhiêu thời gian?</h3>
+            <div class="tm-row">
+              ${MINUTES.map(t => `<button class="tm-chip ${t === minutes ? 'active' : ''}" data-t="${t}">${t} phút<span class="q">~${targetFor(mode, t)} câu</span></button>`).join('')}
+            </div>
+            <button class="btn gold" id="start" style="margin-top:18px;">▶ Bắt đầu (${minutes} phút · ~${targetFor(mode, minutes)} câu)</button>
           </div>
           ${Sessions.panel('quick', { empty: 'Chưa có lượt nào. Làm xong một lượt là nó tự lưu ở đây — xem lại từng câu đúng/sai, hoặc làm lại đúng bộ câu đó để so với lần trước.' })}
         </main>`;
@@ -113,12 +128,35 @@
         c.addEventListener('click', () => {
           mode = c.dataset.mode;
           localStorage.setItem('toeicets_quick_mode', mode);
-          root.querySelectorAll('.mode-card').forEach(x => x.classList.toggle('active', x.dataset.mode === mode));
-          document.getElementById('start').textContent = `▶ Bắt đầu (${MINUTES} phút)`;
+          repaintChoices();
+        });
+      });
+      root.querySelectorAll('.tm-chip').forEach(c => {
+        c.addEventListener('click', () => {
+          minutes = parseInt(c.dataset.t, 10);
+          localStorage.setItem('toeicets_quick_minutes', minutes);
+          repaintChoices();
         });
       });
       document.getElementById('start').addEventListener('click', start);
       Sessions.bind(root, 'quick', { open: openSession, refresh: renderChooser });
+    }
+
+    // Both choices feed the same number, so either one changes every label that shows it.
+    function repaintChoices() {
+      root.querySelectorAll('.mode-card').forEach(x => {
+        x.classList.toggle('active', x.dataset.mode === mode);
+        const n = x.querySelector('.mc-n');
+        if (n) n.textContent = `(~${targetFor(x.dataset.mode, minutes)} câu)`;
+      });
+      root.querySelectorAll('.tm-chip').forEach(x => {
+        const t = parseInt(x.dataset.t, 10);
+        x.classList.toggle('active', t === minutes);
+        const q = x.querySelector('.q');
+        if (q) q.textContent = `~${targetFor(mode, t)} câu`;
+      });
+      const btn = document.getElementById('start');
+      if (btn) btn.textContent = `▶ Bắt đầu (${minutes} phút · ~${targetFor(mode, minutes)} câu)`;
     }
 
     // Unlock audio within the click gesture so Listening clips can autoplay after sampling.
@@ -143,19 +181,22 @@
     }
 
     // One launcher for a fresh sitting, a saved one reopened, and a redo of that same set.
-    function play(cards, runMode, replay) {
+    // A redo keeps the clock the original sitting was taken under, not whatever is selected
+    // now, so the two attempts stay comparable.
+    function play(cards, runMode, runMinutes, replay) {
       let lastResults = null;
       QuizCore.startQuiz({
-        root, sidebar, cards, minutes: MINUTES, feature: 'quick',
+        root, sidebar, cards, minutes: runMinutes, feature: 'quick',
         replay: replay || null,
-        title: replay ? `Bài đã làm • ${TAG[runMode] || runMode}` : undefined,
+        title: replay ? `Bài đã làm • ${TAG[runMode] || runMode} · ${runMinutes} phút` : undefined,
         onResults: (rs) => { lastResults = rs; },
         onFinish: (s) => {
           if (window.Auth && window.Auth.addHistory) {
-            window.Auth.addHistory({ type: 'quick', mode: runMode, total: s.total, correct: s.correct, wrong: s.wrong, blank: s.blank });
+            window.Auth.addHistory({ type: 'quick', mode: runMode, minutes: runMinutes, total: s.total, correct: s.correct, wrong: s.wrong, blank: s.blank });
           }
           try {
-            Sessions.add({ feature: 'quick', mode: runMode, tag: TAG[runMode] || runMode,
+            Sessions.add({ feature: 'quick', mode: runMode, minutes: runMinutes,
+                           tag: `${TAG[runMode] || runMode} · ${runMinutes}p`,
                            results: lastResults, secs: s.secs });
           } catch (e) {}
         }
@@ -164,13 +205,14 @@
 
     async function start() {
       unlockAudio();
-      loading('Đang bốc câu hỏi…', 'Lấy ngẫu nhiên từ 60 đề');
+      const want = targetFor(mode, minutes);
+      loading('Đang bốc câu hỏi…', `${want} câu · ${minutes} phút · lấy ngẫu nhiên từ 60 đề`);
       let cards = [];
       try {
-        cards = await QuizCore.sample(mode, TARGET[mode] || TARGET.mixed);
+        cards = await QuizCore.sample(mode, want);
       } catch (e) { /* ignore, handled below */ }
       if (!cards || !cards.length) { failed('Không bốc được câu hỏi', 'Kiểm tra kết nối rồi thử lại.'); return; }
-      play(cards, mode);
+      play(cards, mode, minutes);
     }
 
     // Reopen a saved sitting: view it with the answers filled in, or redo the same questions.
@@ -183,7 +225,8 @@
       let built = { cards: [], replay: [] };
       try { built = await QuizCore.cardsFromSession(s); } catch (e) {}
       if (!built.cards.length) { failed('Không mở lại được bài này'); return; }
-      play(built.cards, s.mode || 'mixed', redo ? null : built.replay);
+      // Runs saved before the clock became selectable were all 20-minute sittings.
+      play(built.cards, s.mode || 'mixed', s.minutes || 20, redo ? null : built.replay);
     }
 
     renderChooser();

@@ -62,6 +62,8 @@ window.Sessions = (function () {
       tag: entry.tag || '',              // what the row shows: "Part 5", "🎧 Listening"…
       part: entry.part != null ? entry.part : null,
       mode: entry.mode || null,
+      minutes: parseInt(entry.minutes, 10) || null,   // the clock this run was taken under
+
       secs: Math.max(0, parseInt(entry.secs, 10) || 0),
       total: results.length,
       correct,
