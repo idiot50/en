@@ -60,21 +60,6 @@
     .ct-chip.full.active { border-style: solid; }
     .ct-chip.full .n { font-weight: 700; font-size: 13px; color: var(--text-mute); }
     .ct-chip.full.active .n { color: var(--green-dark); }
-    /* saved runs */
-    .sess { border: 2px solid var(--border); border-radius: 14px; padding: 12px 14px; margin-top: 10px; display: flex; align-items: center; gap: 12px; flex-wrap: wrap; background: white; }
-    .sess .when { font-weight: 800; font-size: 13.5px; min-width: 132px; }
-    .sess .part { font-weight: 900; color: var(--blue-dark, #1899d6); background: #eaf6ff; border-radius: 8px; padding: 3px 9px; font-size: 13px; white-space: nowrap; }
-    .sess .n { color: var(--text-mute); font-size: 13px; white-space: nowrap; }
-    .sess .score { font-weight: 800; font-size: 13.5px; white-space: nowrap; }
-    .sess .score .ok { color: var(--green-dark); }
-    .sess .score .no { color: var(--red); }
-    .sess .score .bl { color: var(--text-mute); }
-    .sess .bar { flex: 1; min-width: 60px; height: 8px; border-radius: 6px; background: #eef2f4; overflow: hidden; }
-    .sess .bar i { display: block; height: 100%; background: var(--green); }
-    .sess .acts { display: flex; gap: 6px; margin-left: auto; }
-    .sess .del { border: none; background: none; cursor: pointer; color: var(--text-mute); font-size: 18px; line-height: 1; padding: 4px 6px; border-radius: 8px; }
-    .sess .del:hover { background: #ffe9e9; color: var(--red); }
-    @media (max-width: 620px) { .sess .bar { display: none; } .sess .acts { margin-left: 0; width: 100%; } }
   </style>
 </head>
 <body>
@@ -90,7 +75,7 @@
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
   <script src="/js/quiz-core.js?v=19"></script>
-  <script src="/js/sessions.js?v=1"></script>
+  <script src="/js/sessions.js?v=2"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (function () {
@@ -144,7 +129,7 @@
           <button class="btn gold" id="start" style="margin-top:14px;">▶ Bắt đầu ôn</button>
           <a class="btn ghost small" href="/notes" style="margin-left:10px;">📒 Sổ từ vựng (${VocabNotes.count()})</a>
         </div>
-        ${renderSessions()}
+        ${Sessions.panel('drill', { empty: 'Chưa có bài nào. Làm xong một lượt là nó tự lưu lại ở đây — xem lại từng câu đúng/sai hoặc làm lại đúng bộ câu đó bất cứ lúc nào.' })}
       </main>`;
       root.querySelectorAll('.pt-card').forEach(c => c.addEventListener('click', () => {
         part = parseInt(c.dataset.p, 10);
@@ -159,51 +144,7 @@
         root.querySelectorAll('.ct-chip').forEach(x => x.classList.toggle('active', x.dataset.c === count));
       }));
       document.getElementById('start').addEventListener('click', start);
-      bindSessionRows();
-    }
-
-    // ---------- saved runs ----------
-    function renderSessions() {
-      const runs = Sessions.list('drill', 20);
-      if (!runs.length) {
-        return `<div class="card" style="padding:18px;margin-top:16px;">
-          <h3 class="section-title" style="margin-top:0;">🗂 Bài đã làm</h3>
-          <p style="color:var(--text-mute);margin:0;font-size:14px;">Chưa có bài nào. Làm xong một lượt là nó tự lưu lại ở đây — xem lại từng câu đúng/sai hoặc làm lại đúng bộ câu đó bất cứ lúc nào.</p>
-        </div>`;
-      }
-      const rows = runs.map(s => {
-        const pct = s.total ? Math.round(s.correct / s.total * 100) : 0;
-        const dur = Sessions.duration(s.secs);
-        return `<div class="sess">
-          <div class="when">${esc(Sessions.when(s.at))}${dur ? `<div style="font-weight:600;font-size:11.5px;color:var(--text-mute);">${esc(dur)}</div>` : ''}</div>
-          <div class="part">Part ${s.part == null ? '?' : s.part}</div>
-          <div class="n">${s.total} câu</div>
-          <div class="score"><span class="ok">✅ ${s.correct}</span> · <span class="no">❌ ${s.wrong}</span>${s.blank ? ` · <span class="bl">⬜ ${s.blank}</span>` : ''} · ${pct}%</div>
-          <div class="bar"><i style="width:${pct}%"></i></div>
-          <div class="acts">
-            <button class="btn ghost small" data-act="view" data-id="${s.id}">📖 Xem lại</button>
-            <button class="btn blue small" data-act="redo" data-id="${s.id}">↻ Làm lại</button>
-            <button class="del" data-act="del" data-id="${s.id}" title="Xoá bài này">×</button>
-          </div>
-        </div>`;
-      }).join('');
-      return `<div class="card" style="padding:18px;margin-top:16px;">
-        <h3 class="section-title" style="margin-top:0;">🗂 Bài đã làm <span style="font-weight:700;font-size:12.5px;color:var(--text-mute);">— lưu trên máy này, ${runs.length} lượt gần nhất</span></h3>
-        ${rows}
-      </div>`;
-    }
-
-    function bindSessionRows() {
-      root.querySelectorAll('[data-act]').forEach(b => b.addEventListener('click', () => {
-        const id = b.dataset.id;
-        if (b.dataset.act === 'del') {
-          if (!confirm('Xoá bài đã làm này khỏi danh sách?')) return;
-          Sessions.remove(id);
-          renderPicker();
-          return;
-        }
-        openSession(id, b.dataset.act === 'redo');
-      }));
+      Sessions.bind(root, 'drill', { open: openSession, refresh: renderPicker });
     }
 
     // Browsers only let audio start from a user gesture, so prime it inside the click.
@@ -243,7 +184,7 @@
         onResults: (rs) => { lastResults = rs; },
         onFinish: (s) => {
           if (window.Auth && Auth.addHistory) Auth.addHistory({ type: 'drill', part: partNum, total: s.total, correct: s.correct, wrong: s.wrong, blank: s.blank });
-          try { Sessions.add({ feature: 'drill', part: partNum, results: lastResults, secs: s.secs }); } catch (e) {}
+          try { Sessions.add({ feature: 'drill', part: partNum, tag: 'Part ' + partNum, results: lastResults, secs: s.secs }); } catch (e) {}
         }
       });
     }

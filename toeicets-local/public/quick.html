@@ -71,6 +71,7 @@
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
   <script src="/js/quiz-core.js?v=19"></script>
+  <script src="/js/sessions.js?v=2"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (function () {
@@ -83,6 +84,7 @@
     // question), Listening stays looser so a clip can be replayed, Mixed sits between.
     const MINUTES = 20;
     const TARGET = { reading: 26, listening: 20, mixed: 24 };
+    const TAG = { reading: '📖 Reading', listening: '🎧 Listening', mixed: '🎲 Trộn' };
     let mode = localStorage.getItem('toeicets_quick_mode') || 'reading';
 
     function renderChooser() {
@@ -105,6 +107,7 @@
             </div>
             <button class="btn gold" id="start" style="margin-top:18px;">▶ Bắt đầu (${MINUTES} phút)</button>
           </div>
+          ${Sessions.panel('quick', { empty: 'Chưa có lượt nào. Làm xong một lượt là nó tự lưu ở đây — xem lại từng câu đúng/sai, hoặc làm lại đúng bộ câu đó để so với lần trước.' })}
         </main>`;
       root.querySelectorAll('.mode-card').forEach(c => {
         c.addEventListener('click', () => {
@@ -115,34 +118,72 @@
         });
       });
       document.getElementById('start').addEventListener('click', start);
+      Sessions.bind(root, 'quick', { open: openSession, refresh: renderChooser });
+    }
+
+    // Unlock audio within the click gesture so Listening clips can autoplay after sampling.
+    function unlockAudio() {
+      try {
+        const a = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=');
+        a.volume = 0;
+        const p = a.play();
+        if (p && p.catch) p.catch(() => {});
+      } catch (e) {}
+    }
+    function loading(msg, sub) {
+      root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+        <div style="font-size:60px;">⚡</div><h2>${msg}</h2>
+        <p style="color:var(--text-mute);">${sub || ''}</p></div></main>`;
+    }
+    function failed(msg, sub) {
+      root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+        <div style="font-size:60px;">😢</div><h2>${msg}</h2>
+        <p style="color:var(--text-mute);">${sub || ''}</p>
+        <a class="btn ghost" href="/quick">Quay lại</a></div></main>`;
+    }
+
+    // One launcher for a fresh sitting, a saved one reopened, and a redo of that same set.
+    function play(cards, runMode, replay) {
+      let lastResults = null;
+      QuizCore.startQuiz({
+        root, sidebar, cards, minutes: MINUTES, feature: 'quick',
+        replay: replay || null,
+        title: replay ? `Bài đã làm • ${TAG[runMode] || runMode}` : undefined,
+        onResults: (rs) => { lastResults = rs; },
+        onFinish: (s) => {
+          if (window.Auth && window.Auth.addHistory) {
+            window.Auth.addHistory({ type: 'quick', mode: runMode, total: s.total, correct: s.correct, wrong: s.wrong, blank: s.blank });
+          }
+          try {
+            Sessions.add({ feature: 'quick', mode: runMode, tag: TAG[runMode] || runMode,
+                           results: lastResults, secs: s.secs });
+          } catch (e) {}
+        }
+      });
     }
 
     async function start() {
-      // Unlock audio within this click gesture so Listening clips can autoplay after sampling
-      try { const _s = new Audio('data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA='); _s.volume = 0; const _p = _s.play(); if (_p && _p.catch) _p.catch(()=>{}); } catch(e) {}
-      root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
-        <div style="font-size:60px;">⚡</div><h2>Đang bốc câu hỏi…</h2>
-        <p style="color:var(--text-mute);">Lấy ngẫu nhiên từ 60 đề</p></div></main>`;
+      unlockAudio();
+      loading('Đang bốc câu hỏi…', 'Lấy ngẫu nhiên từ 60 đề');
       let cards = [];
       try {
         cards = await QuizCore.sample(mode, TARGET[mode] || TARGET.mixed);
       } catch (e) { /* ignore, handled below */ }
-      if (!cards || !cards.length) {
-        root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
-          <div style="font-size:60px;">😢</div><h2>Không bốc được câu hỏi</h2>
-          <p style="color:var(--text-mute);">Kiểm tra kết nối rồi thử lại.</p>
-          <a class="btn ghost" href="/quick">Quay lại</a></div></main>`;
-        return;
-      }
-      QuizCore.startQuiz({
-        root, sidebar, cards, minutes: MINUTES, feature: 'quick',
-        onFinish: (s) => {
-          // Feature 1 (later): Auth.addHistory({ type:'quick', mode, ...s })
-          if (window.Auth && window.Auth.addHistory) {
-            window.Auth.addHistory({ type: 'quick', mode, total: s.total, correct: s.correct, wrong: s.wrong, blank: s.blank });
-          }
-        }
-      });
+      if (!cards || !cards.length) { failed('Không bốc được câu hỏi', 'Kiểm tra kết nối rồi thử lại.'); return; }
+      play(cards, mode);
+    }
+
+    // Reopen a saved sitting: view it with the answers filled in, or redo the same questions.
+    async function openSession(id, redo) {
+      const s = Sessions.get(id);
+      if (!s) { failed('Không tìm thấy bài đã làm'); return; }
+      unlockAudio();
+      loading(redo ? `Đang mở lại ${s.total} câu…` : 'Đang mở bài đã làm…',
+              `${Sessions.when(s.at)} • ${s.total} câu`);
+      let built = { cards: [], replay: [] };
+      try { built = await QuizCore.cardsFromSession(s); } catch (e) {}
+      if (!built.cards.length) { failed('Không mở lại được bài này'); return; }
+      play(built.cards, s.mode || 'mixed', redo ? null : built.replay);
     }
 
     renderChooser();
