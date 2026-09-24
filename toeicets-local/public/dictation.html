@@ -56,6 +56,10 @@
     .dt-sent-typed { font-size:13px; color:var(--text-mute); margin-bottom:4px; }
     .dt-sent-res .dt-diff { border:none; padding:0; background:transparent; font-size:16px; }
     /* Part 3/4: reference questions + choices shown under the script */
+    .dt-graphic { margin-top:14px; background:white; border:2px solid var(--border); border-radius:14px; padding:12px 16px; text-align:center; }
+    .dt-graphic-h { font-weight:800; font-size:12.5px; color:var(--text-mute); text-transform:uppercase; letter-spacing:0.4px; margin-bottom:10px; text-align:left; }
+    .dt-graphic .q-image { margin:0 auto; }
+    .dt-graphic .q-image + .q-image { margin-top:12px; }
     .dt-qs { margin-top:14px; background:white; border:2px solid var(--border); border-radius:14px; padding:4px 16px 14px; }
     .dt-qs > summary { cursor:pointer; font-weight:800; padding:12px 0; font-size:14px; color:var(--blue-dark); list-style:none; }
     .dt-qs > summary::-webkit-details-marker { display:none; }
@@ -444,6 +448,22 @@
     // Questions are shown WITHOUT revealing the key; the learner ticks an answer and
     // everything is graded together when "Kiểm tra" is pressed.
     let qPicks = {};        // question index -> chosen letter (reset for every exercise)
+
+    // About one Part 3/4 set in five comes with a chart, price list or floor plan, and its
+    // "Look at the graphic" question cannot be answered without it. In the real test the
+    // graphic is on screen while the clip plays, so it is shown from the start here too —
+    // it carries no words from the script, so it gives the dictation nothing away.
+    function graphicBlock(card) {
+      const urls = QuizCore.groupImages(card.questions)
+        .map(v => QuizCore.assetUrl(card.year, card.n, 'image', v))
+        .filter(Boolean);
+      if (!urls.length) return '';
+      return `<div class="dt-graphic">
+          <div class="dt-graphic-h">🖼 Sơ đồ / bảng đi kèm bài nghe</div>
+          ${urls.map(u => `<img class="q-image" src="${u}" alt="Sơ đồ bài nghe"/>`).join('')}
+        </div>`;
+    }
+
     function questionsBlock(card) {
       if (!card.questions.some(q => q.Question)) return '';
       const qsHtml = card.questions.map((q, qi) => {
@@ -525,6 +545,7 @@
         ${audioBar()}
         <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">Nghe và <b>gõ lại ${nBlank} câu bị ẩn</b> (gõ nguyên văn cả câu). Ctrl+Enter để kiểm tra.</p>
         <div class="dt-script" id="dt-script" style="line-height:1.9;">${bodyHtml}</div>
+        ${graphicBlock(card)}
         ${questionsBlock(card)}
         <div id="dt-after"></div>
         <div class="group-toolbar">
@@ -612,6 +633,7 @@
         ${audioBar()}
         <p style="font-size:13px;color:var(--text-mute);margin-bottom:10px;">Nghe và điền <b>${blanks.size} từ còn thiếu</b>. Enter để nhảy ô kế tiếp.</p>
         <div class="dt-script" id="dt-script">${html}</div>
+        ${graphicBlock(card)}
         ${qsBlock}
         <div id="dt-after"></div>
         <div class="group-toolbar">
