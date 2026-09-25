@@ -85,11 +85,15 @@
     let state = State.load();
     const { sidebar } = renderShell({ active: 'quick', state });
 
-    // Pick how long you have; the number of questions follows from it at real-exam pace —
-    // Listening 100 questions in 45 minutes, Reading 100 in 65, and Mixed the whole paper,
-    // 200 in 110. So the clock, not a fixed count, is what you choose.
+    // Pick how long you have; the number of questions follows from it. The pace is given as
+    // minutes per 100 questions, and sits a little below the real exam on purpose — the
+    // exam allows 45 minutes for 100 listening questions and 75 for 100 reading, which
+    // leaves no room to replay a clip or re-read a passage. Reading is the loosest of the
+    // three because it was the one that could not be finished in time.
     const MINUTES = [10, 20, 30];
-    const PACE = { listening: 100 / 45, reading: 100 / 65, mixed: 200 / 110 };
+    const PER_100 = { listening: 50, reading: 80, mixed: 130 };   // mixed = a whole paper
+    const PACE = { listening: 100 / PER_100.listening, reading: 100 / PER_100.reading,
+                   mixed: 200 / PER_100.mixed };
     const TAG = { reading: '📖 Reading', listening: '🎧 Listening', mixed: '🎲 Trộn' };
     const targetFor = (m, mins) => Math.max(5, Math.round(mins * (PACE[m] || PACE.mixed)));
     let mode = localStorage.getItem('toeicets_quick_mode') || 'reading';
@@ -107,7 +111,7 @@
           <h2 style="font-size:26px;font-weight:900;">⚡ Kiểm tra nhanh</h2>
           <p style="color:var(--text-mute);margin:6px 0 18px;line-height:1.6;">
             Câu hỏi lấy ngẫu nhiên từ toàn bộ 60 đề. Chọn <b>bạn có bao nhiêu phút</b> — số câu tự tính theo
-            tốc độ đề thật (nghe 100 câu/45 phút, đọc 100 câu/65 phút). Hết giờ tự nộp bài.
+            nhịp thoải mái hơn đề thật một chút (nghe 100 câu/50 phút, đọc 100 câu/80 phút). Hết giờ tự nộp bài.
           </p>
           <div class="card" style="padding:18px;">
             <h3 class="section-title" style="margin-top:0;">1️⃣ Chọn loại câu</h3>
