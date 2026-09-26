@@ -20,6 +20,18 @@ window.QuizCore = (function () {
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
   function nl2br(s) { return escapeHtml(s).replace(/\n/g, '<br/>'); }
+  // Part 6 keeps its gaps inside the passage, and each set draws them differently:
+  // "131-----", "131......", "131 ———", even "(145) ----". Render them as one visible
+  // numbered gap so the passage reads the way it does in a book. Part 7 is deliberately
+  // left alone — its passages carry ASCII tables whose |---|---| rows this would eat.
+  const GAP_RE = /\(?(\d{2,3})\)?\s*[-–—._]{3,}/g;
+  function renderPassage(text, partNum) {
+    const safe = escapeHtml(text);
+    const marked = partNum === 6
+      ? safe.replace(GAP_RE, (_, n) => `<mark class="q-gap"><b>${n}</b> ______</mark>`)
+      : safe;
+    return marked.replace(/\n/g, '<br/>');
+  }
   function highlightBlanks(t) { return escapeHtml(t).replace(/-{3,}|_{3,}/g, '<mark>______</mark>'); }
   const optsLetters = q => ['A', 'B', 'C', 'D'].filter(L => q[L] !== undefined && q[L] !== '');
   const correctLetter = q => (q.Answer || '').trim().toUpperCase().charAt(0);
@@ -290,6 +302,8 @@ window.QuizCore = (function () {
         '.q-split-pass::-webkit-scrollbar-thumb:hover{background:#94a6b2;}' +
         '.q-split-pass .q-passage{max-height:none;overflow:visible;border-left:none;background:transparent;padding:0;margin-bottom:0;font-size:15.5px;}' +
         '.q-split-pass .q-image{max-height:none;}' +
+        '.q-gap{background:#fff3c4;border-radius:5px;padding:1px 7px 2px;white-space:nowrap;font-weight:700;color:var(--text);}' +
+        '.q-gap b{color:var(--blue-dark,#1899d6);font-weight:900;margin-right:3px;}' +
         '@media(max-width:860px){.main.main-wide{max-width:100%;}.q-split{grid-template-columns:1fr;}.q-split-pass{position:static;max-height:44vh;}.q-split-pass .q-passage{max-height:none;}}';
       document.head.appendChild(st);
     }
@@ -309,7 +323,7 @@ window.QuizCore = (function () {
 
       const audioHtml = sharedAudio ? `<audio controls autoplay preload="auto" src="${sharedAudio}"></audio>` : '';
       const imageHtml = sharedImages.map(u => `<img class="q-image" src="${u}" alt="image"/>`).join('');
-      const passageHtml = (!isListening && sharedText) ? `<div class="q-passage">${nl2br(sharedText)}</div>` : '';
+      const passageHtml = (!isListening && sharedText) ? `<div class="q-passage">${renderPassage(sharedText, partNum)}</div>` : '';
 
       const subQs = card.questions.map((q, i) => {
         const item = items.find(it => it.card === card && it.q === q);
@@ -338,8 +352,10 @@ window.QuizCore = (function () {
       const groupHint = isGroup
         ? `<div id="group-hint" style="background:#eaf6ff;border:2px dashed var(--blue,#1cb0f6);border-radius:12px;padding:10px 14px;margin-bottom:14px;font-size:13.5px;font-weight:700;color:var(--blue-dark,#1899d6);">📝 Trả lời <b>tất cả ${card.questions.length} câu</b> trong cụm — xong hệ thống sẽ hiện đáp án &amp; giải thích.</div>`
         : '';
-      // Part 7 (reading) with a passage → split into passage | questions columns.
-      const useSplit = partNum === 7 && !!(passageHtml || imageHtml);
+      // Reading parts with a passage → split into passage | questions columns. Part 6 reads
+      // the same way as Part 7: the text stays in view while you work through its gaps,
+      // instead of scrolling up and down between the passage and the options.
+      const useSplit = partNum >= 6 && !!(passageHtml || imageHtml);
       if (useSplit) ensureSplitStyle();
       const cardBody = useSplit
         ? `<div class="q-split">
@@ -861,6 +877,6 @@ window.QuizCore = (function () {
     return { addFromResults, grade, entries, dueList, counts, toCards, idOf, removeId };
   })();
 
-  return { sample, startQuiz, cardsFromSession, escapeHtml, nl2br, highlightBlanks, PARTS_BY_MODE,
+  return { sample, startQuiz, cardsFromSession, escapeHtml, nl2br, highlightBlanks, renderPassage, PARTS_BY_MODE,
            ErrorBox, assetUrl, buildGroups, groupImage, groupImages };
 })();

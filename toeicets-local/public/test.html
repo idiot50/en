@@ -92,6 +92,8 @@
     .q-split-pass::-webkit-scrollbar-thumb { background:#b9c6cf; border-radius:7px; border:2px solid #eef2f4; }
     .q-split-pass::-webkit-scrollbar-thumb:hover { background:#94a6b2; }
     .q-split-pass .q-passage { max-height:none; overflow:visible; border-left:none; background:transparent; padding:0; margin-bottom:0; font-size:15.5px; }
+    .q-gap { background:#fff3c4; border-radius:5px; padding:1px 7px 2px; white-space:nowrap; font-weight:700; color:var(--text); }
+    .q-gap b { color:var(--blue-dark,#1899d6); font-weight:900; margin-right:3px; }
     .q-split-pass .q-image { max-height:none; }
     @media (max-width:860px) { .main.main-wide { max-width:100%; } .q-split { grid-template-columns:1fr; } .q-split-pass { position:static; max-height:44vh; } .q-split-pass .q-passage { max-height:none; } }
   </style>
@@ -108,7 +110,7 @@
   <script src="/js/firebase-init.js?v=1"></script>
   <script src="/js/auth.js?v=1"></script>
   <script src="/js/csv.js?v=10"></script>
-  <script src="/js/quiz-core.js?v=19"></script>
+  <script src="/js/quiz-core.js?v=20"></script>
   <script src="/js/vocab-notes.js?v=5"></script>
   <script>
   (async () => {
@@ -579,7 +581,7 @@
 
         // Passage: for Reading parts always visible. For Listening, hidden until submit.
         const passageReading = (!isListening && sharedText)
-          ? `<div class="q-passage">${nl2br(sharedText)}</div>` : '';
+          ? `<div class="q-passage">${QuizCore.renderPassage(sharedText, partNum)}</div>` : '';
         // Listening passage hidden initially, revealed after submit
         const passageListeningHidden = (isListening && sharedText)
           ? `<div id="hidden-script" style="display:none;"></div>` : '';
@@ -615,7 +617,7 @@
           </div>`;
 
         // Part 7 (reading) with a passage → two columns: passage | questions.
-        const useSplit = partNum === 7 && !!(passageReading || imageHtml);
+        const useSplit = partNum >= 6 && !!(passageReading || imageHtml);
         const cardHtml = useSplit
           ? `<div class="q-split">
                <div class="q-card q-split-pass">${imageHtml}${passageReading}</div>
