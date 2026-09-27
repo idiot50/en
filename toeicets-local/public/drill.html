@@ -175,7 +175,10 @@
       let lastResults = null;
       QuizCore.startQuiz({
         root, sidebar, cards, feature: 'drill',
-        minutes: Math.max(10, Math.ceil(totalQ * 1.2)),
+        // Twice the old allowance: this mode is for working through a question at a time —
+        // reading the passage properly, replaying a clip — not for exam pacing. The quick
+        // quiz and the full test keep their own clocks.
+        minutes: Math.max(20, Math.ceil(totalQ * 2.4)),
         replay: replay || null,
         noteButton: (ctx) => VocabNotes.openModal({ src: (ctx && ctx.src) || '' }),
         icon: '🔁',
