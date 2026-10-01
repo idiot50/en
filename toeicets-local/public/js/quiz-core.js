@@ -20,17 +20,149 @@ window.QuizCore = (function () {
       .replace(/>/g, '&gt;').replace(/"/g, '&quot;').replace(/'/g, '&#39;');
   }
   function nl2br(s) { return escapeHtml(s).replace(/\n/g, '<br/>'); }
+  // ---------- passage rendering ----------
+  // A reading passage is a document: an e-mail with a header, a notice with a heading, a
+  // text-message thread, a price table, a bulleted brochure. Flattening all of that into
+  // <br/> is what made them hard to read — HTML also collapses the runs of spaces the
+  // source uses to line columns up. Each shape is detected and given its own markup.
+  //
   // Part 6 keeps its gaps inside the passage, and each set draws them differently:
-  // "131-----", "131......", "131 ———", even "(145) ----". Render them as one visible
-  // numbered gap so the passage reads the way it does in a book. Part 7 is deliberately
-  // left alone — its passages carry ASCII tables whose |---|---| rows this would eat.
+  // "131-----", "131......", "131 ———", even "(145) ----".
   const GAP_RE = /\(?(\d{2,3})\)?\s*[-–—._]{3,}/g;
+  // Labels that open a document header. Kept to the ones the sets actually use so a line
+  // of prose ending in a colon is not mistaken for one.
+  const META_RE = /^(To|From|Cc|Bcc|Re|Subject|Date|Sent|Attachment|Attachments|Reply-To|Phone|Fax|E-mail|Email|Website|Address|Location|Hours|Price|Cost|Deadline|Contact|Position|Department|Reference|Order Number|Invoice Number|Tracking Number|Customer|Supplier|Account|Status)\s*:\s?(.*)$/i;
+  // "Dennis Beck (2:52 P.M.)" or "Seul-Gi Ma[9:08 A.M.]" — the thread lines of a chat.
+  const CHAT_RE = /^([A-Z][^\[(\n]{0,40}?)\s*[\[(]\s*(\d{1,2}:\d{2}\s*(?:[AP]\.?M\.?)?)\s*[\])]\s*:?\s*(.*)$/;
+  const BULLET_RE = /^\s*(?:[•·*\u2022\u25cf\u25a0\u2023]|-{1,2}(?=\s))\s*(.*)$/;
+  const isRule = l => /^\s*[-=_*—–+|\s]{4,}\s*$/.test(l);
+  const isTableRow = l => (l.match(/\|/g) || []).length >= 2;
+  const isSeparatorRow = l => /^[\s|+:-]+$/.test(l) && /[-]/.test(l);
+  // A heading: short, no closing punctuation, and either shouting or title-like.
+  function isHeading(l) {
+    const s = l.trim();
+    if (!s || s.length > 70 || /[.?!,;]$/.test(s)) return false;
+    const letters = s.replace(/[^A-Za-z]/g, '');
+    if (letters.length < 3) return false;
+    const upper = (s.match(/[A-Z]/g) || []).length / letters.length;
+    return upper > 0.85 || /^\*?\s*(e-?mail|text message|notice|memo|advertisement|article|web\s?page|form|invoice|receipt|schedule|announcement|letter|brochure|flyer|coupon|press release|job (ad|posting|advertisement)|instant message|online chat)\b/i.test(s);
+  }
+
+  // Styles for the document shapes above, injected on first use so every page that renders
+  // a passage is covered — the quiz players and the full test, which has its own player.
+  function ensurePassageStyle() {
+    if (typeof document === 'undefined' || document.getElementById('qc-passage-style')) return;
+    const st = document.createElement('style');
+    st.id = 'qc-passage-style';
+    st.textContent = PASSAGE_CSS;
+    document.head.appendChild(st);
+  }
+  const PASSAGE_CSS =
+    '.q-passage{white-space:normal;}' +
+    '.q-gap{background:#fff3c4;border-radius:5px;padding:1px 7px 2px;white-space:nowrap;font-weight:700;color:var(--text);}' +
+    '.q-gap b{color:var(--blue-dark,#1899d6);font-weight:900;margin-right:3px;}' +
+    '.p-para{margin:0 0 10px;white-space:pre-wrap;}' +            // pre-wrap keeps aligned columns
+    '.p-para:last-child{margin-bottom:0;}' +
+    '.p-head{font-weight:900;font-size:16px;letter-spacing:.2px;margin:0 0 10px;}' +
+    '.p-head.later{margin-top:18px;padding-top:14px;border-top:2px dashed var(--border);}' +
+    '.p-meta{display:flex;gap:6px;font-size:14px;line-height:1.5;padding:1px 0;}' +
+    '.p-meta .k{font-weight:800;color:var(--text-mute);min-width:74px;flex:none;}' +
+    '.p-meta + .p-para,.p-meta + .p-head{margin-top:12px;padding-top:12px;border-top:1px solid var(--border);}' +
+    '.p-list{margin:0 0 10px;padding-left:20px;}' +
+    '.p-list li{margin-bottom:5px;}' +
+    '.p-rule{border:none;border-top:2px dashed var(--border);margin:14px 0;}' +
+    '.p-chat{margin:0 0 10px;padding:8px 12px;background:#f1f6fa;border-radius:12px;border-left:3px solid var(--blue,#1cb0f6);}' +
+    '.p-chat-h{display:flex;gap:8px;align-items:baseline;font-size:13px;margin-bottom:2px;}' +
+    '.p-chat-h b{font-weight:900;}' +
+    '.p-chat-h span{color:var(--text-mute);font-size:12px;}' +
+    '.p-chat-m{white-space:pre-wrap;}' +
+    '.p-tablewrap{overflow-x:auto;margin:0 0 12px;}' +
+    '.p-table{border-collapse:collapse;width:100%;font-size:14px;background:white;}' +
+    '.p-table th,.p-table td{border:1px solid var(--border);padding:6px 10px;text-align:left;vertical-align:top;}' +
+    '.p-table th{background:var(--green-soft,#eef7e8);font-weight:800;}';
+
   function renderPassage(text, partNum) {
-    const safe = escapeHtml(text);
-    const marked = partNum === 6
-      ? safe.replace(GAP_RE, (_, n) => `<mark class="q-gap"><b>${n}</b> ______</mark>`)
-      : safe;
-    return marked.replace(/\n/g, '<br/>');
+    ensurePassageStyle();
+    const mark = s => {
+      const safe = escapeHtml(s);
+      return partNum === 6
+        ? safe.replace(GAP_RE, (_, n) => `<mark class="q-gap"><b>${n}</b> ______</mark>`)
+        : safe;
+    };
+    const lines = String(text == null ? '' : text).replace(/\r/g, '').split('\n');
+    const out = [];
+    let para = [], list = [], table = [], seenBlock = false;
+
+    const flushPara = () => {
+      if (!para.length) return;
+      out.push(`<p class="p-para">${para.map(mark).join('<br/>')}</p>`);
+      para = [];
+    };
+    const flushList = () => {
+      if (!list.length) return;
+      out.push(`<ul class="p-list">${list.map(x => `<li>${mark(x)}</li>`).join('')}</ul>`);
+      list = [];
+    };
+    const flushTable = () => {
+      if (!table.length) return;
+      // One line holding pipes is not a table: Part 7 writes its sentence-insertion
+      // markers as "—|1|—", and turning that into a one-row table mangled the passage.
+      if (table.length < 2) { para.push(...table); table = []; return; }
+      const rows = table
+        .filter(l => !isSeparatorRow(l))
+        .map(l => l.trim().replace(/^\||\|$/g, '').split('|').map(c => c.trim()));
+      if (rows.length) {
+        const head = rows.shift();
+        out.push(`<div class="p-tablewrap"><table class="p-table">` +
+          `<thead><tr>${head.map(c => `<th>${mark(c)}</th>`).join('')}</tr></thead>` +
+          `<tbody>${rows.map(r => `<tr>${r.map(c => `<td>${mark(c)}</td>`).join('')}</tr>`).join('')}</tbody>` +
+          `</table></div>`);
+      }
+      table = [];
+    };
+    const flushAll = () => { flushTable(); flushList(); flushPara(); };
+
+    for (const raw of lines) {
+      const line = raw.replace(/\s+$/, '');
+      const trimmed = line.trim();
+
+      if (isTableRow(line)) { flushList(); flushPara(); table.push(line); continue; }
+      if (table.length) flushTable();
+
+      if (!trimmed) { flushAll(); continue; }
+      if (isRule(trimmed)) { flushAll(); out.push('<hr class="p-rule"/>'); continue; }
+
+      const meta = trimmed.match(META_RE);
+      if (meta && !para.length && !list.length) {
+        flushAll();
+        out.push(`<div class="p-meta"><span class="k">${mark(meta[1])}:</span> <span>${mark(meta[2])}</span></div>`);
+        seenBlock = true;
+        continue;
+      }
+      const chat = trimmed.match(CHAT_RE);
+      if (chat) {
+        flushAll();
+        out.push(`<div class="p-chat"><div class="p-chat-h"><b>${mark(chat[1].trim())}</b><span>${mark(chat[2])}</span></div>` +
+                 (chat[3] ? `<div class="p-chat-m">${mark(chat[3])}</div>` : '<div class="p-chat-m"></div>') + '</div>');
+        seenBlock = true;
+        continue;
+      }
+      const bullet = line.match(BULLET_RE);
+      if (bullet && bullet[1]) { flushPara(); list.push(bullet[1]); continue; }
+      flushList();
+      if (isHeading(trimmed)) {
+        flushPara();
+        out.push(`<div class="p-head${seenBlock ? ' later' : ''}">${mark(trimmed.replace(/^\*|\*$/g, '').trim())}</div>`);
+        seenBlock = true;
+        continue;
+      }
+      para.push(line);
+      seenBlock = true;
+    }
+    flushAll();
+    // A chat turn whose message sits on the following line: fold it back up.
+    return out.join('').replace(/<div class="p-chat-m"><\/div><p class="p-para">([\s\S]*?)<\/p>/g,
+                                '<div class="p-chat-m">$1</div>');
   }
   function highlightBlanks(t) { return escapeHtml(t).replace(/-{3,}|_{3,}/g, '<mark>______</mark>'); }
   const optsLetters = q => ['A', 'B', 'C', 'D'].filter(L => q[L] !== undefined && q[L] !== '');
@@ -302,8 +434,7 @@ window.QuizCore = (function () {
         '.q-split-pass::-webkit-scrollbar-thumb:hover{background:#94a6b2;}' +
         '.q-split-pass .q-passage{max-height:none;overflow:visible;border-left:none;background:transparent;padding:0;margin-bottom:0;font-size:15.5px;}' +
         '.q-split-pass .q-image{max-height:none;}' +
-        '.q-gap{background:#fff3c4;border-radius:5px;padding:1px 7px 2px;white-space:nowrap;font-weight:700;color:var(--text);}' +
-        '.q-gap b{color:var(--blue-dark,#1899d6);font-weight:900;margin-right:3px;}' +
+        '@media(max-width:860px){.p-meta{display:block;}.p-meta .k{min-width:0;}}';
         '@media(max-width:860px){.main.main-wide{max-width:100%;}.q-split{grid-template-columns:1fr;}.q-split-pass{position:static;max-height:44vh;}.q-split-pass .q-passage{max-height:none;}}';
       document.head.appendChild(st);
     }
