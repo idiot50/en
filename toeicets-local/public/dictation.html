@@ -68,6 +68,7 @@
     .dt-q { padding:12px 0; border-top:1px dashed var(--border); }
     .dt-q:first-of-type { border-top:none; }
     .dt-q-text { font-weight:700; margin-bottom:8px; line-height:1.4; }
+    .dt-q-vi { margin:-4px 0 9px; font-size:13.5px; font-style:italic; color:var(--text-mute); line-height:1.4; }
     .dt-opt { padding:5px 10px; border-radius:8px; font-size:14px; margin-bottom:4px; line-height:1.4; }
     .dt-opt.ok { background:#f0ffe6; border:1.5px solid var(--green); color:var(--green-dark); font-weight:700; }
     /* tickable answer choices (key hidden until "Kiểm tra") */
@@ -404,6 +405,7 @@
       root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
         <div style="font-size:60px;">✍️</div><h2>Đang chọn bài nghe…</h2></div></main>`;
       let cards = [];
+      if (mode === 'p3') await loadQuestionVi();
       try { cards = await QuizCore.sample(mode, mode === 'p2' ? count : count * 3); } catch (e) {}
       // p2: one card per sentence; p3/4: one card per script (group) — need `count` scripts with usable audio+text
       items = [];
@@ -449,6 +451,16 @@
     // everything is graded together when "Kiểm tra" is pressed.
     let qPicks = {};        // question index -> chosen letter (reset for every exercise)
 
+    // Vietnamese for every Part 3 question, keyed by the English question text. Only part of
+    // the data carries a translation inside its explanation (and that stays hidden until
+    // grading), so the questions are translated once into their own file. A translated
+    // question gives nothing of the answer away, so it is shown from the start.
+    let qVi = null;
+    async function loadQuestionVi() {
+      if (qVi) return;
+      try { qVi = await (await fetch('/data/part3-vi.json')).json(); } catch (e) { qVi = {}; }
+    }
+
     // About one Part 3/4 set in five comes with a chart, price list or floor plan, and its
     // "Look at the graphic" question cannot be answered without it. In the real test the
     // graphic is on screen while the clip plays, so it is shown from the start here too —
@@ -472,8 +484,10 @@
              <span class="cl">${L}</span><span>${esc(q[L] || '')}</span>
            </button>`).join('');
         const qn = (q['Question Number'] || '').toString().replace(/\.0+$/, '');
+        const vi = card.part === 3 && qVi ? qVi[(q.Question || '').trim()] : '';
         return `<div class="dt-q" data-qi="${qi}">
             <div class="dt-q-text">${qn ? esc(qn) + '. ' : ''}${esc(q.Question || '')}</div>
+            ${vi ? `<div class="dt-q-vi">${esc(vi)}</div>` : ''}
             <div class="dt-q-opts">${opts}</div>
             <div class="dt-q-fb" id="dt-qfb-${qi}"></div>
           </div>`;
