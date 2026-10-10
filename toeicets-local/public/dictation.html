@@ -129,7 +129,7 @@
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
-  <script src="/js/history.js?v=1"></script>
+  <script src="/js/history.js?v=2"></script>
   <script src="/js/catalog.js?v=10"></script>
   <script src="/js/layout.js?v=13"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -446,7 +446,8 @@
         const first = c.questions[0];
         const text = mode === 'p2' ? (first.Question || '') : (first.Text || '');
         if (!first.Audio || !text || text.length < (mode === 'p2' ? 10 : 60)) continue;
-        if (mode === 'p2' && !(first.A && first.B && first.C)) continue;
+        // A Part 2 card needs its three responses and an answer key that names one of them.
+        if (mode === 'p2' && !(first.A && first.B && first.C && /^[ABC]$/.test(String(first.Answer || '').trim().toUpperCase()))) continue;
         items.push(c);
         if (items.length >= want) break;
       }
@@ -810,7 +811,8 @@
       });
       checkBtn.addEventListener('click', () => {
         if (checkBtn.disabled || pick == null) return;
-        // The answer: a real Part 2 question, so it counts in the history like one.
+        // The answer is coloured here and tallied on the finish screen. The history counts
+        // the exercise once, by its dictation, as the history page says it does.
         const good = pick === correct;
         root.querySelectorAll('#dt-abc button').forEach(b => {
           b.disabled = true; b.classList.remove('picked');
@@ -822,7 +824,6 @@
           : `<span class="dt-q-res bad">❌ Sai — bạn chọn ${pick}, đáp án đúng: <b>${correct}</b></span>`;
         totalQ++; if (good) totalQOk++;
         award(good);
-        try { if (window.Hist) Hist.add(2, good, 'dictation'); } catch (e) {}
         // The sentences
         let totWords = 0, hitWords = 0; const missedWords = [];
         areas.forEach(a => {

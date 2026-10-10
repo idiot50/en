@@ -91,6 +91,20 @@ window.Hist = (function () {
     day.secs = (day.secs || 0) + sec;
     save(s);
   }
+  // Overwrite one counter of one day — the history page's ✏️ control, for a day whose
+  // numbers went wrong. `kind` is 'parts' or 'feats'; a count of zero removes the row,
+  // and a day left with nothing in it disappears.
+  function set(dateISO, kind, key, n, ok) {
+    if ((kind !== 'parts' && kind !== 'feats') || !dateISO) return;
+    n = Math.max(0, parseInt(n, 10) || 0);
+    ok = Math.max(0, Math.min(n, parseInt(ok, 10) || 0));
+    const s = load();
+    const day = s.days[dateISO] || (s.days[dateISO] = blank());
+    const map = day[kind] || (day[kind] = {});
+    if (n) map[String(key)] = { n, ok }; else delete map[String(key)];
+    if (!Object.keys(day.parts || {}).length && !Object.keys(day.feats || {}).length && !day.secs) delete s.days[dateISO];
+    save(s);
+  }
 
   // ---------- reading ----------
   function sumOf(map) {
@@ -140,5 +154,5 @@ window.Hist = (function () {
   function clear() { try { localStorage.removeItem(KEY); } catch (e) {} }
   function exportAll() { return load(); }
 
-  return { FEATS, todayISO, add, addBulk, addResults, addSeconds, day, days, dates, lastDays, totals, streak, clear, exportAll, sumOf };
+  return { FEATS, todayISO, add, addBulk, addResults, addSeconds, set, day, days, dates, lastDays, totals, streak, clear, exportAll, sumOf };
 })();

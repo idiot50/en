@@ -43,12 +43,14 @@
     .pct-bar i { display:block; height:100%; background:var(--green); }
     .hs-empty { color:var(--text-mute); background:var(--bg-alt); border:2px dashed var(--border); border-radius:14px; padding:22px; text-align:center; line-height:1.7; }
     .hs-back { margin-bottom:12px; }
+    .hs-edit { border:2px solid var(--border); background:white; border-radius:9px; padding:4px 8px; cursor:pointer; font-size:13px; line-height:1; font-family:inherit; }
+    .hs-edit:hover { border-color:var(--blue); background:#f7fcff; }
   </style>
 </head>
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
-  <script src="/js/history.js?v=1"></script>
+  <script src="/js/history.js?v=2"></script>
   <script src="/js/catalog.js?v=10"></script>
   <script src="/js/layout.js?v=13"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -118,8 +120,9 @@
         <p style="color:var(--text-mute);margin:6px 0 4px;line-height:1.6;">
           Mọi câu bạn làm ở <b>tất cả chức năng</b> (Bài thi · Ôn theo Part · Kiểm tra nhanh · 100 câu Part 2 ·
           Chép chính tả · Sổ lỗi sai · Luyện ngữ pháp · Học &amp; Ôn) đều được ghi lại theo ngày và theo Part.
-          <br/><span style="font-size:12.5px;">✍️ <b>Chép chính tả</b>: mỗi bài (1 câu Part 2 hoặc 1 đoạn Part 3/4) tính là
-          <b>1 câu</b> — chép đúng <b>trên 80%</b> tính là câu đúng, dưới mức đó tính là câu sai.</span>
+          <br/><span style="font-size:12.5px;">✍️ <b>Chép chính tả</b>: mỗi bài chép (1 câu Part 2 hoặc 1 đoạn Part 3/4) tính là
+          <b>1 câu</b> — chép đúng <b>trên 80%</b> tính là câu đúng, dưới mức đó tính là câu sai. Câu hỏi trắc nghiệm
+          đi kèm một đoạn Part 3/4 tính thêm như câu thật. Số liệu một ngày bị sai? Mở ngày đó và bấm ✏️ để sửa.</span>
         </p>
         <div class="stats-grid" style="margin-top:16px;">
           <div class="stat-card"><div class="big">${today.total.n}</div><div class="label">Câu hôm nay</div></div>
@@ -192,15 +195,16 @@
     // ---------- one day ----------
     function renderDay(dateISO) {
       const d = Hist.day(dateISO);
+      const editBtn = (kind, key) => `<td style="text-align:right;"><button class="hs-edit" data-k="${kind}" data-key="${esc(key)}" title="Sửa số liệu dòng này">✏️</button></td>`;
       const partRows = Object.keys(d.parts).sort().map(p => {
         const e = d.parts[p];
         return `<tr><td>${PART_LABEL[p] || 'Part ' + p}</td><td class="num">${e.n}</td>
-          <td class="num ok-t">${e.ok}</td><td class="num no-t">${e.n - e.ok}</td><td class="num">${pctCell(e.ok, e.n)}</td></tr>`;
+          <td class="num ok-t">${e.ok}</td><td class="num no-t">${e.n - e.ok}</td><td class="num">${pctCell(e.ok, e.n)}</td>${editBtn('parts', p)}</tr>`;
       }).join('');
       const featRows = Object.keys(d.feats).sort((a, b) => d.feats[b].n - d.feats[a].n).map(f => {
         const e = d.feats[f], m = Hist.FEATS[f] || Hist.FEATS.other;
         return `<tr><td>${m.icon} ${esc(m.label)}</td><td class="num">${e.n}</td>
-          <td class="num ok-t">${e.ok}</td><td class="num no-t">${e.n - e.ok}</td><td class="num">${pctCell(e.ok, e.n)}</td></tr>`;
+          <td class="num ok-t">${e.ok}</td><td class="num no-t">${e.n - e.ok}</td><td class="num">${pctCell(e.ok, e.n)}</td>${editBtn('feats', f)}</tr>`;
       }).join('');
       root.innerHTML = sidebar + `<main class="main">
         <div class="hs-back"><button class="btn ghost small" id="hs-back">← Tất cả các ngày</button></div>
@@ -213,18 +217,41 @@
           <div class="stat-card"><div class="big no-t">❌ ${d.total.wrong}</div><div class="label">Câu sai</div></div>
           <div class="stat-card accuracy"><div class="big">${d.total.pct}%</div><div class="label">Độ chính xác</div></div>
         </div>
-        <h3 class="section-title">Theo Part</h3>
+        <h3 class="section-title">Theo Part <span style="font-weight:700;font-size:12.5px;color:var(--text-mute);">— số liệu sai? bấm ✏️ để sửa dòng đó (chỉ ngày này)</span></h3>
         <table class="hs-table">
-          <tr><th>Phần</th><th style="text-align:right;">Số câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th></tr>
+          <tr><th>Phần</th><th style="text-align:right;">Số câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th><th></th></tr>
           ${partRows}
         </table>
         <h3 class="section-title">Theo chức năng</h3>
         <table class="hs-table">
-          <tr><th>Chức năng</th><th style="text-align:right;">Số câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th></tr>
+          <tr><th>Chức năng</th><th style="text-align:right;">Số câu</th><th style="text-align:right;">Đúng</th><th style="text-align:right;">Sai</th><th style="text-align:right;">Chính xác</th><th></th></tr>
           ${featRows}
         </table>` : '<div class="hs-empty" style="margin-top:18px;">Ngày này bạn chưa làm câu nào.</div>'}
       </main>`;
       document.getElementById('hs-back').onclick = () => { history.pushState({}, '', '/history'); render(); window.scrollTo({ top: 0 }); };
+      // A day's numbers can go wrong (a feature that double-counted, a run graded twice) and
+      // nothing else can put them right: the counters live only in this browser.
+      root.querySelectorAll('.hs-edit').forEach(b => b.addEventListener('click', () => {
+        const kind = b.dataset.k, key = b.dataset.key;
+        const cur = (kind === 'parts' ? d.parts : d.feats)[key] || { n: 0, ok: 0 };
+        const label = kind === 'parts'
+          ? (PART_LABEL[key] || 'Part ' + key).replace(/&amp;/g, '&')
+          : (Hist.FEATS[key] || Hist.FEATS.other).label;
+        const head = `${label} — ${fmtDate(dateISO)}`;
+        const nRaw = prompt(`${head}\nSố câu đã làm (0 = xoá dòng này):`, cur.n);
+        if (nRaw === null) return;
+        const n = parseInt(nRaw, 10);
+        if (isNaN(n) || n < 0) { alert('Số câu phải là một số nguyên không âm.'); return; }
+        let ok = 0;
+        if (n > 0) {
+          const okRaw = prompt(`${head}\nSố câu đúng (0–${n}):`, Math.min(cur.ok, n));
+          if (okRaw === null) return;
+          ok = parseInt(okRaw, 10);
+          if (isNaN(ok) || ok < 0 || ok > n) { alert(`Số câu đúng phải từ 0 đến ${n}.`); return; }
+        }
+        Hist.set(dateISO, kind, key, n, ok);
+        renderDay(dateISO);
+      }));
       window.scrollTo({ top: 0 });
     }
 
