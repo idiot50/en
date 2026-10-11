@@ -492,9 +492,9 @@
     let qPicks = {};        // question index -> chosen letter (reset for every exercise)
 
     // Vietnamese for every Part 3 question, keyed by the English question text. Only part of
-    // the data carries a translation inside its explanation (and that stays hidden until
-    // grading), so the questions are translated once into their own file. A translated
-    // question gives nothing of the answer away, so it is shown from the start.
+    // the data carries a translation inside its explanation, so the questions are translated
+    // once into their own file. It stays hidden until the exercise is graded: the question is
+    // met in English first, as in the test, and the Vietnamese comes out with the answers.
     let qVi = null;
     async function loadQuestionVi() {
       if (qVi) return;
@@ -527,7 +527,7 @@
         const vi = card.part === 3 && qVi ? qVi[(q.Question || '').trim()] : '';
         return `<div class="dt-q" data-qi="${qi}">
             <div class="dt-q-text">${qn ? esc(qn) + '. ' : ''}${esc(q.Question || '')}</div>
-            ${vi ? `<div class="dt-q-vi">${esc(vi)}</div>` : ''}
+            ${vi ? `<div class="dt-q-vi" hidden>${esc(vi)}</div>` : ''}
             <div class="dt-q-opts">${opts}</div>
             <div class="dt-q-fb" id="dt-qfb-${qi}"></div>
           </div>`;
@@ -571,6 +571,8 @@
         // mỗi câu hỏi là một câu Part 3/4 thật -> ghi vào lịch sử luyện tập
         try { if (window.Hist && chosen != null) Hist.add(partNo(), good, 'dictation'); } catch (e) {}
       });
+      // The Vietnamese of each question comes out with the answers.
+      root.querySelectorAll('.dt-q-vi').forEach(e => { e.hidden = false; });
       totalQ += n; totalQOk += ok;
       return { n, ok };
     }
