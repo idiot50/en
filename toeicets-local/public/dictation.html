@@ -285,7 +285,11 @@
       return hit;
     }
     const partNo = () => (mode === 'p2' ? 2 : mode === 'p4' ? 4 : 3);
-    const PASS_PCT = 80;   // chép đúng trên 80% -> tính là câu đúng trong Lịch sử luyện tập
+    const PASS_PCT = 80;   // Part 3/4: chép đúng trên 80% -> tính là câu đúng trong Lịch sử luyện tập
+    // Part 2 is one real question, so it counts as correct when the answer is right. The
+    // typed words only have to clear 40%: enough to show the clip was actually heard, so a
+    // lucky guess on A/B/C is not a correct question, without demanding a perfect transcript.
+    const P2_PASS_PCT = 40;
     function award(ok) { const st = State.load(); State.recordAnswer(st, 'dictation', 0, ok); }
     // ONE reusable <audio> element, "blessed" by playing a silent clip inside the user's
     // click. A blessed element keeps its right to play() even if sampling takes long
@@ -429,6 +433,7 @@
     // ---------- session ----------
     let items = [], idx = 0, totalBlanks = 0, totalHit = 0, skippedItems = 0;
     let totalQ = 0, totalQOk = 0;   // questions answered alongside the dictation (Part 2 answer, Part 3/4 questions)
+    let totalGraded = 0, totalPass = 0;   // exercises graded, and how many counted as a correct question
     async function start() {
       blessAudio();   // unlock the reusable audio element within this click
       const want = askCount();
@@ -456,7 +461,7 @@
           <div style="font-size:60px;">😢</div><h2>Không tìm được bài phù hợp</h2><a class="btn ghost" href="/dictation">Quay lại</a></div></main>`;
         return;
       }
-      idx = 0; totalBlanks = 0; totalHit = 0; skippedItems = 0; totalQ = 0; totalQOk = 0;
+      idx = 0; totalBlanks = 0; totalHit = 0; skippedItems = 0; totalQ = 0; totalQOk = 0; totalGraded = 0; totalPass = 0;
       renderItem();
     }
 
@@ -652,7 +657,9 @@
         totalBlanks += totWords; totalHit += hitWords;
         const pctAll = totWords ? Math.round(hitWords / totWords * 100) : 0;
         // Lịch sử: cả bài chép chính tả tính là MỘT câu; đúng trên 80% mới tính là câu đúng.
-        try { if (window.Hist) Hist.add(partNo(), pctAll > PASS_PCT, 'dictation'); } catch (e) {}
+        const pass = pctAll > PASS_PCT;
+        totalGraded++; if (pass) totalPass++;
+        try { if (window.Hist) Hist.add(partNo(), pass, 'dictation'); } catch (e) {}
         const qres = gradeQuestions(card);
         const uniq = Array.from(new Set(missedWords)).slice(0, 20);
         const missedHtml = uniq.length ? `
@@ -729,7 +736,9 @@
         });
         totalBlanks += inputs.length; totalHit += hit;
         const pctItem = inputs.length ? Math.round(hit / inputs.length * 100) : 0;
-        try { if (window.Hist) Hist.add(partNo(), pctItem > PASS_PCT, 'dictation'); } catch (e) {}
+        const pass = pctItem > PASS_PCT;
+        totalGraded++; if (pass) totalPass++;
+        try { if (window.Hist) Hist.add(partNo(), pass, 'dictation'); } catch (e) {}
         const qres = gradeQuestions(card);
         const missedHtml = missedWords.length ? `
           <div class="reveal-block" style="border-left-color:var(--red);">
@@ -800,7 +809,7 @@
         if (!step2.classList.contains('locked')) return;
         step2.classList.remove('locked');
         areas.forEach(a => { a.disabled = false; });
-        document.getElementById('dt-step2-d').textContent = 'Nghe lại rồi gõ nguyên văn từng câu: câu hỏi và ba câu trả lời. Ctrl+Enter để kiểm tra.';
+        document.getElementById('dt-step2-d').textContent = `Nghe lại rồi gõ nguyên văn từng câu: câu hỏi và ba câu trả lời. Bài tính là câu đúng khi chọn đúng đáp án và gõ đúng trên ${P2_PASS_PCT}% số từ. Ctrl+Enter để kiểm tra.`;
         checkBtn.disabled = false;
         cnt.textContent = typedCount();
         if (areas[0]) areas[0].focus();
@@ -811,8 +820,9 @@
       });
       checkBtn.addEventListener('click', () => {
         if (checkBtn.disabled || pick == null) return;
-        // The answer is coloured here and tallied on the finish screen. The history counts
-        // the exercise once, by its dictation, as the history page says it does.
+        // The answer is coloured here and tallied on the finish screen. The exercise counts
+        // once in the history: a correct question only if the answer is right and the typing
+        // clears P2_PASS_PCT.
         const good = pick === correct;
         root.querySelectorAll('#dt-abc button').forEach(b => {
           b.disabled = true; b.classList.remove('picked');
@@ -835,8 +845,13 @@
         });
         totalBlanks += totWords; totalHit += hitWords;
         const pctAll = totWords ? Math.round(hitWords / totWords * 100) : 0;
-        // Lịch sử: cả bài chép chính tả tính là MỘT câu; đúng trên 80% mới tính là câu đúng.
-        try { if (window.Hist) Hist.add(2, pctAll > PASS_PCT, 'dictation'); } catch (e) {}
+        // Lịch sử: cả bài tính là MỘT câu — đúng khi chọn đúng đáp án VÀ gõ đúng trên 40% số từ.
+        const pass = good && pctAll > P2_PASS_PCT;
+        totalGraded++; if (pass) totalPass++;
+        try { if (window.Hist) Hist.add(2, pass, 'dictation'); } catch (e) {}
+        const why = !good ? `chọn sai đáp án (${pick}, đúng là ${correct})`
+          : pass ? `chọn đúng đáp án, nghe đúng ${pctAll}% từ`
+          : `chọn đúng đáp án nhưng chỉ nghe đúng ${pctAll}% từ, cần trên ${P2_PASS_PCT}%`;
         const uniq = Array.from(new Set(missedWords)).slice(0, 20);
         const missedHtml = uniq.length ? `
           <div class="reveal-block" style="border-left-color:var(--red);">
@@ -847,7 +862,7 @@
         // number it opens with ("7,") is scrape residue.
         const explain = String(q.Explain || '').replace(/^\s*\d+\s*,\s*/, '');
         document.getElementById('dt-after').innerHTML = `
-          <div class="feedback ${pctAll >= 80 ? 'correct' : 'wrong'}"><b>${hitWords}/${totWords} từ đúng — ${pctAll}%</b>${pctAll === 100 ? ' — nghe quá chuẩn! 🎉' : ''} · Đáp án: <b>${good ? 'đúng ✅' : 'sai ❌'}</b></div>
+          <div class="feedback ${pass ? 'correct' : 'wrong'}"><b>${pass ? '✅ Tính là câu đúng' : '❌ Tính là câu sai'}</b> — ${why} · ${hitWords}/${totWords} từ${pctAll === 100 ? ' — nghe quá chuẩn! 🎉' : ''}</div>
           ${missedHtml}
           ${explain ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch &amp; giải thích</div><div class="body">${QuizCore.nl2br(explain)}</div></div>` : ''}`;
         document.getElementById('dt-after').querySelectorAll('.missed button').forEach(b =>
@@ -855,7 +870,7 @@
         const au = document.getElementById('dt-audio');
         if (au) { au.removeAttribute('data-locked'); const pe = document.getElementById('dt-plays'); if (pe) pe.textContent = 'Nghe lại thoải mái'; }
         const tb = root.querySelector('.group-toolbar');
-        tb.innerHTML = `<span class="pick-count">${pctAll}% chính xác · đáp án ${good ? 'đúng' : 'sai'}</span><span style="flex:1"></span>
+        tb.innerHTML = `<span class="pick-count">${pass ? '✅ Câu đúng' : '❌ Câu sai'} · ${pctAll}% từ</span><span style="flex:1"></span>
           <button class="btn blue" id="dt-next">${idx + 1 >= items.length ? 'Xong ✓' : 'Bài tiếp →'}</button>`;
         document.getElementById('dt-next').addEventListener('click', () => { idx++; renderItem(); });
       });
@@ -871,6 +886,7 @@
           <div style="font-size:76px;">${pct >= 85 ? '🏆' : pct >= 60 ? '🎉' : '💪'}</div>
           <h2>Chép chính tả xong!</h2>
           <p style="color:var(--text-mute);margin-top:6px;">Nghe đúng ${totalHit}/${totalBlanks} từ · ${pct}%</p>
+          ${totalGraded ? `<p style="color:var(--text-mute);font-size:13.5px;margin-top:4px;">✅ Bài tính là câu đúng: <b>${totalPass}/${totalGraded}</b> <span style="font-size:12px;">(${mode === 'p2' ? `chọn đúng đáp án và gõ đúng trên ${P2_PASS_PCT}% số từ` : `chép đúng trên ${PASS_PCT}%`})</span></p>` : ''}
           ${totalQ ? `<p style="color:var(--text-mute);font-size:13.5px;margin-top:4px;">📋 Câu hỏi làm kèm: đúng <b>${totalQOk}/${totalQ}</b></p>` : ''}
           ${skippedItems ? `<p style="color:var(--text-mute);font-size:13px;margin-top:4px;">⏭ Bỏ qua ${skippedItems} bài vì không tải được audio — không tính vào kết quả.</p>` : ''}
           <div class="stats-grid" style="margin-top:22px;">
