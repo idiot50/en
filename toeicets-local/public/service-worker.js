@@ -4,8 +4,8 @@
 //   - Data (CSV, images đề): network-first with cache fallback
 //   - Audio (B2 bucket, external): network-only (too large to cache 2GB)
 
-const CACHE_NAME = 'toeic-quest-v45';
-const RUNTIME_CACHE = 'toeic-runtime-v45';
+const CACHE_NAME = 'toeic-quest-v46';
+const RUNTIME_CACHE = 'toeic-runtime-v46';
 
 // Pre-cache on install (app shell)
 const APP_SHELL = [
@@ -80,6 +80,10 @@ self.addEventListener('fetch', event => {
 
   // Skip non-GET
   if (req.method !== 'GET') return;
+
+  // /cambridge/ is a separate site (Bé Luyện Thi Cambridge) sharing this host — never touch it,
+  // otherwise its JS/data would be served cache-first and updates would not reach users.
+  if (new URL(req.url).pathname.startsWith('/cambridge/')) return;
 
   // Skip B2 audio (too large, ~2GB total — không cache)
   if (url.hostname === 'f005.backblazeb2.com') {
