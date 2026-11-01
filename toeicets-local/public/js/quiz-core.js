@@ -183,8 +183,6 @@ window.QuizCore = (function () {
       return `${subdir === 'audio' ? AUDIO_BASE_URL : IMAGE_BASE_URL}/data/${rel}`;
     }
     const path = `/data/${year}/test${n}/${subdir}/${s}`;
-    // The local-only Study4 sets (see catalog.js) are on neither B2 nor jsDelivr.
-    if (/^Study4-/.test(String(year))) return path;
     return (subdir === 'audio' ? AUDIO_BASE_URL : IMAGE_BASE_URL) + path;
   }
 

@@ -7,13 +7,9 @@ const Catalog = (() => {
     { id: '2023', label: 'TOEIC 2023' },
     { id: '2022', label: 'TOEIC 2022' },
     { id: 'Economy', label: 'TOEIC Cơ bản' },
+    { id: 'Study4-C1', label: 'Study4 Collection 1' },
+    { id: 'Study4-C2', label: 'Study4 Collection 2' },
   ];
-  // Study4 Collection 1/2 are a personal offline copy: the files live outside every repo
-  // (D:\en\study4-local, served by toeicets-local/server.py) and must never be published,
-  // so these sets exist only when the app runs on this machine.
-  if (typeof location !== 'undefined' && /^(localhost|127\.0\.0\.1|\[::1\])$/.test(location.hostname)) {
-    YEARS.push({ id: 'Study4-C1', label: 'Study4 Collection 1' }, { id: 'Study4-C2', label: 'Study4 Collection 2' });
-  }
   function tests(year) {
     return Array.from({ length: 10 }, (_, i) => ({
       id: `${year}/test${i+1}`,

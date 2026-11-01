@@ -12,22 +12,9 @@ from urllib.parse import urlparse
 PORT = 8000
 ROOT = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'public')
 
-# Study4 Collection 1/2: a personal offline copy kept outside every repo, never published.
-STUDY4_ROOT = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'study4-local', 'data')
-
 class Handler(http.server.SimpleHTTPRequestHandler):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, directory=ROOT, **kwargs)
-
-    def translate_path(self, path):
-        p = urlparse(path).path
-        if p.startswith('/data/Study4-'):
-            from urllib.parse import unquote
-            rel = os.path.normpath(unquote(p[len('/data/'):])).lstrip(os.sep)
-            full = os.path.normpath(os.path.join(STUDY4_ROOT, rel))
-            if full.startswith(STUDY4_ROOT + os.sep):
-                return full
-        return super().translate_path(path)
 
     def do_GET(self):
         parsed = urlparse(self.path)
