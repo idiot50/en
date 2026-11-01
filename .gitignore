@@ -32,3 +32,6 @@ toeicets-local/render-snapshot.html
 
 # Dependencies
 node_modules/
+
+# Đề Study4 tải về để học cá nhân — KHÔNG commit/deploy
+study4-local/
