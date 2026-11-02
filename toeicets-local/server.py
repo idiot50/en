@@ -39,6 +39,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             '/profile': '/profile.html',
             '/grammar': '/grammar.html',
             '/grammar10': '/grammar10.html',
+            '/verbs': '/verbs.html',
             '/vocabulary': '/vocabulary.html',
         }
         if path in routes:

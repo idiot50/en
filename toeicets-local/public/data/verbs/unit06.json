@@ -1,0 +1,2253 @@
+{
+ "unit": 6,
+ "title": "V + giới từ cố định (2)",
+ "icon": "🔗",
+ "intro": "Nhóm động từ + giới từ cố định này gần như không thể đoán: bạn phải học cả cụm (participate IN, benefit FROM, belong TO). Trong Part 5, đề thường hỏi chọn giới từ đúng; trong Part 6 và 7, hiểu cụm giúp bạn dịch đúng. Hai mẹo quan trọng: look forward to / object to có 'to' là giới từ nên theo sau là V-ing; và result in / result from chỉ hai chiều ngược nhau của quan hệ nguyên nhân – kết quả.",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "participate / engage / invest / specialize / succeed + in + O/V-ing",
+   "invest in new equipment",
+   "đầu tư vào thiết bị mới"
+  ],
+  [
+   "benefit / differ / recover / withdraw / result + from + O",
+   "benefit from the policy",
+   "được hưởng lợi từ chính sách"
+  ],
+  [
+   "belong to / lead to / subscribe to / proceed with + O",
+   "lead to delays",
+   "dẫn đến sự chậm trễ"
+  ],
+  [
+   "look forward to / object to + V-ing",
+   "look forward to meeting you",
+   "mong được gặp bạn"
+  ],
+  [
+   "increase / rise / fall + by (chênh lệch) / to (mức đạt)",
+   "rose by 8% to $2 million",
+   "tăng 8% lên 2 triệu đô la"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u06-participate",
+   "p": "participate in sth",
+   "form": "participate + in + O",
+   "vi": "tham gia vào (hoạt động, cuộc khảo sát, sự kiện)",
+   "alt": "= take part in sth",
+   "note": "Bẫy: KHÔNG nói 'participate sth' hay 'participate at'. Danh từ: participation in. Người tham gia: participant.",
+   "core": true,
+   "vs": "join sth = gia nhập, tham gia (KHÔNG giới từ, Bài 5)",
+   "ex": [
+    {
+     "en": "More than 200 employees participated in the charity run.",
+     "vi": "Hơn 200 nhân viên đã tham gia cuộc chạy từ thiện.",
+     "chunks": [
+      {
+       "t": "More than 200 employees",
+       "r": "S",
+       "vi": "hơn 200 nhân viên"
+      },
+      {
+       "t": "participated in",
+       "r": "V",
+       "vi": "đã tham gia",
+       "k": true
+      },
+      {
+       "t": "the charity run.",
+       "r": "O",
+       "vi": "cuộc chạy từ thiện.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Customers can participate in the survey online.",
+     "vi": "Khách hàng có thể tham gia khảo sát trực tuyến.",
+     "chunks": [
+      {
+       "t": "Customers",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "can participate in",
+       "r": "V",
+       "vi": "có thể tham gia",
+       "k": true
+      },
+      {
+       "t": "the survey",
+       "r": "O",
+       "vi": "cuộc khảo sát",
+       "k": true
+      },
+      {
+       "t": "online.",
+       "r": "trạng ngữ",
+       "vi": "trực tuyến."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-engage",
+   "p": "engage in sth",
+   "form": "engage + in + O / V-ing",
+   "vi": "tham gia, dấn thân vào (một hoạt động)",
+   "note": "engage in + hoạt động (thường là danh từ / V-ing): engage in trade, engage in negotiations. Cấu trúc bị động be engaged in = đang bận làm gì.",
+   "vs": "participate in = tham gia một sự kiện cụ thể; engage in = dính vào một loại hoạt động",
+   "ex": [
+    {
+     "en": "The firm does not engage in illegal practices.",
+     "vi": "Công ty không tham gia vào các hoạt động bất hợp pháp.",
+     "chunks": [
+      {
+       "t": "The firm",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "does not engage in",
+       "r": "V",
+       "vi": "không tham gia vào",
+       "k": true
+      },
+      {
+       "t": "illegal practices.",
+       "r": "O",
+       "vi": "các hoạt động bất hợp pháp.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Staff may not engage in outside work during office hours.",
+     "vi": "Nhân viên không được làm công việc bên ngoài trong giờ hành chính.",
+     "chunks": [
+      {
+       "t": "Staff",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "may not engage in",
+       "r": "V",
+       "vi": "không được làm",
+       "k": true
+      },
+      {
+       "t": "outside work",
+       "r": "O",
+       "vi": "công việc bên ngoài",
+       "k": true
+      },
+      {
+       "t": "during office hours.",
+       "r": "trạng ngữ",
+       "vi": "trong giờ hành chính."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-invest",
+   "p": "invest (money) in sth",
+   "form": "invest + in + O / V-ing",
+   "vi": "đầu tư (tiền) vào cái gì",
+   "note": "Bẫy: KHÔNG nói 'invest sth for/to'. Có thể chen số tiền: invest $2 million in new equipment. Danh từ: an investment in sth.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The company invested $2 million in new equipment.",
+     "vi": "Công ty đã đầu tư 2 triệu đô la vào thiết bị mới.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "invested",
+       "r": "V",
+       "vi": "đã đầu tư",
+       "k": true
+      },
+      {
+       "t": "$2 million",
+       "r": "O",
+       "vi": "2 triệu đô la"
+      },
+      {
+       "t": "in new equipment.",
+       "r": "giới từ + O",
+       "vi": "vào thiết bị mới.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Many firms are investing in renewable energy.",
+     "vi": "Nhiều công ty đang đầu tư vào năng lượng tái tạo.",
+     "chunks": [
+      {
+       "t": "Many firms",
+       "r": "S",
+       "vi": "nhiều công ty"
+      },
+      {
+       "t": "are investing in",
+       "r": "V",
+       "vi": "đang đầu tư vào",
+       "k": true
+      },
+      {
+       "t": "renewable energy.",
+       "r": "O",
+       "vi": "năng lượng tái tạo.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-specialize",
+   "p": "specialize in sth",
+   "form": "specialize + in + O / V-ing",
+   "vi": "chuyên về (lĩnh vực)",
+   "note": "Danh từ: a specialty; người chuyên gia: a specialist. Sau in là danh từ hoặc V-ing: specialize in designing.",
+   "ex": [
+    {
+     "en": "Our law firm specializes in intellectual property.",
+     "vi": "Công ty luật của chúng tôi chuyên về sở hữu trí tuệ.",
+     "chunks": [
+      {
+       "t": "Our law firm",
+       "r": "S",
+       "vi": "công ty luật của chúng tôi"
+      },
+      {
+       "t": "specializes in",
+       "r": "V",
+       "vi": "chuyên về",
+       "k": true
+      },
+      {
+       "t": "intellectual property.",
+       "r": "O",
+       "vi": "sở hữu trí tuệ.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The agency specializes in organizing corporate events.",
+     "vi": "Công ty này chuyên tổ chức các sự kiện doanh nghiệp.",
+     "chunks": [
+      {
+       "t": "The agency",
+       "r": "S",
+       "vi": "công ty này"
+      },
+      {
+       "t": "specializes in",
+       "r": "V",
+       "vi": "chuyên",
+       "k": true
+      },
+      {
+       "t": "organizing",
+       "r": "V-ing",
+       "vi": "tổ chức",
+       "k": true
+      },
+      {
+       "t": "corporate events.",
+       "r": "O",
+       "vi": "các sự kiện doanh nghiệp."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-succeed",
+   "p": "succeed in V-ing",
+   "form": "succeed + in + V-ing / N",
+   "vi": "thành công trong việc gì",
+   "note": "succeed in + V-ing: thành công làm được việc gì. Danh từ: success in. Bẫy: 'succeed to V' sai; succeed sb (không giới từ) lại nghĩa là kế nhiệm ai.",
+   "ex": [
+    {
+     "en": "The team succeeded in reducing production costs.",
+     "vi": "Nhóm đã thành công trong việc cắt giảm chi phí sản xuất.",
+     "chunks": [
+      {
+       "t": "The team",
+       "r": "S",
+       "vi": "nhóm"
+      },
+      {
+       "t": "succeeded in",
+       "r": "V",
+       "vi": "đã thành công trong việc",
+       "k": true
+      },
+      {
+       "t": "reducing",
+       "r": "V-ing",
+       "vi": "cắt giảm",
+       "k": true
+      },
+      {
+       "t": "production costs.",
+       "r": "O",
+       "vi": "chi phí sản xuất."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "We succeeded in winning the contract.",
+     "vi": "Chúng tôi đã thành công trong việc giành được hợp đồng.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "succeeded in",
+       "r": "V",
+       "vi": "đã thành công trong việc",
+       "k": true
+      },
+      {
+       "t": "winning",
+       "r": "V-ing",
+       "vi": "giành được",
+       "k": true
+      },
+      {
+       "t": "the contract.",
+       "r": "O",
+       "vi": "hợp đồng."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-result",
+   "p": "result in sth / result from sth",
+   "form": "result + in (kết quả) / from (nguyên nhân) + O",
+   "vi": "dẫn đến (kết quả) / do bởi, xuất phát từ (nguyên nhân)",
+   "note": "Nhớ chiều mũi tên: NGUYÊN NHÂN result in KẾT QUẢ; KẾT QUẢ result from NGUYÊN NHÂN. Không dùng bị động.",
+   "core": true,
+   "vs": "lead to sth = dẫn đến (giống result in)",
+   "ex": [
+    {
+     "en": "The new system resulted in a significant increase in sales.",
+     "vi": "Hệ thống mới đã dẫn đến sự tăng trưởng đáng kể về doanh số.",
+     "chunks": [
+      {
+       "t": "The new system",
+       "r": "S",
+       "vi": "hệ thống mới"
+      },
+      {
+       "t": "resulted in",
+       "r": "V",
+       "vi": "đã dẫn đến",
+       "k": true
+      },
+      {
+       "t": "a significant increase",
+       "r": "O",
+       "vi": "sự tăng trưởng đáng kể",
+       "k": true
+      },
+      {
+       "t": "in sales.",
+       "r": "giới từ + O",
+       "vi": "về doanh số."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The delay resulted from a shortage of materials.",
+     "vi": "Sự chậm trễ là do thiếu nguyên vật liệu.",
+     "chunks": [
+      {
+       "t": "The delay",
+       "r": "S",
+       "vi": "sự chậm trễ"
+      },
+      {
+       "t": "resulted from",
+       "r": "V",
+       "vi": "là do",
+       "k": true
+      },
+      {
+       "t": "a shortage of materials.",
+       "r": "O",
+       "vi": "thiếu nguyên vật liệu.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-consist",
+   "p": "consist of sth",
+   "form": "consist + of + O",
+   "vi": "gồm có, bao gồm",
+   "note": "Bẫy: KHÔNG dùng bị động ('be consisted of' là sai) và không tiếp diễn. consist of + danh từ.",
+   "ex": [
+    {
+     "en": "The committee consists of five senior managers.",
+     "vi": "Ủy ban gồm có năm quản lý cấp cao.",
+     "chunks": [
+      {
+       "t": "The committee",
+       "r": "S",
+       "vi": "ủy ban"
+      },
+      {
+       "t": "consists of",
+       "r": "V",
+       "vi": "gồm có",
+       "k": true
+      },
+      {
+       "t": "five senior managers.",
+       "r": "O",
+       "vi": "năm quản lý cấp cao.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The package consists of a laptop, a charger, and a carrying case.",
+     "vi": "Gói sản phẩm bao gồm một máy tính xách tay, một bộ sạc và một túi đựng.",
+     "chunks": [
+      {
+       "t": "The package",
+       "r": "S",
+       "vi": "gói sản phẩm"
+      },
+      {
+       "t": "consists of",
+       "r": "V",
+       "vi": "bao gồm",
+       "k": true
+      },
+      {
+       "t": "a laptop, a charger, and a carrying case.",
+       "r": "O",
+       "vi": "một máy tính xách tay, một bộ sạc và một túi đựng.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-benefit",
+   "p": "benefit from sth",
+   "form": "benefit + from + O",
+   "vi": "được lợi, hưởng lợi từ",
+   "alt": "benefit sb = mang lại lợi ích cho ai (không giới từ)",
+   "note": "benefit from + cái làm mình được lợi. Đảo lại: sth benefits sb. Bẫy: 'benefit of' chỉ dùng với danh từ (the benefit of).",
+   "core": true,
+   "ex": [
+    {
+     "en": "Small businesses will benefit from the new tax policy.",
+     "vi": "Doanh nghiệp nhỏ sẽ được hưởng lợi từ chính sách thuế mới.",
+     "chunks": [
+      {
+       "t": "Small businesses",
+       "r": "S",
+       "vi": "doanh nghiệp nhỏ"
+      },
+      {
+       "t": "will benefit from",
+       "r": "V",
+       "vi": "sẽ được hưởng lợi từ",
+       "k": true
+      },
+      {
+       "t": "the new tax policy.",
+       "r": "O",
+       "vi": "chính sách thuế mới.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Employees benefit from flexible working hours.",
+     "vi": "Nhân viên được lợi nhờ giờ làm việc linh hoạt.",
+     "chunks": [
+      {
+       "t": "Employees",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "benefit from",
+       "r": "V",
+       "vi": "được lợi nhờ",
+       "k": true
+      },
+      {
+       "t": "flexible working hours.",
+       "r": "O",
+       "vi": "giờ làm việc linh hoạt.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-differ",
+   "p": "differ from sth",
+   "form": "differ + from + O",
+   "vi": "khác với",
+   "alt": "= be different from sth",
+   "note": "differ from (động từ) = be different from (tính từ). Có thể thêm in sth: differ in price. Không nói 'differ than/with'.",
+   "ex": [
+    {
+     "en": "Our approach differs from that of our competitors.",
+     "vi": "Cách tiếp cận của chúng tôi khác với cách tiếp cận của các đối thủ.",
+     "chunks": [
+      {
+       "t": "Our approach",
+       "r": "S",
+       "vi": "cách tiếp cận của chúng tôi"
+      },
+      {
+       "t": "differs from",
+       "r": "V",
+       "vi": "khác với",
+       "k": true
+      },
+      {
+       "t": "that of our competitors.",
+       "r": "O",
+       "vi": "cách tiếp cận của các đối thủ.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The new model differs from the old one in several ways.",
+     "vi": "Mẫu mới khác với mẫu cũ ở nhiều điểm.",
+     "chunks": [
+      {
+       "t": "The new model",
+       "r": "S",
+       "vi": "mẫu mới"
+      },
+      {
+       "t": "differs from",
+       "r": "V",
+       "vi": "khác với",
+       "k": true
+      },
+      {
+       "t": "the old one",
+       "r": "O",
+       "vi": "mẫu cũ",
+       "k": true
+      },
+      {
+       "t": "in several ways.",
+       "r": "giới từ + O",
+       "vi": "ở nhiều điểm."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-belong",
+   "p": "belong to sb / sth",
+   "form": "belong + to + O",
+   "vi": "thuộc về, thuộc sở hữu của",
+   "note": "Bẫy: KHÔNG dùng bị động ('be belonged to' sai) và không dùng tiếp diễn. belong to + người / tổ chức.",
+   "ex": [
+    {
+     "en": "This parking space belongs to the accounting department.",
+     "vi": "Chỗ đậu xe này thuộc về phòng kế toán.",
+     "chunks": [
+      {
+       "t": "This parking space",
+       "r": "S",
+       "vi": "chỗ đậu xe này"
+      },
+      {
+       "t": "belongs to",
+       "r": "V",
+       "vi": "thuộc về",
+       "k": true
+      },
+      {
+       "t": "the accounting department.",
+       "r": "O",
+       "vi": "phòng kế toán.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The building belongs to a local investment firm.",
+     "vi": "Tòa nhà thuộc sở hữu của một công ty đầu tư địa phương.",
+     "chunks": [
+      {
+       "t": "The building",
+       "r": "S",
+       "vi": "tòa nhà"
+      },
+      {
+       "t": "belongs to",
+       "r": "V",
+       "vi": "thuộc sở hữu của",
+       "k": true
+      },
+      {
+       "t": "a local investment firm.",
+       "r": "O",
+       "vi": "một công ty đầu tư địa phương.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-inquire",
+   "p": "inquire about sth",
+   "form": "inquire + about + O",
+   "vi": "hỏi thông tin, hỏi han về cái gì",
+   "alt": "= enquire about sth; make an inquiry about sth",
+   "note": "Thường gặp trong thư mở đầu: 'I am writing to inquire about ...'. Có thể theo sau bởi whether/if/wh-word: inquire whether the room is available. Danh từ: an inquiry.",
+   "core": true,
+   "ex": [
+    {
+     "en": "A customer called to inquire about the delivery date.",
+     "vi": "Một khách hàng đã gọi để hỏi về ngày giao hàng.",
+     "chunks": [
+      {
+       "t": "A customer",
+       "r": "S",
+       "vi": "một khách hàng"
+      },
+      {
+       "t": "called",
+       "r": "V",
+       "vi": "đã gọi"
+      },
+      {
+       "t": "to inquire about",
+       "r": "to V",
+       "vi": "để hỏi về",
+       "k": true
+      },
+      {
+       "t": "the delivery date.",
+       "r": "O",
+       "vi": "ngày giao hàng.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "I am writing to inquire about the availability of the conference room.",
+     "vi": "Tôi viết thư này để hỏi về tình trạng còn trống của phòng hội nghị.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "am writing",
+       "r": "V",
+       "vi": "viết thư này"
+      },
+      {
+       "t": "to inquire about",
+       "r": "to V",
+       "vi": "để hỏi về",
+       "k": true
+      },
+      {
+       "t": "the availability of the conference room.",
+       "r": "O",
+       "vi": "tình trạng còn trống của phòng hội nghị.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-register",
+   "p": "register for sth",
+   "form": "register + for + O",
+   "vi": "đăng ký (khóa học, hội thảo, sự kiện)",
+   "alt": "register with + tổ chức: register with the city office",
+   "note": "for + thứ mình đăng ký tham gia; with + nơi đăng ký. Danh từ: registration for. Cũng có: register for a class/seminar/course.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Participants must register for the seminar by March 5.",
+     "vi": "Người tham gia phải đăng ký dự hội thảo trước ngày 5 tháng Ba.",
+     "chunks": [
+      {
+       "t": "Participants",
+       "r": "S",
+       "vi": "người tham gia"
+      },
+      {
+       "t": "must register for",
+       "r": "V",
+       "vi": "phải đăng ký",
+       "k": true
+      },
+      {
+       "t": "the seminar",
+       "r": "O",
+       "vi": "hội thảo",
+       "k": true
+      },
+      {
+       "t": "by March 5.",
+       "r": "trạng ngữ",
+       "vi": "trước ngày 5 tháng Ba."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "You can register for the course on our website.",
+     "vi": "Quý khách có thể đăng ký khóa học trên trang web của chúng tôi.",
+     "chunks": [
+      {
+       "t": "You",
+       "r": "S",
+       "vi": "quý khách"
+      },
+      {
+       "t": "can register for",
+       "r": "V",
+       "vi": "có thể đăng ký",
+       "k": true
+      },
+      {
+       "t": "the course",
+       "r": "O",
+       "vi": "khóa học",
+       "k": true
+      },
+      {
+       "t": "on our website.",
+       "r": "giới từ + O",
+       "vi": "trên trang web của chúng tôi."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-look-forward",
+   "p": "look forward to V-ing",
+   "form": "look forward + to + V-ing / N",
+   "vi": "mong đợi, trông mong (điều sẽ xảy ra)",
+   "note": "Bẫy kinh điển: to là GIỚI TỪ, nên theo sau là V-ing/danh từ: look forward to hearing, KHÔNG 'look forward to hear'. Dùng nhiều ở cuối thư: I look forward to your reply.",
+   "core": true,
+   "ex": [
+    {
+     "en": "We look forward to working with you.",
+     "vi": "Chúng tôi mong được làm việc cùng quý vị.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "look forward to",
+       "r": "V",
+       "vi": "mong",
+       "k": true
+      },
+      {
+       "t": "working",
+       "r": "V-ing",
+       "vi": "được làm việc",
+       "k": true
+      },
+      {
+       "t": "with you.",
+       "r": "giới từ + O",
+       "vi": "cùng quý vị."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "I look forward to hearing from you soon.",
+     "vi": "Tôi mong sớm nhận được hồi âm của quý vị.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "look forward to",
+       "r": "V",
+       "vi": "mong",
+       "k": true
+      },
+      {
+       "t": "hearing",
+       "r": "V-ing",
+       "vi": "sớm nhận được",
+       "k": true
+      },
+      {
+       "t": "from you soon.",
+       "r": "giới từ + O",
+       "vi": "hồi âm của quý vị."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-object",
+   "p": "object to sth / V-ing",
+   "form": "object + to + O / V-ing",
+   "vi": "phản đối, không đồng ý với",
+   "note": "Giống look forward to: to là giới từ nên theo sau là V-ing hoặc danh từ: object to working overtime. Danh từ: an objection to.",
+   "ex": [
+    {
+     "en": "Some employees object to working on weekends.",
+     "vi": "Một số nhân viên phản đối việc làm vào cuối tuần.",
+     "chunks": [
+      {
+       "t": "Some employees",
+       "r": "S",
+       "vi": "một số nhân viên"
+      },
+      {
+       "t": "object to",
+       "r": "V",
+       "vi": "phản đối",
+       "k": true
+      },
+      {
+       "t": "working",
+       "r": "V-ing",
+       "vi": "việc làm",
+       "k": true
+      },
+      {
+       "t": "on weekends.",
+       "r": "trạng ngữ",
+       "vi": "vào cuối tuần."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The residents objected to the plan to build a new highway.",
+     "vi": "Cư dân đã phản đối kế hoạch xây một tuyến đường cao tốc mới.",
+     "chunks": [
+      {
+       "t": "The residents",
+       "r": "S",
+       "vi": "cư dân"
+      },
+      {
+       "t": "objected to",
+       "r": "V",
+       "vi": "đã phản đối",
+       "k": true
+      },
+      {
+       "t": "the plan",
+       "r": "O",
+       "vi": "kế hoạch",
+       "k": true
+      },
+      {
+       "t": "to build a new highway.",
+       "r": "to V",
+       "vi": "xây một tuyến đường cao tốc mới."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-lead",
+   "p": "lead to sth",
+   "form": "lead + to + O / V-ing",
+   "vi": "dẫn đến (kết quả)",
+   "note": "lead to + danh từ/V-ing: lead to delays, lead to increasing costs. Thường gặp với kết quả không tốt: misunderstandings, delays.",
+   "core": true,
+   "vs": "result in sth = dẫn đến (cùng nghĩa); result from sth = do bởi",
+   "ex": [
+    {
+     "en": "Poor communication often leads to misunderstandings.",
+     "vi": "Giao tiếp kém thường dẫn đến hiểu lầm.",
+     "chunks": [
+      {
+       "t": "Poor communication",
+       "r": "S",
+       "vi": "giao tiếp kém"
+      },
+      {
+       "t": "often leads to",
+       "r": "V",
+       "vi": "thường dẫn đến",
+       "k": true
+      },
+      {
+       "t": "misunderstandings.",
+       "r": "O",
+       "vi": "những hiểu lầm.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The investigation led to several policy changes.",
+     "vi": "Cuộc điều tra đã dẫn đến nhiều thay đổi chính sách.",
+     "chunks": [
+      {
+       "t": "The investigation",
+       "r": "S",
+       "vi": "cuộc điều tra"
+      },
+      {
+       "t": "led to",
+       "r": "V",
+       "vi": "đã dẫn đến",
+       "k": true
+      },
+      {
+       "t": "several policy changes.",
+       "r": "O",
+       "vi": "nhiều thay đổi chính sách.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-agree",
+   "p": "agree with sb / agree on sth",
+   "form": "agree + with + O-người / on + O-vật",
+   "vi": "đồng ý với ai (quan điểm) / thống nhất về điều gì",
+   "alt": "agree to sth = chấp thuận đề nghị; agree to V xem Bài 1",
+   "note": "Chọn giới từ theo nghĩa: agree WITH sb/ý kiến = đồng ý với; agree ON sth = nhất trí về (giá, ngày, điều khoản); agree TO a plan = chấp thuận.",
+   "core": true,
+   "ex": [
+    {
+     "en": "I agree with Ms. Chen that we should postpone the launch.",
+     "vi": "Tôi đồng ý với cô Chen rằng chúng ta nên hoãn buổi ra mắt.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "agree with",
+       "r": "V",
+       "vi": "đồng ý với",
+       "k": true
+      },
+      {
+       "t": "Ms. Chen",
+       "r": "O-người",
+       "vi": "cô Chen",
+       "k": true
+      },
+      {
+       "t": "that we should postpone the launch.",
+       "r": "mệnh đề",
+       "vi": "rằng chúng ta nên hoãn buổi ra mắt."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The two companies agreed on a price for the contract.",
+     "vi": "Hai công ty đã thống nhất mức giá cho hợp đồng.",
+     "chunks": [
+      {
+       "t": "The two companies",
+       "r": "S",
+       "vi": "hai công ty"
+      },
+      {
+       "t": "agreed on",
+       "r": "V",
+       "vi": "đã thống nhất",
+       "k": true
+      },
+      {
+       "t": "a price",
+       "r": "O",
+       "vi": "mức giá",
+       "k": true
+      },
+      {
+       "t": "for the contract.",
+       "r": "giới từ + O",
+       "vi": "cho hợp đồng."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-complain",
+   "p": "complain to sb about sth",
+   "form": "complain + to + O-người + about + O-vật",
+   "vi": "phàn nàn với ai về điều gì",
+   "note": "to + người nghe; about + điều bất mãn. Bẫy: KHÔNG nói 'complain sb' hay 'complain sth'. complain of = kêu về (đau ốm). Danh từ: a complaint about.",
+   "ex": [
+    {
+     "en": "Several guests complained to the manager about the noise.",
+     "vi": "Vài vị khách đã phàn nàn với quản lý về tiếng ồn.",
+     "chunks": [
+      {
+       "t": "Several guests",
+       "r": "S",
+       "vi": "vài vị khách"
+      },
+      {
+       "t": "complained to",
+       "r": "V",
+       "vi": "đã phàn nàn với",
+       "k": true
+      },
+      {
+       "t": "the manager",
+       "r": "O-người",
+       "vi": "quản lý",
+       "k": true
+      },
+      {
+       "t": "about the noise.",
+       "r": "giới từ + O",
+       "vi": "về tiếng ồn.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Customers have complained about long waiting times.",
+     "vi": "Khách hàng đã phàn nàn về thời gian chờ lâu.",
+     "chunks": [
+      {
+       "t": "Customers",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "have complained about",
+       "r": "V",
+       "vi": "đã phàn nàn về",
+       "k": true
+      },
+      {
+       "t": "long waiting times.",
+       "r": "O",
+       "vi": "thời gian chờ lâu.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-increase",
+   "p": "increase / rise / fall by X% / to X",
+   "form": "increase / rise / fall + by (mức chênh) / to (mức đạt)",
+   "vi": "tăng / giảm một lượng (by) / lên-xuống tới mức (to)",
+   "note": "by + phần chênh lệch (by 8 percent); to + con số đạt được (to $12 million). Có thể đi cùng: rose by 5% to $2 million. Bẫy: rise (không tân ngữ) ≠ raise (có tân ngữ).",
+   "core": true,
+   "vs": "raise sth = nâng lên (ngoại động từ)",
+   "ex": [
+    {
+     "en": "Profits rose by 8 percent in the second quarter.",
+     "vi": "Lợi nhuận đã tăng 8% trong quý hai.",
+     "chunks": [
+      {
+       "t": "Profits",
+       "r": "S",
+       "vi": "lợi nhuận"
+      },
+      {
+       "t": "rose",
+       "r": "V",
+       "vi": "đã tăng",
+       "k": true
+      },
+      {
+       "t": "by 8 percent",
+       "r": "giới từ + O",
+       "vi": "8%",
+       "k": true
+      },
+      {
+       "t": "in the second quarter.",
+       "r": "trạng ngữ",
+       "vi": "trong quý hai."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The unemployment rate fell to 4 percent last month.",
+     "vi": "Tỷ lệ thất nghiệp đã giảm xuống còn 4% vào tháng trước.",
+     "chunks": [
+      {
+       "t": "The unemployment rate",
+       "r": "S",
+       "vi": "tỷ lệ thất nghiệp"
+      },
+      {
+       "t": "fell",
+       "r": "V",
+       "vi": "đã giảm",
+       "k": true
+      },
+      {
+       "t": "to 4 percent",
+       "r": "giới từ + O",
+       "vi": "xuống còn 4%",
+       "k": true
+      },
+      {
+       "t": "last month.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng trước."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-proceed",
+   "p": "proceed with sth",
+   "form": "proceed + with + O",
+   "vi": "tiến hành, tiếp tục (kế hoạch)",
+   "alt": "proceed to V = chuyển sang làm việc gì tiếp theo",
+   "note": "proceed with + kế hoạch/dự án: tiếp tục tiến hành. proceed to the next step = chuyển sang bước tiếp.",
+   "ex": [
+    {
+     "en": "The board decided to proceed with the merger.",
+     "vi": "Hội đồng quản trị đã quyết định tiến hành vụ sáp nhập.",
+     "chunks": [
+      {
+       "t": "The board",
+       "r": "S",
+       "vi": "hội đồng quản trị"
+      },
+      {
+       "t": "decided",
+       "r": "V",
+       "vi": "đã quyết định"
+      },
+      {
+       "t": "to proceed with",
+       "r": "to V",
+       "vi": "tiến hành",
+       "k": true
+      },
+      {
+       "t": "the merger.",
+       "r": "O",
+       "vi": "vụ sáp nhập.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "We cannot proceed with the project until the permit arrives.",
+     "vi": "Chúng tôi không thể tiến hành dự án cho đến khi có giấy phép.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "cannot proceed with",
+       "r": "V",
+       "vi": "không thể tiến hành",
+       "k": true
+      },
+      {
+       "t": "the project",
+       "r": "O",
+       "vi": "dự án",
+       "k": true
+      },
+      {
+       "t": "until the permit arrives.",
+       "r": "mệnh đề",
+       "vi": "cho đến khi có giấy phép."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-subscribe",
+   "p": "subscribe to sth",
+   "form": "subscribe + to + O",
+   "vi": "đăng ký đặt mua dài hạn, thuê bao",
+   "note": "subscribe to a magazine/newsletter/service. Người đăng ký: a subscriber; sự đăng ký: a subscription. Khác với register for (đăng ký tham gia sự kiện).",
+   "vs": "register for sth = đăng ký tham gia khóa học/sự kiện",
+   "ex": [
+    {
+     "en": "Over 10,000 readers subscribe to our online magazine.",
+     "vi": "Hơn 10.000 độc giả đặt mua dài hạn tạp chí trực tuyến của chúng tôi.",
+     "chunks": [
+      {
+       "t": "Over 10,000 readers",
+       "r": "S",
+       "vi": "hơn 10.000 độc giả"
+      },
+      {
+       "t": "subscribe to",
+       "r": "V",
+       "vi": "đặt mua dài hạn",
+       "k": true
+      },
+      {
+       "t": "our online magazine.",
+       "r": "O",
+       "vi": "tạp chí trực tuyến của chúng tôi.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Subscribe to our newsletter to receive weekly updates.",
+     "vi": "Hãy đăng ký nhận bản tin của chúng tôi để nhận thông tin cập nhật hằng tuần.",
+     "chunks": [
+      {
+       "t": "Subscribe to",
+       "r": "V",
+       "vi": "hãy đăng ký nhận",
+       "k": true
+      },
+      {
+       "t": "our newsletter",
+       "r": "O",
+       "vi": "bản tin của chúng tôi",
+       "k": true
+      },
+      {
+       "t": "to receive weekly updates.",
+       "r": "to V",
+       "vi": "để nhận thông tin cập nhật hằng tuần."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-wait",
+   "p": "wait for sb / sth (to V)",
+   "form": "wait + for + O (+ to V)",
+   "vi": "chờ đợi ai / cái gì",
+   "note": "wait for sb/sth; wait for sb to V = chờ ai làm gì. Bẫy: KHÔNG nói 'wait sb'. await (trang trọng) là ngoại động từ, không cần for: await your reply.",
+   "vs": "await sth = chờ (không giới từ)",
+   "ex": [
+    {
+     "en": "Please wait for the receptionist to call your name.",
+     "vi": "Vui lòng chờ nhân viên lễ tân gọi tên bạn.",
+     "chunks": [
+      {
+       "t": "Please wait for",
+       "r": "V",
+       "vi": "vui lòng chờ",
+       "k": true
+      },
+      {
+       "t": "the receptionist",
+       "r": "O-người",
+       "vi": "nhân viên lễ tân",
+       "k": true
+      },
+      {
+       "t": "to call your name.",
+       "r": "to V",
+       "vi": "gọi tên bạn."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "We are still waiting for a reply from the client.",
+     "vi": "Chúng tôi vẫn đang chờ phản hồi từ khách hàng.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "are still waiting for",
+       "r": "V",
+       "vi": "vẫn đang chờ",
+       "k": true
+      },
+      {
+       "t": "a reply",
+       "r": "O",
+       "vi": "phản hồi",
+       "k": true
+      },
+      {
+       "t": "from the client.",
+       "r": "giới từ + O",
+       "vi": "từ khách hàng."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u06-recover",
+   "p": "recover from / withdraw from sth",
+   "form": "recover / withdraw + from + O",
+   "vi": "phục hồi sau (khó khăn) / rút khỏi (cuộc đàm phán, chương trình)",
+   "note": "recover from = hồi phục sau (suy thoái, bệnh). withdraw from = rút lui khỏi. Cả hai đều dùng from. Danh từ: recovery from, withdrawal from.",
+   "ex": [
+    {
+     "en": "The economy is slowly recovering from the recession.",
+     "vi": "Nền kinh tế đang dần phục hồi sau cuộc suy thoái.",
+     "chunks": [
+      {
+       "t": "The economy",
+       "r": "S",
+       "vi": "nền kinh tế"
+      },
+      {
+       "t": "is slowly recovering from",
+       "r": "V",
+       "vi": "đang dần phục hồi sau",
+       "k": true
+      },
+      {
+       "t": "the recession.",
+       "r": "O",
+       "vi": "cuộc suy thoái.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The company withdrew from the negotiations last week.",
+     "vi": "Công ty đã rút khỏi cuộc đàm phán tuần trước.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "withdrew from",
+       "r": "V",
+       "vi": "đã rút khỏi",
+       "k": true
+      },
+      {
+       "t": "the negotiations",
+       "r": "O",
+       "vi": "cuộc đàm phán",
+       "k": true
+      },
+      {
+       "t": "last week.",
+       "r": "trạng ngữ",
+       "vi": "tuần trước."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "q": "Over 300 delegates participated ------- the international trade fair.",
+   "options": [
+    "in",
+    "to",
+    "for",
+    "of"
+   ],
+   "ans": 0,
+   "type": "prep",
+   "why": "participate in = tham gia vào. Các giới từ khác không đúng.",
+   "vi": "Hơn 300 đại biểu đã tham gia hội chợ thương mại quốc tế.",
+   "pid": "u06-participate"
+  },
+  {
+   "q": "The company has invested heavily ------- new production technology.",
+   "options": [
+    "on",
+    "in",
+    "for",
+    "at"
+   ],
+   "ans": 1,
+   "type": "prep",
+   "why": "invest in = đầu tư vào (cố định).",
+   "vi": "Công ty đã đầu tư mạnh vào công nghệ sản xuất mới.",
+   "pid": "u06-invest"
+  },
+  {
+   "q": "Our firm specializes ------- tax consulting for small businesses.",
+   "options": [
+    "on",
+    "at",
+    "for",
+    "in"
+   ],
+   "ans": 3,
+   "type": "prep",
+   "why": "specialize in = chuyên về.",
+   "vi": "Công ty chúng tôi chuyên tư vấn thuế cho doanh nghiệp nhỏ.",
+   "pid": "u06-specialize"
+  },
+  {
+   "q": "Small manufacturers will benefit ------- the lower import taxes.",
+   "options": [
+    "of",
+    "on",
+    "from",
+    "to"
+   ],
+   "ans": 2,
+   "type": "prep",
+   "why": "benefit from = được lợi từ. 'benefit of' chỉ dùng với danh từ (the benefit of); on/to không đi với benefit.",
+   "vi": "Các nhà sản xuất nhỏ sẽ được lợi từ mức thuế nhập khẩu thấp hơn.",
+   "pid": "u06-benefit"
+  },
+  {
+   "q": "The new policy resulted ------- a 15 percent drop in complaints.",
+   "options": [
+    "in",
+    "from",
+    "of",
+    "with"
+   ],
+   "ans": 0,
+   "type": "prep",
+   "why": "Chính sách là nguyên nhân, mức giảm là kết quả: cause result in effect. 'result from' dùng cho chiều ngược lại (nguyên nhân).",
+   "vi": "Chính sách mới đã làm số khiếu nại giảm 15%.",
+   "pid": "u06-result"
+  },
+  {
+   "q": "We look forward to ------- you at the conference next month.",
+   "options": [
+    "see",
+    "seeing",
+    "to see",
+    "saw"
+   ],
+   "ans": 1,
+   "type": "toV-Ving",
+   "why": "look forward to + V-ing vì to là giới từ.",
+   "vi": "Chúng tôi mong được gặp quý vị tại hội nghị tháng sau.",
+   "pid": "u06-look-forward"
+  },
+  {
+   "q": "Some staff members object to ------- overtime without extra pay.",
+   "options": [
+    "work",
+    "to work",
+    "working",
+    "worked"
+   ],
+   "ans": 2,
+   "type": "toV-Ving",
+   "why": "object to + V-ing (to là giới từ).",
+   "vi": "Một số nhân viên phản đối việc làm thêm giờ mà không được trả thêm.",
+   "pid": "u06-object"
+  },
+  {
+   "q": "Heavy rain led ------- a delay in the delivery.",
+   "options": [
+    "for",
+    "of",
+    "at",
+    "to"
+   ],
+   "ans": 3,
+   "type": "prep",
+   "why": "lead to = dẫn đến.",
+   "vi": "Mưa lớn đã dẫn đến việc giao hàng bị chậm.",
+   "pid": "u06-lead"
+  },
+  {
+   "q": "Customers must register ------- the loyalty program before they can earn points.",
+   "options": [
+    "for",
+    "to",
+    "at",
+    "of"
+   ],
+   "ans": 0,
+   "type": "prep",
+   "why": "register for = đăng ký tham gia (chương trình, khóa học, sự kiện). to/at/of không đi với register theo nghĩa này.",
+   "vi": "Khách hàng phải đăng ký chương trình khách hàng thân thiết trước khi tích điểm.",
+   "pid": "u06-register"
+  },
+  {
+   "q": "Annual revenue rose from $4 million ------- $5 million.",
+   "options": [
+    "by",
+    "to",
+    "at",
+    "of"
+   ],
+   "ans": 1,
+   "type": "prep",
+   "why": "from A to B = từ A lên B. 'to' chỉ mức đạt được, còn 'by' chỉ mức chênh lệch.",
+   "vi": "Doanh thu hằng năm tăng từ 4 triệu lên 5 triệu đô la.",
+   "pid": "u06-increase"
+  },
+  {
+   "q": "The number of online orders has increased ------- 20 percent since January.",
+   "options": [
+    "of",
+    "to",
+    "by",
+    "at"
+   ],
+   "ans": 2,
+   "type": "prep",
+   "why": "increase by 20 percent = tăng thêm 20%. 'to' chỉ dùng với mức tuyệt đối đạt được.",
+   "vi": "Số đơn hàng trực tuyến đã tăng 20% kể từ tháng Một.",
+   "pid": "u06-increase"
+  },
+  {
+   "q": "The committee ------- of six department heads.",
+   "options": [
+    "includes",
+    "contains",
+    "holds",
+    "consists"
+   ],
+   "ans": 3,
+   "type": "word-choice",
+   "why": "consist of = gồm có. includes/contains/holds không đi với of.",
+   "vi": "Ủy ban gồm sáu trưởng phòng.",
+   "pid": "u06-consist"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Chúng tôi mong được làm việc với quý vị trong dự án này.",
+   "chunks": [
+    "We",
+    "look forward to",
+    "working",
+    "with you on this project."
+   ],
+   "pid": "u06-look-forward",
+   "why": "look forward to + V-ing.",
+   "dist": "work"
+  },
+  {
+   "vi": "Công ty đã đầu tư hai triệu đô la vào thiết bị mới.",
+   "chunks": [
+    "The company",
+    "invested",
+    "$2 million",
+    "in new equipment."
+   ],
+   "pid": "u06-invest",
+   "why": "invest + số tiền + in + đối tượng.",
+   "dist": "for"
+  },
+  {
+   "vi": "Một số cư dân phản đối việc xây nhà máy mới.",
+   "chunks": [
+    "Some residents",
+    "objected to",
+    "building",
+    "a new factory."
+   ],
+   "pid": "u06-object",
+   "why": "object to + V-ing.",
+   "dist": "build"
+  },
+  {
+   "vi": "Vài vị khách đã phàn nàn với quản lý về tiếng ồn.",
+   "chunks": [
+    "Several guests",
+    "complained",
+    "to the manager",
+    "about the noise."
+   ],
+   "pid": "u06-complain",
+   "why": "complain to sb about sth.",
+   "dist": "with"
+  },
+  {
+   "vi": "Doanh thu của công ty đã tăng 8% trong quý hai.",
+   "chunks": [
+    "The company's revenue",
+    "rose",
+    "by 8 percent",
+    "in the second quarter."
+   ],
+   "pid": "u06-increase",
+   "why": "rose by + mức tăng.",
+   "dist": "to"
+  },
+  {
+   "vi": "Ủy ban gồm năm quản lý cấp cao từ các phòng ban khác nhau.",
+   "chunks": [
+    "The committee",
+    "consists of",
+    "five senior managers",
+    "from different departments."
+   ],
+   "pid": "u06-consist",
+   "why": "consist of + danh từ.",
+   "dist": "is"
+  }
+ ],
+ "translate": [
+  {
+   "en": "We look forward to working with your team, and we are confident that this partnership will lead to long-term growth.",
+   "vi": "Chúng tôi mong được làm việc cùng đội ngũ của quý vị, và tin rằng sự hợp tác này sẽ dẫn đến tăng trưởng dài hạn.",
+   "chunks": [
+    {
+     "t": "We",
+     "r": "S",
+     "vi": "chúng tôi"
+    },
+    {
+     "t": "look forward to",
+     "r": "V",
+     "vi": "mong",
+     "k": true
+    },
+    {
+     "t": "working",
+     "r": "V-ing",
+     "vi": "được làm việc",
+     "k": true
+    },
+    {
+     "t": "with your team,",
+     "r": "giới từ + O",
+     "vi": "cùng đội ngũ của quý vị,"
+    },
+    {
+     "t": "and we are confident",
+     "r": "mệnh đề",
+     "vi": "và (chúng tôi) tin"
+    },
+    {
+     "t": "that this partnership",
+     "r": "S",
+     "vi": "rằng sự hợp tác này"
+    },
+    {
+     "t": "will lead to",
+     "r": "V",
+     "vi": "sẽ dẫn đến",
+     "k": true
+    },
+    {
+     "t": "long-term growth.",
+     "r": "O",
+     "vi": "tăng trưởng dài hạn.",
+     "k": true
+    }
+   ],
+   "note": "look forward to + V-ing: 'mong được làm...' (to là giới từ, không phải to V). lead to = dẫn đến: sự hợp tác là nguyên nhân, tăng trưởng là kết quả. 'we are confident that' = tin rằng; tiếng Việt có thể lược chủ ngữ 'chúng tôi' lặp lại.",
+   "pid": "u06-look-forward",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "viOpts": [
+    "Chúng tôi nhìn về phía trước để làm việc với đội ngũ của quý vị, và tin sự hợp tác này sẽ dẫn dắt tăng trưởng dài hạn.",
+    "Chúng tôi mong được làm việc cùng đội ngũ của quý vị, và tin rằng sự hợp tác này sẽ dẫn đến tăng trưởng dài hạn.",
+    "Chúng tôi mong đội ngũ của quý vị làm việc, và tin rằng tăng trưởng dài hạn sẽ dẫn đến sự hợp tác này."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "The rise in fuel prices resulted from a shortage of oil, and it has led to higher shipping costs for many small firms.",
+   "vi": "Việc giá nhiên liệu tăng xuất phát từ tình trạng thiếu dầu, và điều đó đã dẫn đến chi phí vận chuyển cao hơn đối với nhiều doanh nghiệp nhỏ.",
+   "chunks": [
+    {
+     "t": "The rise in fuel prices",
+     "r": "S",
+     "vi": "việc giá nhiên liệu tăng"
+    },
+    {
+     "t": "resulted from",
+     "r": "V",
+     "vi": "xuất phát từ",
+     "k": true
+    },
+    {
+     "t": "a shortage of oil,",
+     "r": "O",
+     "vi": "tình trạng thiếu dầu,",
+     "k": true
+    },
+    {
+     "t": "and it",
+     "r": "S",
+     "vi": "và điều đó"
+    },
+    {
+     "t": "has led to",
+     "r": "V",
+     "vi": "đã dẫn đến",
+     "k": true
+    },
+    {
+     "t": "higher shipping costs",
+     "r": "O",
+     "vi": "chi phí vận chuyển cao hơn"
+    },
+    {
+     "t": "for many small firms.",
+     "r": "giới từ + O",
+     "vi": "đối với nhiều doanh nghiệp nhỏ."
+    }
+   ],
+   "note": "result from = do, xuất phát từ (chỉ nguyên nhân): thiếu dầu là nguyên nhân. lead to = dẫn đến (chỉ kết quả): chi phí vận chuyển cao hơn là kết quả. Chú ý chiều nguyên nhân kết quả khi dịch.",
+   "pid": "u06-result",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "viOpts": [
+    "Việc giá nhiên liệu tăng gây ra tình trạng thiếu dầu, và điều đó dẫn đến chi phí vận chuyển cao hơn cho nhiều doanh nghiệp nhỏ.",
+    "Giá nhiên liệu tăng nên chi phí vận chuyển của nhiều doanh nghiệp nhỏ giảm vì thiếu dầu.",
+    "Việc giá nhiên liệu tăng xuất phát từ tình trạng thiếu dầu, và điều đó đã dẫn đến chi phí vận chuyển cao hơn đối với nhiều doanh nghiệp nhỏ."
+   ],
+   "viAns": 2
+  },
+  {
+   "en": "Please inquire about the refund policy before you register for the workshop, because participants who withdraw from the workshop after the deadline cannot receive a refund.",
+   "vi": "Vui lòng hỏi về chính sách hoàn tiền trước khi đăng ký hội thảo, vì người tham gia nào rút khỏi hội thảo sau hạn chót sẽ không được hoàn tiền.",
+   "chunks": [
+    {
+     "t": "Please inquire about",
+     "r": "V",
+     "vi": "vui lòng hỏi về",
+     "k": true
+    },
+    {
+     "t": "the refund policy",
+     "r": "O",
+     "vi": "chính sách hoàn tiền",
+     "k": true
+    },
+    {
+     "t": "before you register for",
+     "r": "mệnh đề",
+     "vi": "trước khi đăng ký",
+     "k": true
+    },
+    {
+     "t": "the workshop,",
+     "r": "O",
+     "vi": "hội thảo,",
+     "k": true
+    },
+    {
+     "t": "because participants who withdraw from",
+     "r": "mệnh đề",
+     "vi": "vì người tham gia nào rút khỏi",
+     "k": true
+    },
+    {
+     "t": "the workshop",
+     "r": "O",
+     "vi": "hội thảo",
+     "k": true
+    },
+    {
+     "t": "after the deadline",
+     "r": "trạng ngữ",
+     "vi": "sau hạn chót"
+    },
+    {
+     "t": "cannot receive a refund.",
+     "r": "V",
+     "vi": "sẽ không được hoàn tiền."
+    }
+   ],
+   "note": "inquire about = hỏi về; register for = đăng ký tham gia; withdraw from = rút khỏi. Mỗi động từ đi kèm giới từ cố định nên dịch theo nghĩa cả cụm. 'participants who withdraw...' là chủ ngữ dài, dịch 'người tham gia nào rút khỏi ...'.",
+   "pid": "u06-inquire",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "en": "Employees who participate in the training program will benefit from better career opportunities within the company.",
+   "vi": "Nhân viên tham gia chương trình đào tạo sẽ được hưởng lợi từ những cơ hội nghề nghiệp tốt hơn trong công ty.",
+   "chunks": [
+    {
+     "t": "Employees",
+     "r": "S",
+     "vi": "nhân viên"
+    },
+    {
+     "t": "who participate in",
+     "r": "mệnh đề",
+     "vi": "tham gia",
+     "k": true
+    },
+    {
+     "t": "the training program",
+     "r": "O",
+     "vi": "chương trình đào tạo",
+     "k": true
+    },
+    {
+     "t": "will benefit from",
+     "r": "V",
+     "vi": "sẽ được hưởng lợi từ",
+     "k": true
+    },
+    {
+     "t": "better career opportunities",
+     "r": "O",
+     "vi": "những cơ hội nghề nghiệp tốt hơn",
+     "k": true
+    },
+    {
+     "t": "within the company.",
+     "r": "giới từ + O",
+     "vi": "trong công ty."
+    }
+   ],
+   "note": "participate in = tham gia (có in); benefit from = hưởng lợi từ (có from). 'Employees who participate in ...' là chủ ngữ có mệnh đề quan hệ: nhân viên (nào) tham gia ... . 'within the company' đứng cuối, bổ nghĩa cho opportunities.",
+   "pid": "u06-benefit",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "After several customers complained to the sales director about the high cost, the manufacturer agreed on a lower price with the distributors.",
+   "vi": "Sau khi một số khách hàng phàn nàn với giám đốc kinh doanh về mức giá cao, nhà sản xuất đã thống nhất mức giá thấp hơn với các nhà phân phối.",
+   "chunks": [
+    {
+     "t": "After several customers",
+     "r": "S",
+     "vi": "sau khi một số khách hàng"
+    },
+    {
+     "t": "complained to",
+     "r": "V",
+     "vi": "phàn nàn với",
+     "k": true
+    },
+    {
+     "t": "the sales director",
+     "r": "O-người",
+     "vi": "giám đốc kinh doanh"
+    },
+    {
+     "t": "about the high cost,",
+     "r": "giới từ + O",
+     "vi": "về mức giá cao,",
+     "k": true
+    },
+    {
+     "t": "the manufacturer",
+     "r": "S",
+     "vi": "nhà sản xuất"
+    },
+    {
+     "t": "agreed on",
+     "r": "V",
+     "vi": "đã thống nhất",
+     "k": true
+    },
+    {
+     "t": "a lower price",
+     "r": "O",
+     "vi": "mức giá thấp hơn",
+     "k": true
+    },
+    {
+     "t": "with the distributors.",
+     "r": "giới từ + O",
+     "vi": "với các nhà phân phối."
+    }
+   ],
+   "note": "complain to sb about sth: 'phàn nàn với ai về điều gì' (to + người, about + vấn đề). agree on a price = thống nhất một mức giá, 'with the distributors' = với các nhà phân phối. Dịch giữ nguyên thứ tự khối.",
+   "pid": "u06-complain",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "en": "Annual sales rose by 6 percent to $12 million, so the board decided to proceed with the expansion plan.",
+   "vi": "Doanh số hằng năm đã tăng thêm 6%, lên 12 triệu đô la, nên hội đồng quản trị quyết định tiến hành kế hoạch mở rộng.",
+   "chunks": [
+    {
+     "t": "Annual sales",
+     "r": "S",
+     "vi": "doanh số hằng năm"
+    },
+    {
+     "t": "rose",
+     "r": "V",
+     "vi": "đã tăng",
+     "k": true
+    },
+    {
+     "t": "by 6 percent",
+     "r": "giới từ + O",
+     "vi": "thêm 6%",
+     "k": true
+    },
+    {
+     "t": "to $12 million,",
+     "r": "giới từ + O",
+     "vi": "lên 12 triệu đô la,",
+     "k": true
+    },
+    {
+     "t": "so the board decided",
+     "r": "mệnh đề",
+     "vi": "nên hội đồng quản trị quyết định"
+    },
+    {
+     "t": "to proceed with",
+     "r": "to V",
+     "vi": "tiến hành",
+     "k": true
+    },
+    {
+     "t": "the expansion plan.",
+     "r": "O",
+     "vi": "kế hoạch mở rộng.",
+     "k": true
+    }
+   ],
+   "note": "rose by 6 percent = tăng 6% (mức chênh lệch); to $12 million = lên mức 12 triệu (mức đạt được). proceed with = tiến hành, tiếp tục kế hoạch.",
+   "pid": "u06-increase",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ ]
+}

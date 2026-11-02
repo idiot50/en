@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Cụm động từ &amp; cấu trúc</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=12"/>
+  <style>
+    .vb h2.title { font-size:27px; font-weight:900; margin-bottom:4px; }
+    .vb .sub { color:var(--text-mute); line-height:1.6; margin-bottom:16px; }
+    .vb .muted { color:var(--text-mute); }
+    .vb .tag { display:inline-block; font-size:11.5px; font-weight:800; padding:2px 9px; border-radius:20px; background:var(--green-soft); color:var(--green-dark); }
+    .vb .tag.warn { background:#fff3dc; color:#b8650f; }
+    .vb .units { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; margin-top:12px; }
+    .vb .ucard { display:flex; flex-direction:column; gap:6px; padding:16px; border:2px solid var(--border); border-radius:16px; background:white; text-decoration:none; color:var(--text); position:relative; transition:all .12s; }
+    .vb .ucard:hover { border-color:var(--green); transform:translateY(-2px); box-shadow:0 4px 0 var(--green-dark); }
+    .vb .ucard .un { font-size:12px; font-weight:900; color:var(--green-dark); letter-spacing:.06em; text-transform:uppercase; }
+    .vb .ucard .ut { font-size:16px; font-weight:800; line-height:1.35; padding-right:34px; }
+    .vb .ucard .ic { position:absolute; right:14px; top:12px; font-size:28px; }
+    .vb .bar { height:9px; background:var(--bg-alt); border-radius:6px; overflow:hidden; border:1px solid var(--border); }
+    .vb .bar > i { display:block; height:100%; background:linear-gradient(90deg,#7BD93B,var(--green)); }
+    .vb .search { width:100%; padding:12px 14px; border:2px solid var(--border); border-radius:12px; font:inherit; font-size:15px; }
+    .vb .search:focus { outline:none; border-color:var(--green); }
+    .vb .head { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+    .vb .head h2 { font-size:23px; font-weight:900; }
+    .vb .tabs { display:flex; gap:8px; flex-wrap:wrap; margin:14px 0; }
+    .vb .tab { border:2px solid var(--border); background:white; border-radius:12px; padding:8px 13px; font-weight:800; cursor:pointer; font-size:14px; color:var(--text); text-decoration:none; }
+    .vb .tab.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    .vb table.ft { width:100%; border-collapse:collapse; font-size:14px; margin-top:8px; }
+    .vb table.ft th, .vb table.ft td { padding:7px 10px; border:1px solid var(--border); text-align:left; vertical-align:top; }
+    .vb table.ft th { background:var(--green-soft); color:var(--green-dark); }
+    .vb .tblwrap { overflow-x:auto; }
+    .vb .pc { background:white; border:2px solid var(--border); border-radius:16px; padding:16px 18px; margin-bottom:12px; }
+    .vb .pc-h { display:flex; align-items:flex-start; gap:10px; flex-wrap:wrap; }
+    .vb .pc .p { font-size:19px; font-weight:900; color:#1f4f8f; }
+    .vb .pc .vi { font-weight:700; color:var(--green-dark); margin-top:2px; }
+    .vb .form { display:inline-block; font-weight:800; font-size:13.5px; background:#eef4ff; color:#1f4f8f; border:1px solid #d3e3fb; border-radius:8px; padding:3px 9px; margin-top:6px; }
+    .vb .meta { font-size:13.5px; line-height:1.6; margin-top:6px; }
+    .vb .meta b { color:var(--text-soft); }
+    .vb .note { background:#fff6f2; border:1.5px solid #ffcfb8; border-radius:10px; padding:7px 11px; font-size:13.5px; line-height:1.55; margin-top:8px; }
+    .vb .ex { margin-top:10px; padding-top:10px; border-top:1px dashed var(--border); }
+    .vb .ex-en { font-weight:700; font-size:15px; line-height:1.5; }
+    .vb .ex-vi { color:var(--text-mute); font-style:italic; font-size:14px; margin-top:2px; }
+    .vb .chunks { display:flex; flex-wrap:wrap; gap:6px; margin-top:8px; }
+    .vb .ck { display:inline-flex; flex-direction:column; border-radius:10px; padding:4px 9px 5px; border:1.5px solid; background:white; min-width:0; }
+    .vb .ck small { font-size:10.5px; font-weight:900; text-transform:none; letter-spacing:.02em; opacity:.85; }
+    .vb .ck b { font-size:14.5px; }
+    .vb .ck i { font-size:12.5px; color:var(--text-mute); }
+    .vb .r-s { border-color:#84b6f4; background:#f2f8ff; } .vb .r-s small { color:#1f5fae; }
+    .vb .r-v { border-color:#f2a3a3; background:#fff4f4; } .vb .r-v small { color:#c0392b; }
+    .vb .r-o { border-color:#9ad67a; background:#f4fff0; } .vb .r-o small { color:#3c8d1e; }
+    .vb .r-p { border-color:#f5c27a; background:#fff8ec; } .vb .r-p small { color:#b8650f; }
+    .vb .r-n { border-color:#c6a7ef; background:#faf5ff; } .vb .r-n small { color:#7a3fc2; }
+    .vb .r-x { border-color:var(--border); background:#fafafa; } .vb .r-x small { color:var(--text-mute); }
+    .vb .ck.k { border-width:2.5px; box-shadow:0 2px 0 rgba(0,0,0,.08); }
+    .vb .ck.k b { text-decoration:underline; text-underline-offset:3px; text-decoration-thickness:2px; }
+    .vb .chunks.tap .ck { cursor:pointer; }
+    .vb .chunks.tap .ck i { visibility:hidden; }
+    .vb .chunks.tap .ck.open i { visibility:visible; }
+    .vb .vo { font-size:13.5px; margin-top:7px; line-height:1.7; }
+    .vb .vo span { display:inline-block; font-weight:700; padding:1px 6px; margin:2px 0; border-radius:6px; border:1px solid; line-height:1.45; }
+    .vb .core { font-size:11px; font-weight:900; color:#b8650f; background:#fff3dc; border-radius:20px; padding:2px 8px; vertical-align:middle; }
+    .vb .vs { font-size:13.5px; margin-top:6px; color:#1769aa; }
+    .vb .vopt { display:block; width:100%; text-align:left; margin-top:6px; }
+    .vb .iconbtn { border:1.5px solid var(--border); background:white; border-radius:9px; padding:3px 9px; cursor:pointer; font-size:13px; font-weight:700; }
+    .vb .iconbtn:hover { border-color:var(--green); }
+    .vb .set { background:white; border:2px solid var(--border); border-radius:16px; padding:16px 18px; margin-bottom:14px; }
+    .vb .gq { padding:14px 0; border-top:1px dashed var(--border); }
+    .vb .gq:first-child { border-top:none; padding-top:2px; }
+    .vb .gq .qn { font-size:12px; font-weight:800; color:var(--text-mute); text-transform:uppercase; margin-bottom:4px; }
+    .vb .gq .qt { font-size:16.5px; font-weight:700; margin-bottom:10px; line-height:1.5; }
+    .vb .gap { display:inline-block; min-width:64px; border-bottom:2px solid var(--text); margin:0 3px; text-align:center; color:#1769aa; font-weight:800; }
+    .vb .options { grid-template-columns:repeat(auto-fit,minmax(190px,1fr)); }
+    .vb .exp { margin-top:9px; padding:10px 13px; border-radius:10px; font-size:14px; line-height:1.6; }
+    .vb .exp.ok { background:#f0ffe6; border-left:4px solid var(--green); }
+    .vb .exp.no { background:#fff1f1; border-left:4px solid var(--red); }
+    .vb .exp .v { color:var(--text-mute); font-style:italic; margin-top:4px; }
+    /* flashcard */
+    .vb .fc { background:white; border:2px solid var(--border); border-radius:18px; padding:26px 20px; text-align:center; min-height:220px; display:flex; flex-direction:column; justify-content:center; gap:8px; cursor:pointer; }
+    .vb .fc .front { font-size:22px; font-weight:900; line-height:1.35; }
+    .vb .fc .hint { color:var(--text-mute); font-size:13px; }
+    .vb .fc .back { display:none; text-align:left; }
+    .vb .fc.flipped .back { display:block; }
+    .vb .fc.flipped .hint { display:none; }
+    .vb .fc-actions { display:flex; gap:10px; justify-content:center; margin-top:12px; flex-wrap:wrap; }
+    /* ordering */
+    .vb .ans-line { min-height:54px; border:2px dashed var(--border); border-radius:12px; padding:8px; display:flex; flex-wrap:wrap; gap:6px; margin:10px 0; background:#fcfcfc; }
+    .vb .pool { display:flex; flex-wrap:wrap; gap:6px; }
+    .vb .chip { border:2px solid var(--border); background:white; border-radius:10px; padding:8px 12px; font-weight:700; font-size:15px; cursor:pointer; box-shadow:0 2px 0 var(--border); }
+    .vb .chip:hover { border-color:var(--green); }
+    .vb .chip.used { visibility:hidden; }
+    .vb .ans-line .chip { background:#f2f8ff; border-color:#84b6f4; }
+    .vb .ans-line.ok { border-color:var(--green); background:#f3fff0; }
+    .vb .ans-line.no { border-color:var(--red); background:#fff5f5; }
+    .vb textarea.tr { width:100%; min-height:70px; border:2px solid var(--border); border-radius:12px; padding:10px 12px; font:inherit; font-size:15px; margin-top:8px; }
+    .vb .stepbar { display:flex; gap:10px; align-items:center; flex-wrap:wrap; margin-top:12px; }
+    .vb .res { font-weight:800; }
+    @media (max-width:560px){ .vb .options { grid-template-columns:1fr; } .vb h2.title { font-size:23px; } .vb .fc .front { font-size:19px; } }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=2"></script>
+  <script src="/js/catalog.js?v=12"></script>
+  <script src="/js/layout.js?v=17"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
+  <script>
+  (function () {
+    const NUNITS = 10;
+    const PKEY = 'toeic_verbs_v1';
+    const BOX_DAYS = [0, 1, 2, 4, 7, 15, 30];
+    const L = ['A', 'B', 'C', 'D'];
+    const state = State.load();
+    const { sidebar, topbar } = renderShell({ active: 'verbs', state });
+    const root = document.getElementById('app');
+
+    // ---------- helpers ----------
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;');
+    const md = s => esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>');
+    const gap = s => md(s).replace(/-{4,}/g, '<span class="gap">?</span>');
+    const pad = n => String(n).padStart(2, '0');
+    const pct = (a, b) => b ? Math.round(a / b * 100) : 0;
+    const dayNum = (d) => Math.floor(((d || new Date()).getTime() - new Date().getTimezoneOffset() * 60000) / 86400000);
+    const today = () => dayNum();
+    function loadP() {
+      let p; try { p = JSON.parse(localStorage.getItem(PKEY) || '{}'); } catch (e) { p = null; }
+      if (!p || typeof p !== 'object' || Array.isArray(p)) p = {};
+      ['cards', 'quiz', 'order', 'tr'].forEach(k => { if (!p[k] || typeof p[k] !== 'object' || Array.isArray(p[k])) p[k] = {}; });
+      return p;
+    }
+    function saveP(p) { try { localStorage.setItem(PKEY, JSON.stringify(p)); } catch (e) {} }
+    function shuffle(a) { const b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(Math.random() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; }
+    function speak(t) { try { if (window.VocabNotes) VocabNotes.speak(String(t).replace(/\*\*/g, '')); } catch (e) {} }
+    function logHist(ok) { try { if (window.Hist) Hist.add(0, ok, 'study'); } catch (e) {} }
+    function roleClass(r) {
+      r = String(r || '').trim();
+      if (r === 'S') return 'r-s';
+      if (/^(to V|V-ing|V3|V-nguyên mẫu)$/.test(r)) return 'r-n';
+      if (r === 'V') return 'r-v';
+      if (/\+/.test(r) || /^giới từ/i.test(r)) return 'r-p';
+      if (/^O(-|$)/.test(r)) return 'r-o';
+      return 'r-x';
+    }
+    // hide=true: glosses hidden until the chunk is tapped (translation practice)
+    const chunksHtml = (cs, hide) => `<div class="chunks ${hide ? 'tap' : ''}">${(cs || []).map(c => `<span class="ck ${roleClass(c.r)} ${c.k ? 'k' : ''}"><small>${esc(c.r)}${c.k ? ' ★' : ''}</small><b>${esc(c.t)}</b><i>${esc(c.vi)}</i></span>`).join('')}</div>`;
+    // How a natural Vietnamese translation orders the blocks — flags where to reorder
+    function viOrderHtml(cs, vo) {
+      if (!Array.isArray(vo) || !cs || vo.length !== cs.length) return '';
+      const moved = vo.some((v, i) => v !== i);
+      return `<div class="vo">🇻🇳 <b>Thứ tự khi dịch${moved ? ' (có đảo)' : ''}:</b> ${vo.map(i => `<span class="${roleClass(cs[i].r)}">${esc(cs[i].vi)}</span>`).join(' → ')}</div>`;
+    }
+
+    const cache = {};
+    function loadUnit(n) {
+      if (!cache[n]) cache[n] = fetch('/data/verbs/unit' + pad(n) + '.json').then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).catch(e => { delete cache[n]; throw e; });
+      return cache[n];
+    }
+    async function loadAll() { const out = {}; await Promise.all(Array.from({ length: NUNITS }, (_, i) => i + 1).map(async n => { try { out[n] = await loadUnit(n); } catch (e) {} })); return out; }
+
+    function page(inner) { root.innerHTML = sidebar + `<main class="main vb">${topbar}${inner}</main>`; window.scrollTo(0, 0); }
+    let lastSearch = null;
+    function go(qs) { history.pushState(null, '', location.pathname + qs); route(); }
+    window.addEventListener('popstate', () => { if (location.search !== lastSearch) route(); else scrollToHash(); });
+    document.addEventListener('click', e => { const a = e.target.closest('a[data-go]'); if (a) { e.preventDefault(); go(a.getAttribute('data-go')); } });
+
+    // Leitner card state
+    // relearn: the card was failed earlier in this same session — a later "Nhớ" only schedules it
+    // for tomorrow at box 1 instead of promoting it.
+    function rate(pid, ok, relearn) {
+      const p = loadP(), had = p.cards[pid] && typeof p.cards[pid] === 'object';
+      const c = had ? p.cards[pid] : { box: 0, due: today(), n: 0 };
+      c.box = +c.box || 0; c.due = Number.isFinite(+c.due) ? +c.due : today();
+      if (!ok) { c.box = 1; c.due = today(); }
+      else if (relearn) { c.box = 1; c.due = today() + 1; }
+      else if (!had || c.due <= today()) {          // promote only when the card was actually due (no cramming)
+        c.box = Math.min(BOX_DAYS.length - 1, c.box + 1);
+        c.due = today() + BOX_DAYS[c.box];
+      }
+      c.n = (+c.n || 0) + 1;
+      p.cards[pid] = c; saveP(p); logHist(ok);
+    }
+    const learned = (p, u) => (u.patterns || []).filter(x => p.cards[x.id] && (+p.cards[x.id].box || 0) >= 2).length;
+    // Each render bumps this; an async render that resumes after the user navigated elsewhere bails out.
+    let seq = 0;
+
+    // ---------- home ----------
+    async function renderHome() {
+      const my = ++seq;
+      page(`<h2 class="title">🧩 Cụm động từ &amp; cấu trúc</h2><div class="card"><p class="muted">Đang tải…</p></div>`);
+      const all = await loadAll(), p = loadP();
+      if (my !== seq) return;
+      const pats = []; Object.keys(all).forEach(n => (all[n].patterns || []).forEach(x => pats.push({ n: +n, x })));
+      const due = pats.filter(o => p.cards[o.x.id] && p.cards[o.x.id].due <= today()).length;
+      const totalLearned = Object.keys(all).reduce((a, n) => a + learned(p, all[n]), 0);
+      const cards = Array.from({ length: NUNITS }, (_, i) => i + 1).map(n => {
+        const u = all[n];
+        if (!u) return `<div class="ucard"><span class="un">Bài ${n}</span><span class="ut muted">Chưa có dữ liệu</span></div>`;
+        const tot = (u.patterns || []).length, ln = learned(p, u), q = p.quiz[n];
+        return `<a class="ucard" href="?u=${n}" data-go="?u=${n}"><span class="ic">${esc(u.icon || '🧩')}</span>
+          <span class="un">Bài ${n}</span><span class="ut">${esc(u.title)}</span>
+          <span class="muted" style="font-size:12.5px;">${tot} cấu trúc · đã thuộc ${ln}${q && typeof q === 'object' ? ` · trắc nghiệm ${+q.ok || 0}/${+q.n || 0}` : ''}</span>
+          <div class="bar"><i style="width:${pct(ln, tot)}%"></i></div></a>`;
+      }).join('');
+      page(`<h2 class="title">🧩 Cụm động từ &amp; cấu trúc</h2>
+        <p class="sub">Học <b>các cụm động từ hay gặp nhất trong TOEIC</b> theo từng kiểu cấu trúc (vd. <b>make sth for sb</b>, <b>provide sb with sth</b>, <b>remind sb to V</b>).
+          Mỗi câu ví dụ được <b>tách thành từng khối nghĩa</b> (chủ ngữ – động từ – tân ngữ – giới từ…) để bạn hiểu câu được ghép thế nào và dịch được câu tiếng Anh.</p>
+        <div class="card" style="display:flex;gap:12px;align-items:center;flex-wrap:wrap;">
+          <b>Đã thuộc ${totalLearned}/${pats.length} cấu trúc</b>
+          <span style="flex:1"></span>
+          ${due ? `<a class="btn" href="?review=due" data-go="?review=due">🃏 Ôn thẻ hôm nay (${due})</a>` : `<span class="tag">✓ Không có thẻ đến hạn ôn</span>`}
+        </div>
+        <div class="card" style="margin-top:12px;">
+          <input class="search" id="q" placeholder="🔎 Tra cấu trúc: gõ động từ hoặc nghĩa (vd. provide, remind, nhắc, cung cấp)…" autocomplete="off"/>
+          <div id="qres"></div>
+        </div>
+        <div class="units">${cards}</div>
+        <div class="card" style="margin-top:14px;line-height:1.7;font-size:14.5px;">
+          <b>📋 Cách học một bài (~45-60 phút)</b>
+          <ol style="margin:6px 0 0 20px;">
+            <li><b>Học:</b> đọc công thức, nhìn các khối màu của câu ví dụ, đọc to câu (🔊).</li>
+            <li><b>Thẻ:</b> nhìn nghĩa tiếng Việt → nhớ lại cấu trúc tiếng Anh. Thẻ "Nhớ" sẽ quay lại sau 1, 2, 4, 7, 15… ngày.</li>
+            <li><b>Trắc nghiệm</b> kiểu Part 5 → <b>Ghép câu</b> theo nghĩa → <b>Dịch câu</b> Anh–Việt theo từng khối.</li>
+          </ol>
+        </div>`);
+      const input = document.getElementById('q'), out = document.getElementById('qres');
+      const norm = s => String(s || '').toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').replace(/đ/g, 'd');
+      input.addEventListener('input', () => {
+        const q = norm(input.value.trim());
+        if (q.length < 2) { out.innerHTML = ''; return; }
+        const hits = pats.filter(o => norm([o.x.p, o.x.vi, o.x.alt, o.x.form].join(' ')).includes(q)).slice(0, 12);
+        out.innerHTML = hits.length ? hits.map(o => `<div class="pc" style="margin:10px 0 0;padding:12px 14px;">
+            <div class="pc-h"><div style="flex:1"><div class="p" style="font-size:17px;">${esc(o.x.p)}</div><div class="vi">${esc(o.x.vi)}</div>
+            <span class="form">${esc(o.x.form)}</span></div><a class="iconbtn" href="?u=${o.n}#${esc(o.x.id)}" data-go="?u=${o.n}#${esc(o.x.id)}">Bài ${o.n} →</a></div>
+            <div class="ex-en" style="margin-top:6px;font-weight:600;font-size:14px;">▸ ${esc((o.x.ex || [])[0] ? o.x.ex[0].en : '')}</div></div>`).join('')
+          : '<p class="muted" style="margin-top:8px;">Không tìm thấy.</p>';
+      });
+    }
+
+    // ---------- unit ----------
+    const TABS = [['learn', '📖 Học'], ['cards', '🃏 Thẻ'], ['quiz', '✏️ Trắc nghiệm'], ['order', '🧩 Ghép câu'], ['translate', '🔤 Dịch câu']];
+    async function renderUnit(n, tab) {
+      const my = ++seq;
+      let u; try { u = await loadUnit(n); } catch (e) { if (my === seq) page(`<div class="card">Không tải được bài ${n}. <a href="?" data-go="?">← Quay lại</a></div>`); return; }
+      if (my !== seq) return;
+      tab = TABS.some(t => t[0] === tab) ? tab : 'learn';
+      page(`<div class="head"><a class="btn ghost small" href="?" data-go="?">← 10 bài</a><h2>${esc(u.icon || '')} Bài ${n}: ${esc(u.title)}</h2></div>
+        <div class="tabs">${TABS.map(t => `<a class="tab ${t[0] === tab ? 'active' : ''}" href="?u=${n}&tab=${t[0]}" data-go="?u=${n}&tab=${t[0]}">${t[1]}</a>`).join('')}</div>
+        <div id="body"></div>
+        <div class="stepbar" id="navbar"></div>`);
+      const body = document.getElementById('body');
+      if (tab === 'learn') renderLearn(n, u, body);
+      else if (tab === 'cards') renderCards(u.patterns || [], body, `Bài ${n}`);
+      else if (tab === 'quiz') renderQuiz(n, u, body);
+      else if (tab === 'order') renderOrder(n, u, body);
+      else renderTranslate(n, u, body);
+      const i = TABS.findIndex(t => t[0] === tab), nx = TABS[i + 1];
+      document.getElementById('navbar').innerHTML = nx ? `<a class="btn blue" href="?u=${n}&tab=${nx[0]}" data-go="?u=${n}&tab=${nx[0]}">Tiếp: ${nx[1]} →</a>`
+        : (n < NUNITS ? `<a class="btn" href="?u=${n + 1}" data-go="?u=${n + 1}">Sang Bài ${n + 1} →</a>` : '');
+    }
+
+    function patternCard(x) {
+      return `<div class="pc" id="${esc(x.id)}">
+        <div class="pc-h"><div style="flex:1;min-width:0;">
+          <div class="p">${esc(x.p)} ${x.core ? '<span class="core">⭐ cốt lõi</span>' : ''}</div><div class="vi">${esc(x.vi)}</div>
+          <span class="form">${esc(x.form)}</span>
+          ${x.alt || x.pass ? `<div class="meta">${x.alt ? `<div><b>Tương đương:</b> ${esc(x.alt)}</div>` : ''}${x.pass ? `<div><b>Bị động:</b> ${esc(x.pass)}</div>` : ''}</div>` : ''}
+          ${x.vs ? `<div class="vs">↔ <b>Dễ nhầm:</b> ${md(x.vs)}</div>` : ''}
+        </div><button class="iconbtn sp" data-t="${esc(x.p.replace(/\b(sb|sth)\b/g, ''))}">🔊</button></div>
+        ${x.note ? `<div class="note">⚠️ ${md(x.note)}</div>` : ''}
+        ${(x.ex || []).map(e => `<div class="ex">
+          <div class="ex-en">▸ ${esc(e.en)} <button class="iconbtn sp" data-t="${esc(e.en)}">🔊</button></div>
+          <div class="ex-vi">${esc(e.vi)}</div>
+          ${chunksHtml(e.chunks)}${viOrderHtml(e.chunks, e.viOrder)}</div>`).join('')}
+      </div>`;
+    }
+    function scrollToHash() {
+      if (!location.hash) return;
+      let id = location.hash.slice(1); try { id = decodeURIComponent(id); } catch (e) {}
+      const t = document.getElementById(id); if (!t) return;
+      const co = document.getElementById('coreonly');
+      if (co && co.checked && t.style.display === 'none') { co.checked = false; co.dispatchEvent(new Event('change')); }
+      setTimeout(() => t.scrollIntoView({ block: 'start' }), 50);
+    }
+    function bindSpeak(el) { el.querySelectorAll('.sp').forEach(b => b.addEventListener('click', ev => { ev.stopPropagation(); speak(b.dataset.t); })); }
+
+    function renderLearn(n, u, body) {
+      body.innerHTML = `<div class="card" style="border-color:var(--blue);background:#f4faff;">
+          <div style="line-height:1.65;">${md(u.intro)}</div>
+          ${u.formula && u.formula.length > 1 ? `<div class="tblwrap"><table class="ft"><tr>${u.formula[0].map(h => `<th>${esc(h)}</th>`).join('')}</tr>
+            ${u.formula.slice(1).map(r => `<tr>${r.map(c => `<td>${esc(c)}</td>`).join('')}</tr>`).join('')}</table></div>` : ''}
+          <p class="muted" style="font-size:13px;margin-top:8px;">Màu các khối: <span class="ck r-s" style="display:inline;padding:0 6px;">S</span> chủ ngữ ·
+            <span class="ck r-v" style="display:inline;padding:0 6px;">V</span> động từ · <span class="ck r-o" style="display:inline;padding:0 6px;">O</span> tân ngữ ·
+            <span class="ck r-p" style="display:inline;padding:0 6px;">giới từ + O</span> · <span class="ck r-n" style="display:inline;padding:0 6px;">to V / V-ing / V3</span> ·
+            khối có ★ là phần thuộc cấu trúc đang học.</p>
+        </div>
+        <div style="display:flex;gap:8px;align-items:center;margin-top:12px;flex-wrap:wrap;">
+          <label class="iconbtn" style="cursor:pointer;"><input type="checkbox" id="coreonly"/> ⭐ Chỉ xem cấu trúc cốt lõi (${(u.patterns || []).filter(x => x.core).length})</label>
+        </div>
+        <div id="plist" style="margin-top:12px;">${(u.patterns || []).map(patternCard).join('')}</div>`;
+      bindSpeak(body);
+      document.getElementById('coreonly').onchange = e => {
+        const only = e.target.checked;
+        (u.patterns || []).forEach(x => { const el = document.getElementById(x.id); if (el) el.style.display = only && !x.core ? 'none' : ''; });
+      };
+      scrollToHash();
+    }
+
+    // flashcards (unit deck or due review deck)
+    function renderCards(list, body, label) {
+      const pAll = loadP();
+      let mode = 'vi2en';
+      // core patterns first; within that, due/new before cards scheduled later
+      const dueOf = x => (pAll.cards[x.id] || { due: -1 }).due;
+      let deck = list.slice().sort((a, b) => ((b.core ? 1 : 0) - (a.core ? 1 : 0)) || (dueOf(a) - dueOf(b)));
+      let i = 0, ok = 0, seen = 0;
+      const failed = new Set();
+      const draw = () => {
+        if (i >= deck.length) {
+          body.innerHTML = `<div class="card" style="text-align:center;"><div style="font-size:40px;">🎉</div>
+            <b>Xong ${seen} thẻ — nhớ ${ok}/${seen}</b><p class="muted">Thẻ "Nhớ" sẽ quay lại theo lịch; thẻ "Chưa nhớ" sẽ gặp lại sớm.</p>
+            <div class="stepbar" style="justify-content:center;"><button class="btn" id="again">↻ Làm lại</button></div></div>`;
+          document.getElementById('again').onclick = () => { deck = shuffle(list); i = ok = seen = 0; failed.clear(); draw(); };
+          return;
+        }
+        const x = deck[i], c0 = loadP().cards[x.id], c = c0 && typeof c0 === 'object' ? { box: +c0.box || 0 } : null;
+        const front = mode === 'vi2en' ? `<div class="front" style="color:var(--green-dark);">${esc(x.vi)}</div><div class="hint">Cấu trúc tiếng Anh là gì? — chạm để lật</div>`
+          : `<div class="front" style="color:#1f4f8f;">${esc(x.p)}</div><div class="hint">Nghĩa và cách dùng? — chạm để lật</div>`;
+        body.innerHTML = `<div style="display:flex;gap:8px;align-items:center;flex-wrap:wrap;margin-bottom:10px;">
+            <b>${esc(label)} · thẻ ${i + 1}/${deck.length}</b>${c ? `<span class="tag">hộp ${c.box}</span>` : '<span class="tag warn">mới</span>'}
+            <span style="flex:1"></span>
+            <button class="iconbtn" id="mode">${mode === 'vi2en' ? '🇻🇳→🇬🇧' : '🇬🇧→🇻🇳'} đổi chiều</button></div>
+          <div class="fc" id="fc">${front}
+            <div class="back"><hr style="border:none;border-top:1px dashed var(--border);margin:6px 0 10px;">${patternCard(x)}</div></div>
+          <div class="fc-actions" id="acts" style="display:none;">
+            <button class="btn red" id="no">😕 Chưa nhớ</button><button class="btn" id="yes">🙂 Nhớ rồi</button></div>`;
+        const fc = document.getElementById('fc');
+        fc.onclick = e => { if (e.target.closest('.sp')) return; fc.classList.add('flipped'); document.getElementById('acts').style.display = ''; };
+        bindSpeak(fc);
+        document.getElementById('mode').onclick = () => { mode = mode === 'vi2en' ? 'en2vi' : 'vi2en'; draw(); };
+        document.getElementById('yes').onclick = () => { rate(x.id, true, failed.has(x.id)); ok++; seen++; i++; draw(); };
+        document.getElementById('no').onclick = () => { rate(x.id, false); failed.add(x.id); seen++; deck.push(x); i++; draw(); };
+      };
+      if (!list.length) { body.innerHTML = '<div class="card">Không có thẻ nào.</div>'; return; }
+      draw();
+    }
+
+    function renderQuiz(n, u, body) {
+      const items = u.quiz || [];
+      const prev = loadP().quiz[n];
+      body.innerHTML = `<div class="set">${prev && typeof prev === 'object' ? `<p class="muted" style="margin-bottom:6px;">Lần tốt nhất: <b>${+prev.ok || 0}/${+prev.n || 0}</b></p>` : ''}
+        ${items.map((it, k) => `<div class="gq" data-k="${k}"><div class="qn">Câu ${k + 1}</div><div class="qt">${gap(it.q)}</div>
+          <div class="options">${it.options.map((o, j) => `<button class="option" data-i="${j}"><span class="letter">${L[j]}</span><span>${esc(o)}</span></button>`).join('')}</div>
+          <div class="slot"></div></div>`).join('')}<div id="qres"></div></div>`;
+      let done = 0, good = 0;
+      body.querySelectorAll('.gq').forEach(box => box.addEventListener('click', ev => {
+        const b = ev.target.closest('.option'); if (!b || b.disabled) return;
+        const it = items[+box.dataset.k], ch = +b.dataset.i, ok = ch === it.ans;
+        box.querySelectorAll('.option').forEach(x => { x.disabled = true; const j = +x.dataset.i; if (j === it.ans) x.classList.add('correct'); else if (j === ch) x.classList.add('wrong'); });
+        box.querySelector('.slot').innerHTML = `<div class="exp ${ok ? 'ok' : 'no'}">${ok ? '✅ <b>Đúng!</b>' : `❌ <b>Sai.</b> Đáp án: <b>${L[it.ans]}. ${esc(it.options[it.ans])}</b>`}
+          <div>💡 ${md(it.why)}</div><div class="v">🇻🇳 ${esc(it.vi)}</div></div>`;
+        done++; if (ok) good++; logHist(ok);
+        if (it.pid && !ok) { const p = loadP(); const c = p.cards[it.pid]; if (c) { c.box = 1; c.due = today(); saveP(p); } }
+        if (done === items.length) {
+          const p = loadP(); if (!p.quiz[n] || good >= p.quiz[n].ok) p.quiz[n] = { ok: good, n: items.length }; saveP(p);
+          document.getElementById('qres').innerHTML = `<div class="exp ${pct(good, items.length) >= 70 ? 'ok' : 'no'}" style="font-size:15px;">Kết quả: <b>${good}/${items.length}</b>. ${pct(good, items.length) >= 70 ? 'Tốt lắm! 👍' : 'Xem lại tab Học rồi làm lại (tải lại trang).'}</div>`;
+        }
+      }));
+    }
+
+    function renderOrder(n, u, body) {
+      const items = u.order || [];
+      let k = 0, good = 0;
+      const draw = () => {
+        if (k >= items.length) {
+          const p = loadP(); if (!p.order[n] || good >= p.order[n].ok) p.order[n] = { ok: good, n: items.length }; saveP(p);
+          body.innerHTML = `<div class="card" style="text-align:center;"><div style="font-size:40px;">🧩</div><b>Ghép đúng ${good}/${items.length} câu</b>
+            <div class="stepbar" style="justify-content:center;"><button class="btn" id="again">↻ Làm lại</button></div></div>`;
+          document.getElementById('again').onclick = () => { k = good = 0; draw(); };
+          return;
+        }
+        const it = items[k];
+        const base = it.chunks.map((t, i) => ({ t, i })).concat(it.dist ? [{ t: it.dist, i: -1 }] : []);
+        let pool = shuffle(base);
+        // never show the real chunks already in the right order (ignoring where the trap chunk landed)
+        for (let tries = 0; tries < 20 && pool.filter(o => o.i >= 0).every((o, x) => o.i === x); tries++) pool = shuffle(base);
+        const picked = [];
+        body.innerHTML = `<div class="set"><div class="qn muted" style="font-weight:800;font-size:12px;">CÂU ${k + 1}/${items.length} · Sắp xếp các khối thành câu tiếng Anh${it.dist ? ' — <span style="color:#c0392b;">có 1 khối thừa (bẫy), đừng dùng!</span>' : ''}</div>
+          <div style="font-size:17px;font-weight:800;margin:6px 0;">🇻🇳 ${esc(it.vi)}</div>
+          <div class="ans-line" id="ans"></div>
+          <div class="pool" id="pool">${pool.map((o, j) => `<button class="chip" data-j="${j}">${esc(o.t)}</button>`).join('')}</div>
+          <div class="stepbar"><button class="btn" id="check" disabled>Kiểm tra</button><button class="btn ghost" id="reset">↺ Xếp lại</button></div>
+          <div id="fb"></div></div>`;
+        const ans = document.getElementById('ans'), check = document.getElementById('check');
+        const paint = () => {
+          ans.innerHTML = picked.map((j, x) => `<button class="chip" data-x="${x}">${esc(pool[j].t)}</button>`).join('');
+          body.querySelectorAll('#pool .chip').forEach(b => b.classList.toggle('used', picked.includes(+b.dataset.j)));
+          check.disabled = picked.length !== it.chunks.length;
+        };
+        body.querySelector('#pool').onclick = e => { const b = e.target.closest('.chip'); if (!b || b.classList.contains('used') || check.dataset.done || picked.length >= it.chunks.length) return; picked.push(+b.dataset.j); paint(); };
+        ans.onclick = e => { const b = e.target.closest('.chip'); if (!b || check.dataset.done) return; picked.splice(+b.dataset.x, 1); paint(); };
+        document.getElementById('reset').onclick = () => { if (check.dataset.done) return; picked.length = 0; paint(); };
+        check.onclick = () => {
+          if (check.dataset.done) { k++; draw(); return; }
+          const ok = picked.length === it.chunks.length && picked.every((j, x) => pool[j].i === x);
+          if (ok) good++; logHist(ok);
+          ans.classList.add(ok ? 'ok' : 'no');
+          document.getElementById('fb').innerHTML = `<div class="exp ${ok ? 'ok' : 'no'}">${ok ? '✅ <b>Chính xác!</b>' : '❌ <b>Chưa đúng.</b> Câu đúng:'}
+            <div style="font-weight:800;margin-top:4px;">${esc(it.chunks.join(' '))} <button class="iconbtn sp" data-t="${esc(it.chunks.join(' '))}">🔊</button></div>
+            <div>💡 ${md(it.why)}</div></div>`;
+          bindSpeak(document.getElementById('fb'));
+          check.dataset.done = '1'; check.disabled = false; check.textContent = k + 1 < items.length ? 'Câu tiếp →' : 'Xem kết quả';
+        };
+      };
+      if (!items.length) { body.innerHTML = '<div class="card">Chưa có bài ghép câu.</div>'; return; }
+      draw();
+    }
+
+    function renderTranslate(n, u, body) {
+      const items = u.translate || [];
+      body.innerHTML = `<p class="muted" style="margin-bottom:10px;">Đọc câu tiếng Anh, <b>tìm động từ chính và cấu trúc</b>, tự dịch (gõ hoặc nghĩ trong đầu), rồi bấm <b>Xem phân tích</b> để so sánh từng khối.</p>
+        ${items.map((t, k) => `<div class="set" data-k="${k}">
+          <div class="qn muted" style="font-weight:800;font-size:12px;">CÂU ${k + 1}/${items.length}</div>
+          <div style="font-size:17px;font-weight:800;line-height:1.5;margin:4px 0;">${esc(t.en)} <button class="iconbtn sp" data-t="${esc(t.en)}">🔊</button></div>
+          <div class="muted" style="font-size:13px;margin-top:6px;">Bước 1 — chạm từng khối để xem nghĩa (★ = cấu trúc chính):</div>
+          ${chunksHtml(t.chunks, true)}
+          ${Array.isArray(t.viOpts) ? `<div class="muted" style="font-size:13px;margin-top:10px;">Bước 2 — chọn bản dịch đúng:</div>
+            <div class="vopts">${t.viOpts.map((o, j) => `<button class="option vopt" data-j="${j}"><span class="letter">${L[j]}</span><span>${esc(o)}</span></button>`).join('')}</div><div class="vres"></div>`
+          : `<div class="muted" style="font-size:13px;margin-top:10px;">Bước 2 — tự dịch cả câu:</div><textarea class="tr" placeholder="Bản dịch của bạn (không bắt buộc)…"></textarea>`}
+          <div class="stepbar"><button class="btn blue show">👀 Xem đáp án &amp; phân tích</button></div>
+          <div class="ans" style="display:none;margin-top:10px;">
+            ${viOrderHtml(t.chunks, t.viOrder)}
+            <div class="exp ok" style="margin-top:10px;">🇻🇳 <b>${esc(t.vi)}</b><div style="margin-top:4px;">💡 ${md(t.note)}</div></div>
+            <div class="stepbar"><span class="muted">Bạn dịch đúng ý chưa?</span><button class="btn small self" data-ok="1">🙂 Đúng ý</button><button class="btn small red self" data-ok="0">😕 Chưa</button><span class="res"></span></div>
+          </div></div>`).join('')}`;
+      bindSpeak(body);
+      body.querySelectorAll('.set').forEach(box => {
+        const k = +box.dataset.k, t = items[k];
+        box.querySelectorAll('.chunks.tap .ck').forEach(c => c.addEventListener('click', () => c.classList.add('open')));
+        const vopts = box.querySelectorAll('.vopt');
+        vopts.forEach(b => b.addEventListener('click', () => {
+          if (b.disabled) return;
+          const j = +b.dataset.j, ok = j === t.viAns;
+          vopts.forEach(x => { x.disabled = true; const i = +x.dataset.j; if (i === t.viAns) x.classList.add('correct'); else if (i === j) x.classList.add('wrong'); });
+          box.querySelector('.vres').innerHTML = `<div class="exp ${ok ? 'ok' : 'no'}">${ok ? '✅ Đúng!' : '❌ Chưa đúng — xem phân tích bên dưới.'}</div>`;
+          logHist(ok);
+        }));
+        box.querySelector('.show').onclick = e => {
+          box.querySelector('.ans').style.display = ''; e.target.style.display = 'none';
+          box.querySelectorAll('.chunks.tap .ck').forEach(c => c.classList.add('open'));
+        };
+        box.querySelectorAll('.self').forEach(b => b.onclick = () => {
+          const ok = b.dataset.ok === '1'; const p = loadP(); p.tr[n] = p.tr[n] || {}; p.tr[n][k] = ok ? 1 : 0; saveP(p); logHist(ok);
+          if (!ok && t.pid) { const c = p.cards[t.pid]; if (c) { c.box = 1; c.due = today(); saveP(p); } }
+          box.querySelectorAll('.self').forEach(x => x.disabled = true);
+          box.querySelector('.res').textContent = ok ? '✓ Tốt!' : '↻ Cấu trúc này sẽ được nhắc lại trong thẻ ôn.';
+        });
+      });
+    }
+
+    async function renderDue() {
+      const my = ++seq;
+      page(`<div class="head"><a class="btn ghost small" href="?" data-go="?">← 10 bài</a><h2>🃏 Ôn thẻ hôm nay</h2></div><div id="body"><p class="muted">Đang tải…</p></div>`);
+      const all = await loadAll(), p = loadP();
+      if (my !== seq) return;
+      const list = []; Object.keys(all).forEach(n => (all[n].patterns || []).forEach(x => { const c = p.cards[x.id]; if (c && c.due <= today()) list.push(x); }));
+      const body = document.getElementById('body');
+      if (!list.length) { body.innerHTML = '<div class="card">🎉 Không có thẻ nào đến hạn. Học thêm ở các bài nhé!</div>'; return; }
+      renderCards(shuffle(list), body, 'Ôn tập');
+    }
+
+    function route() {
+      lastSearch = location.search;
+      const q = new URLSearchParams(location.search);
+      const n = parseInt(q.get('u'), 10);
+      if (q.get('review') === 'due') renderDue();
+      else if (n >= 1 && n <= NUNITS) renderUnit(n, q.get('tab'));
+      else renderHome();
+    }
+    route();
+  })();
+  </script>
+</body>
+</html>

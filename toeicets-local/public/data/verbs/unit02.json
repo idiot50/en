@@ -1,0 +1,2595 @@
+{
+ "unit": 2,
+ "title": "V + người + to V",
+ "icon": "👉",
+ "intro": "Rất nhiều động từ công sở theo khuôn: động từ + người + to V (ask, require, allow, remind...). Điều cần nhớ: người đứng ngay sau động từ chính là người làm hành động trong to V (ask staff to submit: nhân viên nộp). Dạng bị động (be asked/required/expected/allowed to V) xuất hiện cực nhiều trong thông báo và nội quy. Riêng recommend / suggest là ngoại lệ: dùng recommend that S + V nguyên mẫu hoặc recommend V-ing, tránh 'recommend sb to V'.",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "ask/require/allow/remind + sb + to V",
+   "remind staff to submit",
+   "nhắc nhân viên nộp"
+  ],
+  [
+   "sb + be asked/required/expected/allowed + to V",
+   "are required to wear",
+   "bắt buộc phải mặc"
+  ],
+  [
+   "warn / tell + sb + not to V",
+   "warned them not to enter",
+   "cảnh báo họ không được vào"
+  ],
+  [
+   "recommend + that S + V (nguyên mẫu)",
+   "recommend that he attend",
+   "đề xuất anh ấy tham dự"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u02-ask",
+   "p": "ask sb to V",
+   "form": "ask + O(người) + to V",
+   "vi": "yêu cầu / nhờ ai làm gì",
+   "pass": "sb be asked to V",
+   "note": "ask sb to V = nhờ/yêu cầu ai làm. KHÔNG nói 'ask sb V' hay 'ask sb for V-ing'. Khác 'ask sb for sth' (xin ai cái gì) và 'ask sb about sth' (hỏi ai về gì).",
+   "core": true,
+   "ex": [
+    {
+     "en": "The manager asked the team to submit their timesheets by noon.",
+     "vi": "Quản lý yêu cầu cả nhóm nộp bảng chấm công trước buổi trưa.",
+     "chunks": [
+      {
+       "t": "The manager",
+       "r": "S",
+       "vi": "quản lý"
+      },
+      {
+       "t": "asked",
+       "r": "V",
+       "vi": "yêu cầu",
+       "k": true
+      },
+      {
+       "t": "the team",
+       "r": "O-người",
+       "vi": "cả nhóm",
+       "k": true
+      },
+      {
+       "t": "to submit",
+       "r": "to V",
+       "vi": "nộp",
+       "k": true
+      },
+      {
+       "t": "their timesheets",
+       "r": "O",
+       "vi": "bảng chấm công của họ"
+      },
+      {
+       "t": "by noon.",
+       "r": "trạng ngữ",
+       "vi": "trước buổi trưa"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "Could you ask the receptionist to book a taxi for the visitors?",
+     "vi": "Bạn có thể nhờ lễ tân đặt taxi cho các vị khách không?",
+     "chunks": [
+      {
+       "t": "Could you ask",
+       "r": "V",
+       "vi": "bạn có thể nhờ",
+       "k": true
+      },
+      {
+       "t": "the receptionist",
+       "r": "O-người",
+       "vi": "lễ tân",
+       "k": true
+      },
+      {
+       "t": "to book",
+       "r": "to V",
+       "vi": "đặt",
+       "k": true
+      },
+      {
+       "t": "a taxi",
+       "r": "O",
+       "vi": "một chiếc taxi"
+      },
+      {
+       "t": "for the visitors?",
+       "r": "giới từ + O",
+       "vi": "cho các vị khách"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-require",
+   "p": "require sb to V",
+   "form": "require + O(người) + to V",
+   "vi": "yêu cầu (bắt buộc) ai phải làm gì",
+   "pass": "sb be required to V",
+   "note": "require trang trọng, mạnh hơn ask: luật lệ, hợp đồng, quy định. KHÔNG nói 'require sb V'. Ngoài ra: require that S + V (nguyên mẫu); require sth (cần cái gì).",
+   "core": true,
+   "ex": [
+    {
+     "en": "The new regulation requires all drivers to carry a valid license.",
+     "vi": "Quy định mới yêu cầu mọi tài xế phải mang theo bằng lái hợp lệ.",
+     "chunks": [
+      {
+       "t": "The new regulation",
+       "r": "S",
+       "vi": "quy định mới"
+      },
+      {
+       "t": "requires",
+       "r": "V",
+       "vi": "yêu cầu",
+       "k": true
+      },
+      {
+       "t": "all drivers",
+       "r": "O-người",
+       "vi": "mọi tài xế",
+       "k": true
+      },
+      {
+       "t": "to carry",
+       "r": "to V",
+       "vi": "phải mang theo",
+       "k": true
+      },
+      {
+       "t": "a valid license.",
+       "r": "O",
+       "vi": "bằng lái hợp lệ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The contract requires the supplier to deliver within 30 days.",
+     "vi": "Hợp đồng yêu cầu nhà cung cấp giao hàng trong vòng 30 ngày.",
+     "chunks": [
+      {
+       "t": "The contract",
+       "r": "S",
+       "vi": "hợp đồng"
+      },
+      {
+       "t": "requires",
+       "r": "V",
+       "vi": "yêu cầu",
+       "k": true
+      },
+      {
+       "t": "the supplier",
+       "r": "O-người",
+       "vi": "nhà cung cấp",
+       "k": true
+      },
+      {
+       "t": "to deliver",
+       "r": "to V",
+       "vi": "giao hàng",
+       "k": true
+      },
+      {
+       "t": "within 30 days.",
+       "r": "trạng ngữ",
+       "vi": "trong vòng 30 ngày"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-allow",
+   "p": "allow sb to V",
+   "form": "allow + O(người) + to V",
+   "vi": "cho phép ai làm gì",
+   "pass": "sb be allowed to V",
+   "note": "allow sb to V. KHÔNG nói 'allow sb V'. Không có người: allow V-ing (The hotel allows smoking). Với 'let sb V' xem bài 9.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The company allows employees to work from home twice a week.",
+     "vi": "Công ty cho phép nhân viên làm việc tại nhà hai ngày mỗi tuần.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "allows",
+       "r": "V",
+       "vi": "cho phép",
+       "k": true
+      },
+      {
+       "t": "employees",
+       "r": "O-người",
+       "vi": "nhân viên",
+       "k": true
+      },
+      {
+       "t": "to work from home",
+       "r": "to V",
+       "vi": "làm việc tại nhà",
+       "k": true
+      },
+      {
+       "t": "twice a week.",
+       "r": "trạng ngữ",
+       "vi": "hai lần mỗi tuần"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "This badge allows visitors to enter the building after 6 p.m.",
+     "vi": "Thẻ này cho phép khách vào tòa nhà sau 6 giờ tối.",
+     "chunks": [
+      {
+       "t": "This badge",
+       "r": "S",
+       "vi": "thẻ này"
+      },
+      {
+       "t": "allows",
+       "r": "V",
+       "vi": "cho phép",
+       "k": true
+      },
+      {
+       "t": "visitors",
+       "r": "O-người",
+       "vi": "khách",
+       "k": true
+      },
+      {
+       "t": "to enter",
+       "r": "to V",
+       "vi": "vào",
+       "k": true
+      },
+      {
+       "t": "the building",
+       "r": "O",
+       "vi": "tòa nhà"
+      },
+      {
+       "t": "after 6 p.m.",
+       "r": "trạng ngữ",
+       "vi": "sau 6 giờ tối"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-permit",
+   "p": "permit sb to V",
+   "form": "permit + O(người) + to V",
+   "vi": "cho phép ai làm gì (trang trọng, theo quy định)",
+   "pass": "sb be permitted to V",
+   "note": "permit = allow nhưng trang trọng hơn, hay gặp trong nội quy, văn bản pháp lý. Danh từ 'permit' (giấy phép) trọng âm đầu: a work permit.",
+   "ex": [
+    {
+     "en": "Security rules do not permit visitors to take photographs in the lab.",
+     "vi": "Quy định an ninh không cho phép khách chụp ảnh trong phòng thí nghiệm.",
+     "chunks": [
+      {
+       "t": "Security rules",
+       "r": "S",
+       "vi": "quy định an ninh"
+      },
+      {
+       "t": "do not permit",
+       "r": "V",
+       "vi": "không cho phép",
+       "k": true
+      },
+      {
+       "t": "visitors",
+       "r": "O-người",
+       "vi": "khách",
+       "k": true
+      },
+      {
+       "t": "to take photographs",
+       "r": "to V",
+       "vi": "chụp ảnh",
+       "k": true
+      },
+      {
+       "t": "in the lab.",
+       "r": "giới từ + O",
+       "vi": "trong phòng thí nghiệm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The city permits restaurants to place tables outdoors in summer.",
+     "vi": "Thành phố cho phép nhà hàng đặt bàn ngoài trời vào mùa hè.",
+     "chunks": [
+      {
+       "t": "The city",
+       "r": "S",
+       "vi": "thành phố"
+      },
+      {
+       "t": "permits",
+       "r": "V",
+       "vi": "cho phép",
+       "k": true
+      },
+      {
+       "t": "restaurants",
+       "r": "O-người",
+       "vi": "nhà hàng",
+       "k": true
+      },
+      {
+       "t": "to place",
+       "r": "to V",
+       "vi": "đặt",
+       "k": true
+      },
+      {
+       "t": "tables outdoors",
+       "r": "O",
+       "vi": "bàn ngoài trời"
+      },
+      {
+       "t": "in summer.",
+       "r": "trạng ngữ",
+       "vi": "vào mùa hè"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-enable",
+   "p": "enable sb to V",
+   "form": "enable + O + to V",
+   "vi": "giúp / cho phép ai (có thể) làm gì",
+   "note": "Chủ ngữ thường là vật: phần mềm, học bổng, công nghệ... 'enable sb to V' = tạo điều kiện để ai làm được. KHÔNG nói 'enable sb V' hay 'enable sb for V-ing'. 'help sb V' học ở bài 9.",
+   "ex": [
+    {
+     "en": "The new software enables managers to track expenses in real time.",
+     "vi": "Phần mềm mới giúp các quản lý theo dõi chi phí theo thời gian thực.",
+     "chunks": [
+      {
+       "t": "The new software",
+       "r": "S",
+       "vi": "phần mềm mới"
+      },
+      {
+       "t": "enables",
+       "r": "V",
+       "vi": "giúp cho",
+       "k": true
+      },
+      {
+       "t": "managers",
+       "r": "O-người",
+       "vi": "các quản lý",
+       "k": true
+      },
+      {
+       "t": "to track",
+       "r": "to V",
+       "vi": "theo dõi được",
+       "k": true
+      },
+      {
+       "t": "expenses",
+       "r": "O",
+       "vi": "chi phí"
+      },
+      {
+       "t": "in real time.",
+       "r": "trạng ngữ",
+       "vi": "theo thời gian thực"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "The scholarship enabled her to study abroad.",
+     "vi": "Học bổng đã giúp cô ấy đi du học.",
+     "chunks": [
+      {
+       "t": "The scholarship",
+       "r": "S",
+       "vi": "học bổng"
+      },
+      {
+       "t": "enabled",
+       "r": "V",
+       "vi": "đã giúp",
+       "k": true
+      },
+      {
+       "t": "her",
+       "r": "O-người",
+       "vi": "cô ấy",
+       "k": true
+      },
+      {
+       "t": "to study",
+       "r": "to V",
+       "vi": "có thể học",
+       "k": true
+      },
+      {
+       "t": "abroad.",
+       "r": "trạng ngữ",
+       "vi": "ở nước ngoài"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-encourage",
+   "p": "encourage sb to V",
+   "form": "encourage + O(người) + to V",
+   "vi": "khuyến khích ai làm gì",
+   "pass": "sb be encouraged to V",
+   "note": "encourage sb to V. KHÔNG nói 'encourage sb V'. Không nêu người: encourage V-ing (We encourage recycling). Be encouraged to V = được khuyến khích, (thông báo) mong quý vị ...",
+   "core": true,
+   "ex": [
+    {
+     "en": "We encourage all staff to take part in the survey.",
+     "vi": "Chúng tôi khuyến khích toàn thể nhân viên tham gia khảo sát.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "encourage",
+       "r": "V",
+       "vi": "khuyến khích",
+       "k": true
+      },
+      {
+       "t": "all staff",
+       "r": "O-người",
+       "vi": "toàn thể nhân viên",
+       "k": true
+      },
+      {
+       "t": "to take part in",
+       "r": "to V",
+       "vi": "tham gia",
+       "k": true
+      },
+      {
+       "t": "the survey.",
+       "r": "O",
+       "vi": "cuộc khảo sát"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The discount encourages customers to buy in bulk.",
+     "vi": "Đợt giảm giá khuyến khích khách hàng mua số lượng lớn.",
+     "chunks": [
+      {
+       "t": "The discount",
+       "r": "S",
+       "vi": "đợt giảm giá"
+      },
+      {
+       "t": "encourages",
+       "r": "V",
+       "vi": "khuyến khích",
+       "k": true
+      },
+      {
+       "t": "customers",
+       "r": "O-người",
+       "vi": "khách hàng",
+       "k": true
+      },
+      {
+       "t": "to buy",
+       "r": "to V",
+       "vi": "mua",
+       "k": true
+      },
+      {
+       "t": "in bulk.",
+       "r": "trạng ngữ",
+       "vi": "số lượng lớn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-urge",
+   "p": "urge sb to V",
+   "form": "urge + O(người) + to V",
+   "vi": "thúc giục / kêu gọi ai làm gì",
+   "note": "urge mạnh hơn encourage/advise: kêu gọi khẩn thiết. KHÔNG nói 'urge sb V'.",
+   "ex": [
+    {
+     "en": "The union urged management to reconsider the layoffs.",
+     "vi": "Công đoàn kêu gọi ban lãnh đạo xem xét lại việc cắt giảm nhân sự.",
+     "chunks": [
+      {
+       "t": "The union",
+       "r": "S",
+       "vi": "công đoàn"
+      },
+      {
+       "t": "urged",
+       "r": "V",
+       "vi": "kêu gọi",
+       "k": true
+      },
+      {
+       "t": "management",
+       "r": "O-người",
+       "vi": "ban lãnh đạo",
+       "k": true
+      },
+      {
+       "t": "to reconsider",
+       "r": "to V",
+       "vi": "xem xét lại",
+       "k": true
+      },
+      {
+       "t": "the layoffs.",
+       "r": "O",
+       "vi": "việc cắt giảm nhân sự"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Analysts urge investors to remain calm.",
+     "vi": "Các nhà phân tích kêu gọi nhà đầu tư giữ bình tĩnh.",
+     "chunks": [
+      {
+       "t": "Analysts",
+       "r": "S",
+       "vi": "các nhà phân tích"
+      },
+      {
+       "t": "urge",
+       "r": "V",
+       "vi": "kêu gọi",
+       "k": true
+      },
+      {
+       "t": "investors",
+       "r": "O-người",
+       "vi": "nhà đầu tư",
+       "k": true
+      },
+      {
+       "t": "to remain calm.",
+       "r": "to V",
+       "vi": "giữ bình tĩnh",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-advise",
+   "p": "advise sb to V",
+   "form": "advise + O(người) + to V",
+   "vi": "khuyên ai nên làm gì",
+   "pass": "sb be advised to V",
+   "note": "advise sb to V = khuyên. KHÔNG nói 'advise sb V'. Thông báo công cộng hay dùng bị động: Passengers are advised to ... Cũng dùng advise V-ing (I advise waiting).",
+   "vs": "advise sb OF/ABOUT sth = thông báo cho ai về gì (bài 4)",
+   "core": true,
+   "ex": [
+    {
+     "en": "Our lawyer advised us to review the terms carefully.",
+     "vi": "Luật sư của chúng tôi khuyên chúng tôi nên xem kỹ các điều khoản.",
+     "chunks": [
+      {
+       "t": "Our lawyer",
+       "r": "S",
+       "vi": "luật sư của chúng tôi"
+      },
+      {
+       "t": "advised",
+       "r": "V",
+       "vi": "khuyên",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O-người",
+       "vi": "chúng tôi",
+       "k": true
+      },
+      {
+       "t": "to review",
+       "r": "to V",
+       "vi": "nên xem lại",
+       "k": true
+      },
+      {
+       "t": "the terms",
+       "r": "O",
+       "vi": "các điều khoản"
+      },
+      {
+       "t": "carefully.",
+       "r": "trạng ngữ",
+       "vi": "kỹ lưỡng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "Travelers are advised to arrive at the airport two hours early.",
+     "vi": "Hành khách được khuyên nên có mặt ở sân bay trước hai tiếng.",
+     "chunks": [
+      {
+       "t": "Travelers",
+       "r": "S",
+       "vi": "hành khách"
+      },
+      {
+       "t": "are advised",
+       "r": "V",
+       "vi": "được khuyên",
+       "k": true
+      },
+      {
+       "t": "to arrive",
+       "r": "to V",
+       "vi": "nên có mặt",
+       "k": true
+      },
+      {
+       "t": "at the airport",
+       "r": "giới từ + O",
+       "vi": "ở sân bay"
+      },
+      {
+       "t": "two hours early.",
+       "r": "trạng ngữ",
+       "vi": "trước hai tiếng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-remind",
+   "p": "remind sb to V",
+   "form": "remind + O(người) + to V",
+   "vi": "nhắc ai làm gì",
+   "note": "remind sb to V = nhắc ai (đừng quên) làm gì. KHÔNG nói 'remind sb V' hay 'remind to V'. Phải có người.",
+   "vs": "remind sb OF sth = gợi ai nhớ tới gì (bài 4)",
+   "core": true,
+   "ex": [
+    {
+     "en": "Please remind the staff to turn off the lights before leaving.",
+     "vi": "Hãy nhắc nhân viên tắt đèn trước khi ra về.",
+     "chunks": [
+      {
+       "t": "Please remind",
+       "r": "V",
+       "vi": "xin hãy nhắc",
+       "k": true
+      },
+      {
+       "t": "the staff",
+       "r": "O-người",
+       "vi": "nhân viên",
+       "k": true
+      },
+      {
+       "t": "to turn off",
+       "r": "to V",
+       "vi": "tắt",
+       "k": true
+      },
+      {
+       "t": "the lights",
+       "r": "O",
+       "vi": "đèn"
+      },
+      {
+       "t": "before leaving.",
+       "r": "trạng ngữ",
+       "vi": "trước khi ra về"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The system will remind users to change their passwords every 90 days.",
+     "vi": "Hệ thống sẽ nhắc người dùng đổi mật khẩu mỗi 90 ngày.",
+     "chunks": [
+      {
+       "t": "The system",
+       "r": "S",
+       "vi": "hệ thống"
+      },
+      {
+       "t": "will remind",
+       "r": "V",
+       "vi": "sẽ nhắc",
+       "k": true
+      },
+      {
+       "t": "users",
+       "r": "O-người",
+       "vi": "người dùng",
+       "k": true
+      },
+      {
+       "t": "to change",
+       "r": "to V",
+       "vi": "đổi",
+       "k": true
+      },
+      {
+       "t": "their passwords",
+       "r": "O",
+       "vi": "mật khẩu"
+      },
+      {
+       "t": "every 90 days.",
+       "r": "trạng ngữ",
+       "vi": "mỗi 90 ngày"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-invite",
+   "p": "invite sb to V",
+   "form": "invite + O(người) + to V",
+   "vi": "mời ai làm gì",
+   "pass": "sb be invited to V",
+   "note": "invite sb to V (mời làm gì) hoặc invite sb to + danh từ (invite sb to a dinner). KHÔNG nói 'invite sb V'.",
+   "ex": [
+    {
+     "en": "The CEO invited the investors to visit the new plant.",
+     "vi": "Tổng giám đốc mời các nhà đầu tư đến thăm nhà máy mới.",
+     "chunks": [
+      {
+       "t": "The CEO",
+       "r": "S",
+       "vi": "tổng giám đốc"
+      },
+      {
+       "t": "invited",
+       "r": "V",
+       "vi": "mời",
+       "k": true
+      },
+      {
+       "t": "the investors",
+       "r": "O-người",
+       "vi": "các nhà đầu tư",
+       "k": true
+      },
+      {
+       "t": "to visit",
+       "r": "to V",
+       "vi": "đến thăm",
+       "k": true
+      },
+      {
+       "t": "the new plant.",
+       "r": "O",
+       "vi": "nhà máy mới"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "We would like to invite you to attend our annual conference.",
+     "vi": "Chúng tôi trân trọng mời quý vị tham dự hội nghị thường niên.",
+     "chunks": [
+      {
+       "t": "We would like to invite",
+       "r": "V",
+       "vi": "chúng tôi trân trọng mời",
+       "k": true
+      },
+      {
+       "t": "you",
+       "r": "O-người",
+       "vi": "quý vị",
+       "k": true
+      },
+      {
+       "t": "to attend",
+       "r": "to V",
+       "vi": "tham dự",
+       "k": true
+      },
+      {
+       "t": "our annual conference.",
+       "r": "O",
+       "vi": "hội nghị thường niên của chúng tôi"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-instruct",
+   "p": "instruct sb to V",
+   "form": "instruct + O(người) + to V",
+   "vi": "chỉ thị / hướng dẫn ai làm gì",
+   "pass": "sb be instructed to V",
+   "note": "instruct = ra chỉ thị (cấp trên với cấp dưới) hoặc hướng dẫn rõ ràng. KHÔNG nói 'instruct sb V'. Bị động hay gặp trong đề thi/hướng dẫn: Participants were instructed to ...",
+   "ex": [
+    {
+     "en": "The supervisor instructed the workers to wear safety helmets.",
+     "vi": "Giám sát viên chỉ thị công nhân phải đội mũ bảo hộ.",
+     "chunks": [
+      {
+       "t": "The supervisor",
+       "r": "S",
+       "vi": "giám sát viên"
+      },
+      {
+       "t": "instructed",
+       "r": "V",
+       "vi": "chỉ thị",
+       "k": true
+      },
+      {
+       "t": "the workers",
+       "r": "O-người",
+       "vi": "công nhân",
+       "k": true
+      },
+      {
+       "t": "to wear",
+       "r": "to V",
+       "vi": "phải đội",
+       "k": true
+      },
+      {
+       "t": "safety helmets.",
+       "r": "O",
+       "vi": "mũ bảo hộ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Participants were instructed to leave their phones outside.",
+     "vi": "Người tham dự được hướng dẫn để điện thoại bên ngoài.",
+     "chunks": [
+      {
+       "t": "Participants",
+       "r": "S",
+       "vi": "người tham dự"
+      },
+      {
+       "t": "were instructed",
+       "r": "V",
+       "vi": "được hướng dẫn",
+       "k": true
+      },
+      {
+       "t": "to leave",
+       "r": "to V",
+       "vi": "để lại",
+       "k": true
+      },
+      {
+       "t": "their phones",
+       "r": "O",
+       "vi": "điện thoại"
+      },
+      {
+       "t": "outside.",
+       "r": "trạng ngữ",
+       "vi": "bên ngoài"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-expect",
+   "p": "expect sb to V",
+   "form": "expect + O(người) + to V",
+   "vi": "mong đợi / yêu cầu ai làm gì",
+   "pass": "sb be expected to V",
+   "note": "expect sb to V = mong ai làm gì (ngầm hiểu là ai đó PHẢI làm). Chú ý người làm hành động là O (us), không phải chủ ngữ. KHÔNG nói 'expect sb V' hay 'expect that sb to V'.",
+   "vs": "expect to V (bài 1) = tự mình dự kiến làm gì",
+   "core": true,
+   "ex": [
+    {
+     "en": "We expect all vendors to meet the quality standards.",
+     "vi": "Chúng tôi mong tất cả nhà cung cấp đáp ứng tiêu chuẩn chất lượng.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "expect",
+       "r": "V",
+       "vi": "mong",
+       "k": true
+      },
+      {
+       "t": "all vendors",
+       "r": "O-người",
+       "vi": "tất cả nhà cung cấp",
+       "k": true
+      },
+      {
+       "t": "to meet",
+       "r": "to V",
+       "vi": "đáp ứng",
+       "k": true
+      },
+      {
+       "t": "the quality standards.",
+       "r": "O",
+       "vi": "tiêu chuẩn chất lượng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The client expects us to respond within 24 hours.",
+     "vi": "Khách hàng mong chúng tôi phản hồi trong vòng 24 giờ.",
+     "chunks": [
+      {
+       "t": "The client",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "expects",
+       "r": "V",
+       "vi": "mong",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O-người",
+       "vi": "chúng tôi",
+       "k": true
+      },
+      {
+       "t": "to respond",
+       "r": "to V",
+       "vi": "phản hồi",
+       "k": true
+      },
+      {
+       "t": "within 24 hours.",
+       "r": "trạng ngữ",
+       "vi": "trong vòng 24 giờ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-persuade",
+   "p": "persuade sb to V",
+   "form": "persuade + O(người) + to V",
+   "vi": "thuyết phục ai làm gì",
+   "note": "persuade sb to V = thuyết phục (và ai đó đã đồng ý làm). Chưa thành công thì dùng 'try to persuade'. KHÔNG nói 'persuade sb V'. Cũng có persuade sb that + mệnh đề.",
+   "ex": [
+    {
+     "en": "The sales rep persuaded the client to extend the contract.",
+     "vi": "Nhân viên kinh doanh đã thuyết phục khách hàng gia hạn hợp đồng.",
+     "chunks": [
+      {
+       "t": "The sales rep",
+       "r": "S",
+       "vi": "nhân viên kinh doanh"
+      },
+      {
+       "t": "persuaded",
+       "r": "V",
+       "vi": "đã thuyết phục",
+       "k": true
+      },
+      {
+       "t": "the client",
+       "r": "O-người",
+       "vi": "khách hàng",
+       "k": true
+      },
+      {
+       "t": "to extend",
+       "r": "to V",
+       "vi": "gia hạn",
+       "k": true
+      },
+      {
+       "t": "the contract.",
+       "r": "O",
+       "vi": "hợp đồng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "It took weeks to persuade the board to approve the budget.",
+     "vi": "Phải mất nhiều tuần mới thuyết phục được hội đồng phê duyệt ngân sách.",
+     "chunks": [
+      {
+       "t": "It took weeks",
+       "r": "mệnh đề",
+       "vi": "phải mất nhiều tuần"
+      },
+      {
+       "t": "to persuade",
+       "r": "V",
+       "vi": "mới thuyết phục được",
+       "k": true
+      },
+      {
+       "t": "the board",
+       "r": "O-người",
+       "vi": "hội đồng",
+       "k": true
+      },
+      {
+       "t": "to approve",
+       "r": "to V",
+       "vi": "phê duyệt",
+       "k": true
+      },
+      {
+       "t": "the budget.",
+       "r": "O",
+       "vi": "ngân sách"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-authorize",
+   "p": "authorize sb to V",
+   "form": "authorize + O(người) + to V",
+   "vi": "ủy quyền / cho phép chính thức ai làm gì",
+   "pass": "sb be authorized to V",
+   "note": "be authorized to V = được ủy quyền / có thẩm quyền làm gì. Hay thấy trong 'authorized personnel' (nhân viên được phép). KHÔNG nói 'authorize sb V'.",
+   "ex": [
+    {
+     "en": "The director authorized the accountant to approve payments up to $5,000.",
+     "vi": "Giám đốc đã ủy quyền cho kế toán phê duyệt các khoản chi tới 5.000 đô la.",
+     "chunks": [
+      {
+       "t": "The director",
+       "r": "S",
+       "vi": "giám đốc"
+      },
+      {
+       "t": "authorized",
+       "r": "V",
+       "vi": "đã ủy quyền",
+       "k": true
+      },
+      {
+       "t": "the accountant",
+       "r": "O-người",
+       "vi": "kế toán",
+       "k": true
+      },
+      {
+       "t": "to approve",
+       "r": "to V",
+       "vi": "phê duyệt",
+       "k": true
+      },
+      {
+       "t": "payments",
+       "r": "O",
+       "vi": "các khoản chi"
+      },
+      {
+       "t": "up to $5,000.",
+       "r": "trạng ngữ",
+       "vi": "tới 5.000 đô la"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "Mr. Tran has been authorized to sign contracts on behalf of the company.",
+     "vi": "Ông Tran đã được ủy quyền thay mặt công ty ký hợp đồng.",
+     "chunks": [
+      {
+       "t": "Mr. Tran",
+       "r": "S",
+       "vi": "ông Tran"
+      },
+      {
+       "t": "has been authorized",
+       "r": "V",
+       "vi": "đã được ủy quyền",
+       "k": true
+      },
+      {
+       "t": "to sign",
+       "r": "to V",
+       "vi": "ký",
+       "k": true
+      },
+      {
+       "t": "contracts",
+       "r": "O",
+       "vi": "hợp đồng"
+      },
+      {
+       "t": "on behalf of the company.",
+       "r": "giới từ + O",
+       "vi": "thay mặt công ty"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-tell",
+   "p": "tell sb (not) to V",
+   "form": "tell + O(người) + to V",
+   "vi": "bảo / dặn ai (không) làm gì",
+   "note": "tell sb to V; phủ định: tell sb NOT to V. Trap: 'say' KHÔNG dùng khuôn này (không nói 'say sb to V'); say to sb that... Khác 'tell sb about sth' (kể cho ai về gì).",
+   "ex": [
+    {
+     "en": "She told the driver to wait outside the hotel.",
+     "vi": "Cô ấy bảo tài xế đợi bên ngoài khách sạn.",
+     "chunks": [
+      {
+       "t": "She",
+       "r": "S",
+       "vi": "cô ấy"
+      },
+      {
+       "t": "told",
+       "r": "V",
+       "vi": "bảo",
+       "k": true
+      },
+      {
+       "t": "the driver",
+       "r": "O-người",
+       "vi": "tài xế",
+       "k": true
+      },
+      {
+       "t": "to wait",
+       "r": "to V",
+       "vi": "đợi",
+       "k": true
+      },
+      {
+       "t": "outside the hotel.",
+       "r": "trạng ngữ",
+       "vi": "bên ngoài khách sạn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The manager told us not to discuss the project with outsiders.",
+     "vi": "Quản lý dặn chúng tôi không bàn về dự án với người ngoài.",
+     "chunks": [
+      {
+       "t": "The manager",
+       "r": "S",
+       "vi": "quản lý"
+      },
+      {
+       "t": "told",
+       "r": "V",
+       "vi": "dặn",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O-người",
+       "vi": "chúng tôi",
+       "k": true
+      },
+      {
+       "t": "not to discuss",
+       "r": "to V",
+       "vi": "không bàn về",
+       "k": true
+      },
+      {
+       "t": "the project",
+       "r": "O",
+       "vi": "dự án"
+      },
+      {
+       "t": "with outsiders.",
+       "r": "giới từ + O",
+       "vi": "với người ngoài"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-want",
+   "p": "want sb to V",
+   "form": "want + O(người) + to V",
+   "vi": "muốn ai làm gì",
+   "note": "want sb to V. KHÔNG nói 'want that S + V' hay 'want sb V'. Lịch sự hơn: would like sb to V.",
+   "ex": [
+    {
+     "en": "I want you to prepare a short presentation for the board.",
+     "vi": "Tôi muốn bạn chuẩn bị một bài thuyết trình ngắn cho hội đồng quản trị.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "want",
+       "r": "V",
+       "vi": "muốn",
+       "k": true
+      },
+      {
+       "t": "you",
+       "r": "O-người",
+       "vi": "bạn",
+       "k": true
+      },
+      {
+       "t": "to prepare",
+       "r": "to V",
+       "vi": "chuẩn bị",
+       "k": true
+      },
+      {
+       "t": "a short presentation",
+       "r": "O",
+       "vi": "một bài thuyết trình ngắn"
+      },
+      {
+       "t": "for the board.",
+       "r": "giới từ + O",
+       "vi": "cho hội đồng quản trị"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "The customers want the company to lower its prices.",
+     "vi": "Khách hàng muốn công ty hạ giá.",
+     "chunks": [
+      {
+       "t": "The customers",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "want",
+       "r": "V",
+       "vi": "muốn",
+       "k": true
+      },
+      {
+       "t": "the company",
+       "r": "O-người",
+       "vi": "công ty",
+       "k": true
+      },
+      {
+       "t": "to lower",
+       "r": "to V",
+       "vi": "hạ",
+       "k": true
+      },
+      {
+       "t": "its prices.",
+       "r": "O",
+       "vi": "giá của mình"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-warn",
+   "p": "warn sb (not) to V",
+   "form": "warn + O(người) + (not) to V",
+   "vi": "cảnh báo ai (đừng) làm gì",
+   "pass": "sb be warned (not) to V",
+   "note": "warn sb to V = cảnh báo nên làm gì; warn sb NOT to V = cảnh báo đừng làm gì. Phủ định đặt 'not' trước to V.",
+   "vs": "warn sb ABOUT/OF sth = cảnh báo ai về điều gì",
+   "ex": [
+    {
+     "en": "The safety officer warned workers not to enter the area.",
+     "vi": "Nhân viên an toàn cảnh báo công nhân không được vào khu vực đó.",
+     "chunks": [
+      {
+       "t": "The safety officer",
+       "r": "S",
+       "vi": "nhân viên an toàn"
+      },
+      {
+       "t": "warned",
+       "r": "V",
+       "vi": "cảnh báo",
+       "k": true
+      },
+      {
+       "t": "workers",
+       "r": "O-người",
+       "vi": "công nhân",
+       "k": true
+      },
+      {
+       "t": "not to enter",
+       "r": "to V",
+       "vi": "không được vào",
+       "k": true
+      },
+      {
+       "t": "the area.",
+       "r": "O",
+       "vi": "khu vực đó"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The agency warned travelers to avoid the affected region.",
+     "vi": "Cơ quan chức năng cảnh báo du khách tránh vùng bị ảnh hưởng.",
+     "chunks": [
+      {
+       "t": "The agency",
+       "r": "S",
+       "vi": "cơ quan chức năng"
+      },
+      {
+       "t": "warned",
+       "r": "V",
+       "vi": "cảnh báo",
+       "k": true
+      },
+      {
+       "t": "travelers",
+       "r": "O-người",
+       "vi": "du khách",
+       "k": true
+      },
+      {
+       "t": "to avoid",
+       "r": "to V",
+       "vi": "tránh",
+       "k": true
+      },
+      {
+       "t": "the affected region.",
+       "r": "O",
+       "vi": "vùng bị ảnh hưởng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-request",
+   "p": "request sb to V",
+   "form": "request + O(người) + to V",
+   "vi": "đề nghị / yêu cầu (lịch sự) ai làm gì",
+   "alt": "= request that S + V (nguyên mẫu)",
+   "pass": "sb be requested to V",
+   "note": "Rất trang trọng, hay gặp ở bị động trong thông báo: Passengers are requested to ... (xin quý khách vui lòng ...). Thông thường dùng ask sb to V. KHÔNG nói 'request sb V'.",
+   "ex": [
+    {
+     "en": "The company requests all visitors to sign in at the front desk.",
+     "vi": "Công ty đề nghị tất cả khách ký tên ở quầy lễ tân.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "requests",
+       "r": "V",
+       "vi": "đề nghị",
+       "k": true
+      },
+      {
+       "t": "all visitors",
+       "r": "O-người",
+       "vi": "tất cả khách",
+       "k": true
+      },
+      {
+       "t": "to sign in",
+       "r": "to V",
+       "vi": "ký tên",
+       "k": true
+      },
+      {
+       "t": "at the front desk.",
+       "r": "giới từ + O",
+       "vi": "ở quầy lễ tân"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Passengers are requested to remain seated until the plane stops.",
+     "vi": "Hành khách vui lòng ngồi yên cho đến khi máy bay dừng hẳn.",
+     "chunks": [
+      {
+       "t": "Passengers",
+       "r": "S",
+       "vi": "hành khách"
+      },
+      {
+       "t": "are requested",
+       "r": "V",
+       "vi": "(xin) vui lòng",
+       "k": true
+      },
+      {
+       "t": "to remain seated",
+       "r": "to V",
+       "vi": "ngồi yên",
+       "k": true
+      },
+      {
+       "t": "until the plane stops.",
+       "r": "mệnh đề",
+       "vi": "cho đến khi máy bay dừng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-recommend",
+   "p": "recommend that S + V (nguyên mẫu)",
+   "form": "recommend + (that) + S + V-nguyên mẫu",
+   "vi": "đề xuất / khuyên rằng ai nên làm gì",
+   "alt": "= recommend V-ing (bài 1)",
+   "note": "BẪY: tránh 'recommend sb to V'. Dùng 'recommend that sb + V nguyên mẫu' (không chia -s, -ed). Ví dụ: recommended that he REVIEW (không phải reviews). suggest cũng theo khuôn này (suggest that S + V). Muốn dùng 'sb to V' thì dùng advise sb to V. Bị động: It is recommended that ... + V nguyên mẫu.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The auditor recommended that the company hire an independent consultant.",
+     "vi": "Kiểm toán viên đề xuất công ty thuê một chuyên gia tư vấn độc lập.",
+     "chunks": [
+      {
+       "t": "The auditor",
+       "r": "S",
+       "vi": "kiểm toán viên"
+      },
+      {
+       "t": "recommended",
+       "r": "V",
+       "vi": "đề xuất",
+       "k": true
+      },
+      {
+       "t": "that the company hire an independent consultant.",
+       "r": "mệnh đề",
+       "vi": "công ty thuê chuyên gia tư vấn độc lập",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Our IT department recommends that staff change their passwords every month.",
+     "vi": "Bộ phận IT khuyên nhân viên nên đổi mật khẩu mỗi tháng.",
+     "chunks": [
+      {
+       "t": "Our IT department",
+       "r": "S",
+       "vi": "bộ phận IT của chúng tôi"
+      },
+      {
+       "t": "recommends",
+       "r": "V",
+       "vi": "khuyên",
+       "k": true
+      },
+      {
+       "t": "that staff change",
+       "r": "mệnh đề",
+       "vi": "nhân viên nên đổi",
+       "k": true
+      },
+      {
+       "t": "their passwords",
+       "r": "O",
+       "vi": "mật khẩu"
+      },
+      {
+       "t": "every month.",
+       "r": "trạng ngữ",
+       "vi": "mỗi tháng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-required",
+   "p": "be required to V",
+   "form": "S + be required + to V",
+   "vi": "(bị) bắt buộc phải làm gì",
+   "alt": "= have to V",
+   "note": "Dạng bị động hay gặp nhất của require. Dịch 'phải / bắt buộc phải', không dịch 'được yêu cầu' một cách vô nghĩa. KHÔNG nói 'be required V'.",
+   "core": true,
+   "ex": [
+    {
+     "en": "All new hires are required to complete a safety course.",
+     "vi": "Tất cả nhân viên mới phải hoàn thành khóa học an toàn.",
+     "chunks": [
+      {
+       "t": "All new hires",
+       "r": "S",
+       "vi": "tất cả nhân viên mới"
+      },
+      {
+       "t": "are required",
+       "r": "V",
+       "vi": "bắt buộc",
+       "k": true
+      },
+      {
+       "t": "to complete",
+       "r": "to V",
+       "vi": "phải hoàn thành",
+       "k": true
+      },
+      {
+       "t": "a safety course.",
+       "r": "O",
+       "vi": "khóa học an toàn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Applicants are required to submit two references.",
+     "vi": "Ứng viên phải nộp hai thư giới thiệu.",
+     "chunks": [
+      {
+       "t": "Applicants",
+       "r": "S",
+       "vi": "ứng viên"
+      },
+      {
+       "t": "are required",
+       "r": "V",
+       "vi": "bắt buộc",
+       "k": true
+      },
+      {
+       "t": "to submit",
+       "r": "to V",
+       "vi": "phải nộp",
+       "k": true
+      },
+      {
+       "t": "two references.",
+       "r": "O",
+       "vi": "hai thư giới thiệu"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-expected",
+   "p": "be expected to V",
+   "form": "S + be expected + to V",
+   "vi": "phải / được kỳ vọng / dự kiến sẽ làm gì",
+   "note": "Chủ ngữ là người: nhân viên 'phải/được kỳ vọng' làm gì. Chủ ngữ là vật/sự kiện: 'dự kiến sẽ' (The model is expected to go on sale). KHÔNG nói 'be expected V-ing'.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Staff are expected to arrive on time.",
+     "vi": "Nhân viên phải đến đúng giờ.",
+     "chunks": [
+      {
+       "t": "Staff",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "are expected",
+       "r": "V",
+       "vi": "phải",
+       "k": true
+      },
+      {
+       "t": "to arrive",
+       "r": "to V",
+       "vi": "đến",
+       "k": true
+      },
+      {
+       "t": "on time.",
+       "r": "trạng ngữ",
+       "vi": "đúng giờ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The new model is expected to go on sale in May.",
+     "vi": "Mẫu mới dự kiến sẽ được bán ra vào tháng Năm.",
+     "chunks": [
+      {
+       "t": "The new model",
+       "r": "S",
+       "vi": "mẫu mới"
+      },
+      {
+       "t": "is expected",
+       "r": "V",
+       "vi": "dự kiến",
+       "k": true
+      },
+      {
+       "t": "to go on sale",
+       "r": "to V",
+       "vi": "bán ra",
+       "k": true
+      },
+      {
+       "t": "in May.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng Năm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u02-allowed",
+   "p": "be allowed to V",
+   "form": "S + be allowed/permitted + to V",
+   "vi": "được phép làm gì",
+   "alt": "= be permitted to V",
+   "note": "Bị động của allow. Chú ý: 'let' không có bị động nên 'được phép' dịch bằng be allowed to V: Visitors are not allowed to ... (không được phép ...). KHÔNG nói 'be allowed V-ing' hay 'be allowed for V-ing'.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Visitors are not allowed to bring food into the lab.",
+     "vi": "Khách không được phép mang đồ ăn vào phòng thí nghiệm.",
+     "chunks": [
+      {
+       "t": "Visitors",
+       "r": "S",
+       "vi": "khách"
+      },
+      {
+       "t": "are not allowed",
+       "r": "V",
+       "vi": "không được phép",
+       "k": true
+      },
+      {
+       "t": "to bring",
+       "r": "to V",
+       "vi": "mang",
+       "k": true
+      },
+      {
+       "t": "food",
+       "r": "O",
+       "vi": "đồ ăn"
+      },
+      {
+       "t": "into the lab.",
+       "r": "giới từ + O",
+       "vi": "vào phòng thí nghiệm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Employees are permitted to use the gym free of charge.",
+     "vi": "Nhân viên được phép sử dụng phòng tập miễn phí.",
+     "chunks": [
+      {
+       "t": "Employees",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "are permitted",
+       "r": "V",
+       "vi": "được phép",
+       "k": true
+      },
+      {
+       "t": "to use",
+       "r": "to V",
+       "vi": "sử dụng",
+       "k": true
+      },
+      {
+       "t": "the gym",
+       "r": "O",
+       "vi": "phòng tập"
+      },
+      {
+       "t": "free of charge.",
+       "r": "trạng ngữ",
+       "vi": "miễn phí"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "type": "form",
+   "q": "The manager asked all employees ------- their passwords.",
+   "options": [
+    "change",
+    "changing",
+    "to change",
+    "changed"
+   ],
+   "ans": 2,
+   "why": "ask + người + to V: asked employees to change. Không dùng nguyên mẫu hay V-ing sau tân ngữ.",
+   "vi": "Quản lý yêu cầu tất cả nhân viên đổi mật khẩu.",
+   "pid": "u02-ask"
+  },
+  {
+   "type": "form",
+   "q": "The new regulation requires manufacturers ------- safety labels on all products.",
+   "options": [
+    "to include",
+    "including",
+    "include",
+    "included"
+   ],
+   "ans": 0,
+   "why": "require + người + to V: requires manufacturers to include.",
+   "vi": "Quy định mới yêu cầu nhà sản xuất ghi nhãn an toàn trên mọi sản phẩm.",
+   "pid": "u02-require"
+  },
+  {
+   "type": "form",
+   "q": "The software enables users ------- reports in minutes.",
+   "options": [
+    "generating",
+    "generate",
+    "generated",
+    "to generate"
+   ],
+   "ans": 3,
+   "why": "enable + người + to V: enables users to generate. Không dùng V-ing hay nguyên mẫu.",
+   "vi": "Phần mềm giúp người dùng tạo báo cáo trong vài phút.",
+   "pid": "u02-enable"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "Our policy does not allow customers ------- refunds without a receipt.",
+   "options": [
+    "receive",
+    "to receive",
+    "receiving",
+    "received"
+   ],
+   "ans": 1,
+   "why": "allow + người + to V: allow customers to receive. 'allow customers receive' / 'receiving' sai.",
+   "vi": "Chính sách của chúng tôi không cho phép khách hàng nhận hoàn tiền nếu không có hóa đơn.",
+   "pid": "u02-allow"
+  },
+  {
+   "type": "word-choice",
+   "q": "The CEO ------- all department heads to attend the Monday meeting.",
+   "options": [
+    "told",
+    "said",
+    "suggested",
+    "mentioned"
+   ],
+   "ans": 0,
+   "why": "Chỉ tell + người + to V đúng. say / suggest / mention không đi với 'người + to V'.",
+   "vi": "Tổng giám đốc bảo tất cả trưởng phòng dự cuộc họp thứ Hai.",
+   "pid": "u02-tell"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "Employees are expected ------- the dress code during client visits.",
+   "options": [
+    "followed",
+    "to follow",
+    "following",
+    "follow"
+   ],
+   "ans": 1,
+   "why": "be expected + to V: are expected to follow = được kỳ vọng/phải tuân thủ.",
+   "vi": "Nhân viên phải tuân thủ quy định trang phục khi có khách đến.",
+   "pid": "u02-expected"
+  },
+  {
+   "type": "form",
+   "q": "The airline warned passengers ------- unattended baggage in the terminal.",
+   "options": [
+    "not leaving",
+    "to not leaving",
+    "not to leave",
+    "don't leave"
+   ],
+   "ans": 2,
+   "why": "warn + người + not to V: warned passengers not to leave. Phủ định đặt 'not' trước to V.",
+   "vi": "Hãng hàng không cảnh báo hành khách không để hành lý không người trông coi trong nhà ga.",
+   "pid": "u02-warn"
+  },
+  {
+   "type": "form",
+   "q": "The auditor recommended that the firm ------- its accounting software.",
+   "options": [
+    "upgrading",
+    "to upgrade",
+    "upgraded",
+    "upgrade"
+   ],
+   "ans": 3,
+   "why": "recommend that S + V nguyên mẫu: recommended that the firm upgrade. Không dùng upgrading/to upgrade/upgraded sau 'that S'.",
+   "vi": "Kiểm toán viên đề xuất công ty nâng cấp phần mềm kế toán.",
+   "pid": "u02-recommend"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "Please remind your team ------- the survey before Friday.",
+   "options": [
+    "to complete",
+    "completing",
+    "complete",
+    "completes"
+   ],
+   "ans": 0,
+   "why": "remind + người + to V: remind your team to complete.",
+   "vi": "Hãy nhắc nhóm của bạn hoàn thành khảo sát trước thứ Sáu.",
+   "pid": "u02-remind"
+  },
+  {
+   "type": "word-choice",
+   "q": "Visitors are not ------- to take photos inside the factory.",
+   "options": [
+    "let",
+    "allowed",
+    "helped",
+    "said"
+   ],
+   "ans": 1,
+   "why": "be allowed to V = được phép. 'let' không có bị động; helped/said không hợp nghĩa hay cấu trúc.",
+   "vi": "Khách không được phép chụp ảnh bên trong nhà máy.",
+   "pid": "u02-allowed"
+  },
+  {
+   "type": "form",
+   "q": "Staff members are encouraged ------- any safety concerns to their supervisors.",
+   "options": [
+    "report",
+    "reporting",
+    "to report",
+    "reported"
+   ],
+   "ans": 2,
+   "why": "be encouraged + to V: are encouraged to report = được khuyến khích báo cáo.",
+   "vi": "Nhân viên được khuyến khích báo cáo mọi mối lo về an toàn cho người giám sát.",
+   "pid": "u02-encourage"
+  },
+  {
+   "type": "word-choice",
+   "q": "After weeks of talks, Mr. Kim finally ------- the landlord to extend the lease for another year.",
+   "options": [
+    "suggested",
+    "insisted",
+    "explained",
+    "persuaded"
+   ],
+   "ans": 3,
+   "why": "Chỉ persuade đi với 'người + to V': persuaded the landlord to extend = thuyết phục được chủ nhà gia hạn. suggest dùng suggest that S + V (không có 'suggest sb to V'); insist dùng insist on V-ing / insist that; explain không đi với 'người + to V'.",
+   "vi": "Sau nhiều tuần thương lượng, cuối cùng ông Kim đã thuyết phục được chủ nhà gia hạn hợp đồng thuê thêm một năm.",
+   "pid": "u02-persuade"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Quản lý nhắc nhân viên khóa kho trước khi ra về.",
+   "chunks": [
+    "The manager",
+    "reminded",
+    "the staff",
+    "to lock",
+    "the storeroom",
+    "before leaving."
+   ],
+   "pid": "u02-remind",
+   "why": "remind + người + to V.",
+   "dist": "locking"
+  },
+  {
+   "vi": "Công ty cho phép nhân viên làm việc tại nhà vào các ngày thứ Sáu.",
+   "chunks": [
+    "The company",
+    "allows",
+    "employees",
+    "to work from home",
+    "on Fridays."
+   ],
+   "pid": "u02-allow",
+   "why": "allow + người + to V.",
+   "dist": "working"
+  },
+  {
+   "vi": "Hợp đồng yêu cầu nhà cung cấp giao toàn bộ hàng trong vòng 30 ngày.",
+   "chunks": [
+    "The contract",
+    "requires",
+    "the supplier",
+    "to deliver",
+    "all goods",
+    "within 30 days."
+   ],
+   "pid": "u02-require",
+   "why": "require + người + to V.",
+   "dist": "delivering"
+  },
+  {
+   "vi": "Hành khách được khuyên nên đến trước hai tiếng.",
+   "chunks": [
+    "Travelers",
+    "are advised",
+    "to arrive",
+    "two hours early."
+   ],
+   "pid": "u02-advise",
+   "why": "be advised + to V.",
+   "dist": "arriving"
+  },
+  {
+   "vi": "Kiểm toán viên đề xuất công ty thuê một kế toán mới.",
+   "chunks": [
+    "The auditor",
+    "recommended",
+    "that the company",
+    "hire",
+    "a new accountant."
+   ],
+   "pid": "u02-recommend",
+   "why": "recommend that S + V nguyên mẫu.",
+   "dist": "to hire"
+  },
+  {
+   "vi": "Biển báo cảnh báo khách không được chạm vào thiết bị.",
+   "chunks": [
+    "The sign",
+    "warns",
+    "visitors",
+    "not to touch",
+    "the equipment."
+   ],
+   "pid": "u02-warn",
+   "why": "warn + người + not to V.",
+   "dist": "not touching"
+  }
+ ],
+ "translate": [
+  {
+   "en": "Under the new policy, all employees who travel abroad are required to report their expenses within five working days.",
+   "vi": "Theo chính sách mới, tất cả nhân viên đi công tác nước ngoài phải báo cáo chi phí trong vòng năm ngày làm việc.",
+   "chunks": [
+    {
+     "t": "Under the new policy,",
+     "r": "trạng ngữ",
+     "vi": "theo chính sách mới"
+    },
+    {
+     "t": "all employees who travel abroad",
+     "r": "S",
+     "vi": "tất cả nhân viên đi công tác nước ngoài"
+    },
+    {
+     "t": "are required",
+     "r": "V",
+     "vi": "bắt buộc",
+     "k": true
+    },
+    {
+     "t": "to report",
+     "r": "to V",
+     "vi": "phải báo cáo",
+     "k": true
+    },
+    {
+     "t": "their expenses",
+     "r": "O",
+     "vi": "chi phí của họ"
+    },
+    {
+     "t": "within five working days.",
+     "r": "trạng ngữ",
+     "vi": "trong vòng năm ngày làm việc"
+    }
+   ],
+   "note": "are required to V = bắt buộc phải làm gì (dịch 'phải', đừng dịch 'được yêu cầu' cứng). 'who travel abroad' bổ nghĩa cho 'all employees', dịch ngay sau danh từ: nhân viên đi công tác nước ngoài.",
+   "pid": "u02-required",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Our corporate clients expect us to respond to every inquiry within one business day, even during the holiday season.",
+   "vi": "Khách hàng doanh nghiệp của chúng tôi kỳ vọng chúng tôi phải phản hồi mọi yêu cầu trong vòng một ngày làm việc, kể cả trong mùa lễ.",
+   "chunks": [
+    {
+     "t": "Our corporate clients",
+     "r": "S",
+     "vi": "khách hàng doanh nghiệp của chúng tôi"
+    },
+    {
+     "t": "expect",
+     "r": "V",
+     "vi": "kỳ vọng",
+     "k": true
+    },
+    {
+     "t": "us",
+     "r": "O-người",
+     "vi": "chúng tôi",
+     "k": true
+    },
+    {
+     "t": "to respond to every inquiry",
+     "r": "to V",
+     "vi": "phản hồi mọi yêu cầu",
+     "k": true
+    },
+    {
+     "t": "within one business day,",
+     "r": "trạng ngữ",
+     "vi": "trong vòng một ngày làm việc"
+    },
+    {
+     "t": "even during the holiday season.",
+     "r": "trạng ngữ",
+     "vi": "kể cả trong mùa lễ"
+    }
+   ],
+   "note": "expect + người + to V: người đứng ngay sau expect (us) là người PHẢI làm hành động (respond), còn chủ ngữ (clients) là người kỳ vọng. Dịch: 'kỳ vọng chúng tôi phải ...'. Cụm 'even during ...' dịch 'kể cả trong ...'.",
+   "pid": "u02-expect",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "viOpts": [
+    "Khách hàng doanh nghiệp của chúng tôi cần một ngày làm việc để phản hồi mọi yêu cầu, kể cả trong mùa lễ.",
+    "Khách hàng doanh nghiệp của chúng tôi kỳ vọng chúng tôi phải phản hồi mọi yêu cầu trong vòng một ngày làm việc, kể cả trong mùa lễ.",
+    "Chúng tôi kỳ vọng khách hàng doanh nghiệp phản hồi mọi yêu cầu trong vòng một ngày làm việc, kể cả trong mùa lễ."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "The new inventory system enables store managers to monitor stock levels in real time and order supplies automatically.",
+   "vi": "Hệ thống kiểm kê mới giúp các quản lý cửa hàng theo dõi mức tồn kho theo thời gian thực và tự động đặt vật tư.",
+   "chunks": [
+    {
+     "t": "The new inventory system",
+     "r": "S",
+     "vi": "hệ thống kiểm kê mới"
+    },
+    {
+     "t": "enables",
+     "r": "V",
+     "vi": "giúp",
+     "k": true
+    },
+    {
+     "t": "store managers",
+     "r": "O-người",
+     "vi": "các quản lý cửa hàng",
+     "k": true
+    },
+    {
+     "t": "to monitor stock levels in real time",
+     "r": "to V",
+     "vi": "theo dõi mức tồn kho theo thời gian thực",
+     "k": true
+    },
+    {
+     "t": "and order supplies automatically.",
+     "r": "to V",
+     "vi": "và tự động đặt vật tư",
+     "k": true
+    }
+   ],
+   "note": "enable + người + to V = giúp (cho) ai có thể làm gì. Chủ ngữ là hệ thống (vật) nên dịch 'giúp'. Hai động từ nối bằng 'and' (to monitor ... and (to) order ...) đều thuộc phần to V.",
+   "pid": "u02-enable",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "en": "After several rounds of negotiation, our sales director finally persuaded the client to extend the contract for another two years.",
+   "vi": "Sau nhiều vòng đàm phán, giám đốc kinh doanh của chúng tôi cuối cùng đã thuyết phục được khách hàng gia hạn hợp đồng thêm hai năm nữa.",
+   "chunks": [
+    {
+     "t": "After several rounds of negotiation,",
+     "r": "trạng ngữ",
+     "vi": "sau nhiều vòng đàm phán"
+    },
+    {
+     "t": "our sales director",
+     "r": "S",
+     "vi": "giám đốc kinh doanh của chúng tôi"
+    },
+    {
+     "t": "finally persuaded",
+     "r": "V",
+     "vi": "cuối cùng đã thuyết phục được",
+     "k": true
+    },
+    {
+     "t": "the client",
+     "r": "O-người",
+     "vi": "khách hàng",
+     "k": true
+    },
+    {
+     "t": "to extend the contract",
+     "r": "to V",
+     "vi": "gia hạn hợp đồng",
+     "k": true
+    },
+    {
+     "t": "for another two years.",
+     "r": "trạng ngữ",
+     "vi": "thêm hai năm nữa"
+    }
+   ],
+   "note": "persuade + người + to V = thuyết phục ai làm gì (đã thành công). Người bị thuyết phục là 'the client', người gia hạn cũng là 'the client'. Dịch: 'thuyết phục được khách hàng gia hạn...'. 'for another two years' = thêm hai năm nữa.",
+   "pid": "u02-persuade",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "viOpts": [
+    "Sau nhiều vòng đàm phán, giám đốc kinh doanh của chúng tôi cuối cùng đã thuyết phục được khách hàng gia hạn hợp đồng thêm hai năm nữa.",
+    "Sau nhiều vòng đàm phán, giám đốc kinh doanh của chúng tôi cuối cùng đã bị khách hàng thuyết phục gia hạn hợp đồng thêm hai năm nữa.",
+    "Sau nhiều vòng đàm phán, giám đốc kinh doanh của chúng tôi cuối cùng đã thuyết phục khách hàng ngừng hợp đồng trong hai năm nữa."
+   ],
+   "viAns": 0
+  },
+  {
+   "en": "Passengers are advised to check the airline's website for flight updates before leaving for the airport.",
+   "vi": "Hành khách được khuyên nên kiểm tra trang web của hãng hàng không để cập nhật thông tin chuyến bay trước khi ra sân bay.",
+   "chunks": [
+    {
+     "t": "Passengers",
+     "r": "S",
+     "vi": "hành khách"
+    },
+    {
+     "t": "are advised",
+     "r": "V",
+     "vi": "được khuyên nên",
+     "k": true
+    },
+    {
+     "t": "to check the airline's website",
+     "r": "to V",
+     "vi": "kiểm tra trang web của hãng hàng không",
+     "k": true
+    },
+    {
+     "t": "for flight updates",
+     "r": "giới từ + O",
+     "vi": "để cập nhật thông tin chuyến bay"
+    },
+    {
+     "t": "before leaving for the airport.",
+     "r": "trạng ngữ",
+     "vi": "trước khi ra sân bay"
+    }
+   ],
+   "note": "are advised to V = được khuyên nên làm gì (thông báo công cộng). 'for flight updates' chỉ mục đích: để cập nhật thông tin chuyến bay. 'before leaving for ...' = trước khi đi ra ...",
+   "pid": "u02-advise",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "en": "Because the system has crashed three times this month, the technician recommended that the company replace the server rather than repair it again.",
+   "vi": "Vì hệ thống đã sập ba lần trong tháng này, kỹ thuật viên đề xuất công ty thay máy chủ thay vì sửa lại lần nữa.",
+   "chunks": [
+    {
+     "t": "Because the system has crashed three times this month,",
+     "r": "mệnh đề",
+     "vi": "vì hệ thống đã sập ba lần trong tháng này"
+    },
+    {
+     "t": "the technician",
+     "r": "S",
+     "vi": "kỹ thuật viên"
+    },
+    {
+     "t": "recommended",
+     "r": "V",
+     "vi": "đề xuất",
+     "k": true
+    },
+    {
+     "t": "that the company replace the server",
+     "r": "mệnh đề",
+     "vi": "công ty thay máy chủ",
+     "k": true
+    },
+    {
+     "t": "rather than repair it again.",
+     "r": "trạng ngữ",
+     "vi": "thay vì sửa lại lần nữa"
+    }
+   ],
+   "note": "recommend that S + V nguyên mẫu: 'that the company replace the server' (replace không có -s). Dịch 'đề xuất công ty thay...'. 'rather than + V' = thay vì. Mệnh đề lý do 'Because...' dịch đầu câu.",
+   "pid": "u02-recommend",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  }
+ ]
+}

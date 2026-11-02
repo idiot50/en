@@ -1,0 +1,2461 @@
+{
+ "unit": 9,
+ "title": "Cầu khiến & tân ngữ + bổ ngữ",
+ "icon": "🧩",
+ "intro": "Sau động từ có khi là tân ngữ + một thành phần nữa (V nguyên mẫu, to V, V3 hoặc tính từ), như have sth done, make sb V, find it easy to V. Part 5 thường kiểm tra dạng của thành phần đó (V hay to V hay V3) và khi dịch phải hiểu \"ai làm gì cho ai\". Mẹo: xem tân ngữ là người hay vật, rồi chọn V / to V / V3 / adj đúng khuôn.",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "have + sth + V3 / have + sb + V",
+   "had the car repaired / had him repair the car",
+   "nhờ làm (cái gì được làm / bảo ai làm)"
+  ],
+  [
+   "get + sb + to V / get + sth + V3",
+   "got him to sign / got it signed",
+   "thuyết phục / nhờ làm xong"
+  ],
+  [
+   "make / let / help + sb + V (make bị động: be made to V)",
+   "made him wait / let us know / help us find",
+   "bắt / để / giúp"
+  ],
+  [
+   "find / make / keep / leave + sth + adj",
+   "found it easy / left it open",
+   "thấy / làm cho / giữ / để"
+  ],
+  [
+   "appoint / name / elect + sb + N",
+   "appointed her manager",
+   "bổ nhiệm / chỉ định / bầu làm"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u09-have-done",
+   "p": "have sth done",
+   "form": "have + O(vật) + V3",
+   "vi": "nhờ/thuê người khác làm gì (cái gì được làm)",
+   "core": true,
+   "note": "Chủ ngữ KHÔNG tự làm mà nhờ/thuê người khác; người làm (nếu nói) đi sau \"by\". Bẫy: sau tân ngữ vật phải là V3, không phải V nguyên mẫu (\"have the report prepare\" sai). Cũng dùng cho chuyện không mong muốn: had his laptop stolen = bị mất máy.",
+   "vs": "have sb V = nhờ AI đó làm (tân ngữ là người, + V nguyên mẫu)",
+   "ex": [
+    {
+     "en": "We had the contract reviewed by our legal team before signing it.",
+     "vi": "Chúng tôi đã nhờ đội pháp chế xem xét hợp đồng trước khi ký.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "had",
+       "r": "V",
+       "vi": "đã nhờ",
+       "k": true
+      },
+      {
+       "t": "the contract",
+       "r": "O-vật",
+       "vi": "hợp đồng",
+       "k": true
+      },
+      {
+       "t": "reviewed",
+       "r": "V3",
+       "vi": "xem xét",
+       "k": true
+      },
+      {
+       "t": "by our legal team",
+       "r": "giới từ + O",
+       "vi": "đội pháp chế"
+      },
+      {
+       "t": "before signing it.",
+       "r": "trạng ngữ",
+       "vi": "trước khi ký"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      4,
+      3,
+      2,
+      5
+     ]
+    },
+    {
+     "en": "Ms. Park had her office repainted over the weekend.",
+     "vi": "Cô Park đã cho sơn lại văn phòng vào cuối tuần.",
+     "chunks": [
+      {
+       "t": "Ms. Park",
+       "r": "S",
+       "vi": "cô Park"
+      },
+      {
+       "t": "had",
+       "r": "V",
+       "vi": "đã cho (thuê làm)",
+       "k": true
+      },
+      {
+       "t": "her office",
+       "r": "O-vật",
+       "vi": "văn phòng của cô",
+       "k": true
+      },
+      {
+       "t": "repainted",
+       "r": "V3",
+       "vi": "được sơn lại",
+       "k": true
+      },
+      {
+       "t": "over the weekend.",
+       "r": "trạng ngữ",
+       "vi": "vào cuối tuần"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-have-sb",
+   "p": "have sb V",
+   "form": "have + O(người) + V-nguyên mẫu",
+   "vi": "bảo/nhờ ai làm gì",
+   "core": true,
+   "note": "Sau tân ngữ người là V nguyên mẫu KHÔNG có to (have him sign, không phải have him to sign). Sắc thái: sếp/người có quyền giao việc, hoặc nhờ người làm dịch vụ.",
+   "vs": "get sb TO V = thuyết phục/nhờ ai làm (có to)",
+   "ex": [
+    {
+     "en": "The manager had his assistant reschedule the meeting.",
+     "vi": "Quản lý bảo trợ lý dời lịch cuộc họp.",
+     "chunks": [
+      {
+       "t": "The manager",
+       "r": "S",
+       "vi": "quản lý"
+      },
+      {
+       "t": "had",
+       "r": "V",
+       "vi": "bảo",
+       "k": true
+      },
+      {
+       "t": "his assistant",
+       "r": "O-người",
+       "vi": "trợ lý của ông",
+       "k": true
+      },
+      {
+       "t": "reschedule",
+       "r": "V-nguyên mẫu",
+       "vi": "dời lịch",
+       "k": true
+      },
+      {
+       "t": "the meeting.",
+       "r": "O-vật",
+       "vi": "cuộc họp"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "I'll have our technician check the printer this afternoon.",
+     "vi": "Tôi sẽ nhờ kỹ thuật viên kiểm tra máy in chiều nay.",
+     "chunks": [
+      {
+       "t": "I'll",
+       "r": "S",
+       "vi": "tôi sẽ"
+      },
+      {
+       "t": "have",
+       "r": "V",
+       "vi": "nhờ",
+       "k": true
+      },
+      {
+       "t": "our technician",
+       "r": "O-người",
+       "vi": "kỹ thuật viên của chúng tôi",
+       "k": true
+      },
+      {
+       "t": "check",
+       "r": "V-nguyên mẫu",
+       "vi": "kiểm tra",
+       "k": true
+      },
+      {
+       "t": "the printer",
+       "r": "O-vật",
+       "vi": "máy in"
+      },
+      {
+       "t": "this afternoon.",
+       "r": "trạng ngữ",
+       "vi": "chiều nay"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-get-sb",
+   "p": "get sb to V",
+   "form": "get + O(người) + to V",
+   "vi": "thuyết phục/nhờ được ai làm gì",
+   "core": true,
+   "note": "Khác have sb V: get dùng TO V và thường hàm ý phải nói, phải thuyết phục mới được. Dịch tự nhiên: \"nhờ được\", \"thuyết phục được\", \"khiến ai chịu làm\".",
+   "vs": "have sb V (không to) = bảo ai làm, ít hàm ý thuyết phục hơn",
+   "ex": [
+    {
+     "en": "We finally got the supplier to lower its prices.",
+     "vi": "Cuối cùng chúng tôi đã thuyết phục được nhà cung cấp giảm giá.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "finally",
+       "r": "trạng ngữ",
+       "vi": "cuối cùng"
+      },
+      {
+       "t": "got",
+       "r": "V",
+       "vi": "thuyết phục được",
+       "k": true
+      },
+      {
+       "t": "the supplier",
+       "r": "O-người",
+       "vi": "nhà cung cấp",
+       "k": true
+      },
+      {
+       "t": "to lower",
+       "r": "to V",
+       "vi": "giảm",
+       "k": true
+      },
+      {
+       "t": "its prices.",
+       "r": "O-vật",
+       "vi": "giá của họ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "Please get Mr. Lee to sign the form by noon.",
+     "vi": "Vui lòng nhờ ông Lee ký vào mẫu đơn trước buổi trưa.",
+     "chunks": [
+      {
+       "t": "Please get",
+       "r": "V",
+       "vi": "vui lòng nhờ",
+       "k": true
+      },
+      {
+       "t": "Mr. Lee",
+       "r": "O-người",
+       "vi": "ông Lee",
+       "k": true
+      },
+      {
+       "t": "to sign",
+       "r": "to V",
+       "vi": "ký",
+       "k": true
+      },
+      {
+       "t": "the form",
+       "r": "O-vật",
+       "vi": "mẫu đơn"
+      },
+      {
+       "t": "by noon.",
+       "r": "trạng ngữ",
+       "vi": "trước buổi trưa"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-get-done",
+   "p": "get sth done",
+   "form": "get + O(vật) + V3",
+   "vi": "làm xong cái gì / nhờ ai làm xong cái gì",
+   "core": true,
+   "note": "Gần như have sth done nhưng thân mật hơn và nhấn mạnh việc hoàn tất (\"get the work done\" = làm cho xong việc). Bẫy: sau tân ngữ vật là V3, không phải to V.",
+   "alt": "= have sth done (thân mật hơn)",
+   "ex": [
+    {
+     "en": "We need to get the report finished before the board meeting.",
+     "vi": "Chúng ta cần làm xong báo cáo trước cuộc họp hội đồng.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng ta"
+      },
+      {
+       "t": "need to get",
+       "r": "V",
+       "vi": "cần làm cho",
+       "k": true
+      },
+      {
+       "t": "the report",
+       "r": "O-vật",
+       "vi": "báo cáo",
+       "k": true
+      },
+      {
+       "t": "finished",
+       "r": "V3",
+       "vi": "xong",
+       "k": true
+      },
+      {
+       "t": "before the board meeting.",
+       "r": "trạng ngữ",
+       "vi": "trước cuộc họp hội đồng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ]
+    },
+    {
+     "en": "She got her car serviced at the dealership.",
+     "vi": "Cô ấy đã mang xe đi bảo dưỡng ở đại lý.",
+     "chunks": [
+      {
+       "t": "She",
+       "r": "S",
+       "vi": "cô ấy"
+      },
+      {
+       "t": "got",
+       "r": "V",
+       "vi": "đã nhờ/mang đi",
+       "k": true
+      },
+      {
+       "t": "her car",
+       "r": "O-vật",
+       "vi": "xe của cô",
+       "k": true
+      },
+      {
+       "t": "serviced",
+       "r": "V3",
+       "vi": "được bảo dưỡng",
+       "k": true
+      },
+      {
+       "t": "at the dealership.",
+       "r": "trạng ngữ",
+       "vi": "ở đại lý"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-make-sb",
+   "p": "make sb V",
+   "form": "make + O(người) + V-nguyên mẫu",
+   "vi": "bắt/khiến ai làm gì",
+   "core": true,
+   "pass": "sb be made to V",
+   "note": "Make có nghĩa ép buộc hoặc \"khiến cho\" (chủ ngữ có thể là sự việc: The delay made him cancel). Sau tân ngữ là V nguyên mẫu KHÔNG to. Dạng bị động thì phải thêm to (xem be made to V).",
+   "vs": "get sb to V = nhờ/thuyết phục; make = ép hoặc gây ra",
+   "ex": [
+    {
+     "en": "The delay made the client cancel the order.",
+     "vi": "Sự chậm trễ khiến khách hàng hủy đơn hàng.",
+     "chunks": [
+      {
+       "t": "The delay",
+       "r": "S",
+       "vi": "sự chậm trễ"
+      },
+      {
+       "t": "made",
+       "r": "V",
+       "vi": "khiến",
+       "k": true
+      },
+      {
+       "t": "the client",
+       "r": "O-người",
+       "vi": "khách hàng",
+       "k": true
+      },
+      {
+       "t": "cancel",
+       "r": "V-nguyên mẫu",
+       "vi": "hủy",
+       "k": true
+      },
+      {
+       "t": "the order.",
+       "r": "O-vật",
+       "vi": "đơn hàng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The new software makes employees work more efficiently.",
+     "vi": "Phần mềm mới giúp nhân viên làm việc hiệu quả hơn.",
+     "chunks": [
+      {
+       "t": "The new software",
+       "r": "S",
+       "vi": "phần mềm mới"
+      },
+      {
+       "t": "makes",
+       "r": "V",
+       "vi": "giúp (khiến)",
+       "k": true
+      },
+      {
+       "t": "employees",
+       "r": "O-người",
+       "vi": "nhân viên",
+       "k": true
+      },
+      {
+       "t": "work",
+       "r": "V-nguyên mẫu",
+       "vi": "làm việc",
+       "k": true
+      },
+      {
+       "t": "more efficiently.",
+       "r": "trạng ngữ",
+       "vi": "hiệu quả hơn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-be-made",
+   "p": "be made to V",
+   "form": "be made + to V",
+   "vi": "bị bắt/bị buộc phải làm gì",
+   "core": true,
+   "note": "Chủ động: made them wait (không to). Bị động: were made TO wait (phải thêm to). Bẫy: \"were made wait\" sai. Dịch: \"bị bắt phải...\", \"bị buộc phải...\".",
+   "vs": "make sb V (chủ động, không to)",
+   "ex": [
+    {
+     "en": "Customers were made to wait for over an hour.",
+     "vi": "Khách hàng bị bắt chờ hơn một tiếng.",
+     "chunks": [
+      {
+       "t": "Customers",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "were made",
+       "r": "V",
+       "vi": "bị bắt",
+       "k": true
+      },
+      {
+       "t": "to wait",
+       "r": "to V",
+       "vi": "chờ",
+       "k": true
+      },
+      {
+       "t": "for over an hour.",
+       "r": "trạng ngữ",
+       "vi": "hơn một tiếng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Employees are not made to work overtime without extra pay.",
+     "vi": "Nhân viên không bị bắt làm thêm giờ mà không được trả thêm tiền.",
+     "chunks": [
+      {
+       "t": "Employees",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "are not made",
+       "r": "V",
+       "vi": "không bị bắt",
+       "k": true
+      },
+      {
+       "t": "to work overtime",
+       "r": "to V",
+       "vi": "làm thêm giờ",
+       "k": true
+      },
+      {
+       "t": "without extra pay.",
+       "r": "trạng ngữ",
+       "vi": "mà không được trả thêm tiền"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-let",
+   "p": "let sb V",
+   "form": "let + O(người) + V-nguyên mẫu",
+   "vi": "để/cho phép ai làm gì",
+   "core": true,
+   "note": "KHÔNG có to và KHÔNG có bị động: không nói \"be let to V\". Muốn dùng bị động thì đổi sang be allowed to V. Cụm cố định: let me know (cho tôi biết).",
+   "vs": "allow sb TO V (có to, có bị động be allowed to V)",
+   "ex": [
+    {
+     "en": "The company lets employees work from home on Fridays.",
+     "vi": "Công ty cho nhân viên làm việc tại nhà vào các ngày thứ Sáu.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "lets",
+       "r": "V",
+       "vi": "cho phép",
+       "k": true
+      },
+      {
+       "t": "employees",
+       "r": "O-người",
+       "vi": "nhân viên",
+       "k": true
+      },
+      {
+       "t": "work",
+       "r": "V-nguyên mẫu",
+       "vi": "làm việc",
+       "k": true
+      },
+      {
+       "t": "from home on Fridays.",
+       "r": "trạng ngữ",
+       "vi": "tại nhà vào các ngày thứ Sáu"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Please let us know your decision by Monday.",
+     "vi": "Vui lòng cho chúng tôi biết quyết định của bạn trước thứ Hai.",
+     "chunks": [
+      {
+       "t": "Please let",
+       "r": "V",
+       "vi": "vui lòng cho",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O-người",
+       "vi": "chúng tôi",
+       "k": true
+      },
+      {
+       "t": "know",
+       "r": "V-nguyên mẫu",
+       "vi": "biết",
+       "k": true
+      },
+      {
+       "t": "your decision",
+       "r": "O-vật",
+       "vi": "quyết định của bạn"
+      },
+      {
+       "t": "by Monday.",
+       "r": "trạng ngữ",
+       "vi": "trước thứ Hai"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-help",
+   "p": "help sb (to) V",
+   "form": "help + O(người) + (to) V",
+   "vi": "giúp ai làm gì",
+   "core": true,
+   "note": "To có thể bỏ (help sb do = help sb to do), bỏ to phổ biến hơn. Bẫy: sau help sb không dùng V-ing (\"help us improving\" sai). Muốn đi với danh từ: help sb with sth.",
+   "alt": "= help sb with sth",
+   "ex": [
+    {
+     "en": "The new system helps staff process orders faster.",
+     "vi": "Hệ thống mới giúp nhân viên xử lý đơn hàng nhanh hơn.",
+     "chunks": [
+      {
+       "t": "The new system",
+       "r": "S",
+       "vi": "hệ thống mới"
+      },
+      {
+       "t": "helps",
+       "r": "V",
+       "vi": "giúp",
+       "k": true
+      },
+      {
+       "t": "staff",
+       "r": "O-người",
+       "vi": "nhân viên",
+       "k": true
+      },
+      {
+       "t": "process",
+       "r": "V-nguyên mẫu",
+       "vi": "xử lý",
+       "k": true
+      },
+      {
+       "t": "orders",
+       "r": "O-vật",
+       "vi": "đơn hàng"
+      },
+      {
+       "t": "faster.",
+       "r": "trạng ngữ",
+       "vi": "nhanh hơn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "This workshop will help you to improve your presentation skills.",
+     "vi": "Buổi hội thảo này sẽ giúp bạn cải thiện kỹ năng thuyết trình.",
+     "chunks": [
+      {
+       "t": "This workshop",
+       "r": "S",
+       "vi": "buổi hội thảo này"
+      },
+      {
+       "t": "will help",
+       "r": "V",
+       "vi": "sẽ giúp",
+       "k": true
+      },
+      {
+       "t": "you",
+       "r": "O-người",
+       "vi": "bạn",
+       "k": true
+      },
+      {
+       "t": "to improve",
+       "r": "to V",
+       "vi": "cải thiện",
+       "k": true
+      },
+      {
+       "t": "your presentation skills.",
+       "r": "O-vật",
+       "vi": "kỹ năng thuyết trình của bạn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-keep-informed",
+   "p": "keep sb informed/updated",
+   "form": "keep + O(người) + V3 (informed/updated/posted)",
+   "vi": "luôn thông báo/cập nhật cho ai",
+   "core": true,
+   "note": "Nghĩa: giữ cho ai ở trạng thái đã được thông báo. Thường đi với of/about/on: keep sb informed of/about/on sth. Chỉ dùng V3 (informed, updated), không dùng \"keep sb inform\".",
+   "alt": "= keep sb posted (thân mật)",
+   "ex": [
+    {
+     "en": "Please keep us informed about any changes to the schedule.",
+     "vi": "Vui lòng luôn thông báo cho chúng tôi về mọi thay đổi trong lịch trình.",
+     "chunks": [
+      {
+       "t": "Please keep",
+       "r": "V",
+       "vi": "vui lòng luôn",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O-người",
+       "vi": "cho chúng tôi",
+       "k": true
+      },
+      {
+       "t": "informed",
+       "r": "V3",
+       "vi": "thông báo",
+       "k": true
+      },
+      {
+       "t": "about any changes to the schedule.",
+       "r": "giới từ + O",
+       "vi": "về mọi thay đổi trong lịch trình"
+      }
+     ],
+     "viOrder": [
+      0,
+      2,
+      1,
+      3
+     ]
+    },
+    {
+     "en": "The system keeps managers updated on inventory levels in real time.",
+     "vi": "Hệ thống luôn cập nhật cho các quản lý về mức tồn kho theo thời gian thực.",
+     "chunks": [
+      {
+       "t": "The system",
+       "r": "S",
+       "vi": "hệ thống"
+      },
+      {
+       "t": "keeps",
+       "r": "V",
+       "vi": "luôn",
+       "k": true
+      },
+      {
+       "t": "managers",
+       "r": "O-người",
+       "vi": "cho các quản lý",
+       "k": true
+      },
+      {
+       "t": "updated",
+       "r": "V3",
+       "vi": "cập nhật",
+       "k": true
+      },
+      {
+       "t": "on inventory levels",
+       "r": "giới từ + O",
+       "vi": "về mức tồn kho"
+      },
+      {
+       "t": "in real time.",
+       "r": "trạng ngữ",
+       "vi": "theo thời gian thực"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-find-adj",
+   "p": "find sth + adj",
+   "form": "find + O + bổ ngữ (adj/V3)",
+   "vi": "thấy/nhận thấy cái gì là...",
+   "note": "Find ở đây là \"nhận thấy, cảm thấy\", bổ ngữ là tính từ đứng SAU tân ngữ: find the app easy (không phải \"easily\"). Cảm xúc/đánh giá của người nói nằm ở tính từ.",
+   "ex": [
+    {
+     "en": "Many customers find the new app easy to use.",
+     "vi": "Nhiều khách hàng thấy ứng dụng mới dễ sử dụng.",
+     "chunks": [
+      {
+       "t": "Many customers",
+       "r": "S",
+       "vi": "nhiều khách hàng"
+      },
+      {
+       "t": "find",
+       "r": "V",
+       "vi": "thấy",
+       "k": true
+      },
+      {
+       "t": "the new app",
+       "r": "O-vật",
+       "vi": "ứng dụng mới",
+       "k": true
+      },
+      {
+       "t": "easy",
+       "r": "bổ ngữ",
+       "vi": "dễ",
+       "k": true
+      },
+      {
+       "t": "to use.",
+       "r": "to V",
+       "vi": "sử dụng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The auditors found the records incomplete.",
+     "vi": "Các kiểm toán viên nhận thấy hồ sơ chưa đầy đủ.",
+     "chunks": [
+      {
+       "t": "The auditors",
+       "r": "S",
+       "vi": "các kiểm toán viên"
+      },
+      {
+       "t": "found",
+       "r": "V",
+       "vi": "nhận thấy",
+       "k": true
+      },
+      {
+       "t": "the records",
+       "r": "O-vật",
+       "vi": "hồ sơ",
+       "k": true
+      },
+      {
+       "t": "incomplete.",
+       "r": "bổ ngữ",
+       "vi": "chưa đầy đủ",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-find-it",
+   "p": "find it + adj + to V",
+   "form": "find + it + adj + to V",
+   "vi": "thấy việc làm gì là (khó/dễ/cần thiết...)",
+   "note": "\"it\" là tân ngữ giả, to V mới là việc thật; khi dịch bỏ \"it\": find it difficult to adjust = thấy khó thích nghi. Hay gặp: difficult, easy, necessary, hard, important, useful.",
+   "alt": "= find that it is adj to V",
+   "ex": [
+    {
+     "en": "Many newcomers find it difficult to adjust to the company culture.",
+     "vi": "Nhiều người mới thấy khó thích nghi với văn hóa công ty.",
+     "chunks": [
+      {
+       "t": "Many newcomers",
+       "r": "S",
+       "vi": "nhiều người mới"
+      },
+      {
+       "t": "find",
+       "r": "V",
+       "vi": "thấy",
+       "k": true
+      },
+      {
+       "t": "it",
+       "r": "O",
+       "vi": "(tân ngữ giả, không dịch)",
+       "k": true
+      },
+      {
+       "t": "difficult",
+       "r": "bổ ngữ",
+       "vi": "khó",
+       "k": true
+      },
+      {
+       "t": "to adjust",
+       "r": "to V",
+       "vi": "thích nghi",
+       "k": true
+      },
+      {
+       "t": "to the company culture.",
+       "r": "giới từ + O",
+       "vi": "với văn hóa công ty"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "Executives found it necessary to cut the budget.",
+     "vi": "Ban điều hành thấy cần thiết phải cắt giảm ngân sách.",
+     "chunks": [
+      {
+       "t": "Executives",
+       "r": "S",
+       "vi": "ban điều hành"
+      },
+      {
+       "t": "found",
+       "r": "V",
+       "vi": "thấy",
+       "k": true
+      },
+      {
+       "t": "it",
+       "r": "O",
+       "vi": "(tân ngữ giả, không dịch)",
+       "k": true
+      },
+      {
+       "t": "necessary",
+       "r": "bổ ngữ",
+       "vi": "cần thiết",
+       "k": true
+      },
+      {
+       "t": "to cut",
+       "r": "to V",
+       "vi": "phải cắt giảm",
+       "k": true
+      },
+      {
+       "t": "the budget.",
+       "r": "O-vật",
+       "vi": "ngân sách"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-make-adj",
+   "p": "make sth + adj",
+   "form": "make + O + bổ ngữ (adj)",
+   "vi": "làm cho cái gì trở nên...",
+   "note": "Bổ ngữ là tính từ, không phải trạng từ: make the process simple (không phải \"simply\"). Hay gặp make sth available/easier/clear/possible.",
+   "ex": [
+    {
+     "en": "The update makes the software more secure.",
+     "vi": "Bản cập nhật làm cho phần mềm an toàn hơn.",
+     "chunks": [
+      {
+       "t": "The update",
+       "r": "S",
+       "vi": "bản cập nhật"
+      },
+      {
+       "t": "makes",
+       "r": "V",
+       "vi": "làm cho",
+       "k": true
+      },
+      {
+       "t": "the software",
+       "r": "O-vật",
+       "vi": "phần mềm",
+       "k": true
+      },
+      {
+       "t": "more secure.",
+       "r": "bổ ngữ",
+       "vi": "an toàn hơn",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The company made its annual report available online.",
+     "vi": "Công ty đã đưa báo cáo thường niên lên mạng để ai cũng xem được.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "made",
+       "r": "V",
+       "vi": "đã đưa",
+       "k": true
+      },
+      {
+       "t": "its annual report",
+       "r": "O-vật",
+       "vi": "báo cáo thường niên",
+       "k": true
+      },
+      {
+       "t": "available",
+       "r": "bổ ngữ",
+       "vi": "để ai cũng xem được",
+       "k": true
+      },
+      {
+       "t": "online.",
+       "r": "trạng ngữ",
+       "vi": "lên mạng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      4,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-make-possible",
+   "p": "make it possible for sb to V",
+   "form": "make + it + adj + (for sb) + to V",
+   "vi": "giúp ai có thể làm gì, tạo điều kiện để ai làm gì",
+   "core": true,
+   "note": "\"it\" là tân ngữ giả (không dịch); tính từ thường là possible/easier/easy/difficult/impossible; \"for sb\" đứng TRƯỚC to V. Bẫy: không nói \"make possible sb to V\".",
+   "alt": "= enable sb to V",
+   "ex": [
+    {
+     "en": "The new loan made it possible for the firm to open a second branch.",
+     "vi": "Khoản vay mới giúp công ty có thể mở chi nhánh thứ hai.",
+     "chunks": [
+      {
+       "t": "The new loan",
+       "r": "S",
+       "vi": "khoản vay mới"
+      },
+      {
+       "t": "made",
+       "r": "V",
+       "vi": "giúp",
+       "k": true
+      },
+      {
+       "t": "it",
+       "r": "O",
+       "vi": "(tân ngữ giả)",
+       "k": true
+      },
+      {
+       "t": "possible",
+       "r": "bổ ngữ",
+       "vi": "có thể",
+       "k": true
+      },
+      {
+       "t": "for the firm",
+       "r": "giới từ + O",
+       "vi": "công ty",
+       "k": true
+      },
+      {
+       "t": "to open",
+       "r": "to V",
+       "vi": "mở",
+       "k": true
+      },
+      {
+       "t": "a second branch.",
+       "r": "O-vật",
+       "vi": "chi nhánh thứ hai"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      4,
+      3,
+      5,
+      6,
+      2
+     ]
+    },
+    {
+     "en": "Online banking makes it easier for customers to pay their bills.",
+     "vi": "Ngân hàng trực tuyến giúp khách hàng thanh toán hóa đơn dễ dàng hơn.",
+     "chunks": [
+      {
+       "t": "Online banking",
+       "r": "S",
+       "vi": "ngân hàng trực tuyến"
+      },
+      {
+       "t": "makes",
+       "r": "V",
+       "vi": "giúp",
+       "k": true
+      },
+      {
+       "t": "it",
+       "r": "O",
+       "vi": "(tân ngữ giả)",
+       "k": true
+      },
+      {
+       "t": "easier",
+       "r": "bổ ngữ",
+       "vi": "dễ dàng hơn",
+       "k": true
+      },
+      {
+       "t": "for customers",
+       "r": "giới từ + O",
+       "vi": "khách hàng",
+       "k": true
+      },
+      {
+       "t": "to pay",
+       "r": "to V",
+       "vi": "thanh toán",
+       "k": true
+      },
+      {
+       "t": "their bills.",
+       "r": "O-vật",
+       "vi": "hóa đơn của họ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      4,
+      5,
+      6,
+      3,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-consider",
+   "p": "consider sb/sth (to be) + adj/N",
+   "form": "consider + O + (to be) + adj/N",
+   "vi": "xem/coi ai/cái gì là...",
+   "pass": "sb/sth be considered (to be) adj/N",
+   "note": "To be thường được bỏ: consider him a leader / consider it important. Không cần \"as\" sau consider trong cấu trúc chuẩn (as dùng với regard/view/see: regard him AS a leader). Bị động rất hay gặp: be considered (to be) ...",
+   "vs": "regard sb/sth AS sth = xem ai/cái gì là (có as)",
+   "ex": [
+    {
+     "en": "The board considers customer satisfaction the company's top priority.",
+     "vi": "Hội đồng quản trị xem sự hài lòng của khách hàng là ưu tiên hàng đầu của công ty.",
+     "chunks": [
+      {
+       "t": "The board",
+       "r": "S",
+       "vi": "hội đồng quản trị"
+      },
+      {
+       "t": "considers",
+       "r": "V",
+       "vi": "xem",
+       "k": true
+      },
+      {
+       "t": "customer satisfaction",
+       "r": "O-vật",
+       "vi": "sự hài lòng của khách hàng",
+       "k": true
+      },
+      {
+       "t": "the company's top priority.",
+       "r": "bổ ngữ",
+       "vi": "là ưu tiên hàng đầu của công ty",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Her proposal was considered to be very innovative by the judges.",
+     "vi": "Đề xuất của cô ấy được ban giám khảo đánh giá là rất sáng tạo.",
+     "chunks": [
+      {
+       "t": "Her proposal",
+       "r": "S",
+       "vi": "đề xuất của cô ấy"
+      },
+      {
+       "t": "was considered",
+       "r": "V",
+       "vi": "được đánh giá",
+       "k": true
+      },
+      {
+       "t": "to be very innovative",
+       "r": "bổ ngữ",
+       "vi": "là rất sáng tạo",
+       "k": true
+      },
+      {
+       "t": "by the judges.",
+       "r": "giới từ + O",
+       "vi": "bởi ban giám khảo"
+      }
+     ],
+     "viOrder": [
+      0,
+      3,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-leave",
+   "p": "leave sth + adj",
+   "form": "leave + O + bổ ngữ (adj/V3)",
+   "vi": "để cái gì ở trạng thái..., khiến ai ở trạng thái...",
+   "note": "Hai cách dùng: (1) để mặc cái gì ở trạng thái nào (leave the door open, leave it unattended); (2) sự việc khiến ai ra sao (left customers dissatisfied). Bổ ngữ là adj/V3, không dùng trạng từ.",
+   "ex": [
+    {
+     "en": "Please do not leave the equipment unattended.",
+     "vi": "Vui lòng không để thiết bị không có người trông coi.",
+     "chunks": [
+      {
+       "t": "Please do not leave",
+       "r": "V",
+       "vi": "vui lòng không để",
+       "k": true
+      },
+      {
+       "t": "the equipment",
+       "r": "O-vật",
+       "vi": "thiết bị",
+       "k": true
+      },
+      {
+       "t": "unattended.",
+       "r": "bổ ngữ",
+       "vi": "không có người trông coi",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The long delay left many customers dissatisfied.",
+     "vi": "Sự chậm trễ kéo dài khiến nhiều khách hàng không hài lòng.",
+     "chunks": [
+      {
+       "t": "The long delay",
+       "r": "S",
+       "vi": "sự chậm trễ kéo dài"
+      },
+      {
+       "t": "left",
+       "r": "V",
+       "vi": "khiến",
+       "k": true
+      },
+      {
+       "t": "many customers",
+       "r": "O-người",
+       "vi": "nhiều khách hàng",
+       "k": true
+      },
+      {
+       "t": "dissatisfied.",
+       "r": "bổ ngữ",
+       "vi": "không hài lòng",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-appoint",
+   "p": "appoint sb (as) N",
+   "form": "appoint + O(người) + (as) + chức danh",
+   "vi": "bổ nhiệm ai làm...",
+   "core": true,
+   "pass": "sb be appointed (as) N",
+   "note": "Chức danh đứng ngay sau tân ngữ, thường BỎ \"as\" và không dùng mạo từ cho chức vụ duy nhất (appointed her director). Dịch: \"bổ nhiệm ai làm + chức danh\".",
+   "vs": "elect = bầu; name = chỉ định/bình chọn",
+   "ex": [
+    {
+     "en": "The board appointed Ms. Tran chief financial officer last month.",
+     "vi": "Hội đồng đã bổ nhiệm bà Tran làm giám đốc tài chính vào tháng trước.",
+     "chunks": [
+      {
+       "t": "The board",
+       "r": "S",
+       "vi": "hội đồng"
+      },
+      {
+       "t": "appointed",
+       "r": "V",
+       "vi": "đã bổ nhiệm",
+       "k": true
+      },
+      {
+       "t": "Ms. Tran",
+       "r": "O-người",
+       "vi": "bà Tran",
+       "k": true
+      },
+      {
+       "t": "chief financial officer",
+       "r": "bổ ngữ",
+       "vi": "làm giám đốc tài chính",
+       "k": true
+      },
+      {
+       "t": "last month.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng trước"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "He was appointed regional manager after the merger.",
+     "vi": "Ông được bổ nhiệm làm giám đốc khu vực sau vụ sáp nhập.",
+     "chunks": [
+      {
+       "t": "He",
+       "r": "S",
+       "vi": "ông"
+      },
+      {
+       "t": "was appointed",
+       "r": "V",
+       "vi": "được bổ nhiệm",
+       "k": true
+      },
+      {
+       "t": "regional manager",
+       "r": "bổ ngữ",
+       "vi": "làm giám đốc khu vực",
+       "k": true
+      },
+      {
+       "t": "after the merger.",
+       "r": "trạng ngữ",
+       "vi": "sau vụ sáp nhập"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-name",
+   "p": "name sb/sth + N",
+   "form": "name + O + bổ ngữ (N)",
+   "vi": "chỉ định/bình chọn ai là...; đặt tên là...",
+   "pass": "sb be named + N",
+   "note": "Name sb + chức danh/danh hiệu: được chỉ định làm, được vinh danh là. Cũng dùng để đặt tên: name the product \"Nova\". Bổ ngữ là danh từ, không cần to be.",
+   "vs": "appoint = bổ nhiệm; elect = bầu",
+   "ex": [
+    {
+     "en": "The magazine named the company Best Employer of the Year.",
+     "vi": "Tạp chí đã bình chọn công ty là Nhà tuyển dụng tốt nhất của năm.",
+     "chunks": [
+      {
+       "t": "The magazine",
+       "r": "S",
+       "vi": "tạp chí"
+      },
+      {
+       "t": "named",
+       "r": "V",
+       "vi": "đã bình chọn",
+       "k": true
+      },
+      {
+       "t": "the company",
+       "r": "O-vật",
+       "vi": "công ty",
+       "k": true
+      },
+      {
+       "t": "Best Employer of the Year.",
+       "r": "bổ ngữ",
+       "vi": "là Nhà tuyển dụng tốt nhất của năm",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Mr. Garcia was named acting director while Ms. Lee is on leave.",
+     "vi": "Ông Garcia được chỉ định làm giám đốc tạm quyền trong lúc bà Lee nghỉ phép.",
+     "chunks": [
+      {
+       "t": "Mr. Garcia",
+       "r": "S",
+       "vi": "ông Garcia"
+      },
+      {
+       "t": "was named",
+       "r": "V",
+       "vi": "được chỉ định",
+       "k": true
+      },
+      {
+       "t": "acting director",
+       "r": "bổ ngữ",
+       "vi": "làm giám đốc tạm quyền",
+       "k": true
+      },
+      {
+       "t": "while Ms. Lee is on leave.",
+       "r": "mệnh đề",
+       "vi": "trong lúc bà Lee nghỉ phép"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-elect",
+   "p": "elect sb + N",
+   "form": "elect + O(người) + chức danh",
+   "vi": "bầu ai làm...",
+   "pass": "sb be elected + N",
+   "note": "Chỉ dùng cho bầu cử (cổ đông, hội viên, cử tri). Chức danh đứng sau tân ngữ, không to be: elected her chairperson. Đừng nhầm với appoint (do cấp trên chỉ định).",
+   "vs": "appoint = bổ nhiệm (không qua bầu)",
+   "ex": [
+    {
+     "en": "Shareholders elected Ms. Cho chairperson of the board.",
+     "vi": "Các cổ đông đã bầu bà Cho làm chủ tịch hội đồng quản trị.",
+     "chunks": [
+      {
+       "t": "Shareholders",
+       "r": "S",
+       "vi": "các cổ đông"
+      },
+      {
+       "t": "elected",
+       "r": "V",
+       "vi": "đã bầu",
+       "k": true
+      },
+      {
+       "t": "Ms. Cho",
+       "r": "O-người",
+       "vi": "bà Cho",
+       "k": true
+      },
+      {
+       "t": "chairperson of the board.",
+       "r": "bổ ngữ",
+       "vi": "làm chủ tịch hội đồng quản trị",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Mr. Alvarez was elected president of the union by a large majority.",
+     "vi": "Ông Alvarez được bầu làm chủ tịch công đoàn với đa số phiếu lớn.",
+     "chunks": [
+      {
+       "t": "Mr. Alvarez",
+       "r": "S",
+       "vi": "ông Alvarez"
+      },
+      {
+       "t": "was elected",
+       "r": "V",
+       "vi": "được bầu",
+       "k": true
+      },
+      {
+       "t": "president of the union",
+       "r": "bổ ngữ",
+       "vi": "làm chủ tịch công đoàn",
+       "k": true
+      },
+      {
+       "t": "by a large majority.",
+       "r": "giới từ + O",
+       "vi": "với đa số phiếu lớn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u09-keep-adj",
+   "p": "keep sth + adj",
+   "form": "keep + O + bổ ngữ (adj)",
+   "vi": "giữ cho cái gì ở trạng thái...",
+   "note": "Bổ ngữ là tính từ: keep costs low (không phải \"lowly\"). Còn keep sb + V-ing = để ai cứ phải làm gì (keep customers waiting).",
+   "ex": [
+    {
+     "en": "We try to keep our prices low for regular customers.",
+     "vi": "Chúng tôi cố giữ giá thấp cho khách hàng thân thiết.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "try to keep",
+       "r": "V",
+       "vi": "cố giữ",
+       "k": true
+      },
+      {
+       "t": "our prices",
+       "r": "O-vật",
+       "vi": "giá của chúng tôi",
+       "k": true
+      },
+      {
+       "t": "low",
+       "r": "bổ ngữ",
+       "vi": "ở mức thấp",
+       "k": true
+      },
+      {
+       "t": "for regular customers.",
+       "r": "giới từ + O",
+       "vi": "cho khách hàng thân thiết"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Please keep the lobby clear during the event.",
+     "vi": "Vui lòng giữ sảnh thông thoáng trong suốt sự kiện.",
+     "chunks": [
+      {
+       "t": "Please keep",
+       "r": "V",
+       "vi": "vui lòng giữ",
+       "k": true
+      },
+      {
+       "t": "the lobby",
+       "r": "O-vật",
+       "vi": "sảnh",
+       "k": true
+      },
+      {
+       "t": "clear",
+       "r": "bổ ngữ",
+       "vi": "thông thoáng",
+       "k": true
+      },
+      {
+       "t": "during the event.",
+       "r": "trạng ngữ",
+       "vi": "trong suốt sự kiện"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The marketing team had the brochures ------- by a local printer.",
+   "options": [
+    "print",
+    "printed",
+    "to print",
+    "printing"
+   ],
+   "ans": 1,
+   "why": "have + sth + V3: tờ rơi là vật được in (by a local printer) nên dùng V3 \"printed\". Các dạng còn lại đặt sai quan hệ chủ động/bị động.",
+   "vi": "Nhóm marketing đã nhờ một nhà in địa phương in các tờ rơi.",
+   "pid": "u09-have-done",
+   "type": "form"
+  },
+  {
+   "q": "We had our assistant ------- the invoices to all clients.",
+   "options": [
+    "send",
+    "sent",
+    "to send",
+    "sending"
+   ],
+   "ans": 0,
+   "why": "have + sb + V nguyên mẫu (không to): trợ lý là người thực hiện hành động. \"to send\" sai vì have không đi với to V.",
+   "vi": "Chúng tôi đã bảo trợ lý gửi hóa đơn cho tất cả khách hàng.",
+   "pid": "u09-have-sb",
+   "type": "object"
+  },
+  {
+   "q": "It took several phone calls to get the vendor ------- the delivery date.",
+   "options": [
+    "change",
+    "changing",
+    "to change",
+    "changed"
+   ],
+   "ans": 2,
+   "why": "get + sb + TO V (thuyết phục ai làm gì). Khác have/make/let thì get cần to.",
+   "vi": "Phải gọi điện nhiều lần mới thuyết phục được nhà cung cấp đổi ngày giao hàng.",
+   "pid": "u09-get-sb",
+   "type": "toV-Ving"
+  },
+  {
+   "q": "Employees were made ------- their personal devices at the security desk.",
+   "options": [
+    "leave",
+    "left",
+    "leaving",
+    "to leave"
+   ],
+   "ans": 3,
+   "why": "Bị động của make sb V thì thêm to: were made TO leave. \"leave\" (không to) chỉ đúng ở chủ động: made them leave.",
+   "vi": "Nhân viên bị bắt phải để thiết bị cá nhân lại ở quầy an ninh.",
+   "pid": "u09-be-made",
+   "type": "form"
+  },
+  {
+   "q": "The company ------- employees choose their own working hours.",
+   "options": [
+    "lets",
+    "allows",
+    "permits",
+    "enables"
+   ],
+   "ans": 0,
+   "why": "Sau tân ngữ là \"choose\" (V nguyên mẫu không to) nên chỉ let hợp lệ; allow/permit/enable đều cần to V.",
+   "vi": "Công ty cho nhân viên tự chọn giờ làm việc.",
+   "pid": "u09-let",
+   "type": "word-choice"
+  },
+  {
+   "q": "The new scheduling tool helps managers ------- the time spent on planning.",
+   "options": [
+    "reduces",
+    "reducing",
+    "reduced",
+    "reduce"
+   ],
+   "ans": 3,
+   "why": "help + sb + (to) V: dùng V nguyên mẫu \"reduce\" (có thể có to nhưng không có trong đáp án). V-ing/V3/V-s đều sai.",
+   "vi": "Công cụ lập lịch mới giúp các quản lý giảm thời gian dành cho việc lên kế hoạch.",
+   "pid": "u09-help",
+   "type": "toV-Ving"
+  },
+  {
+   "q": "Please keep us ------- of any delays in shipment.",
+   "options": [
+    "inform",
+    "informing",
+    "informed",
+    "information"
+   ],
+   "ans": 2,
+   "why": "keep sb + V3 (informed): giữ cho ai ở trạng thái được thông báo; \"informed of\" đi cùng nhau.",
+   "vi": "Vui lòng thông báo cho chúng tôi về mọi chậm trễ trong việc vận chuyển.",
+   "pid": "u09-keep-informed",
+   "type": "form"
+  },
+  {
+   "q": "The extended warranty makes ------- possible for customers to return products within a year.",
+   "options": [
+    "that",
+    "it",
+    "them",
+    "this"
+   ],
+   "ans": 1,
+   "why": "make + it + possible + for sb + to V: \"it\" là tân ngữ giả thay cho cụm to V phía sau. \"them/this/that\" không thể thay cụm to V đó.",
+   "vi": "Bảo hành mở rộng giúp khách hàng có thể trả lại sản phẩm trong vòng một năm.",
+   "pid": "u09-make-possible",
+   "type": "object"
+  },
+  {
+   "q": "Many users find the interface ------- to navigate.",
+   "options": [
+    "easy",
+    "easily",
+    "ease",
+    "eased"
+   ],
+   "ans": 0,
+   "why": "find + O + adj: bổ ngữ phải là tính từ \"easy\" (easy to navigate). Trạng từ \"easily\" không làm bổ ngữ cho tân ngữ.",
+   "vi": "Nhiều người dùng thấy giao diện dễ thao tác.",
+   "pid": "u09-find-adj",
+   "type": "form"
+  },
+  {
+   "q": "Several clients find it ------- to reach the help desk by phone.",
+   "options": [
+    "difficultly",
+    "difficult",
+    "difficulty",
+    "difficulties"
+   ],
+   "ans": 1,
+   "why": "find + it + adj + to V: cần tính từ \"difficult\". Danh từ difficulty/difficulties và trạng từ difficultly không đúng vị trí bổ ngữ.",
+   "vi": "Một số khách hàng thấy khó liên lạc với bộ phận hỗ trợ qua điện thoại.",
+   "pid": "u09-find-it",
+   "type": "form"
+  },
+  {
+   "q": "The board appointed Ms. Lopez ------- head of the new Asia division.",
+   "options": [
+    "for",
+    "to",
+    "as",
+    "with"
+   ],
+   "ans": 2,
+   "why": "appoint + sb + as + chức danh (bổ nhiệm ai làm...). for/to/with không tạo thành nghĩa \"làm\" chức danh.",
+   "vi": "Hội đồng đã bổ nhiệm bà Lopez làm trưởng bộ phận châu Á mới.",
+   "pid": "u09-appoint",
+   "type": "prep"
+  },
+  {
+   "q": "Most customers ------- the new store layout to be more convenient.",
+   "options": [
+    "regard",
+    "view",
+    "refer",
+    "consider"
+   ],
+   "ans": 3,
+   "why": "Chỉ consider đi với \"O + to be + adj\". regard/view cần \"as\"; refer đi với \"to\".",
+   "vi": "Hầu hết khách hàng cho rằng cách bố trí cửa hàng mới thuận tiện hơn.",
+   "pid": "u09-consider",
+   "type": "word-choice"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Chúng tôi đã nhờ một công ty bên ngoài kiểm toán sổ sách.",
+   "chunks": [
+    "We",
+    "had",
+    "our accounts",
+    "audited",
+    "by an outside firm."
+   ],
+   "pid": "u09-have-done",
+   "why": "have + sth + V3 (+ by người làm): nhờ ai làm cái gì.",
+   "dist": "audit"
+  },
+  {
+   "vi": "Cô ấy đã bảo trợ lý đặt phòng khách sạn.",
+   "chunks": [
+    "She",
+    "had",
+    "her assistant",
+    "book",
+    "the hotel room."
+   ],
+   "pid": "u09-have-sb",
+   "why": "have + người + V nguyên mẫu (không to).",
+   "dist": "booked"
+  },
+  {
+   "vi": "Khách hàng bị bắt chờ gần một tiếng.",
+   "chunks": [
+    "The customers",
+    "were made",
+    "to wait",
+    "for almost an hour."
+   ],
+   "pid": "u09-be-made",
+   "why": "Bị động của make: be made + to V.",
+   "dist": "wait"
+  },
+  {
+   "vi": "Tính năng mới giúp khách hàng truy cập tài khoản dễ dàng hơn.",
+   "chunks": [
+    "The new feature",
+    "makes it",
+    "easier",
+    "for customers",
+    "to access",
+    "their accounts."
+   ],
+   "pid": "u09-make-possible",
+   "why": "make + it + adj + for sb + to V.",
+   "dist": "easily"
+  },
+  {
+   "vi": "Vui lòng thông báo cho chúng tôi nếu lịch trình thay đổi.",
+   "chunks": [
+    "Please keep",
+    "us",
+    "informed",
+    "if the schedule changes."
+   ],
+   "pid": "u09-keep-informed",
+   "why": "keep + người + informed (V3).",
+   "dist": "inform"
+  },
+  {
+   "vi": "Các quản lý cho nhân viên về sớm vào các ngày thứ Sáu.",
+   "chunks": [
+    "Managers",
+    "let",
+    "their staff",
+    "leave",
+    "early on Fridays."
+   ],
+   "pid": "u09-let",
+   "why": "let + người + V nguyên mẫu (không to).",
+   "dist": "to leave"
+  }
+ ],
+ "translate": [
+  {
+   "en": "Because the factory was damaged by the storm, management had the production line repaired and kept customers updated on delivery dates.",
+   "vi": "Vì nhà máy bị bão làm hư hại, ban quản lý đã cho sửa chữa dây chuyền sản xuất và luôn cập nhật cho khách hàng về ngày giao hàng.",
+   "chunks": [
+    {
+     "t": "Because the factory was damaged by the storm,",
+     "r": "mệnh đề",
+     "vi": "vì nhà máy bị bão làm hư hại"
+    },
+    {
+     "t": "management",
+     "r": "S",
+     "vi": "ban quản lý"
+    },
+    {
+     "t": "had",
+     "r": "V",
+     "vi": "đã cho",
+     "k": true
+    },
+    {
+     "t": "the production line",
+     "r": "O-vật",
+     "vi": "dây chuyền sản xuất",
+     "k": true
+    },
+    {
+     "t": "repaired",
+     "r": "V3",
+     "vi": "sửa chữa",
+     "k": true
+    },
+    {
+     "t": "and kept",
+     "r": "V",
+     "vi": "và luôn",
+     "k": true
+    },
+    {
+     "t": "customers",
+     "r": "O-người",
+     "vi": "cho khách hàng",
+     "k": true
+    },
+    {
+     "t": "updated",
+     "r": "V3",
+     "vi": "cập nhật",
+     "k": true
+    },
+    {
+     "t": "on delivery dates.",
+     "r": "giới từ + O",
+     "vi": "về ngày giao hàng"
+    }
+   ],
+   "note": "Dịch theo khối: have + dây chuyền + V3 = \"cho sửa chữa dây chuyền\" (người sửa không cần nói); kept + khách hàng + updated = \"luôn cập nhật cho khách hàng\". V3 đặt trước tân ngữ khi dịch.",
+   "pid": "u09-have-done",
+   "viOrder": [
+    0,
+    1,
+    2,
+    4,
+    3,
+    5,
+    7,
+    6,
+    8
+   ]
+  },
+  {
+   "en": "The flexible schedule lets staff leave early on Fridays and helps them balance work and family life.",
+   "vi": "Lịch làm việc linh hoạt cho nhân viên về sớm vào các ngày thứ Sáu và giúp họ cân bằng giữa công việc và cuộc sống gia đình.",
+   "chunks": [
+    {
+     "t": "The flexible schedule",
+     "r": "S",
+     "vi": "lịch làm việc linh hoạt"
+    },
+    {
+     "t": "lets",
+     "r": "V",
+     "vi": "cho",
+     "k": true
+    },
+    {
+     "t": "staff",
+     "r": "O-người",
+     "vi": "nhân viên",
+     "k": true
+    },
+    {
+     "t": "leave",
+     "r": "V-nguyên mẫu",
+     "vi": "về",
+     "k": true
+    },
+    {
+     "t": "early on Fridays",
+     "r": "trạng ngữ",
+     "vi": "sớm vào các ngày thứ Sáu"
+    },
+    {
+     "t": "and helps",
+     "r": "V",
+     "vi": "và giúp",
+     "k": true
+    },
+    {
+     "t": "them",
+     "r": "O-người",
+     "vi": "họ",
+     "k": true
+    },
+    {
+     "t": "balance",
+     "r": "V-nguyên mẫu",
+     "vi": "cân bằng",
+     "k": true
+    },
+    {
+     "t": "work and family life.",
+     "r": "O-vật",
+     "vi": "công việc và cuộc sống gia đình"
+    }
+   ],
+   "note": "Let và help đều + người + V nguyên mẫu (help còn có thể có to). Dịch let = \"cho phép... làm\", help = \"giúp ai làm\"; giữ nguyên trật tự khối.",
+   "pid": "u09-help",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  },
+  {
+   "en": "The long delay at customs made the client cancel the order, which left our sales team disappointed.",
+   "vi": "Việc chậm trễ ở hải quan khiến khách hàng hủy đơn hàng, điều đó làm đội kinh doanh của chúng tôi thất vọng.",
+   "chunks": [
+    {
+     "t": "The long delay at customs",
+     "r": "S",
+     "vi": "việc chậm trễ ở hải quan"
+    },
+    {
+     "t": "made",
+     "r": "V",
+     "vi": "khiến",
+     "k": true
+    },
+    {
+     "t": "the client",
+     "r": "O-người",
+     "vi": "khách hàng",
+     "k": true
+    },
+    {
+     "t": "cancel",
+     "r": "V-nguyên mẫu",
+     "vi": "hủy",
+     "k": true
+    },
+    {
+     "t": "the order,",
+     "r": "O-vật",
+     "vi": "đơn hàng"
+    },
+    {
+     "t": "which left",
+     "r": "V",
+     "vi": "điều đó làm",
+     "k": true
+    },
+    {
+     "t": "our sales team",
+     "r": "O-người",
+     "vi": "đội kinh doanh của chúng tôi",
+     "k": true
+    },
+    {
+     "t": "disappointed.",
+     "r": "bổ ngữ",
+     "vi": "thất vọng",
+     "k": true
+    }
+   ],
+   "note": "made + the client + cancel = \"khiến khách hàng hủy\"; left + our sales team + disappointed = \"làm đội kinh doanh thất vọng\". Chủ ngữ là sự việc (delay) nên dịch là \"khiến\", không phải \"bắt\".",
+   "pid": "u09-make-sb",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "viOpts": [
+    "Việc chậm trễ ở hải quan bị khách hàng hủy, điều đó để lại đội kinh doanh của chúng tôi thất vọng.",
+    "Việc chậm trễ ở hải quan khiến khách hàng hủy đơn hàng, điều đó làm đội kinh doanh của chúng tôi thất vọng.",
+    "Khách hàng làm chậm trễ ở hải quan nên đội kinh doanh của chúng tôi buộc phải hủy đơn hàng."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "Most clients consider our new payment portal user-friendly, but some find it hard to locate the invoice section.",
+   "vi": "Hầu hết khách hàng cho rằng cổng thanh toán mới của chúng tôi thân thiện với người dùng, nhưng một số lại thấy khó tìm mục hóa đơn.",
+   "chunks": [
+    {
+     "t": "Most clients",
+     "r": "S",
+     "vi": "hầu hết khách hàng"
+    },
+    {
+     "t": "consider",
+     "r": "V",
+     "vi": "cho rằng",
+     "k": true
+    },
+    {
+     "t": "our new payment portal",
+     "r": "O-vật",
+     "vi": "cổng thanh toán mới của chúng tôi",
+     "k": true
+    },
+    {
+     "t": "user-friendly,",
+     "r": "bổ ngữ",
+     "vi": "thân thiện với người dùng",
+     "k": true
+    },
+    {
+     "t": "but some",
+     "r": "S",
+     "vi": "nhưng một số"
+    },
+    {
+     "t": "find",
+     "r": "V",
+     "vi": "thấy",
+     "k": true
+    },
+    {
+     "t": "it",
+     "r": "O",
+     "vi": "(tân ngữ giả, không dịch)",
+     "k": true
+    },
+    {
+     "t": "hard",
+     "r": "bổ ngữ",
+     "vi": "khó",
+     "k": true
+    },
+    {
+     "t": "to locate",
+     "r": "to V",
+     "vi": "tìm",
+     "k": true
+    },
+    {
+     "t": "the invoice section.",
+     "r": "O-vật",
+     "vi": "mục hóa đơn"
+    }
+   ],
+   "note": "consider + cổng thanh toán + user-friendly = \"cho rằng... là thân thiện\"; find + it + hard + to locate = \"thấy khó tìm\" (bỏ \"it\" khi dịch).",
+   "pid": "u09-find-it",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    7,
+    8,
+    9,
+    6
+   ]
+  },
+  {
+   "en": "The government grant made it possible for the small company to hire ten more workers and keep its prices low.",
+   "vi": "Khoản trợ cấp của chính phủ giúp công ty nhỏ có thể tuyển thêm mười công nhân và giữ giá ở mức thấp.",
+   "chunks": [
+    {
+     "t": "The government grant",
+     "r": "S",
+     "vi": "khoản trợ cấp của chính phủ"
+    },
+    {
+     "t": "made",
+     "r": "V",
+     "vi": "giúp",
+     "k": true
+    },
+    {
+     "t": "it",
+     "r": "O",
+     "vi": "(tân ngữ giả)",
+     "k": true
+    },
+    {
+     "t": "possible",
+     "r": "bổ ngữ",
+     "vi": "có thể",
+     "k": true
+    },
+    {
+     "t": "for the small company",
+     "r": "giới từ + O",
+     "vi": "công ty nhỏ",
+     "k": true
+    },
+    {
+     "t": "to hire",
+     "r": "to V",
+     "vi": "tuyển",
+     "k": true
+    },
+    {
+     "t": "ten more workers",
+     "r": "O-vật",
+     "vi": "thêm mười công nhân"
+    },
+    {
+     "t": "and keep",
+     "r": "V",
+     "vi": "và giữ",
+     "k": true
+    },
+    {
+     "t": "its prices",
+     "r": "O-vật",
+     "vi": "giá của mình"
+    },
+    {
+     "t": "low.",
+     "r": "bổ ngữ",
+     "vi": "ở mức thấp",
+     "k": true
+    }
+   ],
+   "note": "made it possible for the company to hire = \"giúp công ty có thể tuyển\": bỏ \"it\" khi dịch, \"for + người\" dịch trước to V. keep + prices + low = \"giữ giá ở mức thấp\".",
+   "pid": "u09-make-possible",
+   "viOrder": [
+    0,
+    1,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    2
+   ],
+   "viOpts": [
+    "Chính phủ làm ra khoản trợ cấp để công ty nhỏ tuyển mười công nhân giá rẻ.",
+    "Khoản trợ cấp của chính phủ khiến công ty nhỏ không thể tuyển thêm công nhân vì giá thấp.",
+    "Khoản trợ cấp của chính phủ giúp công ty nhỏ có thể tuyển thêm mười công nhân và giữ giá ở mức thấp."
+   ],
+   "viAns": 2
+  },
+  {
+   "en": "After Mr. Lin retired, the board elected Ms. Park chairperson and appointed Mr. Diaz acting treasurer until the next election.",
+   "vi": "Sau khi ông Lin nghỉ hưu, hội đồng đã bầu bà Park làm chủ tịch và bổ nhiệm ông Diaz làm thủ quỹ tạm quyền cho đến cuộc bầu cử tới.",
+   "chunks": [
+    {
+     "t": "After Mr. Lin retired,",
+     "r": "mệnh đề",
+     "vi": "sau khi ông Lin nghỉ hưu"
+    },
+    {
+     "t": "the board",
+     "r": "S",
+     "vi": "hội đồng"
+    },
+    {
+     "t": "elected",
+     "r": "V",
+     "vi": "đã bầu",
+     "k": true
+    },
+    {
+     "t": "Ms. Park",
+     "r": "O-người",
+     "vi": "bà Park",
+     "k": true
+    },
+    {
+     "t": "chairperson",
+     "r": "bổ ngữ",
+     "vi": "làm chủ tịch",
+     "k": true
+    },
+    {
+     "t": "and appointed",
+     "r": "V",
+     "vi": "và bổ nhiệm",
+     "k": true
+    },
+    {
+     "t": "Mr. Diaz",
+     "r": "O-người",
+     "vi": "ông Diaz",
+     "k": true
+    },
+    {
+     "t": "acting treasurer",
+     "r": "bổ ngữ",
+     "vi": "làm thủ quỹ tạm quyền",
+     "k": true
+    },
+    {
+     "t": "until the next election.",
+     "r": "trạng ngữ",
+     "vi": "cho đến cuộc bầu cử tới"
+    }
+   ],
+   "note": "elect/appoint + người + chức danh: dịch \"bầu/bổ nhiệm ai làm + chức danh\". Tiếng Anh không có giới từ cho chữ \"làm\"; \"làm\" là thêm vào khi dịch.",
+   "pid": "u09-elect",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ ]
+}

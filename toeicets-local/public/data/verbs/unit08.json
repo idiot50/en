@@ -1,0 +1,2173 @@
+{
+ "unit": 8,
+ "title": "Collocation: make / take / have / do / pay / place / meet…",
+ "icon": "🔗",
+ "intro": "Collocation là cặp từ \"đi chung\" tự nhiên: người bản xứ nói make a decision, take place, meet a deadline chứ không nói do a decision, happen place, catch a deadline. TOEIC Part 5 thường hỏi chọn đúng động từ, và bài đọc đầy các cụm này. Mẹo: học nguyên cụm cùng giới từ và mạo từ đi kèm (take advantage OF, have access TO, take place không a/the).",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "make + a/an + N",
+   "make a decision / reservation / profit",
+   "đưa ra quyết định / đặt chỗ / có lãi"
+  ],
+  [
+   "take + N (không mạo từ) + giới từ",
+   "take part in, take advantage of",
+   "tham gia, tận dụng"
+  ],
+  [
+   "have + N + to / on",
+   "have access to, have an impact on",
+   "có quyền truy cập, ảnh hưởng đến"
+  ],
+  [
+   "meet / reach / file / place + N",
+   "meet a deadline, reach an agreement",
+   "kịp hạn, đạt thỏa thuận"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u08-make-decision",
+   "p": "make a decision (about/on sth)",
+   "form": "make + a decision + about/on + O",
+   "vi": "đưa ra quyết định (về việc gì)",
+   "alt": "= decide (V)",
+   "note": "Bẫy: KHÔNG nói \"do a decision\". Có mạo từ a/the: make a decision.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The board will make a decision about the merger next week.",
+     "vi": "Hội đồng quản trị sẽ đưa ra quyết định về vụ sáp nhập vào tuần tới.",
+     "chunks": [
+      {
+       "t": "The board",
+       "r": "S",
+       "vi": "hội đồng quản trị"
+      },
+      {
+       "t": "will make a decision",
+       "r": "V",
+       "vi": "sẽ đưa ra quyết định",
+       "k": true
+      },
+      {
+       "t": "about the merger",
+       "r": "giới từ + O",
+       "vi": "về vụ sáp nhập",
+       "k": true
+      },
+      {
+       "t": "next week.",
+       "r": "trạng ngữ",
+       "vi": "vào tuần tới"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "It is difficult to make a decision without enough data.",
+     "vi": "Thật khó để đưa ra quyết định khi không có đủ dữ liệu.",
+     "chunks": [
+      {
+       "t": "It is difficult",
+       "r": "mệnh đề",
+       "vi": "thật khó"
+      },
+      {
+       "t": "to make a decision",
+       "r": "to V",
+       "vi": "để đưa ra quyết định",
+       "k": true
+      },
+      {
+       "t": "without enough data.",
+       "r": "giới từ + O",
+       "vi": "khi không có đủ dữ liệu"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-make-reservation",
+   "p": "make a reservation (for sb/sth)",
+   "form": "make + a reservation + for + số người/ngày (+ at + giờ/nơi)",
+   "vi": "đặt chỗ, đặt trước (bàn, phòng, vé)",
+   "alt": "= book (V); Anh-Anh: make a booking",
+   "note": "for + số người hoặc ngày; at + giờ/địa điểm.",
+   "core": true,
+   "ex": [
+    {
+     "en": "I would like to make a reservation for two at 7 p.m.",
+     "vi": "Tôi muốn đặt bàn cho hai người lúc 7 giờ tối.",
+     "chunks": [
+      {
+       "t": "I would like",
+       "r": "V",
+       "vi": "tôi muốn"
+      },
+      {
+       "t": "to make a reservation",
+       "r": "to V",
+       "vi": "đặt bàn",
+       "k": true
+      },
+      {
+       "t": "for two",
+       "r": "giới từ + O",
+       "vi": "cho hai người",
+       "k": true
+      },
+      {
+       "t": "at 7 p.m.",
+       "r": "giới từ + O",
+       "vi": "lúc 7 giờ tối"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Guests are advised to make a reservation at least a day in advance.",
+     "vi": "Khách được khuyến nghị đặt chỗ trước ít nhất một ngày.",
+     "chunks": [
+      {
+       "t": "Guests are advised",
+       "r": "V",
+       "vi": "khách được khuyến nghị"
+      },
+      {
+       "t": "to make a reservation",
+       "r": "to V",
+       "vi": "đặt chỗ",
+       "k": true
+      },
+      {
+       "t": "at least a day in advance.",
+       "r": "trạng ngữ",
+       "vi": "trước ít nhất một ngày"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-make-payment",
+   "p": "make a payment (on/for sth)",
+   "form": "make + a payment (of $X)",
+   "vi": "thanh toán, trả tiền",
+   "alt": "= pay (V)",
+   "note": "Hay đi với by credit card, online, in full, before the due date.",
+   "ex": [
+    {
+     "en": "Customers can make a payment online or by phone.",
+     "vi": "Khách hàng có thể thanh toán trực tuyến hoặc qua điện thoại.",
+     "chunks": [
+      {
+       "t": "Customers",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "can make a payment",
+       "r": "V",
+       "vi": "có thể thanh toán",
+       "k": true
+      },
+      {
+       "t": "online or by phone.",
+       "r": "trạng ngữ",
+       "vi": "trực tuyến hoặc qua điện thoại"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Please make the payment before the due date.",
+     "vi": "Vui lòng thanh toán trước ngày đến hạn.",
+     "chunks": [
+      {
+       "t": "Please make the payment",
+       "r": "V",
+       "vi": "vui lòng thanh toán",
+       "k": true
+      },
+      {
+       "t": "before the due date.",
+       "r": "trạng ngữ",
+       "vi": "trước ngày đến hạn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-make-profit",
+   "p": "make a profit",
+   "form": "make + a profit (of $X)",
+   "vi": "có lãi, sinh lời",
+   "alt": "= turn a profit, earn a profit; ngược: make a loss",
+   "note": "Dùng make, KHÔNG dùng do. Thêm of + số tiền: a profit of $2 million.",
+   "ex": [
+    {
+     "en": "The company made a profit of $2 million last year.",
+     "vi": "Công ty đã có lãi 2 triệu đô la vào năm ngoái.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "made a profit",
+       "r": "V",
+       "vi": "đã có lãi",
+       "k": true
+      },
+      {
+       "t": "of $2 million",
+       "r": "giới từ + O",
+       "vi": "2 triệu đô la",
+       "k": true
+      },
+      {
+       "t": "last year.",
+       "r": "trạng ngữ",
+       "vi": "năm ngoái"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The restaurant did not make a profit until its third year.",
+     "vi": "Nhà hàng không có lãi cho đến năm thứ ba.",
+     "chunks": [
+      {
+       "t": "The restaurant",
+       "r": "S",
+       "vi": "nhà hàng"
+      },
+      {
+       "t": "did not make a profit",
+       "r": "V",
+       "vi": "không có lãi",
+       "k": true
+      },
+      {
+       "t": "until its third year.",
+       "r": "trạng ngữ",
+       "vi": "cho đến năm thứ ba"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-make-sure",
+   "p": "make sure (that) S + V  |  make sure to V",
+   "form": "make sure + that + S V",
+   "vi": "đảm bảo, chắc chắn rằng",
+   "alt": "= ensure",
+   "note": "make sure KHÔNG đi với danh từ trực tiếp (ensure accuracy đúng, make sure accuracy sai). Có thể bỏ that.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Please make sure that all windows are closed before you leave.",
+     "vi": "Vui lòng đảm bảo tất cả cửa sổ đã được đóng trước khi bạn rời đi.",
+     "chunks": [
+      {
+       "t": "Please make sure",
+       "r": "V",
+       "vi": "vui lòng đảm bảo",
+       "k": true
+      },
+      {
+       "t": "that all windows are closed",
+       "r": "mệnh đề",
+       "vi": "rằng tất cả cửa sổ đã được đóng",
+       "k": true
+      },
+      {
+       "t": "before you leave.",
+       "r": "mệnh đề",
+       "vi": "trước khi bạn rời đi"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Make sure to back up your files every day.",
+     "vi": "Nhớ sao lưu tệp của bạn mỗi ngày.",
+     "chunks": [
+      {
+       "t": "Make sure",
+       "r": "V",
+       "vi": "nhớ",
+       "k": true
+      },
+      {
+       "t": "to back up",
+       "r": "to V",
+       "vi": "sao lưu",
+       "k": true
+      },
+      {
+       "t": "your files",
+       "r": "O-vật",
+       "vi": "tệp của bạn"
+      },
+      {
+       "t": "every day.",
+       "r": "trạng ngữ",
+       "vi": "mỗi ngày"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-make-arrangements",
+   "p": "make arrangements for sth / to V",
+   "form": "make + arrangements + for + O",
+   "vi": "sắp xếp, thu xếp, chuẩn bị",
+   "alt": "= arrange, organize",
+   "note": "arrangements luôn ở dạng số nhiều trong cụm này.",
+   "ex": [
+    {
+     "en": "The assistant made arrangements for the visitors' transportation.",
+     "vi": "Trợ lý đã thu xếp phương tiện đi lại cho các vị khách.",
+     "chunks": [
+      {
+       "t": "The assistant",
+       "r": "S",
+       "vi": "trợ lý"
+      },
+      {
+       "t": "made arrangements",
+       "r": "V",
+       "vi": "đã thu xếp",
+       "k": true
+      },
+      {
+       "t": "for the visitors' transportation.",
+       "r": "giới từ + O",
+       "vi": "phương tiện đi lại cho các vị khách",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Please make arrangements to attend the training session.",
+     "vi": "Vui lòng sắp xếp để tham dự buổi đào tạo.",
+     "chunks": [
+      {
+       "t": "Please make arrangements",
+       "r": "V",
+       "vi": "vui lòng sắp xếp",
+       "k": true
+      },
+      {
+       "t": "to attend",
+       "r": "to V",
+       "vi": "để tham dự",
+       "k": true
+      },
+      {
+       "t": "the training session.",
+       "r": "O-vật",
+       "vi": "buổi đào tạo"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-take-place",
+   "p": "take place",
+   "form": "take place + at/in/on (không tân ngữ)",
+   "vi": "diễn ra, được tổ chức",
+   "alt": "= happen, be held",
+   "note": "Bẫy: KHÔNG dùng bị động (không có \"be taken place\") và KHÔNG có mạo từ.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The annual conference will take place in Hanoi this October.",
+     "vi": "Hội nghị thường niên sẽ diễn ra ở Hà Nội vào tháng Mười này.",
+     "chunks": [
+      {
+       "t": "The annual conference",
+       "r": "S",
+       "vi": "hội nghị thường niên"
+      },
+      {
+       "t": "will take place",
+       "r": "V",
+       "vi": "sẽ diễn ra",
+       "k": true
+      },
+      {
+       "t": "in Hanoi",
+       "r": "giới từ + O",
+       "vi": "ở Hà Nội"
+      },
+      {
+       "t": "this October.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng Mười này"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The product demonstration took place on the second floor.",
+     "vi": "Buổi giới thiệu sản phẩm đã diễn ra ở tầng hai.",
+     "chunks": [
+      {
+       "t": "The product demonstration",
+       "r": "S",
+       "vi": "buổi giới thiệu sản phẩm"
+      },
+      {
+       "t": "took place",
+       "r": "V",
+       "vi": "đã diễn ra",
+       "k": true
+      },
+      {
+       "t": "on the second floor.",
+       "r": "giới từ + O",
+       "vi": "ở tầng hai"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-take-part-in",
+   "p": "take part in sth",
+   "form": "take part in + N / V-ing",
+   "vi": "tham gia (hoạt động, sự kiện)",
+   "alt": "= join in",
+   "note": "Không có a/the trước part. Sau in là danh từ hoặc V-ing.",
+   "core": true,
+   "ex": [
+    {
+     "en": "More than 300 employees took part in the charity run.",
+     "vi": "Hơn 300 nhân viên đã tham gia cuộc chạy từ thiện.",
+     "chunks": [
+      {
+       "t": "More than 300 employees",
+       "r": "S",
+       "vi": "hơn 300 nhân viên"
+      },
+      {
+       "t": "took part in",
+       "r": "V",
+       "vi": "đã tham gia",
+       "k": true
+      },
+      {
+       "t": "the charity run.",
+       "r": "O-vật",
+       "vi": "cuộc chạy từ thiện",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Everyone is welcome to take part in the discussion.",
+     "vi": "Mọi người đều được chào đón tham gia thảo luận.",
+     "chunks": [
+      {
+       "t": "Everyone is welcome",
+       "r": "mệnh đề",
+       "vi": "mọi người đều được chào đón"
+      },
+      {
+       "t": "to take part in",
+       "r": "to V",
+       "vi": "tham gia",
+       "k": true
+      },
+      {
+       "t": "the discussion.",
+       "r": "O-vật",
+       "vi": "buổi thảo luận",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-take-advantage",
+   "p": "take advantage of sth",
+   "form": "take advantage of + N / V-ing",
+   "vi": "tận dụng, nhân cơ hội",
+   "alt": "= make use of; take advantage of sb = lợi dụng ai",
+   "note": "Luôn đi với of. Nghĩa tích cực khi vật: tận dụng ưu đãi.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Customers should take advantage of the early-bird discount.",
+     "vi": "Khách hàng nên tận dụng ưu đãi mua sớm.",
+     "chunks": [
+      {
+       "t": "Customers",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "should take advantage of",
+       "r": "V",
+       "vi": "nên tận dụng",
+       "k": true
+      },
+      {
+       "t": "the early-bird discount.",
+       "r": "O-vật",
+       "vi": "ưu đãi mua sớm",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The firm took advantage of low interest rates to expand overseas.",
+     "vi": "Công ty đã tận dụng lãi suất thấp để mở rộng ra nước ngoài.",
+     "chunks": [
+      {
+       "t": "The firm",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "took advantage of",
+       "r": "V",
+       "vi": "đã tận dụng",
+       "k": true
+      },
+      {
+       "t": "low interest rates",
+       "r": "O-vật",
+       "vi": "lãi suất thấp",
+       "k": true
+      },
+      {
+       "t": "to expand overseas.",
+       "r": "to V",
+       "vi": "để mở rộng ra nước ngoài"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-take-charge",
+   "p": "take charge of sth",
+   "form": "take charge of + O",
+   "vi": "đảm nhận, nắm quyền phụ trách",
+   "alt": "= assume responsibility for; take over",
+   "note": "Phân biệt: take charge of (bắt đầu phụ trách) và be in charge of (đang phụ trách).",
+   "vs": "be in charge of = đang phụ trách",
+   "ex": [
+    {
+     "en": "Ms. Park took charge of the new project in March.",
+     "vi": "Bà Park đã đảm nhận dự án mới vào tháng Ba.",
+     "chunks": [
+      {
+       "t": "Ms. Park",
+       "r": "S",
+       "vi": "bà Park"
+      },
+      {
+       "t": "took charge of",
+       "r": "V",
+       "vi": "đã đảm nhận",
+       "k": true
+      },
+      {
+       "t": "the new project",
+       "r": "O-vật",
+       "vi": "dự án mới",
+       "k": true
+      },
+      {
+       "t": "in March.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng Ba"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "A senior engineer will take charge of the installation.",
+     "vi": "Một kỹ sư cấp cao sẽ phụ trách việc lắp đặt.",
+     "chunks": [
+      {
+       "t": "A senior engineer",
+       "r": "S",
+       "vi": "một kỹ sư cấp cao"
+      },
+      {
+       "t": "will take charge of",
+       "r": "V",
+       "vi": "sẽ phụ trách",
+       "k": true
+      },
+      {
+       "t": "the installation.",
+       "r": "O-vật",
+       "vi": "việc lắp đặt",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-take-into-account",
+   "p": "take sth into account",
+   "form": "take + O + into account",
+   "vi": "tính đến, cân nhắc",
+   "alt": "= take into consideration",
+   "note": "Có thể nói take into account + O. Tách được: take it into account.",
+   "ex": [
+    {
+     "en": "The committee took customer feedback into account when it revised the policy.",
+     "vi": "Ủy ban đã cân nhắc phản hồi của khách hàng khi sửa đổi chính sách.",
+     "chunks": [
+      {
+       "t": "The committee",
+       "r": "S",
+       "vi": "ủy ban"
+      },
+      {
+       "t": "took",
+       "r": "V",
+       "vi": "đã",
+       "k": true
+      },
+      {
+       "t": "customer feedback",
+       "r": "O-vật",
+       "vi": "phản hồi của khách hàng",
+       "k": true
+      },
+      {
+       "t": "into account",
+       "r": "giới từ + O",
+       "vi": "cân nhắc",
+       "k": true
+      },
+      {
+       "t": "when it revised the policy.",
+       "r": "mệnh đề",
+       "vi": "khi sửa đổi chính sách"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ]
+    },
+    {
+     "en": "We must take the budget limits into account before choosing a supplier.",
+     "vi": "Chúng ta phải tính đến giới hạn ngân sách trước khi chọn nhà cung cấp.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng ta"
+      },
+      {
+       "t": "must take",
+       "r": "V",
+       "vi": "phải",
+       "k": true
+      },
+      {
+       "t": "the budget limits",
+       "r": "O-vật",
+       "vi": "giới hạn ngân sách",
+       "k": true
+      },
+      {
+       "t": "into account",
+       "r": "giới từ + O",
+       "vi": "tính đến",
+       "k": true
+      },
+      {
+       "t": "before choosing a supplier.",
+       "r": "trạng ngữ",
+       "vi": "trước khi chọn nhà cung cấp"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-have-access",
+   "p": "have access to sth",
+   "form": "have + access + to + N",
+   "vi": "có quyền truy cập, có thể tiếp cận",
+   "alt": "= be able to use; gain access to (có được quyền)",
+   "note": "Luôn dùng to, không dùng of/for. access không có a/an.",
+   "core": true,
+   "ex": [
+    {
+     "en": "All employees have access to the company database.",
+     "vi": "Tất cả nhân viên đều có quyền truy cập cơ sở dữ liệu của công ty.",
+     "chunks": [
+      {
+       "t": "All employees",
+       "r": "S",
+       "vi": "tất cả nhân viên"
+      },
+      {
+       "t": "have access to",
+       "r": "V",
+       "vi": "có quyền truy cập",
+       "k": true
+      },
+      {
+       "t": "the company database.",
+       "r": "O-vật",
+       "vi": "cơ sở dữ liệu của công ty",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Members have access to the fitness center 24 hours a day.",
+     "vi": "Hội viên được sử dụng phòng tập 24 giờ mỗi ngày.",
+     "chunks": [
+      {
+       "t": "Members",
+       "r": "S",
+       "vi": "hội viên"
+      },
+      {
+       "t": "have access to",
+       "r": "V",
+       "vi": "được sử dụng",
+       "k": true
+      },
+      {
+       "t": "the fitness center",
+       "r": "O-vật",
+       "vi": "phòng tập",
+       "k": true
+      },
+      {
+       "t": "24 hours a day.",
+       "r": "trạng ngữ",
+       "vi": "24 giờ mỗi ngày"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-have-impact",
+   "p": "have an impact on sth",
+   "form": "have + an impact + on + O",
+   "vi": "ảnh hưởng đến",
+   "alt": "= affect, influence; have an effect on",
+   "note": "impact + on; thường có tính từ: a major/positive/negative impact.",
+   "ex": [
+    {
+     "en": "The new tax law will have a major impact on small businesses.",
+     "vi": "Luật thuế mới sẽ ảnh hưởng lớn đến các doanh nghiệp nhỏ.",
+     "chunks": [
+      {
+       "t": "The new tax law",
+       "r": "S",
+       "vi": "luật thuế mới"
+      },
+      {
+       "t": "will have a major impact",
+       "r": "V",
+       "vi": "sẽ ảnh hưởng lớn",
+       "k": true
+      },
+      {
+       "t": "on small businesses.",
+       "r": "giới từ + O",
+       "vi": "đến các doanh nghiệp nhỏ",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Social media has had a positive impact on our sales.",
+     "vi": "Mạng xã hội đã có tác động tích cực đến doanh số của chúng tôi.",
+     "chunks": [
+      {
+       "t": "Social media",
+       "r": "S",
+       "vi": "mạng xã hội"
+      },
+      {
+       "t": "has had a positive impact",
+       "r": "V",
+       "vi": "đã có tác động tích cực",
+       "k": true
+      },
+      {
+       "t": "on our sales.",
+       "r": "giới từ + O",
+       "vi": "đến doanh số của chúng tôi",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-do-business",
+   "p": "do business with sb / in + nơi",
+   "form": "do + business + with + O",
+   "vi": "làm ăn, giao dịch kinh doanh với",
+   "alt": "= trade with",
+   "note": "business không có mạo từ ở nghĩa này. do business in Asia = kinh doanh ở châu Á.",
+   "ex": [
+    {
+     "en": "We have done business with this supplier for over ten years.",
+     "vi": "Chúng tôi đã làm ăn với nhà cung cấp này hơn mười năm.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "have done business",
+       "r": "V",
+       "vi": "đã làm ăn",
+       "k": true
+      },
+      {
+       "t": "with this supplier",
+       "r": "giới từ + O",
+       "vi": "với nhà cung cấp này",
+       "k": true
+      },
+      {
+       "t": "for over ten years.",
+       "r": "trạng ngữ",
+       "vi": "hơn mười năm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "It is easy to do business with a company that responds quickly.",
+     "vi": "Thật dễ làm ăn với một công ty phản hồi nhanh.",
+     "chunks": [
+      {
+       "t": "It is easy",
+       "r": "mệnh đề",
+       "vi": "thật dễ"
+      },
+      {
+       "t": "to do business",
+       "r": "to V",
+       "vi": "làm ăn",
+       "k": true
+      },
+      {
+       "t": "with a company that responds quickly.",
+       "r": "giới từ + O",
+       "vi": "với một công ty phản hồi nhanh",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-give-presentation",
+   "p": "give a presentation (on/about sth) (to sb)",
+   "form": "give + a presentation + on + O",
+   "vi": "thuyết trình (về chủ đề gì)",
+   "alt": "= make/deliver a presentation",
+   "note": "TOEIC dùng give / make / deliver a presentation (\"do a presentation\" chỉ là văn nói thân mật). on/about + chủ đề; to + người nghe.",
+   "ex": [
+    {
+     "en": "Ms. Choi will give a presentation on the sales results.",
+     "vi": "Cô Choi sẽ thuyết trình về kết quả bán hàng.",
+     "chunks": [
+      {
+       "t": "Ms. Choi",
+       "r": "S",
+       "vi": "cô Choi"
+      },
+      {
+       "t": "will give a presentation",
+       "r": "V",
+       "vi": "sẽ thuyết trình",
+       "k": true
+      },
+      {
+       "t": "on the sales results.",
+       "r": "giới từ + O",
+       "vi": "về kết quả bán hàng",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "He gave a presentation to the board about the new strategy.",
+     "vi": "Anh ấy đã thuyết trình trước hội đồng về chiến lược mới.",
+     "chunks": [
+      {
+       "t": "He",
+       "r": "S",
+       "vi": "anh ấy"
+      },
+      {
+       "t": "gave a presentation",
+       "r": "V",
+       "vi": "đã thuyết trình",
+       "k": true
+      },
+      {
+       "t": "to the board",
+       "r": "giới từ + O",
+       "vi": "trước hội đồng"
+      },
+      {
+       "t": "about the new strategy.",
+       "r": "giới từ + O",
+       "vi": "về chiến lược mới",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-pay-attention",
+   "p": "pay attention to sth / V-ing",
+   "form": "pay + attention + to + N / V-ing",
+   "vi": "chú ý đến, lưu tâm đến",
+   "alt": "= focus on; pay close attention = chú ý kỹ",
+   "note": "Bẫy: to ở đây là giới từ nên theo sau là V-ing: pay attention to checking.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Drivers must pay close attention to the new safety rules.",
+     "vi": "Tài xế phải đặc biệt chú ý đến các quy tắc an toàn mới.",
+     "chunks": [
+      {
+       "t": "Drivers",
+       "r": "S",
+       "vi": "tài xế"
+      },
+      {
+       "t": "must pay close attention to",
+       "r": "V",
+       "vi": "phải đặc biệt chú ý đến",
+       "k": true
+      },
+      {
+       "t": "the new safety rules.",
+       "r": "O-vật",
+       "vi": "các quy tắc an toàn mới",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Staff should pay more attention to checking their work for errors.",
+     "vi": "Nhân viên nên chú ý hơn đến việc rà soát công việc của mình để tìm lỗi.",
+     "chunks": [
+      {
+       "t": "Staff",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "should pay more attention to",
+       "r": "V",
+       "vi": "nên chú ý hơn đến",
+       "k": true
+      },
+      {
+       "t": "checking their work",
+       "r": "V-ing",
+       "vi": "việc rà soát công việc của mình",
+       "k": true
+      },
+      {
+       "t": "for errors.",
+       "r": "giới từ + O",
+       "vi": "để tìm lỗi"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-place-order",
+   "p": "place an order (for sth) (with sb)",
+   "form": "place + an order + for + hàng + with + nhà cung cấp",
+   "vi": "đặt hàng",
+   "alt": "= order (V); put in an order",
+   "note": "for + mặt hàng; with + nhà cung cấp.",
+   "core": true,
+   "ex": [
+    {
+     "en": "We placed an order for 500 office chairs with a local supplier.",
+     "vi": "Chúng tôi đã đặt mua 500 chiếc ghế văn phòng của một nhà cung cấp địa phương.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "placed an order",
+       "r": "V",
+       "vi": "đã đặt mua",
+       "k": true
+      },
+      {
+       "t": "for 500 office chairs",
+       "r": "giới từ + O",
+       "vi": "500 chiếc ghế văn phòng",
+       "k": true
+      },
+      {
+       "t": "with a local supplier.",
+       "r": "giới từ + O",
+       "vi": "của (với) một nhà cung cấp địa phương"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Orders placed before noon will be shipped the same day.",
+     "vi": "Đơn hàng đặt trước buổi trưa sẽ được giao trong ngày.",
+     "chunks": [
+      {
+       "t": "Orders placed before noon",
+       "r": "S",
+       "vi": "đơn hàng được đặt trước buổi trưa",
+       "k": true
+      },
+      {
+       "t": "will be shipped",
+       "r": "V",
+       "vi": "sẽ được giao"
+      },
+      {
+       "t": "the same day.",
+       "r": "trạng ngữ",
+       "vi": "trong cùng ngày"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-meet-deadline",
+   "p": "meet a deadline",
+   "form": "meet + a deadline",
+   "vi": "kịp hạn chót",
+   "alt": "= make the deadline; ngược: miss a deadline",
+   "note": "Bẫy: KHÔNG nói \"catch a deadline\". Dùng meet.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The team worked overtime to meet the deadline.",
+     "vi": "Nhóm đã làm thêm giờ để kịp hạn chót.",
+     "chunks": [
+      {
+       "t": "The team",
+       "r": "S",
+       "vi": "nhóm"
+      },
+      {
+       "t": "worked overtime",
+       "r": "V",
+       "vi": "đã làm thêm giờ"
+      },
+      {
+       "t": "to meet",
+       "r": "to V",
+       "vi": "để kịp",
+       "k": true
+      },
+      {
+       "t": "the deadline.",
+       "r": "O-vật",
+       "vi": "hạn chót",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "We cannot meet the deadline unless we hire more staff.",
+     "vi": "Chúng ta không thể kịp hạn chót trừ khi thuê thêm nhân viên.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng ta"
+      },
+      {
+       "t": "cannot meet",
+       "r": "V",
+       "vi": "không thể kịp",
+       "k": true
+      },
+      {
+       "t": "the deadline",
+       "r": "O-vật",
+       "vi": "hạn chót",
+       "k": true
+      },
+      {
+       "t": "unless we hire more staff.",
+       "r": "mệnh đề",
+       "vi": "trừ khi thuê thêm nhân viên"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-meet-requirements",
+   "p": "meet (the) requirements / standards / needs",
+   "form": "meet + requirements / standards / needs",
+   "vi": "đáp ứng yêu cầu, tiêu chuẩn, nhu cầu",
+   "alt": "= satisfy, fulfill",
+   "note": "meet đi với requirements, needs, demand, standards.",
+   "ex": [
+    {
+     "en": "Applicants must meet the minimum requirements for the position.",
+     "vi": "Ứng viên phải đáp ứng các yêu cầu tối thiểu cho vị trí này.",
+     "chunks": [
+      {
+       "t": "Applicants",
+       "r": "S",
+       "vi": "ứng viên"
+      },
+      {
+       "t": "must meet",
+       "r": "V",
+       "vi": "phải đáp ứng",
+       "k": true
+      },
+      {
+       "t": "the minimum requirements",
+       "r": "O-vật",
+       "vi": "các yêu cầu tối thiểu",
+       "k": true
+      },
+      {
+       "t": "for the position.",
+       "r": "giới từ + O",
+       "vi": "cho vị trí này"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Our products meet international safety standards.",
+     "vi": "Sản phẩm của chúng tôi đáp ứng các tiêu chuẩn an toàn quốc tế.",
+     "chunks": [
+      {
+       "t": "Our products",
+       "r": "S",
+       "vi": "sản phẩm của chúng tôi"
+      },
+      {
+       "t": "meet",
+       "r": "V",
+       "vi": "đáp ứng",
+       "k": true
+      },
+      {
+       "t": "international safety standards.",
+       "r": "O-vật",
+       "vi": "các tiêu chuẩn an toàn quốc tế",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-reach-agreement",
+   "p": "reach an agreement (with sb) (on/about sth)",
+   "form": "reach + an agreement + on + O",
+   "vi": "đạt được thỏa thuận (về việc gì)",
+   "alt": "= come to an agreement; reach a consensus",
+   "note": "reach + agreement/decision/conclusion. KHÔNG nói reach to an agreement.",
+   "ex": [
+    {
+     "en": "After long talks, both companies reached an agreement on the price.",
+     "vi": "Sau các cuộc đàm phán dài, hai công ty đã đạt được thỏa thuận về giá.",
+     "chunks": [
+      {
+       "t": "After long talks,",
+       "r": "trạng ngữ",
+       "vi": "sau các cuộc đàm phán dài"
+      },
+      {
+       "t": "both companies",
+       "r": "S",
+       "vi": "cả hai công ty"
+      },
+      {
+       "t": "reached an agreement",
+       "r": "V",
+       "vi": "đã đạt được thỏa thuận",
+       "k": true
+      },
+      {
+       "t": "on the price.",
+       "r": "giới từ + O",
+       "vi": "về giá",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The two sides hope to reach an agreement by the end of the month.",
+     "vi": "Hai bên hy vọng đạt được thỏa thuận trước cuối tháng.",
+     "chunks": [
+      {
+       "t": "The two sides",
+       "r": "S",
+       "vi": "hai bên"
+      },
+      {
+       "t": "hope",
+       "r": "V",
+       "vi": "hy vọng"
+      },
+      {
+       "t": "to reach an agreement",
+       "r": "to V",
+       "vi": "đạt được thỏa thuận",
+       "k": true
+      },
+      {
+       "t": "by the end of the month.",
+       "r": "trạng ngữ",
+       "vi": "trước cuối tháng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-file-complaint",
+   "p": "file a complaint (about sth) (with sb)",
+   "form": "file + a complaint + about + O",
+   "vi": "nộp đơn khiếu nại, khiếu nại chính thức",
+   "alt": "= lodge a complaint",
+   "note": "file = nộp chính thức; cũng file a claim/report/lawsuit. about + việc; with + cơ quan.",
+   "ex": [
+    {
+     "en": "Several customers filed a complaint about the late delivery.",
+     "vi": "Một số khách hàng đã khiếu nại về việc giao hàng trễ.",
+     "chunks": [
+      {
+       "t": "Several customers",
+       "r": "S",
+       "vi": "một số khách hàng"
+      },
+      {
+       "t": "filed a complaint",
+       "r": "V",
+       "vi": "đã khiếu nại",
+       "k": true
+      },
+      {
+       "t": "about the late delivery.",
+       "r": "giới từ + O",
+       "vi": "về việc giao hàng trễ",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "You can file a complaint with the consumer agency online.",
+     "vi": "Bạn có thể nộp đơn khiếu nại lên cơ quan bảo vệ người tiêu dùng trực tuyến.",
+     "chunks": [
+      {
+       "t": "You",
+       "r": "S",
+       "vi": "bạn"
+      },
+      {
+       "t": "can file a complaint",
+       "r": "V",
+       "vi": "có thể nộp đơn khiếu nại",
+       "k": true
+      },
+      {
+       "t": "with the consumer agency",
+       "r": "giới từ + O",
+       "vi": "lên cơ quan bảo vệ người tiêu dùng",
+       "k": true
+      },
+      {
+       "t": "online.",
+       "r": "trạng ngữ",
+       "vi": "trực tuyến"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u08-hold-meeting",
+   "p": "hold a meeting / conference / event",
+   "form": "hold + a meeting",
+   "vi": "tổ chức (cuộc họp, hội nghị, sự kiện)",
+   "alt": "= have a meeting (thân mật); convene",
+   "pass": "a meeting will be held",
+   "note": "Dạng bị động rất hay gặp trong thông báo: will be held on/at.",
+   "ex": [
+    {
+     "en": "The department holds a meeting every Monday morning.",
+     "vi": "Phòng ban họp vào mỗi sáng thứ Hai.",
+     "chunks": [
+      {
+       "t": "The department",
+       "r": "S",
+       "vi": "phòng ban"
+      },
+      {
+       "t": "holds a meeting",
+       "r": "V",
+       "vi": "họp",
+       "k": true
+      },
+      {
+       "t": "every Monday morning.",
+       "r": "trạng ngữ",
+       "vi": "mỗi sáng thứ Hai"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "A press conference will be held at the main office on Friday.",
+     "vi": "Một buổi họp báo sẽ được tổ chức tại văn phòng chính vào thứ Sáu.",
+     "chunks": [
+      {
+       "t": "A press conference",
+       "r": "S",
+       "vi": "một buổi họp báo"
+      },
+      {
+       "t": "will be held",
+       "r": "V",
+       "vi": "sẽ được tổ chức",
+       "k": true
+      },
+      {
+       "t": "at the main office",
+       "r": "giới từ + O",
+       "vi": "tại văn phòng chính"
+      },
+      {
+       "t": "on Friday.",
+       "r": "trạng ngữ",
+       "vi": "vào thứ Sáu"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The two firms finally ------- an agreement on the delivery schedule.",
+   "options": [
+    "did",
+    "reached",
+    "took",
+    "held"
+   ],
+   "ans": 1,
+   "why": "reach an agreement = đạt được thỏa thuận. Không dùng do/take/hold với agreement.",
+   "vi": "Hai công ty cuối cùng đã đạt được thỏa thuận về lịch giao hàng.",
+   "pid": "u08-reach-agreement",
+   "type": "word-choice"
+  },
+  {
+   "q": "Employees who wish to ------- a complaint should contact the HR office.",
+   "options": [
+    "do",
+    "take",
+    "hold",
+    "file"
+   ],
+   "ans": 3,
+   "why": "file a complaint = nộp đơn khiếu nại. do/take/hold không đi với complaint theo nghĩa này.",
+   "vi": "Nhân viên muốn khiếu nại nên liên hệ phòng nhân sự.",
+   "pid": "u08-file-complaint",
+   "type": "word-choice"
+  },
+  {
+   "q": "The company's annual meeting will ------- at the Grand Hotel on May 12.",
+   "options": [
+    "take place",
+    "be taken place",
+    "held place",
+    "do place"
+   ],
+   "ans": 0,
+   "why": "take place = diễn ra; không có bị động. \"be taken place\" sai.",
+   "vi": "Cuộc họp thường niên của công ty sẽ diễn ra tại khách sạn Grand vào ngày 12/5.",
+   "pid": "u08-take-place",
+   "type": "form"
+  },
+  {
+   "q": "Staff should pay close attention to ------- customer data securely.",
+   "options": [
+    "handle",
+    "to handle",
+    "handling",
+    "handled"
+   ],
+   "ans": 2,
+   "why": "Trong pay attention to, \"to\" là giới từ nên theo sau là V-ing: handling. Bẫy: \"to handle\" (to + V nguyên mẫu) sai.",
+   "vi": "Nhân viên cần đặc biệt chú ý đến việc xử lý dữ liệu khách hàng một cách an toàn.",
+   "pid": "u08-pay-attention",
+   "type": "toV-Ving"
+  },
+  {
+   "q": "All employees have access ------- the shared drive from home.",
+   "options": [
+    "of",
+    "for",
+    "to",
+    "with"
+   ],
+   "ans": 2,
+   "why": "have access to + N. Không dùng of/for/with.",
+   "vi": "Mọi nhân viên đều có thể truy cập ổ đĩa chung từ nhà.",
+   "pid": "u08-have-access",
+   "type": "prep"
+  },
+  {
+   "q": "The new policy will have a significant impact ------- productivity.",
+   "options": [
+    "on",
+    "to",
+    "at",
+    "in"
+   ],
+   "ans": 0,
+   "why": "have an impact on = ảnh hưởng đến.",
+   "vi": "Chính sách mới sẽ ảnh hưởng đáng kể đến năng suất.",
+   "pid": "u08-have-impact",
+   "type": "prep"
+  },
+  {
+   "q": "To ------- the deadline, we need two more designers.",
+   "options": [
+    "hold",
+    "catch",
+    "bring",
+    "meet"
+   ],
+   "ans": 3,
+   "why": "meet a deadline = kịp hạn chót. catch/hold/bring không đi với deadline.",
+   "vi": "Để kịp hạn chót, chúng tôi cần thêm hai nhà thiết kế.",
+   "pid": "u08-meet-deadline",
+   "type": "word-choice"
+  },
+  {
+   "q": "We should take the customers' needs ------- before designing the product.",
+   "options": [
+    "in account",
+    "into account",
+    "to account",
+    "on account"
+   ],
+   "ans": 1,
+   "why": "take sth into account = tính đến, cân nhắc (giới từ into). in/to/on account không tạo cụm nghĩa này.",
+   "vi": "Chúng ta nên tính đến nhu cầu của khách trước khi thiết kế sản phẩm.",
+   "pid": "u08-take-into-account",
+   "type": "prep"
+  },
+  {
+   "q": "Ms. Lopez will ------- charge of the Asia division starting next month.",
+   "options": [
+    "take",
+    "make",
+    "give",
+    "do"
+   ],
+   "ans": 0,
+   "why": "take charge of = đảm nhận phụ trách.",
+   "vi": "Bà Lopez sẽ đảm nhận phụ trách bộ phận châu Á từ tháng tới.",
+   "pid": "u08-take-charge",
+   "type": "word-choice"
+  },
+  {
+   "q": "Our agency ------- business with clients in more than thirty countries.",
+   "options": [
+    "makes",
+    "takes",
+    "does",
+    "gives"
+   ],
+   "ans": 2,
+   "why": "do business with = làm ăn với. Chủ ngữ số ít nên dùng does.",
+   "vi": "Công ty chúng tôi làm ăn với khách hàng ở hơn ba mươi quốc gia.",
+   "pid": "u08-do-business",
+   "type": "word-choice"
+  },
+  {
+   "q": "Please make sure ------- the door is locked before you leave.",
+   "options": [
+    "of",
+    "that",
+    "to",
+    "for"
+   ],
+   "ans": 1,
+   "why": "make sure + that-clause. make sure of + danh từ nên không hợp trước mệnh đề.",
+   "vi": "Vui lòng đảm bảo cửa đã khóa trước khi rời đi.",
+   "pid": "u08-make-sure",
+   "type": "form"
+  },
+  {
+   "q": "Mr. Han ------- an order for 200 laptops with the supplier yesterday.",
+   "options": [
+    "did",
+    "held",
+    "gave",
+    "placed"
+   ],
+   "ans": 3,
+   "why": "place an order (for sth) (with sb) = đặt hàng. do/hold/give không đi với order theo nghĩa này.",
+   "vi": "Hôm qua ông Han đã đặt mua 200 máy tính xách tay của nhà cung cấp.",
+   "pid": "u08-place-order",
+   "type": "word-choice"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Công ty sẽ đưa ra quyết định cuối cùng vào thứ Hai.",
+   "chunks": [
+    "The company",
+    "will make",
+    "a final decision",
+    "on Monday."
+   ],
+   "pid": "u08-make-decision",
+   "why": "make a decision (không dùng do).",
+   "dist": "will do"
+  },
+  {
+   "vi": "Buổi hội thảo đã diễn ra ở tầng hai của trụ sở chính.",
+   "chunks": [
+    "The workshop",
+    "took place",
+    "on the second floor",
+    "of the head office."
+   ],
+   "pid": "u08-take-place",
+   "why": "take place = diễn ra (không tân ngữ, không bị động).",
+   "dist": "was taken"
+  },
+  {
+   "vi": "Tất cả tài xế phải đặc biệt chú ý đến các quy tắc an toàn mới.",
+   "chunks": [
+    "All drivers",
+    "must pay",
+    "close attention",
+    "to the new safety rules."
+   ],
+   "pid": "u08-pay-attention",
+   "why": "pay (close) attention to + N: chú ý (kỹ) đến.",
+   "dist": "for"
+  },
+  {
+   "vi": "Chúng tôi đã đặt 500 chiếc ghế văn phòng.",
+   "chunks": [
+    "We",
+    "placed",
+    "an order",
+    "for 500 office chairs."
+   ],
+   "pid": "u08-place-order",
+   "why": "place an order for + hàng.",
+   "dist": "did"
+  },
+  {
+   "vi": "Vui lòng đảm bảo rằng tất cả tài liệu đã được ký trước cuộc họp.",
+   "chunks": [
+    "Please make sure",
+    "that all documents",
+    "are signed",
+    "before the meeting."
+   ],
+   "pid": "u08-make-sure",
+   "why": "make sure + that + S V.",
+   "dist": "to be"
+  },
+  {
+   "vi": "Hai công ty đã đạt được thỏa thuận về giá.",
+   "chunks": [
+    "Both companies",
+    "reached",
+    "an agreement",
+    "on the price."
+   ],
+   "pid": "u08-reach-agreement",
+   "why": "reach an agreement on + O.",
+   "dist": "made to"
+  }
+ ],
+ "translate": [
+  {
+   "en": "Customers who place an order before Friday can take advantage of a ten percent discount on all office furniture.",
+   "vi": "Khách hàng đặt hàng trước thứ Sáu có thể tận dụng ưu đãi giảm 10% cho tất cả đồ nội thất văn phòng.",
+   "chunks": [
+    {
+     "t": "Customers",
+     "r": "S",
+     "vi": "khách hàng"
+    },
+    {
+     "t": "who place an order before Friday",
+     "r": "mệnh đề",
+     "vi": "đặt hàng trước thứ Sáu",
+     "k": true
+    },
+    {
+     "t": "can take advantage of",
+     "r": "V",
+     "vi": "có thể tận dụng",
+     "k": true
+    },
+    {
+     "t": "a ten percent discount",
+     "r": "O-vật",
+     "vi": "ưu đãi giảm 10%",
+     "k": true
+    },
+    {
+     "t": "on all office furniture.",
+     "r": "giới từ + O",
+     "vi": "cho tất cả đồ nội thất văn phòng"
+    }
+   ],
+   "note": "\"who place an order before Friday\" là mệnh đề bổ nghĩa cho Customers: dịch ngay sau \"khách hàng\". take advantage of = tận dụng; place an order = đặt hàng.",
+   "pid": "u08-take-advantage",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "en": "Before making a final decision, the committee will take the budget limits into account and hold a meeting with all department heads.",
+   "vi": "Trước khi đưa ra quyết định cuối cùng, ủy ban sẽ cân nhắc các giới hạn ngân sách và tổ chức cuộc họp với tất cả trưởng phòng.",
+   "chunks": [
+    {
+     "t": "Before making a final decision,",
+     "r": "mệnh đề",
+     "vi": "trước khi đưa ra quyết định cuối cùng",
+     "k": true
+    },
+    {
+     "t": "the committee",
+     "r": "S",
+     "vi": "ủy ban"
+    },
+    {
+     "t": "will take",
+     "r": "V",
+     "vi": "sẽ",
+     "k": true
+    },
+    {
+     "t": "the budget limits",
+     "r": "O-vật",
+     "vi": "các giới hạn ngân sách",
+     "k": true
+    },
+    {
+     "t": "into account",
+     "r": "giới từ + O",
+     "vi": "cân nhắc",
+     "k": true
+    },
+    {
+     "t": "and hold a meeting",
+     "r": "V",
+     "vi": "và tổ chức cuộc họp",
+     "k": true
+    },
+    {
+     "t": "with all department heads.",
+     "r": "giới từ + O",
+     "vi": "với tất cả trưởng phòng"
+    }
+   ],
+   "note": "take sth into account: \"will take + O + into account\" dịch thành \"sẽ cân nhắc + O\" (đảo into account lên trước O). make a decision = đưa ra quyết định; hold a meeting = tổ chức cuộc họp.",
+   "pid": "u08-take-into-account",
+   "viOrder": [
+    0,
+    1,
+    2,
+    4,
+    3,
+    5,
+    6
+   ],
+   "viOpts": [
+    "Sau khi đưa ra quyết định cuối cùng, ủy ban sẽ tính đến ngân sách và họp với các trưởng phòng.",
+    "Trước khi đưa ra quyết định cuối cùng, ủy ban sẽ cân nhắc các giới hạn ngân sách và tổ chức cuộc họp với tất cả trưởng phòng.",
+    "Trước khi ra quyết định, ủy ban sẽ không tính đến ngân sách mà chỉ họp với các trưởng phòng."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "Employees who have access to the customer database must pay attention to protecting personal information.",
+   "vi": "Nhân viên có quyền truy cập cơ sở dữ liệu khách hàng phải chú ý đến việc bảo vệ thông tin cá nhân.",
+   "chunks": [
+    {
+     "t": "Employees",
+     "r": "S",
+     "vi": "nhân viên"
+    },
+    {
+     "t": "who have access to",
+     "r": "mệnh đề",
+     "vi": "có quyền truy cập",
+     "k": true
+    },
+    {
+     "t": "the customer database",
+     "r": "O-vật",
+     "vi": "cơ sở dữ liệu khách hàng",
+     "k": true
+    },
+    {
+     "t": "must pay attention to",
+     "r": "V",
+     "vi": "phải chú ý đến",
+     "k": true
+    },
+    {
+     "t": "protecting personal information.",
+     "r": "V-ing",
+     "vi": "việc bảo vệ thông tin cá nhân",
+     "k": true
+    }
+   ],
+   "note": "have access to = có quyền truy cập; pay attention to + V-ing (to là giới từ). \"who have access to…\" đứng ngay sau Employees nên dịch như phần bổ nghĩa: nhân viên có quyền truy cập….",
+   "pid": "u08-have-access",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "en": "Although both companies hope to reach an agreement by the end of June, they have not yet made arrangements for a joint press conference.",
+   "vi": "Mặc dù cả hai công ty hy vọng đạt được thỏa thuận trước cuối tháng Sáu, họ vẫn chưa sắp xếp một buổi họp báo chung.",
+   "chunks": [
+    {
+     "t": "Although both companies hope",
+     "r": "mệnh đề",
+     "vi": "mặc dù cả hai công ty hy vọng"
+    },
+    {
+     "t": "to reach an agreement",
+     "r": "to V",
+     "vi": "đạt được thỏa thuận",
+     "k": true
+    },
+    {
+     "t": "by the end of June,",
+     "r": "trạng ngữ",
+     "vi": "trước cuối tháng Sáu"
+    },
+    {
+     "t": "they",
+     "r": "S",
+     "vi": "họ"
+    },
+    {
+     "t": "have not yet made arrangements",
+     "r": "V",
+     "vi": "vẫn chưa sắp xếp",
+     "k": true
+    },
+    {
+     "t": "for a joint press conference.",
+     "r": "giới từ + O",
+     "vi": "một buổi họp báo chung",
+     "k": true
+    }
+   ],
+   "note": "reach an agreement = đạt được thỏa thuận; make arrangements for sth = thu xếp, sắp xếp cho việc gì. \"have not yet\" = vẫn chưa.",
+   "pid": "u08-reach-agreement",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Customers who are not satisfied with the repair can file a complaint with the service center within thirty days.",
+   "vi": "Khách hàng không hài lòng với việc sửa chữa có thể nộp đơn khiếu nại lên trung tâm dịch vụ trong vòng ba mươi ngày.",
+   "chunks": [
+    {
+     "t": "Customers",
+     "r": "S",
+     "vi": "khách hàng"
+    },
+    {
+     "t": "who are not satisfied with the repair",
+     "r": "mệnh đề",
+     "vi": "không hài lòng với việc sửa chữa"
+    },
+    {
+     "t": "can file a complaint",
+     "r": "V",
+     "vi": "có thể nộp đơn khiếu nại",
+     "k": true
+    },
+    {
+     "t": "with the service center",
+     "r": "giới từ + O",
+     "vi": "lên trung tâm dịch vụ",
+     "k": true
+    },
+    {
+     "t": "within thirty days.",
+     "r": "trạng ngữ",
+     "vi": "trong vòng ba mươi ngày"
+    }
+   ],
+   "note": "file a complaint with + nơi tiếp nhận = nộp đơn khiếu nại lên/đến. Mệnh đề \"who are not satisfied…\" bổ nghĩa cho Customers.",
+   "pid": "u08-file-complaint",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ],
+   "viOpts": [
+    "Khách hàng không hài lòng với việc sửa chữa có thể nộp đơn khiếu nại lên trung tâm dịch vụ trong vòng ba mươi ngày.",
+    "Trung tâm dịch vụ có thể khiếu nại với khách hàng không hài lòng trong vòng ba mươi ngày.",
+    "Khách hàng phải sửa chữa trong ba mươi ngày rồi mới được phàn nàn với trung tâm dịch vụ."
+   ],
+   "viAns": 0
+  },
+  {
+   "en": "Since we do business with suppliers in several countries, we make sure that every shipment meets local requirements.",
+   "vi": "Vì chúng tôi làm ăn với các nhà cung cấp ở nhiều quốc gia, chúng tôi luôn đảm bảo rằng mỗi lô hàng đáp ứng các yêu cầu của địa phương.",
+   "chunks": [
+    {
+     "t": "Since we do business",
+     "r": "mệnh đề",
+     "vi": "vì chúng tôi làm ăn",
+     "k": true
+    },
+    {
+     "t": "with suppliers in several countries,",
+     "r": "giới từ + O",
+     "vi": "với các nhà cung cấp ở nhiều quốc gia",
+     "k": true
+    },
+    {
+     "t": "we",
+     "r": "S",
+     "vi": "chúng tôi"
+    },
+    {
+     "t": "make sure",
+     "r": "V",
+     "vi": "luôn đảm bảo",
+     "k": true
+    },
+    {
+     "t": "that every shipment",
+     "r": "mệnh đề",
+     "vi": "rằng mỗi lô hàng",
+     "k": true
+    },
+    {
+     "t": "meets",
+     "r": "V",
+     "vi": "đáp ứng",
+     "k": true
+    },
+    {
+     "t": "local requirements.",
+     "r": "O-vật",
+     "vi": "các yêu cầu của địa phương",
+     "k": true
+    }
+   ],
+   "note": "do business with = làm ăn với; make sure that S V = đảm bảo rằng; meet requirements = đáp ứng yêu cầu. Since ở đây nghĩa \"vì\" (nguyên nhân).",
+   "pid": "u08-do-business",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ ]
+}

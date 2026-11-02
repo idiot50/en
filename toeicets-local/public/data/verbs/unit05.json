@@ -1,0 +1,2247 @@
+{
+ "unit": 5,
+ "title": "Động từ KHÔNG cần giới từ & V + giới từ (1)",
+ "icon": "🧭",
+ "intro": "Nhóm động từ này hay thi nhất vì người Việt dịch từng chữ nên thêm hoặc thiếu giới từ. Có hai nhóm: (1) động từ đi THẲNG với tân ngữ, tuyệt đối không giới từ (discuss, contact, attend, reach, enter, mention...); (2) động từ luôn cần một giới từ cố định (apply for, comply with, respond to, depend on...). Mẹo: học cả cụm 'động từ + giới từ' như một khối, và nhớ nhóm không giới từ là những chữ dịch tiếng Việt có 'về / với / vào' mà tiếng Anh KHÔNG có.",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "discuss / contact / attend / reach / enter / mention + O",
+   "discuss the budget",
+   "thảo luận ngân sách (KHÔNG 'discuss about')"
+  ],
+  [
+   "join / emphasize / address / approve + O",
+   "approve the proposal",
+   "phê duyệt đề xuất (không giới từ)"
+  ],
+  [
+   "apply for / qualify for / account for + O",
+   "apply for a job",
+   "ứng tuyển, đủ điều kiện, chiếm..."
+  ],
+  [
+   "comply with / deal with / adhere to + O",
+   "comply with the rules",
+   "tuân thủ quy định; xử lý vấn đề"
+  ],
+  [
+   "respond to / refer to / depend on + N; contribute to / focus on + N / V-ing",
+   "focus on improving",
+   "phản hồi, tham khảo, góp phần, phụ thuộc, tập trung"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u05-discuss",
+   "p": "discuss sth (with sb)",
+   "form": "discuss + O (KHÔNG có giới từ)",
+   "vi": "thảo luận về cái gì",
+   "note": "Bẫy: KHÔNG nói 'discuss about'. Tiếng Việt có chữ 'về' nên hay thêm about. Muốn dùng about thì đổi sang danh từ: have a discussion about sth.",
+   "core": true,
+   "vs": "talk about sth = nói về (có about); discuss sth = thảo luận (không about)",
+   "ex": [
+    {
+     "en": "The board will discuss the merger on Monday.",
+     "vi": "Ban giám đốc sẽ thảo luận về vụ sáp nhập vào thứ Hai.",
+     "chunks": [
+      {
+       "t": "The board",
+       "r": "S",
+       "vi": "ban giám đốc"
+      },
+      {
+       "t": "will discuss",
+       "r": "V",
+       "vi": "sẽ thảo luận",
+       "k": true
+      },
+      {
+       "t": "the merger",
+       "r": "O",
+       "vi": "về vụ sáp nhập",
+       "k": true
+      },
+      {
+       "t": "on Monday.",
+       "r": "trạng ngữ",
+       "vi": "vào thứ Hai."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Ms. Lee discussed the new policy with her staff.",
+     "vi": "Cô Lee đã thảo luận chính sách mới với nhân viên của cô ấy.",
+     "chunks": [
+      {
+       "t": "Ms. Lee",
+       "r": "S",
+       "vi": "cô Lee"
+      },
+      {
+       "t": "discussed",
+       "r": "V",
+       "vi": "đã thảo luận",
+       "k": true
+      },
+      {
+       "t": "the new policy",
+       "r": "O",
+       "vi": "chính sách mới",
+       "k": true
+      },
+      {
+       "t": "with her staff.",
+       "r": "giới từ + O",
+       "vi": "với nhân viên của cô ấy."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-contact",
+   "p": "contact sb",
+   "form": "contact + O (KHÔNG có giới từ)",
+   "vi": "liên hệ với ai",
+   "pass": "sb be contacted by e-mail/phone",
+   "note": "Bẫy: KHÔNG nói 'contact with/to sb'. Tiếng Việt là 'liên hệ VỚI' nên hay thêm with. Chỉ danh từ mới đi với with: be in contact with sb.",
+   "core": true,
+   "vs": "be in contact with sb = giữ liên lạc với ai (danh từ, có with)",
+   "ex": [
+    {
+     "en": "Please contact our customer service department for a refund.",
+     "vi": "Vui lòng liên hệ bộ phận chăm sóc khách hàng của chúng tôi để được hoàn tiền.",
+     "chunks": [
+      {
+       "t": "Please contact",
+       "r": "V",
+       "vi": "vui lòng liên hệ",
+       "k": true
+      },
+      {
+       "t": "our customer service department",
+       "r": "O",
+       "vi": "bộ phận chăm sóc khách hàng của chúng tôi",
+       "k": true
+      },
+      {
+       "t": "for a refund.",
+       "r": "trạng ngữ",
+       "vi": "để được hoàn tiền."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Mr. Tanaka contacted the supplier about the delayed shipment.",
+     "vi": "Ông Tanaka đã liên hệ nhà cung cấp về lô hàng bị trễ.",
+     "chunks": [
+      {
+       "t": "Mr. Tanaka",
+       "r": "S",
+       "vi": "ông Tanaka"
+      },
+      {
+       "t": "contacted",
+       "r": "V",
+       "vi": "đã liên hệ",
+       "k": true
+      },
+      {
+       "t": "the supplier",
+       "r": "O",
+       "vi": "nhà cung cấp",
+       "k": true
+      },
+      {
+       "t": "about the delayed shipment.",
+       "r": "giới từ + O",
+       "vi": "về lô hàng bị trễ."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-attend",
+   "p": "attend sth",
+   "form": "attend + O (KHÔNG có giới từ)",
+   "vi": "tham dự (họp, sự kiện, khóa học)",
+   "note": "Bẫy: KHÔNG nói 'attend to/at the meeting'. 'attend' (tham dự) đi thẳng với tân ngữ.",
+   "core": true,
+   "vs": "attend TO sth = xử lý, chú ý giải quyết (trang trọng): attend to a complaint",
+   "ex": [
+    {
+     "en": "More than 300 people attended the annual conference in Seoul.",
+     "vi": "Hơn 300 người đã tham dự hội nghị thường niên ở Seoul.",
+     "chunks": [
+      {
+       "t": "More than 300 people",
+       "r": "S",
+       "vi": "hơn 300 người"
+      },
+      {
+       "t": "attended",
+       "r": "V",
+       "vi": "đã tham dự",
+       "k": true
+      },
+      {
+       "t": "the annual conference",
+       "r": "O",
+       "vi": "hội nghị thường niên",
+       "k": true
+      },
+      {
+       "t": "in Seoul.",
+       "r": "giới từ + O",
+       "vi": "ở Seoul."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Several executives will attend the product launch next week.",
+     "vi": "Một số giám đốc điều hành sẽ tham dự buổi ra mắt sản phẩm vào tuần tới.",
+     "chunks": [
+      {
+       "t": "Several executives",
+       "r": "S",
+       "vi": "một số giám đốc điều hành"
+      },
+      {
+       "t": "will attend",
+       "r": "V",
+       "vi": "sẽ tham dự",
+       "k": true
+      },
+      {
+       "t": "the product launch",
+       "r": "O",
+       "vi": "buổi ra mắt sản phẩm",
+       "k": true
+      },
+      {
+       "t": "next week.",
+       "r": "trạng ngữ",
+       "vi": "vào tuần tới."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-reach",
+   "p": "reach sth",
+   "form": "reach + O (KHÔNG có giới từ)",
+   "vi": "đến, đạt tới; liên lạc được với ai",
+   "note": "Bẫy: KHÔNG nói 'reach to'. reach = đến nơi / đạt mức / liên lạc được. Nhớ cụm reach an agreement, reach a target.",
+   "vs": "arrive AT/IN + nơi chốn = đến (cần giới từ); reach + nơi chốn (không giới từ)",
+   "ex": [
+    {
+     "en": "The delegation reached the airport at noon.",
+     "vi": "Đoàn đại biểu đã đến sân bay vào buổi trưa.",
+     "chunks": [
+      {
+       "t": "The delegation",
+       "r": "S",
+       "vi": "đoàn đại biểu"
+      },
+      {
+       "t": "reached",
+       "r": "V",
+       "vi": "đã đến",
+       "k": true
+      },
+      {
+       "t": "the airport",
+       "r": "O",
+       "vi": "sân bay",
+       "k": true
+      },
+      {
+       "t": "at noon.",
+       "r": "trạng ngữ",
+       "vi": "vào buổi trưa."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Sales reached a record high in the third quarter.",
+     "vi": "Doanh số đạt mức cao kỷ lục trong quý ba.",
+     "chunks": [
+      {
+       "t": "Sales",
+       "r": "S",
+       "vi": "doanh số"
+      },
+      {
+       "t": "reached",
+       "r": "V",
+       "vi": "đạt",
+       "k": true
+      },
+      {
+       "t": "a record high",
+       "r": "O",
+       "vi": "mức cao kỷ lục",
+       "k": true
+      },
+      {
+       "t": "in the third quarter.",
+       "r": "trạng ngữ",
+       "vi": "trong quý ba."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-enter",
+   "p": "enter sth",
+   "form": "enter + O (KHÔNG có giới từ)",
+   "vi": "đi vào; nhập (dữ liệu) vào",
+   "note": "Bẫy: KHÔNG nói 'enter into the room'. 'enter into' chỉ dùng cho thỏa thuận: enter into an agreement/contract (bước vào, ký kết).",
+   "vs": "enter INTO an agreement = ký kết thỏa thuận",
+   "ex": [
+    {
+     "en": "Visitors must enter the building through the main lobby.",
+     "vi": "Khách tham quan phải đi vào tòa nhà qua sảnh chính.",
+     "chunks": [
+      {
+       "t": "Visitors",
+       "r": "S",
+       "vi": "khách tham quan"
+      },
+      {
+       "t": "must enter",
+       "r": "V",
+       "vi": "phải đi vào",
+       "k": true
+      },
+      {
+       "t": "the building",
+       "r": "O",
+       "vi": "tòa nhà",
+       "k": true
+      },
+      {
+       "t": "through the main lobby.",
+       "r": "giới từ + O",
+       "vi": "qua sảnh chính."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Please enter your password to access the system.",
+     "vi": "Vui lòng nhập mật khẩu để truy cập hệ thống.",
+     "chunks": [
+      {
+       "t": "Please enter",
+       "r": "V",
+       "vi": "vui lòng nhập",
+       "k": true
+      },
+      {
+       "t": "your password",
+       "r": "O",
+       "vi": "mật khẩu của bạn",
+       "k": true
+      },
+      {
+       "t": "to access the system.",
+       "r": "to V",
+       "vi": "để truy cập hệ thống."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-mention",
+   "p": "mention sth",
+   "form": "mention + O (KHÔNG có giới từ)",
+   "vi": "đề cập đến, nhắc đến cái gì",
+   "note": "Bẫy: KHÔNG nói 'mention about'. Tiếng Việt 'đề cập ĐẾN' khiến hay thêm giới từ. Có thể thêm 'to sb' để chỉ người nghe: mention the problem to the manager.",
+   "vs": "talk about / refer to sth = có giới từ; mention sth = không",
+   "ex": [
+    {
+     "en": "The CEO mentioned the possibility of opening a new branch.",
+     "vi": "Giám đốc điều hành đã đề cập khả năng mở thêm một chi nhánh mới.",
+     "chunks": [
+      {
+       "t": "The CEO",
+       "r": "S",
+       "vi": "giám đốc điều hành"
+      },
+      {
+       "t": "mentioned",
+       "r": "V",
+       "vi": "đã đề cập",
+       "k": true
+      },
+      {
+       "t": "the possibility",
+       "r": "O",
+       "vi": "khả năng",
+       "k": true
+      },
+      {
+       "t": "of opening a new branch.",
+       "r": "giới từ + O",
+       "vi": "mở thêm một chi nhánh mới."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Her e-mail did not mention the change in delivery dates.",
+     "vi": "E-mail của cô ấy không đề cập đến sự thay đổi ngày giao hàng.",
+     "chunks": [
+      {
+       "t": "Her e-mail",
+       "r": "S",
+       "vi": "e-mail của cô ấy"
+      },
+      {
+       "t": "did not mention",
+       "r": "V",
+       "vi": "không đề cập",
+       "k": true
+      },
+      {
+       "t": "the change",
+       "r": "O",
+       "vi": "sự thay đổi",
+       "k": true
+      },
+      {
+       "t": "in delivery dates.",
+       "r": "giới từ + O",
+       "vi": "ngày giao hàng."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-join",
+   "p": "join sth / join sb",
+   "form": "join + O (KHÔNG có giới từ)",
+   "vi": "gia nhập, tham gia (một tổ chức, nhóm); cùng làm với ai",
+   "note": "Bẫy: KHÔNG nói 'join to/in the company'. join + tổ chức/nhóm/người. 'join in' chỉ dùng khi hòa vào một hoạt động đang diễn ra.",
+   "vs": "participate IN sth = tham gia vào hoạt động (có in, xem Bài 6)",
+   "ex": [
+    {
+     "en": "Ms. Park joined the marketing department in March.",
+     "vi": "Cô Park đã gia nhập phòng tiếp thị vào tháng Ba.",
+     "chunks": [
+      {
+       "t": "Ms. Park",
+       "r": "S",
+       "vi": "cô Park"
+      },
+      {
+       "t": "joined",
+       "r": "V",
+       "vi": "đã gia nhập",
+       "k": true
+      },
+      {
+       "t": "the marketing department",
+       "r": "O",
+       "vi": "phòng tiếp thị",
+       "k": true
+      },
+      {
+       "t": "in March.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng Ba."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Please join us for a reception after the ceremony.",
+     "vi": "Mời quý vị cùng chúng tôi dự buổi chiêu đãi sau buổi lễ.",
+     "chunks": [
+      {
+       "t": "Please join",
+       "r": "V",
+       "vi": "mời quý vị cùng",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O-người",
+       "vi": "chúng tôi",
+       "k": true
+      },
+      {
+       "t": "for a reception",
+       "r": "giới từ + O",
+       "vi": "dự buổi chiêu đãi"
+      },
+      {
+       "t": "after the ceremony.",
+       "r": "trạng ngữ",
+       "vi": "sau buổi lễ."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-emphasize",
+   "p": "emphasize sth",
+   "form": "emphasize + O / that-clause (KHÔNG giới từ)",
+   "vi": "nhấn mạnh cái gì",
+   "note": "Bẫy: KHÔNG nói 'emphasize on'. Danh từ mới dùng on: place/put emphasis ON sth. Đồng nghĩa: stress, highlight, underline (đều không giới từ).",
+   "vs": "place emphasis ON sth (danh từ) = đặt trọng tâm vào",
+   "ex": [
+    {
+     "en": "The speaker emphasized the importance of customer feedback.",
+     "vi": "Diễn giả đã nhấn mạnh tầm quan trọng của phản hồi khách hàng.",
+     "chunks": [
+      {
+       "t": "The speaker",
+       "r": "S",
+       "vi": "diễn giả"
+      },
+      {
+       "t": "emphasized",
+       "r": "V",
+       "vi": "đã nhấn mạnh",
+       "k": true
+      },
+      {
+       "t": "the importance",
+       "r": "O",
+       "vi": "tầm quan trọng",
+       "k": true
+      },
+      {
+       "t": "of customer feedback.",
+       "r": "giới từ + O",
+       "vi": "của phản hồi khách hàng."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The report emphasizes that costs must be reduced.",
+     "vi": "Bản báo cáo nhấn mạnh rằng chi phí phải được cắt giảm.",
+     "chunks": [
+      {
+       "t": "The report",
+       "r": "S",
+       "vi": "bản báo cáo"
+      },
+      {
+       "t": "emphasizes",
+       "r": "V",
+       "vi": "nhấn mạnh",
+       "k": true
+      },
+      {
+       "t": "that costs must be reduced.",
+       "r": "mệnh đề",
+       "vi": "rằng chi phí phải được cắt giảm."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-address",
+   "p": "address an issue/problem",
+   "form": "address + O (KHÔNG có giới từ)",
+   "vi": "giải quyết, xử lý (vấn đề); đề cập",
+   "alt": "= deal with / tackle an issue",
+   "note": "Bẫy: KHÔNG nói 'address to the issue'. address = xử lý một vấn đề. 'address' còn có nghĩa gửi thư: address a letter TO sb / be addressed to sb.",
+   "vs": "be addressed TO sb = (thư) gửi cho ai",
+   "ex": [
+    {
+     "en": "The new manager promptly addressed the staffing shortage.",
+     "vi": "Quản lý mới đã nhanh chóng giải quyết tình trạng thiếu nhân sự.",
+     "chunks": [
+      {
+       "t": "The new manager",
+       "r": "S",
+       "vi": "quản lý mới"
+      },
+      {
+       "t": "promptly addressed",
+       "r": "V",
+       "vi": "đã nhanh chóng giải quyết",
+       "k": true
+      },
+      {
+       "t": "the staffing shortage.",
+       "r": "O",
+       "vi": "tình trạng thiếu nhân sự.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "We will address your concerns at tomorrow's meeting.",
+     "vi": "Chúng tôi sẽ giải đáp những lo ngại của quý vị tại cuộc họp ngày mai.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "will address",
+       "r": "V",
+       "vi": "sẽ giải đáp",
+       "k": true
+      },
+      {
+       "t": "your concerns",
+       "r": "O",
+       "vi": "những lo ngại của quý vị",
+       "k": true
+      },
+      {
+       "t": "at tomorrow's meeting.",
+       "r": "trạng ngữ",
+       "vi": "tại cuộc họp ngày mai."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-approve",
+   "p": "approve sth",
+   "form": "approve + O (KHÔNG có giới từ)",
+   "vi": "phê duyệt cái gì",
+   "pass": "sth be approved by sb",
+   "note": "Bẫy: approve sth = phê duyệt (chính thức) – không giới từ. 'approve of sth' lại là tán thành, đồng tình về quan điểm (ít gặp trong TOEIC). Hay đi với: approve a budget/a proposal/a request.",
+   "vs": "approve OF sth = tán thành (ý kiến), không phải phê duyệt",
+   "ex": [
+    {
+     "en": "The committee approved the proposed budget on Tuesday.",
+     "vi": "Ủy ban đã phê duyệt ngân sách đề xuất vào thứ Ba.",
+     "chunks": [
+      {
+       "t": "The committee",
+       "r": "S",
+       "vi": "ủy ban"
+      },
+      {
+       "t": "approved",
+       "r": "V",
+       "vi": "đã phê duyệt",
+       "k": true
+      },
+      {
+       "t": "the proposed budget",
+       "r": "O",
+       "vi": "ngân sách đề xuất",
+       "k": true
+      },
+      {
+       "t": "on Tuesday.",
+       "r": "trạng ngữ",
+       "vi": "vào thứ Ba."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The plan must be approved by the director before work begins.",
+     "vi": "Kế hoạch phải được giám đốc phê duyệt trước khi công việc bắt đầu.",
+     "chunks": [
+      {
+       "t": "The plan",
+       "r": "S",
+       "vi": "kế hoạch"
+      },
+      {
+       "t": "must be approved by the director",
+       "r": "V",
+       "vi": "phải được giám đốc phê duyệt",
+       "k": true
+      },
+      {
+       "t": "before work begins.",
+       "r": "mệnh đề",
+       "vi": "trước khi công việc bắt đầu."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-apply",
+   "p": "apply for sth",
+   "form": "apply + for + O",
+   "vi": "ứng tuyển, xin (việc làm, giấy phép, khoản vay)",
+   "alt": "apply to + nơi nộp đơn: apply to the company for a job",
+   "note": "for + thứ mình xin; to + nơi nộp đơn. Danh từ: an application for a job. Bẫy: apply sth to sth = áp dụng.",
+   "core": true,
+   "vs": "apply sth TO sth = áp dụng cái gì vào cái gì",
+   "ex": [
+    {
+     "en": "Several candidates applied for the sales manager position.",
+     "vi": "Vài ứng viên đã ứng tuyển vị trí trưởng phòng kinh doanh.",
+     "chunks": [
+      {
+       "t": "Several candidates",
+       "r": "S",
+       "vi": "vài ứng viên"
+      },
+      {
+       "t": "applied for",
+       "r": "V",
+       "vi": "đã ứng tuyển",
+       "k": true
+      },
+      {
+       "t": "the sales manager position.",
+       "r": "O",
+       "vi": "vị trí trưởng phòng kinh doanh.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "You can apply for a refund within thirty days.",
+     "vi": "Quý khách có thể xin hoàn tiền trong vòng ba mươi ngày.",
+     "chunks": [
+      {
+       "t": "You",
+       "r": "S",
+       "vi": "quý khách"
+      },
+      {
+       "t": "can apply for",
+       "r": "V",
+       "vi": "có thể xin",
+       "k": true
+      },
+      {
+       "t": "a refund",
+       "r": "O",
+       "vi": "hoàn tiền",
+       "k": true
+      },
+      {
+       "t": "within thirty days.",
+       "r": "trạng ngữ",
+       "vi": "trong vòng ba mươi ngày."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-account",
+   "p": "account for sth",
+   "form": "account + for + O",
+   "vi": "chiếm (tỷ lệ); giải thích, chịu trách nhiệm giải trình",
+   "note": "Nghĩa hay gặp nhất là 'chiếm': account for 40% of sales. Nghĩa thứ hai: giải trình, lý giải. Không dùng 'account' trực tiếp + tân ngữ.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Online sales accounted for 40 percent of total revenue.",
+     "vi": "Doanh số trực tuyến chiếm 40% tổng doanh thu.",
+     "chunks": [
+      {
+       "t": "Online sales",
+       "r": "S",
+       "vi": "doanh số trực tuyến"
+      },
+      {
+       "t": "accounted for",
+       "r": "V",
+       "vi": "chiếm",
+       "k": true
+      },
+      {
+       "t": "40 percent",
+       "r": "O",
+       "vi": "40%",
+       "k": true
+      },
+      {
+       "t": "of total revenue.",
+       "r": "giới từ + O",
+       "vi": "tổng doanh thu."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The finance director must account for every expense in the report.",
+     "vi": "Giám đốc tài chính phải giải trình mọi khoản chi trong báo cáo.",
+     "chunks": [
+      {
+       "t": "The finance director",
+       "r": "S",
+       "vi": "giám đốc tài chính"
+      },
+      {
+       "t": "must account for",
+       "r": "V",
+       "vi": "phải giải trình",
+       "k": true
+      },
+      {
+       "t": "every expense",
+       "r": "O",
+       "vi": "mọi khoản chi",
+       "k": true
+      },
+      {
+       "t": "in the report.",
+       "r": "giới từ + O",
+       "vi": "trong báo cáo."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-comply",
+   "p": "comply with sth",
+   "form": "comply + with + O",
+   "vi": "tuân thủ (quy định, tiêu chuẩn)",
+   "alt": "= adhere to / conform to sth; in compliance with",
+   "note": "Bẫy: KHÔNG nói 'comply the rules'. Luôn có with. Danh từ: compliance with.",
+   "core": true,
+   "ex": [
+    {
+     "en": "All suppliers must comply with the safety regulations.",
+     "vi": "Tất cả nhà cung cấp phải tuân thủ các quy định an toàn.",
+     "chunks": [
+      {
+       "t": "All suppliers",
+       "r": "S",
+       "vi": "tất cả nhà cung cấp"
+      },
+      {
+       "t": "must comply with",
+       "r": "V",
+       "vi": "phải tuân thủ",
+       "k": true
+      },
+      {
+       "t": "the safety regulations.",
+       "r": "O",
+       "vi": "các quy định an toàn.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The factory failed to comply with environmental standards.",
+     "vi": "Nhà máy đã không tuân thủ các tiêu chuẩn môi trường.",
+     "chunks": [
+      {
+       "t": "The factory",
+       "r": "S",
+       "vi": "nhà máy"
+      },
+      {
+       "t": "failed",
+       "r": "V",
+       "vi": "đã không"
+      },
+      {
+       "t": "to comply with",
+       "r": "to V",
+       "vi": "tuân thủ",
+       "k": true
+      },
+      {
+       "t": "environmental standards.",
+       "r": "O",
+       "vi": "các tiêu chuẩn môi trường.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-deal",
+   "p": "deal with sth / sb",
+   "form": "deal + with + O",
+   "vi": "giải quyết, xử lý; làm ăn, giao dịch với",
+   "note": "Bẫy: KHÔNG nói 'deal the problem'. deal with a problem/complaint/customer. Cụm: deal with sb = giao dịch với ai.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Our team deals with customer complaints every day.",
+     "vi": "Đội của chúng tôi xử lý các khiếu nại của khách hàng hằng ngày.",
+     "chunks": [
+      {
+       "t": "Our team",
+       "r": "S",
+       "vi": "đội của chúng tôi"
+      },
+      {
+       "t": "deals with",
+       "r": "V",
+       "vi": "xử lý",
+       "k": true
+      },
+      {
+       "t": "customer complaints",
+       "r": "O",
+       "vi": "các khiếu nại của khách hàng",
+       "k": true
+      },
+      {
+       "t": "every day.",
+       "r": "trạng ngữ",
+       "vi": "hằng ngày."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The company deals with suppliers in more than ten countries.",
+     "vi": "Công ty giao dịch với các nhà cung cấp ở hơn mười quốc gia.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "deals with",
+       "r": "V",
+       "vi": "giao dịch với",
+       "k": true
+      },
+      {
+       "t": "suppliers",
+       "r": "O",
+       "vi": "các nhà cung cấp",
+       "k": true
+      },
+      {
+       "t": "in more than ten countries.",
+       "r": "giới từ + O",
+       "vi": "ở hơn mười quốc gia."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-respond",
+   "p": "respond to sth",
+   "form": "respond + to + O",
+   "vi": "phản hồi, trả lời, đáp lại",
+   "alt": "= reply to sth",
+   "note": "Bẫy: KHÔNG nói 'respond the e-mail'. Danh từ: a response TO sth.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Please respond to this e-mail by Thursday.",
+     "vi": "Vui lòng phản hồi e-mail này trước thứ Năm.",
+     "chunks": [
+      {
+       "t": "Please respond to",
+       "r": "V",
+       "vi": "vui lòng phản hồi",
+       "k": true
+      },
+      {
+       "t": "this e-mail",
+       "r": "O",
+       "vi": "e-mail này",
+       "k": true
+      },
+      {
+       "t": "by Thursday.",
+       "r": "trạng ngữ",
+       "vi": "trước thứ Năm."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The company responded to the complaints with a public apology.",
+     "vi": "Công ty đã phản hồi các khiếu nại bằng một lời xin lỗi công khai.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "responded to",
+       "r": "V",
+       "vi": "đã phản hồi",
+       "k": true
+      },
+      {
+       "t": "the complaints",
+       "r": "O",
+       "vi": "các khiếu nại",
+       "k": true
+      },
+      {
+       "t": "with a public apology.",
+       "r": "giới từ + O",
+       "vi": "bằng một lời xin lỗi công khai."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-refer",
+   "p": "refer to sth",
+   "form": "refer + to + O",
+   "vi": "tham khảo, xem; đề cập đến",
+   "alt": "refer sb to sth = hướng ai đến, giới thiệu ai đến",
+   "note": "Thư từ hay gặp: 'Please refer to the attached file' = vui lòng xem tệp đính kèm. Khác với mention (không giới từ).",
+   "vs": "mention sth = đề cập (không giới từ)",
+   "ex": [
+    {
+     "en": "Please refer to the attached document for more details.",
+     "vi": "Vui lòng xem tài liệu đính kèm để biết thêm chi tiết.",
+     "chunks": [
+      {
+       "t": "Please refer to",
+       "r": "V",
+       "vi": "vui lòng xem",
+       "k": true
+      },
+      {
+       "t": "the attached document",
+       "r": "O",
+       "vi": "tài liệu đính kèm",
+       "k": true
+      },
+      {
+       "t": "for more details.",
+       "r": "trạng ngữ",
+       "vi": "để biết thêm chi tiết."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The letter referred to a previous agreement.",
+     "vi": "Bức thư nhắc đến một thỏa thuận trước đó.",
+     "chunks": [
+      {
+       "t": "The letter",
+       "r": "S",
+       "vi": "bức thư"
+      },
+      {
+       "t": "referred to",
+       "r": "V",
+       "vi": "nhắc đến",
+       "k": true
+      },
+      {
+       "t": "a previous agreement.",
+       "r": "O",
+       "vi": "một thỏa thuận trước đó.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-contribute",
+   "p": "contribute to sth",
+   "form": "contribute + to + O / V-ing",
+   "vi": "góp phần vào; đóng góp cho",
+   "note": "to ở đây là GIỚI TỪ nên theo sau là danh từ hoặc V-ing: contribute to improving, không phải 'contribute to improve'. Cũng dùng: contribute sth to sth (đóng góp cái gì).",
+   "vs": "lead to / result in = dẫn đến (kết quả)",
+   "ex": [
+    {
+     "en": "Better training contributed to the increase in productivity.",
+     "vi": "Việc đào tạo tốt hơn đã góp phần làm tăng năng suất.",
+     "chunks": [
+      {
+       "t": "Better training",
+       "r": "S",
+       "vi": "việc đào tạo tốt hơn"
+      },
+      {
+       "t": "contributed to",
+       "r": "V",
+       "vi": "đã góp phần",
+       "k": true
+      },
+      {
+       "t": "the increase",
+       "r": "O",
+       "vi": "làm tăng",
+       "k": true
+      },
+      {
+       "t": "in productivity.",
+       "r": "giới từ + O",
+       "vi": "năng suất."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Employees contribute to improving the company's image.",
+     "vi": "Nhân viên góp phần cải thiện hình ảnh của công ty.",
+     "chunks": [
+      {
+       "t": "Employees",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "contribute to",
+       "r": "V",
+       "vi": "góp phần",
+       "k": true
+      },
+      {
+       "t": "improving",
+       "r": "V-ing",
+       "vi": "cải thiện",
+       "k": true
+      },
+      {
+       "t": "the company's image.",
+       "r": "O",
+       "vi": "hình ảnh của công ty."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-adhere",
+   "p": "adhere to sth",
+   "form": "adhere + to + O",
+   "vi": "tuân thủ, bám sát (quy tắc, kế hoạch)",
+   "alt": "= comply with / stick to sth",
+   "note": "adhere to + quy định, lịch trình, nguyên tắc. Trang trọng hơn follow. to là giới từ.",
+   "vs": "comply WITH sth (cùng nghĩa nhưng giới từ khác)",
+   "ex": [
+    {
+     "en": "Contractors must adhere to the project schedule.",
+     "vi": "Các nhà thầu phải tuân thủ lịch trình dự án.",
+     "chunks": [
+      {
+       "t": "Contractors",
+       "r": "S",
+       "vi": "các nhà thầu"
+      },
+      {
+       "t": "must adhere to",
+       "r": "V",
+       "vi": "phải tuân thủ",
+       "k": true
+      },
+      {
+       "t": "the project schedule.",
+       "r": "O",
+       "vi": "lịch trình dự án.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The firm adheres to strict quality guidelines.",
+     "vi": "Công ty tuân thủ các hướng dẫn chất lượng nghiêm ngặt.",
+     "chunks": [
+      {
+       "t": "The firm",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "adheres to",
+       "r": "V",
+       "vi": "tuân thủ",
+       "k": true
+      },
+      {
+       "t": "strict quality guidelines.",
+       "r": "O",
+       "vi": "các hướng dẫn chất lượng nghiêm ngặt.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-report",
+   "p": "report to sb",
+   "form": "report + to + O-người",
+   "vi": "trực thuộc, báo cáo cho (cấp trên)",
+   "note": "Nghĩa 'trực thuộc': the analyst reports to the director = nhà phân tích báo cáo cho giám đốc (giám đốc là cấp trên). Khác với report sth to sb = báo cáo việc gì cho ai.",
+   "vs": "report sth TO sb = báo cáo sự việc cho ai",
+   "ex": [
+    {
+     "en": "The new analyst will report to the finance director.",
+     "vi": "Nhà phân tích mới sẽ trực thuộc giám đốc tài chính.",
+     "chunks": [
+      {
+       "t": "The new analyst",
+       "r": "S",
+       "vi": "nhà phân tích mới"
+      },
+      {
+       "t": "will report to",
+       "r": "V",
+       "vi": "sẽ trực thuộc",
+       "k": true
+      },
+      {
+       "t": "the finance director.",
+       "r": "O-người",
+       "vi": "giám đốc tài chính.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Employees report directly to their department heads.",
+     "vi": "Nhân viên báo cáo trực tiếp cho trưởng phòng của họ.",
+     "chunks": [
+      {
+       "t": "Employees",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "report directly to",
+       "r": "V",
+       "vi": "báo cáo trực tiếp cho",
+       "k": true
+      },
+      {
+       "t": "their department heads.",
+       "r": "O-người",
+       "vi": "trưởng phòng của họ.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-depend",
+   "p": "depend / rely on sth",
+   "form": "depend / rely + on + O",
+   "vi": "phụ thuộc vào; dựa vào, trông cậy vào",
+   "alt": "depend on = rely on = count on",
+   "note": "Bẫy: KHÔNG nói 'depend of'. Có thể theo sau là danh từ, V-ing hoặc whether: depend on whether the permit is approved.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The success of the campaign depends on early customer feedback.",
+     "vi": "Thành công của chiến dịch phụ thuộc vào phản hồi sớm của khách hàng.",
+     "chunks": [
+      {
+       "t": "The success",
+       "r": "S",
+       "vi": "thành công"
+      },
+      {
+       "t": "of the campaign",
+       "r": "giới từ + O",
+       "vi": "của chiến dịch"
+      },
+      {
+       "t": "depends on",
+       "r": "V",
+       "vi": "phụ thuộc vào",
+       "k": true
+      },
+      {
+       "t": "early customer feedback.",
+       "r": "O",
+       "vi": "phản hồi sớm của khách hàng.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Many small firms rely on local suppliers.",
+     "vi": "Nhiều doanh nghiệp nhỏ dựa vào các nhà cung cấp địa phương.",
+     "chunks": [
+      {
+       "t": "Many small firms",
+       "r": "S",
+       "vi": "nhiều doanh nghiệp nhỏ"
+      },
+      {
+       "t": "rely on",
+       "r": "V",
+       "vi": "dựa vào",
+       "k": true
+      },
+      {
+       "t": "local suppliers.",
+       "r": "O",
+       "vi": "các nhà cung cấp địa phương.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-focus",
+   "p": "focus on sth / V-ing",
+   "form": "focus + on + O / V-ing",
+   "vi": "tập trung vào",
+   "note": "on là giới từ nên sau đó là danh từ hoặc V-ing: focus on improving, KHÔNG 'focus on to improve'. Danh từ: the focus of/on.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The company will focus on expanding overseas.",
+     "vi": "Công ty sẽ tập trung vào việc mở rộng ra nước ngoài.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "will focus on",
+       "r": "V",
+       "vi": "sẽ tập trung vào",
+       "k": true
+      },
+      {
+       "t": "expanding",
+       "r": "V-ing",
+       "vi": "việc mở rộng",
+       "k": true
+      },
+      {
+       "t": "overseas.",
+       "r": "trạng ngữ",
+       "vi": "ra nước ngoài."
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The workshop focuses on time management skills.",
+     "vi": "Buổi hội thảo tập trung vào kỹ năng quản lý thời gian.",
+     "chunks": [
+      {
+       "t": "The workshop",
+       "r": "S",
+       "vi": "buổi hội thảo"
+      },
+      {
+       "t": "focuses on",
+       "r": "V",
+       "vi": "tập trung vào",
+       "k": true
+      },
+      {
+       "t": "time management skills.",
+       "r": "O",
+       "vi": "kỹ năng quản lý thời gian.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u05-qualify",
+   "p": "qualify for sth",
+   "form": "qualify + for + O",
+   "vi": "đủ điều kiện (nhận), đủ tư cách",
+   "alt": "qualify to V / be eligible for sth",
+   "note": "qualify for + quyền lợi/ưu đãi: qualify for a discount, qualify for free shipping. Danh từ: qualification.",
+   "vs": "be eligible for sth (Bài 10) = có đủ điều kiện",
+   "ex": [
+    {
+     "en": "Customers who spend over $100 qualify for free delivery.",
+     "vi": "Khách chi tiêu trên 100 đô la đủ điều kiện được giao hàng miễn phí.",
+     "chunks": [
+      {
+       "t": "Customers who spend over $100",
+       "r": "S",
+       "vi": "khách chi tiêu trên 100 đô la"
+      },
+      {
+       "t": "qualify for",
+       "r": "V",
+       "vi": "đủ điều kiện nhận",
+       "k": true
+      },
+      {
+       "t": "free delivery.",
+       "r": "O",
+       "vi": "giao hàng miễn phí.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Part-time employees do not qualify for health insurance.",
+     "vi": "Nhân viên bán thời gian không đủ điều kiện nhận bảo hiểm y tế.",
+     "chunks": [
+      {
+       "t": "Part-time employees",
+       "r": "S",
+       "vi": "nhân viên bán thời gian"
+      },
+      {
+       "t": "do not qualify for",
+       "r": "V",
+       "vi": "không đủ điều kiện nhận",
+       "k": true
+      },
+      {
+       "t": "health insurance.",
+       "r": "O",
+       "vi": "bảo hiểm y tế.",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The directors will ------- the merger plan at tomorrow's meeting.",
+   "options": [
+    "discuss about",
+    "discuss",
+    "discuss on",
+    "discuss over"
+   ],
+   "ans": 1,
+   "type": "object",
+   "why": "discuss là ngoại động từ: discuss + tân ngữ, KHÔNG thêm about/on/over.",
+   "vi": "Các giám đốc sẽ thảo luận kế hoạch sáp nhập tại cuộc họp ngày mai.",
+   "pid": "u05-discuss"
+  },
+  {
+   "q": "Please ------- our office if you need further assistance.",
+   "options": [
+    "contact with",
+    "contact to",
+    "contact",
+    "contact for"
+   ],
+   "ans": 2,
+   "type": "object",
+   "why": "contact + O (không giới từ). 'contact with/to' là lỗi dịch từ 'liên hệ với'.",
+   "vi": "Vui lòng liên hệ văn phòng của chúng tôi nếu cần hỗ trợ thêm.",
+   "pid": "u05-contact"
+  },
+  {
+   "q": "More than 500 delegates ------- the trade fair last year.",
+   "options": [
+    "attended to",
+    "attended at",
+    "attended in",
+    "attended"
+   ],
+   "ans": 3,
+   "type": "word-choice",
+   "why": "attend (tham dự) không đi với giới từ. 'attend to' nghĩa là xử lý, không hợp ở đây.",
+   "vi": "Hơn 500 đại biểu đã tham dự hội chợ thương mại năm ngoái.",
+   "pid": "u05-attend"
+  },
+  {
+   "q": "Mr. Kim plans to apply ------- the senior engineer position next month.",
+   "options": [
+    "for",
+    "of",
+    "at",
+    "about"
+   ],
+   "ans": 0,
+   "type": "prep",
+   "why": "apply for + thứ mình xin (vị trí, việc làm, khoản vay). of/at/about không đi với apply theo nghĩa ứng tuyển; nơi nộp đơn mới dùng to (apply to a company).",
+   "vi": "Ông Kim dự định ứng tuyển vị trí kỹ sư cao cấp vào tháng sau.",
+   "pid": "u05-apply"
+  },
+  {
+   "q": "Restaurants must comply ------- the new food safety laws.",
+   "options": [
+    "to",
+    "for",
+    "with",
+    "by"
+   ],
+   "ans": 2,
+   "type": "prep",
+   "why": "comply with = tuân thủ (cố định). to/for/by đều sai.",
+   "vi": "Các nhà hàng phải tuân thủ luật an toàn thực phẩm mới.",
+   "pid": "u05-comply"
+  },
+  {
+   "q": "Our delivery time largely depends ------- the weather conditions.",
+   "options": [
+    "of",
+    "on",
+    "from",
+    "with"
+   ],
+   "ans": 1,
+   "type": "prep",
+   "why": "depend on = phụ thuộc vào. Không có 'depend of/from/with'.",
+   "vi": "Thời gian giao hàng của chúng tôi phần lớn phụ thuộc vào điều kiện thời tiết.",
+   "pid": "u05-depend"
+  },
+  {
+   "q": "Customer service agents must respond ------- inquiries within 24 hours.",
+   "options": [
+    "to",
+    "with",
+    "for",
+    "at"
+   ],
+   "ans": 0,
+   "type": "prep",
+   "why": "respond to = phản hồi, trả lời. Danh từ tương ứng: a response to.",
+   "vi": "Nhân viên chăm sóc khách hàng phải phản hồi các thắc mắc trong vòng 24 giờ.",
+   "pid": "u05-respond"
+  },
+  {
+   "q": "Overseas customers ------- nearly a third of our annual sales.",
+   "options": [
+    "account for",
+    "account of",
+    "account on",
+    "account with"
+   ],
+   "ans": 0,
+   "type": "word-choice",
+   "why": "account for = chiếm (tỷ lệ). Các giới từ khác không tạo thành cụm có nghĩa.",
+   "vi": "Khách hàng nước ngoài chiếm gần một phần ba doanh số hằng năm của chúng tôi.",
+   "pid": "u05-account"
+  },
+  {
+   "q": "The training session will focus on ------- the quality of our products.",
+   "options": [
+    "improve",
+    "to improve",
+    "improving",
+    "improved"
+   ],
+   "ans": 2,
+   "type": "toV-Ving",
+   "why": "on là giới từ nên theo sau là V-ing: focus on improving. Không dùng động từ nguyên mẫu hay to V.",
+   "vi": "Buổi tập huấn sẽ tập trung vào việc cải thiện chất lượng sản phẩm.",
+   "pid": "u05-focus"
+  },
+  {
+   "q": "Visitors must ------- the laboratory through the side door.",
+   "options": [
+    "enter into",
+    "enter in",
+    "enter to",
+    "enter"
+   ],
+   "ans": 3,
+   "type": "object",
+   "why": "enter + O không cần giới từ. 'enter into' chỉ dùng cho thỏa thuận (enter into a contract).",
+   "vi": "Khách tham quan phải vào phòng thí nghiệm bằng cửa phụ.",
+   "pid": "u05-enter"
+  },
+  {
+   "q": "Regular maintenance contributes to ------- the life of the equipment.",
+   "options": [
+    "extend",
+    "extended",
+    "to extend",
+    "extending"
+   ],
+   "ans": 3,
+   "type": "toV-Ving",
+   "why": "contribute to là giới từ + V-ing: contribute to extending. Không dùng 'to extend' hay nguyên mẫu.",
+   "vi": "Bảo trì định kỳ góp phần kéo dài tuổi thọ thiết bị.",
+   "pid": "u05-contribute"
+  },
+  {
+   "q": "In his speech, the CEO ------- the importance of teamwork.",
+   "options": [
+    "mentioned about",
+    "mentioned",
+    "mentioned on",
+    "mentioned of"
+   ],
+   "ans": 1,
+   "type": "object",
+   "why": "mention + O, không giới từ. 'mention about' là lỗi phổ biến của người Việt.",
+   "vi": "Trong bài phát biểu, giám đốc điều hành đã đề cập đến tầm quan trọng của làm việc nhóm.",
+   "pid": "u05-mention"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Ban giám đốc sẽ thảo luận ngân sách mới vào thứ Hai.",
+   "chunks": [
+    "The board",
+    "will discuss",
+    "the new budget",
+    "on Monday."
+   ],
+   "pid": "u05-discuss",
+   "why": "discuss + tân ngữ, không có about.",
+   "dist": "about"
+  },
+  {
+   "vi": "Vui lòng liên hệ bộ phận nhân sự nếu bạn có thắc mắc.",
+   "chunks": [
+    "Please contact",
+    "the HR department",
+    "if you have",
+    "any questions."
+   ],
+   "pid": "u05-contact",
+   "why": "contact + tân ngữ trực tiếp, không with.",
+   "dist": "with"
+  },
+  {
+   "vi": "Hơn 300 khách mời đã tham dự lễ khai trương tuần trước.",
+   "chunks": [
+    "More than 300 guests",
+    "attended",
+    "the opening ceremony",
+    "last week."
+   ],
+   "pid": "u05-attend",
+   "why": "attend + tân ngữ, không giới từ.",
+   "dist": "to"
+  },
+  {
+   "vi": "Các nhà thầu phải tuân thủ quy định an toàn mọi lúc.",
+   "chunks": [
+    "The contractors",
+    "must comply with",
+    "the safety rules",
+    "at all times."
+   ],
+   "pid": "u05-comply",
+   "why": "comply with + quy định.",
+   "dist": "to"
+  },
+  {
+   "vi": "Doanh số trực tuyến chiếm 40% tổng doanh thu.",
+   "chunks": [
+    "Online sales",
+    "accounted for",
+    "40 percent",
+    "of total revenue."
+   ],
+   "pid": "u05-account",
+   "why": "account for + tỷ lệ.",
+   "dist": "on"
+  },
+  {
+   "vi": "Thành công của chiến dịch phụ thuộc vào phản hồi sớm của khách hàng.",
+   "chunks": [
+    "The success",
+    "of the campaign",
+    "depends on",
+    "early customer feedback."
+   ],
+   "pid": "u05-depend",
+   "why": "depend on + danh từ.",
+   "dist": "of"
+  }
+ ],
+ "translate": [
+  {
+   "en": "Senior managers from all branches will attend the annual meeting to discuss the sales targets for next year.",
+   "vi": "Các quản lý cấp cao từ mọi chi nhánh sẽ tham dự cuộc họp thường niên để thảo luận các mục tiêu doanh số của năm tới.",
+   "chunks": [
+    {
+     "t": "Senior managers from all branches",
+     "r": "S",
+     "vi": "các quản lý cấp cao từ mọi chi nhánh"
+    },
+    {
+     "t": "will attend",
+     "r": "V",
+     "vi": "sẽ tham dự",
+     "k": true
+    },
+    {
+     "t": "the annual meeting",
+     "r": "O",
+     "vi": "cuộc họp thường niên",
+     "k": true
+    },
+    {
+     "t": "to discuss",
+     "r": "to V",
+     "vi": "để thảo luận",
+     "k": true
+    },
+    {
+     "t": "the sales targets",
+     "r": "O",
+     "vi": "các mục tiêu doanh số",
+     "k": true
+    },
+    {
+     "t": "for next year.",
+     "r": "giới từ + O",
+     "vi": "của năm tới."
+    }
+   ],
+   "note": "attend và discuss đều là ngoại động từ, đi thẳng với tân ngữ nên dịch 'tham dự ...' và 'thảo luận ...' (không có 'về' trong tiếng Anh). 'to discuss' chỉ mục đích: để thảo luận. 'for next year' bổ nghĩa cho 'sales targets' nên dịch 'của năm tới'.",
+   "pid": "u05-attend",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Employees who wish to apply for the manager position should contact the HR department before the end of the month.",
+   "vi": "Nhân viên muốn ứng tuyển vị trí quản lý nên liên hệ phòng nhân sự trước cuối tháng.",
+   "chunks": [
+    {
+     "t": "Employees who wish",
+     "r": "S",
+     "vi": "nhân viên muốn"
+    },
+    {
+     "t": "to apply for",
+     "r": "to V",
+     "vi": "ứng tuyển",
+     "k": true
+    },
+    {
+     "t": "the manager position",
+     "r": "O",
+     "vi": "vị trí quản lý",
+     "k": true
+    },
+    {
+     "t": "should contact",
+     "r": "V",
+     "vi": "nên liên hệ",
+     "k": true
+    },
+    {
+     "t": "the HR department",
+     "r": "O",
+     "vi": "phòng nhân sự",
+     "k": true
+    },
+    {
+     "t": "before the end of the month.",
+     "r": "trạng ngữ",
+     "vi": "trước cuối tháng."
+    }
+   ],
+   "note": "Dịch từng khối: 'Employees who wish to apply for the manager position' là chủ ngữ dài (nhân viên muốn ứng tuyển vị trí quản lý); apply for = ứng tuyển; contact + O = liên hệ (không 'with'). Cụm thời gian đặt cuối câu, tiếng Việt cũng giữ ở cuối.",
+   "pid": "u05-apply",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "viOpts": [
+    "Nhân viên muốn áp dụng cho vị trí quản lý nên liên hệ với phòng nhân sự cuối tháng này.",
+    "Nhân viên muốn ứng tuyển vị trí quản lý nên liên hệ phòng nhân sự trước cuối tháng.",
+    "Nhân viên muốn xin phòng nhân sự nên liên hệ vị trí quản lý trước cuối tháng."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "The report shows that rising costs account for most of the decline in profit, and the company must deal with the problem immediately.",
+   "vi": "Bản báo cáo cho thấy chi phí tăng là nguyên nhân của phần lớn mức sụt giảm lợi nhuận, và công ty phải xử lý vấn đề này ngay.",
+   "chunks": [
+    {
+     "t": "The report",
+     "r": "S",
+     "vi": "bản báo cáo"
+    },
+    {
+     "t": "shows",
+     "r": "V",
+     "vi": "cho thấy"
+    },
+    {
+     "t": "that rising costs",
+     "r": "S",
+     "vi": "rằng chi phí tăng"
+    },
+    {
+     "t": "account for",
+     "r": "V",
+     "vi": "là nguyên nhân của",
+     "k": true
+    },
+    {
+     "t": "most of the decline in profit,",
+     "r": "O",
+     "vi": "phần lớn mức sụt giảm lợi nhuận,",
+     "k": true
+    },
+    {
+     "t": "and the company",
+     "r": "S",
+     "vi": "và công ty"
+    },
+    {
+     "t": "must deal with",
+     "r": "V",
+     "vi": "phải xử lý",
+     "k": true
+    },
+    {
+     "t": "the problem",
+     "r": "O",
+     "vi": "vấn đề này",
+     "k": true
+    },
+    {
+     "t": "immediately.",
+     "r": "trạng ngữ",
+     "vi": "ngay."
+    }
+   ],
+   "note": "account for ở đây = giải thích cho / là nguyên nhân của (không phải 'chiếm' hay 'giải trình'): chi phí tăng gây ra phần lớn mức sụt giảm lợi nhuận. deal with + vấn đề = xử lý, giải quyết (luôn có with, không nói 'deal the problem'). Dịch theo thứ tự các khối, bỏ chữ 'rằng' cho gọn.",
+   "pid": "u05-account",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ],
+   "viOpts": [
+    "Bản báo cáo cho thấy chi phí tăng phải giải trình phần lớn lợi nhuận, và công ty phải giao dịch với vấn đề này ngay.",
+    "Bản báo cáo cho thấy chi phí tăng chiếm hết lợi nhuận, nên công ty thỏa thuận về vấn đề ngay.",
+    "Bản báo cáo cho thấy chi phí tăng là nguyên nhân của phần lớn mức sụt giảm lợi nhuận, và công ty phải xử lý vấn đề này ngay."
+   ],
+   "viAns": 2
+  },
+  {
+   "en": "The new director will report to the CEO and focus on expanding the company's presence in Southeast Asia.",
+   "vi": "Giám đốc mới sẽ trực thuộc giám đốc điều hành và tập trung vào việc mở rộng sự hiện diện của công ty ở Đông Nam Á.",
+   "chunks": [
+    {
+     "t": "The new director",
+     "r": "S",
+     "vi": "giám đốc mới"
+    },
+    {
+     "t": "will report to",
+     "r": "V",
+     "vi": "sẽ trực thuộc",
+     "k": true
+    },
+    {
+     "t": "the CEO",
+     "r": "O-người",
+     "vi": "giám đốc điều hành",
+     "k": true
+    },
+    {
+     "t": "and focus on",
+     "r": "V",
+     "vi": "và tập trung vào",
+     "k": true
+    },
+    {
+     "t": "expanding",
+     "r": "V-ing",
+     "vi": "việc mở rộng",
+     "k": true
+    },
+    {
+     "t": "the company's presence",
+     "r": "O",
+     "vi": "sự hiện diện của công ty"
+    },
+    {
+     "t": "in Southeast Asia.",
+     "r": "giới từ + O",
+     "vi": "ở Đông Nam Á."
+    }
+   ],
+   "note": "report to + người = báo cáo cho cấp trên, nên dịch 'trực thuộc / báo cáo cho'. focus on + V-ing: 'tập trung vào việc mở rộng'. Khối 'in Southeast Asia' bổ nghĩa cho presence nên đặt cuối trong tiếng Việt.",
+   "pid": "u05-report",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "All staff must comply with the new dress code, and the company will approve requests for exceptions only in special cases.",
+   "vi": "Toàn bộ nhân viên phải tuân thủ quy định trang phục mới, và công ty sẽ phê duyệt các yêu cầu ngoại lệ chỉ trong những trường hợp đặc biệt.",
+   "chunks": [
+    {
+     "t": "All staff",
+     "r": "S",
+     "vi": "toàn bộ nhân viên"
+    },
+    {
+     "t": "must comply with",
+     "r": "V",
+     "vi": "phải tuân thủ",
+     "k": true
+    },
+    {
+     "t": "the new dress code,",
+     "r": "O",
+     "vi": "quy định trang phục mới,",
+     "k": true
+    },
+    {
+     "t": "and the company",
+     "r": "S",
+     "vi": "và công ty"
+    },
+    {
+     "t": "will approve",
+     "r": "V",
+     "vi": "sẽ phê duyệt",
+     "k": true
+    },
+    {
+     "t": "requests for exceptions",
+     "r": "O",
+     "vi": "các yêu cầu ngoại lệ",
+     "k": true
+    },
+    {
+     "t": "only in special cases.",
+     "r": "trạng ngữ",
+     "vi": "chỉ trong những trường hợp đặc biệt."
+    }
+   ],
+   "note": "comply with + quy định (with không bỏ được); approve + O = phê duyệt, không giới từ. 'only' đi với cụm 'in special cases' nên dịch 'chỉ trong những trường hợp đặc biệt' (cũng có thể nói gọn: công ty chỉ phê duyệt ... trong những trường hợp đặc biệt).",
+   "pid": "u05-comply",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "The sales team responded to the complaints within an hour and emphasized that the company relies on customer trust.",
+   "vi": "Nhóm bán hàng đã phản hồi các khiếu nại trong vòng một giờ và nhấn mạnh rằng công ty dựa vào sự tin tưởng của khách hàng.",
+   "chunks": [
+    {
+     "t": "The sales team",
+     "r": "S",
+     "vi": "nhóm bán hàng"
+    },
+    {
+     "t": "responded to",
+     "r": "V",
+     "vi": "đã phản hồi",
+     "k": true
+    },
+    {
+     "t": "the complaints",
+     "r": "O",
+     "vi": "các khiếu nại",
+     "k": true
+    },
+    {
+     "t": "within an hour",
+     "r": "trạng ngữ",
+     "vi": "trong vòng một giờ"
+    },
+    {
+     "t": "and emphasized",
+     "r": "V",
+     "vi": "và nhấn mạnh",
+     "k": true
+    },
+    {
+     "t": "that the company relies on customer trust.",
+     "r": "mệnh đề",
+     "vi": "rằng công ty dựa vào sự tin tưởng của khách hàng."
+    }
+   ],
+   "note": "respond to = phản hồi; emphasize + that-clause = nhấn mạnh rằng (không 'emphasize on'). Trong mệnh đề that, 'rely on' = dựa vào, trông cậy vào.",
+   "pid": "u05-respond",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  }
+ ]
+}

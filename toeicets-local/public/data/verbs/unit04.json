@@ -1,0 +1,2424 @@
+{
+ "unit": 4,
+ "title": "V + người + giới từ + vật",
+ "icon": "🔗",
+ "intro": "Ở nhóm này, giới từ đi sau người là phần BẮT BUỘC và gần như cố định: provide sb WITH sth, inform sb OF sth, prevent sb FROM V-ing, thank sb FOR sth. Đề Part 5 hay cho một chỗ trống ngay chỗ giới từ này, và khi dịch tiếng Việt thường phải đảo trật tự (provide sb with sth → \"cung cấp sth cho sb\"). Mẹo: học thuộc cả cụm \"động từ + người + giới từ\", đừng học riêng động từ.",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "provide / supply / equip / present + sb + with + sth",
+   "provide staff with laptops",
+   "cung cấp / trang bị cho nhân viên máy tính xách tay"
+  ],
+  [
+   "inform / notify / remind / assure / advise + sb + of/about + sth",
+   "notify clients of a delay",
+   "thông báo cho khách hàng về sự chậm trễ"
+  ],
+  [
+   "prevent / stop / keep / prohibit / discourage + sb + from + V-ing",
+   "prevent staff from entering",
+   "ngăn nhân viên đi vào"
+  ],
+  [
+   "thank / reward / charge / compensate sb + for; congratulate sb + on",
+   "thank clients for waiting",
+   "cảm ơn khách hàng đã chờ"
+  ],
+  [
+   "replace A with B; compare A with B; divide A into B",
+   "replace old files with new ones",
+   "thay tệp cũ bằng tệp mới"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u04-provide",
+   "p": "provide sb with sth",
+   "form": "provide + O(người) + with + O(vật)",
+   "vi": "cung cấp / cấp cho ai cái gì",
+   "alt": "= provide sth to/for sb",
+   "pass": "sb is provided with sth / sth is provided to/for sb",
+   "core": true,
+   "note": "BẪY: KHÔNG có \"provide sb sth\". Hoặc \"provide sb WITH sth\", hoặc \"provide sth FOR/TO sb\". Khi dịch tiếng Việt thường đảo: \"cung cấp [sth] cho [sb]\".",
+   "vs": "give sb sth (không giới từ) ≠ provide sb WITH sth (bắt buộc \"with\")",
+   "ex": [
+    {
+     "en": "The company provides its employees with free health insurance.",
+     "vi": "Công ty cung cấp bảo hiểm y tế miễn phí cho nhân viên.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "provides",
+       "r": "V",
+       "vi": "cung cấp",
+       "k": true
+      },
+      {
+       "t": "its employees",
+       "r": "O-người",
+       "vi": "cho nhân viên",
+       "k": true
+      },
+      {
+       "t": "with free health insurance.",
+       "r": "giới từ + O",
+       "vi": "bảo hiểm y tế miễn phí",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2
+     ]
+    },
+    {
+     "en": "We will provide each trainee with a laptop and a security badge.",
+     "vi": "Chúng tôi sẽ cấp cho mỗi học viên một máy tính xách tay và một thẻ an ninh.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "will provide",
+       "r": "V",
+       "vi": "sẽ cấp",
+       "k": true
+      },
+      {
+       "t": "each trainee",
+       "r": "O-người",
+       "vi": "cho mỗi học viên",
+       "k": true
+      },
+      {
+       "t": "with a laptop and a security badge.",
+       "r": "giới từ + O",
+       "vi": "một máy tính xách tay và một thẻ an ninh",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-supply",
+   "p": "supply sb with sth",
+   "form": "supply + O(người) + with + O(vật)",
+   "vi": "cung ứng cho ai cái gì (hàng hóa)",
+   "alt": "= supply sth to sb",
+   "pass": "sb is supplied with sth",
+   "note": "Dùng cho nhà cung cấp hàng hóa, vật tư. Cấu trúc giống provide: supply sb WITH sth hoặc supply sth TO sb; không có \"supply sb sth\".",
+   "ex": [
+    {
+     "en": "The farm supplies local restaurants with fresh vegetables all year round.",
+     "vi": "Trang trại cung cấp rau tươi cho các nhà hàng địa phương quanh năm.",
+     "chunks": [
+      {
+       "t": "The farm",
+       "r": "S",
+       "vi": "trang trại"
+      },
+      {
+       "t": "supplies",
+       "r": "V",
+       "vi": "cung cấp",
+       "k": true
+      },
+      {
+       "t": "local restaurants",
+       "r": "O-người",
+       "vi": "cho các nhà hàng địa phương",
+       "k": true
+      },
+      {
+       "t": "with fresh vegetables",
+       "r": "giới từ + O",
+       "vi": "rau tươi",
+       "k": true
+      },
+      {
+       "t": "all year round.",
+       "r": "trạng ngữ",
+       "vi": "quanh năm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ]
+    },
+    {
+     "en": "This company supplies hospitals with medical equipment.",
+     "vi": "Công ty này cung ứng thiết bị y tế cho các bệnh viện.",
+     "chunks": [
+      {
+       "t": "This company",
+       "r": "S",
+       "vi": "công ty này"
+      },
+      {
+       "t": "supplies",
+       "r": "V",
+       "vi": "cung ứng",
+       "k": true
+      },
+      {
+       "t": "hospitals",
+       "r": "O-người",
+       "vi": "cho các bệnh viện",
+       "k": true
+      },
+      {
+       "t": "with medical equipment.",
+       "r": "giới từ + O",
+       "vi": "thiết bị y tế",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-equip",
+   "p": "equip sb/sth with sth",
+   "form": "equip + O + with + O(vật)",
+   "vi": "trang bị cho ai / cái gì thứ gì",
+   "note": "Thứ được trang bị luôn đi sau \"with\": equip technicians with tools. Không dùng \"to\". (Dạng bị động \"be equipped with\" có ở bài 10.)",
+   "ex": [
+    {
+     "en": "The firm equipped its technicians with advanced diagnostic tools.",
+     "vi": "Công ty trang bị cho kỹ thuật viên các công cụ chẩn đoán tiên tiến.",
+     "chunks": [
+      {
+       "t": "The firm",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "equipped",
+       "r": "V",
+       "vi": "trang bị",
+       "k": true
+      },
+      {
+       "t": "its technicians",
+       "r": "O-người",
+       "vi": "cho kỹ thuật viên",
+       "k": true
+      },
+      {
+       "t": "with advanced diagnostic tools.",
+       "r": "giới từ + O",
+       "vi": "các công cụ chẩn đoán tiên tiến",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The renovation equipped all meeting rooms with video conferencing systems.",
+     "vi": "Đợt cải tạo đã trang bị hệ thống hội nghị truyền hình cho tất cả phòng họp.",
+     "chunks": [
+      {
+       "t": "The renovation",
+       "r": "S",
+       "vi": "đợt cải tạo"
+      },
+      {
+       "t": "equipped",
+       "r": "V",
+       "vi": "đã trang bị",
+       "k": true
+      },
+      {
+       "t": "all meeting rooms",
+       "r": "O-vật",
+       "vi": "cho tất cả phòng họp",
+       "k": true
+      },
+      {
+       "t": "with video conferencing systems.",
+       "r": "giới từ + O",
+       "vi": "hệ thống hội nghị truyền hình",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-present",
+   "p": "present sb with sth",
+   "form": "present + O(người) + with + O(vật)",
+   "vi": "trao tặng cho ai cái gì",
+   "alt": "= present sth to sb (present an award to sb)",
+   "pass": "sb was presented with sth",
+   "note": "present sb WITH sth luôn mang nghĩa trao tặng (giải thưởng, quà, bằng khen). present sth TO sb có hai nghĩa: trao (present an award to sb) hoặc trình bày (present a plan to the board). KHÔNG nói \"present sb sth\".",
+   "ex": [
+    {
+     "en": "The board presented Ms. Kim with a plaque for her 20 years of service.",
+     "vi": "Hội đồng quản trị đã trao tặng cô Kim một tấm bảng vinh danh cho 20 năm cống hiến.",
+     "chunks": [
+      {
+       "t": "The board",
+       "r": "S",
+       "vi": "hội đồng quản trị"
+      },
+      {
+       "t": "presented",
+       "r": "V",
+       "vi": "đã trao tặng",
+       "k": true
+      },
+      {
+       "t": "Ms. Kim",
+       "r": "O-người",
+       "vi": "cô Kim",
+       "k": true
+      },
+      {
+       "t": "with a plaque",
+       "r": "giới từ + O",
+       "vi": "một tấm bảng vinh danh",
+       "k": true
+      },
+      {
+       "t": "for her 20 years of service.",
+       "r": "giới từ + O",
+       "vi": "cho 20 năm cống hiến của cô"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "All volunteers were presented with a certificate of appreciation.",
+     "vi": "Tất cả tình nguyện viên đều được trao giấy chứng nhận ghi nhận đóng góp.",
+     "chunks": [
+      {
+       "t": "All volunteers",
+       "r": "S",
+       "vi": "tất cả tình nguyện viên"
+      },
+      {
+       "t": "were presented",
+       "r": "V",
+       "vi": "đều được trao",
+       "k": true
+      },
+      {
+       "t": "with a certificate of appreciation.",
+       "r": "giới từ + O",
+       "vi": "giấy chứng nhận ghi nhận đóng góp",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-inform",
+   "p": "inform sb of/about sth",
+   "form": "inform + O(người) + of/about + O(vật)",
+   "vi": "thông báo cho ai về cái gì",
+   "alt": "= inform sb that + mệnh đề",
+   "pass": "sb be informed of/about sth",
+   "core": true,
+   "note": "BẪY: KHÔNG có \"inform sth to sb\". Người được báo đứng ngay sau inform: inform CUSTOMERS of the delay. Vì vậy \"inform\" khác \"announce sth to sb\" (bài 3).",
+   "vs": "advise sb to V = khuyên ai làm gì (bài 2) ≠ advise sb of sth = thông báo",
+   "ex": [
+    {
+     "en": "Please inform the front desk of any changes to your reservation.",
+     "vi": "Vui lòng báo cho quầy lễ tân biết mọi thay đổi đối với đặt phòng của quý vị.",
+     "chunks": [
+      {
+       "t": "Please inform",
+       "r": "V",
+       "vi": "vui lòng báo",
+       "k": true
+      },
+      {
+       "t": "the front desk",
+       "r": "O-người",
+       "vi": "cho quầy lễ tân biết",
+       "k": true
+      },
+      {
+       "t": "of any changes to your reservation.",
+       "r": "giới từ + O",
+       "vi": "mọi thay đổi đối với đặt phòng của quý vị",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The airline informed passengers about the delay by text message.",
+     "vi": "Hãng hàng không đã thông báo cho hành khách về việc chậm chuyến qua tin nhắn.",
+     "chunks": [
+      {
+       "t": "The airline",
+       "r": "S",
+       "vi": "hãng hàng không"
+      },
+      {
+       "t": "informed",
+       "r": "V",
+       "vi": "đã thông báo",
+       "k": true
+      },
+      {
+       "t": "passengers",
+       "r": "O-người",
+       "vi": "cho hành khách",
+       "k": true
+      },
+      {
+       "t": "about the delay",
+       "r": "giới từ + O",
+       "vi": "về việc chậm chuyến",
+       "k": true
+      },
+      {
+       "t": "by text message.",
+       "r": "trạng ngữ",
+       "vi": "qua tin nhắn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-notify",
+   "p": "notify sb of sth",
+   "form": "notify + O(người) + of + O(vật)",
+   "vi": "thông báo cho ai về cái gì",
+   "alt": "= notify sb that / when / if + mệnh đề",
+   "pass": "sb will be notified of sth",
+   "core": true,
+   "note": "Rất hay gặp ở dạng bị động trong email: You will be notified of the results. Không viết \"notify sth to sb\".",
+   "ex": [
+    {
+     "en": "You will be notified of the results within two weeks.",
+     "vi": "Quý vị sẽ được thông báo kết quả trong vòng hai tuần.",
+     "chunks": [
+      {
+       "t": "You",
+       "r": "S",
+       "vi": "quý vị"
+      },
+      {
+       "t": "will be notified",
+       "r": "V",
+       "vi": "sẽ được thông báo",
+       "k": true
+      },
+      {
+       "t": "of the results",
+       "r": "giới từ + O",
+       "vi": "kết quả",
+       "k": true
+      },
+      {
+       "t": "within two weeks.",
+       "r": "trạng ngữ",
+       "vi": "trong vòng hai tuần"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Employees must notify their manager of any absence in advance.",
+     "vi": "Nhân viên phải thông báo trước cho quản lý về mọi trường hợp vắng mặt.",
+     "chunks": [
+      {
+       "t": "Employees",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "must notify",
+       "r": "V",
+       "vi": "phải thông báo",
+       "k": true
+      },
+      {
+       "t": "their manager",
+       "r": "O-người",
+       "vi": "cho quản lý của mình",
+       "k": true
+      },
+      {
+       "t": "of any absence",
+       "r": "giới từ + O",
+       "vi": "về mọi trường hợp vắng mặt",
+       "k": true
+      },
+      {
+       "t": "in advance.",
+       "r": "trạng ngữ",
+       "vi": "trước"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      4,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-assure",
+   "p": "assure sb of sth",
+   "form": "assure + O(người) + of + O(vật)",
+   "vi": "cam đoan / bảo đảm với ai về điều gì",
+   "alt": "= assure sb that + mệnh đề",
+   "note": "assure sb = trấn an/cam đoan VỚI AI. Không nhầm với ensure that (bảo đảm rằng, không có tân ngữ người) và insure (bảo hiểm).",
+   "ex": [
+    {
+     "en": "The manager assured the client of our commitment to quality.",
+     "vi": "Quản lý đã cam đoan với khách hàng về cam kết chất lượng của chúng tôi.",
+     "chunks": [
+      {
+       "t": "The manager",
+       "r": "S",
+       "vi": "quản lý"
+      },
+      {
+       "t": "assured",
+       "r": "V",
+       "vi": "đã cam đoan",
+       "k": true
+      },
+      {
+       "t": "the client",
+       "r": "O-người",
+       "vi": "với khách hàng",
+       "k": true
+      },
+      {
+       "t": "of our commitment to quality.",
+       "r": "giới từ + O",
+       "vi": "về cam kết chất lượng của chúng tôi",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "We assure our customers that all orders will arrive on time.",
+     "vi": "Chúng tôi cam đoan với khách hàng rằng mọi đơn hàng sẽ đến đúng hạn.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "assure",
+       "r": "V",
+       "vi": "cam đoan",
+       "k": true
+      },
+      {
+       "t": "our customers",
+       "r": "O-người",
+       "vi": "với khách hàng",
+       "k": true
+      },
+      {
+       "t": "that all orders will arrive on time.",
+       "r": "mệnh đề",
+       "vi": "rằng mọi đơn hàng sẽ đến đúng hạn",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-advise",
+   "p": "advise sb of sth",
+   "form": "advise + O(người) + of/about + O(vật)",
+   "vi": "báo cho ai biết về cái gì (trang trọng)",
+   "pass": "sb be advised of sth",
+   "note": "Trong thư thương mại, \"advise us of ...\" = \"báo cho chúng tôi biết ...\". Hoàn toàn khác \"advise sb to V\" (khuyên ai làm gì, bài 2). Nhìn giới từ: of → thông báo; to V → khuyên. (\"advise sb about/on sth\" thường là TƯ VẤN cho ai về việc gì.)",
+   "vs": "advise sb TO V = khuyên ai làm gì",
+   "ex": [
+    {
+     "en": "Please advise us of any changes to the delivery date.",
+     "vi": "Vui lòng báo cho chúng tôi biết mọi thay đổi về ngày giao hàng.",
+     "chunks": [
+      {
+       "t": "Please advise",
+       "r": "V",
+       "vi": "vui lòng báo",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O-người",
+       "vi": "cho chúng tôi biết",
+       "k": true
+      },
+      {
+       "t": "of any changes to the delivery date.",
+       "r": "giới từ + O",
+       "vi": "mọi thay đổi về ngày giao hàng",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Passengers will be advised of any gate changes by text message.",
+     "vi": "Hành khách sẽ được thông báo về mọi thay đổi cổng lên máy bay qua tin nhắn.",
+     "chunks": [
+      {
+       "t": "Passengers",
+       "r": "S",
+       "vi": "hành khách"
+      },
+      {
+       "t": "will be advised",
+       "r": "V",
+       "vi": "sẽ được thông báo",
+       "k": true
+      },
+      {
+       "t": "of any gate changes",
+       "r": "giới từ + O",
+       "vi": "về mọi thay đổi cổng lên máy bay",
+       "k": true
+      },
+      {
+       "t": "by text message.",
+       "r": "trạng ngữ",
+       "vi": "qua tin nhắn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-remind",
+   "p": "remind sb of sth",
+   "form": "remind + O(người) + of/about + O(vật)",
+   "vi": "nhắc ai về / gợi ai nhớ đến cái gì",
+   "alt": "= remind sb that + mệnh đề",
+   "core": true,
+   "note": "remind sb OF sth = gợi nhớ / nhắc về một sự việc, một người. Khác \"remind sb TO V\" = nhắc ai phải làm gì (bài 2).",
+   "vs": "remind sb TO V = nhắc ai làm gì (bài 2)",
+   "ex": [
+    {
+     "en": "This email reminds you of the payment due on March 15.",
+     "vi": "Email này nhắc quý vị về khoản thanh toán đến hạn ngày 15 tháng 3.",
+     "chunks": [
+      {
+       "t": "This email",
+       "r": "S",
+       "vi": "email này"
+      },
+      {
+       "t": "reminds",
+       "r": "V",
+       "vi": "nhắc",
+       "k": true
+      },
+      {
+       "t": "you",
+       "r": "O-người",
+       "vi": "quý vị",
+       "k": true
+      },
+      {
+       "t": "of the payment due on March 15.",
+       "r": "giới từ + O",
+       "vi": "về khoản thanh toán đến hạn ngày 15 tháng 3",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The photo reminded Mr. Han of his first day at the company.",
+     "vi": "Bức ảnh gợi ông Han nhớ đến ngày đầu tiên của ông ở công ty.",
+     "chunks": [
+      {
+       "t": "The photo",
+       "r": "S",
+       "vi": "bức ảnh"
+      },
+      {
+       "t": "reminded",
+       "r": "V",
+       "vi": "gợi",
+       "k": true
+      },
+      {
+       "t": "Mr. Han",
+       "r": "O-người",
+       "vi": "ông Han",
+       "k": true
+      },
+      {
+       "t": "of his first day at the company.",
+       "r": "giới từ + O",
+       "vi": "nhớ đến ngày đầu tiên của ông ở công ty",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-prevent",
+   "p": "prevent / stop / keep sb from V-ing",
+   "form": "prevent + O(người) + from + V-ing",
+   "vi": "ngăn / cản ai làm gì",
+   "pass": "sb is prevented from V-ing",
+   "core": true,
+   "note": "Sau \"from\" là V-ing, không bao giờ \"to V\": prevent sb from entering. Trong đề thi luôn dùng \"from\" (keep sb from V-ing bắt buộc có from). Khi dịch bỏ chữ \"khỏi\": \"ngăn người dùng truy cập\".",
+   "ex": [
+    {
+     "en": "The new software prevents unauthorized users from accessing the database.",
+     "vi": "Phần mềm mới ngăn người dùng trái phép truy cập vào cơ sở dữ liệu.",
+     "chunks": [
+      {
+       "t": "The new software",
+       "r": "S",
+       "vi": "phần mềm mới"
+      },
+      {
+       "t": "prevents",
+       "r": "V",
+       "vi": "ngăn",
+       "k": true
+      },
+      {
+       "t": "unauthorized users",
+       "r": "O-người",
+       "vi": "người dùng trái phép",
+       "k": true
+      },
+      {
+       "t": "from accessing the database.",
+       "r": "giới từ + O",
+       "vi": "truy cập vào cơ sở dữ liệu",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Heavy snow stopped the workers from finishing the repairs on time.",
+     "vi": "Tuyết dày đã cản không cho công nhân hoàn thành việc sửa chữa đúng hạn.",
+     "chunks": [
+      {
+       "t": "Heavy snow",
+       "r": "S",
+       "vi": "tuyết dày"
+      },
+      {
+       "t": "stopped",
+       "r": "V",
+       "vi": "đã cản",
+       "k": true
+      },
+      {
+       "t": "the workers",
+       "r": "O-người",
+       "vi": "công nhân",
+       "k": true
+      },
+      {
+       "t": "from finishing the repairs on time.",
+       "r": "giới từ + O",
+       "vi": "hoàn thành việc sửa chữa đúng hạn",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-prohibit",
+   "p": "prohibit / discourage sb from V-ing",
+   "form": "prohibit + O(người) + from + V-ing",
+   "vi": "cấm ai làm gì / làm ai nản lòng không làm gì",
+   "pass": "sb is prohibited from V-ing",
+   "note": "prohibit sb FROM V-ing (cấm). discourage sb FROM V-ing (làm nản lòng), trái nghĩa với encourage sb TO V (bài 2). Không dùng \"prohibit sb to V\".",
+   "ex": [
+    {
+     "en": "Company policy prohibits employees from sharing passwords.",
+     "vi": "Quy định của công ty cấm nhân viên chia sẻ mật khẩu.",
+     "chunks": [
+      {
+       "t": "Company policy",
+       "r": "S",
+       "vi": "quy định của công ty"
+      },
+      {
+       "t": "prohibits",
+       "r": "V",
+       "vi": "cấm",
+       "k": true
+      },
+      {
+       "t": "employees",
+       "r": "O-người",
+       "vi": "nhân viên",
+       "k": true
+      },
+      {
+       "t": "from sharing passwords.",
+       "r": "giới từ + O",
+       "vi": "chia sẻ mật khẩu",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "High prices may discourage customers from buying premium products.",
+     "vi": "Giá cao có thể làm khách hàng nản lòng, không muốn mua các sản phẩm cao cấp.",
+     "chunks": [
+      {
+       "t": "High prices",
+       "r": "S",
+       "vi": "giá cao"
+      },
+      {
+       "t": "may discourage",
+       "r": "V",
+       "vi": "có thể làm nản lòng",
+       "k": true
+      },
+      {
+       "t": "customers",
+       "r": "O-người",
+       "vi": "khách hàng",
+       "k": true
+      },
+      {
+       "t": "from buying premium products.",
+       "r": "giới từ + O",
+       "vi": "không muốn mua các sản phẩm cao cấp",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-thank",
+   "p": "thank sb for sth / V-ing",
+   "form": "thank + O(người) + for + O(vật) / V-ing",
+   "vi": "cảm ơn ai vì điều gì",
+   "core": true,
+   "note": "thank sb FOR ...; không viết \"thank to sb\". \"thanks to + N\" là cụm khác = nhờ có. Sau for có thể là danh từ hoặc V-ing: thank them for attending.",
+   "ex": [
+    {
+     "en": "We would like to thank all volunteers for their support.",
+     "vi": "Chúng tôi xin cảm ơn tất cả tình nguyện viên vì sự hỗ trợ của họ.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "would like to thank",
+       "r": "V",
+       "vi": "xin cảm ơn",
+       "k": true
+      },
+      {
+       "t": "all volunteers",
+       "r": "O-người",
+       "vi": "tất cả tình nguyện viên",
+       "k": true
+      },
+      {
+       "t": "for their support.",
+       "r": "giới từ + O",
+       "vi": "vì sự hỗ trợ của họ",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Mr. Park thanked the clients for attending the launch event.",
+     "vi": "Ông Park đã cảm ơn các khách hàng vì đã tham dự sự kiện ra mắt.",
+     "chunks": [
+      {
+       "t": "Mr. Park",
+       "r": "S",
+       "vi": "ông Park"
+      },
+      {
+       "t": "thanked",
+       "r": "V",
+       "vi": "đã cảm ơn",
+       "k": true
+      },
+      {
+       "t": "the clients",
+       "r": "O-người",
+       "vi": "các khách hàng",
+       "k": true
+      },
+      {
+       "t": "for attending the launch event.",
+       "r": "giới từ + O",
+       "vi": "vì đã tham dự sự kiện ra mắt",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-reward",
+   "p": "reward sb for sth / with sth",
+   "form": "reward + O(người) + for + O(vật) / with + O(vật)",
+   "vi": "thưởng cho ai vì điều gì / bằng cái gì",
+   "pass": "sb is rewarded for sth",
+   "note": "for + lý do được thưởng; with + phần thưởng. Hai giới từ cho hai ý khác nhau.",
+   "ex": [
+    {
+     "en": "The firm rewarded the sales team for exceeding its annual target.",
+     "vi": "Công ty thưởng cho đội kinh doanh vì đã vượt chỉ tiêu cả năm.",
+     "chunks": [
+      {
+       "t": "The firm",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "rewarded",
+       "r": "V",
+       "vi": "thưởng",
+       "k": true
+      },
+      {
+       "t": "the sales team",
+       "r": "O-người",
+       "vi": "cho đội kinh doanh",
+       "k": true
+      },
+      {
+       "t": "for exceeding its annual target.",
+       "r": "giới từ + O",
+       "vi": "vì đã vượt chỉ tiêu cả năm",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The store rewards loyal customers with exclusive discounts.",
+     "vi": "Cửa hàng thưởng cho khách hàng thân thiết các ưu đãi giảm giá độc quyền.",
+     "chunks": [
+      {
+       "t": "The store",
+       "r": "S",
+       "vi": "cửa hàng"
+      },
+      {
+       "t": "rewards",
+       "r": "V",
+       "vi": "thưởng",
+       "k": true
+      },
+      {
+       "t": "loyal customers",
+       "r": "O-người",
+       "vi": "cho khách hàng thân thiết",
+       "k": true
+      },
+      {
+       "t": "with exclusive discounts.",
+       "r": "giới từ + O",
+       "vi": "các ưu đãi giảm giá độc quyền",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-charge",
+   "p": "charge sb (sth) for sth",
+   "form": "charge + O(người) + O(tiền) + for + O(vật)",
+   "vi": "tính phí / thu của ai bao nhiêu vì cái gì",
+   "core": true,
+   "pass": "sb is charged (sth) for sth",
+   "note": "Người bị tính phí đứng ngay sau charge; lý do đứng sau \"for\": charge us $50 for delivery. \"charge sth to sb's account\" là ghi vào tài khoản của ai (khác nghĩa).",
+   "ex": [
+    {
+     "en": "The hotel charged us an extra fee for late checkout.",
+     "vi": "Khách sạn đã tính của chúng tôi một khoản phí phụ vì trả phòng muộn.",
+     "chunks": [
+      {
+       "t": "The hotel",
+       "r": "S",
+       "vi": "khách sạn"
+      },
+      {
+       "t": "charged",
+       "r": "V",
+       "vi": "đã tính",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O-người",
+       "vi": "chúng tôi",
+       "k": true
+      },
+      {
+       "t": "an extra fee",
+       "r": "O-vật",
+       "vi": "một khoản phí phụ",
+       "k": true
+      },
+      {
+       "t": "for late checkout.",
+       "r": "giới từ + O",
+       "vi": "vì trả phòng muộn",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The repair shop did not charge the customer for the replacement part.",
+     "vi": "Cửa hàng sửa chữa đã không thu tiền của khách hàng cho linh kiện thay thế.",
+     "chunks": [
+      {
+       "t": "The repair shop",
+       "r": "S",
+       "vi": "cửa hàng sửa chữa"
+      },
+      {
+       "t": "did not charge",
+       "r": "V",
+       "vi": "đã không thu tiền",
+       "k": true
+      },
+      {
+       "t": "the customer",
+       "r": "O-người",
+       "vi": "của khách hàng",
+       "k": true
+      },
+      {
+       "t": "for the replacement part.",
+       "r": "giới từ + O",
+       "vi": "cho linh kiện thay thế",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-congratulate",
+   "p": "congratulate sb on sth / V-ing",
+   "form": "congratulate + O(người) + on + O(vật) / V-ing",
+   "vi": "chúc mừng ai về điều gì",
+   "note": "Dùng \"on\", không dùng \"for\": congratulate sb ON a promotion. Danh từ \"congratulations ON ...\" cũng dùng on.",
+   "ex": [
+    {
+     "en": "The director congratulated the team on winning the national award.",
+     "vi": "Giám đốc đã chúc mừng nhóm vì đã giành giải thưởng quốc gia.",
+     "chunks": [
+      {
+       "t": "The director",
+       "r": "S",
+       "vi": "giám đốc"
+      },
+      {
+       "t": "congratulated",
+       "r": "V",
+       "vi": "đã chúc mừng",
+       "k": true
+      },
+      {
+       "t": "the team",
+       "r": "O-người",
+       "vi": "nhóm",
+       "k": true
+      },
+      {
+       "t": "on winning the national award.",
+       "r": "giới từ + O",
+       "vi": "vì đã giành giải thưởng quốc gia",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Let me congratulate you on your promotion.",
+     "vi": "Xin chúc mừng bạn được thăng chức.",
+     "chunks": [
+      {
+       "t": "Let me congratulate",
+       "r": "V",
+       "vi": "xin chúc mừng",
+       "k": true
+      },
+      {
+       "t": "you",
+       "r": "O-người",
+       "vi": "bạn",
+       "k": true
+      },
+      {
+       "t": "on your promotion.",
+       "r": "giới từ + O",
+       "vi": "về việc được thăng chức",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-compensate",
+   "p": "compensate sb for sth",
+   "form": "compensate + O(người) + for + O(vật)",
+   "vi": "bồi thường / trả bù cho ai về điều gì",
+   "pass": "sb is compensated for sth",
+   "note": "compensate sb FOR sth. Không có \"compensate sb sth\". Danh từ: compensation for sth.",
+   "ex": [
+    {
+     "en": "The airline compensated passengers for the cancelled flight.",
+     "vi": "Hãng hàng không đã bồi thường cho hành khách vì chuyến bay bị hủy.",
+     "chunks": [
+      {
+       "t": "The airline",
+       "r": "S",
+       "vi": "hãng hàng không"
+      },
+      {
+       "t": "compensated",
+       "r": "V",
+       "vi": "đã bồi thường",
+       "k": true
+      },
+      {
+       "t": "passengers",
+       "r": "O-người",
+       "vi": "cho hành khách",
+       "k": true
+      },
+      {
+       "t": "for the cancelled flight.",
+       "r": "giới từ + O",
+       "vi": "vì chuyến bay bị hủy",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The company will compensate employees for any overtime hours.",
+     "vi": "Công ty sẽ trả tiền bù cho nhân viên đối với mọi giờ làm thêm.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "will compensate",
+       "r": "V",
+       "vi": "sẽ trả tiền bù",
+       "k": true
+      },
+      {
+       "t": "employees",
+       "r": "O-người",
+       "vi": "cho nhân viên",
+       "k": true
+      },
+      {
+       "t": "for any overtime hours.",
+       "r": "giới từ + O",
+       "vi": "đối với mọi giờ làm thêm",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-protect",
+   "p": "protect sb/sth from / against sth",
+   "form": "protect + O + from / against + O(vật)",
+   "vi": "bảo vệ ai / cái gì khỏi điều gì",
+   "pass": "sb is protected from sth",
+   "note": "from/against + mối nguy hại: protect data from hackers. Nhớ \"protect ... from\" không có \"to V\".",
+   "ex": [
+    {
+     "en": "These gloves protect workers from chemical burns.",
+     "vi": "Găng tay này bảo vệ công nhân khỏi bỏng hóa chất.",
+     "chunks": [
+      {
+       "t": "These gloves",
+       "r": "S",
+       "vi": "găng tay này"
+      },
+      {
+       "t": "protect",
+       "r": "V",
+       "vi": "bảo vệ",
+       "k": true
+      },
+      {
+       "t": "workers",
+       "r": "O-người",
+       "vi": "công nhân",
+       "k": true
+      },
+      {
+       "t": "from chemical burns.",
+       "r": "giới từ + O",
+       "vi": "khỏi bỏng hóa chất",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Our insurance plan protects small businesses against financial loss.",
+     "vi": "Gói bảo hiểm của chúng tôi bảo vệ doanh nghiệp nhỏ trước các tổn thất tài chính.",
+     "chunks": [
+      {
+       "t": "Our insurance plan",
+       "r": "S",
+       "vi": "gói bảo hiểm của chúng tôi"
+      },
+      {
+       "t": "protects",
+       "r": "V",
+       "vi": "bảo vệ",
+       "k": true
+      },
+      {
+       "t": "small businesses",
+       "r": "O-vật",
+       "vi": "doanh nghiệp nhỏ",
+       "k": true
+      },
+      {
+       "t": "against financial loss.",
+       "r": "giới từ + O",
+       "vi": "trước các tổn thất tài chính",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-replace",
+   "p": "replace A with B",
+   "form": "replace + O(cũ) + with + O(mới)",
+   "vi": "thay A bằng B",
+   "alt": "A be replaced by/with B (bị động)",
+   "core": true,
+   "note": "A là cái bị thay, B là cái thay vào. Tiếng Việt cũng nói \"thay A bằng B\", nhưng dễ đảo vai trò khi nghe tiếng Anh. Passive: A was replaced with B.",
+   "ex": [
+    {
+     "en": "The firm replaced its old servers with cloud-based systems.",
+     "vi": "Công ty đã thay các máy chủ cũ bằng hệ thống đám mây.",
+     "chunks": [
+      {
+       "t": "The firm",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "replaced",
+       "r": "V",
+       "vi": "đã thay",
+       "k": true
+      },
+      {
+       "t": "its old servers",
+       "r": "O-vật",
+       "vi": "các máy chủ cũ",
+       "k": true
+      },
+      {
+       "t": "with cloud-based systems.",
+       "r": "giới từ + O",
+       "vi": "bằng hệ thống đám mây",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The outdated manual has been replaced with an online guide.",
+     "vi": "Cuốn hướng dẫn lỗi thời đã được thay bằng một bản hướng dẫn trực tuyến.",
+     "chunks": [
+      {
+       "t": "The outdated manual",
+       "r": "S",
+       "vi": "cuốn hướng dẫn lỗi thời"
+      },
+      {
+       "t": "has been replaced",
+       "r": "V",
+       "vi": "đã được thay",
+       "k": true
+      },
+      {
+       "t": "with an online guide.",
+       "r": "giới từ + O",
+       "vi": "bằng một bản hướng dẫn trực tuyến",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-compare",
+   "p": "compare A with / to B",
+   "form": "compare + O + with / to + O",
+   "vi": "so sánh A với B",
+   "pass": "A is compared with/to B",
+   "note": "Trong đề thi thường là \"with\" (hoặc \"to\" ở dạng compared to). \"compared with last year\" = so với năm ngoái.",
+   "ex": [
+    {
+     "en": "The report compares this year's sales with last year's.",
+     "vi": "Báo cáo so sánh doanh số năm nay với doanh số năm ngoái.",
+     "chunks": [
+      {
+       "t": "The report",
+       "r": "S",
+       "vi": "báo cáo"
+      },
+      {
+       "t": "compares",
+       "r": "V",
+       "vi": "so sánh",
+       "k": true
+      },
+      {
+       "t": "this year's sales",
+       "r": "O-vật",
+       "vi": "doanh số năm nay",
+       "k": true
+      },
+      {
+       "t": "with last year's.",
+       "r": "giới từ + O",
+       "vi": "với doanh số năm ngoái",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Customers often compare our prices to those of our competitors.",
+     "vi": "Khách hàng thường so sánh giá của chúng tôi với giá của đối thủ.",
+     "chunks": [
+      {
+       "t": "Customers",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "often compare",
+       "r": "V",
+       "vi": "thường so sánh",
+       "k": true
+      },
+      {
+       "t": "our prices",
+       "r": "O-vật",
+       "vi": "giá của chúng tôi",
+       "k": true
+      },
+      {
+       "t": "to those of our competitors.",
+       "r": "giới từ + O",
+       "vi": "với giá của đối thủ",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-divide",
+   "p": "divide / convert A into B",
+   "form": "divide + O + into + O",
+   "vi": "chia / chuyển A thành B",
+   "pass": "A is divided into B",
+   "note": "Giới từ là \"into\" (thành): divide a project INTO phases. Không dùng \"to\" hay \"in\": convert A into B. (Đổi tiền cũng gặp convert dollars to euros.)",
+   "ex": [
+    {
+     "en": "The manager divided the project into three phases.",
+     "vi": "Quản lý đã chia dự án thành ba giai đoạn.",
+     "chunks": [
+      {
+       "t": "The manager",
+       "r": "S",
+       "vi": "quản lý"
+      },
+      {
+       "t": "divided",
+       "r": "V",
+       "vi": "đã chia",
+       "k": true
+      },
+      {
+       "t": "the project",
+       "r": "O-vật",
+       "vi": "dự án",
+       "k": true
+      },
+      {
+       "t": "into three phases.",
+       "r": "giới từ + O",
+       "vi": "thành ba giai đoạn",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The company converted the old warehouse into a training center.",
+     "vi": "Công ty đã chuyển nhà kho cũ thành một trung tâm đào tạo.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "converted",
+       "r": "V",
+       "vi": "đã chuyển",
+       "k": true
+      },
+      {
+       "t": "the old warehouse",
+       "r": "O-vật",
+       "vi": "nhà kho cũ",
+       "k": true
+      },
+      {
+       "t": "into a training center.",
+       "r": "giới từ + O",
+       "vi": "thành một trung tâm đào tạo",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-apologize",
+   "p": "apologize to sb for sth / V-ing",
+   "form": "apologize + to + O(người) + for + O(vật) / V-ing",
+   "vi": "xin lỗi ai vì điều gì",
+   "core": true,
+   "note": "BẪY: \"apologize sb\" là sai. Người đi sau \"to\", lý do đi sau \"for\": apologize to customers for the delay. Có thể bỏ \"to sb\": We apologize for the inconvenience.",
+   "ex": [
+    {
+     "en": "We apologize to our customers for the inconvenience.",
+     "vi": "Chúng tôi xin lỗi quý khách vì sự bất tiện này.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "apologize",
+       "r": "V",
+       "vi": "xin lỗi",
+       "k": true
+      },
+      {
+       "t": "to our customers",
+       "r": "giới từ + O",
+       "vi": "quý khách",
+       "k": true
+      },
+      {
+       "t": "for the inconvenience.",
+       "r": "giới từ + O",
+       "vi": "vì sự bất tiện này",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Mr. Reed apologized to the committee for missing the deadline.",
+     "vi": "Ông Reed đã xin lỗi ủy ban vì bỏ lỡ hạn chót.",
+     "chunks": [
+      {
+       "t": "Mr. Reed",
+       "r": "S",
+       "vi": "ông Reed"
+      },
+      {
+       "t": "apologized",
+       "r": "V",
+       "vi": "đã xin lỗi",
+       "k": true
+      },
+      {
+       "t": "to the committee",
+       "r": "giới từ + O",
+       "vi": "ủy ban",
+       "k": true
+      },
+      {
+       "t": "for missing the deadline.",
+       "r": "giới từ + O",
+       "vi": "vì bỏ lỡ hạn chót",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u04-spend",
+   "p": "spend time/money on sth / V-ing",
+   "form": "spend + O(thời gian/tiền) + on + O / V-ing",
+   "vi": "dành / chi thời gian, tiền cho việc gì",
+   "core": true,
+   "note": "spend + thời gian + V-ing (không \"to V\"): spend time answering emails. spend + tiền + on + danh từ: spend money on training. Đừng nhầm với \"it takes sb time to V\".",
+   "ex": [
+    {
+     "en": "The company spends over $200,000 on staff training every year.",
+     "vi": "Mỗi năm công ty chi hơn 200.000 đô la cho việc đào tạo nhân viên.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "spends",
+       "r": "V",
+       "vi": "chi",
+       "k": true
+      },
+      {
+       "t": "over $200,000",
+       "r": "O-vật",
+       "vi": "hơn 200.000 đô la",
+       "k": true
+      },
+      {
+       "t": "on staff training",
+       "r": "giới từ + O",
+       "vi": "cho việc đào tạo nhân viên",
+       "k": true
+      },
+      {
+       "t": "every year.",
+       "r": "trạng ngữ",
+       "vi": "mỗi năm"
+      }
+     ],
+     "viOrder": [
+      4,
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Staff spend too much time answering routine emails.",
+     "vi": "Nhân viên mất quá nhiều thời gian để trả lời các email thông thường.",
+     "chunks": [
+      {
+       "t": "Staff",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "spend",
+       "r": "V",
+       "vi": "mất",
+       "k": true
+      },
+      {
+       "t": "too much time",
+       "r": "O-vật",
+       "vi": "quá nhiều thời gian",
+       "k": true
+      },
+      {
+       "t": "answering routine emails.",
+       "r": "V-ing",
+       "vi": "để trả lời các email thông thường",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "type": "prep",
+   "q": "The hotel provides every guest ------- a complimentary breakfast.",
+   "options": [
+    "for",
+    "of",
+    "with",
+    "to"
+   ],
+   "ans": 2,
+   "why": "provide sb WITH sth. (provide sth to/for sb là dạng khác; vì có \"every guest\" ngay sau động từ nên cần \"with\".)",
+   "vi": "Khách sạn cung cấp bữa sáng miễn phí cho mọi khách.",
+   "pid": "u04-provide"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "The password system prevents outsiders from ------- the files.",
+   "options": [
+    "opening",
+    "open",
+    "to open",
+    "opened"
+   ],
+   "ans": 0,
+   "why": "prevent sb from + V-ing: sau \"from\" phải là V-ing.",
+   "vi": "Hệ thống mật khẩu ngăn người ngoài mở các tệp.",
+   "pid": "u04-prevent"
+  },
+  {
+   "type": "word-choice",
+   "q": "The new policy ------- employees from working remotely more than two days a week.",
+   "options": [
+    "allows",
+    "permits",
+    "enables",
+    "prohibits"
+   ],
+   "ans": 3,
+   "why": "Chỉ prohibit đi với \"sb from V-ing\". Allow/permit/enable đi với \"sb to V\".",
+   "vi": "Chính sách mới cấm nhân viên làm việc từ xa quá hai ngày mỗi tuần.",
+   "pid": "u04-prohibit"
+  },
+  {
+   "type": "prep",
+   "q": "The airline will compensate passengers ------- the long delay.",
+   "options": [
+    "with",
+    "for",
+    "of",
+    "to"
+   ],
+   "ans": 1,
+   "why": "compensate sb FOR sth: bồi thường cho ai về việc gì.",
+   "vi": "Hãng hàng không sẽ bồi thường cho hành khách vì sự chậm trễ kéo dài.",
+   "pid": "u04-compensate"
+  },
+  {
+   "type": "object",
+   "q": "We would like to inform ------- that the office will be closed on Friday.",
+   "options": [
+    "to all staff",
+    "all staff",
+    "for all staff",
+    "of all staff"
+   ],
+   "ans": 1,
+   "why": "inform + người + that ...: người đứng ngay sau inform, không có giới từ.",
+   "vi": "Chúng tôi xin thông báo cho toàn thể nhân viên rằng văn phòng sẽ đóng cửa vào thứ Sáu.",
+   "pid": "u04-inform"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "Managers spend too much time ------- reports.",
+   "options": [
+    "to write",
+    "write",
+    "written",
+    "writing"
+   ],
+   "ans": 3,
+   "why": "spend + time + V-ing, không dùng to V.",
+   "vi": "Các quản lý dành quá nhiều thời gian để viết báo cáo.",
+   "pid": "u04-spend"
+  },
+  {
+   "type": "word-choice",
+   "q": "We would like to ------- you for your generous donation.",
+   "options": [
+    "thank",
+    "inform",
+    "remind",
+    "notify"
+   ],
+   "ans": 0,
+   "why": "Chỉ thank sb FOR sth. Inform/remind/notify đi với of/about/that, không đi với \"for\".",
+   "vi": "Chúng tôi xin cảm ơn bạn vì khoản quyên góp hào phóng.",
+   "pid": "u04-thank"
+  },
+  {
+   "type": "form",
+   "q": "Staff were not ------- of the system outage.",
+   "options": [
+    "informing",
+    "inform",
+    "informed",
+    "information"
+   ],
+   "ans": 2,
+   "why": "Cần quá khứ phân từ trong passive: be informed of sth.",
+   "vi": "Nhân viên đã không được thông báo về sự cố ngừng hệ thống.",
+   "pid": "u04-inform"
+  },
+  {
+   "type": "word-choice",
+   "q": "This notice ------- you of the upcoming deadline.",
+   "options": [
+    "explains",
+    "announces",
+    "mentions",
+    "reminds"
+   ],
+   "ans": 3,
+   "why": "Chỉ remind sb OF sth có dạng \"người + of\". Explain/announce/mention cần \"sth to sb\" (bài 3).",
+   "vi": "Thông báo này nhắc bạn về hạn chót sắp tới.",
+   "pid": "u04-remind"
+  },
+  {
+   "type": "prep",
+   "q": "The hotel charged us an extra fee ------- late checkout.",
+   "options": [
+    "to",
+    "for",
+    "with",
+    "of"
+   ],
+   "ans": 1,
+   "why": "charge sb sth FOR sth: tính phí ai cái gì vì việc gì.",
+   "vi": "Khách sạn đã tính của chúng tôi một khoản phí phụ vì trả phòng muộn.",
+   "pid": "u04-charge"
+  },
+  {
+   "type": "prep",
+   "q": "The airline apologized ------- passengers for the delay.",
+   "options": [
+    "to",
+    "for",
+    "with",
+    "about"
+   ],
+   "ans": 0,
+   "why": "apologize TO sb FOR sth. Không nói \"apologize sb\".",
+   "vi": "Hãng hàng không đã xin lỗi hành khách vì sự chậm trễ.",
+   "pid": "u04-apologize"
+  },
+  {
+   "type": "prep",
+   "q": "Please compare this quote ------- the one from the other supplier.",
+   "options": [
+    "at",
+    "for",
+    "with",
+    "on"
+   ],
+   "ans": 2,
+   "why": "compare A WITH/TO B. Trong các lựa chọn chỉ có \"with\".",
+   "vi": "Vui lòng so sánh báo giá này với báo giá của nhà cung cấp kia.",
+   "pid": "u04-compare"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Công ty cung cấp cho mọi nhân viên một máy tính xách tay.",
+   "chunks": [
+    "The company",
+    "provides",
+    "every employee",
+    "with a laptop."
+   ],
+   "pid": "u04-provide",
+   "why": "provide + người + with + vật.",
+   "dist": "of a laptop"
+  },
+  {
+   "vi": "Phần mềm mới ngăn nhân viên truy cập các tệp bí mật.",
+   "chunks": [
+    "The new software",
+    "prevents",
+    "staff",
+    "from accessing",
+    "confidential files."
+   ],
+   "pid": "u04-prevent",
+   "why": "prevent + người + from + V-ing.",
+   "dist": "to access"
+  },
+  {
+   "vi": "Thông báo này nhắc tất cả hội viên về cuộc họp thường niên.",
+   "chunks": [
+    "This message",
+    "reminds",
+    "all members",
+    "of the annual meeting."
+   ],
+   "pid": "u04-remind",
+   "why": "remind + người + of + vật (nhắc về điều gì).",
+   "dist": "to the annual meeting"
+  },
+  {
+   "vi": "Khách sạn đã thu của chúng tôi một khoản phí phụ cho việc đỗ xe.",
+   "chunks": [
+    "The hotel",
+    "charged",
+    "us",
+    "an extra fee",
+    "for parking."
+   ],
+   "pid": "u04-charge",
+   "why": "charge + người + tiền + for + lý do. KHÔNG nói \"charge sb with a fee\" (charge sb with = buộc tội ai).",
+   "dist": "with an extra fee"
+  },
+  {
+   "vi": "Công ty đã thay các máy in cũ bằng các mẫu nhanh hơn.",
+   "chunks": [
+    "The firm",
+    "replaced",
+    "its old printers",
+    "with faster models."
+   ],
+   "pid": "u04-replace",
+   "why": "replace + A (cũ) + with + B (mới).",
+   "dist": "by its old printers"
+  },
+  {
+   "vi": "Nhân viên mất quá nhiều thời gian để trả lời email.",
+   "chunks": [
+    "Employees",
+    "spend",
+    "too much time",
+    "answering emails."
+   ],
+   "pid": "u04-spend",
+   "why": "spend + thời gian + V-ing.",
+   "dist": "to answer"
+  }
+ ],
+ "translate": [
+  {
+   "en": "The new management system provides all branch managers with real-time sales data and prevents staff from altering the records.",
+   "vi": "Hệ thống quản lý mới cung cấp dữ liệu bán hàng theo thời gian thực cho tất cả quản lý chi nhánh và ngăn nhân viên chỉnh sửa các hồ sơ.",
+   "chunks": [
+    {
+     "t": "The new management system",
+     "r": "S",
+     "vi": "hệ thống quản lý mới"
+    },
+    {
+     "t": "provides",
+     "r": "V",
+     "vi": "cung cấp",
+     "k": true
+    },
+    {
+     "t": "all branch managers",
+     "r": "O-người",
+     "vi": "cho tất cả quản lý chi nhánh",
+     "k": true
+    },
+    {
+     "t": "with real-time sales data",
+     "r": "giới từ + O",
+     "vi": "dữ liệu bán hàng theo thời gian thực",
+     "k": true
+    },
+    {
+     "t": "and prevents",
+     "r": "V",
+     "vi": "và ngăn",
+     "k": true
+    },
+    {
+     "t": "staff",
+     "r": "O-người",
+     "vi": "nhân viên",
+     "k": true
+    },
+    {
+     "t": "from altering the records.",
+     "r": "giới từ + O",
+     "vi": "chỉnh sửa các hồ sơ",
+     "k": true
+    }
+   ],
+   "note": "provide sb WITH sth: khi dịch phải đảo thành \"cung cấp [sth] cho [sb]\". prevent sb FROM V-ing → \"ngăn sb làm gì\" (bỏ \"khỏi\"). Hai động từ chung chủ ngữ nên dịch tuần tự.",
+   "pid": "u04-provide",
+   "viOrder": [
+    0,
+    1,
+    3,
+    2,
+    4,
+    5,
+    6
+   ],
+   "viOpts": [
+    "Hệ thống quản lý mới được các quản lý chi nhánh cung cấp dữ liệu bán hàng thời gian thực và ngăn nhân viên chỉnh sửa các hồ sơ.",
+    "Hệ thống quản lý mới cung cấp dữ liệu bán hàng theo thời gian thực cho tất cả quản lý chi nhánh và ngăn nhân viên chỉnh sửa các hồ sơ.",
+    "Hệ thống quản lý mới cung cấp cho nhân viên dữ liệu bán hàng và khuyến khích quản lý chi nhánh chỉnh sửa các hồ sơ."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "Please remind all team members of the safety briefing and inform them about the new emergency exits.",
+   "vi": "Vui lòng nhắc tất cả thành viên trong nhóm về buổi hướng dẫn an toàn và thông báo cho họ về các lối thoát hiểm mới.",
+   "chunks": [
+    {
+     "t": "Please remind",
+     "r": "V",
+     "vi": "vui lòng nhắc",
+     "k": true
+    },
+    {
+     "t": "all team members",
+     "r": "O-người",
+     "vi": "tất cả thành viên trong nhóm",
+     "k": true
+    },
+    {
+     "t": "of the safety briefing",
+     "r": "giới từ + O",
+     "vi": "về buổi hướng dẫn an toàn",
+     "k": true
+    },
+    {
+     "t": "and inform",
+     "r": "V",
+     "vi": "và thông báo",
+     "k": true
+    },
+    {
+     "t": "them",
+     "r": "O-người",
+     "vi": "cho họ",
+     "k": true
+    },
+    {
+     "t": "about the new emergency exits.",
+     "r": "giới từ + O",
+     "vi": "về các lối thoát hiểm mới",
+     "k": true
+    }
+   ],
+   "note": "remind sb OF sth và inform sb ABOUT/OF sth đều có cấu trúc \"động từ + người + giới từ + vật\". Giới từ of/about dịch là \"về\". Chú ý: remind sb of sth (nhắc về) ≠ remind sb to V (nhắc làm gì).",
+   "pid": "u04-remind",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "The airline apologized to the passengers for the long delay and did not charge them for rebooking.",
+   "vi": "Hãng hàng không đã xin lỗi hành khách vì chuyến bay chậm trễ kéo dài và không thu phí đổi chuyến của họ.",
+   "chunks": [
+    {
+     "t": "The airline",
+     "r": "S",
+     "vi": "hãng hàng không"
+    },
+    {
+     "t": "apologized",
+     "r": "V",
+     "vi": "đã xin lỗi",
+     "k": true
+    },
+    {
+     "t": "to the passengers",
+     "r": "giới từ + O",
+     "vi": "hành khách",
+     "k": true
+    },
+    {
+     "t": "for the long delay",
+     "r": "giới từ + O",
+     "vi": "vì chuyến bay chậm trễ kéo dài",
+     "k": true
+    },
+    {
+     "t": "and did not charge",
+     "r": "V",
+     "vi": "và không thu phí",
+     "k": true
+    },
+    {
+     "t": "them",
+     "r": "O-người",
+     "vi": "của họ",
+     "k": true
+    },
+    {
+     "t": "for rebooking.",
+     "r": "giới từ + O",
+     "vi": "đổi chuyến",
+     "k": true
+    }
+   ],
+   "note": "apologize TO sb FOR sth → \"xin lỗi sb vì sth\" (to biến mất khi dịch). charge sb for sth → \"thu phí sth của sb\": tiếng Việt đảo, đưa việc bị tính phí lên trước người. Đừng dịch \"for\" ở apologize thành \"cho\": dùng \"vì\".",
+   "pid": "u04-apologize",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    5
+   ]
+  },
+  {
+   "en": "Our company spends more than half of its budget on equipping each branch with the latest software.",
+   "vi": "Công ty chúng tôi chi hơn một nửa ngân sách để trang bị phần mềm mới nhất cho từng chi nhánh.",
+   "chunks": [
+    {
+     "t": "Our company",
+     "r": "S",
+     "vi": "công ty chúng tôi"
+    },
+    {
+     "t": "spends",
+     "r": "V",
+     "vi": "chi",
+     "k": true
+    },
+    {
+     "t": "more than half of its budget",
+     "r": "O-vật",
+     "vi": "hơn một nửa ngân sách",
+     "k": true
+    },
+    {
+     "t": "on equipping",
+     "r": "V-ing",
+     "vi": "để trang bị",
+     "k": true
+    },
+    {
+     "t": "each branch",
+     "r": "O",
+     "vi": "cho từng chi nhánh",
+     "k": true
+    },
+    {
+     "t": "with the latest software.",
+     "r": "giới từ + O",
+     "vi": "phần mềm mới nhất",
+     "k": true
+    }
+   ],
+   "note": "spend money on V-ing = chi tiền cho việc ... . equip sb/sth WITH sth → \"trang bị [sth] cho [sb]\": phải đảo, đưa phần \"with the latest software\" lên trước \"each branch\".",
+   "pid": "u04-spend",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    5,
+    4
+   ],
+   "viOpts": [
+    "Công ty chúng tôi chi hơn một nửa ngân sách của mỗi chi nhánh để mua phần mềm mới nhất cho công ty.",
+    "Công ty chúng tôi dành hơn một nửa ngân sách trang bị cho phần mềm mới nhất của từng chi nhánh.",
+    "Công ty chúng tôi chi hơn một nửa ngân sách để trang bị phần mềm mới nhất cho từng chi nhánh."
+   ],
+   "viAns": 2
+  },
+  {
+   "en": "The board congratulated Ms. Lopez on being promoted, and presented her with an award for her outstanding service.",
+   "vi": "Hội đồng quản trị đã chúc mừng cô Lopez được thăng chức và trao tặng cô một giải thưởng cho sự phục vụ xuất sắc.",
+   "chunks": [
+    {
+     "t": "The board",
+     "r": "S",
+     "vi": "hội đồng quản trị"
+    },
+    {
+     "t": "congratulated",
+     "r": "V",
+     "vi": "đã chúc mừng",
+     "k": true
+    },
+    {
+     "t": "Ms. Lopez",
+     "r": "O-người",
+     "vi": "cô Lopez",
+     "k": true
+    },
+    {
+     "t": "on being promoted,",
+     "r": "giới từ + O",
+     "vi": "về việc được thăng chức",
+     "k": true
+    },
+    {
+     "t": "and presented",
+     "r": "V",
+     "vi": "và trao tặng",
+     "k": true
+    },
+    {
+     "t": "her",
+     "r": "O-người",
+     "vi": "cô",
+     "k": true
+    },
+    {
+     "t": "with an award",
+     "r": "giới từ + O",
+     "vi": "một giải thưởng",
+     "k": true
+    },
+    {
+     "t": "for her outstanding service.",
+     "r": "giới từ + O",
+     "vi": "cho sự phục vụ xuất sắc của cô"
+    }
+   ],
+   "note": "congratulate sb ON sth → \"chúc mừng sb về/vì sth\". present sb WITH sth → \"trao tặng sb sth\"; \"for\" sau đó là lý do (vì sự phục vụ xuất sắc). Giữ nguyên thứ tự khối khi dịch.",
+   "pid": "u04-congratulate",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "en": "The firm replaced its old copiers with energy-efficient models and now spends less on electricity than last year.",
+   "vi": "Công ty đã thay các máy photocopy cũ bằng các mẫu tiết kiệm năng lượng và hiện chi cho điện ít hơn năm ngoái.",
+   "chunks": [
+    {
+     "t": "The firm",
+     "r": "S",
+     "vi": "công ty"
+    },
+    {
+     "t": "replaced",
+     "r": "V",
+     "vi": "đã thay",
+     "k": true
+    },
+    {
+     "t": "its old copiers",
+     "r": "O-vật",
+     "vi": "các máy photocopy cũ",
+     "k": true
+    },
+    {
+     "t": "with energy-efficient models",
+     "r": "giới từ + O",
+     "vi": "bằng các mẫu tiết kiệm năng lượng",
+     "k": true
+    },
+    {
+     "t": "and now spends",
+     "r": "V",
+     "vi": "và hiện chi",
+     "k": true
+    },
+    {
+     "t": "less",
+     "r": "O-vật",
+     "vi": "ít hơn",
+     "k": true
+    },
+    {
+     "t": "on electricity",
+     "r": "giới từ + O",
+     "vi": "cho điện",
+     "k": true
+    },
+    {
+     "t": "than last year.",
+     "r": "trạng ngữ",
+     "vi": "so với năm ngoái"
+    }
+   ],
+   "note": "replace A with B: A (cũ) bị thay bởi B (mới) → \"thay A bằng B\". spends less on electricity: tiếng Việt đảo \"on electricity\" lên trước \"less\": \"chi cho điện ít hơn\".",
+   "pid": "u04-replace",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    6,
+    5,
+    7
+   ]
+  }
+ ]
+}

@@ -64,6 +64,9 @@ function renderShell({ active, state }) {
       <a class="nav-link ${active==='vocab'?'active':''}" href="/vocabulary">
         <span class="icon">📚</span><span>Từ vựng</span>
       </a>
+      <a class="nav-link ${active==='verbs'?'active':''}" href="/verbs">
+        <span class="icon">🧩</span><span>Cụm động từ</span>
+      </a>
       <a class="nav-link ${active==='grammar'?'active':''}" href="/grammar">
         <span class="icon">📖</span><span>Ngữ pháp</span>
       </a>

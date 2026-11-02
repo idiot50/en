@@ -1,0 +1,2340 @@
+{
+ "unit": 7,
+ "title": "Cụm động từ (phrasal verbs) hay gặp",
+ "icon": "🧩",
+ "intro": "Cụm động từ = động từ + tiểu từ (up, out, off, in, over…), nghĩa thường khác hẳn động từ gốc: call off = hủy, put off = hoãn. TOEIC rất thích hỏi chúng ở Part 5/6 và đưa vào email, thông báo công việc. Mẹo: học theo cặp đồng nghĩa (put off = postpone, carry out = conduct) và nhớ cụm nào TÁCH được (fill it out) hay KHÔNG tách (look into it).",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "V + O + tiểu từ (tách được)",
+   "fill the form out / fill it out",
+   "điền vào mẫu đơn"
+  ],
+  [
+   "V + tiểu từ + O (nhiều cụm)",
+   "call off the event",
+   "hủy sự kiện"
+  ],
+  [
+   "V + tiểu từ + giới từ + O (không tách)",
+   "come up with a plan",
+   "nghĩ ra kế hoạch"
+  ],
+  [
+   "Đại từ (it/them) luôn ở giữa",
+   "hand it in",
+   "nộp nó"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u07-set-up",
+   "p": "set up sth / set sth up",
+   "form": "set up + O  |  set + O + up",
+   "vi": "thành lập; lắp đặt, cài đặt; sắp xếp (cuộc họp, lịch hẹn)",
+   "alt": "= establish (thành lập), arrange (sắp xếp)",
+   "note": "Tách được: set it up (đại từ PHẢI nằm giữa). Danh từ: a set-up.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The company set up a new branch in Da Nang.",
+     "vi": "Công ty đã thành lập một chi nhánh mới ở Đà Nẵng.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "set up",
+       "r": "V",
+       "vi": "thành lập",
+       "k": true
+      },
+      {
+       "t": "a new branch",
+       "r": "O-vật",
+       "vi": "một chi nhánh mới",
+       "k": true
+      },
+      {
+       "t": "in Da Nang.",
+       "r": "giới từ + O",
+       "vi": "ở Đà Nẵng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Mr. Chen set up an appointment with the supplier for next Tuesday.",
+     "vi": "Ông Chen đã sắp xếp một cuộc hẹn với nhà cung cấp vào thứ Ba tới.",
+     "chunks": [
+      {
+       "t": "Mr. Chen",
+       "r": "S",
+       "vi": "ông Chen"
+      },
+      {
+       "t": "set up",
+       "r": "V",
+       "vi": "sắp xếp",
+       "k": true
+      },
+      {
+       "t": "an appointment",
+       "r": "O-vật",
+       "vi": "một cuộc hẹn",
+       "k": true
+      },
+      {
+       "t": "with the supplier",
+       "r": "giới từ + O",
+       "vi": "với nhà cung cấp"
+      },
+      {
+       "t": "for next Tuesday.",
+       "r": "giới từ + O",
+       "vi": "vào thứ Ba tới"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-carry-out",
+   "p": "carry out sth / carry sth out",
+   "form": "carry out + O",
+   "vi": "thực hiện, tiến hành (khảo sát, kế hoạch, kiểm tra)",
+   "alt": "= conduct, perform, implement",
+   "pass": "sth be carried out",
+   "note": "Hay đi với survey, research, inspection, plan, instructions. Tách được: carry it out.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The research team carried out a survey of 500 customers.",
+     "vi": "Nhóm nghiên cứu đã tiến hành khảo sát 500 khách hàng.",
+     "chunks": [
+      {
+       "t": "The research team",
+       "r": "S",
+       "vi": "nhóm nghiên cứu"
+      },
+      {
+       "t": "carried out",
+       "r": "V",
+       "vi": "đã tiến hành",
+       "k": true
+      },
+      {
+       "t": "a survey",
+       "r": "O-vật",
+       "vi": "một cuộc khảo sát",
+       "k": true
+      },
+      {
+       "t": "of 500 customers.",
+       "r": "giới từ + O",
+       "vi": "500 khách hàng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "All safety checks must be carried out before the machines are used.",
+     "vi": "Mọi cuộc kiểm tra an toàn phải được thực hiện trước khi sử dụng máy.",
+     "chunks": [
+      {
+       "t": "All safety checks",
+       "r": "S",
+       "vi": "mọi cuộc kiểm tra an toàn"
+      },
+      {
+       "t": "must be carried out",
+       "r": "V",
+       "vi": "phải được thực hiện",
+       "k": true
+      },
+      {
+       "t": "before the machines are used.",
+       "r": "mệnh đề",
+       "vi": "trước khi máy được sử dụng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-fill-out",
+   "p": "fill out sth / fill sth out",
+   "form": "fill out + O (mẫu đơn)",
+   "vi": "điền vào (mẫu đơn, phiếu khảo sát)",
+   "alt": "= complete; (Anh-Anh thường dùng fill in)",
+   "note": "Tách được: fill it out, KHÔNG nói \"fill out it\".",
+   "core": true,
+   "vs": "fill in for sb = làm thay ai (nghĩa khác hẳn)",
+   "ex": [
+    {
+     "en": "Please fill out the registration form in block letters.",
+     "vi": "Vui lòng điền vào mẫu đăng ký bằng chữ in hoa.",
+     "chunks": [
+      {
+       "t": "Please fill out",
+       "r": "V",
+       "vi": "vui lòng điền vào",
+       "k": true
+      },
+      {
+       "t": "the registration form",
+       "r": "O-vật",
+       "vi": "mẫu đăng ký",
+       "k": true
+      },
+      {
+       "t": "in block letters.",
+       "r": "giới từ + O",
+       "vi": "bằng chữ in hoa"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The form is short, so please fill it out now.",
+     "vi": "Mẫu đơn này ngắn thôi, nên hãy điền ngay bây giờ.",
+     "chunks": [
+      {
+       "t": "The form is short,",
+       "r": "mệnh đề",
+       "vi": "mẫu đơn ngắn thôi"
+      },
+      {
+       "t": "so",
+       "r": "liên từ",
+       "vi": "nên"
+      },
+      {
+       "t": "please fill it out",
+       "r": "V",
+       "vi": "hãy điền nó",
+       "k": true
+      },
+      {
+       "t": "now.",
+       "r": "trạng ngữ",
+       "vi": "ngay bây giờ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-hand-in",
+   "p": "hand in sth / hand sth in",
+   "form": "hand in + O (+ to sb)",
+   "vi": "nộp (bài, báo cáo, đơn)",
+   "alt": "= submit, turn in",
+   "note": "Tách được: hand it in. Đừng nhầm với hand out (phát).",
+   "core": true,
+   "vs": "hand out = phát cho nhiều người",
+   "ex": [
+    {
+     "en": "Applicants must hand in their résumés by the end of the month.",
+     "vi": "Ứng viên phải nộp hồ sơ xin việc trước cuối tháng.",
+     "chunks": [
+      {
+       "t": "Applicants",
+       "r": "S",
+       "vi": "các ứng viên"
+      },
+      {
+       "t": "must hand in",
+       "r": "V",
+       "vi": "phải nộp",
+       "k": true
+      },
+      {
+       "t": "their résumés",
+       "r": "O-vật",
+       "vi": "hồ sơ xin việc của họ",
+       "k": true
+      },
+      {
+       "t": "by the end of the month.",
+       "r": "trạng ngữ",
+       "vi": "trước cuối tháng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Staff should hand their timesheets in to the HR office every Friday.",
+     "vi": "Nhân viên nên nộp bảng chấm công cho phòng nhân sự vào mỗi thứ Sáu.",
+     "chunks": [
+      {
+       "t": "Staff",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "should hand",
+       "r": "V",
+       "vi": "nên nộp",
+       "k": true
+      },
+      {
+       "t": "their timesheets",
+       "r": "O-vật",
+       "vi": "bảng chấm công",
+       "k": true
+      },
+      {
+       "t": "in",
+       "r": "V",
+       "vi": "(tiểu từ)",
+       "k": true
+      },
+      {
+       "t": "to the HR office",
+       "r": "giới từ + O",
+       "vi": "cho phòng nhân sự"
+      },
+      {
+       "t": "every Friday.",
+       "r": "trạng ngữ",
+       "vi": "vào mỗi thứ Sáu"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-go-over",
+   "p": "go over sth",
+   "form": "go over + O",
+   "vi": "xem lại, rà soát kỹ; điểm lại (nội dung)",
+   "alt": "= review, examine, check",
+   "note": "KHÔNG tách: go over the report / go over it.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Let's go over the budget before the board meeting.",
+     "vi": "Hãy xem lại ngân sách trước cuộc họp hội đồng quản trị.",
+     "chunks": [
+      {
+       "t": "Let's go over",
+       "r": "V",
+       "vi": "hãy xem lại",
+       "k": true
+      },
+      {
+       "t": "the budget",
+       "r": "O-vật",
+       "vi": "ngân sách",
+       "k": true
+      },
+      {
+       "t": "before the board meeting.",
+       "r": "trạng ngữ",
+       "vi": "trước cuộc họp hội đồng quản trị"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The auditor went over the accounts line by line.",
+     "vi": "Kiểm toán viên đã rà soát các tài khoản từng dòng một.",
+     "chunks": [
+      {
+       "t": "The auditor",
+       "r": "S",
+       "vi": "kiểm toán viên"
+      },
+      {
+       "t": "went over",
+       "r": "V",
+       "vi": "đã rà soát",
+       "k": true
+      },
+      {
+       "t": "the accounts",
+       "r": "O-vật",
+       "vi": "các tài khoản",
+       "k": true
+      },
+      {
+       "t": "line by line.",
+       "r": "trạng ngữ",
+       "vi": "từng dòng một"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-look-into",
+   "p": "look into sth",
+   "form": "look into + O",
+   "vi": "điều tra, xem xét (một vấn đề, sự cố)",
+   "alt": "= investigate, examine",
+   "note": "KHÔNG tách. Khác look at (nhìn vào).",
+   "core": true,
+   "ex": [
+    {
+     "en": "We will look into the billing error right away.",
+     "vi": "Chúng tôi sẽ xem xét ngay lỗi hóa đơn.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "will look into",
+       "r": "V",
+       "vi": "sẽ xem xét",
+       "k": true
+      },
+      {
+       "t": "the billing error",
+       "r": "O-vật",
+       "vi": "lỗi hóa đơn",
+       "k": true
+      },
+      {
+       "t": "right away.",
+       "r": "trạng ngữ",
+       "vi": "ngay lập tức"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The committee is looking into ways to reduce energy costs.",
+     "vi": "Ủy ban đang tìm hiểu các cách giảm chi phí năng lượng.",
+     "chunks": [
+      {
+       "t": "The committee",
+       "r": "S",
+       "vi": "ủy ban"
+      },
+      {
+       "t": "is looking into",
+       "r": "V",
+       "vi": "đang tìm hiểu",
+       "k": true
+      },
+      {
+       "t": "ways",
+       "r": "O-vật",
+       "vi": "các cách",
+       "k": true
+      },
+      {
+       "t": "to reduce energy costs.",
+       "r": "to V",
+       "vi": "để giảm chi phí năng lượng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-come-up-with",
+   "p": "come up with sth",
+   "form": "come up with + O (idea/plan/solution)",
+   "vi": "nghĩ ra, đề ra (ý tưởng, giải pháp, kế hoạch)",
+   "alt": "= think of, devise, propose",
+   "note": "KHÔNG tách; luôn cần đủ 3 từ come up with.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The design team came up with an innovative solution.",
+     "vi": "Nhóm thiết kế đã nghĩ ra một giải pháp sáng tạo.",
+     "chunks": [
+      {
+       "t": "The design team",
+       "r": "S",
+       "vi": "nhóm thiết kế"
+      },
+      {
+       "t": "came up with",
+       "r": "V",
+       "vi": "đã nghĩ ra",
+       "k": true
+      },
+      {
+       "t": "an innovative solution.",
+       "r": "O-vật",
+       "vi": "một giải pháp sáng tạo",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Can anyone come up with a better slogan for the campaign?",
+     "vi": "Có ai nghĩ ra được khẩu hiệu hay hơn cho chiến dịch không?",
+     "chunks": [
+      {
+       "t": "Can anyone",
+       "r": "S",
+       "vi": "có ai"
+      },
+      {
+       "t": "come up with",
+       "r": "V",
+       "vi": "nghĩ ra",
+       "k": true
+      },
+      {
+       "t": "a better slogan",
+       "r": "O-vật",
+       "vi": "khẩu hiệu hay hơn",
+       "k": true
+      },
+      {
+       "t": "for the campaign?",
+       "r": "giới từ + O",
+       "vi": "cho chiến dịch"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-follow-up-on",
+   "p": "follow up on sth",
+   "form": "follow up on + O  |  follow up with + sb",
+   "vi": "theo dõi tiếp, xử lý tiếp (sau cuộc trao đổi/yêu cầu trước)",
+   "alt": "= pursue; follow up with sb = liên hệ lại với ai",
+   "note": "Hay mở đầu email: \"I am writing to follow up on…\". Danh từ: a follow-up.",
+   "ex": [
+    {
+     "en": "I am writing to follow up on our conversation last week.",
+     "vi": "Tôi viết thư này để tiếp nối cuộc trò chuyện của chúng ta tuần trước.",
+     "chunks": [
+      {
+       "t": "I am writing",
+       "r": "V",
+       "vi": "tôi viết thư"
+      },
+      {
+       "t": "to follow up on",
+       "r": "to V",
+       "vi": "để tiếp nối",
+       "k": true
+      },
+      {
+       "t": "our conversation",
+       "r": "O-vật",
+       "vi": "cuộc trò chuyện của chúng ta",
+       "k": true
+      },
+      {
+       "t": "last week.",
+       "r": "trạng ngữ",
+       "vi": "tuần trước"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Ms. Reyes followed up on the complaint by calling the customer.",
+     "vi": "Cô Reyes đã xử lý tiếp khiếu nại bằng cách gọi cho khách hàng.",
+     "chunks": [
+      {
+       "t": "Ms. Reyes",
+       "r": "S",
+       "vi": "cô Reyes"
+      },
+      {
+       "t": "followed up on",
+       "r": "V",
+       "vi": "xử lý tiếp",
+       "k": true
+      },
+      {
+       "t": "the complaint",
+       "r": "O-vật",
+       "vi": "khiếu nại",
+       "k": true
+      },
+      {
+       "t": "by calling the customer.",
+       "r": "giới từ + O",
+       "vi": "bằng cách gọi cho khách hàng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-point-out",
+   "p": "point out sth / point out that…",
+   "form": "point out + O  |  point out + that + S V",
+   "vi": "chỉ ra, nêu ra, lưu ý",
+   "alt": "= indicate, mention, highlight",
+   "note": "Tách được: point it out. Thường theo sau là that-clause.",
+   "ex": [
+    {
+     "en": "The auditor pointed out several errors in the report.",
+     "vi": "Kiểm toán viên đã chỉ ra một số lỗi trong báo cáo.",
+     "chunks": [
+      {
+       "t": "The auditor",
+       "r": "S",
+       "vi": "kiểm toán viên"
+      },
+      {
+       "t": "pointed out",
+       "r": "V",
+       "vi": "đã chỉ ra",
+       "k": true
+      },
+      {
+       "t": "several errors",
+       "r": "O-vật",
+       "vi": "một số lỗi",
+       "k": true
+      },
+      {
+       "t": "in the report.",
+       "r": "giới từ + O",
+       "vi": "trong báo cáo"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Mr. Hall pointed out that the deadline had been moved.",
+     "vi": "Ông Hall lưu ý rằng hạn chót đã bị dời.",
+     "chunks": [
+      {
+       "t": "Mr. Hall",
+       "r": "S",
+       "vi": "ông Hall"
+      },
+      {
+       "t": "pointed out",
+       "r": "V",
+       "vi": "lưu ý",
+       "k": true
+      },
+      {
+       "t": "that the deadline had been moved.",
+       "r": "mệnh đề",
+       "vi": "rằng hạn chót đã bị dời",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-take-over",
+   "p": "take over (sth) (from sb)",
+   "form": "take over + O",
+   "vi": "tiếp quản, đảm nhận (chức vụ, công việc); thâu tóm (công ty)",
+   "alt": "= assume responsibility for; acquire",
+   "pass": "sth be taken over by sb",
+   "note": "Có thể không có tân ngữ: \"When he retires, she will take over.\"",
+   "ex": [
+    {
+     "en": "Ms. Evans will take over the sales department in January.",
+     "vi": "Bà Evans sẽ tiếp quản phòng kinh doanh vào tháng Một.",
+     "chunks": [
+      {
+       "t": "Ms. Evans",
+       "r": "S",
+       "vi": "bà Evans"
+      },
+      {
+       "t": "will take over",
+       "r": "V",
+       "vi": "sẽ tiếp quản",
+       "k": true
+      },
+      {
+       "t": "the sales department",
+       "r": "O-vật",
+       "vi": "phòng kinh doanh",
+       "k": true
+      },
+      {
+       "t": "in January.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng Một"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The software company was taken over by a larger competitor.",
+     "vi": "Công ty phần mềm đã bị một đối thủ lớn hơn thâu tóm.",
+     "chunks": [
+      {
+       "t": "The software company",
+       "r": "S",
+       "vi": "công ty phần mềm"
+      },
+      {
+       "t": "was taken over",
+       "r": "V",
+       "vi": "đã bị thâu tóm",
+       "k": true
+      },
+      {
+       "t": "by a larger competitor.",
+       "r": "giới từ + O",
+       "vi": "bởi một đối thủ lớn hơn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-lay-off",
+   "p": "lay off sb / lay sb off",
+   "form": "lay off + O-người",
+   "vi": "sa thải, cho nghỉ việc (do cắt giảm nhân sự)",
+   "alt": "= dismiss (nhưng lay off = vì kinh tế, không do lỗi của nhân viên)",
+   "pass": "sb be laid off",
+   "note": "Danh từ: a layoff.",
+   "ex": [
+    {
+     "en": "The factory laid off 200 workers last year.",
+     "vi": "Nhà máy đã cho 200 công nhân nghỉ việc vào năm ngoái.",
+     "chunks": [
+      {
+       "t": "The factory",
+       "r": "S",
+       "vi": "nhà máy"
+      },
+      {
+       "t": "laid off",
+       "r": "V",
+       "vi": "đã cho nghỉ việc",
+       "k": true
+      },
+      {
+       "t": "200 workers",
+       "r": "O-người",
+       "vi": "200 công nhân",
+       "k": true
+      },
+      {
+       "t": "last year.",
+       "r": "trạng ngữ",
+       "vi": "năm ngoái"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Several employees were laid off after the merger.",
+     "vi": "Một số nhân viên đã bị cho nghỉ việc sau vụ sáp nhập.",
+     "chunks": [
+      {
+       "t": "Several employees",
+       "r": "S",
+       "vi": "một số nhân viên"
+      },
+      {
+       "t": "were laid off",
+       "r": "V",
+       "vi": "đã bị cho nghỉ việc",
+       "k": true
+      },
+      {
+       "t": "after the merger.",
+       "r": "giới từ + O",
+       "vi": "sau vụ sáp nhập"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-call-off",
+   "p": "call off sth / call sth off",
+   "form": "call off + O",
+   "vi": "hủy bỏ (sự kiện, kế hoạch, cuộc họp)",
+   "alt": "= cancel",
+   "note": "Tách được: call it off. Khác call on (ghé thăm) và call up (gọi điện).",
+   "core": true,
+   "ex": [
+    {
+     "en": "The organizers called off the event because of the storm.",
+     "vi": "Ban tổ chức đã hủy sự kiện vì cơn bão.",
+     "chunks": [
+      {
+       "t": "The organizers",
+       "r": "S",
+       "vi": "ban tổ chức"
+      },
+      {
+       "t": "called off",
+       "r": "V",
+       "vi": "đã hủy",
+       "k": true
+      },
+      {
+       "t": "the event",
+       "r": "O-vật",
+       "vi": "sự kiện",
+       "k": true
+      },
+      {
+       "t": "because of the storm.",
+       "r": "giới từ + O",
+       "vi": "vì cơn bão"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The union called the strike off after reaching a deal.",
+     "vi": "Công đoàn đã hủy cuộc đình công sau khi đạt được thỏa thuận.",
+     "chunks": [
+      {
+       "t": "The union",
+       "r": "S",
+       "vi": "công đoàn"
+      },
+      {
+       "t": "called",
+       "r": "V",
+       "vi": "đã hủy",
+       "k": true
+      },
+      {
+       "t": "the strike",
+       "r": "O-vật",
+       "vi": "cuộc đình công",
+       "k": true
+      },
+      {
+       "t": "off",
+       "r": "V",
+       "vi": "(tiểu từ)",
+       "k": true
+      },
+      {
+       "t": "after reaching a deal.",
+       "r": "trạng ngữ",
+       "vi": "sau khi đạt được thỏa thuận"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-put-off",
+   "p": "put off sth / put off V-ing",
+   "form": "put off + O  |  put off + V-ing",
+   "vi": "hoãn lại, trì hoãn",
+   "alt": "= postpone, delay",
+   "note": "Tách được: put it off. Sau put off dùng V-ing: put off signing.",
+   "ex": [
+    {
+     "en": "We had to put off the launch until next spring.",
+     "vi": "Chúng tôi buộc phải hoãn việc ra mắt đến mùa xuân năm sau.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "had to put off",
+       "r": "V",
+       "vi": "buộc phải hoãn",
+       "k": true
+      },
+      {
+       "t": "the launch",
+       "r": "O-vật",
+       "vi": "việc ra mắt",
+       "k": true
+      },
+      {
+       "t": "until next spring.",
+       "r": "trạng ngữ",
+       "vi": "đến mùa xuân năm sau"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Don't put off renewing your membership.",
+     "vi": "Đừng trì hoãn việc gia hạn tư cách thành viên của bạn.",
+     "chunks": [
+      {
+       "t": "Don't put off",
+       "r": "V",
+       "vi": "đừng trì hoãn",
+       "k": true
+      },
+      {
+       "t": "renewing your membership.",
+       "r": "V-ing",
+       "vi": "việc gia hạn tư cách thành viên của bạn",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1
+     ]
+    }
+   ],
+   "core": true
+  },
+  {
+   "id": "u07-draw-up",
+   "p": "draw up sth / draw sth up",
+   "form": "draw up + O (contract/plan/list)",
+   "vi": "soạn thảo, lập (hợp đồng, kế hoạch, danh sách)",
+   "alt": "= prepare, formulate",
+   "note": "Hay đi với contract, agreement, plan, list, proposal.",
+   "ex": [
+    {
+     "en": "The legal department drew up a contract for the new supplier.",
+     "vi": "Phòng pháp chế đã soạn hợp đồng cho nhà cung cấp mới.",
+     "chunks": [
+      {
+       "t": "The legal department",
+       "r": "S",
+       "vi": "phòng pháp chế"
+      },
+      {
+       "t": "drew up",
+       "r": "V",
+       "vi": "đã soạn",
+       "k": true
+      },
+      {
+       "t": "a contract",
+       "r": "O-vật",
+       "vi": "một hợp đồng",
+       "k": true
+      },
+      {
+       "t": "for the new supplier.",
+       "r": "giới từ + O",
+       "vi": "cho nhà cung cấp mới"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Please draw up a list of attendees by noon.",
+     "vi": "Vui lòng lập danh sách người tham dự trước buổi trưa.",
+     "chunks": [
+      {
+       "t": "Please draw up",
+       "r": "V",
+       "vi": "vui lòng lập",
+       "k": true
+      },
+      {
+       "t": "a list of attendees",
+       "r": "O-vật",
+       "vi": "danh sách người tham dự",
+       "k": true
+      },
+      {
+       "t": "by noon.",
+       "r": "trạng ngữ",
+       "vi": "trước buổi trưa"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-drop-off",
+   "p": "drop off sth / drop sb off",
+   "form": "drop off + O",
+   "vi": "giao, để lại (hàng, đồ) tại nơi nào đó; thả ai xuống",
+   "alt": "= deliver, leave",
+   "note": "Danh từ: a drop-off point (điểm trả hàng/khách).",
+   "ex": [
+    {
+     "en": "A courier dropped off the package at the front desk this morning.",
+     "vi": "Một nhân viên chuyển phát đã giao kiện hàng tại quầy lễ tân sáng nay.",
+     "chunks": [
+      {
+       "t": "A courier",
+       "r": "S",
+       "vi": "một nhân viên chuyển phát"
+      },
+      {
+       "t": "dropped off",
+       "r": "V",
+       "vi": "đã giao",
+       "k": true
+      },
+      {
+       "t": "the package",
+       "r": "O-vật",
+       "vi": "kiện hàng",
+       "k": true
+      },
+      {
+       "t": "at the front desk",
+       "r": "giới từ + O",
+       "vi": "tại quầy lễ tân"
+      },
+      {
+       "t": "this morning.",
+       "r": "trạng ngữ",
+       "vi": "sáng nay"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Please drop the keys off at the reception desk when you leave.",
+     "vi": "Vui lòng để lại chìa khóa ở quầy lễ tân khi bạn rời đi.",
+     "chunks": [
+      {
+       "t": "Please drop",
+       "r": "V",
+       "vi": "vui lòng để lại",
+       "k": true
+      },
+      {
+       "t": "the keys",
+       "r": "O-vật",
+       "vi": "chìa khóa",
+       "k": true
+      },
+      {
+       "t": "off",
+       "r": "V",
+       "vi": "(tiểu từ)",
+       "k": true
+      },
+      {
+       "t": "at the reception desk",
+       "r": "giới từ + O",
+       "vi": "ở quầy lễ tân"
+      },
+      {
+       "t": "when you leave.",
+       "r": "mệnh đề",
+       "vi": "khi bạn rời đi"
+      }
+     ],
+     "viOrder": [
+      0,
+      2,
+      1,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-sign-up-for",
+   "p": "sign up for sth",
+   "form": "sign up for + O",
+   "vi": "đăng ký (khóa học, bản tin, dịch vụ)",
+   "alt": "= register for, enroll in",
+   "note": "Dùng for trước thứ đăng ký. Không nói sign up the course (sai).",
+   "ex": [
+    {
+     "en": "Over 100 employees have signed up for the training course.",
+     "vi": "Hơn 100 nhân viên đã đăng ký khóa đào tạo.",
+     "chunks": [
+      {
+       "t": "Over 100 employees",
+       "r": "S",
+       "vi": "hơn 100 nhân viên"
+      },
+      {
+       "t": "have signed up for",
+       "r": "V",
+       "vi": "đã đăng ký",
+       "k": true
+      },
+      {
+       "t": "the training course.",
+       "r": "O-vật",
+       "vi": "khóa đào tạo",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "You can sign up for our newsletter on the website.",
+     "vi": "Bạn có thể đăng ký nhận bản tin của chúng tôi trên trang web.",
+     "chunks": [
+      {
+       "t": "You",
+       "r": "S",
+       "vi": "bạn"
+      },
+      {
+       "t": "can sign up for",
+       "r": "V",
+       "vi": "có thể đăng ký nhận",
+       "k": true
+      },
+      {
+       "t": "our newsletter",
+       "r": "O-vật",
+       "vi": "bản tin của chúng tôi",
+       "k": true
+      },
+      {
+       "t": "on the website.",
+       "r": "giới từ + O",
+       "vi": "trên trang web"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-turn-down",
+   "p": "turn down sth / sb",
+   "form": "turn down + O",
+   "vi": "từ chối (đề nghị, lời mời, ứng viên, đơn)",
+   "alt": "= reject, decline",
+   "pass": "sth be turned down",
+   "note": "Tách được: turn it down. Nghĩa khác: vặn nhỏ (âm lượng).",
+   "core": true,
+   "ex": [
+    {
+     "en": "The bank turned down his loan application.",
+     "vi": "Ngân hàng đã từ chối đơn vay của ông ấy.",
+     "chunks": [
+      {
+       "t": "The bank",
+       "r": "S",
+       "vi": "ngân hàng"
+      },
+      {
+       "t": "turned down",
+       "r": "V",
+       "vi": "đã từ chối",
+       "k": true
+      },
+      {
+       "t": "his loan application.",
+       "r": "O-vật",
+       "vi": "đơn vay của ông ấy",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "She turned the job offer down because of the low salary.",
+     "vi": "Cô ấy đã từ chối lời mời làm việc vì mức lương thấp.",
+     "chunks": [
+      {
+       "t": "She",
+       "r": "S",
+       "vi": "cô ấy"
+      },
+      {
+       "t": "turned",
+       "r": "V",
+       "vi": "đã từ chối",
+       "k": true
+      },
+      {
+       "t": "the job offer",
+       "r": "O-vật",
+       "vi": "lời mời làm việc",
+       "k": true
+      },
+      {
+       "t": "down",
+       "r": "V",
+       "vi": "(tiểu từ)",
+       "k": true
+      },
+      {
+       "t": "because of the low salary.",
+       "r": "giới từ + O",
+       "vi": "vì mức lương thấp"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      3,
+      2,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-run-out-of",
+   "p": "run out of sth",
+   "form": "run out of + O",
+   "vi": "hết, cạn kiệt (vật tư, thời gian)",
+   "alt": "= use up; be out of",
+   "note": "Chủ ngữ là người: We ran out of paper. Chủ ngữ là thứ hết: Paper has run out (không of).",
+   "core": true,
+   "ex": [
+    {
+     "en": "We are running out of storage space on the server.",
+     "vi": "Chúng tôi sắp hết dung lượng lưu trữ trên máy chủ.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "are running out of",
+       "r": "V",
+       "vi": "sắp hết",
+       "k": true
+      },
+      {
+       "t": "storage space",
+       "r": "O-vật",
+       "vi": "dung lượng lưu trữ",
+       "k": true
+      },
+      {
+       "t": "on the server.",
+       "r": "giới từ + O",
+       "vi": "trên máy chủ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The shop ran out of stock within an hour of opening.",
+     "vi": "Cửa hàng đã hết hàng chỉ trong vòng một giờ sau khi mở cửa.",
+     "chunks": [
+      {
+       "t": "The shop",
+       "r": "S",
+       "vi": "cửa hàng"
+      },
+      {
+       "t": "ran out of",
+       "r": "V",
+       "vi": "đã hết",
+       "k": true
+      },
+      {
+       "t": "stock",
+       "r": "O-vật",
+       "vi": "hàng",
+       "k": true
+      },
+      {
+       "t": "within an hour of opening.",
+       "r": "trạng ngữ",
+       "vi": "chỉ trong vòng một giờ sau khi mở cửa"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-get-back-to",
+   "p": "get back to sb (on/about sth)",
+   "form": "get back to + O-người",
+   "vi": "liên lạc lại, trả lời lại sau (với ai)",
+   "alt": "= reply to, contact again",
+   "note": "get back to work = quay lại làm việc.",
+   "ex": [
+    {
+     "en": "I will get back to you with the exact figures tomorrow.",
+     "vi": "Ngày mai tôi sẽ liên hệ lại với bạn kèm số liệu chính xác.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "will get back to",
+       "r": "V",
+       "vi": "sẽ liên hệ lại với",
+       "k": true
+      },
+      {
+       "t": "you",
+       "r": "O-người",
+       "vi": "bạn",
+       "k": true
+      },
+      {
+       "t": "with the exact figures",
+       "r": "giới từ + O",
+       "vi": "kèm số liệu chính xác"
+      },
+      {
+       "t": "tomorrow.",
+       "r": "trạng ngữ",
+       "vi": "ngày mai"
+      }
+     ],
+     "viOrder": [
+      4,
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Thank you for your inquiry; we will get back to you shortly.",
+     "vi": "Cảm ơn bạn đã liên hệ; chúng tôi sẽ phản hồi lại bạn trong thời gian sớm nhất.",
+     "chunks": [
+      {
+       "t": "Thank you for your inquiry;",
+       "r": "mệnh đề",
+       "vi": "cảm ơn bạn đã liên hệ (hỏi thông tin)"
+      },
+      {
+       "t": "we",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "will get back to",
+       "r": "V",
+       "vi": "sẽ phản hồi lại",
+       "k": true
+      },
+      {
+       "t": "you",
+       "r": "O-người",
+       "vi": "bạn",
+       "k": true
+      },
+      {
+       "t": "shortly.",
+       "r": "trạng ngữ",
+       "vi": "trong thời gian sớm nhất"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-hand-out",
+   "p": "hand out sth / hand sth out",
+   "form": "hand out + O (+ to sb)",
+   "vi": "phát, phân phát",
+   "alt": "= distribute, give out",
+   "note": "Danh từ: a handout (tài liệu phát tay). Khác hand in (nộp).",
+   "vs": "hand in = nộp lên",
+   "ex": [
+    {
+     "en": "Volunteers handed out free samples to passers-by.",
+     "vi": "Các tình nguyện viên đã phát hàng mẫu miễn phí cho người qua đường.",
+     "chunks": [
+      {
+       "t": "Volunteers",
+       "r": "S",
+       "vi": "các tình nguyện viên"
+      },
+      {
+       "t": "handed out",
+       "r": "V",
+       "vi": "đã phát",
+       "k": true
+      },
+      {
+       "t": "free samples",
+       "r": "O-vật",
+       "vi": "hàng mẫu miễn phí",
+       "k": true
+      },
+      {
+       "t": "to passers-by.",
+       "r": "giới từ + O",
+       "vi": "cho người qua đường"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Please hand the agenda out before the meeting starts.",
+     "vi": "Vui lòng phát chương trình họp trước khi cuộc họp bắt đầu.",
+     "chunks": [
+      {
+       "t": "Please hand",
+       "r": "V",
+       "vi": "vui lòng phát",
+       "k": true
+      },
+      {
+       "t": "the agenda",
+       "r": "O-vật",
+       "vi": "chương trình họp",
+       "k": true
+      },
+      {
+       "t": "out",
+       "r": "V",
+       "vi": "(tiểu từ)",
+       "k": true
+      },
+      {
+       "t": "before the meeting starts.",
+       "r": "mệnh đề",
+       "vi": "trước khi cuộc họp bắt đầu"
+      }
+     ],
+     "viOrder": [
+      0,
+      2,
+      1,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-make-up-for",
+   "p": "make up for sth",
+   "form": "make up for + O",
+   "vi": "bù đắp cho, đền bù",
+   "alt": "= compensate for, offset",
+   "note": "make up for lost time/revenue/the delay. Khác make up = tạo thành, bịa ra.",
+   "ex": [
+    {
+     "en": "The extra discount will make up for the delay in delivery.",
+     "vi": "Khoản giảm giá thêm sẽ bù đắp cho việc giao hàng chậm.",
+     "chunks": [
+      {
+       "t": "The extra discount",
+       "r": "S",
+       "vi": "khoản giảm giá thêm"
+      },
+      {
+       "t": "will make up for",
+       "r": "V",
+       "vi": "sẽ bù đắp cho",
+       "k": true
+      },
+      {
+       "t": "the delay in delivery.",
+       "r": "O-vật",
+       "vi": "việc giao hàng chậm",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "We worked overtime to make up for the lost time.",
+     "vi": "Chúng tôi đã làm thêm giờ để bù lại thời gian đã mất.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "worked overtime",
+       "r": "V",
+       "vi": "đã làm thêm giờ"
+      },
+      {
+       "t": "to make up for",
+       "r": "to V",
+       "vi": "để bù lại",
+       "k": true
+      },
+      {
+       "t": "the lost time.",
+       "r": "O-vật",
+       "vi": "thời gian đã mất",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u07-fill-in-for",
+   "p": "fill in for sb",
+   "form": "fill in for + O-người",
+   "vi": "làm thay, đảm nhiệm thay ai",
+   "alt": "= substitute for, cover for",
+   "note": "Khác: fill sb in (on sth) = cập nhật thông tin cho ai; fill in/out a form = điền mẫu đơn.",
+   "ex": [
+    {
+     "en": "Mr. Tanaka will fill in for Ms. Kim during her maternity leave.",
+     "vi": "Ông Tanaka sẽ làm thay bà Kim trong thời gian bà nghỉ thai sản.",
+     "chunks": [
+      {
+       "t": "Mr. Tanaka",
+       "r": "S",
+       "vi": "ông Tanaka"
+      },
+      {
+       "t": "will fill in for",
+       "r": "V",
+       "vi": "sẽ làm thay",
+       "k": true
+      },
+      {
+       "t": "Ms. Kim",
+       "r": "O-người",
+       "vi": "bà Kim",
+       "k": true
+      },
+      {
+       "t": "during her maternity leave.",
+       "r": "giới từ + O",
+       "vi": "trong thời gian bà nghỉ thai sản"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Who can fill in for me at tomorrow's meeting?",
+     "vi": "Ai có thể làm thay tôi ở cuộc họp ngày mai?",
+     "chunks": [
+      {
+       "t": "Who",
+       "r": "S",
+       "vi": "ai"
+      },
+      {
+       "t": "can fill in for",
+       "r": "V",
+       "vi": "có thể làm thay",
+       "k": true
+      },
+      {
+       "t": "me",
+       "r": "O-người",
+       "vi": "tôi",
+       "k": true
+      },
+      {
+       "t": "at tomorrow's meeting?",
+       "r": "giới từ + O",
+       "vi": "ở cuộc họp ngày mai"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "q": "The outdoor concert was ------- because of the heavy rain.",
+   "options": [
+    "called on",
+    "called off",
+    "called up",
+    "called out"
+   ],
+   "ans": 1,
+   "why": "call off = hủy. call on = ghé thăm/kêu gọi; call up = gọi điện; call out = gọi to.",
+   "vi": "Buổi hòa nhạc ngoài trời bị hủy vì mưa lớn.",
+   "pid": "u07-call-off",
+   "type": "word-choice"
+  },
+  {
+   "q": "Here is the application form. Please ------- before Friday.",
+   "options": [
+    "fill out it",
+    "fill up it",
+    "out fill it",
+    "fill it out"
+   ],
+   "ans": 3,
+   "why": "Đại từ it phải nằm giữa động từ và tiểu từ: fill it out. \"fill out it\" là sai.",
+   "vi": "Đây là mẫu đơn. Vui lòng điền trước thứ Sáu.",
+   "pid": "u07-fill-out",
+   "type": "object"
+  },
+  {
+   "q": "Customers can sign ------- our free newsletter on the website.",
+   "options": [
+    "up for",
+    "up in",
+    "out for",
+    "over for"
+   ],
+   "ans": 0,
+   "why": "sign up for = đăng ký nhận/tham gia. Các phương án còn lại không tạo thành cụm có nghĩa.",
+   "vi": "Khách hàng có thể đăng ký nhận bản tin miễn phí trên trang web.",
+   "pid": "u07-sign-up-for",
+   "type": "prep"
+  },
+  {
+   "q": "We have run ------- printer paper again.",
+   "options": [
+    "out from",
+    "up of",
+    "out of",
+    "down with"
+   ],
+   "ans": 2,
+   "why": "run out of + vật = hết, cạn. \"run out from\" sai giới từ; run up / run down không mang nghĩa \"hết\".",
+   "vi": "Chúng tôi lại hết giấy in.",
+   "pid": "u07-run-out-of",
+   "type": "prep"
+  },
+  {
+   "q": "Ms. Park will ------- Mr. Cruz while he is on leave.",
+   "options": [
+    "fill out for",
+    "fill up for",
+    "fill in for",
+    "fill off for"
+   ],
+   "ans": 2,
+   "why": "fill in for sb = làm thay ai. fill out = điền vào mẫu đơn.",
+   "vi": "Bà Park sẽ làm thay ông Cruz khi ông nghỉ phép.",
+   "pid": "u07-fill-in-for",
+   "type": "word-choice"
+  },
+  {
+   "q": "The committee has ------- a new plan to reduce costs.",
+   "options": [
+    "come up with",
+    "came up with",
+    "coming up with",
+    "comes up with"
+   ],
+   "ans": 0,
+   "why": "has + V3: has come up with (V3 của come là come).",
+   "vi": "Ủy ban đã nghĩ ra một kế hoạch mới để giảm chi phí.",
+   "pid": "u07-come-up-with",
+   "type": "form"
+  },
+  {
+   "q": "The firm will ------- 50 workers next month because of falling sales.",
+   "options": [
+    "lay on",
+    "lay in",
+    "lay by",
+    "lay off"
+   ],
+   "ans": 3,
+   "why": "lay off = cho nghỉ việc do cắt giảm. Các cụm khác không dùng nghĩa này.",
+   "vi": "Công ty sẽ cho 50 công nhân nghỉ việc vào tháng tới vì doanh số giảm.",
+   "pid": "u07-lay-off",
+   "type": "word-choice"
+  },
+  {
+   "q": "Employees must hand ------- their expense reports by the fifth of the month.",
+   "options": [
+    "away",
+    "in",
+    "out",
+    "up"
+   ],
+   "ans": 1,
+   "why": "hand in = nộp (= submit). Bẫy: hand out = phát cho mọi người, không hợp với \"nộp báo cáo chi phí\"; hand away/up không dùng nghĩa này.",
+   "vi": "Nhân viên phải nộp báo cáo chi phí trước ngày mùng 5 hằng tháng.",
+   "pid": "u07-hand-in",
+   "type": "prep"
+  },
+  {
+   "q": "The client ------- our proposal because the price was too high.",
+   "options": [
+    "turned down",
+    "turned up",
+    "turned on",
+    "turned in"
+   ],
+   "ans": 0,
+   "why": "turn down = từ chối. turn up = xuất hiện/vặn to; turn on = bật; turn in = nộp.",
+   "vi": "Khách hàng đã từ chối đề xuất của chúng tôi vì giá quá cao.",
+   "pid": "u07-turn-down",
+   "type": "word-choice"
+  },
+  {
+   "q": "A task force was formed to ------- the customer complaints.",
+   "options": [
+    "look forward",
+    "look like",
+    "look into",
+    "look out"
+   ],
+   "ans": 2,
+   "why": "look into = điều tra, xem xét. Các lựa chọn khác không đi với tân ngữ theo nghĩa này.",
+   "vi": "Một nhóm đặc nhiệm được lập ra để xem xét các khiếu nại của khách.",
+   "pid": "u07-look-into",
+   "type": "word-choice"
+  },
+  {
+   "q": "The meeting has been ------- until next week.",
+   "options": [
+    "putting off",
+    "put off",
+    "puts off",
+    "put on"
+   ],
+   "ans": 1,
+   "why": "has been + V3: put off = hoãn. put on = mặc/bật/tổ chức, không hợp nghĩa; putting/puts sai dạng.",
+   "vi": "Cuộc họp đã bị hoãn đến tuần sau.",
+   "pid": "u07-put-off",
+   "type": "form"
+  },
+  {
+   "q": "The research team will ------- a survey of 1,000 customers next month.",
+   "options": [
+    "carry on",
+    "carry off",
+    "carry up",
+    "carry out"
+   ],
+   "ans": 3,
+   "why": "carry out a survey = tiến hành khảo sát. carry on = tiếp tục; carry off = giành được/thành công.",
+   "vi": "Nhóm nghiên cứu sẽ tiến hành khảo sát 1.000 khách hàng vào tháng tới.",
+   "pid": "u07-carry-out",
+   "type": "word-choice"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Vui lòng điền vào mẫu đơn này và nộp cho lễ tân.",
+   "chunks": [
+    "Please fill out",
+    "this form",
+    "and hand it in",
+    "to the receptionist."
+   ],
+   "pid": "u07-fill-out",
+   "why": "fill out + mẫu đơn; hand it in (đại từ ở giữa) + to sb.",
+   "dist": "hand in it"
+  },
+  {
+   "vi": "Công ty đã hủy buổi họp báo vì thời tiết xấu.",
+   "chunks": [
+    "The company",
+    "called off",
+    "the press conference",
+    "because of bad weather."
+   ],
+   "pid": "u07-call-off",
+   "why": "call off = hủy; because of + danh từ.",
+   "dist": "called out"
+  },
+  {
+   "vi": "Cô Ono sẽ làm thay ông Lee trong kỳ nghỉ của ông.",
+   "chunks": [
+    "Ms. Ono",
+    "will fill in for",
+    "Mr. Lee",
+    "during his vacation."
+   ],
+   "pid": "u07-fill-in-for",
+   "why": "fill in for + người = làm thay ai.",
+   "dist": "fill up"
+  },
+  {
+   "vi": "Nhóm của chúng tôi đã nghĩ ra một cách mới để giảm chi phí.",
+   "chunks": [
+    "Our team",
+    "has come up with",
+    "a new way",
+    "to reduce costs."
+   ],
+   "pid": "u07-come-up-with",
+   "why": "has + V3 (come); come up with + ý tưởng.",
+   "dist": "came"
+  },
+  {
+   "vi": "Người quản lý đã từ chối yêu cầu thêm nhân viên.",
+   "chunks": [
+    "The manager",
+    "turned down",
+    "the request",
+    "for extra staff."
+   ],
+   "pid": "u07-turn-down",
+   "why": "turn down + tân ngữ = từ chối.",
+   "dist": "turned up"
+  },
+  {
+   "vi": "Luật sư đã soạn một hợp đồng cho cả hai bên.",
+   "chunks": [
+    "The lawyer",
+    "drew up",
+    "a contract",
+    "for both parties."
+   ],
+   "pid": "u07-draw-up",
+   "why": "draw up = soạn thảo; quá khứ drew up.",
+   "dist": "drawn up"
+  }
+ ],
+ "translate": [
+  {
+   "en": "The research department carried out a customer survey and came up with three ways to improve our service.",
+   "vi": "Bộ phận nghiên cứu đã tiến hành khảo sát khách hàng và đưa ra ba cách để cải thiện dịch vụ của chúng tôi.",
+   "chunks": [
+    {
+     "t": "The research department",
+     "r": "S",
+     "vi": "bộ phận nghiên cứu"
+    },
+    {
+     "t": "carried out",
+     "r": "V",
+     "vi": "đã tiến hành",
+     "k": true
+    },
+    {
+     "t": "a customer survey",
+     "r": "O-vật",
+     "vi": "một cuộc khảo sát khách hàng",
+     "k": true
+    },
+    {
+     "t": "and came up with",
+     "r": "V",
+     "vi": "và đưa ra",
+     "k": true
+    },
+    {
+     "t": "three ways",
+     "r": "O-vật",
+     "vi": "ba cách",
+     "k": true
+    },
+    {
+     "t": "to improve our service.",
+     "r": "to V",
+     "vi": "để cải thiện dịch vụ của chúng tôi"
+    }
+   ],
+   "note": "carry out = tiến hành; come up with = nghĩ ra/đề ra. \"to improve…\" bổ nghĩa cho \"ways\": cách để cải thiện. Dịch lần lượt từng khối theo đúng thứ tự.",
+   "pid": "u07-carry-out",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Because the supplier ran out of raw materials, the company had to call off the sale and put off the new product launch until March.",
+   "vi": "Vì nhà cung cấp đã hết nguyên liệu, công ty buộc phải hủy đợt giảm giá và hoãn việc ra mắt sản phẩm mới đến tháng Ba.",
+   "chunks": [
+    {
+     "t": "Because the supplier ran out of raw materials,",
+     "r": "mệnh đề",
+     "vi": "vì nhà cung cấp đã hết nguyên liệu"
+    },
+    {
+     "t": "the company",
+     "r": "S",
+     "vi": "công ty"
+    },
+    {
+     "t": "had to call off",
+     "r": "V",
+     "vi": "buộc phải hủy",
+     "k": true
+    },
+    {
+     "t": "the sale",
+     "r": "O-vật",
+     "vi": "đợt giảm giá",
+     "k": true
+    },
+    {
+     "t": "and put off",
+     "r": "V",
+     "vi": "và hoãn",
+     "k": true
+    },
+    {
+     "t": "the new product launch",
+     "r": "O-vật",
+     "vi": "việc ra mắt sản phẩm mới",
+     "k": true
+    },
+    {
+     "t": "until March.",
+     "r": "trạng ngữ",
+     "vi": "đến tháng Ba"
+    }
+   ],
+   "note": "run out of = hết; call off = hủy hẳn; put off = hoãn sang thời điểm khác. Phân biệt call off (không làm nữa) và put off (làm sau).",
+   "pid": "u07-call-off",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "After you hand in the completed form, a staff member will get back to you within two business days to follow up on your request.",
+   "vi": "Sau khi bạn nộp mẫu đơn đã điền xong, một nhân viên sẽ liên hệ lại với bạn trong vòng hai ngày làm việc để xử lý tiếp yêu cầu của bạn.",
+   "chunks": [
+    {
+     "t": "After you hand in the completed form,",
+     "r": "mệnh đề",
+     "vi": "sau khi bạn nộp mẫu đơn đã điền xong"
+    },
+    {
+     "t": "a staff member",
+     "r": "S",
+     "vi": "một nhân viên"
+    },
+    {
+     "t": "will get back to",
+     "r": "V",
+     "vi": "sẽ liên hệ lại với",
+     "k": true
+    },
+    {
+     "t": "you",
+     "r": "O-người",
+     "vi": "bạn",
+     "k": true
+    },
+    {
+     "t": "within two business days",
+     "r": "trạng ngữ",
+     "vi": "trong vòng hai ngày làm việc"
+    },
+    {
+     "t": "to follow up on",
+     "r": "to V",
+     "vi": "để xử lý tiếp",
+     "k": true
+    },
+    {
+     "t": "your request.",
+     "r": "O-vật",
+     "vi": "yêu cầu của bạn",
+     "k": true
+    }
+   ],
+   "note": "Mệnh đề \"After you hand in…\" nói trước; get back to you = liên hệ lại với bạn; follow up on = xử lý tiếp. Giữ nguyên thứ tự khối khi dịch.",
+   "pid": "u07-get-back-to",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "viOpts": [
+    "Sau khi bạn nộp mẫu đơn đã điền xong, một nhân viên sẽ liên hệ lại với bạn trong vòng hai ngày làm việc để xử lý tiếp yêu cầu của bạn.",
+    "Sau khi nhân viên nộp mẫu đơn, bạn sẽ liên hệ lại với họ trong hai ngày làm việc để theo dõi yêu cầu.",
+    "Bạn sẽ hủy mẫu đơn trong hai ngày làm việc, rồi một nhân viên sẽ trả yêu cầu lại cho bạn."
+   ],
+   "viAns": 0
+  },
+  {
+   "en": "Although the board turned down the first proposal, it asked the team to draw up a revised plan that makes up for the lost revenue.",
+   "vi": "Mặc dù hội đồng đã từ chối đề xuất đầu tiên, họ yêu cầu nhóm soạn một kế hoạch sửa đổi để bù đắp khoản doanh thu đã mất.",
+   "chunks": [
+    {
+     "t": "Although",
+     "r": "liên từ",
+     "vi": "mặc dù"
+    },
+    {
+     "t": "the board",
+     "r": "S",
+     "vi": "hội đồng"
+    },
+    {
+     "t": "turned down",
+     "r": "V",
+     "vi": "đã từ chối",
+     "k": true
+    },
+    {
+     "t": "the first proposal,",
+     "r": "O-vật",
+     "vi": "đề xuất đầu tiên",
+     "k": true
+    },
+    {
+     "t": "it asked the team",
+     "r": "mệnh đề",
+     "vi": "họ yêu cầu nhóm"
+    },
+    {
+     "t": "to draw up",
+     "r": "to V",
+     "vi": "soạn",
+     "k": true
+    },
+    {
+     "t": "a revised plan",
+     "r": "O-vật",
+     "vi": "một kế hoạch sửa đổi",
+     "k": true
+    },
+    {
+     "t": "that makes up for the lost revenue.",
+     "r": "mệnh đề",
+     "vi": "để bù đắp khoản doanh thu đã mất"
+    }
+   ],
+   "note": "turn down = từ chối; draw up = soạn thảo (ask sb to V: yêu cầu ai làm gì); make up for = bù đắp. Mệnh đề \"that makes up for…\" bổ nghĩa cho \"plan\", dịch tự nhiên thành \"để bù đắp…\".",
+   "pid": "u07-turn-down",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "viOpts": [
+    "Hội đồng đã chấp nhận đề xuất đầu tiên nên yêu cầu nhóm soạn kế hoạch mới để tăng doanh thu.",
+    "Mặc dù hội đồng đã từ chối đề xuất đầu tiên, họ yêu cầu nhóm soạn một kế hoạch sửa đổi để bù đắp khoản doanh thu đã mất.",
+    "Mặc dù nhóm từ chối đề xuất đầu tiên, hội đồng đã yêu cầu bù đắp doanh thu đã mất."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "When Mr. Alvarez retires in June, Ms. Wu will take over his duties and go over the department budget with the finance team.",
+   "vi": "Khi ông Alvarez nghỉ hưu vào tháng Sáu, bà Wu sẽ tiếp quản các nhiệm vụ của ông và rà soát ngân sách phòng cùng nhóm tài chính.",
+   "chunks": [
+    {
+     "t": "When Mr. Alvarez retires in June,",
+     "r": "mệnh đề",
+     "vi": "khi ông Alvarez nghỉ hưu vào tháng Sáu"
+    },
+    {
+     "t": "Ms. Wu",
+     "r": "S",
+     "vi": "bà Wu"
+    },
+    {
+     "t": "will take over",
+     "r": "V",
+     "vi": "sẽ tiếp quản",
+     "k": true
+    },
+    {
+     "t": "his duties",
+     "r": "O-vật",
+     "vi": "các nhiệm vụ của ông",
+     "k": true
+    },
+    {
+     "t": "and go over",
+     "r": "V",
+     "vi": "và rà soát",
+     "k": true
+    },
+    {
+     "t": "the department budget",
+     "r": "O-vật",
+     "vi": "ngân sách của phòng",
+     "k": true
+    },
+    {
+     "t": "with the finance team.",
+     "r": "giới từ + O",
+     "vi": "cùng với nhóm tài chính"
+    }
+   ],
+   "note": "take over = tiếp quản; go over = xem lại kỹ. \"with the finance team\" đi cùng việc rà soát, dịch thành \"cùng với\".",
+   "pid": "u07-take-over",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "While Ms. Tran is away, Mr. Kato will fill in for her and drop off the signed contracts at our client's office on Friday.",
+   "vi": "Trong lúc bà Tran vắng mặt, ông Kato sẽ làm thay bà và giao các hợp đồng đã ký tại văn phòng khách hàng của chúng tôi vào thứ Sáu.",
+   "chunks": [
+    {
+     "t": "While Ms. Tran is away,",
+     "r": "mệnh đề",
+     "vi": "trong lúc bà Tran vắng mặt"
+    },
+    {
+     "t": "Mr. Kato",
+     "r": "S",
+     "vi": "ông Kato"
+    },
+    {
+     "t": "will fill in for",
+     "r": "V",
+     "vi": "sẽ làm thay",
+     "k": true
+    },
+    {
+     "t": "her",
+     "r": "O-người",
+     "vi": "bà ấy",
+     "k": true
+    },
+    {
+     "t": "and drop off",
+     "r": "V",
+     "vi": "và giao",
+     "k": true
+    },
+    {
+     "t": "the signed contracts",
+     "r": "O-vật",
+     "vi": "các hợp đồng đã ký",
+     "k": true
+    },
+    {
+     "t": "at our client's office on Friday.",
+     "r": "giới từ + O",
+     "vi": "tại văn phòng khách hàng của chúng tôi vào thứ Sáu"
+    }
+   ],
+   "note": "fill in for sb = làm thay ai; drop off = giao/để lại tại một nơi. Chú ý \"signed\" là V3 làm tính từ: hợp đồng đã được ký.",
+   "pid": "u07-fill-in-for",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  }
+ ]
+}

@@ -1,0 +1,2415 @@
+{
+ "unit": 1,
+ "title": "V + to V hay V + V-ing?",
+ "icon": "🔀",
+ "intro": "Sau nhiều động từ, động từ tiếp theo phải ở dạng to V hoặc V-ing, và đổi sai là mất điểm Part 5. Không có quy tắc chắc chắn để đoán, nên cần học theo nhóm: decide/plan/agree/fail... + to V; avoid/consider/postpone/keep... + V-ing. Riêng stop, remember, forget, try đi được với cả hai nhưng nghĩa khác nhau.",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "decide/plan/agree/fail/manage + to V",
+   "decide to hire",
+   "quyết định tuyển"
+  ],
+  [
+   "avoid/consider/postpone/keep + V-ing",
+   "avoid raising",
+   "tránh tăng"
+  ],
+  [
+   "stop to V ≠ stop V-ing",
+   "stop to rest / stop resting",
+   "dừng để nghỉ / ngừng nghỉ"
+  ],
+  [
+   "remember to V ≠ remember V-ing",
+   "remember to call / remember calling",
+   "nhớ phải gọi / nhớ đã gọi"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u01-decide",
+   "p": "decide to V",
+   "form": "decide + to V",
+   "vi": "quyết định làm gì",
+   "note": "Sau decide chỉ dùng to V. KHÔNG nói 'decide doing'. Danh từ đi kèm: decision to V.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The board decided to postpone the product launch.",
+     "vi": "Hội đồng quản trị quyết định hoãn việc ra mắt sản phẩm.",
+     "chunks": [
+      {
+       "t": "The board",
+       "r": "S",
+       "vi": "hội đồng quản trị"
+      },
+      {
+       "t": "decided",
+       "r": "V",
+       "vi": "đã quyết định",
+       "k": true
+      },
+      {
+       "t": "to postpone",
+       "r": "to V",
+       "vi": "hoãn",
+       "k": true
+      },
+      {
+       "t": "the product launch.",
+       "r": "O",
+       "vi": "việc ra mắt sản phẩm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "We have decided to hire two more engineers this year.",
+     "vi": "Năm nay, chúng tôi đã quyết định tuyển thêm hai kỹ sư.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "have decided",
+       "r": "V",
+       "vi": "đã quyết định",
+       "k": true
+      },
+      {
+       "t": "to hire",
+       "r": "to V",
+       "vi": "tuyển thêm",
+       "k": true
+      },
+      {
+       "t": "two more engineers",
+       "r": "O",
+       "vi": "hai kỹ sư nữa"
+      },
+      {
+       "t": "this year.",
+       "r": "trạng ngữ",
+       "vi": "năm nay"
+      }
+     ],
+     "viOrder": [
+      4,
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-plan",
+   "p": "plan / intend / aim to V",
+   "form": "plan/intend/aim + to V",
+   "vi": "dự định / có ý định / đặt mục tiêu làm gì",
+   "note": "Cả ba đều + to V: plan to V (lên kế hoạch), intend to V (có ý định, trang trọng), aim to V (nhắm tới, đặt mục tiêu). KHÔNG nói 'plan opening'. Đang diễn ra: be planning to V. (aim còn có aim at V-ing.)",
+   "core": true,
+   "ex": [
+    {
+     "en": "Our company plans to open a new branch in Da Nang next spring.",
+     "vi": "Công ty chúng tôi dự định mở chi nhánh mới ở Đà Nẵng vào mùa xuân tới.",
+     "chunks": [
+      {
+       "t": "Our company",
+       "r": "S",
+       "vi": "công ty chúng tôi"
+      },
+      {
+       "t": "plans",
+       "r": "V",
+       "vi": "dự định",
+       "k": true
+      },
+      {
+       "t": "to open",
+       "r": "to V",
+       "vi": "mở",
+       "k": true
+      },
+      {
+       "t": "a new branch",
+       "r": "O",
+       "vi": "một chi nhánh mới"
+      },
+      {
+       "t": "in Da Nang",
+       "r": "giới từ + O",
+       "vi": "ở Đà Nẵng"
+      },
+      {
+       "t": "next spring.",
+       "r": "trạng ngữ",
+       "vi": "vào mùa xuân tới"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    },
+    {
+     "en": "The marketing team intends to launch the campaign in March.",
+     "vi": "Nhóm tiếp thị có ý định triển khai chiến dịch vào tháng Ba.",
+     "chunks": [
+      {
+       "t": "The marketing team",
+       "r": "S",
+       "vi": "nhóm tiếp thị"
+      },
+      {
+       "t": "intends",
+       "r": "V",
+       "vi": "có ý định",
+       "k": true
+      },
+      {
+       "t": "to launch",
+       "r": "to V",
+       "vi": "triển khai",
+       "k": true
+      },
+      {
+       "t": "the campaign",
+       "r": "O",
+       "vi": "chiến dịch"
+      },
+      {
+       "t": "in March.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng Ba"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-agree",
+   "p": "agree to V",
+   "form": "agree + to V",
+   "vi": "đồng ý làm gì",
+   "note": "agree to V = đồng ý làm một việc. Khác 'agree with sb' (đồng ý với ai) sẽ học ở bài sau; không nói 'agree doing'.",
+   "core": true,
+   "ex": [
+    {
+     "en": "Both parties agreed to sign the contract by the end of the month.",
+     "vi": "Hai bên đã đồng ý ký hợp đồng trước cuối tháng.",
+     "chunks": [
+      {
+       "t": "Both parties",
+       "r": "S",
+       "vi": "hai bên"
+      },
+      {
+       "t": "agreed",
+       "r": "V",
+       "vi": "đã đồng ý",
+       "k": true
+      },
+      {
+       "t": "to sign",
+       "r": "to V",
+       "vi": "ký",
+       "k": true
+      },
+      {
+       "t": "the contract",
+       "r": "O",
+       "vi": "hợp đồng"
+      },
+      {
+       "t": "by the end of the month.",
+       "r": "trạng ngữ",
+       "vi": "trước cuối tháng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The supplier has agreed to reduce its prices by five percent.",
+     "vi": "Nhà cung cấp đã đồng ý giảm giá năm phần trăm.",
+     "chunks": [
+      {
+       "t": "The supplier",
+       "r": "S",
+       "vi": "nhà cung cấp"
+      },
+      {
+       "t": "has agreed",
+       "r": "V",
+       "vi": "đã đồng ý",
+       "k": true
+      },
+      {
+       "t": "to reduce",
+       "r": "to V",
+       "vi": "giảm",
+       "k": true
+      },
+      {
+       "t": "its prices",
+       "r": "O",
+       "vi": "giá của mình"
+      },
+      {
+       "t": "by five percent.",
+       "r": "giới từ + O",
+       "vi": "năm phần trăm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-offer",
+   "p": "offer to V",
+   "form": "offer + to V",
+   "vi": "ngỏ ý / đề nghị làm gì (tự nguyện)",
+   "note": "offer to V = tự đề nghị giúp làm gì. Đừng nhầm với 'offer sb sth' (đưa ra cho ai cái gì) ở bài 3.",
+   "ex": [
+    {
+     "en": "The airline offered to refund the full ticket price.",
+     "vi": "Hãng hàng không đề nghị hoàn lại toàn bộ giá vé.",
+     "chunks": [
+      {
+       "t": "The airline",
+       "r": "S",
+       "vi": "hãng hàng không"
+      },
+      {
+       "t": "offered",
+       "r": "V",
+       "vi": "đề nghị",
+       "k": true
+      },
+      {
+       "t": "to refund",
+       "r": "to V",
+       "vi": "hoàn lại",
+       "k": true
+      },
+      {
+       "t": "the full ticket price.",
+       "r": "O",
+       "vi": "toàn bộ giá vé"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Mr. Lee offered to drive the visitors to the airport.",
+     "vi": "Ông Lee ngỏ ý chở các vị khách ra sân bay.",
+     "chunks": [
+      {
+       "t": "Mr. Lee",
+       "r": "S",
+       "vi": "ông Lee"
+      },
+      {
+       "t": "offered",
+       "r": "V",
+       "vi": "ngỏ ý",
+       "k": true
+      },
+      {
+       "t": "to drive",
+       "r": "to V",
+       "vi": "chở",
+       "k": true
+      },
+      {
+       "t": "the visitors",
+       "r": "O",
+       "vi": "các vị khách"
+      },
+      {
+       "t": "to the airport.",
+       "r": "giới từ + O",
+       "vi": "ra sân bay"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-refuse",
+   "p": "refuse to V",
+   "form": "refuse + to V",
+   "vi": "từ chối làm gì",
+   "note": "refuse + to V. Danh từ: refusal to V. KHÔNG dùng 'refuse doing'.",
+   "ex": [
+    {
+     "en": "The bank refused to approve the loan without more documents.",
+     "vi": "Ngân hàng từ chối phê duyệt khoản vay nếu không có thêm giấy tờ.",
+     "chunks": [
+      {
+       "t": "The bank",
+       "r": "S",
+       "vi": "ngân hàng"
+      },
+      {
+       "t": "refused",
+       "r": "V",
+       "vi": "từ chối",
+       "k": true
+      },
+      {
+       "t": "to approve",
+       "r": "to V",
+       "vi": "phê duyệt",
+       "k": true
+      },
+      {
+       "t": "the loan",
+       "r": "O",
+       "vi": "khoản vay"
+      },
+      {
+       "t": "without more documents.",
+       "r": "giới từ + O",
+       "vi": "nếu không có thêm giấy tờ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Several employees refused to work overtime on weekends.",
+     "vi": "Một số nhân viên từ chối làm thêm giờ vào cuối tuần.",
+     "chunks": [
+      {
+       "t": "Several employees",
+       "r": "S",
+       "vi": "một số nhân viên"
+      },
+      {
+       "t": "refused",
+       "r": "V",
+       "vi": "từ chối",
+       "k": true
+      },
+      {
+       "t": "to work overtime",
+       "r": "to V",
+       "vi": "làm thêm giờ",
+       "k": true
+      },
+      {
+       "t": "on weekends.",
+       "r": "trạng ngữ",
+       "vi": "vào cuối tuần"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-fail",
+   "p": "fail to V",
+   "form": "fail + to V",
+   "vi": "không làm được / không làm (điều cần làm)",
+   "note": "fail to V = không thực hiện được / không làm điều cần làm (ý phủ định, trang trọng). Rất hay gặp trong thông báo: 'Customers who fail to ...'. KHÔNG nói 'fail doing'.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The shipment failed to arrive before the deadline.",
+     "vi": "Lô hàng đã không đến kịp trước hạn chót.",
+     "chunks": [
+      {
+       "t": "The shipment",
+       "r": "S",
+       "vi": "lô hàng"
+      },
+      {
+       "t": "failed",
+       "r": "V",
+       "vi": "đã không",
+       "k": true
+      },
+      {
+       "t": "to arrive",
+       "r": "to V",
+       "vi": "đến kịp",
+       "k": true
+      },
+      {
+       "t": "before the deadline.",
+       "r": "trạng ngữ",
+       "vi": "trước hạn chót"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Customers who fail to pay on time will be charged a late fee.",
+     "vi": "Khách hàng nào không thanh toán đúng hạn sẽ bị tính phí trả chậm.",
+     "chunks": [
+      {
+       "t": "Customers",
+       "r": "S",
+       "vi": "khách hàng"
+      },
+      {
+       "t": "who fail",
+       "r": "V",
+       "vi": "nào không",
+       "k": true
+      },
+      {
+       "t": "to pay",
+       "r": "to V",
+       "vi": "thanh toán",
+       "k": true
+      },
+      {
+       "t": "on time",
+       "r": "trạng ngữ",
+       "vi": "đúng hạn"
+      },
+      {
+       "t": "will be charged",
+       "r": "V",
+       "vi": "sẽ bị tính"
+      },
+      {
+       "t": "a late fee.",
+       "r": "O",
+       "vi": "phí trả chậm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-manage",
+   "p": "manage to V",
+   "form": "manage + to V",
+   "vi": "xoay xở làm được / cuối cùng cũng làm được",
+   "note": "manage to V = làm được việc khó, có kết quả thành công. KHÔNG nói 'manage doing'. manage + danh từ lại là 'quản lý' (manage a team).",
+   "ex": [
+    {
+     "en": "We managed to finish the audit ahead of schedule.",
+     "vi": "Chúng tôi đã hoàn thành được cuộc kiểm toán trước thời hạn.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "managed",
+       "r": "V",
+       "vi": "đã làm được (dù khó)",
+       "k": true
+      },
+      {
+       "t": "to finish",
+       "r": "to V",
+       "vi": "hoàn thành",
+       "k": true
+      },
+      {
+       "t": "the audit",
+       "r": "O",
+       "vi": "cuộc kiểm toán"
+      },
+      {
+       "t": "ahead of schedule.",
+       "r": "trạng ngữ",
+       "vi": "trước thời hạn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "She managed to negotiate a lower rate with the supplier.",
+     "vi": "Cô ấy đã thương lượng được mức giá thấp hơn với nhà cung cấp.",
+     "chunks": [
+      {
+       "t": "She",
+       "r": "S",
+       "vi": "cô ấy"
+      },
+      {
+       "t": "managed",
+       "r": "V",
+       "vi": "đã làm được",
+       "k": true
+      },
+      {
+       "t": "to negotiate",
+       "r": "to V",
+       "vi": "thương lượng",
+       "k": true
+      },
+      {
+       "t": "a lower rate",
+       "r": "O",
+       "vi": "mức giá thấp hơn"
+      },
+      {
+       "t": "with the supplier.",
+       "r": "giới từ + O",
+       "vi": "với nhà cung cấp"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-hope",
+   "p": "hope / expect / seek to V",
+   "form": "hope/expect/seek + to V",
+   "vi": "hy vọng / dự kiến / tìm cách làm gì",
+   "note": "Cả ba đều + to V (người làm chính là chủ ngữ): hope to V = hy vọng; expect to V = dự kiến, kỳ vọng sẽ; seek to V = tìm cách, nỗ lực (trang trọng). 'expect sb to V' (mong ai làm gì) học ở bài 2. KHÔNG nói 'hope doing'.",
+   "ex": [
+    {
+     "en": "We hope to complete the renovation by June.",
+     "vi": "Chúng tôi hy vọng hoàn tất việc cải tạo trước tháng Sáu.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "hope",
+       "r": "V",
+       "vi": "hy vọng",
+       "k": true
+      },
+      {
+       "t": "to complete",
+       "r": "to V",
+       "vi": "hoàn tất",
+       "k": true
+      },
+      {
+       "t": "the renovation",
+       "r": "O",
+       "vi": "việc cải tạo"
+      },
+      {
+       "t": "by June.",
+       "r": "trạng ngữ",
+       "vi": "trước tháng Sáu"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The company expects to reach record sales this quarter.",
+     "vi": "Công ty dự kiến đạt doanh số kỷ lục trong quý này.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "expects",
+       "r": "V",
+       "vi": "dự kiến",
+       "k": true
+      },
+      {
+       "t": "to reach",
+       "r": "to V",
+       "vi": "đạt",
+       "k": true
+      },
+      {
+       "t": "record sales",
+       "r": "O",
+       "vi": "doanh số kỷ lục"
+      },
+      {
+       "t": "this quarter.",
+       "r": "trạng ngữ",
+       "vi": "trong quý này"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-afford",
+   "p": "can afford to V",
+   "form": "can/cannot afford + to V",
+   "vi": "có đủ khả năng làm gì / không thể để (mất) gì",
+   "note": "afford thường đi với can / cannot / can't. Phủ định 'cannot afford to V' thường dịch 'không thể bỏ qua / không thể để ...'. KHÔNG nói 'afford doing'.",
+   "ex": [
+    {
+     "en": "Small businesses cannot afford to ignore online marketing.",
+     "vi": "Doanh nghiệp nhỏ không thể bỏ qua tiếp thị trực tuyến.",
+     "chunks": [
+      {
+       "t": "Small businesses",
+       "r": "S",
+       "vi": "doanh nghiệp nhỏ"
+      },
+      {
+       "t": "cannot afford",
+       "r": "V",
+       "vi": "không thể (để)",
+       "k": true
+      },
+      {
+       "t": "to ignore",
+       "r": "to V",
+       "vi": "bỏ qua",
+       "k": true
+      },
+      {
+       "t": "online marketing.",
+       "r": "O",
+       "vi": "tiếp thị trực tuyến"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "We can't afford to lose another major client.",
+     "vi": "Chúng tôi không thể để mất thêm một khách hàng lớn nữa.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "can't afford",
+       "r": "V",
+       "vi": "không thể để",
+       "k": true
+      },
+      {
+       "t": "to lose",
+       "r": "to V",
+       "vi": "mất",
+       "k": true
+      },
+      {
+       "t": "another major client.",
+       "r": "O",
+       "vi": "thêm một khách hàng lớn nữa"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-hesitate",
+   "p": "hesitate to V",
+   "form": "hesitate + to V",
+   "vi": "ngần ngại làm gì",
+   "note": "Câu cuối thư rất hay gặp: 'Please do not hesitate to contact us' = xin cứ liên hệ, đừng ngại. Dịch tự nhiên là 'xin cứ ...', không dịch cứng 'đừng ngần ngại' mọi lúc.",
+   "ex": [
+    {
+     "en": "Please do not hesitate to contact us if you have any questions.",
+     "vi": "Nếu có bất kỳ câu hỏi nào, xin cứ liên hệ với chúng tôi.",
+     "chunks": [
+      {
+       "t": "Please do not hesitate",
+       "r": "V",
+       "vi": "xin đừng ngần ngại",
+       "k": true
+      },
+      {
+       "t": "to contact",
+       "r": "to V",
+       "vi": "liên hệ",
+       "k": true
+      },
+      {
+       "t": "us",
+       "r": "O",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "if you have any questions.",
+       "r": "mệnh đề",
+       "vi": "nếu bạn có câu hỏi nào"
+      }
+     ],
+     "viOrder": [
+      3,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Investors hesitate to commit funds when the market is unstable.",
+     "vi": "Nhà đầu tư ngần ngại rót vốn khi thị trường bất ổn.",
+     "chunks": [
+      {
+       "t": "Investors",
+       "r": "S",
+       "vi": "nhà đầu tư"
+      },
+      {
+       "t": "hesitate",
+       "r": "V",
+       "vi": "ngần ngại",
+       "k": true
+      },
+      {
+       "t": "to commit",
+       "r": "to V",
+       "vi": "rót",
+       "k": true
+      },
+      {
+       "t": "funds",
+       "r": "O",
+       "vi": "vốn"
+      },
+      {
+       "t": "when the market is unstable.",
+       "r": "mệnh đề",
+       "vi": "khi thị trường bất ổn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-avoid",
+   "p": "avoid V-ing",
+   "form": "avoid + V-ing",
+   "vi": "tránh làm gì",
+   "note": "avoid + V-ing, KHÔNG dùng to V: 'avoid to make' là sai. Cũng dùng với danh từ: avoid delays.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The company avoided raising its prices despite higher costs.",
+     "vi": "Công ty đã tránh tăng giá dù chi phí cao hơn.",
+     "chunks": [
+      {
+       "t": "The company",
+       "r": "S",
+       "vi": "công ty"
+      },
+      {
+       "t": "avoided",
+       "r": "V",
+       "vi": "đã tránh",
+       "k": true
+      },
+      {
+       "t": "raising",
+       "r": "V-ing",
+       "vi": "tăng",
+       "k": true
+      },
+      {
+       "t": "its prices",
+       "r": "O",
+       "vi": "giá của mình"
+      },
+      {
+       "t": "despite higher costs.",
+       "r": "giới từ + O",
+       "vi": "dù chi phí cao hơn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Employees should avoid sharing their passwords with anyone.",
+     "vi": "Nhân viên nên tránh chia sẻ mật khẩu với bất kỳ ai.",
+     "chunks": [
+      {
+       "t": "Employees",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "should avoid",
+       "r": "V",
+       "vi": "nên tránh",
+       "k": true
+      },
+      {
+       "t": "sharing",
+       "r": "V-ing",
+       "vi": "chia sẻ",
+       "k": true
+      },
+      {
+       "t": "their passwords",
+       "r": "O",
+       "vi": "mật khẩu của mình"
+      },
+      {
+       "t": "with anyone.",
+       "r": "giới từ + O",
+       "vi": "với bất kỳ ai"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-consider",
+   "p": "consider V-ing",
+   "form": "consider + V-ing",
+   "vi": "cân nhắc / xem xét làm gì",
+   "note": "consider + V-ing (KHÔNG 'consider to V'). Đừng nhầm với 'consider sb/sth (to be) adj' ở bài 9.",
+   "core": true,
+   "ex": [
+    {
+     "en": "We are considering moving our headquarters to Hanoi.",
+     "vi": "Chúng tôi đang cân nhắc chuyển trụ sở chính ra Hà Nội.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "are considering",
+       "r": "V",
+       "vi": "đang cân nhắc",
+       "k": true
+      },
+      {
+       "t": "moving",
+       "r": "V-ing",
+       "vi": "việc chuyển",
+       "k": true
+      },
+      {
+       "t": "our headquarters",
+       "r": "O",
+       "vi": "trụ sở chính"
+      },
+      {
+       "t": "to Hanoi.",
+       "r": "giới từ + O",
+       "vi": "ra Hà Nội"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "The committee will consider extending the deadline.",
+     "vi": "Ủy ban sẽ xem xét việc gia hạn thời hạn.",
+     "chunks": [
+      {
+       "t": "The committee",
+       "r": "S",
+       "vi": "ủy ban"
+      },
+      {
+       "t": "will consider",
+       "r": "V",
+       "vi": "sẽ xem xét",
+       "k": true
+      },
+      {
+       "t": "extending",
+       "r": "V-ing",
+       "vi": "việc gia hạn",
+       "k": true
+      },
+      {
+       "t": "the deadline.",
+       "r": "O",
+       "vi": "thời hạn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-postpone",
+   "p": "postpone V-ing",
+   "form": "postpone + V-ing",
+   "vi": "hoãn làm gì",
+   "alt": "= delay V-ing, put off V-ing",
+   "note": "postpone và delay đều + V-ing (KHÔNG to V). Nhớ: postpone/delay + V-ing, nhưng decide/plan + to V.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The manager postponed signing the contract until the legal review was finished.",
+     "vi": "Quản lý đã hoãn ký hợp đồng cho đến khi việc rà soát pháp lý hoàn tất.",
+     "chunks": [
+      {
+       "t": "The manager",
+       "r": "S",
+       "vi": "quản lý"
+      },
+      {
+       "t": "postponed",
+       "r": "V",
+       "vi": "đã hoãn",
+       "k": true
+      },
+      {
+       "t": "signing",
+       "r": "V-ing",
+       "vi": "việc ký",
+       "k": true
+      },
+      {
+       "t": "the contract",
+       "r": "O",
+       "vi": "hợp đồng"
+      },
+      {
+       "t": "until the legal review was finished.",
+       "r": "mệnh đề",
+       "vi": "cho đến khi việc rà soát pháp lý hoàn tất"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Please do not delay submitting your expense reports.",
+     "vi": "Xin đừng chậm trễ nộp báo cáo chi phí.",
+     "chunks": [
+      {
+       "t": "Please do not delay",
+       "r": "V",
+       "vi": "xin đừng chậm trễ",
+       "k": true
+      },
+      {
+       "t": "submitting",
+       "r": "V-ing",
+       "vi": "việc nộp",
+       "k": true
+      },
+      {
+       "t": "your expense reports.",
+       "r": "O",
+       "vi": "báo cáo chi phí của bạn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-finish",
+   "p": "finish / quit / discontinue V-ing",
+   "form": "finish/quit/discontinue + V-ing",
+   "vi": "làm xong / bỏ / ngừng hẳn làm gì",
+   "note": "Cả ba đều + V-ing (KHÔNG to V): finish V-ing = làm xong; quit V-ing = bỏ, thôi làm (quit smoking); discontinue V-ing = ngừng hẳn (trang trọng, hay gặp trong hướng dẫn sử dụng, thông báo về sản phẩm/dịch vụ).",
+   "ex": [
+    {
+     "en": "I will finish reviewing the budget by noon.",
+     "vi": "Tôi sẽ hoàn tất việc xem xét ngân sách trước buổi trưa.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "will finish",
+       "r": "V",
+       "vi": "sẽ hoàn tất",
+       "k": true
+      },
+      {
+       "t": "reviewing",
+       "r": "V-ing",
+       "vi": "việc xem xét",
+       "k": true
+      },
+      {
+       "t": "the budget",
+       "r": "O",
+       "vi": "ngân sách"
+      },
+      {
+       "t": "by noon.",
+       "r": "trạng ngữ",
+       "vi": "trước buổi trưa"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Please discontinue using the device if it overheats.",
+     "vi": "Vui lòng ngừng sử dụng thiết bị nếu máy quá nóng.",
+     "chunks": [
+      {
+       "t": "Please discontinue",
+       "r": "V",
+       "vi": "vui lòng ngừng",
+       "k": true
+      },
+      {
+       "t": "using",
+       "r": "V-ing",
+       "vi": "sử dụng",
+       "k": true
+      },
+      {
+       "t": "the device",
+       "r": "O",
+       "vi": "thiết bị"
+      },
+      {
+       "t": "if it overheats.",
+       "r": "mệnh đề",
+       "vi": "nếu máy quá nóng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-keep",
+   "p": "keep V-ing",
+   "form": "keep + V-ing",
+   "vi": "cứ tiếp tục / liên tục làm gì",
+   "note": "keep V-ing = tiếp tục (hoặc lặp đi lặp lại, thường gây phiền). Không dùng 'keep to V'. Khác 'keep sb informed' (giữ cho ai được cập nhật) ở bài 9.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The server keeps crashing during peak hours.",
+     "vi": "Máy chủ cứ bị sập vào giờ cao điểm.",
+     "chunks": [
+      {
+       "t": "The server",
+       "r": "S",
+       "vi": "máy chủ"
+      },
+      {
+       "t": "keeps",
+       "r": "V",
+       "vi": "cứ",
+       "k": true
+      },
+      {
+       "t": "crashing",
+       "r": "V-ing",
+       "vi": "bị sập",
+       "k": true
+      },
+      {
+       "t": "during peak hours.",
+       "r": "trạng ngữ",
+       "vi": "vào giờ cao điểm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Please keep checking the website for updates.",
+     "vi": "Xin hãy tiếp tục theo dõi trang web để cập nhật.",
+     "chunks": [
+      {
+       "t": "Please keep",
+       "r": "V",
+       "vi": "xin hãy tiếp tục",
+       "k": true
+      },
+      {
+       "t": "checking",
+       "r": "V-ing",
+       "vi": "theo dõi",
+       "k": true
+      },
+      {
+       "t": "the website",
+       "r": "O",
+       "vi": "trang web"
+      },
+      {
+       "t": "for updates.",
+       "r": "giới từ + O",
+       "vi": "để cập nhật"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-mind",
+   "p": "mind V-ing",
+   "form": "mind + V-ing",
+   "vi": "phiền / ngại làm gì",
+   "note": "Hay gặp dạng lịch sự 'Would you mind V-ing ...?' = phiền bạn ... được không. Trả lời 'Not at all' = không phiền, tức là ĐỒNG Ý. KHÔNG nói 'mind to V'.",
+   "ex": [
+    {
+     "en": "Would you mind sending me the revised schedule?",
+     "vi": "Phiền bạn gửi cho tôi lịch trình đã chỉnh sửa được không?",
+     "chunks": [
+      {
+       "t": "Would you mind",
+       "r": "V",
+       "vi": "phiền bạn",
+       "k": true
+      },
+      {
+       "t": "sending",
+       "r": "V-ing",
+       "vi": "gửi",
+       "k": true
+      },
+      {
+       "t": "me",
+       "r": "O-người",
+       "vi": "cho tôi"
+      },
+      {
+       "t": "the revised schedule?",
+       "r": "O-vật",
+       "vi": "lịch trình đã chỉnh sửa"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "I don't mind working late to finish the report.",
+     "vi": "Tôi không ngại làm việc muộn để hoàn thành báo cáo.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "don't mind",
+       "r": "V",
+       "vi": "không ngại",
+       "k": true
+      },
+      {
+       "t": "working late",
+       "r": "V-ing",
+       "vi": "làm việc muộn",
+       "k": true
+      },
+      {
+       "t": "to finish the report.",
+       "r": "trạng ngữ",
+       "vi": "để hoàn thành báo cáo"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-enjoy",
+   "p": "enjoy / practice V-ing",
+   "form": "enjoy/practice + V-ing",
+   "vi": "thích làm gì / luyện tập làm gì",
+   "note": "enjoy (thích) và practice (luyện tập) nghĩa khác nhau nhưng cùng khuôn + V-ing. KHÔNG nói 'enjoy to work' hay 'practice to speak'.",
+   "ex": [
+    {
+     "en": "Our employees enjoy working with international clients.",
+     "vi": "Nhân viên của chúng tôi thích làm việc với khách hàng quốc tế.",
+     "chunks": [
+      {
+       "t": "Our employees",
+       "r": "S",
+       "vi": "nhân viên của chúng tôi"
+      },
+      {
+       "t": "enjoy",
+       "r": "V",
+       "vi": "thích",
+       "k": true
+      },
+      {
+       "t": "working",
+       "r": "V-ing",
+       "vi": "làm việc",
+       "k": true
+      },
+      {
+       "t": "with international clients.",
+       "r": "giới từ + O",
+       "vi": "với khách hàng quốc tế"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Trainees practice giving presentations every Friday.",
+     "vi": "Học viên luyện thuyết trình vào mỗi thứ Sáu.",
+     "chunks": [
+      {
+       "t": "Trainees",
+       "r": "S",
+       "vi": "học viên"
+      },
+      {
+       "t": "practice",
+       "r": "V",
+       "vi": "luyện",
+       "k": true
+      },
+      {
+       "t": "giving presentations",
+       "r": "V-ing",
+       "vi": "thuyết trình",
+       "k": true
+      },
+      {
+       "t": "every Friday.",
+       "r": "trạng ngữ",
+       "vi": "vào mỗi thứ Sáu"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-recommend",
+   "p": "recommend / suggest V-ing",
+   "form": "recommend/suggest + V-ing",
+   "vi": "khuyên / đề xuất nên làm gì",
+   "note": "recommend / suggest + V-ing khi KHÔNG nêu người làm. Muốn nêu người: recommend/suggest that S + V nguyên mẫu (bài 2). KHÔNG nói 'suggest to V', 'suggest sb to V'; 'recommend sb to V' nên tránh.",
+   "core": true,
+   "ex": [
+    {
+     "en": "The consultant recommends investing in staff training.",
+     "vi": "Chuyên gia tư vấn khuyên nên đầu tư vào đào tạo nhân viên.",
+     "chunks": [
+      {
+       "t": "The consultant",
+       "r": "S",
+       "vi": "chuyên gia tư vấn"
+      },
+      {
+       "t": "recommends",
+       "r": "V",
+       "vi": "khuyên nên",
+       "k": true
+      },
+      {
+       "t": "investing",
+       "r": "V-ing",
+       "vi": "đầu tư",
+       "k": true
+      },
+      {
+       "t": "in staff training.",
+       "r": "giới từ + O",
+       "vi": "vào đào tạo nhân viên"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "I suggest postponing the meeting until Monday.",
+     "vi": "Tôi đề nghị hoãn cuộc họp đến thứ Hai.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "suggest",
+       "r": "V",
+       "vi": "đề nghị",
+       "k": true
+      },
+      {
+       "t": "postponing",
+       "r": "V-ing",
+       "vi": "hoãn",
+       "k": true
+      },
+      {
+       "t": "the meeting",
+       "r": "O",
+       "vi": "cuộc họp"
+      },
+      {
+       "t": "until Monday.",
+       "r": "trạng ngữ",
+       "vi": "đến thứ Hai"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ],
+   "vs": "recommend/suggest that S + V nguyên mẫu (bài 2) = đề xuất AI ĐÓ làm gì"
+  },
+  {
+   "id": "u01-deny",
+   "p": "deny V-ing",
+   "form": "deny + V-ing",
+   "vi": "phủ nhận (đã) làm gì",
+   "note": "deny + V-ing nói về việc ĐÃ xảy ra: denied receiving = phủ nhận đã nhận. KHÔNG nói 'deny to V'.",
+   "ex": [
+    {
+     "en": "The director denied receiving the complaint letter.",
+     "vi": "Giám đốc phủ nhận đã nhận được thư khiếu nại.",
+     "chunks": [
+      {
+       "t": "The director",
+       "r": "S",
+       "vi": "giám đốc"
+      },
+      {
+       "t": "denied",
+       "r": "V",
+       "vi": "phủ nhận",
+       "k": true
+      },
+      {
+       "t": "receiving",
+       "r": "V-ing",
+       "vi": "đã nhận",
+       "k": true
+      },
+      {
+       "t": "the complaint letter.",
+       "r": "O",
+       "vi": "thư khiếu nại"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The contractor denied causing the delay.",
+     "vi": "Nhà thầu phủ nhận đã gây ra sự chậm trễ.",
+     "chunks": [
+      {
+       "t": "The contractor",
+       "r": "S",
+       "vi": "nhà thầu"
+      },
+      {
+       "t": "denied",
+       "r": "V",
+       "vi": "phủ nhận",
+       "k": true
+      },
+      {
+       "t": "causing",
+       "r": "V-ing",
+       "vi": "đã gây ra",
+       "k": true
+      },
+      {
+       "t": "the delay.",
+       "r": "O",
+       "vi": "sự chậm trễ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-stop",
+   "p": "stop to V ≠ stop V-ing",
+   "form": "stop + to V / stop + V-ing",
+   "vi": "dừng lại để làm gì / ngừng làm gì",
+   "note": "Đổi nghĩa: stop producing = ngừng sản xuất; stop to take a break = dừng lại để nghỉ. 'stop sb from V-ing' (ngăn ai) học ở bài 4.",
+   "vs": "stop V-ing = ngừng hẳn việc đang làm; stop to V = dừng lại (việc đang làm) để làm việc khác",
+   "core": true,
+   "ex": [
+    {
+     "en": "The workers stopped to take a short break.",
+     "vi": "Công nhân dừng lại để nghỉ giải lao một lát.",
+     "chunks": [
+      {
+       "t": "The workers",
+       "r": "S",
+       "vi": "công nhân"
+      },
+      {
+       "t": "stopped",
+       "r": "V",
+       "vi": "dừng lại",
+       "k": true
+      },
+      {
+       "t": "to take",
+       "r": "to V",
+       "vi": "để nghỉ",
+       "k": true
+      },
+      {
+       "t": "a short break.",
+       "r": "O",
+       "vi": "giải lao một lát"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The factory stopped producing the older model last year.",
+     "vi": "Nhà máy đã ngừng sản xuất mẫu cũ từ năm ngoái.",
+     "chunks": [
+      {
+       "t": "The factory",
+       "r": "S",
+       "vi": "nhà máy"
+      },
+      {
+       "t": "stopped",
+       "r": "V",
+       "vi": "đã ngừng",
+       "k": true
+      },
+      {
+       "t": "producing",
+       "r": "V-ing",
+       "vi": "sản xuất",
+       "k": true
+      },
+      {
+       "t": "the older model",
+       "r": "O",
+       "vi": "mẫu cũ"
+      },
+      {
+       "t": "last year.",
+       "r": "trạng ngữ",
+       "vi": "từ năm ngoái"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-remember",
+   "p": "remember/forget to V ≠ V-ing",
+   "form": "remember/forget + to V / + V-ing",
+   "vi": "nhớ / quên PHẢI làm gì ≠ nhớ / quên ĐÃ làm gì",
+   "note": "Đổi nghĩa (áp dụng cho cả remember và forget). remember/forget to V = nhớ / quên làm việc cần làm (Don't forget to lock the door = đừng quên khóa cửa); remember V-ing = nhớ là đã làm; forget V-ing = quên việc đã làm (ít gặp, thường phủ định: I'll never forget meeting her).",
+   "vs": "remember to V = nhớ để làm (việc sắp tới); remember V-ing = nhớ là đã làm (việc quá khứ)",
+   "core": true,
+   "ex": [
+    {
+     "en": "Please don't forget to lock the office before you leave.",
+     "vi": "Trước khi ra về, xin đừng quên khóa văn phòng.",
+     "chunks": [
+      {
+       "t": "Please don't forget",
+       "r": "V",
+       "vi": "xin đừng quên",
+       "k": true
+      },
+      {
+       "t": "to lock",
+       "r": "to V",
+       "vi": "khóa",
+       "k": true
+      },
+      {
+       "t": "the office",
+       "r": "O",
+       "vi": "văn phòng"
+      },
+      {
+       "t": "before you leave.",
+       "r": "mệnh đề",
+       "vi": "trước khi bạn ra về"
+      }
+     ],
+     "viOrder": [
+      3,
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "I remember meeting the CEO at last year's conference.",
+     "vi": "Tôi nhớ đã gặp tổng giám đốc tại hội nghị năm ngoái.",
+     "chunks": [
+      {
+       "t": "I",
+       "r": "S",
+       "vi": "tôi"
+      },
+      {
+       "t": "remember",
+       "r": "V",
+       "vi": "nhớ",
+       "k": true
+      },
+      {
+       "t": "meeting",
+       "r": "V-ing",
+       "vi": "đã gặp",
+       "k": true
+      },
+      {
+       "t": "the CEO",
+       "r": "O",
+       "vi": "tổng giám đốc"
+      },
+      {
+       "t": "at last year's conference.",
+       "r": "giới từ + O",
+       "vi": "tại hội nghị năm ngoái"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u01-try",
+   "p": "try to V ≠ try V-ing",
+   "form": "try + to V / try + V-ing",
+   "vi": "cố gắng làm gì ≠ thử làm gì",
+   "note": "try to contact = cố liên lạc; try restarting = thử khởi động lại (xem có hết lỗi không). Gặp nhiều trong hướng dẫn kỹ thuật.",
+   "vs": "try to V = cố gắng (có thể không được); try V-ing = thử xem kết quả ra sao",
+   "ex": [
+    {
+     "en": "We tried to contact the supplier, but nobody answered.",
+     "vi": "Chúng tôi đã cố liên lạc với nhà cung cấp nhưng không ai trả lời.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "tried",
+       "r": "V",
+       "vi": "đã cố",
+       "k": true
+      },
+      {
+       "t": "to contact",
+       "r": "to V",
+       "vi": "liên lạc với",
+       "k": true
+      },
+      {
+       "t": "the supplier,",
+       "r": "O",
+       "vi": "nhà cung cấp"
+      },
+      {
+       "t": "but nobody answered.",
+       "r": "mệnh đề",
+       "vi": "nhưng không ai trả lời"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "If the printer does not work, try restarting it.",
+     "vi": "Nếu máy in không chạy, hãy thử khởi động lại nó.",
+     "chunks": [
+      {
+       "t": "If the printer does not work,",
+       "r": "mệnh đề",
+       "vi": "nếu máy in không chạy"
+      },
+      {
+       "t": "try",
+       "r": "V",
+       "vi": "hãy thử",
+       "k": true
+      },
+      {
+       "t": "restarting",
+       "r": "V-ing",
+       "vi": "khởi động lại",
+       "k": true
+      },
+      {
+       "t": "it.",
+       "r": "O",
+       "vi": "nó"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "type": "toV-Ving",
+   "q": "The board has decided ------- a new factory in Vietnam.",
+   "options": [
+    "to build",
+    "building",
+    "build",
+    "built"
+   ],
+   "ans": 0,
+   "why": "decide + to V: decided to build. Không dùng V-ing sau decide.",
+   "vi": "Hội đồng quản trị đã quyết định xây một nhà máy mới ở Việt Nam.",
+   "pid": "u01-decide"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "Mr. Park avoided ------- the question about layoffs.",
+   "options": [
+    "to answer",
+    "answering",
+    "answer",
+    "answered"
+   ],
+   "ans": 1,
+   "why": "avoid + V-ing: avoided answering. 'to answer' sai vì avoid không đi với to V.",
+   "vi": "Ông Park tránh trả lời câu hỏi về việc cắt giảm nhân sự.",
+   "pid": "u01-avoid"
+  },
+  {
+   "type": "form",
+   "q": "We cannot afford ------- this opportunity.",
+   "options": [
+    "lose",
+    "losing",
+    "to lose",
+    "lost"
+   ],
+   "ans": 2,
+   "why": "can/cannot afford + to V: cannot afford to lose. Không dùng V-ing hay động từ nguyên mẫu trần.",
+   "vi": "Chúng tôi không thể để mất cơ hội này.",
+   "pid": "u01-afford"
+  },
+  {
+   "type": "form",
+   "q": "Please do not hesitate ------- us if you need further assistance.",
+   "options": [
+    "contact",
+    "contacting",
+    "contacted",
+    "to contact"
+   ],
+   "ans": 3,
+   "why": "hesitate + to V: do not hesitate to contact. Sau hesitate không dùng V-ing.",
+   "vi": "Nếu cần hỗ trợ thêm, xin cứ liên hệ với chúng tôi.",
+   "pid": "u01-hesitate"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "The airline postponed ------- the new route until spring.",
+   "options": [
+    "launching",
+    "to launch",
+    "launch",
+    "launched"
+   ],
+   "ans": 0,
+   "why": "postpone + V-ing: postponed launching. 'to launch' sai vì postpone không đi với to V.",
+   "vi": "Hãng hàng không đã hoãn việc mở đường bay mới đến mùa xuân.",
+   "pid": "u01-postpone"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "The supplier failed ------- the goods on time.",
+   "options": [
+    "delivering",
+    "to deliver",
+    "deliver",
+    "delivered"
+   ],
+   "ans": 1,
+   "why": "fail + to V: failed to deliver = đã không giao được.",
+   "vi": "Nhà cung cấp đã không giao hàng đúng hạn.",
+   "pid": "u01-fail"
+  },
+  {
+   "type": "form",
+   "q": "Would you mind ------- the meeting room for me?",
+   "options": [
+    "to book",
+    "booked",
+    "booking",
+    "book"
+   ],
+   "ans": 2,
+   "why": "Would you mind + V-ing: Would you mind booking...? Không dùng to V sau mind.",
+   "vi": "Phiền bạn đặt giúp tôi phòng họp được không?",
+   "pid": "u01-mind"
+  },
+  {
+   "type": "word-choice",
+   "q": "Our team ------- to meet the deadline despite the technical problems.",
+   "options": [
+    "avoided",
+    "considered",
+    "denied",
+    "managed"
+   ],
+   "ans": 3,
+   "why": "Chỉ manage đi với to V và hợp nghĩa: managed to meet = đã làm kịp. avoided / considered / denied đi với V-ing.",
+   "vi": "Nhóm chúng tôi đã làm kịp thời hạn dù có sự cố kỹ thuật.",
+   "pid": "u01-manage"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "The consultant recommended ------- the contract before signing it.",
+   "options": [
+    "reviewing",
+    "to review",
+    "reviewed",
+    "review"
+   ],
+   "ans": 0,
+   "why": "recommend + V-ing (không nêu người làm): recommended reviewing. 'to review' sai vì recommend không đi trực tiếp với to V; muốn nêu người thì dùng recommend that S + V.",
+   "vi": "Chuyên gia tư vấn khuyên nên xem lại hợp đồng trước khi ký.",
+   "pid": "u01-recommend"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "Please remember ------- the lights before you leave the office.",
+   "options": [
+    "turning off",
+    "to turn off",
+    "turned off",
+    "turn off"
+   ],
+   "ans": 1,
+   "why": "remember to V = nhớ làm việc sắp tới (tắt đèn trước khi ra về). remember V-ing là nhớ việc đã làm, không hợp ngữ cảnh.",
+   "vi": "Hãy nhớ tắt đèn trước khi rời văn phòng.",
+   "pid": "u01-remember"
+  },
+  {
+   "type": "form",
+   "q": "The printer in the copy room keeps -------, so please call a technician.",
+   "options": [
+    "to jam",
+    "jam",
+    "jamming",
+    "jammed"
+   ],
+   "ans": 2,
+   "why": "keep + V-ing: keeps jamming = cứ bị kẹt giấy. Không dùng to V sau keep.",
+   "vi": "Máy in ở phòng photo cứ bị kẹt giấy, vì vậy hãy gọi kỹ thuật viên.",
+   "pid": "u01-keep"
+  },
+  {
+   "type": "toV-Ving",
+   "q": "On the way to the airport, the driver stopped ------- some gas.",
+   "options": [
+    "buying",
+    "buy",
+    "bought",
+    "to buy"
+   ],
+   "ans": 3,
+   "why": "stop to V = dừng lại để làm gì: stopped to buy gas. 'stopped buying' nghĩa là ngừng mua, không hợp ngữ cảnh đang trên đường.",
+   "vi": "Trên đường ra sân bay, tài xế đã dừng lại để mua xăng.",
+   "pid": "u01-stop"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Công ty quyết định hoãn việc tuyển dụng đến quý sau.",
+   "chunks": [
+    "The company",
+    "decided",
+    "to postpone",
+    "hiring",
+    "until next quarter."
+   ],
+   "pid": "u01-decide",
+   "why": "decide + to V; postpone + V-ing (postpone hiring, không phải postpone to hire).",
+   "dist": "to hire"
+  },
+  {
+   "vi": "Nhân viên nên tránh dùng email cá nhân cho việc của khách hàng.",
+   "chunks": [
+    "Employees",
+    "should avoid",
+    "using",
+    "personal email",
+    "for client matters."
+   ],
+   "pid": "u01-avoid",
+   "why": "avoid + V-ing.",
+   "dist": "to use"
+  },
+  {
+   "vi": "Chúng tôi đang cân nhắc chuyển sang làm việc từ xa.",
+   "chunks": [
+    "We",
+    "are considering",
+    "switching",
+    "to remote work."
+   ],
+   "pid": "u01-consider",
+   "why": "consider + V-ing.",
+   "dist": "to switch"
+  },
+  {
+   "vi": "Nhà cung cấp đã không giao đơn hàng trước hạn chót.",
+   "chunks": [
+    "The vendor",
+    "failed",
+    "to deliver",
+    "the order",
+    "by the deadline."
+   ],
+   "pid": "u01-fail",
+   "why": "fail + to V.",
+   "dist": "delivering"
+  },
+  {
+   "vi": "Phiền bạn gửi lại cho tôi bản báo giá được không?",
+   "chunks": [
+    "Would you mind",
+    "sending",
+    "me",
+    "the quote",
+    "again?"
+   ],
+   "pid": "u01-mind",
+   "why": "Would you mind + V-ing.",
+   "dist": "to send"
+  },
+  {
+   "vi": "Tài xế dừng lại để kiểm tra địa chỉ giao hàng.",
+   "chunks": [
+    "The driver",
+    "stopped",
+    "to check",
+    "the delivery address."
+   ],
+   "pid": "u01-stop",
+   "why": "stop to V = dừng lại để làm gì.",
+   "dist": "checking"
+  }
+ ],
+ "translate": [
+  {
+   "en": "After reviewing the budget, the board decided to postpone the expansion until the market improved.",
+   "vi": "Sau khi xem xét ngân sách, hội đồng quản trị quyết định hoãn việc mở rộng cho đến khi thị trường cải thiện.",
+   "chunks": [
+    {
+     "t": "After reviewing the budget,",
+     "r": "trạng ngữ",
+     "vi": "sau khi xem xét ngân sách"
+    },
+    {
+     "t": "the board",
+     "r": "S",
+     "vi": "hội đồng quản trị"
+    },
+    {
+     "t": "decided",
+     "r": "V",
+     "vi": "quyết định",
+     "k": true
+    },
+    {
+     "t": "to postpone",
+     "r": "to V",
+     "vi": "hoãn",
+     "k": true
+    },
+    {
+     "t": "the expansion",
+     "r": "O",
+     "vi": "việc mở rộng"
+    },
+    {
+     "t": "until the market improved.",
+     "r": "mệnh đề",
+     "vi": "cho đến khi thị trường cải thiện"
+    }
+   ],
+   "note": "decide + to V = quyết định làm gì; postpone + danh từ = hoãn (việc gì). Dịch theo thứ tự câu: trạng ngữ 'After reviewing...' đứng đầu, rồi chủ ngữ, 'decided to postpone' = quyết định hoãn, cuối cùng là mệnh đề 'until ...' = cho đến khi.",
+   "pid": "u01-decide",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ]
+  },
+  {
+   "en": "Because of rising costs, the manufacturer has stopped producing the older model and will focus on new products.",
+   "vi": "Do chi phí tăng, nhà sản xuất đã ngừng sản xuất mẫu cũ và sẽ tập trung vào sản phẩm mới.",
+   "chunks": [
+    {
+     "t": "Because of rising costs,",
+     "r": "trạng ngữ",
+     "vi": "do chi phí tăng"
+    },
+    {
+     "t": "the manufacturer",
+     "r": "S",
+     "vi": "nhà sản xuất"
+    },
+    {
+     "t": "has stopped",
+     "r": "V",
+     "vi": "đã ngừng",
+     "k": true
+    },
+    {
+     "t": "producing",
+     "r": "V-ing",
+     "vi": "sản xuất",
+     "k": true
+    },
+    {
+     "t": "the older model",
+     "r": "O",
+     "vi": "mẫu cũ"
+    },
+    {
+     "t": "and will focus on new products.",
+     "r": "mệnh đề",
+     "vi": "và sẽ tập trung vào sản phẩm mới"
+    }
+   ],
+   "note": "stop + V-ing = ngừng hẳn việc gì (khác stop to V = dừng lại để làm). Vì vậy 'has stopped producing the older model' = đã ngừng sản xuất mẫu cũ. Vế sau 'and will focus on' nối tiếp, dịch 'và sẽ tập trung vào'.",
+   "pid": "u01-stop",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "viOpts": [
+    "Vì chi phí tăng, nhà sản xuất dừng lại để sản xuất mẫu cũ và sẽ tập trung vào sản phẩm mới.",
+    "Do chi phí tăng, nhà sản xuất đã ngừng sản xuất mẫu cũ và sẽ tập trung vào sản phẩm mới.",
+    "Do chi phí tăng, nhà sản xuất sẽ ngừng tập trung vào sản phẩm mới và sản xuất mẫu cũ."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "If you have any questions about the new policy, please do not hesitate to contact the personnel office.",
+   "vi": "Nếu có bất kỳ thắc mắc nào về chính sách mới, xin cứ liên hệ với phòng nhân sự.",
+   "chunks": [
+    {
+     "t": "If you have any questions about the new policy,",
+     "r": "mệnh đề",
+     "vi": "nếu bạn có thắc mắc nào về chính sách mới"
+    },
+    {
+     "t": "please do not hesitate",
+     "r": "V",
+     "vi": "xin đừng ngần ngại",
+     "k": true
+    },
+    {
+     "t": "to contact",
+     "r": "to V",
+     "vi": "liên hệ",
+     "k": true
+    },
+    {
+     "t": "the personnel office.",
+     "r": "O",
+     "vi": "phòng nhân sự"
+    }
+   ],
+   "note": "'do not hesitate to V' là câu lịch sự cuối thư: dịch 'xin cứ ... / đừng ngại ...'. Mệnh đề 'If ...' dịch trước vì tiếng Việt cũng đặt điều kiện ở đầu câu; 'contact' không cần 'with' trong tiếng Anh nhưng tiếng Việt dịch 'liên hệ với'.",
+   "pid": "u01-hesitate",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3
+   ]
+  },
+  {
+   "en": "Despite the heavy snow, our technicians managed to restore power to most of the district by midnight.",
+   "vi": "Dù tuyết rơi dày, các kỹ thuật viên của chúng tôi vẫn khôi phục được điện cho phần lớn khu vực trước nửa đêm.",
+   "chunks": [
+    {
+     "t": "Despite the heavy snow,",
+     "r": "trạng ngữ",
+     "vi": "dù tuyết rơi dày"
+    },
+    {
+     "t": "our technicians",
+     "r": "S",
+     "vi": "các kỹ thuật viên của chúng tôi"
+    },
+    {
+     "t": "managed",
+     "r": "V",
+     "vi": "vẫn làm được",
+     "k": true
+    },
+    {
+     "t": "to restore",
+     "r": "to V",
+     "vi": "khôi phục",
+     "k": true
+    },
+    {
+     "t": "power",
+     "r": "O",
+     "vi": "điện"
+    },
+    {
+     "t": "to most of the district",
+     "r": "giới từ + O",
+     "vi": "cho phần lớn khu vực"
+    },
+    {
+     "t": "by midnight.",
+     "r": "trạng ngữ",
+     "vi": "trước nửa đêm"
+    }
+   ],
+   "note": "manage to V = làm được (dù khó khăn), dịch 'vẫn ... được'. Chú ý: ở đây manage KHÔNG phải 'quản lý'. 'Despite + cụm danh từ' = dù/bất chấp.",
+   "pid": "u01-manage",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ],
+   "viOpts": [
+    "Bất chấp tuyết dày, các kỹ thuật viên đã quản lý phần lớn khu vực và khôi phục điện trước nửa đêm.",
+    "Vì tuyết dày, các kỹ thuật viên không thể khôi phục điện cho phần lớn khu vực trước nửa đêm.",
+    "Dù tuyết rơi dày, các kỹ thuật viên của chúng tôi vẫn khôi phục được điện cho phần lớn khu vực trước nửa đêm."
+   ],
+   "viAns": 2
+  },
+  {
+   "en": "The consultant recommended renegotiating the contract with our main supplier before the end of the quarter.",
+   "vi": "Chuyên gia tư vấn khuyên nên đàm phán lại hợp đồng với nhà cung cấp chính của chúng tôi trước cuối quý.",
+   "chunks": [
+    {
+     "t": "The consultant",
+     "r": "S",
+     "vi": "chuyên gia tư vấn"
+    },
+    {
+     "t": "recommended",
+     "r": "V",
+     "vi": "khuyên nên",
+     "k": true
+    },
+    {
+     "t": "renegotiating",
+     "r": "V-ing",
+     "vi": "đàm phán lại",
+     "k": true
+    },
+    {
+     "t": "the contract with our main supplier",
+     "r": "O",
+     "vi": "hợp đồng với nhà cung cấp chính của chúng tôi"
+    },
+    {
+     "t": "before the end of the quarter.",
+     "r": "trạng ngữ",
+     "vi": "trước cuối quý"
+    }
+   ],
+   "note": "recommend + V-ing = khuyên nên làm gì (không nói rõ ai làm). Dịch 'khuyên nên' + động từ. Cụm 'with our main supplier' bổ nghĩa cho 'the contract', dịch ngay sau 'hợp đồng'.",
+   "pid": "u01-recommend",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4
+   ]
+  },
+  {
+   "en": "Please remember to attach your receipts when you submit the expense report, or the claim will not be processed.",
+   "vi": "Khi nộp báo cáo chi phí, hãy nhớ đính kèm biên lai, nếu không yêu cầu thanh toán sẽ không được xử lý.",
+   "chunks": [
+    {
+     "t": "Please remember",
+     "r": "V",
+     "vi": "hãy nhớ",
+     "k": true
+    },
+    {
+     "t": "to attach",
+     "r": "to V",
+     "vi": "đính kèm",
+     "k": true
+    },
+    {
+     "t": "your receipts",
+     "r": "O",
+     "vi": "biên lai của bạn"
+    },
+    {
+     "t": "when you submit the expense report,",
+     "r": "mệnh đề",
+     "vi": "khi bạn nộp báo cáo chi phí"
+    },
+    {
+     "t": "or the claim will not be processed.",
+     "r": "mệnh đề",
+     "vi": "nếu không yêu cầu thanh toán sẽ không được xử lý"
+    }
+   ],
+   "note": "remember to V = nhớ làm (việc sắp tới), không phải nhớ việc đã làm. Tiếng Việt thường đưa mệnh đề thời gian 'when you submit...' lên đầu. 'or' ở đây = nếu không.",
+   "pid": "u01-remember",
+   "viOrder": [
+    3,
+    0,
+    1,
+    2,
+    4
+   ]
+  }
+ ]
+}

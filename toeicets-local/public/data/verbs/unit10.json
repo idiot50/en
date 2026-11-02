@@ -1,0 +1,2264 @@
+{
+ "unit": 10,
+ "title": "be + tính từ / V3 + giới từ / to V",
+ "icon": "🔗",
+ "intro": "Rất nhiều tính từ và quá khứ phân từ phải đi kèm đúng giới từ hoặc to V mới đủ nghĩa: eligible for, committed to V-ing, based on, scheduled to V. Part 5 hay hỏi đúng giới từ, còn khi dịch bạn cần hiểu cụm nào là \"một khối\" (be eligible for = đủ điều kiện nhận). Mẹo: học cả cụm, và nhớ sau \"to\" giới từ (committed to, used to, subject to) là V-ing/danh từ, còn \"to\" trong likely to, willing to, scheduled to là to V.",
+ "formula": [
+  [
+   "Công thức",
+   "Ví dụ",
+   "Nghĩa"
+  ],
+  [
+   "be + adj/V3 + for + N",
+   "eligible for, responsible for, known for, scheduled for",
+   "đủ điều kiện nhận / chịu trách nhiệm về / nổi tiếng vì / lên lịch vào"
+  ],
+  [
+   "be + adj/V3 + to + N / V-ing (to là giới từ)",
+   "committed to improving, subject to change, entitled to a refund, used to working",
+   "cam kết / có thể bị / có quyền / quen với"
+  ],
+  [
+   "be + adj/V3 + with / in / of / from / on",
+   "familiar with, interested in, aware of, exempt from, based on",
+   "quen thuộc / quan tâm / biết / được miễn / dựa trên"
+  ],
+  [
+   "be + adj + to V (to V)",
+   "likely to rise, willing to offer, about to begin, eligible to apply",
+   "có khả năng / sẵn lòng / sắp / đủ điều kiện làm gì"
+  ],
+  [
+   "be used to V-ing ≠ used to V",
+   "We are used to travelling. / We used to travel.",
+   "quen với việc đi / ngày trước từng đi"
+  ]
+ ],
+ "patterns": [
+  {
+   "id": "u10-eligible",
+   "p": "be eligible for sth / to V",
+   "form": "be + eligible + for + N / to V",
+   "vi": "đủ điều kiện (để được hưởng cái gì / làm gì)",
+   "core": true,
+   "note": "Bẫy: eligible đi với FOR + danh từ hoặc TO + V, không dùng \"eligible of/in/to + danh từ\". Chủ ngữ thường là người đáp ứng điều kiện (tuổi, thâm niên, thu nhập).",
+   "vs": "be entitled to = có quyền theo luật/hợp đồng; eligible = đáp ứng điều kiện nên được xét/hưởng",
+   "ex": [
+    {
+     "en": "Full-time employees are eligible for a year-end bonus.",
+     "vi": "Nhân viên toàn thời gian đủ điều kiện nhận thưởng cuối năm.",
+     "chunks": [
+      {
+       "t": "Full-time employees",
+       "r": "S",
+       "vi": "nhân viên toàn thời gian"
+      },
+      {
+       "t": "are eligible",
+       "r": "V",
+       "vi": "đủ điều kiện",
+       "k": true
+      },
+      {
+       "t": "for a year-end bonus.",
+       "r": "giới từ + O",
+       "vi": "nhận thưởng cuối năm",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Customers who spend over $100 are eligible to enter the prize draw.",
+     "vi": "Khách hàng chi trên 100 đô la đủ điều kiện tham gia rút thăm trúng thưởng.",
+     "chunks": [
+      {
+       "t": "Customers who spend over $100",
+       "r": "S",
+       "vi": "khách hàng chi trên 100 đô la"
+      },
+      {
+       "t": "are eligible",
+       "r": "V",
+       "vi": "đủ điều kiện",
+       "k": true
+      },
+      {
+       "t": "to enter",
+       "r": "to V",
+       "vi": "tham gia",
+       "k": true
+      },
+      {
+       "t": "the prize draw.",
+       "r": "O-vật",
+       "vi": "rút thăm trúng thưởng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-entitled",
+   "p": "be entitled to sth / to V",
+   "form": "be + entitled + to + N / to V",
+   "vi": "có quyền được hưởng / được phép làm gì",
+   "core": true,
+   "note": "Entitled to + danh từ (to là giới từ) hoặc to + V. Quyền này do luật, hợp đồng hay chính sách ban cho. Bẫy: \"entitled for\" sai.",
+   "vs": "be eligible for = đủ điều kiện (chưa chắc có quyền đương nhiên)",
+   "ex": [
+    {
+     "en": "All staff are entitled to ten days of paid leave per year.",
+     "vi": "Mọi nhân viên có quyền hưởng mười ngày nghỉ phép có lương mỗi năm.",
+     "chunks": [
+      {
+       "t": "All staff",
+       "r": "S",
+       "vi": "mọi nhân viên"
+      },
+      {
+       "t": "are entitled",
+       "r": "V",
+       "vi": "có quyền",
+       "k": true
+      },
+      {
+       "t": "to ten days of paid leave",
+       "r": "giới từ + O",
+       "vi": "hưởng mười ngày nghỉ phép có lương",
+       "k": true
+      },
+      {
+       "t": "per year.",
+       "r": "trạng ngữ",
+       "vi": "mỗi năm"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Members are entitled to use the lounge free of charge.",
+     "vi": "Hội viên được quyền sử dụng phòng chờ miễn phí.",
+     "chunks": [
+      {
+       "t": "Members",
+       "r": "S",
+       "vi": "hội viên"
+      },
+      {
+       "t": "are entitled",
+       "r": "V",
+       "vi": "có quyền",
+       "k": true
+      },
+      {
+       "t": "to use",
+       "r": "to V",
+       "vi": "sử dụng",
+       "k": true
+      },
+      {
+       "t": "the lounge",
+       "r": "O-vật",
+       "vi": "phòng chờ"
+      },
+      {
+       "t": "free of charge.",
+       "r": "trạng ngữ",
+       "vi": "miễn phí"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-responsible",
+   "p": "be responsible for sth / V-ing",
+   "form": "be + responsible + for + N / V-ing",
+   "vi": "chịu trách nhiệm về/phụ trách việc gì",
+   "core": true,
+   "note": "Responsible FOR + danh từ/V-ing (không \"responsible of/about\"). Dịch tự nhiên: \"phụ trách\", \"chịu trách nhiệm về\".",
+   "vs": "responsible TO sb = chịu trách nhiệm trước ai (báo cáo cho người đó)",
+   "ex": [
+    {
+     "en": "The logistics team is responsible for shipping all orders on time.",
+     "vi": "Nhóm hậu cần chịu trách nhiệm giao tất cả đơn hàng đúng hạn.",
+     "chunks": [
+      {
+       "t": "The logistics team",
+       "r": "S",
+       "vi": "nhóm hậu cần"
+      },
+      {
+       "t": "is responsible",
+       "r": "V",
+       "vi": "chịu trách nhiệm",
+       "k": true
+      },
+      {
+       "t": "for shipping",
+       "r": "giới từ + O",
+       "vi": "giao",
+       "k": true
+      },
+      {
+       "t": "all orders",
+       "r": "O-vật",
+       "vi": "tất cả đơn hàng"
+      },
+      {
+       "t": "on time.",
+       "r": "trạng ngữ",
+       "vi": "đúng hạn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "Ms. Wong is responsible for the quarterly budget in her department.",
+     "vi": "Bà Wong chịu trách nhiệm về ngân sách hàng quý của phòng mình.",
+     "chunks": [
+      {
+       "t": "Ms. Wong",
+       "r": "S",
+       "vi": "bà Wong"
+      },
+      {
+       "t": "is responsible",
+       "r": "V",
+       "vi": "chịu trách nhiệm",
+       "k": true
+      },
+      {
+       "t": "for the quarterly budget",
+       "r": "giới từ + O",
+       "vi": "về ngân sách hàng quý",
+       "k": true
+      },
+      {
+       "t": "in her department.",
+       "r": "giới từ + O",
+       "vi": "của phòng bà"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-committed",
+   "p": "be committed/dedicated to V-ing",
+   "form": "be + committed/dedicated + to + V-ing / N",
+   "vi": "cam kết/tận tâm với việc làm gì",
+   "core": true,
+   "note": "Bẫy lớn: ở đây \"to\" là GIỚI TỪ nên theo sau là V-ing hoặc danh từ, không phải V nguyên mẫu (committed to improving, không phải \"committed to improve\"). Cùng khuôn: be devoted to, be dedicated to.",
+   "alt": "= be dedicated/devoted to V-ing",
+   "ex": [
+    {
+     "en": "Our company is committed to protecting the environment.",
+     "vi": "Công ty chúng tôi cam kết bảo vệ môi trường.",
+     "chunks": [
+      {
+       "t": "Our company",
+       "r": "S",
+       "vi": "công ty chúng tôi"
+      },
+      {
+       "t": "is committed",
+       "r": "V",
+       "vi": "cam kết",
+       "k": true
+      },
+      {
+       "t": "to protecting",
+       "r": "giới từ + O",
+       "vi": "bảo vệ",
+       "k": true
+      },
+      {
+       "t": "the environment.",
+       "r": "O-vật",
+       "vi": "môi trường"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Our staff are dedicated to providing excellent service.",
+     "vi": "Nhân viên của chúng tôi tận tâm cung cấp dịch vụ xuất sắc.",
+     "chunks": [
+      {
+       "t": "Our staff",
+       "r": "S",
+       "vi": "nhân viên của chúng tôi"
+      },
+      {
+       "t": "are dedicated",
+       "r": "V",
+       "vi": "tận tâm",
+       "k": true
+      },
+      {
+       "t": "to providing",
+       "r": "giới từ + O",
+       "vi": "cung cấp",
+       "k": true
+      },
+      {
+       "t": "excellent service.",
+       "r": "O-vật",
+       "vi": "dịch vụ xuất sắc"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ],
+   "vs": "be likely/willing TO + V nguyên mẫu (to V) ≠ be committed TO + V-ing (to là giới từ)"
+  },
+  {
+   "id": "u10-subject",
+   "p": "be subject to sth",
+   "form": "be + subject + to + N",
+   "vi": "có thể bị/phải chịu/tùy thuộc vào",
+   "core": true,
+   "note": "Hay gặp trong thông báo: subject to change (có thể thay đổi), subject to approval (cần được duyệt), subject to availability (tùy tình trạng còn hàng). \"to\" là giới từ + danh từ.",
+   "ex": [
+    {
+     "en": "All prices are subject to change without notice.",
+     "vi": "Mọi mức giá có thể thay đổi mà không báo trước.",
+     "chunks": [
+      {
+       "t": "All prices",
+       "r": "S",
+       "vi": "mọi mức giá"
+      },
+      {
+       "t": "are subject",
+       "r": "V",
+       "vi": "có thể",
+       "k": true
+      },
+      {
+       "t": "to change",
+       "r": "giới từ + O",
+       "vi": "thay đổi",
+       "k": true
+      },
+      {
+       "t": "without notice.",
+       "r": "trạng ngữ",
+       "vi": "mà không báo trước"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The offer is subject to approval by the board.",
+     "vi": "Ưu đãi này còn tùy thuộc vào việc hội đồng phê duyệt.",
+     "chunks": [
+      {
+       "t": "The offer",
+       "r": "S",
+       "vi": "ưu đãi này"
+      },
+      {
+       "t": "is subject",
+       "r": "V",
+       "vi": "còn tùy thuộc",
+       "k": true
+      },
+      {
+       "t": "to approval",
+       "r": "giới từ + O",
+       "vi": "vào việc phê duyệt",
+       "k": true
+      },
+      {
+       "t": "by the board.",
+       "r": "giới từ + O",
+       "vi": "của hội đồng"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-aware",
+   "p": "be aware of sth",
+   "form": "be + aware + of + N / that + S V",
+   "vi": "biết, nhận thức được điều gì",
+   "core": true,
+   "note": "Aware OF + danh từ/V-ing, hoặc aware THAT + mệnh đề. Bẫy: không dùng \"aware about/for\". Hay gặp trong thông báo: Please be aware that...",
+   "alt": "be aware that + S V",
+   "ex": [
+    {
+     "en": "Employees should be aware of the new safety rules.",
+     "vi": "Nhân viên nên biết các quy định an toàn mới.",
+     "chunks": [
+      {
+       "t": "Employees",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "should be aware",
+       "r": "V",
+       "vi": "nên biết",
+       "k": true
+      },
+      {
+       "t": "of the new safety rules.",
+       "r": "giới từ + O",
+       "vi": "các quy định an toàn mới",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "We are aware that the delivery was late.",
+     "vi": "Chúng tôi biết rằng việc giao hàng đã bị trễ.",
+     "chunks": [
+      {
+       "t": "We",
+       "r": "S",
+       "vi": "chúng tôi"
+      },
+      {
+       "t": "are aware",
+       "r": "V",
+       "vi": "biết",
+       "k": true
+      },
+      {
+       "t": "that the delivery was late.",
+       "r": "mệnh đề",
+       "vi": "rằng việc giao hàng đã bị trễ",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-capable",
+   "p": "be capable of V-ing",
+   "form": "be + capable + of + V-ing / N",
+   "vi": "có khả năng làm gì",
+   "note": "Capable OF + V-ing/danh từ (không \"capable to V\"). Khác be able to V (đi với to V); nghĩa tương đương nhưng khuôn khác nhau.",
+   "vs": "be able TO V = có thể làm gì",
+   "ex": [
+    {
+     "en": "The new server is capable of handling thousands of requests per second.",
+     "vi": "Máy chủ mới có khả năng xử lý hàng nghìn yêu cầu mỗi giây.",
+     "chunks": [
+      {
+       "t": "The new server",
+       "r": "S",
+       "vi": "máy chủ mới"
+      },
+      {
+       "t": "is capable",
+       "r": "V",
+       "vi": "có khả năng",
+       "k": true
+      },
+      {
+       "t": "of handling",
+       "r": "giới từ + O",
+       "vi": "xử lý",
+       "k": true
+      },
+      {
+       "t": "thousands of requests",
+       "r": "O-vật",
+       "vi": "hàng nghìn yêu cầu"
+      },
+      {
+       "t": "per second.",
+       "r": "trạng ngữ",
+       "vi": "mỗi giây"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    },
+    {
+     "en": "She is capable of managing a large team.",
+     "vi": "Cô ấy có khả năng quản lý một đội ngũ lớn.",
+     "chunks": [
+      {
+       "t": "She",
+       "r": "S",
+       "vi": "cô ấy"
+      },
+      {
+       "t": "is capable",
+       "r": "V",
+       "vi": "có khả năng",
+       "k": true
+      },
+      {
+       "t": "of managing",
+       "r": "giới từ + O",
+       "vi": "quản lý",
+       "k": true
+      },
+      {
+       "t": "a large team.",
+       "r": "O-vật",
+       "vi": "một đội ngũ lớn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-familiar",
+   "p": "be familiar with sth",
+   "form": "be + familiar + with + N",
+   "vi": "quen thuộc với, am hiểu cái gì",
+   "note": "Familiar WITH sth = bạn biết rõ cái đó. Đảo chủ ngữ thì đổi giới từ: sth is familiar TO sb (cái gì quen thuộc với ai): The name is familiar to me.",
+   "vs": "sth be familiar TO sb = cái gì quen thuộc với ai",
+   "ex": [
+    {
+     "en": "Candidates should be familiar with spreadsheet software.",
+     "vi": "Ứng viên nên am hiểu phần mềm bảng tính.",
+     "chunks": [
+      {
+       "t": "Candidates",
+       "r": "S",
+       "vi": "ứng viên"
+      },
+      {
+       "t": "should be familiar",
+       "r": "V",
+       "vi": "nên am hiểu",
+       "k": true
+      },
+      {
+       "t": "with spreadsheet software.",
+       "r": "giới từ + O",
+       "vi": "phần mềm bảng tính",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Technicians must be familiar with the safety procedures.",
+     "vi": "Các kỹ thuật viên phải nắm rõ các quy trình an toàn.",
+     "chunks": [
+      {
+       "t": "Technicians",
+       "r": "S",
+       "vi": "các kỹ thuật viên"
+      },
+      {
+       "t": "must be familiar",
+       "r": "V",
+       "vi": "phải nắm rõ",
+       "k": true
+      },
+      {
+       "t": "with the safety procedures.",
+       "r": "giới từ + O",
+       "vi": "các quy trình an toàn",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-satisfied",
+   "p": "be satisfied/pleased with sth",
+   "form": "be + satisfied/pleased + with + N",
+   "vi": "hài lòng với cái gì",
+   "note": "Satisfied/pleased WITH + danh từ (không \"satisfied of\"). Pleased còn đi với to V: be pleased to announce (vui mừng thông báo). Người hài lòng là satisfied/pleased; điều gây hài lòng là satisfying.",
+   "alt": "be pleased to V = vui mừng được làm gì",
+   "ex": [
+    {
+     "en": "Most customers are satisfied with the new service.",
+     "vi": "Hầu hết khách hàng hài lòng với dịch vụ mới.",
+     "chunks": [
+      {
+       "t": "Most customers",
+       "r": "S",
+       "vi": "hầu hết khách hàng"
+      },
+      {
+       "t": "are satisfied",
+       "r": "V",
+       "vi": "hài lòng",
+       "k": true
+      },
+      {
+       "t": "with the new service.",
+       "r": "giới từ + O",
+       "vi": "với dịch vụ mới",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The director was pleased with the sales results.",
+     "vi": "Giám đốc hài lòng với kết quả bán hàng.",
+     "chunks": [
+      {
+       "t": "The director",
+       "r": "S",
+       "vi": "giám đốc"
+      },
+      {
+       "t": "was pleased",
+       "r": "V",
+       "vi": "hài lòng",
+       "k": true
+      },
+      {
+       "t": "with the sales results.",
+       "r": "giới từ + O",
+       "vi": "với kết quả bán hàng",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-interested",
+   "p": "be interested/involved in sth / V-ing",
+   "form": "be + interested/involved + in + N / V-ing",
+   "vi": "quan tâm đến / có tham gia, liên quan vào",
+   "note": "Cả hai đi với IN. Interested (người cảm thấy hứng thú) khác interesting (sự việc thú vị). Involved in = tham gia vào, liên quan tới.",
+   "ex": [
+    {
+     "en": "Several investors are interested in funding the project.",
+     "vi": "Một số nhà đầu tư quan tâm đến việc tài trợ cho dự án.",
+     "chunks": [
+      {
+       "t": "Several investors",
+       "r": "S",
+       "vi": "một số nhà đầu tư"
+      },
+      {
+       "t": "are interested",
+       "r": "V",
+       "vi": "quan tâm",
+       "k": true
+      },
+      {
+       "t": "in funding",
+       "r": "giới từ + O",
+       "vi": "đến việc tài trợ",
+       "k": true
+      },
+      {
+       "t": "the project.",
+       "r": "O-vật",
+       "vi": "cho dự án"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "All departments were involved in planning the event.",
+     "vi": "Tất cả các phòng ban đều tham gia lập kế hoạch cho sự kiện.",
+     "chunks": [
+      {
+       "t": "All departments",
+       "r": "S",
+       "vi": "tất cả các phòng ban"
+      },
+      {
+       "t": "were involved",
+       "r": "V",
+       "vi": "đều tham gia",
+       "k": true
+      },
+      {
+       "t": "in planning",
+       "r": "giới từ + O",
+       "vi": "lập kế hoạch",
+       "k": true
+      },
+      {
+       "t": "the event.",
+       "r": "O-vật",
+       "vi": "cho sự kiện"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-located",
+   "p": "be located in/at/on + nơi chốn",
+   "form": "be + located + in/at/on + địa điểm",
+   "vi": "nằm ở, tọa lạc tại",
+   "note": "Giới từ theo địa điểm: in + thành phố/quốc gia/tòa nhà; at + địa chỉ cụ thể/điểm; on + tên đường (kiểu Mỹ). Nghĩa tương đương: be situated.",
+   "alt": "= be situated in/at/on",
+   "ex": [
+    {
+     "en": "Our headquarters is located in Singapore.",
+     "vi": "Trụ sở chính của chúng tôi nằm ở Singapore.",
+     "chunks": [
+      {
+       "t": "Our headquarters",
+       "r": "S",
+       "vi": "trụ sở chính của chúng tôi"
+      },
+      {
+       "t": "is located",
+       "r": "V",
+       "vi": "nằm",
+       "k": true
+      },
+      {
+       "t": "in Singapore.",
+       "r": "giới từ + O",
+       "vi": "ở Singapore",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The conference center is located at 25 Main Street, next to the train station.",
+     "vi": "Trung tâm hội nghị nằm tại số 25 phố Main, cạnh nhà ga.",
+     "chunks": [
+      {
+       "t": "The conference center",
+       "r": "S",
+       "vi": "trung tâm hội nghị"
+      },
+      {
+       "t": "is located",
+       "r": "V",
+       "vi": "nằm",
+       "k": true
+      },
+      {
+       "t": "at 25 Main Street,",
+       "r": "giới từ + O",
+       "vi": "tại số 25 phố Main",
+       "k": true
+      },
+      {
+       "t": "next to the train station.",
+       "r": "giới từ + O",
+       "vi": "cạnh nhà ga"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-known",
+   "p": "be known for / as / to",
+   "form": "be + known + for + N (nổi tiếng vì)",
+   "vi": "nổi tiếng vì/nhờ điều gì",
+   "note": "Known FOR = nổi tiếng vì đặc điểm (dịch vụ, chất lượng). Known AS = được biết đến là/với tên. Known TO sb = được ai biết đến. Đừng dùng known of/by cho nghĩa \"nổi tiếng vì\".",
+   "vs": "known AS = được gọi/được biết là (danh hiệu, vai trò)",
+   "ex": [
+    {
+     "en": "The bakery is known for its fresh bread.",
+     "vi": "Tiệm bánh nổi tiếng nhờ bánh mì tươi.",
+     "chunks": [
+      {
+       "t": "The bakery",
+       "r": "S",
+       "vi": "tiệm bánh"
+      },
+      {
+       "t": "is known",
+       "r": "V",
+       "vi": "nổi tiếng",
+       "k": true
+      },
+      {
+       "t": "for its fresh bread.",
+       "r": "giới từ + O",
+       "vi": "nhờ bánh mì tươi",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The firm is well known for delivering projects on schedule.",
+     "vi": "Công ty này nổi tiếng vì luôn giao dự án đúng tiến độ.",
+     "chunks": [
+      {
+       "t": "The firm",
+       "r": "S",
+       "vi": "công ty này"
+      },
+      {
+       "t": "is well known",
+       "r": "V",
+       "vi": "nổi tiếng",
+       "k": true
+      },
+      {
+       "t": "for delivering",
+       "r": "giới từ + O",
+       "vi": "vì luôn giao",
+       "k": true
+      },
+      {
+       "t": "projects on schedule.",
+       "r": "O-vật",
+       "vi": "dự án đúng tiến độ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-based",
+   "p": "be based on sth ≠ be based in + nơi",
+   "form": "be + based + ON + N (dựa trên)  |  be + based + IN + nơi chốn (có trụ sở tại)",
+   "vi": "based ON = dựa trên cái gì; based IN = có trụ sở/làm việc tại đâu",
+   "core": true,
+   "note": "Hai nghĩa khác nhau, chỉ phân biệt bằng giới từ: (1) be based ON + cơ sở/dữ liệu/số lượng = dựa trên (The price is based on quantity). (2) be based IN + thành phố/quốc gia = có trụ sở tại, làm việc tại (based in Seoul); based AT + địa điểm nhỏ (based at the airport). Bẫy Part 5: thấy nơi chốn → in; thấy cơ sở/căn cứ → on.",
+   "vs": "be located in = nằm ở (vị trí tòa nhà); be based in = có trụ sở ở (nơi công ty/người hoạt động)",
+   "ex": [
+    {
+     "en": "The price is based on the quantity ordered.",
+     "vi": "Giá được tính dựa trên số lượng đặt hàng.",
+     "chunks": [
+      {
+       "t": "The price",
+       "r": "S",
+       "vi": "giá"
+      },
+      {
+       "t": "is based",
+       "r": "V",
+       "vi": "được tính dựa trên",
+       "k": true
+      },
+      {
+       "t": "on the quantity ordered.",
+       "r": "giới từ + O",
+       "vi": "số lượng đặt hàng",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Our logistics partner is based in Rotterdam.",
+     "vi": "Đối tác hậu cần của chúng tôi có trụ sở tại Rotterdam.",
+     "chunks": [
+      {
+       "t": "Our logistics partner",
+       "r": "S",
+       "vi": "đối tác hậu cần của chúng tôi"
+      },
+      {
+       "t": "is based",
+       "r": "V",
+       "vi": "có trụ sở",
+       "k": true
+      },
+      {
+       "t": "in Rotterdam.",
+       "r": "giới từ + O",
+       "vi": "tại Rotterdam",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-used-to",
+   "p": "be used/accustomed to V-ing",
+   "form": "be + used/accustomed + to + V-ing / N",
+   "vi": "quen với việc làm gì",
+   "core": true,
+   "note": "Bẫy: be used to V-ing (đã quen, \"to\" là giới từ) ≠ used to V (ngày xưa từng, nay không còn). Dần dần quen: get used to V-ing. Be used to V (bị động của use) = được dùng để làm gì.",
+   "vs": "used to V (nguyên mẫu) = ngày trước từng làm gì",
+   "ex": [
+    {
+     "en": "Our team is used to working under tight deadlines.",
+     "vi": "Nhóm chúng tôi đã quen làm việc với thời hạn gấp.",
+     "chunks": [
+      {
+       "t": "Our team",
+       "r": "S",
+       "vi": "nhóm chúng tôi"
+      },
+      {
+       "t": "is used",
+       "r": "V",
+       "vi": "đã quen",
+       "k": true
+      },
+      {
+       "t": "to working",
+       "r": "giới từ + O",
+       "vi": "làm việc",
+       "k": true
+      },
+      {
+       "t": "under tight deadlines.",
+       "r": "trạng ngữ",
+       "vi": "với thời hạn gấp"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The staff are not yet accustomed to using the new system.",
+     "vi": "Nhân viên chưa quen sử dụng hệ thống mới.",
+     "chunks": [
+      {
+       "t": "The staff",
+       "r": "S",
+       "vi": "nhân viên"
+      },
+      {
+       "t": "are not yet accustomed",
+       "r": "V",
+       "vi": "chưa quen",
+       "k": true
+      },
+      {
+       "t": "to using",
+       "r": "giới từ + O",
+       "vi": "sử dụng",
+       "k": true
+      },
+      {
+       "t": "the new system.",
+       "r": "O-vật",
+       "vi": "hệ thống mới"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-equipped",
+   "p": "be equipped with sth",
+   "form": "be + equipped + with + N",
+   "vi": "được trang bị cái gì",
+   "note": "Equipped WITH + thiết bị/tiện nghi (bị động của equip sb/sth with sth). Equipped to V = đủ năng lực/phương tiện để làm gì.",
+   "ex": [
+    {
+     "en": "Every conference room is equipped with a projector and a whiteboard.",
+     "vi": "Mỗi phòng họp đều được trang bị máy chiếu và bảng trắng.",
+     "chunks": [
+      {
+       "t": "Every conference room",
+       "r": "S",
+       "vi": "mỗi phòng họp"
+      },
+      {
+       "t": "is equipped",
+       "r": "V",
+       "vi": "được trang bị",
+       "k": true
+      },
+      {
+       "t": "with a projector and a whiteboard.",
+       "r": "giới từ + O",
+       "vi": "máy chiếu và bảng trắng",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The new trucks are equipped with GPS tracking.",
+     "vi": "Những chiếc xe tải mới được trang bị hệ thống định vị GPS.",
+     "chunks": [
+      {
+       "t": "The new trucks",
+       "r": "S",
+       "vi": "những chiếc xe tải mới"
+      },
+      {
+       "t": "are equipped",
+       "r": "V",
+       "vi": "được trang bị",
+       "k": true
+      },
+      {
+       "t": "with GPS tracking.",
+       "r": "giới từ + O",
+       "vi": "định vị GPS",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-scheduled",
+   "p": "be scheduled for + thời điểm / to V",
+   "form": "be + scheduled + for + N / to V",
+   "vi": "được lên lịch vào/để làm gì, dự kiến",
+   "core": true,
+   "note": "Scheduled FOR + ngày/giờ (scheduled for Tuesday), scheduled TO + V (dự kiến làm gì). Bẫy: không dùng V-ing sau scheduled.",
+   "alt": "= be due to V (đến hạn/dự kiến)",
+   "ex": [
+    {
+     "en": "The maintenance work is scheduled for next Tuesday.",
+     "vi": "Công việc bảo trì được lên lịch vào thứ Ba tuần sau.",
+     "chunks": [
+      {
+       "t": "The maintenance work",
+       "r": "S",
+       "vi": "công việc bảo trì"
+      },
+      {
+       "t": "is scheduled",
+       "r": "V",
+       "vi": "được lên lịch",
+       "k": true
+      },
+      {
+       "t": "for next Tuesday.",
+       "r": "giới từ + O",
+       "vi": "vào thứ Ba tuần sau",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The new store is scheduled to open in March.",
+     "vi": "Cửa hàng mới dự kiến khai trương vào tháng Ba.",
+     "chunks": [
+      {
+       "t": "The new store",
+       "r": "S",
+       "vi": "cửa hàng mới"
+      },
+      {
+       "t": "is scheduled",
+       "r": "V",
+       "vi": "dự kiến",
+       "k": true
+      },
+      {
+       "t": "to open",
+       "r": "to V",
+       "vi": "khai trương",
+       "k": true
+      },
+      {
+       "t": "in March.",
+       "r": "trạng ngữ",
+       "vi": "vào tháng Ba"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-likely",
+   "p": "be likely/about to V",
+   "form": "be + likely + to V / be + about + to V",
+   "vi": "có khả năng sẽ / sắp sửa làm gì",
+   "core": true,
+   "note": "Likely to V = nhiều khả năng sẽ; about to V = sắp (ngay lúc này). Bẫy: không dùng V-ing sau likely/about to; không dùng about to với mốc xa như \"tomorrow\", \"next year\".",
+   "vs": "be about to V = sắp làm ngay; be likely to V = có khả năng cao",
+   "ex": [
+    {
+     "en": "Sales are likely to rise during the holiday season.",
+     "vi": "Doanh số có khả năng tăng trong mùa lễ.",
+     "chunks": [
+      {
+       "t": "Sales",
+       "r": "S",
+       "vi": "doanh số"
+      },
+      {
+       "t": "are likely",
+       "r": "V",
+       "vi": "có khả năng",
+       "k": true
+      },
+      {
+       "t": "to rise",
+       "r": "to V",
+       "vi": "tăng",
+       "k": true
+      },
+      {
+       "t": "during the holiday season.",
+       "r": "trạng ngữ",
+       "vi": "trong mùa lễ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "The meeting is about to begin, so please take your seats.",
+     "vi": "Cuộc họp sắp bắt đầu nên xin mời mọi người vào chỗ.",
+     "chunks": [
+      {
+       "t": "The meeting",
+       "r": "S",
+       "vi": "cuộc họp"
+      },
+      {
+       "t": "is about to begin,",
+       "r": "V",
+       "vi": "sắp bắt đầu",
+       "k": true
+      },
+      {
+       "t": "so please take your seats.",
+       "r": "mệnh đề",
+       "vi": "nên xin mời vào chỗ"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-willing",
+   "p": "be willing/reluctant to V",
+   "form": "be + willing/reluctant + to V",
+   "vi": "sẵn lòng / ngần ngại, miễn cưỡng làm gì",
+   "note": "To ở đây là to V (không phải giới từ). Cùng khuôn: be ready/eager/able/unable to V. Bẫy: reluctant là tính từ (reluctant to V); reluctantly là trạng từ.",
+   "ex": [
+    {
+     "en": "The supplier is willing to offer a larger discount.",
+     "vi": "Nhà cung cấp sẵn lòng đưa ra mức giảm giá lớn hơn.",
+     "chunks": [
+      {
+       "t": "The supplier",
+       "r": "S",
+       "vi": "nhà cung cấp"
+      },
+      {
+       "t": "is willing",
+       "r": "V",
+       "vi": "sẵn lòng",
+       "k": true
+      },
+      {
+       "t": "to offer",
+       "r": "to V",
+       "vi": "đưa ra",
+       "k": true
+      },
+      {
+       "t": "a larger discount.",
+       "r": "O-vật",
+       "vi": "mức giảm giá lớn hơn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Many investors are reluctant to take risks in an unstable market.",
+     "vi": "Nhiều nhà đầu tư ngần ngại chấp nhận rủi ro trong một thị trường bất ổn.",
+     "chunks": [
+      {
+       "t": "Many investors",
+       "r": "S",
+       "vi": "nhiều nhà đầu tư"
+      },
+      {
+       "t": "are reluctant",
+       "r": "V",
+       "vi": "ngần ngại",
+       "k": true
+      },
+      {
+       "t": "to take",
+       "r": "to V",
+       "vi": "chấp nhận",
+       "k": true
+      },
+      {
+       "t": "risks",
+       "r": "O-vật",
+       "vi": "rủi ro"
+      },
+      {
+       "t": "in an unstable market.",
+       "r": "trạng ngữ",
+       "vi": "trong một thị trường bất ổn"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3,
+      4
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-exempt",
+   "p": "be exempt from sth",
+   "form": "be + exempt + from + N",
+   "vi": "được miễn khỏi",
+   "note": "Exempt FROM + danh từ (phí, thuế, nghĩa vụ). Bẫy chính tả/nghĩa: exempt (được miễn) khác except (ngoại trừ).",
+   "ex": [
+    {
+     "en": "Non-profit organizations are exempt from the registration fee.",
+     "vi": "Các tổ chức phi lợi nhuận được miễn lệ phí đăng ký.",
+     "chunks": [
+      {
+       "t": "Non-profit organizations",
+       "r": "S",
+       "vi": "các tổ chức phi lợi nhuận"
+      },
+      {
+       "t": "are exempt",
+       "r": "V",
+       "vi": "được miễn",
+       "k": true
+      },
+      {
+       "t": "from the registration fee.",
+       "r": "giới từ + O",
+       "vi": "lệ phí đăng ký",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Items under $20 are exempt from import tax.",
+     "vi": "Các mặt hàng dưới 20 đô la được miễn thuế nhập khẩu.",
+     "chunks": [
+      {
+       "t": "Items under $20",
+       "r": "S",
+       "vi": "các mặt hàng dưới 20 đô la"
+      },
+      {
+       "t": "are exempt",
+       "r": "V",
+       "vi": "được miễn",
+       "k": true
+      },
+      {
+       "t": "from import tax.",
+       "r": "giới từ + O",
+       "vi": "thuế nhập khẩu",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-compatible",
+   "p": "be compatible with sth",
+   "form": "be + compatible + with + N",
+   "vi": "tương thích với",
+   "note": "Compatible WITH + danh từ (không \"compatible to\"). Phủ định: incompatible with. Thường dùng cho thiết bị, phần mềm, kế hoạch.",
+   "ex": [
+    {
+     "en": "This printer is compatible with both Windows and Mac computers.",
+     "vi": "Máy in này tương thích với cả máy tính Windows và Mac.",
+     "chunks": [
+      {
+       "t": "This printer",
+       "r": "S",
+       "vi": "máy in này"
+      },
+      {
+       "t": "is compatible",
+       "r": "V",
+       "vi": "tương thích",
+       "k": true
+      },
+      {
+       "t": "with both Windows and Mac computers.",
+       "r": "giới từ + O",
+       "vi": "với cả máy tính Windows và Mac",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "The proposed schedule is not compatible with our production plan.",
+     "vi": "Lịch trình đề xuất không phù hợp với kế hoạch sản xuất của chúng tôi.",
+     "chunks": [
+      {
+       "t": "The proposed schedule",
+       "r": "S",
+       "vi": "lịch trình đề xuất"
+      },
+      {
+       "t": "is not compatible",
+       "r": "V",
+       "vi": "không phù hợp",
+       "k": true
+      },
+      {
+       "t": "with our production plan.",
+       "r": "giới từ + O",
+       "vi": "với kế hoạch sản xuất của chúng tôi",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-comparable",
+   "p": "be comparable to/with sth",
+   "form": "be + comparable + to/with + N",
+   "vi": "tương đương, có thể so sánh với",
+   "note": "Comparable TO (hoặc with) + danh từ = tương đương với. Hay gặp ở lương, giá, chất lượng: a salary comparable to the industry average. Dịch là \"tương đương\", không phải \"so sánh\".",
+   "ex": [
+    {
+     "en": "The salary is comparable to that of other firms in the industry.",
+     "vi": "Mức lương tương đương với mức lương của các công ty khác trong ngành.",
+     "chunks": [
+      {
+       "t": "The salary",
+       "r": "S",
+       "vi": "mức lương"
+      },
+      {
+       "t": "is comparable",
+       "r": "V",
+       "vi": "tương đương",
+       "k": true
+      },
+      {
+       "t": "to that of other firms",
+       "r": "giới từ + O",
+       "vi": "với mức lương của các công ty khác",
+       "k": true
+      },
+      {
+       "t": "in the industry.",
+       "r": "giới từ + O",
+       "vi": "trong ngành"
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2,
+      3
+     ]
+    },
+    {
+     "en": "Our prices are comparable to those of our main competitors.",
+     "vi": "Giá của chúng tôi tương đương với giá của các đối thủ chính.",
+     "chunks": [
+      {
+       "t": "Our prices",
+       "r": "S",
+       "vi": "giá của chúng tôi"
+      },
+      {
+       "t": "are comparable",
+       "r": "V",
+       "vi": "tương đương",
+       "k": true
+      },
+      {
+       "t": "to those of our main competitors.",
+       "r": "giới từ + O",
+       "vi": "với giá của các đối thủ chính",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  },
+  {
+   "id": "u10-concerned",
+   "p": "be concerned about/with sth",
+   "form": "be + concerned + about + N / that + S V",
+   "vi": "lo ngại về / có liên quan đến",
+   "note": "Concerned ABOUT = lo ngại (cảm xúc); concerned WITH = liên quan đến, quan tâm đến (một lĩnh vực). Cũng có concerned that + mệnh đề.",
+   "vs": "be concerned WITH sth = liên quan đến/xử lý cái gì",
+   "ex": [
+    {
+     "en": "Several shareholders are concerned about the rising costs.",
+     "vi": "Một số cổ đông lo ngại về chi phí đang tăng.",
+     "chunks": [
+      {
+       "t": "Several shareholders",
+       "r": "S",
+       "vi": "một số cổ đông"
+      },
+      {
+       "t": "are concerned",
+       "r": "V",
+       "vi": "lo ngại",
+       "k": true
+      },
+      {
+       "t": "about the rising costs.",
+       "r": "giới từ + O",
+       "vi": "về chi phí đang tăng",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    },
+    {
+     "en": "Managers are concerned that the project may exceed its budget.",
+     "vi": "Các quản lý lo rằng dự án có thể vượt ngân sách.",
+     "chunks": [
+      {
+       "t": "Managers",
+       "r": "S",
+       "vi": "các quản lý"
+      },
+      {
+       "t": "are concerned",
+       "r": "V",
+       "vi": "lo",
+       "k": true
+      },
+      {
+       "t": "that the project may exceed its budget.",
+       "r": "mệnh đề",
+       "vi": "rằng dự án có thể vượt ngân sách",
+       "k": true
+      }
+     ],
+     "viOrder": [
+      0,
+      1,
+      2
+     ]
+    }
+   ]
+  }
+ ],
+ "quiz": [
+  {
+   "q": "All full-time staff are eligible ------- health insurance after three months.",
+   "options": [
+    "to",
+    "of",
+    "with",
+    "for"
+   ],
+   "ans": 3,
+   "why": "be eligible FOR + danh từ (hoặc eligible TO + V). Sau eligible không dùng of/with, và \"to + danh từ\" sai.",
+   "vi": "Mọi nhân viên toàn thời gian đủ điều kiện hưởng bảo hiểm y tế sau ba tháng.",
+   "pid": "u10-eligible",
+   "type": "prep"
+  },
+  {
+   "q": "Our company is committed ------- the quality of its products.",
+   "options": [
+    "improve",
+    "improving",
+    "to improving",
+    "for improving"
+   ],
+   "ans": 2,
+   "why": "be committed TO + V-ing: \"to\" là giới từ nên theo sau là V-ing. \"improving\" thiếu giới từ to; \"for improving\" sai giới từ.",
+   "vi": "Công ty chúng tôi cam kết nâng cao chất lượng sản phẩm.",
+   "pid": "u10-committed",
+   "type": "toV-Ving"
+  },
+  {
+   "q": "Ms. Lee is responsible ------- training all new sales staff.",
+   "options": [
+    "for",
+    "of",
+    "to",
+    "with"
+   ],
+   "ans": 0,
+   "why": "be responsible FOR + V-ing/N. \"responsible to\" có nghĩa chịu trách nhiệm trước ai và không đi với V-ing; of/with sai.",
+   "vi": "Bà Lee chịu trách nhiệm đào tạo toàn bộ nhân viên bán hàng mới.",
+   "pid": "u10-responsible",
+   "type": "prep"
+  },
+  {
+   "q": "Prices on the menu are subject ------- change without notice.",
+   "options": [
+    "for",
+    "at",
+    "to",
+    "on"
+   ],
+   "ans": 2,
+   "why": "be subject TO + danh từ (subject to change). Các giới từ khác không tạo thành cụm cố định.",
+   "vi": "Giá trên thực đơn có thể thay đổi mà không báo trước.",
+   "pid": "u10-subject",
+   "type": "prep"
+  },
+  {
+   "q": "The head office is ------- in Chicago, but most of its staff work remotely.",
+   "options": [
+    "based",
+    "basing",
+    "base",
+    "basis"
+   ],
+   "ans": 0,
+   "why": "be based in + nơi chốn: dạng V3 \"based\" (có trụ sở tại). basing/base/basis không đúng sau \"is ... in\".",
+   "vi": "Văn phòng chính đặt ở Chicago nhưng phần lớn nhân viên làm việc từ xa.",
+   "pid": "u10-based",
+   "type": "form"
+  },
+  {
+   "q": "Employees are not yet used to ------- the new scheduling software.",
+   "options": [
+    "use",
+    "using",
+    "used",
+    "be used"
+   ],
+   "ans": 1,
+   "why": "be used TO + V-ing: đã quen với việc làm gì. \"use\" là dạng của \"used to V\" (từng) nên không phù hợp sau \"are not yet used\".",
+   "vi": "Nhân viên vẫn chưa quen dùng phần mềm xếp lịch mới.",
+   "pid": "u10-used-to",
+   "type": "toV-Ving"
+  },
+  {
+   "q": "Visitors who park in the underground garage are ------- from the daily fee.",
+   "options": [
+    "exempt",
+    "except",
+    "exception",
+    "exemption"
+   ],
+   "ans": 0,
+   "why": "be exempt FROM sth = được miễn. \"except\" là giới từ/liên từ (ngoại trừ), exception/exemption là danh từ.",
+   "vi": "Khách đỗ xe ở hầm để xe được miễn phí gửi xe theo ngày.",
+   "pid": "u10-exempt",
+   "type": "word-choice"
+  },
+  {
+   "q": "The new branch is scheduled ------- open next spring.",
+   "options": [
+    "for",
+    "to",
+    "at",
+    "by"
+   ],
+   "ans": 1,
+   "why": "be scheduled + TO V (dự kiến làm gì): sau đó là động từ \"open\" nên cần to. \"for\" chỉ dùng trước danh từ chỉ thời điểm.",
+   "vi": "Chi nhánh mới dự kiến mở cửa vào mùa xuân tới.",
+   "pid": "u10-scheduled",
+   "type": "toV-Ving"
+  },
+  {
+   "q": "Customers are ------- to a full refund if the item arrives damaged.",
+   "options": [
+    "eligible",
+    "responsible",
+    "subject",
+    "entitled"
+   ],
+   "ans": 3,
+   "why": "be entitled TO sth = có quyền được hưởng. eligible đi với for; responsible/subject không hợp nghĩa ở đây.",
+   "vi": "Khách hàng có quyền được hoàn tiền đầy đủ nếu hàng đến nơi bị hư hỏng.",
+   "pid": "u10-entitled",
+   "type": "word-choice"
+  },
+  {
+   "q": "The supplier is known ------- its fast delivery.",
+   "options": [
+    "of",
+    "as",
+    "for",
+    "by"
+   ],
+   "ans": 2,
+   "why": "be known FOR + đặc điểm = nổi tiếng vì. \"known as\" đi với danh hiệu/vai trò, không đi với \"its fast delivery\".",
+   "vi": "Nhà cung cấp này nổi tiếng nhờ giao hàng nhanh.",
+   "pid": "u10-known",
+   "type": "prep"
+  },
+  {
+   "q": "Please be aware ------- the new parking regulations.",
+   "options": [
+    "for",
+    "of",
+    "in",
+    "on"
+   ],
+   "ans": 1,
+   "why": "be aware OF + danh từ = biết, lưu ý điều gì (cấu trúc chuẩn trong TOEIC). for/in/on không đi với aware.",
+   "vi": "Xin lưu ý các quy định đỗ xe mới.",
+   "pid": "u10-aware",
+   "type": "prep"
+  },
+  {
+   "q": "This software is not ------- with older operating systems.",
+   "options": [
+    "capable",
+    "eligible",
+    "exempt",
+    "compatible"
+   ],
+   "ans": 3,
+   "why": "be compatible WITH sth = tương thích với. capable đi với of; eligible đi với for/to; exempt đi với from.",
+   "vi": "Phần mềm này không tương thích với các hệ điều hành cũ.",
+   "pid": "u10-compatible",
+   "type": "word-choice"
+  }
+ ],
+ "order": [
+  {
+   "vi": "Tất cả nhân viên toàn thời gian đủ điều kiện nhận phụ cấp đi lại sau sáu tháng.",
+   "chunks": [
+    "All full-time employees",
+    "are eligible",
+    "for a travel allowance",
+    "after six months."
+   ],
+   "pid": "u10-eligible",
+   "why": "be eligible for + danh từ.",
+   "dist": "of a travel allowance"
+  },
+  {
+   "vi": "Công ty chúng tôi cam kết giảm chất thải trong sản xuất.",
+   "chunks": [
+    "Our company",
+    "is committed",
+    "to reducing",
+    "waste",
+    "in production."
+   ],
+   "pid": "u10-committed",
+   "why": "be committed to + V-ing (to là giới từ).",
+   "dist": "to reduce"
+  },
+  {
+   "vi": "Giá niêm yết có thể thay đổi mà không báo trước.",
+   "chunks": [
+    "The listed prices",
+    "are subject",
+    "to change",
+    "without notice."
+   ],
+   "pid": "u10-subject",
+   "why": "be subject to + danh từ.",
+   "dist": "for change"
+  },
+  {
+   "vi": "Công ty đối tác của chúng tôi có trụ sở tại Seoul và hoạt động trên toàn cầu.",
+   "chunks": [
+    "Our partner firm",
+    "is based",
+    "in Seoul",
+    "and operates worldwide."
+   ],
+   "pid": "u10-based",
+   "why": "be based in + nơi chốn = có trụ sở tại.",
+   "dist": "on Seoul"
+  },
+  {
+   "vi": "Nhân viên mới chưa quen sử dụng hệ thống kho.",
+   "chunks": [
+    "The new employees",
+    "are not used",
+    "to using",
+    "the warehouse system."
+   ],
+   "pid": "u10-used-to",
+   "why": "be used to + V-ing: quen với việc làm gì.",
+   "dist": "to use"
+  },
+  {
+   "vi": "Chi nhánh mới dự kiến khai trương vào tháng tới.",
+   "chunks": [
+    "The new branch",
+    "is scheduled",
+    "to open",
+    "next month."
+   ],
+   "pid": "u10-scheduled",
+   "why": "be scheduled to V: dự kiến làm gì.",
+   "dist": "opening"
+  }
+ ],
+ "translate": [
+  {
+   "en": "Employees who have worked here for more than a year are eligible to apply for the training program and entitled to take paid study leave.",
+   "vi": "Nhân viên đã làm việc ở đây hơn một năm đủ điều kiện đăng ký chương trình đào tạo và có quyền hưởng kỳ nghỉ học tập có lương.",
+   "chunks": [
+    {
+     "t": "Employees who have worked here for more than a year",
+     "r": "S",
+     "vi": "nhân viên đã làm việc ở đây hơn một năm"
+    },
+    {
+     "t": "are eligible",
+     "r": "V",
+     "vi": "đủ điều kiện",
+     "k": true
+    },
+    {
+     "t": "to apply",
+     "r": "to V",
+     "vi": "đăng ký",
+     "k": true
+    },
+    {
+     "t": "for the training program",
+     "r": "giới từ + O",
+     "vi": "chương trình đào tạo"
+    },
+    {
+     "t": "and entitled",
+     "r": "V",
+     "vi": "và có quyền",
+     "k": true
+    },
+    {
+     "t": "to take",
+     "r": "to V",
+     "vi": "hưởng",
+     "k": true
+    },
+    {
+     "t": "paid study leave.",
+     "r": "O-vật",
+     "vi": "kỳ nghỉ học tập có lương"
+    }
+   ],
+   "note": "eligible to V (đủ điều kiện làm gì) và entitled to V (có quyền làm gì): dịch \"đủ điều kiện...\" và \"có quyền...\". Mệnh đề \"who have worked here...\" đứng sau chủ ngữ, dịch thành \"đã làm việc ở đây...\", đặt sau \"nhân viên\".",
+   "pid": "u10-eligible",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Our support team is responsible for handling customer complaints and is committed to responding to every case within 24 hours.",
+   "vi": "Đội hỗ trợ của chúng tôi chịu trách nhiệm xử lý khiếu nại của khách hàng và cam kết phản hồi mọi trường hợp trong vòng 24 giờ.",
+   "chunks": [
+    {
+     "t": "Our support team",
+     "r": "S",
+     "vi": "đội hỗ trợ của chúng tôi"
+    },
+    {
+     "t": "is responsible",
+     "r": "V",
+     "vi": "chịu trách nhiệm",
+     "k": true
+    },
+    {
+     "t": "for handling",
+     "r": "giới từ + O",
+     "vi": "xử lý",
+     "k": true
+    },
+    {
+     "t": "customer complaints",
+     "r": "O-vật",
+     "vi": "khiếu nại của khách hàng"
+    },
+    {
+     "t": "and is committed",
+     "r": "V",
+     "vi": "và cam kết",
+     "k": true
+    },
+    {
+     "t": "to responding",
+     "r": "giới từ + O",
+     "vi": "phản hồi",
+     "k": true
+    },
+    {
+     "t": "to every case",
+     "r": "giới từ + O",
+     "vi": "mọi trường hợp"
+    },
+    {
+     "t": "within 24 hours.",
+     "r": "trạng ngữ",
+     "vi": "trong vòng 24 giờ"
+    }
+   ],
+   "note": "responsible for + V-ing = \"chịu trách nhiệm + động từ\"; committed to + V-ing = \"cam kết + động từ\". Hai chữ \"for\" và \"to\" không dịch ra, chỉ nối nghĩa.",
+   "pid": "u10-responsible",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ]
+  },
+  {
+   "en": "Please be aware that the schedule is subject to change, so participants should check the website regularly.",
+   "vi": "Xin lưu ý rằng lịch trình có thể thay đổi, nên người tham dự cần thường xuyên kiểm tra trang web.",
+   "chunks": [
+    {
+     "t": "Please be aware",
+     "r": "V",
+     "vi": "xin lưu ý",
+     "k": true
+    },
+    {
+     "t": "that the schedule",
+     "r": "S",
+     "vi": "rằng lịch trình"
+    },
+    {
+     "t": "is subject",
+     "r": "V",
+     "vi": "có thể",
+     "k": true
+    },
+    {
+     "t": "to change,",
+     "r": "giới từ + O",
+     "vi": "thay đổi",
+     "k": true
+    },
+    {
+     "t": "so participants should check",
+     "r": "V",
+     "vi": "nên người tham dự cần kiểm tra"
+    },
+    {
+     "t": "the website regularly.",
+     "r": "O-vật",
+     "vi": "trang web thường xuyên"
+    }
+   ],
+   "note": "be aware that = \"lưu ý rằng/biết rằng\"; subject to change = \"có thể thay đổi\" (không phải \"là chủ đề của sự thay đổi\"). \"so\" mở mệnh đề kết quả: \"nên\".",
+   "pid": "u10-subject",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5
+   ],
+   "viOpts": [
+    "Xin lưu ý rằng lịch trình là chủ đề của sự thay đổi, nên người tham dự không cần kiểm tra trang web.",
+    "Xin lưu ý rằng lịch trình có thể thay đổi, nên người tham dự cần thường xuyên kiểm tra trang web.",
+    "Xin hãy cẩn thận vì người tham dự đã thay đổi lịch trình trên trang web."
+   ],
+   "viAns": 1
+  },
+  {
+   "en": "Our Asia office is based in Singapore, and its new training center is scheduled to open next spring.",
+   "vi": "Văn phòng châu Á của chúng tôi đặt tại Singapore, và trung tâm đào tạo mới dự kiến mở cửa vào mùa xuân tới.",
+   "chunks": [
+    {
+     "t": "Our Asia office",
+     "r": "S",
+     "vi": "văn phòng châu Á của chúng tôi"
+    },
+    {
+     "t": "is based",
+     "r": "V",
+     "vi": "đặt",
+     "k": true
+    },
+    {
+     "t": "in Singapore,",
+     "r": "giới từ + O",
+     "vi": "tại Singapore",
+     "k": true
+    },
+    {
+     "t": "and its new training center",
+     "r": "S",
+     "vi": "và trung tâm đào tạo mới của văn phòng"
+    },
+    {
+     "t": "is scheduled",
+     "r": "V",
+     "vi": "dự kiến",
+     "k": true
+    },
+    {
+     "t": "to open",
+     "r": "to V",
+     "vi": "mở cửa",
+     "k": true
+    },
+    {
+     "t": "next spring.",
+     "r": "trạng ngữ",
+     "vi": "vào mùa xuân tới"
+    }
+   ],
+   "note": "be based in + nơi = \"đặt/có trụ sở tại\"; be scheduled to V = \"dự kiến làm gì\". Hai mệnh đề nối bằng \"and\", dịch thành \"và\".",
+   "pid": "u10-based",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6
+   ]
+  },
+  {
+   "en": "Our technicians used to repair machines by hand, but they are now used to working with computer-controlled equipment.",
+   "vi": "Các kỹ thuật viên của chúng tôi trước đây sửa máy bằng tay, nhưng bây giờ họ đã quen làm việc với thiết bị điều khiển bằng máy tính.",
+   "chunks": [
+    {
+     "t": "Our technicians",
+     "r": "S",
+     "vi": "các kỹ thuật viên của chúng tôi"
+    },
+    {
+     "t": "used to repair",
+     "r": "V",
+     "vi": "trước đây từng sửa",
+     "k": true
+    },
+    {
+     "t": "machines",
+     "r": "O-vật",
+     "vi": "máy móc"
+    },
+    {
+     "t": "by hand,",
+     "r": "trạng ngữ",
+     "vi": "bằng tay"
+    },
+    {
+     "t": "but they",
+     "r": "S",
+     "vi": "nhưng họ"
+    },
+    {
+     "t": "are now used",
+     "r": "V",
+     "vi": "bây giờ đã quen",
+     "k": true
+    },
+    {
+     "t": "to working",
+     "r": "giới từ + O",
+     "vi": "làm việc",
+     "k": true
+    },
+    {
+     "t": "with computer-controlled equipment.",
+     "r": "giới từ + O",
+     "vi": "với thiết bị điều khiển bằng máy tính"
+    }
+   ],
+   "note": "used to repair (V nguyên mẫu) = \"trước đây từng sửa\"; are used to working (V-ing) = \"đã quen làm việc\". Hai cấu trúc giống nhau về chữ nhưng khác hẳn nghĩa: dựa vào V sau \"to\".",
+   "pid": "u10-used-to",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7
+   ],
+   "viOpts": [
+    "Các kỹ thuật viên của chúng tôi đã quen sửa máy bằng tay, nhưng bây giờ họ từng làm việc với thiết bị điều khiển bằng máy tính.",
+    "Các kỹ thuật viên của chúng tôi trước đây quen làm việc với máy tính, nhưng bây giờ họ sửa máy bằng tay.",
+    "Các kỹ thuật viên của chúng tôi trước đây sửa máy bằng tay, nhưng bây giờ họ đã quen làm việc với thiết bị điều khiển bằng máy tính."
+   ],
+   "viAns": 2
+  },
+  {
+   "en": "The firm, which is known for its fast service, is likely to win the contract because it is willing to offer a lower price.",
+   "vi": "Công ty này, vốn nổi tiếng nhờ dịch vụ nhanh, nhiều khả năng sẽ thắng hợp đồng vì sẵn sàng đưa ra mức giá thấp hơn.",
+   "chunks": [
+    {
+     "t": "The firm,",
+     "r": "S",
+     "vi": "công ty này"
+    },
+    {
+     "t": "which is known",
+     "r": "mệnh đề",
+     "vi": "vốn nổi tiếng",
+     "k": true
+    },
+    {
+     "t": "for its fast service,",
+     "r": "giới từ + O",
+     "vi": "nhờ dịch vụ nhanh",
+     "k": true
+    },
+    {
+     "t": "is likely",
+     "r": "V",
+     "vi": "nhiều khả năng sẽ",
+     "k": true
+    },
+    {
+     "t": "to win the contract",
+     "r": "to V",
+     "vi": "thắng hợp đồng",
+     "k": true
+    },
+    {
+     "t": "because it",
+     "r": "mệnh đề",
+     "vi": "vì"
+    },
+    {
+     "t": "is willing",
+     "r": "V",
+     "vi": "sẵn sàng",
+     "k": true
+    },
+    {
+     "t": "to offer",
+     "r": "to V",
+     "vi": "đưa ra",
+     "k": true
+    },
+    {
+     "t": "a lower price.",
+     "r": "O-vật",
+     "vi": "mức giá thấp hơn"
+    }
+   ],
+   "note": "known for = \"nổi tiếng nhờ\"; likely to V = \"nhiều khả năng sẽ\"; willing to V = \"sẵn sàng\". Mệnh đề quan hệ \"which is known...\" dịch là \"vốn nổi tiếng...\" đặt ngay sau chủ ngữ.",
+   "pid": "u10-likely",
+   "viOrder": [
+    0,
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8
+   ]
+  }
+ ]
+}
