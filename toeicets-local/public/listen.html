@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Luyện nghe</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link rel="icon" type="image/png" sizes="64x64" href="/favicon.png?v=10"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    /* ---------- picker ---------- */
+    .ct-row { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+    .ct-chip { border:2px solid var(--border); background:white; border-radius:12px; padding:9px 16px; font-weight:800; cursor:pointer; font-size:14.5px; color:var(--text); font-family:inherit; }
+    .ct-chip:hover { border-color:var(--blue); }
+    .ct-chip.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    .part-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(150px,1fr)); gap:12px; margin-top:8px; }
+    .part-card { border:3px solid var(--border); border-radius:16px; padding:16px; cursor:pointer; text-align:center; background:white; transition:all .12s; }
+    .part-card:hover { border-color:var(--blue); transform:translateY(-2px); }
+    .part-card .ic { font-size:36px; }
+    .part-card .t { font-weight:900; margin-top:6px; font-size:16px; }
+    .part-card .d { font-size:12.5px; color:var(--text-mute); margin-top:3px; }
+    .part-card .n { font-size:12px; color:var(--blue-dark); font-weight:800; margin-top:6px; }
+
+    /* ---------- session ---------- */
+    .ls-header { position:sticky; top:0; z-index:10; background:var(--bg-alt); padding:10px 0; border-bottom:2px solid var(--border); margin-bottom:12px; }
+    .ls-bar { display:flex; justify-content:space-between; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:12px; }
+    .ls-meta { font-weight:800; font-size:13.5px; color:var(--text-soft); }
+    .ls-tools { display:flex; gap:7px; align-items:center; flex-wrap:wrap; }
+    .spd { border:2px solid var(--border); background:white; border-radius:9px; padding:6px 10px; font-weight:800; cursor:pointer; font-size:12.5px; font-family:inherit; color:var(--text); }
+    .spd.active { border-color:var(--blue); color:var(--blue-dark); background:#eaf6ff; }
+    .ls-auto { display:inline-flex; align-items:center; gap:5px; font-weight:800; font-size:12.5px; cursor:pointer; border:2px solid var(--border); border-radius:9px; padding:5px 10px; user-select:none; }
+    .au-slot { display:block; margin-bottom:10px; }
+    .au-slot audio { width:100%; height:42px; }
+    .ls-status { text-align:center; font-weight:800; font-size:14.5px; padding:11px 14px; border-radius:12px; background:white; border:2px solid var(--border); margin-bottom:12px; }
+    .ls-status.p1 { border-color:var(--gold); background:#fff9e6; }
+    .ls-status.p2 { border-color:var(--blue); background:#eaf6ff; }
+    .ls-status.done { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    .ls-status.err { border-color:var(--red); background:#fff0f0; color:#c0392b; }
+    .ls-imgs { text-align:center; margin-bottom:12px; }
+    .ls-imgs .q-image { margin:0 auto 10px; }
+    .reveal-block { margin-top:14px; padding:14px; border-radius:10px; background:var(--bg-alt); border-left:4px solid var(--blue); }
+    .reveal-block .heading { font-weight:800; font-size:13px; color:var(--text-mute); text-transform:uppercase; margin-bottom:8px; letter-spacing:.5px; }
+    .reveal-block .body { font-size:14.5px; line-height:1.7; white-space:pre-line; }
+    .ls-q { font-weight:800; margin:0 0 10px; font-size:16px; line-height:1.4; }
+    .ls-opts .option { margin-bottom:6px; cursor:default; }
+    .ls-opts .option[disabled] { opacity:1; }
+    .ls-qa { margin-top:14px; background:white; border:2px solid var(--border); border-radius:14px; padding:4px 16px 12px; }
+    .ls-qa > summary { cursor:pointer; font-weight:800; padding:12px 0; font-size:14px; color:var(--blue-dark); list-style:none; }
+    .ls-qa > summary::-webkit-details-marker { display:none; }
+    .ls-qa > summary::before { content:'▸ '; }
+    .ls-qa[open] > summary::before { content:'▾ '; }
+    .ls-qa .ls-one { padding:12px 0; border-top:1px dashed var(--border); }
+    .ls-qa .ls-one:first-of-type { border-top:none; }
+    .ls-cd { font-weight:800; color:var(--blue-dark); margin-right:auto; }
+    .ls-cd a { color:var(--blue); }
+    .group-toolbar { position:sticky; bottom:0; background:linear-gradient(to top, var(--bg-alt) 80%, transparent); padding:16px 0; display:flex; gap:10px; align-items:center; z-index:5; flex-wrap:wrap; }
+    .au-errbox { background:#fff0f0; border:2px solid var(--red); border-radius:12px; padding:12px 14px; margin-bottom:12px; font-size:14px; line-height:1.6; }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=2"></script>
+  <script src="/js/catalog.js?v=12"></script>
+  <script src="/js/layout.js?v=14"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/csv.js?v=10"></script>
+  <script src="/js/quiz-core.js?v=24"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
+  <script>
+  (function () {
+    const root = document.getElementById('app');
+    const { sidebar } = renderShell({ active: 'listen', state: State.load() });
+    const esc = s => String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');
+    const nl2br = s => QuizCore.nl2br(s);
+    if (window.VocabNotes) VocabNotes.enableCapture();
+
+    const PART_INFO = {
+      1: { ic:'🖼', t:'Part 1', d:'Mô tả tranh' },
+      2: { ic:'💬', t:'Part 2', d:'Hỏi – đáp' },
+      3: { ic:'🗣', t:'Part 3', d:'Hội thoại' },
+      4: { ic:'📢', t:'Bài nói', d:'Part 4' },
+    };
+
+    // Current selection (persisted)
+    let year = localStorage.getItem('toeicets_listen_year') || '2025';
+    if (!Catalog.YEARS.some(y => y.id === year)) year = '2025';
+    let n = parseInt(localStorage.getItem('toeicets_listen_n') || '1', 10);
+    if (!(n >= 1 && n <= 10)) n = 1;
+
+    // Playback settings (persisted)
+    let auto = localStorage.getItem('toeicets_listen_auto') !== '0';   // default on
+    let speed = parseFloat(localStorage.getItem('toeicets_listen_speed') || '1') || 1;
+    if ([0.75, 1, 1.25].indexOf(speed) === -1) speed = 1;
+
+    const yearLabel = id => (Catalog.YEARS.find(y => y.id === id)?.label) || id;
+    const qNum = q => (q['Question Number'] || '').toString().replace(/\.0+$/, '');
+
+    // =================== PICKER ===================
+    function renderPicker() {
+      cancelCd();
+      const yearsChips = Catalog.YEARS.map(y =>
+        `<button class="ct-chip ${y.id === year ? 'active' : ''}" data-y="${esc(y.id)}">${esc(y.label)}</button>`).join('');
+      const testChips = Array.from({ length: 10 }, (_, i) => i + 1).map(i =>
+        `<button class="ct-chip num ${i === n ? 'active' : ''}" data-n="${i}">Đề ${i}</button>`).join('');
+      const partCards = [1, 2, 3, 4].map(p => {
+        const info = PART_INFO[p];
+        return `<div class="part-card" data-part="${p}">
+            <div class="ic">${info.ic}</div>
+            <div class="t">Part ${p}</div>
+            <div class="d">${p === 4 ? 'Bài nói' : info.d}</div>
+          </div>`;
+      }).join('');
+
+      root.innerHTML = sidebar + `<main class="main">
+        <h2 style="font-size:26px;font-weight:900;">🎧 Luyện nghe + Script</h2>
+        <p style="color:var(--text-mute);margin:6px 0 16px;line-height:1.6;">
+          Mỗi câu nghe <b>2 lần</b>: lần đầu <b>nghe chay</b> (không hiện script) để tập đoán ý,
+          lần hai <b>hiện script</b> để soát lại từng chữ — xong tự chuyển sang câu kế tiếp cho tới hết part.
+        </p>
+        <div class="card" style="padding:18px;">
+          <h3 class="section-title" style="margin-top:0;">1️⃣ Chọn bộ đề</h3>
+          <div class="ct-row" id="years">${yearsChips}</div>
+
+          <h3 class="section-title">2️⃣ Chọn đề</h3>
+          <div class="ct-row" id="tests">${testChips}</div>
+
+          <h3 class="section-title">3️⃣ Chọn part muốn nghe</h3>
+          <div class="part-grid" id="parts">${partCards}</div>
+
+          <div class="card" style="padding:14px 16px;margin-top:14px;display:flex;align-items:center;gap:14px;flex-wrap:wrap;border:2px solid var(--gold);background:linear-gradient(135deg,#fff9e6,#fff);">
+            <div style="font-size:30px;">🎧</div>
+            <div style="flex:1;min-width:170px;">
+              <div style="font-weight:900;">Nghe cả phần Nghe</div>
+              <div style="color:var(--text-mute);font-size:13px;">Part 1 → 4 liên tục (~100 câu/clip)</div>
+            </div>
+            <button class="btn gold" id="start-all">▶ Nghe cả 4 part</button>
+          </div>
+        </div>
+        <p style="font-size:12.5px;color:var(--text-mute);margin-top:12px;line-height:1.6;">
+          💡 Mẹo: bật <b>0.75x</b> khi còn khó nghe, lên <b>1.25x</b> khi đã quen để vào phòng thi thấy "đề chậm lại".
+          Có thể tắt <b>Tự chuyển</b> để tự bấm sang câu kế.
+        </p>
+      </main>`;
+
+      root.querySelectorAll('#years .ct-chip').forEach(c => c.addEventListener('click', () => {
+        year = c.dataset.y; localStorage.setItem('toeicets_listen_year', year);
+        root.querySelectorAll('#years .ct-chip').forEach(x => x.classList.toggle('active', x.dataset.y === year));
+      }));
+      root.querySelectorAll('#tests .ct-chip').forEach(c => c.addEventListener('click', () => {
+        n = parseInt(c.dataset.n, 10); localStorage.setItem('toeicets_listen_n', n);
+        root.querySelectorAll('#tests .ct-chip').forEach(x => x.classList.toggle('active', parseInt(x.dataset.n, 10) === n));
+      }));
+      // A part click is the user gesture that unlocks audio — start the session right here.
+      root.querySelectorAll('#parts .part-card').forEach(c => c.addEventListener('click', () => {
+        blessAudio();
+        startSession([parseInt(c.dataset.part, 10)]);
+      }));
+      const allBtn = document.getElementById('start-all');
+      if (allBtn) allBtn.addEventListener('click', () => { blessAudio(); startSession([1, 2, 3, 4]); });
+    }
+
+    // =================== audio element (one, blessed on a gesture) ===================
+    const SILENT = 'data:audio/wav;base64,UklGRiQAAABXQVZFZm10IBAAAAABAAEARKwAAIhYAQACABAAZGF0YQAAAAA=';
+    let lsAudio = null;
+    function blessAudio() {
+      if (!lsAudio) {
+        lsAudio = document.createElement('audio');
+        lsAudio.id = 'ls-audio';
+        lsAudio.controls = true;
+        lsAudio.preload = 'auto';
+      }
+      try { lsAudio.src = SILENT; const p = lsAudio.play(); if (p && p.catch) p.catch(() => {}); } catch (e) {}
+      return lsAudio;
+    }
+
+    // =================== SESSION ===================
+    let clips = [];        // [{ part, year, n, rows }]
+    let idx = 0;
+    let curParts = [];     // the part numbers of this run (for "nghe lại part này")
+    let cdTimer = null;
+
+    function cancelCd() {
+      if (cdTimer) { clearTimeout(cdTimer); cdTimer = null; }
+      const cd = document.getElementById('ls-cd');
+      if (cd) cd.remove();
+    }
+
+    async function startSession(parts) {
+      curParts = parts.slice();
+      clips = [];
+      idx = 0;
+      root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+        <div style="font-size:60px;">🎧</div><h2>Đang tải audio…</h2>
+        <p style="color:var(--text-mute);">${esc(yearLabel(year))} • Đề ${n}</p></div></main>`;
+      for (const p of parts) {
+        const url = `/data/${encodeURIComponent(year)}/test${n}/test${n}-part${p}.csv`;
+        let rows;
+        try { rows = await CSV.load(url); } catch (e) { continue; }
+        if (!rows || !rows.length) continue;
+        QuizCore.buildGroups(rows, p).forEach(g => {
+          if (g[0] && (g[0].Audio || '').trim()) clips.push({ part: p, year, n, rows: g });
+        });
+      }
+      if (!clips.length) {
+        root.innerHTML = sidebar + `<main class="main"><div class="center" style="padding:60px 0;text-align:center;">
+          <div style="font-size:60px;">😢</div><h2>Không tải được audio của part này</h2>
+          <button class="btn ghost" id="ls-back">← Quay lại</button></div></main>`;
+        document.getElementById('ls-back').addEventListener('click', renderPicker);
+        return;
+      }
+      renderClip();
+    }
+
+    function sectionLabel() {
+      return curParts.length > 1 ? 'cả phần Nghe' : `Part ${curParts[0]}`;
+    }
+
+    function renderClip() {
+      cancelCd();
+      if (idx >= clips.length) { renderDone(); return; }
+      const clip = clips[idx];
+      const rows = clip.rows;
+      const first = rows[0];
+      const pct = Math.round(idx / clips.length * 100);
+      const startN = qNum(first), endN = qNum(rows[rows.length - 1]);
+      const rangeLabel = startN === endN ? `Câu ${startN}` : `Câu ${startN}–${endN}`;
+      const isLast = idx + 1 >= clips.length;
+
+      // Images: Part 1 picture, or a Part 3/4 chart/graphic — on screen during the clip in a
+      // real test, and they give the script nothing away, so they stay visible from the start.
+      const imgUrls = QuizCore.groupImages(rows)
+        .map(v => QuizCore.assetUrl(clip.year, clip.n, 'image', v)).filter(Boolean);
+      const imgsHtml = imgUrls.length
+        ? `<div class="ls-imgs">${imgUrls.map(u => `<img class="q-image" src="${u}" alt="Ảnh bài nghe"/>`).join('')}</div>` : '';
+
+      root.innerHTML = sidebar + `<main class="main">
+        <div class="player">
+          <div class="player-header ls-header">
+            <button class="close" id="ls-exit" title="Thoát">✕</button>
+            <div class="progress-bar"><div class="fill" style="width:${pct}%"></div></div>
+            <div style="font-weight:800;font-size:13px;white-space:nowrap;">Câu ${idx + 1}/${clips.length}</div>
+          </div>
+          <div class="ls-bar">
+            <div class="ls-meta">🎧 ${esc(yearLabel(clip.year))} • Đề ${clip.n} • Part ${clip.part} • <b>${rangeLabel}</b></div>
+            <div class="ls-tools">
+              <button class="spd ${speed === 0.75 ? 'active' : ''}" data-s="0.75">🐢 0.75x</button>
+              <button class="spd ${speed === 1 ? 'active' : ''}" data-s="1">1x</button>
+              <button class="spd ${speed === 1.25 ? 'active' : ''}" data-s="1.25">⚡ 1.25x</button>
+              <label class="ls-auto"><input type="checkbox" id="ls-auto" ${auto ? 'checked' : ''}/> ⏭ Tự chuyển</label>
+            </div>
+          </div>
+          ${imgsHtml}
+          <span class="au-slot" id="ls-au-slot"></span>
+          <div class="ls-status" id="ls-status">⏳ Đang chuẩn bị…</div>
+          <div id="ls-script" style="display:none;"></div>
+          <div class="group-toolbar" id="ls-toolbar">
+            <button class="btn ghost" id="ls-replay">🔁 Nghe lại (2 lần)</button>
+            <span style="flex:1"></span>
+            <button class="btn blue" id="ls-next">${isLast ? 'Hoàn thành ✓' : 'Câu tiếp →'}</button>
+          </div>
+        </div>
+      </main>`;
+
+      document.getElementById('ls-exit').addEventListener('click', renderPicker);
+      document.getElementById('ls-next').addEventListener('click', goNext);
+      document.getElementById('ls-replay').addEventListener('click', () => play1());
+      document.getElementById('ls-auto').addEventListener('change', e => {
+        auto = e.target.checked; localStorage.setItem('toeicets_listen_auto', auto ? '1' : '0');
+        if (!auto) cancelCd();
+      });
+      root.querySelectorAll('.spd[data-s]').forEach(b => b.addEventListener('click', () => {
+        speed = parseFloat(b.dataset.s); localStorage.setItem('toeicets_listen_speed', String(speed));
+        root.querySelectorAll('.spd[data-s]').forEach(x => x.classList.toggle('active', x === b));
+        if (lsAudio) lsAudio.playbackRate = speed;
+      }));
+
+      wireClip(clip);
+      window.scrollTo({ top: 0 });
+    }
+
+    function setStatus(cls, html) {
+      const el = document.getElementById('ls-status');
+      if (!el) return;
+      el.className = 'ls-status ' + cls;
+      el.innerHTML = html;
+    }
+
+    // ---- Script (revealed on the 2nd play) ----
+    function buildScript(clip) {
+      const rows = clip.rows, first = rows[0], part = clip.part;
+      const optRow = (q, letters) => {
+        const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
+        return letters.filter(L => (q[L] || '') !== '').map(L =>
+          `<button class="option ${L === correct ? 'correct' : ''}" disabled>
+             <span class="letter">${L}</span><span>${esc(q[L] || '')}</span>
+           </button>`).join('');
+      };
+      if (part === 1) {
+        const correct = (first.Answer || '').trim().toUpperCase().charAt(0);
+        return `<div class="reveal-block"><div class="heading">📜 Lời thoại — đáp án đúng (câu ${qNum(first)}): ${correct}</div>
+            <div class="ls-opts">${optRow(first, ['A', 'B', 'C', 'D'])}</div></div>`;
+      }
+      if (part === 2) {
+        const correct = (first.Answer || '').trim().toUpperCase().charAt(0);
+        return `<div class="reveal-block"><div class="heading">📜 Lời thoại — đáp án đúng (câu ${qNum(first)}): ${correct}</div>
+            ${first.Question ? `<div class="ls-q">${esc(first.Question)}</div>` : ''}
+            <div class="ls-opts">${optRow(first, ['A', 'B', 'C'])}</div></div>`;
+      }
+      // Part 3 / 4: full English script, Vietnamese translation, and the questions + key.
+      const scriptHtml = first.Text
+        ? `<div class="reveal-block"><div class="heading">📜 Script bài nghe</div><div class="body">${nl2br(first.Text)}</div></div>` : '';
+      const trans = Array.from(new Set(rows.map(q => q.Transcript || q.Translate || '').filter(Boolean)));
+      const transHtml = trans.length
+        ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(trans.join('\n\n'))}</div></div>` : '';
+      const hasQ = rows.some(q => q.Question);
+      const qaHtml = hasQ
+        ? `<details class="ls-qa"><summary>📋 Câu hỏi &amp; đáp án (${rows.length} câu)</summary>
+             ${rows.map(q => {
+          const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
+          return `<div class="ls-one">
+                 <div class="ls-q" style="font-size:15px;">${qNum(q) ? esc(qNum(q)) + '. ' : ''}${esc(q.Question || '')}</div>
+                 <div class="ls-opts">${optRow(q, ['A', 'B', 'C', 'D'])}</div>
+               </div>`;
+        }).join('')}
+           </details>` : '';
+      return scriptHtml + transHtml + qaHtml;
+    }
+
+    function showScript(clip) {
+      const box = document.getElementById('ls-script');
+      if (!box) return;
+      box.innerHTML = buildScript(clip);
+      box.style.display = '';
+    }
+    function hideScript() {
+      const box = document.getElementById('ls-script');
+      if (box) { box.style.display = 'none'; box.innerHTML = ''; }
+    }
+
+    // ---- the 2-play cycle for the current clip ----
+    let playNum = 0, clipDone = false;
+
+    function wireClip(clip) {
+      const slot = document.getElementById('ls-au-slot');
+      const au = lsAudio || blessAudio();
+      slot.innerHTML = '';
+      slot.appendChild(au);
+      const url = QuizCore.assetUrl(clip.year, clip.n, 'audio', clip.rows[0].Audio);
+
+      const tryPlay = () => { const p = au.play(); if (p && p.catch) p.catch(() => {}); };
+
+      // Reassign handlers (not addEventListener) so they never stack across clips.
+      au.onended = () => {
+        if (clipDone) return;                       // manual replays after finishing: ignore
+        if (playNum === 1) {
+          playNum = 2;
+          showScript(clip);
+          setStatus('p2', '📜 Lần 2/2 · vừa nghe vừa đọc script bên dưới');
+          au.currentTime = 0;
+          au.playbackRate = speed;
+          setTimeout(tryPlay, 400);                 // tiny gap before the second listen
+        } else {
+          clipDone = true;
+          setStatus('done', '✅ Đã nghe xong câu này' + (auto ? '' : ' — bấm "Câu tiếp →" để sang câu sau'));
+          onClipDone();
+        }
+      };
+      au.onerror = () => {
+        if (!au.src || au.src.indexOf('data:') === 0) return;   // ignore the silent blip
+        showAudioError(url);
+      };
+
+      au.src = url;
+      au.load();
+      au.playbackRate = speed;
+      play1();
+
+      // If the browser blocked autoplay, start on the user's first tap anywhere.
+      document.addEventListener('pointerdown', function once() {
+        document.removeEventListener('pointerdown', once);
+        if (au.isConnected && au.paused && !clipDone && playNum === 1 && au.currentTime === 0) tryPlay();
+      });
+    }
+
+    function play1() {
+      const au = lsAudio;
+      if (!au) return;
+      cancelCd();
+      playNum = 1; clipDone = false;
+      hideScript();
+      setStatus('p1', '🙈 Lần 1/2 · nghe chay — chưa hiện script, thử đoán ý');
+      try { au.currentTime = 0; } catch (e) {}
+      au.playbackRate = speed;
+      const p = au.play(); if (p && p.catch) p.catch(() => {});
+    }
+
+    function onClipDone() {
+      const nextBtn = document.getElementById('ls-next');
+      if (nextBtn) nextBtn.classList.add('gold');
+      if (auto) startCountdown();
+    }
+
+    function startCountdown() {
+      cancelCd();
+      const toolbar = document.getElementById('ls-toolbar');
+      if (!toolbar) return;
+      const cd = document.createElement('span');
+      cd.id = 'ls-cd';
+      cd.className = 'ls-cd';
+      toolbar.prepend(cd);
+      let s = 3;
+      const paint = () => {
+        cd.innerHTML = `⏭ Tự chuyển sau <b>${s}</b>s · <a href="#" id="ls-cd-cancel">Hủy</a>`;
+        const c = document.getElementById('ls-cd-cancel');
+        if (c) c.onclick = e => { e.preventDefault(); cancelCd(); };
+      };
+      paint();
+      const tick = () => {
+        s--;
+        if (s < 0) { goNext(); return; }
+        paint();
+        cdTimer = setTimeout(tick, 1000);
+      };
+      cdTimer = setTimeout(tick, 1000);
+    }
+
+    function goNext() {
+      cancelCd();
+      idx++;
+      renderClip();
+    }
+
+    function showAudioError(url) {
+      if (document.getElementById('ls-auerr')) return;
+      setStatus('err', '⚠️ Không tải được file nghe của câu này');
+      const box = document.createElement('div');
+      box.id = 'ls-auerr';
+      box.className = 'au-errbox';
+      box.innerHTML = `<b style="color:var(--red);">⚠️ Không tải được file nghe.</b>
+        <div style="color:var(--text-mute);font-size:12.5px;margin:4px 0 10px;word-break:break-all;">${esc(url || '')}</div>
+        <button class="btn ghost small" id="ls-retry">🔄 Thử lại</button>
+        <button class="btn small" id="ls-skip" style="margin-left:8px;">⏭ Bỏ qua câu này</button>`;
+      const slot = document.getElementById('ls-au-slot');
+      if (slot && slot.parentNode) slot.parentNode.insertBefore(box, slot);
+      document.getElementById('ls-retry').addEventListener('click', () => {
+        box.remove();
+        const au = lsAudio;
+        if (au) { au.src = url + (url.indexOf('?') === -1 ? '?' : '&') + 'r=' + Date.now(); au.load(); play1(); }
+      });
+      document.getElementById('ls-skip').addEventListener('click', goNext);
+    }
+
+    function renderDone() {
+      cancelCd();
+      root.innerHTML = sidebar + `<main class="main">
+        <div class="modal" style="margin:40px auto;max-width:620px;">
+          <div style="font-size:80px;">🎉</div>
+          <h2>Đã nghe hết ${sectionLabel()}!</h2>
+          <p style="color:var(--text-mute);margin-top:8px;">${esc(yearLabel(year))} • Đề ${n} · ${clips.length} câu/clip đã nghe xong.</p>
+          <div class="row" style="margin-top:24px;flex-wrap:wrap;gap:10px;justify-content:center;">
+            <button class="btn gold" id="ls-again">🔁 Nghe lại ${sectionLabel()}</button>
+            <button class="btn" id="ls-other">🎧 Nghe part / đề khác</button>
+            <a class="btn ghost" href="/">🏠 Trang chủ</a>
+          </div>
+        </div>
+      </main>`;
+      document.getElementById('ls-again').addEventListener('click', () => { blessAudio(); startSession(curParts); });
+      document.getElementById('ls-other').addEventListener('click', renderPicker);
+    }
+
+    renderPicker();
+  })();
+  </script>
+  <script>
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', () => {
+        navigator.serviceWorker.register('/service-worker.js').catch(e => console.warn('SW reg failed:', e));
+      });
+    }
+  </script>
+</body>
+</html>

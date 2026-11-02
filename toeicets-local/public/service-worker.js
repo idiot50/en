@@ -4,8 +4,8 @@
 //   - Data (CSV, images đề): network-first with cache fallback
 //   - Audio (B2 bucket, external): network-only (too large to cache 2GB)
 
-const CACHE_NAME = 'toeic-quest-v49';
-const RUNTIME_CACHE = 'toeic-runtime-v46';
+const CACHE_NAME = 'toeic-quest-v50';
+const RUNTIME_CACHE = 'toeic-runtime-v47';
 
 // Pre-cache on install (app shell)
 const APP_SHELL = [
@@ -20,6 +20,7 @@ const APP_SHELL = [
   '/notes.html',
   '/dictation.html',
   '/part2.html',
+  '/listen.html',
   '/mistakes.html',
   '/history.html',
   '/login.html',
@@ -31,7 +32,7 @@ const APP_SHELL = [
   '/js/state.js?v=11',
   '/js/history.js?v=2',
   '/js/catalog.js?v=12',
-  '/js/layout.js?v=13',
+  '/js/layout.js?v=14',
   '/js/csv.js?v=10',
   '/js/quiz-core.js?v=24',
   '/js/study-core.js?v=1',

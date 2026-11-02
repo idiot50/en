@@ -31,6 +31,7 @@ class Handler(http.server.SimpleHTTPRequestHandler):
             '/drill': '/drill.html',
             '/notes': '/notes.html',
             '/part2': '/part2.html',
+            '/listen': '/listen.html',
             '/dictation': '/dictation.html',
             '/mistakes': '/mistakes.html',
             '/history': '/history.html',

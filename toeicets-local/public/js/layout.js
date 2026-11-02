@@ -28,6 +28,9 @@ function renderShell({ active, state }) {
       <a class="nav-link ${active==='part2'?'active':''}" href="/part2">
         <span class="icon">🎧</span><span>100 câu Part 2</span>
       </a>
+      <a class="nav-link ${active==='listen'?'active':''}" href="/listen">
+        <span class="icon">🔊</span><span>Luyện nghe + Script</span>
+      </a>
       <a class="nav-link ${active==='dictation'?'active':''}" href="/dictation">
         <span class="icon">✍️</span><span>Chép chính tả</span>
       </a>
