@@ -5,14 +5,23 @@ function renderShell({ active, state }) {
     ? `<a class="nav-link ${active==='profile'?'active':''}" id="nav-account" href="/profile"><span class="icon">👤</span><span>${au.name || 'Tài khoản'}</span></a>`
     : `<a class="nav-link ${active==='login'?'active':''}" id="nav-account" href="/login"><span class="icon">🔐</span><span>Đăng nhập</span></a>`;
   const sidebar = `
+    <header class="m-head">
+      <button type="button" class="m-burger" data-nav-toggle aria-label="Mở menu">☰</button>
+      <a class="m-brand" href="/"><img src="/favicon.svg?v=8" alt=""/><span>TOEIC QUEST</span></a>
+      <span class="m-stats"><span>🔥 ${state.streak}</span><span>⚡ ${state.xp}</span></span>
+    </header>
+    <div class="nav-backdrop" data-nav-close></div>
     <aside class="sidebar">
-      <a class="brand" href="/">
-        <img src="/favicon.svg?v=8" alt="logo"/>
-        <div>
-          <h1>TOEIC QUEST</h1>
-          <small>Learn &amp; Level Up</small>
-        </div>
-      </a>
+      <div class="brand-row">
+        <a class="brand" href="/">
+          <img src="/favicon.svg?v=8" alt="logo"/>
+          <div>
+            <h1>TOEIC QUEST</h1>
+            <small>Learn &amp; Level Up</small>
+          </div>
+        </a>
+        <button type="button" class="nav-collapse" data-nav-toggle title="Ẩn menu (mở rộng màn hình)" aria-label="Ẩn menu">«</button>
+      </div>
       <a class="nav-link ${active==='home'?'active':''}" href="/">
         <span class="icon">🏠</span><span>Trang chủ</span>
       </a>
@@ -76,3 +85,27 @@ function renderShell({ active, state }) {
 
   return { sidebar, topbar };
 }
+
+// Menu toggle. Desktop: hide/show the sidebar (remembered). Phone/tablet: slide-in drawer.
+// State lives on <html> so it survives pages re-rendering their innerHTML.
+(function () {
+  if (typeof document === 'undefined' || window.__navToggleBound) return;
+  window.__navToggleBound = true;
+  const html = document.documentElement;
+  try { if (localStorage.getItem('toeic_nav_collapsed') === '1') html.classList.add('nav-collapsed'); } catch (e) {}
+  const mobile = () => window.matchMedia('(max-width: 900px)').matches;
+  document.addEventListener('click', e => {
+    const t = e.target.closest('[data-nav-toggle], [data-nav-close], .sidebar a');
+    if (!t) return;
+    if (t.matches('[data-nav-toggle]')) {
+      e.preventDefault();
+      if (mobile()) html.classList.toggle('nav-open');
+      else {
+        const c = html.classList.toggle('nav-collapsed');
+        try { localStorage.setItem('toeic_nav_collapsed', c ? '1' : '0'); } catch (er) {}
+      }
+    } else html.classList.remove('nav-open');
+  });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') html.classList.remove('nav-open'); });
+  window.addEventListener('resize', () => { if (!mobile()) html.classList.remove('nav-open'); });
+})();
