@@ -1,0 +1,1791 @@
+{
+ "day": 10,
+ "title": "Tổng hợp Part 5 & Part 6 + Đề mô phỏng",
+ "icon": "🏁",
+ "goal": "Sau hôm nay bạn có phương pháp phân loại câu Part 5 trong vài giây, biết cách làm Part 6, nắm bản đồ 9 ngày và có lộ trình luyện đến 650.",
+ "why": "Điểm cao không chỉ nhờ biết ngữ pháp mà nhờ nhận diện dạng câu nhanh và làm đúng quy trình trong thời gian giới hạn.",
+ "schedule": [
+  {
+   "label": "Lý thuyết tổng hợp",
+   "min": 40
+  },
+  {
+   "label": "Luyện tập hỗn hợp",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d10-l1",
+   "title": "1. Phương pháp 4 bước phân loại câu Part 5",
+   "intro": "Điểm mấu chốt của Part 5 là KHÔNG dịch cả câu ngay. Trong 5-10 giây đầu, hãy nhìn bốn đáp án để biết câu hỏi thuộc dạng gì, rồi mới đọc phần cần thiết. Cách này tiết kiệm thời gian và giúp bạn làm đúng những câu 'cơ học' mà không cần hiểu hết câu.",
+   "points": [
+    {
+     "rule": "**Bước 1 — Nhìn 4 đáp án, đoán dạng câu.** Cùng một gốc từ (employ / employee / employed / employment) -> câu TỪ LOẠI. Cùng một động từ nhưng khác dạng (submit / submits / submitted / to submit) -> câu THÌ, BỊ ĐỘNG, TO-V/V-ing. Toàn từ nối (because / despite / however / although) -> câu TỪ NỐI. Bốn từ khác nghĩa hoàn toàn -> câu TỪ VỰNG hoặc COLLOCATION.",
+     "examples": [
+      {
+       "en": "employ / employee / employed / employment",
+       "vi": "Cùng gốc -> từ loại: nhìn trước/sau chỗ trống."
+      },
+      {
+       "en": "approve / approves / approved / approving",
+       "vi": "Cùng động từ khác dạng -> thì / bị động / V-ing."
+      }
+     ]
+    },
+    {
+     "rule": "**Bước 2 — Câu từ loại:** nhìn từ ngay TRƯỚC và SAU chỗ trống. a/the/tính từ/sở hữu + ___ -> danh từ. be/seem + ___ -> tính từ. ___ + danh từ -> tính từ. Giữa S và V, giữa be và V-ing/V3 -> trạng từ. Cần chủ ngữ là người -> danh từ chỉ người (-er, -or, -ant, -ee).",
+     "examples": [
+      {
+       "en": "The new ------- will start on Monday. (employee)",
+       "vi": "Sau 'new' cần danh từ chỉ người -> employee."
+      },
+      {
+       "en": "Sales have grown ------- . (steadily)",
+       "vi": "Cuối câu bổ nghĩa động từ -> trạng từ."
+      }
+     ]
+    },
+    {
+     "rule": "**Bước 3 — Câu động từ:** (a) Có thời gian (yesterday, since 2020, next week, every Monday)? -> chọn thì theo dấu hiệu. (b) Sau chỗ trống có tân ngữ không? Có -> chủ động; không + chủ ngữ bị tác động -> be + V3. (c) Câu đã có động từ chính chưa? Nếu chưa -> chỗ trống cần động từ chia thì. (d) Sau expect/plan/decide cần to V; sau consider/avoid/recommend cần V-ing.",
+     "examples": [
+      {
+       "en": "The report ------- by Friday. (will be submitted)",
+       "vi": "Không có tân ngữ sau chỗ trống + 'by Friday' -> bị động tương lai."
+      }
+     ]
+    },
+    {
+     "rule": "**Bước 4 — Câu từ nối:** hỏi phía sau là CỤM DANH TỪ hay MỆNH ĐỀ (S + V)? Danh từ -> giới từ (despite, because of, during). Mệnh đề -> liên từ (although, because, while, if). Có dấu phẩy và là câu mới -> trạng từ liên kết (however, therefore). Còn lại (khác nghĩa, đi kèm giới từ) -> từ vựng/collocation: dịch câu và nhớ cụm cố định.",
+     "examples": [
+      {
+       "en": "------- the heavy rain, the event went ahead. (Despite)",
+       "vi": "Sau chỗ trống là cụm danh từ -> giới từ."
+      },
+      {
+       "en": "------- it rained heavily, the event went ahead. (Although)",
+       "vi": "Sau chỗ trống là mệnh đề -> liên từ."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "4 đáp án trông như thế nào",
+     "Dạng câu",
+     "Việc cần làm"
+    ],
+    "rows": [
+     [
+      "Cùng gốc, khác hậu tố",
+      "Từ loại",
+      "Nhìn từ trước/sau chỗ trống"
+     ],
+     [
+      "Một động từ, nhiều dạng",
+      "Thì / bị động / to-V / V-ing",
+      "Tìm dấu hiệu thời gian, tân ngữ, động từ khác"
+     ],
+     [
+      "Từ nối khác nhau",
+      "Giới từ / liên từ / trạng từ nối",
+      "Sau chỗ trống là cụm N hay mệnh đề?"
+     ],
+     [
+      "Đại từ / lượng từ",
+      "Đại từ, hòa hợp",
+      "Vai trò trong câu, đếm được/không"
+     ],
+     [
+      "Khác nghĩa hẳn",
+      "Từ vựng / collocation",
+      "Dịch cả câu, nhớ cụm cố định"
+     ]
+    ]
+   },
+   "traps": [
+    "Dịch cả câu trước khi nhìn đáp án sẽ tốn 30-40 giây; hãy nhìn đáp án trước.",
+    "Một câu có thể chứa NHIỀU dạng (vừa từ loại vừa nghĩa). Chốt dạng chính trước, rồi kiểm tra phụ."
+   ],
+   "tip": "Mục tiêu: 20 giây/câu Part 5. Nếu phân loại xong mà vẫn chưa chắc, đánh dấu và quay lại sau."
+  },
+  {
+   "id": "d10-l2",
+   "title": "2. Phương pháp Part 6: thì, từ nối, chèn câu",
+   "intro": "Part 6 là đoạn văn có 4 chỗ trống. Khác với Part 5, bạn PHẢI đọc cả đoạn vì đáp án phụ thuộc vào ngữ cảnh: thì của cả đoạn, logic giữa các câu, và các câu liền kề.",
+   "points": [
+    {
+     "rule": "**Thì nhất quán:** tìm mốc thời gian trong đoạn (Last Monday, Next week, since 2020, now). Quá khứ -> quá khứ đơn; kế hoạch -> will/be going to; kéo dài đến hiện tại -> hiện tại hoàn thành. Nhìn cả câu liền kề: cùng chủ đề thường cùng thì.",
+     "examples": [
+      {
+       "en": "Last Monday, our IT team **installed** a new email system.",
+       "vi": "Mốc 'Last Monday' -> quá khứ."
+      },
+      {
+       "en": "Next week, the network **will be** unavailable for two hours.",
+       "vi": "Mốc 'Next week' -> will be."
+      }
+     ]
+    },
+    {
+     "rule": "**Từ nối theo logic:** đọc câu TRƯỚC và câu SAU. Đối lập -> However / Nevertheless. Bổ sung -> Moreover / In addition. Kết quả -> Therefore / As a result. Nếu không -> Otherwise. Ví dụ: A tốt. ___ , nó quá nhỏ -> However.",
+     "examples": [
+      {
+       "en": "Our old server was reliable. **However**, it could not handle more users.",
+       "vi": "Hai ý đối lập -> However."
+      },
+      {
+       "en": "The license expires on December 31. **Therefore**, please renew by November.",
+       "vi": "Nguyên nhân -> hành động: Therefore."
+      }
+     ]
+    },
+    {
+     "rule": "**Chèn câu:** (1) tìm đại từ/danh từ chỉ định ở câu sau (It, They, This, During that time); (2) tìm từ khóa lặp lại ở câu trước; (3) loại các câu lạc đề hoặc sai thì; (4) đọc lại đoạn với câu đã chọn xem có mạch lạc không.",
+     "examples": [
+      {
+       "en": "We have received your request. **A technician will contact you within 24 hours.** In the meantime, please do not reset your password.",
+       "vi": "'In the meantime' cần một câu nói về việc chờ đợi."
+      }
+     ]
+    }
+   ],
+   "traps": [
+    "Part 6 thường 'giấu' đáp án ở câu liền sau chỗ trống, đừng chỉ đọc câu chứa chỗ trống.",
+    "Đừng chọn từ nối theo thói quen; hãy đọc nghĩa hai câu."
+   ],
+   "tip": "Đọc nhanh cả đoạn trước, rồi giải từng chỗ trống; câu chèn nên để làm cuối cùng."
+  },
+  {
+   "id": "d10-l3",
+   "title": "3. Bản đồ tổng hợp 9 ngày",
+   "intro": "Đây là bảng tóm tắt các quy tắc cốt lõi của 9 ngày học. Hãy in ra hoặc chép vào sổ và đọc lại trước mỗi buổi luyện đề.",
+   "points": [
+    {
+     "rule": "Quy tắc vàng: **nhìn đáp án -> phân loại -> áp dụng đúng quy tắc**. Không cần giỏi mọi thứ; chỉ cần nhận ra dạng và nhớ vài công thức then chốt.",
+     "examples": [
+      {
+       "en": "Look at the options first.",
+       "vi": "Nhìn đáp án trước."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Ngày",
+     "Chủ điểm",
+     "Quy tắc then chốt"
+    ],
+    "rows": [
+     [
+      "1",
+      "Từ loại & cấu trúc câu",
+      "S + V (+ O/C); keep/make/find + O + tính từ. Hậu tố cho biết từ loại; nhìn trước/sau chỗ trống."
+     ],
+     [
+      "2",
+      "Danh từ & mạo từ",
+      "a/the/tính từ + N; applicant (người) vs application (việc); information/equipment không đếm được."
+     ],
+     [
+      "3",
+      "Tính từ & trạng từ",
+      "Tính từ bổ nghĩa danh từ/đứng sau be; trạng từ bổ nghĩa động từ/tính từ; -ing/-ed."
+     ],
+     [
+      "4",
+      "Đại từ, lượng từ, hòa hợp",
+      "Đại từ chủ ngữ/tân ngữ/sở hữu/phản thân (by oneself); another/the other; each/every + N số ít + V số ít; many + N số nhiều; much + N không đếm được; N1 of N2 chia theo N1."
+     ],
+     [
+      "5",
+      "Thì & giới từ thời gian",
+      "Dấu hiệu thời gian (since/for, ago, next); mệnh đề when/if/as soon as dùng hiện tại thay cho tương lai; at/on/in, by/until, for/during."
+     ],
+     [
+      "6",
+      "Bị động & động từ chính",
+      "be + V3; có tân ngữ -> chủ động; mỗi mệnh đề có một động từ chính; modal + V nguyên mẫu."
+     ],
+     [
+      "7",
+      "To-V, V-ing & phân từ",
+      "expect/plan to V; consider/avoid V-ing; be asked to V; before/after + V-ing; V-ing chủ động vs V3 bị động."
+     ],
+     [
+      "8",
+      "Giới từ, liên từ, từ nối, collocation",
+      "Cụm N -> giới từ; mệnh đề -> liên từ; đầu câu + dấu phẩy -> however/therefore; both…and, either…or; responsible for, subject to."
+     ],
+     [
+      "9",
+      "Quan hệ, danh từ, so sánh",
+      "who/which/that (thiếu S/O), whose + N, where + câu đủ; what (thiếu) vs that (đủ) vs whether (hay không); -er than / the most / as...as; much/far + so sánh hơn."
+     ]
+    ]
+   },
+   "tip": "Ba cặp hay nhầm nhất: although vs despite, adj vs adv, -ing vs -ed."
+  },
+  {
+   "id": "d10-l4",
+   "title": "4. Sau khóa học: lộ trình luyện đến 650",
+   "intro": "10 ngày cho bạn đủ nền tảng. Để lên 650 cần luyện đề đều đặn và biết sửa lỗi sai. Dưới đây là lộ trình thực tế cho người đi làm.",
+   "points": [
+    {
+     "rule": "**Mỗi ngày 45-60 phút:** 15 phút từ vựng (ôn thẻ), 30 phút làm 20-30 câu Part 5 có bấm giờ, 15 phút xem lại lỗi sai và ghi vào sổ lỗi.",
+     "examples": [
+      {
+       "en": "20 questions in 20 minutes.",
+       "vi": "20 câu trong 20 phút."
+      }
+     ]
+    },
+    {
+     "rule": "**Mỗi tuần:** 1-2 đề Part 5 + Part 6 đầy đủ (46 câu); 1 buổi nghe + chép chính tả; so sánh điểm với tuần trước. Đặt mục tiêu: tuần 1-2 đạt 20/30, tuần 3-4 đạt 22-24/30 Part 5.",
+     "examples": [
+      {
+       "en": "Part 5 + Part 6 = 46 questions.",
+       "vi": "Part 5 và Part 6 gồm 46 câu."
+      }
+     ]
+    },
+    {
+     "rule": "**Sửa lỗi sai là việc quan trọng nhất:** với mỗi câu sai, ghi: dạng câu, quy tắc đúng, vì sao mình chọn sai. Cuối tuần đọc lại sổ lỗi và làm lại các câu đó.",
+     "examples": [
+      {
+       "en": "Error log: although vs despite.",
+       "vi": "Sổ lỗi: although vs despite."
+      }
+     ]
+    },
+    {
+     "rule": "**Từ vựng:** mỗi ngày học 10-15 từ cùng họ từ (word family). Khoảng 1/3 số câu Part 5 là từ vựng/collocation nên đây là phần dễ lấy điểm nhất.",
+     "examples": [
+      {
+       "en": "employ - employee - employer - employment",
+       "vi": "Họ từ của employ."
+      }
+     ]
+    }
+   ],
+   "traps": [
+    "Làm nhiều đề mà không xem lại lỗi sẽ không tiến bộ.",
+    "Học lý thuyết quá nhiều mà không bấm giờ làm đề khiến bạn chậm trong phòng thi."
+   ],
+   "tip": "Sau 4 tuần, làm một đề thử đầy đủ 200 câu để kiểm tra, rồi điều chỉnh lộ trình theo phần yếu nhất."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d10-p1",
+   "title": "Bài 1: Nhìn đáp án — câu từ loại",
+   "instr": "Bốn đáp án cùng gốc: xác định từ loại cần điền.",
+   "lesson": "d10-l1",
+   "items": [
+    {
+     "q": "The ------- of the new software will take two days.",
+     "options": [
+      "install",
+      "installed",
+      "installation",
+      "installable"
+     ],
+     "ans": 2,
+     "why": "Sau 'The' và trước 'of' cần danh từ: installation. 'install' là động từ.",
+     "vi": "Việc cài đặt phần mềm mới sẽ mất hai ngày.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Our technicians provide ------- support to all customers.",
+     "options": [
+      "rely",
+      "reliably",
+      "reliance",
+      "reliable"
+     ],
+     "ans": 3,
+     "why": "Trước danh từ 'support' cần tính từ: reliable. 'reliably' là trạng từ.",
+     "vi": "Các kỹ thuật viên của chúng tôi cung cấp hỗ trợ đáng tin cậy cho mọi khách hàng.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The server has ------- been upgraded to improve its speed.",
+     "options": [
+      "recent",
+      "recently",
+      "recency",
+      "recents"
+     ],
+     "ans": 1,
+     "why": "Vị trí have/has + ___ + V3 (been upgraded) cần trạng từ: recently. 'recent' là tính từ, không chen vào giữa động từ.",
+     "vi": "Máy chủ gần đây đã được nâng cấp để tăng tốc độ.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "All ------- must show their identification at the entrance.",
+     "options": [
+      "visitors",
+      "visit",
+      "visitor",
+      "visitation"
+     ],
+     "ans": 0,
+     "why": "All + danh từ số nhiều chỉ người, làm chủ ngữ: visitors. 'visitor' số ít sai.",
+     "vi": "Tất cả khách tham quan phải xuất trình giấy tờ tùy thân ở cửa vào.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Mr. Tanaka is ------- for managing the data center.",
+     "options": [
+      "responsibility",
+      "responsibly",
+      "responsible",
+      "responsibilities"
+     ],
+     "ans": 2,
+     "why": "Sau 'is' cần tính từ, 'responsible for' = chịu trách nhiệm về.",
+     "vi": "Ông Tanaka chịu trách nhiệm quản lý trung tâm dữ liệu.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Employees are encouraged to ------- their passwords regularly.",
+     "options": [
+      "changes",
+      "changing",
+      "changed",
+      "change"
+     ],
+     "ans": 3,
+     "why": "Sau 'to' cần động từ nguyên mẫu: to change.",
+     "vi": "Nhân viên được khuyến khích đổi mật khẩu thường xuyên.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Please keep your login information ------- .",
+     "options": [
+      "confidential",
+      "confidence",
+      "confidentially",
+      "confide"
+     ],
+     "ans": 0,
+     "why": "Cấu trúc keep + O + tính từ: keep information confidential.",
+     "vi": "Vui lòng giữ bí mật thông tin đăng nhập của bạn.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Sales have increased ------- since the new ads began.",
+     "options": [
+      "significant",
+      "significantly",
+      "significance",
+      "signify"
+     ],
+     "ans": 1,
+     "why": "Bổ nghĩa cho động từ 'increased' cần trạng từ: significantly.",
+     "vi": "Doanh số đã tăng đáng kể kể từ khi quảng cáo mới bắt đầu.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "We need to hire a ------- to maintain our network.",
+     "options": [
+      "technical",
+      "technically",
+      "technician",
+      "technique"
+     ],
+     "ans": 2,
+     "why": "Sau mạo từ 'a' cần danh từ chỉ người: technician.",
+     "vi": "Chúng tôi cần thuê một kỹ thuật viên để bảo trì mạng.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The ------- report was sent to all department heads.",
+     "options": [
+      "revised",
+      "revise",
+      "revises",
+      "reviser"
+     ],
+     "ans": 0,
+     "why": "Trước danh từ 'report' cần tính từ/phân từ bị động: revised (được sửa lại).",
+     "vi": "Báo cáo đã sửa đổi được gửi cho tất cả trưởng phòng.",
+     "tag": "participle"
+    }
+   ]
+  },
+  {
+   "id": "d10-p2",
+   "title": "Bài 2: Thì, bị động, to-V và từ nối",
+   "instr": "Phân loại và chọn đáp án đúng.",
+   "lesson": "d10-l1",
+   "items": [
+    {
+     "q": "The maintenance team ------- the servers every Sunday.",
+     "options": [
+      "check",
+      "is checking",
+      "has checked",
+      "checks"
+     ],
+     "ans": 3,
+     "why": "'every Sunday' là thói quen -> hiện tại đơn; chủ ngữ số ít nên 'checks'.",
+     "vi": "Nhóm bảo trì kiểm tra các máy chủ mỗi Chủ nhật.",
+     "tag": "tense-present"
+    },
+    {
+     "q": "We ------- this software since 2022.",
+     "options": [
+      "use",
+      "have used",
+      "used",
+      "will use"
+     ],
+     "ans": 1,
+     "why": "'since 2022' -> hiện tại hoàn thành: have used.",
+     "vi": "Chúng tôi đã dùng phần mềm này từ năm 2022.",
+     "tag": "tense-perfect"
+    },
+    {
+     "q": "The new printers ------- to all floors by Friday.",
+     "options": [
+      "will deliver",
+      "delivered",
+      "will be delivered",
+      "are delivering"
+     ],
+     "ans": 2,
+     "why": "Chủ ngữ là vật, không có tân ngữ, thời gian tương lai -> will be delivered.",
+     "vi": "Máy in mới sẽ được giao đến tất cả các tầng trước thứ Sáu.",
+     "tag": "passive"
+    },
+    {
+     "q": "Our new password policy ------- last week.",
+     "options": [
+      "introduced",
+      "has introduced",
+      "introduces",
+      "was introduced"
+     ],
+     "ans": 3,
+     "why": "'last week' -> quá khứ; chủ ngữ là chính sách bị tác động -> was introduced.",
+     "vi": "Chính sách mật khẩu mới của chúng tôi được áp dụng vào tuần trước.",
+     "tag": "passive"
+    },
+    {
+     "q": "If you ------- any problems with the login, please call the help desk.",
+     "options": [
+      "have",
+      "will have",
+      "would have",
+      "had had"
+     ],
+     "ans": 0,
+     "why": "Mệnh đề If dùng hiện tại, không dùng will: If you have.",
+     "vi": "Nếu bạn gặp vấn đề khi đăng nhập, vui lòng gọi bộ phận hỗ trợ.",
+     "tag": "time-clause"
+    },
+    {
+     "q": "Ms. Reyes is expected ------- the new system next week.",
+     "options": [
+      "test",
+      "to test",
+      "testing",
+      "tests"
+     ],
+     "ans": 1,
+     "why": "be expected + to V.",
+     "vi": "Cô Reyes dự kiến sẽ kiểm thử hệ thống mới vào tuần sau.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Before ------- the update, please back up your files.",
+     "options": [
+      "install",
+      "installs",
+      "installed",
+      "installing"
+     ],
+     "ans": 3,
+     "why": "Sau giới từ 'before' dùng V-ing: installing.",
+     "vi": "Trước khi cài bản cập nhật, hãy sao lưu các tập tin.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The company asked all employees ------- their devices.",
+     "options": [
+      "register",
+      "to register",
+      "registering",
+      "registered"
+     ],
+     "ans": 1,
+     "why": "ask + O + to V: asked employees to register.",
+     "vi": "Công ty yêu cầu tất cả nhân viên đăng ký thiết bị của họ.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "------- the heavy rain, the outdoor event went ahead as planned.",
+     "options": [
+      "Because of",
+      "Although",
+      "Despite",
+      "However"
+     ],
+     "ans": 2,
+     "why": "Sau chỗ trống là cụm danh từ và nghĩa nhượng bộ -> Despite. 'Although' cần mệnh đề, 'Because of' sai nghĩa.",
+     "vi": "Mặc dù mưa lớn, sự kiện ngoài trời vẫn diễn ra như kế hoạch.",
+     "tag": "preposition"
+    },
+    {
+     "q": "The upgrade was delayed ------- the supplier shipped the wrong parts.",
+     "options": [
+      "because",
+      "because of",
+      "despite",
+      "during"
+     ],
+     "ans": 0,
+     "why": "Sau chỗ trống là mệnh đề (the supplier shipped...) -> liên từ because.",
+     "vi": "Việc nâng cấp bị hoãn vì nhà cung cấp gửi nhầm linh kiện.",
+     "tag": "conjunction"
+    }
+   ]
+  },
+  {
+   "id": "d10-p3",
+   "title": "Bài 3: Part 6 (thì, từ nối, chèn câu, đại từ)",
+   "instr": "Đọc đoạn văn và chọn đáp án phù hợp.",
+   "lesson": "d10-l2",
+   "items": [
+    {
+     "q": "Chọn đáp án phù hợp điền vào chỗ trống.",
+     "options": [
+      "installs",
+      "installed",
+      "will install",
+      "has been installing"
+     ],
+     "ans": 1,
+     "why": "Mốc 'Last Monday' và 'were given' -> quá khứ đơn: installed.",
+     "vi": "Thứ Hai tuần trước, bộ phận IT của chúng tôi đã cài hệ thống email mới.",
+     "tag": "part6-tense",
+     "ctx": "Last Monday, our IT department ------- a new email system. All employees were given new passwords on the same day."
+    },
+    {
+     "q": "Chọn đáp án phù hợp điền vào chỗ trống.",
+     "options": [
+      "was",
+      "has been",
+      "had been",
+      "will be"
+     ],
+     "ans": 3,
+     "why": "Mốc 'Next week' -> tương lai: will be.",
+     "vi": "Tuần sau mạng sẽ không truy cập được trong hai giờ.",
+     "tag": "part6-tense",
+     "ctx": "Next week, the network ------- unavailable for two hours while technicians install an update. Please save your work before 6 P.M. on Thursday."
+    },
+    {
+     "q": "Chọn đáp án phù hợp điền vào chỗ trống.",
+     "options": [
+      "However",
+      "Therefore",
+      "Moreover",
+      "Otherwise"
+     ],
+     "ans": 0,
+     "why": "Câu trước khen, câu sau nêu hạn chế -> đối lập: However.",
+     "vi": "Máy chủ cũ đáng tin cậy. Tuy nhiên nó không còn xử lý được lượng người dùng ngày càng tăng.",
+     "tag": "part6-connector",
+     "ctx": "Our old server was reliable. ------- , it could no longer handle the growing number of users, so we decided to replace it."
+    },
+    {
+     "q": "Chọn đáp án phù hợp điền vào chỗ trống.",
+     "options": [
+      "Nevertheless",
+      "Otherwise",
+      "Therefore",
+      "Instead"
+     ],
+     "ans": 2,
+     "why": "Giấy phép hết hạn -> cần gia hạn: kết quả/hành động nên dùng Therefore.",
+     "vi": "Giấy phép phần mềm hết hạn ngày 31/12. Do đó nhân viên nên nộp yêu cầu gia hạn trước cuối tháng Mười Một.",
+     "tag": "part6-connector",
+     "ctx": "The software license expires on December 31. ------- , employees should submit their renewal requests by the end of November."
+    },
+    {
+     "q": "Chọn đáp án phù hợp điền vào chỗ trống.",
+     "options": [
+      "although",
+      "because",
+      "unless",
+      "so that"
+     ],
+     "ans": 1,
+     "why": "Sau chỗ trống là mệnh đề giải thích lý do -> because.",
+     "vi": "Hãy sao lưu tập tin hôm nay vì bản cập nhật có thể xóa dữ liệu chưa lưu.",
+     "tag": "part6-connector",
+     "ctx": "Please back up your files today ------- the update may erase unsaved data."
+    },
+    {
+     "q": "Chọn câu phù hợp nhất điền vào chỗ trống.",
+     "options": [
+      "A technician will contact you within 24 hours.",
+      "Delta Cloud was founded ten years ago.",
+      "Passwords must contain at least eight characters.",
+      "We apologize for the late delivery of your package."
+     ],
+     "ans": 0,
+     "why": "'In the meantime' cần câu trước nói về khoảng thời gian chờ: kỹ thuật viên sẽ liên hệ trong 24 giờ.",
+     "vi": "Một kỹ thuật viên sẽ liên hệ với bạn trong vòng 24 giờ.",
+     "tag": "part6-sentence",
+     "ctx": "Dear customer, Thank you for contacting Delta Cloud Support. We have received your request about the login error. ------- In the meantime, please do not try to reset your password again."
+    },
+    {
+     "q": "Chọn câu phù hợp nhất điền vào chỗ trống.",
+     "options": [
+      "Employees' badges are issued by the Human Resources Department.",
+      "The cafeteria is located on the ground floor.",
+      "This requirement applies to everyone who is not a member of staff.",
+      "Parking is free for visitors."
+     ],
+     "ans": 2,
+     "why": "'This requirement' trong câu chèn nhắc lại quy định đeo thẻ ở câu trước, và câu sau tiếp tục nói về thẻ của khách. Câu A chuyển sang thẻ của nhân viên nên lạc chủ đề.",
+     "vi": "Quy định này áp dụng cho tất cả những ai không phải nhân viên.",
+     "tag": "part6-sentence",
+     "ctx": "All visitors must wear an ID badge while in the building. ------- Badges can be collected at the front desk upon arrival and must be returned when leaving."
+    },
+    {
+     "q": "Chọn đáp án phù hợp điền vào chỗ trống.",
+     "options": [
+      "They",
+      "Them",
+      "Its",
+      "It"
+     ],
+     "ans": 3,
+     "why": "Chỗ trống là chủ ngữ của 'loads' (động từ số ít), thay cho the website -> It.",
+     "vi": "Nó giờ tải nhanh hơn và chạy tốt hơn trên điện thoại.",
+     "tag": "part6-pronoun",
+     "ctx": "The IT department has updated the company website. ------- now loads faster and works better on mobile phones."
+    }
+   ]
+  },
+  {
+   "id": "d10-p4",
+   "title": "Bài 4: Đại từ, hòa hợp, quan hệ, so sánh, collocation",
+   "instr": "Chọn đáp án đúng.",
+   "lesson": "d10-l3",
+   "items": [
+    {
+     "q": "Mr. Lee asked ------- to review the contract before the meeting.",
+     "options": [
+      "I",
+      "my",
+      "me",
+      "myself"
+     ],
+     "ans": 2,
+     "why": "Sau động từ asked cần tân ngữ: me.",
+     "vi": "Ông Lee nhờ tôi xem lại hợp đồng trước cuộc họp.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "The new system can detect and fix minor errors by ------- without any help from technicians.",
+     "options": [
+      "it",
+      "its",
+      "they",
+      "itself"
+     ],
+     "ans": 3,
+     "why": "\"by + đại từ phản thân\" = tự mình, một mình: by itself. Sau giới từ \"by\" không thể dùng \"they\" (đại từ chủ ngữ); \"by it\" nghĩa là \"bằng cái đó\" (sai nghĩa với \"without any help\"); \"its\" là tính từ sở hữu, phải đi kèm danh từ.",
+     "vi": "Hệ thống mới có thể tự phát hiện và sửa các lỗi nhỏ mà không cần kỹ thuật viên hỗ trợ.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Each of the technicians ------- a laptop.",
+     "options": [
+      "have",
+      "has",
+      "are having",
+      "having"
+     ],
+     "ans": 1,
+     "why": "Each of + số nhiều nhưng động từ chia số ít: has.",
+     "vi": "Mỗi kỹ thuật viên có một máy tính xách tay.",
+     "tag": "agreement"
+    },
+    {
+     "q": "We have very ------- information about the delay.",
+     "options": [
+      "little",
+      "few",
+      "many",
+      "several"
+     ],
+     "ans": 0,
+     "why": "'information' là danh từ không đếm được -> (very) little. 'few/many/several' chỉ dùng với danh từ đếm được số nhiều.",
+     "vi": "Chúng tôi chỉ có rất ít thông tin về sự chậm trễ.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "The list of new products ------- on the website.",
+     "options": [
+      "are",
+      "is",
+      "were",
+      "have been"
+     ],
+     "ans": 1,
+     "why": "Chủ ngữ chính là 'The list' (số ít) -> is.",
+     "vi": "Danh sách sản phẩm mới có trên trang web.",
+     "tag": "agreement"
+    },
+    {
+     "q": "The engineer ------- fixed the server was praised by the director.",
+     "options": [
+      "who",
+      "whom",
+      "whose",
+      "which"
+     ],
+     "ans": 0,
+     "why": "Tiền ngữ chỉ người, thiếu chủ ngữ -> who.",
+     "vi": "Kỹ sư đã sửa máy chủ được giám đốc khen.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "Cloud storage is becoming ------- popular than traditional storage.",
+     "options": [
+      "most",
+      "much",
+      "very",
+      "more"
+     ],
+     "ans": 3,
+     "why": "Có 'than' -> more popular.",
+     "vi": "Lưu trữ đám mây đang trở nên phổ biến hơn lưu trữ truyền thống.",
+     "tag": "comparison"
+    },
+    {
+     "q": "All employees must comply ------- the data protection rules.",
+     "options": [
+      "to",
+      "for",
+      "with",
+      "of"
+     ],
+     "ans": 2,
+     "why": "Collocation: comply with.",
+     "vi": "Tất cả nhân viên phải tuân thủ quy định bảo vệ dữ liệu.",
+     "tag": "collocation"
+    },
+    {
+     "q": "The offer is subject ------- approval by the board.",
+     "options": [
+      "to",
+      "for",
+      "with",
+      "by"
+     ],
+     "ans": 0,
+     "why": "Collocation: subject to.",
+     "vi": "Đề nghị này phụ thuộc vào sự phê duyệt của hội đồng.",
+     "tag": "collocation"
+    },
+    {
+     "q": "One server is in Tokyo, and ------- is in Berlin.",
+     "options": [
+      "other",
+      "the other",
+      "another",
+      "others"
+     ],
+     "ans": 1,
+     "why": "Chỉ có hai máy chủ, cái còn lại xác định -> the other.",
+     "vi": "Một máy chủ ở Tokyo, và máy còn lại ở Berlin.",
+     "tag": "pronoun"
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Công nghệ, IT & thư tín (email/memo)",
+  "words": [
+   {
+    "w": "access",
+    "pos": "n/v",
+    "ipa": "/ˈækses/",
+    "vi": "truy cập; quyền truy cập",
+    "ex": "Only managers can access the file.",
+    "exvi": "Chỉ quản lý mới truy cập được tập tin.",
+    "fam": "accessible (adj)",
+    "colloc": [
+     "gain access to",
+     "access a file"
+    ]
+   },
+   {
+    "w": "attachment",
+    "pos": "n",
+    "ipa": "/əˈtætʃmənt/",
+    "vi": "tập tin đính kèm",
+    "ex": "Please open the attachment.",
+    "exvi": "Vui lòng mở tập tin đính kèm.",
+    "fam": "attach (v)",
+    "colloc": [
+     "open an attachment"
+    ]
+   },
+   {
+    "w": "backup",
+    "pos": "n",
+    "ipa": "/ˈbækʌp/",
+    "vi": "bản sao lưu",
+    "ex": "Keep a backup of all data.",
+    "exvi": "Hãy giữ bản sao lưu mọi dữ liệu.",
+    "fam": "back up (v)",
+    "colloc": [
+     "a backup copy"
+    ]
+   },
+   {
+    "w": "compatible",
+    "pos": "adj",
+    "ipa": "/kəmˈpætəbl/",
+    "vi": "tương thích",
+    "ex": "The printer is compatible with Mac.",
+    "exvi": "Máy in tương thích với Mac.",
+    "fam": "compatibility (n)",
+    "colloc": [
+     "compatible with"
+    ]
+   },
+   {
+    "w": "configure",
+    "pos": "v",
+    "ipa": "/kənˈfɪɡjər/",
+    "vi": "cấu hình, thiết lập",
+    "ex": "The technician will configure the router.",
+    "exvi": "Kỹ thuật viên sẽ cấu hình bộ định tuyến.",
+    "fam": "configuration (n)",
+    "colloc": [
+     "configure settings"
+    ]
+   },
+   {
+    "w": "device",
+    "pos": "n",
+    "ipa": "/dɪˈvaɪs/",
+    "vi": "thiết bị",
+    "ex": "Register your device with IT.",
+    "exvi": "Hãy đăng ký thiết bị với bộ phận IT.",
+    "fam": "—",
+    "colloc": [
+     "a mobile device"
+    ]
+   },
+   {
+    "w": "download",
+    "pos": "v/n",
+    "ipa": "/ˈdaʊnloʊd/",
+    "vi": "tải xuống",
+    "ex": "Download the form from our site.",
+    "exvi": "Tải mẫu đơn từ trang web của chúng tôi.",
+    "fam": "—",
+    "colloc": [
+     "download a file"
+    ]
+   },
+   {
+    "w": "install",
+    "pos": "v",
+    "ipa": "/ɪnˈstɔːl/",
+    "vi": "cài đặt",
+    "ex": "We will install the software today.",
+    "exvi": "Hôm nay chúng tôi sẽ cài phần mềm.",
+    "fam": "installation (n)",
+    "colloc": [
+     "install software"
+    ]
+   },
+   {
+    "w": "network",
+    "pos": "n",
+    "ipa": "/ˈnetwɜːrk/",
+    "vi": "mạng",
+    "ex": "The network is down.",
+    "exvi": "Mạng đang bị sập.",
+    "fam": "networking (n)",
+    "colloc": [
+     "a wireless network"
+    ]
+   },
+   {
+    "w": "password",
+    "pos": "n",
+    "ipa": "/ˈpæswɜːrd/",
+    "vi": "mật khẩu",
+    "ex": "Change your password every month.",
+    "exvi": "Đổi mật khẩu mỗi tháng.",
+    "fam": "—",
+    "colloc": [
+     "reset a password"
+    ]
+   },
+   {
+    "w": "reliable",
+    "pos": "adj",
+    "ipa": "/rɪˈlaɪəbl/",
+    "vi": "đáng tin cậy",
+    "ex": "We need a reliable supplier.",
+    "exvi": "Chúng tôi cần nhà cung cấp đáng tin cậy.",
+    "fam": "rely (v), reliability (n)",
+    "colloc": [
+     "reliable service"
+    ]
+   },
+   {
+    "w": "reply",
+    "pos": "v/n",
+    "ipa": "/rɪˈplaɪ/",
+    "vi": "trả lời",
+    "ex": "Please reply by noon.",
+    "exvi": "Vui lòng trả lời trước trưa.",
+    "fam": "—",
+    "colloc": [
+     "reply to an email"
+    ]
+   },
+   {
+    "w": "security",
+    "pos": "n",
+    "ipa": "/sɪˈkjʊrəti/",
+    "vi": "an ninh, bảo mật",
+    "ex": "Security is our priority.",
+    "exvi": "An ninh là ưu tiên của chúng tôi.",
+    "fam": "secure (adj/v)",
+    "colloc": [
+     "data security"
+    ]
+   },
+   {
+    "w": "server",
+    "pos": "n",
+    "ipa": "/ˈsɜːrvər/",
+    "vi": "máy chủ",
+    "ex": "The server crashed.",
+    "exvi": "Máy chủ bị sập.",
+    "fam": "serve (v)",
+    "colloc": [
+     "a mail server"
+    ]
+   },
+   {
+    "w": "software",
+    "pos": "n",
+    "ipa": "/ˈsɔːftwer/",
+    "vi": "phần mềm",
+    "ex": "The software is easy to use.",
+    "exvi": "Phần mềm dễ sử dụng.",
+    "fam": "—",
+    "colloc": [
+     "install software"
+    ]
+   },
+   {
+    "w": "technician",
+    "pos": "n",
+    "ipa": "/tekˈnɪʃn/",
+    "vi": "kỹ thuật viên",
+    "ex": "A technician will visit.",
+    "exvi": "Một kỹ thuật viên sẽ đến.",
+    "fam": "technical (adj), technique (n)",
+    "colloc": [
+     "a computer technician"
+    ]
+   },
+   {
+    "w": "troubleshoot",
+    "pos": "v",
+    "ipa": "/ˈtrʌblʃuːt/",
+    "vi": "xử lý sự cố",
+    "ex": "Staff will troubleshoot the problem.",
+    "exvi": "Nhân viên sẽ xử lý sự cố.",
+    "fam": "troubleshooting (n)",
+    "colloc": [
+     "troubleshoot a problem"
+    ]
+   },
+   {
+    "w": "update",
+    "pos": "v/n",
+    "ipa": "/ʌpˈdeɪt/",
+    "vi": "cập nhật",
+    "ex": "Please update your software.",
+    "exvi": "Vui lòng cập nhật phần mềm.",
+    "fam": "—",
+    "colloc": [
+     "a software update"
+    ]
+   },
+   {
+    "w": "upgrade",
+    "pos": "v/n",
+    "ipa": "/ʌpˈɡreɪd/",
+    "vi": "nâng cấp",
+    "ex": "We will upgrade the system.",
+    "exvi": "Chúng tôi sẽ nâng cấp hệ thống.",
+    "fam": "—",
+    "colloc": [
+     "upgrade the server"
+    ]
+   },
+   {
+    "w": "malfunction",
+    "pos": "n/v",
+    "ipa": "/mælˈfʌŋkʃn/",
+    "vi": "trục trặc",
+    "ex": "A malfunction stopped production.",
+    "exvi": "Một trục trặc đã làm ngừng sản xuất.",
+    "fam": "—",
+    "colloc": [
+     "equipment malfunction"
+    ]
+   },
+   {
+    "w": "recipient",
+    "pos": "n",
+    "ipa": "/rɪˈsɪpiənt/",
+    "vi": "người nhận",
+    "ex": "The recipient must sign.",
+    "exvi": "Người nhận phải ký.",
+    "fam": "receive (v)",
+    "colloc": [
+     "the intended recipient"
+    ]
+   },
+   {
+    "w": "confidential",
+    "pos": "adj",
+    "ipa": "/ˌkɑːnfɪˈdenʃl/",
+    "vi": "bí mật, mật",
+    "ex": "The file is confidential.",
+    "exvi": "Tập tin này là bí mật.",
+    "fam": "confidentiality (n)",
+    "colloc": [
+     "confidential information"
+    ]
+   },
+   {
+    "w": "urgent",
+    "pos": "adj",
+    "ipa": "/ˈɜːrdʒənt/",
+    "vi": "khẩn cấp",
+    "ex": "This is an urgent matter.",
+    "exvi": "Đây là việc khẩn cấp.",
+    "fam": "urgency (n)",
+    "colloc": [
+     "an urgent request"
+    ]
+   },
+   {
+    "w": "forward",
+    "pos": "v",
+    "ipa": "/ˈfɔːrwərd/",
+    "vi": "chuyển tiếp (email)",
+    "ex": "Please forward the email to Ms. Kim.",
+    "exvi": "Vui lòng chuyển email cho cô Kim.",
+    "fam": "—",
+    "colloc": [
+     "forward a message"
+    ]
+   },
+   {
+    "w": "upload",
+    "pos": "v",
+    "ipa": "/ʌpˈloʊd/",
+    "vi": "tải lên",
+    "ex": "Upload your photo to the site.",
+    "exvi": "Tải ảnh của bạn lên trang web.",
+    "fam": "—",
+    "colloc": [
+     "upload a document"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "Please ------- the attached file to the whole team.",
+   "options": [
+    "install",
+    "upgrade",
+    "configure",
+    "forward"
+   ],
+   "ans": 3,
+   "why": "'forward the file to the team' = chuyển tiếp tập tin.",
+   "vi": "Vui lòng chuyển tập tin đính kèm cho cả nhóm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "You need a ------- to log in to your account.",
+   "options": [
+    "server",
+    "network",
+    "password",
+    "technician"
+   ],
+   "ans": 2,
+   "why": "Để đăng nhập cần mật khẩu: password.",
+   "vi": "Bạn cần mật khẩu để đăng nhập vào tài khoản.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Is this printer ------- with Mac computers?",
+   "options": [
+    "reliable",
+    "confidential",
+    "urgent",
+    "compatible"
+   ],
+   "ans": 3,
+   "why": "'compatible with' = tương thích với.",
+   "vi": "Máy in này có tương thích với máy Mac không?",
+   "tag": "collocation"
+  },
+  {
+   "q": "The request is ------- , so please respond today.",
+   "options": [
+    "reliable",
+    "compatible",
+    "urgent",
+    "confidential"
+   ],
+   "ans": 2,
+   "why": "Cần trả lời hôm nay nghĩa là khẩn cấp: urgent.",
+   "vi": "Yêu cầu này khẩn cấp nên vui lòng trả lời hôm nay.",
+   "tag": "vocab"
+  },
+  {
+   "q": "We keep a ------- of all data on a separate drive.",
+   "options": [
+    "access",
+    "backup",
+    "device",
+    "update"
+   ],
+   "ans": 1,
+   "why": "'a backup of all data' = bản sao lưu dữ liệu.",
+   "vi": "Chúng tôi giữ bản sao lưu toàn bộ dữ liệu trên ổ riêng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- is down, so no one can connect to the internet.",
+   "options": [
+    "network",
+    "attachment",
+    "recipient",
+    "technician"
+   ],
+   "ans": 0,
+   "why": "Không ai kết nối internet được nghĩa là network bị sập.",
+   "vi": "Mạng bị sập nên không ai kết nối được internet.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- of the email did not open the attachment.",
+   "options": [
+    "recipient",
+    "technician",
+    "software",
+    "malfunction"
+   ],
+   "ans": 0,
+   "why": "Người nhận email là recipient.",
+   "vi": "Người nhận email đã không mở tập tin đính kèm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "A ------- in the printer caused the paper jams.",
+   "options": [
+    "upgrade",
+    "download",
+    "malfunction",
+    "backup"
+   ],
+   "ans": 2,
+   "why": "Trục trặc gây kẹt giấy: malfunction.",
+   "vi": "Một trục trặc ở máy in gây ra kẹt giấy.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The technician will ------- the problem and report back to us.",
+   "options": [
+    "install",
+    "upgrade",
+    "forward",
+    "troubleshoot"
+   ],
+   "ans": 3,
+   "why": "'troubleshoot the problem' = xử lý sự cố.",
+   "vi": "Kỹ thuật viên sẽ xử lý sự cố và báo lại cho chúng tôi.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The ------- of our network is checked daily.",
+   "options": [
+    "secure",
+    "security",
+    "securely",
+    "secured"
+   ],
+   "ans": 1,
+   "why": "Sau 'The' cần danh từ: security.",
+   "vi": "An ninh của mạng chúng tôi được kiểm tra hằng ngày.",
+   "tag": "word-form-noun"
+  }
+ ],
+ "test": [
+  {
+   "q": "The new accounting software is much ------- to use than the old version.",
+   "options": [
+    "easier",
+    "easy",
+    "easiest",
+    "more easy"
+   ],
+   "ans": 0,
+   "why": "Có 'than' và 'much' (nhấn mạnh so sánh hơn) -> so sánh hơn. 'easy' tận cùng -y nên đổi thành easier; 'more easy' sai vì easy đã có dạng -er.",
+   "vi": "Phần mềm kế toán mới dễ dùng hơn nhiều so với phiên bản cũ.",
+   "tag": "comparison"
+  },
+  {
+   "q": "Ms. Cho submitted a ------- proposal to the committee.",
+   "options": [
+    "detail",
+    "detailed",
+    "detailedly",
+    "detailer"
+   ],
+   "ans": 1,
+   "why": "Trước danh từ 'proposal' cần tính từ: detailed.",
+   "vi": "Cô Cho đã nộp một đề xuất chi tiết cho ủy ban.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The two companies are ------- discussing a merger.",
+   "options": [
+    "current",
+    "currents",
+    "currency",
+    "currently"
+   ],
+   "ans": 3,
+   "why": "Giữa be và V-ing cần trạng từ: currently.",
+   "vi": "Hai công ty hiện đang thảo luận về việc sáp nhập.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "Applicants must send their résumés to the ------- by Friday.",
+   "options": [
+    "coordinate",
+    "coordination",
+    "coordinator",
+    "coordinated"
+   ],
+   "ans": 2,
+   "why": "Sau 'the' cần danh từ chỉ người nhận: coordinator.",
+   "vi": "Ứng viên phải gửi sơ yếu lý lịch cho điều phối viên trước thứ Sáu.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The new policy will ------- the approval process.",
+   "options": [
+    "simplify",
+    "simple",
+    "simply",
+    "simplicity"
+   ],
+   "ans": 0,
+   "why": "Sau 'will' cần động từ nguyên mẫu: simplify.",
+   "vi": "Chính sách mới sẽ đơn giản hóa quy trình phê duyệt.",
+   "tag": "word-form-verb"
+  },
+  {
+   "q": "Please complete the ------- form and return it to HR.",
+   "options": [
+    "attach",
+    "attaches",
+    "attached",
+    "attaching"
+   ],
+   "ans": 2,
+   "why": "Form được đính kèm (bị động) -> attached.",
+   "vi": "Vui lòng hoàn thành mẫu đơn đính kèm và gửi lại phòng nhân sự.",
+   "tag": "participle"
+  },
+  {
+   "q": "Sales ------- steadily since the new campaign was launched.",
+   "options": [
+    "grow",
+    "have grown",
+    "grew",
+    "will grow"
+   ],
+   "ans": 1,
+   "why": "'since' + quá khứ -> hiện tại hoàn thành: have grown.",
+   "vi": "Doanh số đã tăng đều đặn kể từ khi chiến dịch mới được triển khai.",
+   "tag": "tense-perfect"
+  },
+  {
+   "q": "The annual report ------- by the finance team by next Friday.",
+   "options": [
+    "completes",
+    "has completed",
+    "is completing",
+    "will be completed"
+   ],
+   "ans": 3,
+   "why": "Chủ ngữ là vật bị tác động, thời gian tương lai -> will be completed.",
+   "vi": "Báo cáo thường niên sẽ được nhóm tài chính hoàn tất trước thứ Sáu tới.",
+   "tag": "passive"
+  },
+  {
+   "q": "Chọn đáp án phù hợp điền vào chỗ trống.",
+   "options": [
+    "became",
+    "has become",
+    "will become",
+    "had become"
+   ],
+   "ans": 2,
+   "why": "'within 24 hours' và 'will receive' -> tương lai: will become.",
+   "vi": "Tài khoản của bạn sẽ bắt đầu hoạt động trong vòng 24 giờ.",
+   "tag": "part6-tense",
+   "ctx": "Dear Ms. Evans, We are pleased to inform you that your application has been approved. Your account ------- active within 24 hours, and you will receive a confirmation email."
+  },
+  {
+   "q": "The conference will be held ------- March 5 at the Grand Hotel.",
+   "options": [
+    "on",
+    "at",
+    "in",
+    "by"
+   ],
+   "ans": 0,
+   "why": "Ngày cụ thể dùng 'on'.",
+   "vi": "Hội nghị sẽ được tổ chức vào ngày 5 tháng Ba tại khách sạn Grand.",
+   "tag": "preposition"
+  },
+  {
+   "q": "We will refund your payment ------- the item arrives damaged.",
+   "options": [
+    "unless",
+    "during",
+    "despite",
+    "if"
+   ],
+   "ans": 3,
+   "why": "Hoàn tiền nếu hàng đến bị hỏng -> if. 'unless' = nếu không, sai nghĩa.",
+   "vi": "Chúng tôi sẽ hoàn tiền nếu món hàng đến nơi bị hư hỏng.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "Chọn đáp án phù hợp điền vào chỗ trống.",
+   "options": [
+    "However",
+    "Moreover",
+    "Otherwise",
+    "Therefore"
+   ],
+   "ans": 1,
+   "why": "Câu sau bổ sung thêm ưu điểm -> Moreover.",
+   "vi": "Gói cước mới rẻ hơn gói cũ. Hơn nữa nó còn có nhiều dữ liệu hơn mỗi tháng.",
+   "tag": "part6-connector",
+   "ctx": "Our new phone plan is cheaper than the old one. ------- , it includes more data every month."
+  },
+  {
+   "q": "Mr. Alvarez is responsible ------- training new employees.",
+   "options": [
+    "to",
+    "with",
+    "at",
+    "for"
+   ],
+   "ans": 3,
+   "why": "Collocation: responsible for + V-ing.",
+   "vi": "Ông Alvarez chịu trách nhiệm đào tạo nhân viên mới.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The CEO and ------- will present the results at the meeting.",
+   "options": [
+    "me",
+    "I",
+    "my",
+    "myself"
+   ],
+   "ans": 1,
+   "why": "Chủ ngữ cần đại từ chủ ngữ: I.",
+   "vi": "Giám đốc điều hành và tôi sẽ trình bày kết quả tại cuộc họp.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "Every employee ------- required to attend the safety workshop.",
+   "options": [
+    "is",
+    "are",
+    "were",
+    "have been"
+   ],
+   "ans": 0,
+   "why": "Every + danh từ số ít -> động từ số ít: is.",
+   "vi": "Mọi nhân viên đều phải tham dự buổi tập huấn an toàn.",
+   "tag": "agreement"
+  },
+  {
+   "q": "The applicant ------- résumé impressed us has been invited for an interview.",
+   "options": [
+    "who",
+    "whom",
+    "whose",
+    "which"
+   ],
+   "ans": 2,
+   "why": "'résumé' thuộc về applicant -> whose.",
+   "vi": "Ứng viên có sơ yếu lý lịch gây ấn tượng đã được mời phỏng vấn.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "Employees should not share ------- information with outside parties.",
+   "options": [
+    "confidential",
+    "compatible",
+    "vacant",
+    "spacious"
+   ],
+   "ans": 0,
+   "why": "'confidential information' = thông tin mật.",
+   "vi": "Nhân viên không được chia sẻ thông tin mật với người ngoài.",
+   "tag": "vocab"
+  },
+  {
+   "q": "A ------- will visit our office to install the new network equipment.",
+   "options": [
+    "tenant",
+    "technician",
+    "recipient",
+    "landlord"
+   ],
+   "ans": 1,
+   "why": "Người đến lắp thiết bị mạng là kỹ thuật viên: technician.",
+   "vi": "Một kỹ thuật viên sẽ đến văn phòng để lắp thiết bị mạng mới.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The new policy takes ------- on January 1.",
+   "options": [
+    "part",
+    "care",
+    "turn",
+    "effect"
+   ],
+   "ans": 3,
+   "why": "Collocation: take effect = có hiệu lực.",
+   "vi": "Chính sách mới có hiệu lực từ ngày 1 tháng Một.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The meeting was ------- until next week because the director was ill.",
+   "options": [
+    "relocated",
+    "upgraded",
+    "postponed",
+    "forwarded"
+   ],
+   "ans": 2,
+   "why": "'postponed until' = hoãn đến.",
+   "vi": "Cuộc họp bị hoãn đến tuần sau vì giám đốc bị ốm.",
+   "tag": "vocab"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "The manager made the schedule ------- for everyone.",
+   "options": [
+    "flexible",
+    "flex",
+    "flexibly",
+    "flexibility"
+   ],
+   "ans": 0,
+   "why": "Cấu trúc make + O + tính từ: make the schedule flexible.",
+   "vi": "Quản lý làm cho lịch trình linh hoạt với mọi người.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "Please attach a copy of your ------- to the form.",
+   "options": [
+    "apply",
+    "applicant",
+    "applying",
+    "application"
+   ],
+   "ans": 3,
+   "why": "Sau 'your' cần danh từ vật: application (đơn xin).",
+   "vi": "Vui lòng đính kèm bản sao đơn xin của bạn vào mẫu.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The company provides ------- to all new employees.",
+   "options": [
+    "equipments",
+    "an equipment",
+    "equipment",
+    "equipped"
+   ],
+   "ans": 2,
+   "why": "'equipment' là danh từ không đếm được, không thêm s hay a/an.",
+   "vi": "Công ty cung cấp thiết bị cho tất cả nhân viên mới.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "The new model is ------- more durable than the old one.",
+   "options": [
+    "considerable",
+    "considerably",
+    "consider",
+    "considerate"
+   ],
+   "ans": 1,
+   "why": "Bổ nghĩa cho 'more durable' cần trạng từ: considerably.",
+   "vi": "Mẫu mới bền hơn đáng kể so với mẫu cũ.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The results of the survey were ------- .",
+   "options": [
+    "surprise",
+    "surprised",
+    "surprisingly",
+    "surprising"
+   ],
+   "ans": 3,
+   "why": "Kết quả gây ngạc nhiên -> tính từ -ing: surprising.",
+   "vi": "Kết quả khảo sát thật bất ngờ.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Please do not try to repair the machine by ------- .",
+   "options": [
+    "you",
+    "your",
+    "yourself",
+    "yours"
+   ],
+   "ans": 2,
+   "why": "'by + đại từ phản thân' = tự mình: by yourself.",
+   "vi": "Vui lòng đừng tự sửa máy.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "------- of the applicants have submitted references.",
+   "options": [
+    "Each",
+    "Several",
+    "Every",
+    "Much"
+   ],
+   "ans": 1,
+   "why": "Động từ 'have' số nhiều -> Several + of + số nhiều.",
+   "vi": "Một vài ứng viên đã nộp thư giới thiệu.",
+   "tag": "quantifier"
+  },
+  {
+   "q": "The cost of the repairs ------- higher than we expected.",
+   "options": [
+    "was",
+    "were",
+    "are",
+    "have been"
+   ],
+   "ans": 0,
+   "why": "Chủ ngữ chính 'cost' số ít, quá khứ -> was.",
+   "vi": "Chi phí sửa chữa cao hơn chúng tôi dự kiến.",
+   "tag": "agreement"
+  },
+  {
+   "q": "As soon as the shipment ------- , we will notify you.",
+   "options": [
+    "will arrive",
+    "arrived",
+    "arrives",
+    "is arriving"
+   ],
+   "ans": 2,
+   "why": "Mệnh đề thời gian dùng hiện tại cho tương lai: arrives.",
+   "vi": "Ngay khi lô hàng đến, chúng tôi sẽ báo cho bạn.",
+   "tag": "time-clause"
+  },
+  {
+   "q": "The CEO ------- the factory last Tuesday.",
+   "options": [
+    "visits",
+    "has visited",
+    "will visit",
+    "visited"
+   ],
+   "ans": 3,
+   "why": "'last Tuesday' -> quá khứ đơn: visited.",
+   "vi": "Giám đốc đã thăm nhà máy vào thứ Ba tuần trước.",
+   "tag": "tense-past"
+  },
+  {
+   "q": "Our company ------- in Busan.",
+   "options": [
+    "locates",
+    "is located",
+    "locating",
+    "to locate"
+   ],
+   "ans": 1,
+   "why": "Cần động từ chính, chủ ngữ bị tác động: is located.",
+   "vi": "Công ty của chúng tôi nằm ở Busan.",
+   "tag": "verb-position"
+  },
+  {
+   "q": "All invoices must ------- before the end of the month.",
+   "options": [
+    "be paid",
+    "pay",
+    "paid",
+    "being paid"
+   ],
+   "ans": 0,
+   "why": "Modal + be + V3: must be paid.",
+   "vi": "Tất cả hóa đơn phải được thanh toán trước cuối tháng.",
+   "tag": "passive"
+  },
+  {
+   "q": "We are considering ------- the main office to a new building.",
+   "options": [
+    "move",
+    "to move",
+    "moving",
+    "moved"
+   ],
+   "ans": 2,
+   "why": "consider + V-ing.",
+   "vi": "Chúng tôi đang cân nhắc chuyển văn phòng chính sang tòa nhà mới.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Employees ------- in the workshop should register by Monday.",
+   "options": [
+    "interest",
+    "interested",
+    "interesting",
+    "interests"
+   ],
+   "ans": 1,
+   "why": "Đây là dạng rút gọn của 'Employees (who are) interested in...': be interested in = quan tâm đến -> interested. 'interesting' nghĩa là 'gây hứng thú', sai nghĩa.",
+   "vi": "Nhân viên quan tâm đến buổi hội thảo nên đăng ký trước thứ Hai.",
+   "tag": "participle"
+  },
+  {
+   "q": "------- the traffic was heavy, the delegation arrived on time.",
+   "options": [
+    "Despite",
+    "However",
+    "Because of",
+    "Although"
+   ],
+   "ans": 3,
+   "why": "Sau chỗ trống là mệnh đề (the traffic was heavy) nên cần liên từ: Although.",
+   "vi": "Mặc dù giao thông đông đúc, đoàn đại biểu vẫn đến đúng giờ.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "The store will be closed ------- the renovation.",
+   "options": [
+    "during",
+    "while",
+    "although",
+    "because"
+   ],
+   "ans": 0,
+   "why": "Sau chỗ trống là cụm danh từ 'the renovation' -> giới từ during.",
+   "vi": "Cửa hàng sẽ đóng cửa trong thời gian cải tạo.",
+   "tag": "preposition"
+  },
+  {
+   "q": "Applicants must have ------- a degree and two years of experience.",
+   "options": [
+    "either",
+    "neither",
+    "both",
+    "not only"
+   ],
+   "ans": 2,
+   "why": "both ... and = cả hai.",
+   "vi": "Ứng viên phải có cả bằng cấp lẫn hai năm kinh nghiệm.",
+   "tag": "correlative"
+  },
+  {
+   "q": "This is the ------- popular item in our catalog.",
+   "options": [
+    "more",
+    "most",
+    "much",
+    "mostly"
+   ],
+   "ans": 1,
+   "why": "'the' + tính từ dài -> the most popular.",
+   "vi": "Đây là mặt hàng phổ biến nhất trong danh mục.",
+   "tag": "comparison"
+  },
+  {
+   "q": "The department ------- handles customer complaints has moved.",
+   "options": [
+    "who",
+    "whose",
+    "what",
+    "that"
+   ],
+   "ans": 3,
+   "why": "Tiền ngữ 'department' là vật, sau chỗ trống là động từ 'handles' (thiếu chủ ngữ) -> that (which cũng đúng). 'who' chỉ người, 'what' không đứng sau danh từ.",
+   "vi": "Bộ phận xử lý khiếu nại của khách đã chuyển đi.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "Visitors must register ------- the reception desk.",
+   "options": [
+    "at",
+    "in",
+    "on",
+    "since"
+   ],
+   "ans": 0,
+   "why": "Dùng 'at' trước một điểm cụ thể như quầy, cửa: at the reception desk. 'in' dùng cho không gian bao quanh (in the room).",
+   "vi": "Khách phải đăng ký tại quầy lễ tân.",
+   "tag": "preposition"
+  }
+ ]
+}

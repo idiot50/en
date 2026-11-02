@@ -1,0 +1,1983 @@
+{
+ "day": 3,
+ "title": "Tính từ & Trạng từ",
+ "icon": "🎨",
+ "goal": "Sau hôm nay bạn phân biệt được tính từ và trạng từ chỉ bằng cách nhìn từ đứng trước/sau chỗ trống, chọn đúng -ing/-ed và tránh được các bẫy như timely, costly, almost/most.",
+ "why": "Tính từ và trạng từ chiếm khoảng 11-12% số câu ngữ pháp ở Part 5 và Part 6 (khoảng 4-5 câu mỗi đề), và là dạng câu làm nhanh nhất vì không cần dịch cả câu.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 40
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d3-l1",
+   "title": "1. Tính từ (adjective) — từ mô tả danh từ",
+   "intro": "Tính từ (viết tắt adj) là từ cho biết danh từ đó thế nào: mới, quan trọng, đáng tin cậy, bận rộn... Chỉ cần nhớ 3 vị trí của tính từ là bạn đã xử lý được rất nhiều câu Part 5 mà không cần dịch cả câu.",
+   "points": [
+    {
+     "rule": "**Vị trí 1 — TRƯỚC danh từ** (danh từ là từ chỉ người/vật/việc như manager, report, budget). Công thức: `a/the/my + adj + N`.",
+     "examples": [
+      {
+       "en": "We chose a **reliable** supplier.",
+       "vi": "Chúng tôi đã chọn một nhà cung cấp đáng tin cậy."
+      },
+      {
+       "en": "The **new** policy starts in May.",
+       "vi": "Chính sách mới bắt đầu vào tháng Năm."
+      }
+     ]
+    },
+    {
+     "rule": "**Vị trí 2 — SAU động từ nối** (linking verb: động từ không chỉ hành động mà chỉ trạng thái, nối chủ ngữ với tính từ): be, become, seem, look, remain, stay, feel, sound, appear, get. Công thức: `S + be/linking V + adj`.",
+     "examples": [
+      {
+       "en": "The new software is **easy** to use.",
+       "vi": "Phần mềm mới dễ sử dụng."
+      },
+      {
+       "en": "Ms. Lee seems **optimistic** about the merger.",
+       "vi": "Cô Lee có vẻ lạc quan về vụ sáp nhập."
+      },
+      {
+       "en": "Prices remained **stable** last year.",
+       "vi": "Giá cả vẫn ổn định năm ngoái."
+      }
+     ]
+    },
+    {
+     "rule": "**Vị trí 3 — SAU tân ngữ** với keep / make / find / leave + O + adj (đã học ở Ngày 1). Công thức: `S + keep/make/find + O + adj`.",
+     "examples": [
+      {
+       "en": "Please keep the storage room **tidy**.",
+       "vi": "Vui lòng giữ phòng kho gọn gàng."
+      },
+      {
+       "en": "Customers find the app **convenient**.",
+       "vi": "Khách hàng thấy ứng dụng này tiện lợi."
+      }
+     ]
+    },
+    {
+     "rule": "**Tính từ không thêm -s** và không đổi theo số ít/số nhiều: a new employee, two new employees (KHÔNG viết \"news employees\"). Có thể đứng sau từ chỉ mức độ như very, too, so, quite, extremely: `very + adj`.",
+     "examples": [
+      {
+       "en": "The training was **very useful**.",
+       "vi": "Buổi tập huấn rất hữu ích."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Hậu tố thường là TÍNH TỪ",
+     "Ví dụ",
+     "Nghĩa"
+    ],
+    "rows": [
+     [
+      "-ful",
+      "helpful, successful",
+      "hữu ích, thành công"
+     ],
+     [
+      "-ive",
+      "effective, competitive",
+      "hiệu quả, cạnh tranh"
+     ],
+     [
+      "-able / -ible",
+      "reliable, available",
+      "đáng tin cậy, có sẵn"
+     ],
+     [
+      "-al",
+      "additional, official",
+      "bổ sung, chính thức"
+     ],
+     [
+      "-ous",
+      "numerous, various",
+      "nhiều, đa dạng"
+     ],
+     [
+      "-ent / -ant",
+      "efficient, important",
+      "hiệu quả, quan trọng"
+     ]
+    ]
+   },
+   "traps": [
+    "Thấy \"a / the / my ... ------- + danh từ\" thì chọn TÍNH TỪ, không chọn trạng từ (-ly) và không chọn danh từ khác.",
+    "Sau be / become / seem / look / remain chọn TÍNH TỪ, không chọn trạng từ: \"The results look positive\", không phải \"look positively\"."
+   ],
+   "tip": "Mẹo nhanh: nhìn ngay TỪ ĐỨNG SAU chỗ trống. Nếu sau chỗ trống là danh từ (và trước đó không phải động từ) thì chỗ trống thường là tính từ."
+  },
+  {
+   "id": "d3-l2",
+   "title": "2. Trạng từ (adverb) — từ bổ nghĩa cho \"hành động\"",
+   "intro": "Trạng từ (viết tắt adv) thường được tạo bằng cách thêm -ly vào tính từ: careful → carefully. Nó trả lời các câu hỏi: làm NHƯ THẾ NÀO, KHI NÀO, THƯỜNG XUYÊN không, ở MỨC ĐỘ nào. Điểm đặc biệt: bỏ trạng từ đi, câu vẫn đủ và đúng.",
+   "points": [
+    {
+     "rule": "Trạng từ bổ nghĩa cho **4 đối tượng**: (1) động từ, (2) tính từ, (3) trạng từ khác, (4) cả câu.",
+     "examples": [
+      {
+       "en": "She **carefully** reviews every contract.",
+       "vi": "Cô ấy xem xét cẩn thận từng hợp đồng. (bổ nghĩa động từ)"
+      },
+      {
+       "en": "The offer is **extremely** attractive.",
+       "vi": "Lời đề nghị cực kỳ hấp dẫn. (bổ nghĩa tính từ)"
+      },
+      {
+       "en": "Sales grew **very** quickly.",
+       "vi": "Doanh số tăng rất nhanh. (bổ nghĩa trạng từ)"
+      },
+      {
+       "en": "**Fortunately**, the flight was on time.",
+       "vi": "May mắn là chuyến bay đúng giờ. (bổ nghĩa cả câu)"
+      }
+     ]
+    },
+    {
+     "rule": "**Vị trí trạng từ hay thi**: giữa trợ động từ và động từ chính: `be + adv + V-ing/V3`, `have + adv + V3`, `will + adv + V`. Ngoài ra: giữa chủ ngữ và động từ, hoặc cuối câu.",
+     "examples": [
+      {
+       "en": "The system is **currently** being updated.",
+       "vi": "Hệ thống hiện đang được cập nhật."
+      },
+      {
+       "en": "Sales have **steadily** increased.",
+       "vi": "Doanh số đã tăng đều đặn."
+      },
+      {
+       "en": "The manager **promptly** answered our e-mail.",
+       "vi": "Người quản lý đã trả lời e-mail của chúng tôi kịp thời."
+      }
+     ]
+    },
+    {
+     "rule": "**Không** đặt trạng từ giữa động từ và tân ngữ (V + adv + O). Hãy đặt trước động từ hoặc cuối câu: \"She **carefully reviews** the report\" / \"She reviews the report **carefully**\" (không viết \"reviews carefully the report\").",
+     "examples": [
+      {
+       "en": "The team completed the project **successfully**.",
+       "vi": "Nhóm đã hoàn thành dự án thành công."
+      }
+     ]
+    },
+    {
+     "rule": "Trạng từ **đứng trước tính từ** để làm rõ mức độ: `be + adv + adj` (is highly effective, was completely different).",
+     "examples": [
+      {
+       "en": "The new printer is **significantly** faster.",
+       "vi": "Máy in mới nhanh hơn đáng kể."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Tính từ",
+     "Trạng từ (+ -ly)",
+     "Nghĩa của trạng từ"
+    ],
+    "rows": [
+     [
+      "careful",
+      "carefully",
+      "một cách cẩn thận"
+     ],
+     [
+      "quick",
+      "quickly",
+      "nhanh chóng"
+     ],
+     [
+      "recent",
+      "recently",
+      "gần đây"
+     ],
+     [
+      "frequent",
+      "frequently",
+      "thường xuyên"
+     ],
+     [
+      "significant",
+      "significantly",
+      "đáng kể"
+     ],
+     [
+      "convenient",
+      "conveniently",
+      "một cách thuận tiện"
+     ]
+    ]
+   },
+   "traps": [
+    "Chỗ trống nằm giữa \"has / have / is / are / will\" và một động từ → hầu như luôn là TRẠNG TỪ.",
+    "Chỗ trống đứng trước tính từ (is ------- helpful) → trạng từ, không phải danh từ."
+   ],
+   "tip": "Mẹo nhanh: che chỗ trống đi. Nếu câu vẫn đủ nghĩa và đủ cấu trúc thì chỗ trống là thành phần \"phụ\" → ưu tiên TRẠNG TỪ (hoặc tính từ nếu đứng trước danh từ)."
+  },
+  {
+   "id": "d3-l3",
+   "title": "3. Phân biệt tính từ & trạng từ, tính từ -ing / -ed",
+   "intro": "Phần này giúp bạn không nhầm hai loại từ hay gặp nhất trong Part 5. Quy trình 3 bước: (1) nhìn từ ngay sau chỗ trống, (2) nhìn từ ngay trước chỗ trống, (3) kiểm tra loại động từ.",
+   "points": [
+    {
+     "rule": "**Quy trình 3 bước**: Sau chỗ trống là danh từ → tính từ. Sau chỗ trống là động từ / tính từ / V-ing / V3 → trạng từ. Sau be / become / seem / look / remain → tính từ.",
+     "examples": [
+      {
+       "en": "a ------- **plan** → adj: a **realistic** plan",
+       "vi": "một kế hoạch thực tế"
+      },
+      {
+       "en": "------- **updated** → adv: **recently** updated",
+       "vi": "mới được cập nhật gần đây"
+      }
+     ]
+    },
+    {
+     "rule": "**Tính từ -ing**: chỉ vật/việc GÂY RA cảm xúc (chủ động). **Tính từ -ed**: chỉ người CẢM THẤY (bị động). Hỏi: \"ai/cái gì cảm thấy?\" → -ed; \"cái gì gây ra cảm giác?\" → -ing.",
+     "examples": [
+      {
+       "en": "The results were **encouraging**.",
+       "vi": "Kết quả thật đáng khích lệ. (kết quả gây ra cảm giác)"
+      },
+      {
+       "en": "The customers were **disappointed**.",
+       "vi": "Khách hàng đã thất vọng. (người cảm thấy)"
+      },
+      {
+       "en": "We watched an **exciting** presentation.",
+       "vi": "Chúng tôi xem một bài thuyết trình thú vị."
+      }
+     ]
+    },
+    {
+     "rule": "**Một số từ có cùng dạng tính từ & trạng từ, và thêm -ly thì nghĩa khác hẳn**: hard (chăm chỉ) / hardly (hầu như không); late (muộn) / lately (gần đây); high (cao) / highly (rất, cao độ); near (gần) / nearly (gần như); close (gần) / closely (chặt chẽ).",
+     "examples": [
+      {
+       "en": "Our staff work **hard**.",
+       "vi": "Nhân viên của chúng tôi làm việc chăm chỉ."
+      },
+      {
+       "en": "The product is **highly** recommended.",
+       "vi": "Sản phẩm được đánh giá rất cao."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Tính từ -ed (người cảm thấy)",
+     "Tính từ -ing (vật gây ra)",
+     "Nghĩa"
+    ],
+    "rows": [
+     [
+      "interested",
+      "interesting",
+      "quan tâm / thú vị"
+     ],
+     [
+      "surprised",
+      "surprising",
+      "ngạc nhiên / đáng ngạc nhiên"
+     ],
+     [
+      "disappointed",
+      "disappointing",
+      "thất vọng / đáng thất vọng"
+     ],
+     [
+      "confused",
+      "confusing",
+      "bối rối / gây bối rối"
+     ],
+     [
+      "satisfied",
+      "satisfying",
+      "hài lòng / thỏa mãn"
+     ]
+    ]
+   },
+   "traps": [
+    "\"The movie was bored\" sai — phim không thể \"cảm thấy chán\" → boring. \"Customers were disappointing\" sai → disappointed.",
+    "highly ≠ high: \"highly recommended\" (đúng), \"high recommended\" (sai). hard ≠ hardly: \"work hard\" ≠ \"hardly work\"."
+   ],
+   "tip": "Mẹo: chủ ngữ là NGƯỜI thường đi với -ed; chủ ngữ là VẬT/VIỆC (results, news, presentation) thường đi với -ing."
+  },
+  {
+   "id": "d3-l4",
+   "title": "4. Bẫy thường gặp & trạng từ hay xuất hiện trong đề",
+   "intro": "Có những từ nhìn là biết \"đuôi -ly = trạng từ\" nhưng lại là tính từ, và những cặp trạng từ nhìn giống nhau nhưng nghĩa khác. Đây chính là chỗ đề TOEIC hay đặt bẫy.",
+   "points": [
+    {
+     "rule": "**Từ đuôi -ly nhưng là TÍNH TỪ**: timely (kịp thời), costly (tốn kém), friendly (thân thiện), likely (có khả năng), lovely, elderly, orderly, weekly / monthly / yearly / daily (hàng tuần/tháng/năm/ngày, vừa là tính từ vừa là trạng từ).",
+     "examples": [
+      {
+       "en": "We expect a **timely** reply.",
+       "vi": "Chúng tôi mong đợi một phản hồi kịp thời."
+      },
+      {
+       "en": "The delay proved **costly**.",
+       "vi": "Sự chậm trễ hóa ra rất tốn kém."
+      }
+     ]
+    },
+    {
+     "rule": "**Trạng từ chỉ số lượng** đứng trước con số: approximately / roughly / nearly / almost / about + số. Cấu trúc: `approximately + 200 guests`.",
+     "examples": [
+      {
+       "en": "**Approximately** 200 guests attended.",
+       "vi": "Khoảng 200 khách đã tham dự."
+      }
+     ]
+    },
+    {
+     "rule": "**almost** (trạng từ: gần như) khác **most** (lượng từ: hầu hết). `almost + all/every/any/no` nhưng `most + N số nhiều` hoặc `most of the + N`.",
+     "examples": [
+      {
+       "en": "**Almost** all employees attended.",
+       "vi": "Gần như toàn bộ nhân viên đã tham dự."
+      },
+      {
+       "en": "**Most** employees attended.",
+       "vi": "Hầu hết nhân viên đã tham dự."
+      }
+     ]
+    },
+    {
+     "rule": "**still / yet / already / soon**: still = vẫn (đứng trước động từ thường, sau be/trợ động từ: are still waiting); yet = chưa (cuối câu phủ định / câu hỏi); already = đã rồi (câu khẳng định); soon = sớm, sắp.",
+     "examples": [
+      {
+       "en": "We are **still** waiting for the invoice.",
+       "vi": "Chúng tôi vẫn đang chờ hóa đơn."
+      },
+      {
+       "en": "The invoice has not arrived **yet**.",
+       "vi": "Hóa đơn vẫn chưa đến."
+      },
+      {
+       "en": "The invoice has **already** arrived.",
+       "vi": "Hóa đơn đã đến rồi."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Trạng từ hay thi",
+     "Hay đi với",
+     "Nghĩa"
+    ],
+    "rows": [
+     [
+      "highly",
+      "recommended, effective, skilled",
+      "rất (cao độ)"
+     ],
+     [
+      "currently",
+      "is/are + currently + V-ing",
+      "hiện tại"
+     ],
+     [
+      "recently",
+      "has recently + V3",
+      "gần đây"
+     ],
+     [
+      "promptly",
+      "respond / reply / pay promptly",
+      "nhanh chóng, đúng giờ"
+     ],
+     [
+      "frequently",
+      "frequently asked questions",
+      "thường xuyên"
+     ],
+     [
+      "strictly",
+      "strictly prohibited / forbidden",
+      "nghiêm ngặt"
+     ],
+     [
+      "significantly",
+      "increase / decrease significantly",
+      "đáng kể"
+     ],
+     [
+      "temporarily",
+      "temporarily closed",
+      "tạm thời"
+     ]
+    ]
+   },
+   "traps": [
+    "\"timely\" là tính từ nên đứng trước danh từ (a timely response); đừng chọn nó chỉ vì nghĩ \"đuôi -ly = trạng từ\".",
+    "approximately/nearly + số là trạng từ; còn \"approximate\" (tính từ) đứng trước danh từ: an approximate cost."
+   ],
+   "tip": "Mẹo: gặp đáp án có đuôi -ly, hỏi \"chỗ trống đứng trước danh từ hay trước động từ/tính từ?\". Trước danh từ thì -ly (trừ timely, costly, friendly...) thường sai."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d3-p1",
+   "title": "Bài 1: Tính từ — vị trí & dạng từ",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d3-l1",
+   "items": [
+    {
+     "q": "The company offers ------- training to all new staff.",
+     "options": [
+      "comprehensively",
+      "comprehensive",
+      "comprehend",
+      "comprehension"
+     ],
+     "ans": 1,
+     "why": "Chỗ trống đứng trước danh từ 'training' nên cần tính từ → comprehensive (toàn diện). 'comprehensively' là trạng từ nên không đứng trước danh từ.",
+     "vi": "Công ty cung cấp khóa đào tạo toàn diện cho mọi nhân viên mới.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Ms. Lee is a ------- manager who always listens to her team.",
+     "options": [
+      "patiently",
+      "patience",
+      "patients",
+      "patient"
+     ],
+     "ans": 3,
+     "why": "Sau 'a' + chỗ trống + danh từ 'manager' cần tính từ → patient (kiên nhẫn). 'patients' là danh từ số nhiều, không đi với 'a'.",
+     "vi": "Cô Lee là một người quản lý kiên nhẫn, luôn lắng nghe nhóm của mình.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The new software is ------- to use, even for beginners.",
+     "options": [
+      "easy",
+      "easily",
+      "ease",
+      "eases"
+     ],
+     "ans": 0,
+     "why": "Sau động từ 'is' (be) cần tính từ → easy. 'easily' là trạng từ, không đứng ngay sau be để bổ nghĩa cho 'to use' theo cách này.",
+     "vi": "Phần mềm mới dễ sử dụng, kể cả với người mới bắt đầu.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Our delivery service has become more ------- since we hired more drivers.",
+     "options": [
+      "reliably",
+      "rely",
+      "reliable",
+      "reliability"
+     ],
+     "ans": 2,
+     "why": "Sau 'become more' cần tính từ → reliable (đáng tin cậy). 'reliably' là trạng từ không đi sau become; 'reliability' là danh từ.",
+     "vi": "Dịch vụ giao hàng của chúng tôi đáng tin cậy hơn kể từ khi thuê thêm tài xế.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Please keep the storage room ------- at all times.",
+     "options": [
+      "tidily",
+      "tidiness",
+      "tidies",
+      "tidy"
+     ],
+     "ans": 3,
+     "why": "Cấu trúc keep + O + adj: sau tân ngữ 'the storage room' cần tính từ → tidy (gọn gàng). 'tidily' là trạng từ nên sai vị trí.",
+     "vi": "Vui lòng luôn giữ phòng kho gọn gàng.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The results of the survey were ------- to the marketing team.",
+     "options": [
+      "helpfully",
+      "helpful",
+      "help",
+      "helpfulness"
+     ],
+     "ans": 1,
+     "why": "Sau 'were' (be) cần tính từ → helpful (hữu ích). 'helpfully' là trạng từ, không đứng sau be làm bổ ngữ.",
+     "vi": "Kết quả khảo sát hữu ích cho nhóm marketing.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "A ------- response from the customer service team is expected.",
+     "options": [
+      "promptly",
+      "promptness",
+      "prompt",
+      "prompting"
+     ],
+     "ans": 2,
+     "why": "Sau 'A' và trước danh từ 'response' cần tính từ → prompt (nhanh chóng). 'promptly' là trạng từ nên không đứng trước danh từ.",
+     "vi": "Dự kiến sẽ có phản hồi nhanh chóng từ nhóm chăm sóc khách hàng.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The conference room looks ------- after the renovation.",
+     "options": [
+      "spacious",
+      "spaciously",
+      "space",
+      "spaciousness"
+     ],
+     "ans": 0,
+     "why": "'look' là động từ nối, sau nó cần tính từ → spacious (rộng rãi). 'spaciously' là trạng từ nên sai.",
+     "vi": "Phòng họp trông rộng rãi sau khi cải tạo.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "We need a ------- solution to the shipping delays.",
+     "options": [
+      "practically",
+      "practicality",
+      "practical",
+      "practice"
+     ],
+     "ans": 2,
+     "why": "Trước danh từ 'solution' cần tính từ → practical (thiết thực). 'practically' là trạng từ; 'practice' là danh từ không hợp nghĩa.",
+     "vi": "Chúng tôi cần một giải pháp thiết thực cho tình trạng giao hàng chậm.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Mr. Tanaka seems ------- about the merger.",
+     "options": [
+      "optimistic",
+      "optimistically",
+      "optimism",
+      "optimist"
+     ],
+     "ans": 0,
+     "why": "'seem' là động từ nối nên sau nó cần tính từ → optimistic (lạc quan). 'optimistically' là trạng từ nên sai.",
+     "vi": "Ông Tanaka có vẻ lạc quan về vụ sáp nhập.",
+     "tag": "word-form-adj"
+    }
+   ]
+  },
+  {
+   "id": "d3-p2",
+   "title": "Bài 2: Trạng từ — vị trí & dạng từ",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d3-l2",
+   "items": [
+    {
+     "q": "The sales team worked ------- to meet the deadline.",
+     "options": [
+      "diligent",
+      "diligently",
+      "diligence",
+      "diligences"
+     ],
+     "ans": 1,
+     "why": "Câu đã đủ S + V ('worked'); chỗ trống bổ nghĩa cho động từ nên dùng trạng từ → diligently (chăm chỉ). 'diligent' là tính từ.",
+     "vi": "Nhóm bán hàng đã làm việc chăm chỉ để kịp thời hạn.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "Revenue has ------- increased since we launched the app.",
+     "options": [
+      "steady",
+      "steadiness",
+      "steadied",
+      "steadily"
+     ],
+     "ans": 3,
+     "why": "Cấu trúc have + adv + V3: giữa 'has' và 'increased' cần trạng từ → steadily (đều đặn). 'steady' là tính từ.",
+     "vi": "Doanh thu đã tăng đều đặn kể từ khi chúng tôi ra mắt ứng dụng.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "Ms. Park ------- reviews every contract before signing.",
+     "options": [
+      "careful",
+      "carefully",
+      "care",
+      "carefulness"
+     ],
+     "ans": 1,
+     "why": "Giữa chủ ngữ 'Ms. Park' và động từ 'reviews' cần trạng từ → carefully. 'careful' là tính từ, không đứng giữa S và V.",
+     "vi": "Cô Park xem xét cẩn thận mọi hợp đồng trước khi ký.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The files were ------- arranged on the shelf.",
+     "options": [
+      "neat",
+      "neatness",
+      "neater",
+      "neatly"
+     ],
+     "ans": 3,
+     "why": "Cấu trúc be + adv + V3: giữa 'were' và 'arranged' cần trạng từ → neatly (gọn gàng). 'neat' là tính từ.",
+     "vi": "Các tập hồ sơ được sắp xếp gọn gàng trên giá.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "Our flight was ------- delayed because of the storm.",
+     "options": [
+      "briefly",
+      "brief",
+      "brevity",
+      "briefer"
+     ],
+     "ans": 0,
+     "why": "Giữa 'was' và 'delayed' (V3) cần trạng từ → briefly (trong thời gian ngắn). 'brief' là tính từ.",
+     "vi": "Chuyến bay của chúng tôi bị hoãn một thời gian ngắn vì bão.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The office will be ------- closed for repairs next week.",
+     "options": [
+      "temporary",
+      "temporariness",
+      "temporarily",
+      "temporaries"
+     ],
+     "ans": 2,
+     "why": "Giữa 'will be' và 'closed' cần trạng từ → temporarily (tạm thời). 'temporary' là tính từ.",
+     "vi": "Văn phòng sẽ tạm thời đóng cửa để sửa chữa vào tuần tới.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "All employees must ------- follow the safety rules.",
+     "options": [
+      "strict",
+      "strictness",
+      "stricter",
+      "strictly"
+     ],
+     "ans": 3,
+     "why": "Giữa 'must' (modal) và động từ 'follow' cần trạng từ → strictly (nghiêm ngặt). 'strict' là tính từ nên sai.",
+     "vi": "Mọi nhân viên phải tuân thủ nghiêm ngặt các quy định an toàn.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The clinic is ------- located near the train station.",
+     "options": [
+      "convenient",
+      "conveniently",
+      "convenience",
+      "conveniences"
+     ],
+     "ans": 1,
+     "why": "Giữa 'is' và 'located' (V3) cần trạng từ → conveniently (thuận tiện). 'convenient' là tính từ.",
+     "vi": "Phòng khám nằm ở vị trí thuận tiện gần ga tàu.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "Employees are ------- encouraged to use public transportation.",
+     "options": [
+      "strong",
+      "strength",
+      "strongly",
+      "strengthen"
+     ],
+     "ans": 2,
+     "why": "Giữa 'are' và 'encouraged' cần trạng từ → strongly (mạnh mẽ). 'strong' là tính từ.",
+     "vi": "Nhân viên được khuyến khích mạnh mẽ sử dụng phương tiện công cộng.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The CEO spoke ------- about the company's future.",
+     "options": [
+      "confidently",
+      "confident",
+      "confidence",
+      "confidences"
+     ],
+     "ans": 0,
+     "why": "Chỗ trống bổ nghĩa cho động từ 'spoke' nên cần trạng từ → confidently (tự tin). 'confident' là tính từ.",
+     "vi": "Giám đốc điều hành nói một cách tự tin về tương lai của công ty.",
+     "tag": "word-form-adv"
+    }
+   ]
+  },
+  {
+   "id": "d3-p3",
+   "title": "Bài 3: Tính từ hay trạng từ? -ing hay -ed?",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d3-l3",
+   "items": [
+    {
+     "q": "The training session was very ------- for new employees.",
+     "options": [
+      "informatively",
+      "inform",
+      "informative",
+      "information"
+     ],
+     "ans": 2,
+     "why": "Sau 'was very' cần tính từ → informative (nhiều thông tin, bổ ích). 'informatively' là trạng từ nên sai.",
+     "vi": "Buổi tập huấn rất bổ ích đối với nhân viên mới.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Many customers were ------- with the late delivery.",
+     "options": [
+      "disappointed",
+      "disappointing",
+      "disappoint",
+      "disappointment"
+     ],
+     "ans": 0,
+     "why": "Khách hàng là người CẢM THẤY nên dùng -ed → disappointed. 'disappointing' dùng cho vật/việc gây ra sự thất vọng.",
+     "vi": "Nhiều khách hàng thất vọng vì việc giao hàng trễ.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The latest sales figures were ------- and the board was pleased.",
+     "options": [
+      "encouraged",
+      "encouraging",
+      "encourage",
+      "encouragement"
+     ],
+     "ans": 1,
+     "why": "Chủ ngữ 'figures' là vật gây ra cảm giác → -ing: encouraging (đáng khích lệ). 'encouraged' chỉ người cảm thấy được khích lệ.",
+     "vi": "Số liệu bán hàng mới nhất rất đáng khích lệ và hội đồng quản trị hài lòng.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Ms. Gomez was ------- by the number of applicants.",
+     "options": [
+      "surprising",
+      "surprise",
+      "surprisingly",
+      "surprised"
+     ],
+     "ans": 3,
+     "why": "Ms. Gomez là người cảm thấy ngạc nhiên → surprised. 'surprising' dùng cho việc gây ngạc nhiên.",
+     "vi": "Cô Gomez ngạc nhiên trước số lượng ứng viên.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The ------- customers waited outside the store before it opened.",
+     "options": [
+      "exciting",
+      "excited",
+      "excitedly",
+      "excite"
+     ],
+     "ans": 1,
+     "why": "Trước danh từ 'customers' cần tính từ; khách hàng là người cảm thấy → excited. 'exciting' dùng cho vật/việc; 'excitedly' là trạng từ.",
+     "vi": "Những khách hàng háo hức đợi bên ngoài cửa hàng trước khi cửa hàng mở.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The new product launch was an ------- event for the entire team.",
+     "options": [
+      "excited",
+      "excitedly",
+      "excite",
+      "exciting"
+     ],
+     "ans": 3,
+     "why": "'event' là vật/việc gây ra cảm giác → exciting (thú vị). 'excited' chỉ người cảm thấy.",
+     "vi": "Buổi ra mắt sản phẩm mới là một sự kiện thú vị với cả nhóm.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The speaker gave a ------- presentation on market trends.",
+     "options": [
+      "convincing",
+      "convinced",
+      "convincingly",
+      "convince"
+     ],
+     "ans": 0,
+     "why": "'presentation' là vật gây ra cảm giác tin tưởng → convincing (thuyết phục). 'convinced' dùng cho người bị thuyết phục; 'convincingly' là trạng từ.",
+     "vi": "Diễn giả đã có một bài thuyết trình thuyết phục về xu hướng thị trường.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Passengers remained ------- while the flight was delayed.",
+     "options": [
+      "calmly",
+      "calmness",
+      "calm",
+      "calms"
+     ],
+     "ans": 2,
+     "why": "'remain' là động từ nối nên sau nó cần tính từ → calm. 'calmly' là trạng từ nên sai.",
+     "vi": "Hành khách vẫn bình tĩnh trong lúc chuyến bay bị hoãn.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The tour guide explained the rules ------- to the visitors.",
+     "options": [
+      "clear",
+      "clearness",
+      "clearer",
+      "clearly"
+     ],
+     "ans": 3,
+     "why": "Câu đã đủ S + V + O; chỗ trống bổ nghĩa cho động từ 'explained' nên cần trạng từ → clearly. 'clear' là tính từ.",
+     "vi": "Hướng dẫn viên giải thích quy định một cách rõ ràng cho du khách.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The proposal sounds ------- but we need more data.",
+     "options": [
+      "promised",
+      "promising",
+      "promisingly",
+      "promise"
+     ],
+     "ans": 1,
+     "why": "'sound' là động từ nối nên cần tính từ; 'proposal' là vật gây cảm giác hy vọng → promising (đầy hứa hẹn). 'promised' là V3 sai nghĩa.",
+     "vi": "Đề xuất nghe có vẻ đầy hứa hẹn nhưng chúng tôi cần thêm dữ liệu.",
+     "tag": "word-form-adj"
+    }
+   ]
+  },
+  {
+   "id": "d3-p4",
+   "title": "Bài 4: Bẫy -ly và các trạng từ hay thi",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d3-l4",
+   "items": [
+    {
+     "q": "The company expects ------- 200 guests at the opening.",
+     "options": [
+      "approximate",
+      "approximated",
+      "approximately",
+      "approximating"
+     ],
+     "ans": 2,
+     "why": "Trước một con số ta dùng trạng từ chỉ số lượng → approximately (khoảng). 'approximate' là tính từ, đứng trước danh từ chứ không đứng trước con số.",
+     "vi": "Công ty dự kiến khoảng 200 khách tại lễ khai trương.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "------- employees attended the workshop on customer service.",
+     "options": [
+      "Most",
+      "Almost",
+      "Mostly",
+      "Nearly"
+     ],
+     "ans": 0,
+     "why": "'Most + N số nhiều' = hầu hết. 'Almost' và 'Nearly' là trạng từ, cần đi với all/every (almost all employees); 'Mostly' là trạng từ nghĩa 'chủ yếu'.",
+     "vi": "Hầu hết nhân viên đã tham dự buổi hội thảo về dịch vụ khách hàng.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "We offer a ------- atmosphere to every guest.",
+     "options": [
+      "friendliness",
+      "friendlily",
+      "friendly",
+      "friends"
+     ],
+     "ans": 2,
+     "why": "'friendly' tuy có đuôi -ly nhưng là TÍNH TỪ; trước danh từ 'atmosphere' cần tính từ. 'friendlily' hầu như không dùng; 'friendliness' là danh từ.",
+     "vi": "Chúng tôi mang đến bầu không khí thân thiện cho mọi khách.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The renovation project proved ------- for the small firm.",
+     "options": [
+      "costly",
+      "costliness",
+      "costs",
+      "costed"
+     ],
+     "ans": 0,
+     "why": "'prove' là động từ nối (hóa ra là), sau nó cần tính từ → costly (tốn kém). 'costly' có đuôi -ly nhưng là tính từ.",
+     "vi": "Dự án cải tạo hóa ra rất tốn kém đối với công ty nhỏ.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The shipment has ------- arrived, so you can pick it up.",
+     "options": [
+      "yet",
+      "already",
+      "still",
+      "soon"
+     ],
+     "ans": 1,
+     "why": "'has already arrived' = đã đến rồi (câu khẳng định). 'yet' dùng ở câu phủ định/câu hỏi; 'still' không hợp nghĩa 'đã đến'; 'soon' chỉ tương lai.",
+     "vi": "Lô hàng đã đến rồi, nên bạn có thể đến lấy.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "We have not received the invoice -------.",
+     "options": [
+      "already",
+      "soon",
+      "almost",
+      "yet"
+     ],
+     "ans": 3,
+     "why": "Câu phủ định 'have not received' + yet (cuối câu) = vẫn chưa. 'already' dùng ở câu khẳng định; 'soon' và 'almost' không hợp nghĩa.",
+     "vi": "Chúng tôi vẫn chưa nhận được hóa đơn.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The manager is ------- reviewing your application and will reply soon.",
+     "options": [
+      "current",
+      "currently",
+      "currency",
+      "currents"
+     ],
+     "ans": 1,
+     "why": "Cấu trúc be + adv + V-ing: giữa 'is' và 'reviewing' cần trạng từ → currently (hiện đang). 'current' là tính từ.",
+     "vi": "Người quản lý hiện đang xem xét đơn của bạn và sẽ sớm trả lời.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The Hartley Hotel is ------- recommended by business travelers.",
+     "options": [
+      "high",
+      "height",
+      "higher",
+      "highly"
+     ],
+     "ans": 3,
+     "why": "Giữa 'is' và 'recommended' cần trạng từ → highly (rất cao). 'high' là tính từ/trạng từ chỉ độ cao, không đi với recommended.",
+     "vi": "Khách sạn Hartley được khách đi công tác đánh giá rất cao.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "Ms. Chen ------- visits our Osaka branch.",
+     "options": [
+      "frequently",
+      "frequent",
+      "frequency",
+      "frequented"
+     ],
+     "ans": 0,
+     "why": "Giữa chủ ngữ 'Ms. Chen' và động từ 'visits' cần trạng từ → frequently (thường xuyên). 'frequent' là tính từ nên không đứng giữa S và V.",
+     "vi": "Cô Chen thường xuyên đến thăm chi nhánh Osaka của chúng tôi.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The new policy was ------- announced to all staff.",
+     "options": [
+      "recent",
+      "recency",
+      "recently",
+      "recents"
+     ],
+     "ans": 2,
+     "why": "Giữa 'was' và 'announced' (V3) cần trạng từ → recently (gần đây). 'recent' là tính từ.",
+     "vi": "Chính sách mới vừa được công bố gần đây cho toàn thể nhân viên.",
+     "tag": "word-form-adv"
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Marketing & bán hàng",
+  "words": [
+   {
+    "w": "campaign",
+    "pos": "n",
+    "ipa": "/kæmˈpeɪn/",
+    "vi": "chiến dịch",
+    "ex": "The marketing campaign starts in March.",
+    "exvi": "Chiến dịch marketing bắt đầu vào tháng Ba.",
+    "fam": "campaign (v), campaigner (n)",
+    "colloc": [
+     "launch a campaign",
+     "advertising campaign"
+    ]
+   },
+   {
+    "w": "promote",
+    "pos": "v",
+    "ipa": "/prəˈmoʊt/",
+    "vi": "quảng bá; thăng chức",
+    "ex": "We promote our products on social media.",
+    "exvi": "Chúng tôi quảng bá sản phẩm trên mạng xã hội.",
+    "fam": "promotion (n), promotional (adj)",
+    "colloc": [
+     "promote a product",
+     "be promoted to manager"
+    ]
+   },
+   {
+    "w": "target",
+    "pos": "n/v",
+    "ipa": "/ˈtɑːrɡɪt/",
+    "vi": "mục tiêu; nhắm tới",
+    "ex": "Our target is to increase sales by 10 percent.",
+    "exvi": "Mục tiêu của chúng tôi là tăng doanh số 10 phần trăm.",
+    "fam": "targeted (adj)",
+    "colloc": [
+     "sales target",
+     "target audience"
+    ]
+   },
+   {
+    "w": "launch",
+    "pos": "v",
+    "ipa": "/lɔːntʃ/",
+    "vi": "ra mắt",
+    "ex": "The firm will launch a new smartphone in June.",
+    "exvi": "Công ty sẽ ra mắt một mẫu điện thoại mới vào tháng Sáu.",
+    "fam": "launch (n)",
+    "colloc": [
+     "launch a product",
+     "product launch"
+    ]
+   },
+   {
+    "w": "consumer",
+    "pos": "n",
+    "ipa": "/kənˈsuːmər/",
+    "vi": "người tiêu dùng",
+    "ex": "Consumers prefer products that are easy to use.",
+    "exvi": "Người tiêu dùng thích sản phẩm dễ sử dụng.",
+    "fam": "consume (v), consumption (n)",
+    "colloc": [
+     "consumer demand",
+     "consumer goods"
+    ]
+   },
+   {
+    "w": "brand",
+    "pos": "n",
+    "ipa": "/brænd/",
+    "vi": "thương hiệu",
+    "ex": "Our brand is well known in Asia.",
+    "exvi": "Thương hiệu của chúng tôi nổi tiếng ở châu Á.",
+    "fam": "brand (v), branded (adj)",
+    "colloc": [
+     "brand name",
+     "brand recognition"
+    ]
+   },
+   {
+    "w": "competitive",
+    "pos": "adj",
+    "ipa": "/kəmˈpetətɪv/",
+    "vi": "có tính cạnh tranh",
+    "ex": "We offer competitive prices.",
+    "exvi": "Chúng tôi đưa ra mức giá cạnh tranh.",
+    "fam": "compete (v), competition (n), competitor (n), competitively (adv)",
+    "colloc": [
+     "competitive price",
+     "competitive advantage"
+    ]
+   },
+   {
+    "w": "revenue",
+    "pos": "n",
+    "ipa": "/ˈrevənuː/",
+    "vi": "doanh thu",
+    "ex": "Annual revenue rose by eight percent.",
+    "exvi": "Doanh thu hằng năm tăng tám phần trăm.",
+    "fam": "—",
+    "colloc": [
+     "annual revenue",
+     "generate revenue"
+    ]
+   },
+   {
+    "w": "advertisement",
+    "pos": "n",
+    "ipa": "/ˌædvərˈtaɪzmənt/",
+    "vi": "quảng cáo",
+    "ex": "The advertisement appeared in three magazines.",
+    "exvi": "Quảng cáo xuất hiện trên ba tạp chí.",
+    "fam": "advertise (v), advertising (n), advertiser (n)",
+    "colloc": [
+     "place an advertisement",
+     "job advertisement"
+    ]
+   },
+   {
+    "w": "demand",
+    "pos": "n",
+    "ipa": "/dɪˈmænd/",
+    "vi": "nhu cầu",
+    "ex": "There is strong demand for electric bikes.",
+    "exvi": "Có nhu cầu lớn đối với xe đạp điện.",
+    "fam": "demand (v), demanding (adj)",
+    "colloc": [
+     "in demand",
+     "meet demand"
+    ]
+   },
+   {
+    "w": "market",
+    "pos": "v/n",
+    "ipa": "/ˈmɑːrkɪt/",
+    "vi": "tiếp thị; thị trường",
+    "ex": "The company markets its products to young people.",
+    "exvi": "Công ty tiếp thị sản phẩm đến giới trẻ.",
+    "fam": "marketing (n), marketable (adj)",
+    "colloc": [
+     "market share",
+     "market research"
+    ]
+   },
+   {
+    "w": "survey",
+    "pos": "n/v",
+    "ipa": "/ˈsɜːrveɪ/",
+    "vi": "khảo sát",
+    "ex": "We conducted a survey of 500 shoppers.",
+    "exvi": "Chúng tôi đã thực hiện khảo sát 500 người mua sắm.",
+    "fam": "—",
+    "colloc": [
+     "conduct a survey",
+     "customer survey"
+    ]
+   },
+   {
+    "w": "discount",
+    "pos": "n/v",
+    "ipa": "/ˈdɪskaʊnt/",
+    "vi": "giảm giá",
+    "ex": "Members receive a ten percent discount.",
+    "exvi": "Hội viên được giảm giá mười phần trăm.",
+    "fam": "discounted (adj)",
+    "colloc": [
+     "offer a discount",
+     "at a discount"
+    ]
+   },
+   {
+    "w": "profitable",
+    "pos": "adj",
+    "ipa": "/ˈprɑːfɪtəbl/",
+    "vi": "có lợi nhuận",
+    "ex": "The new branch became profitable within a year.",
+    "exvi": "Chi nhánh mới có lợi nhuận trong vòng một năm.",
+    "fam": "profit (n/v), profitability (n), profitably (adv)",
+    "colloc": [
+     "highly profitable",
+     "profitable business"
+    ]
+   },
+   {
+    "w": "expand",
+    "pos": "v",
+    "ipa": "/ɪkˈspænd/",
+    "vi": "mở rộng",
+    "ex": "The company plans to expand into new markets.",
+    "exvi": "Công ty có kế hoạch mở rộng sang các thị trường mới.",
+    "fam": "expansion (n), expansive (adj)",
+    "colloc": [
+     "expand a business",
+     "expand into"
+    ]
+   },
+   {
+    "w": "sponsor",
+    "pos": "v/n",
+    "ipa": "/ˈspɑːnsər/",
+    "vi": "tài trợ; nhà tài trợ",
+    "ex": "A local bank will sponsor the event.",
+    "exvi": "Một ngân hàng địa phương sẽ tài trợ sự kiện.",
+    "fam": "sponsorship (n)",
+    "colloc": [
+     "sponsor an event",
+     "corporate sponsor"
+    ]
+   },
+   {
+    "w": "loyal",
+    "pos": "adj",
+    "ipa": "/ˈlɔɪəl/",
+    "vi": "trung thành",
+    "ex": "Loyal customers receive a free gift each year.",
+    "exvi": "Khách hàng trung thành nhận quà tặng miễn phí mỗi năm.",
+    "fam": "loyalty (n), loyally (adv)",
+    "colloc": [
+     "loyal customer",
+     "brand loyalty"
+    ]
+   },
+   {
+    "w": "appealing",
+    "pos": "adj",
+    "ipa": "/əˈpiːlɪŋ/",
+    "vi": "hấp dẫn",
+    "ex": "The new design is appealing to young buyers.",
+    "exvi": "Thiết kế mới hấp dẫn người mua trẻ tuổi.",
+    "fam": "appeal (n/v)",
+    "colloc": [
+     "appealing to",
+     "visually appealing"
+    ]
+   },
+   {
+    "w": "distribute",
+    "pos": "v",
+    "ipa": "/dɪˈstrɪbjuːt/",
+    "vi": "phân phối",
+    "ex": "We distribute our goods through local retailers.",
+    "exvi": "Chúng tôi phân phối hàng qua các nhà bán lẻ địa phương.",
+    "fam": "distribution (n), distributor (n)",
+    "colloc": [
+     "distribute products",
+     "distribution network"
+    ]
+   },
+   {
+    "w": "retail",
+    "pos": "n",
+    "ipa": "/ˈriːteɪl/",
+    "vi": "bán lẻ",
+    "ex": "Retail sales increased during the holiday season.",
+    "exvi": "Doanh số bán lẻ tăng trong mùa lễ.",
+    "fam": "retailer (n)",
+    "colloc": [
+     "retail price",
+     "retail store"
+    ]
+   },
+   {
+    "w": "boost",
+    "pos": "v",
+    "ipa": "/buːst/",
+    "vi": "thúc đẩy, tăng",
+    "ex": "A new advertisement may boost sales.",
+    "exvi": "Một quảng cáo mới có thể thúc đẩy doanh số.",
+    "fam": "boost (n), booster (n)",
+    "colloc": [
+     "boost sales",
+     "boost morale"
+    ]
+   },
+   {
+    "w": "effective",
+    "pos": "adj",
+    "ipa": "/ɪˈfektɪv/",
+    "vi": "hiệu quả",
+    "ex": "Social media is an effective way to reach customers.",
+    "exvi": "Mạng xã hội là cách hiệu quả để tiếp cận khách hàng.",
+    "fam": "effect (n), effectiveness (n), effectively (adv)",
+    "colloc": [
+     "effective strategy",
+     "cost-effective"
+    ]
+   },
+   {
+    "w": "potential",
+    "pos": "adj",
+    "ipa": "/pəˈtenʃl/",
+    "vi": "tiềm năng",
+    "ex": "We contacted several potential clients.",
+    "exvi": "Chúng tôi đã liên hệ với nhiều khách hàng tiềm năng.",
+    "fam": "potential (n), potentially (adv)",
+    "colloc": [
+     "potential customer",
+     "potential growth"
+    ]
+   },
+   {
+    "w": "endorse",
+    "pos": "v",
+    "ipa": "/ɪnˈdɔːrs/",
+    "vi": "ủng hộ; quảng cáo cho (sản phẩm)",
+    "ex": "A famous chef will endorse our new knife set.",
+    "exvi": "Một đầu bếp nổi tiếng sẽ quảng cáo cho bộ dao mới của chúng tôi.",
+    "fam": "endorsement (n)",
+    "colloc": [
+     "endorse a product",
+     "celebrity endorsement"
+    ]
+   },
+   {
+    "w": "inventory",
+    "pos": "n",
+    "ipa": "/ˈɪnvəntɔːri/",
+    "vi": "hàng tồn kho",
+    "ex": "We check our inventory every Friday.",
+    "exvi": "Chúng tôi kiểm tra hàng tồn kho vào mỗi thứ Sáu.",
+    "fam": "—",
+    "colloc": [
+     "inventory control",
+     "take inventory"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "The marketing team designed a new advertising ------- for the summer season.",
+   "options": [
+    "inventory",
+    "endorsement",
+    "demand",
+    "campaign"
+   ],
+   "ans": 3,
+   "why": "'advertising campaign' = chiến dịch quảng cáo. 'inventory' là hàng tồn kho, 'demand' là nhu cầu, 'endorsement' là sự ủng hộ nên đều không hợp.",
+   "vi": "Nhóm marketing đã thiết kế một chiến dịch quảng cáo mới cho mùa hè.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The store is offering a ------- of 20 percent on all winter coats.",
+   "options": [
+    "survey",
+    "discount",
+    "revenue",
+    "brand"
+   ],
+   "ans": 1,
+   "why": "'a discount of 20 percent' = giảm giá 20 phần trăm. 'revenue' (doanh thu) và 'survey' (khảo sát) không đi với 'of 20 percent on all coats'.",
+   "vi": "Cửa hàng đang giảm giá 20 phần trăm cho mọi áo khoác mùa đông.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Our ------- customers have bought from us for over ten years.",
+   "options": [
+    "potential",
+    "competitive",
+    "loyal",
+    "appealing"
+   ],
+   "ans": 2,
+   "why": "Mua hàng hơn mười năm là khách hàng trung thành → loyal. 'potential customers' là khách hàng tiềm năng (chưa mua).",
+   "vi": "Những khách hàng trung thành của chúng tôi đã mua hàng hơn mười năm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The company hopes to ------- sales by offering free shipping.",
+   "options": [
+    "boost",
+    "endorse",
+    "distribute",
+    "sponsor"
+   ],
+   "ans": 0,
+   "why": "'boost sales' = thúc đẩy doanh số. 'endorse', 'distribute', 'sponsor' không kết hợp với 'sales' theo nghĩa này.",
+   "vi": "Công ty hy vọng thúc đẩy doanh số bằng cách miễn phí vận chuyển.",
+   "tag": "collocation"
+  },
+  {
+   "q": "A famous athlete agreed to ------- our new sports drink.",
+   "options": [
+    "expand",
+    "survey",
+    "endorse",
+    "retail"
+   ],
+   "ans": 2,
+   "why": "'endorse a product' = quảng cáo/bảo chứng cho sản phẩm. 'sponsor' là tài trợ cho sự kiện, đội, chương trình chứ không dùng cho một sản phẩm; 'expand' là mở rộng; 'survey' là khảo sát.",
+   "vi": "Một vận động viên nổi tiếng đã đồng ý quảng cáo cho thức uống thể thao mới của chúng tôi.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Our ------- prices attract many new customers.",
+   "options": [
+    "competitive",
+    "competitively",
+    "compete",
+    "competition"
+   ],
+   "ans": 0,
+   "why": "Trước danh từ 'prices' cần tính từ → competitive (có tính cạnh tranh). 'competition' là danh từ, 'compete' là động từ.",
+   "vi": "Giá cả cạnh tranh của chúng tôi thu hút nhiều khách hàng mới.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The ------- for the new product was posted on three websites.",
+   "options": [
+    "advertise",
+    "advertisement",
+    "advertised",
+    "advertisingly"
+   ],
+   "ans": 1,
+   "why": "Sau 'The' cần danh từ → advertisement (mẩu quảng cáo). 'advertise' là động từ, 'advertised' là V2/V3.",
+   "vi": "Quảng cáo cho sản phẩm mới được đăng trên ba trang web.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The company plans to ------- its business into Southeast Asia.",
+   "options": [
+    "endorse",
+    "discount",
+    "boost",
+    "expand"
+   ],
+   "ans": 3,
+   "why": "'expand into' = mở rộng sang (thị trường). 'endorse' và 'discount' không đi với 'into'.",
+   "vi": "Công ty có kế hoạch mở rộng kinh doanh sang Đông Nam Á.",
+   "tag": "collocation"
+  },
+  {
+   "q": "There is strong ------- for electric bikes in urban areas.",
+   "options": [
+    "retail",
+    "demand",
+    "survey",
+    "sponsor"
+   ],
+   "ans": 1,
+   "why": "'strong demand for' = nhu cầu lớn đối với. 'retail' (bán lẻ) và 'survey' (khảo sát) không đi với tính từ 'strong ... for' theo nghĩa này.",
+   "vi": "Có nhu cầu lớn đối với xe đạp điện ở khu vực thành thị.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The firm ------- its products through a network of local retailers.",
+   "options": [
+    "sponsors",
+    "targets",
+    "endorses",
+    "distributes"
+   ],
+   "ans": 3,
+   "why": "'distribute products through a network' = phân phối sản phẩm qua mạng lưới. Các động từ còn lại không hợp nghĩa khi đi với 'through a network of retailers'.",
+   "vi": "Công ty phân phối sản phẩm qua mạng lưới các nhà bán lẻ địa phương.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "The ------- decrease in sales worried the board.",
+   "options": [
+    "sharp",
+    "sharply",
+    "sharpness",
+    "sharpen"
+   ],
+   "ans": 0,
+   "why": "Trước danh từ 'decrease' cần tính từ → sharp (mạnh, đột ngột). 'sharply' là trạng từ nên không đứng trước danh từ.",
+   "vi": "Sự sụt giảm mạnh về doanh số làm hội đồng quản trị lo lắng.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Our new campaign has been ------- received by young consumers.",
+   "options": [
+    "positive",
+    "positivity",
+    "positively",
+    "positives"
+   ],
+   "ans": 2,
+   "why": "Giữa 'has been' và 'received' (V3) cần trạng từ → positively (một cách tích cực). 'positive' là tính từ.",
+   "vi": "Chiến dịch mới của chúng tôi được người tiêu dùng trẻ đón nhận tích cực.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The warehouse manager was ------- when the shipment arrived early.",
+   "options": [
+    "pleasing",
+    "pleasure",
+    "pleasingly",
+    "pleased"
+   ],
+   "ans": 3,
+   "why": "Người quản lý là người cảm thấy → -ed: pleased (hài lòng). 'pleasing' dùng cho vật gây cảm giác dễ chịu.",
+   "vi": "Quản lý kho hài lòng khi lô hàng đến sớm.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Applicants are ------- asked to attach a cover letter.",
+   "options": [
+    "kind",
+    "kindly",
+    "kindness",
+    "kinder"
+   ],
+   "ans": 1,
+   "why": "Giữa 'are' và 'asked' (V3) cần trạng từ → kindly (vui lòng). 'kind' là tính từ.",
+   "vi": "Ứng viên vui lòng đính kèm thư xin việc.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The ------- employees received a bonus at the end of the year.",
+   "options": [
+    "dedicating",
+    "dedicatedly",
+    "dedicated",
+    "dedication"
+   ],
+   "ans": 2,
+   "why": "Trước danh từ 'employees' cần tính từ; nhân viên 'được/biết tận tâm' → dedicated (tận tâm). 'dedicatedly' là trạng từ; 'dedication' là danh từ.",
+   "vi": "Những nhân viên tận tâm nhận được tiền thưởng cuối năm.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "A ------- amount of money was spent on advertising.",
+   "options": [
+    "considerable",
+    "considerably",
+    "consider",
+    "considerate"
+   ],
+   "ans": 0,
+   "why": "Sau 'A' và trước danh từ 'amount' cần tính từ có nghĩa 'đáng kể' → considerable. 'considerate' (chu đáo) sai nghĩa; 'considerably' là trạng từ.",
+   "vi": "Một khoản tiền đáng kể đã được chi cho quảng cáo.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The restaurant has ------- opened its second branch downtown.",
+   "options": [
+    "official",
+    "officials",
+    "officially",
+    "officiate"
+   ],
+   "ans": 2,
+   "why": "Giữa 'has' và 'opened' cần trạng từ → officially (chính thức). 'official' là tính từ, 'officials' là danh từ số nhiều.",
+   "vi": "Nhà hàng đã chính thức mở chi nhánh thứ hai ở trung tâm.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The conference was ------- attended, with over 500 participants.",
+   "options": [
+    "well",
+    "good",
+    "best",
+    "fine"
+   ],
+   "ans": 0,
+   "why": "Giữa 'was' và 'attended' (V3) cần trạng từ → well (well attended = đông người tham dự). 'good' là tính từ nên sai.",
+   "vi": "Hội nghị có rất đông người tham dự, với hơn 500 người.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The board members looked ------- after the quarterly results were announced.",
+   "options": [
+    "relieving",
+    "relieved",
+    "relief",
+    "relievedly"
+   ],
+   "ans": 1,
+   "why": "'looked' là động từ nối, cần tính từ; các thành viên là người cảm thấy → relieved (nhẹ nhõm). 'relieving' sai vì không phải 'gây ra' sự nhẹ nhõm.",
+   "vi": "Các thành viên hội đồng trông nhẹ nhõm sau khi kết quả quý được công bố.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Registration will close -------, so please sign up today.",
+   "options": [
+    "already",
+    "yet",
+    "still",
+    "soon"
+   ],
+   "ans": 3,
+   "why": "'will close soon' = sắp đóng. 'already' và 'yet' đi với thì hoàn thành/phủ định; 'still' (vẫn) không hợp với 'sign up today'.",
+   "vi": "Việc đăng ký sắp đóng, vì vậy hãy đăng ký ngay hôm nay.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "Employees who work ------- are often rewarded with promotions.",
+   "options": [
+    "hardly",
+    "hard",
+    "hardness",
+    "harden"
+   ],
+   "ans": 1,
+   "why": "'work hard' = làm việc chăm chỉ (hard vừa là tính từ vừa là trạng từ). 'hardly' nghĩa là 'hầu như không' nên sai nghĩa.",
+   "vi": "Nhân viên làm việc chăm chỉ thường được thưởng bằng thăng chức.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "Ms. Alvarez gave us ------- feedback on our design.",
+   "options": [
+    "usefully",
+    "use",
+    "usefulness",
+    "useful"
+   ],
+   "ans": 3,
+   "why": "Trước danh từ 'feedback' cần tính từ → useful (hữu ích). 'usefully' là trạng từ.",
+   "vi": "Cô Alvarez đã cho chúng tôi phản hồi hữu ích về thiết kế.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The company's profits rose ------- last quarter.",
+   "options": [
+    "significantly",
+    "significant",
+    "significance",
+    "signify"
+   ],
+   "ans": 0,
+   "why": "Câu đã đủ S + V ('profits rose'); chỗ trống bổ nghĩa cho động từ → trạng từ significantly (đáng kể). 'significant' là tính từ.",
+   "vi": "Lợi nhuận của công ty tăng đáng kể trong quý trước.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The two companies are ------- different in their approach to marketing.",
+   "options": [
+    "complete",
+    "completion",
+    "completely",
+    "completes"
+   ],
+   "ans": 2,
+   "why": "Chỗ trống đứng trước tính từ 'different' nên cần trạng từ → completely (hoàn toàn). 'complete' là tính từ.",
+   "vi": "Hai công ty hoàn toàn khác nhau trong cách tiếp cận marketing.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "Ms. Rossi conducted a ------- of 500 shoppers to learn their preferences.",
+   "options": [
+    "campaign",
+    "inventory",
+    "revenue",
+    "survey"
+   ],
+   "ans": 3,
+   "why": "'conduct a survey of 500 shoppers' = tiến hành khảo sát 500 người mua sắm. Các từ còn lại không đi với 'conduct ... to learn preferences'.",
+   "vi": "Cô Rossi đã tiến hành khảo sát 500 người mua sắm để tìm hiểu sở thích của họ.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The new tablet is ------- to teenagers because of its bright colors.",
+   "options": [
+    "profitable",
+    "appealing",
+    "potential",
+    "loyal"
+   ],
+   "ans": 1,
+   "why": "'appealing to' = hấp dẫn đối với. 'profitable', 'potential', 'loyal' không đi với 'to teenagers' theo nghĩa này.",
+   "vi": "Máy tính bảng mới hấp dẫn thanh thiếu niên nhờ màu sắc tươi sáng.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Annual ------- rose 8 percent thanks to strong overseas sales.",
+   "options": [
+    "retail",
+    "endorsement",
+    "revenue",
+    "inventory"
+   ],
+   "ans": 2,
+   "why": "'Annual revenue' = doanh thu hằng năm, tăng nhờ doanh số nước ngoài. 'inventory' là hàng tồn kho nên không hợp với 'thanks to strong sales'.",
+   "vi": "Doanh thu hằng năm tăng 8 phần trăm nhờ doanh số nước ngoài mạnh.",
+   "tag": "vocab"
+  },
+  {
+   "q": "We ------- the new line to young professionals through social media.",
+   "options": [
+    "market",
+    "boost",
+    "expand",
+    "sponsor"
+   ],
+   "ans": 0,
+   "why": "'market ... to' = tiếp thị (sản phẩm) đến (đối tượng). 'boost' và 'expand' không đi với 'to young professionals' theo nghĩa này.",
+   "vi": "Chúng tôi tiếp thị dòng sản phẩm mới đến giới chuyên gia trẻ qua mạng xã hội.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Because its sales were much higher than its costs, the company was ------- again this year.",
+   "options": [
+    "competitive",
+    "effective",
+    "profitable",
+    "appealing"
+   ],
+   "ans": 2,
+   "why": "Doanh số cao hơn nhiều so với chi phí → công ty \"có lãi\" = profitable. competitive (cạnh tranh), effective (hiệu quả), appealing (hấp dẫn) không phải là kết quả trực tiếp của việc bán được nhiều hơn chi phí.",
+   "vi": "Vì doanh số cao hơn nhiều so với chi phí, công ty lại có lãi trong năm nay.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Strong ------- recognition helps a company sell more.",
+   "options": [
+    "brand",
+    "inventory",
+    "sponsor",
+    "survey"
+   ],
+   "ans": 0,
+   "why": "'brand recognition' = mức độ nhận biết thương hiệu. Các từ còn lại không tạo thành cụm hợp nghĩa với 'recognition'.",
+   "vi": "Mức độ nhận biết thương hiệu mạnh giúp công ty bán được nhiều hơn.",
+   "tag": "collocation"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "The hotel staff were extremely ------- to all guests.",
+   "options": [
+    "attentively",
+    "attentive",
+    "attention",
+    "attentiveness"
+   ],
+   "ans": 1,
+   "why": "Sau 'were extremely' cần tính từ → attentive (chu đáo, quan tâm). 'attentively' là trạng từ, không đứng sau be làm bổ ngữ; 'attention' là danh từ.",
+   "vi": "Nhân viên khách sạn cực kỳ chu đáo với mọi khách.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Our accountant ------- checks every invoice.",
+   "options": [
+    "thorough",
+    "thoroughness",
+    "thoroughest",
+    "thoroughly"
+   ],
+   "ans": 3,
+   "why": "Giữa chủ ngữ và động từ 'checks' cần trạng từ → thoroughly (kỹ lưỡng). 'thorough' là tính từ.",
+   "vi": "Kế toán của chúng tôi kiểm tra kỹ lưỡng mọi hóa đơn.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "A ------- representative will contact you within two days.",
+   "options": [
+    "knowledgeably",
+    "knowledgeable",
+    "knowledge",
+    "knowledgeability"
+   ],
+   "ans": 1,
+   "why": "Trước danh từ 'representative' cần tính từ → knowledgeable (am hiểu). 'knowledge' là danh từ, 'knowledgeably' là trạng từ.",
+   "vi": "Một đại diện am hiểu sẽ liên hệ với bạn trong vòng hai ngày.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The tickets sold ------- on the first day.",
+   "options": [
+    "quick",
+    "quickness",
+    "quicken",
+    "quickly"
+   ],
+   "ans": 3,
+   "why": "Câu đã đủ S + V; chỗ trống bổ nghĩa cho động từ 'sold' → trạng từ quickly. 'quick' là tính từ.",
+   "vi": "Vé bán rất nhanh trong ngày đầu tiên.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The survey results were ------- to the marketing director.",
+   "options": [
+    "surprising",
+    "surprised",
+    "surprise",
+    "surprisingly"
+   ],
+   "ans": 0,
+   "why": "Chủ ngữ 'results' là vật gây ra sự ngạc nhiên → -ing: surprising. 'surprised' chỉ người cảm thấy ngạc nhiên.",
+   "vi": "Kết quả khảo sát gây ngạc nhiên cho giám đốc marketing.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Mr. Davis is ------- about the new advertising strategy.",
+   "options": [
+    "enthusiastically",
+    "enthusiasm",
+    "enthusiastic",
+    "enthusiast"
+   ],
+   "ans": 2,
+   "why": "Sau 'is' (be) cần tính từ → enthusiastic (nhiệt tình). 'enthusiastically' là trạng từ; 'enthusiasm' và 'enthusiast' là danh từ.",
+   "vi": "Ông Davis nhiệt tình với chiến lược quảng cáo mới.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The meeting room must be kept ------- at all times.",
+   "options": [
+    "cleanly",
+    "cleanliness",
+    "cleaning",
+    "clean"
+   ],
+   "ans": 3,
+   "why": "Cấu trúc be kept + adj (giữ ở trạng thái nào): cần tính từ → clean. 'cleanly' là trạng từ.",
+   "vi": "Phòng họp phải luôn được giữ sạch sẽ.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Our prices are ------- lower than our competitors'.",
+   "options": [
+    "slight",
+    "slightly",
+    "slightness",
+    "slighted"
+   ],
+   "ans": 1,
+   "why": "Chỗ trống đứng trước tính từ so sánh 'lower' nên cần trạng từ → slightly (hơi). 'slight' là tính từ.",
+   "vi": "Giá của chúng tôi thấp hơn một chút so với đối thủ.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The ------- shipment caused many complaints from customers.",
+   "options": [
+    "delaying",
+    "delay",
+    "delayed",
+    "delayedly"
+   ],
+   "ans": 2,
+   "why": "'delayed' (V3) làm tính từ nghĩa 'bị chậm trễ', đứng trước danh từ 'shipment'. 'delaying' sẽ có nghĩa 'đang gây chậm trễ', sai nghĩa; 'delayedly' không tồn tại.",
+   "vi": "Lô hàng bị chậm đã gây ra nhiều khiếu nại từ khách hàng.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The seminar was ------- organized, and everyone enjoyed it.",
+   "options": [
+    "well",
+    "good",
+    "nice",
+    "fine"
+   ],
+   "ans": 0,
+   "why": "Giữa 'was' và 'organized' (V3) cần trạng từ → well. 'good', 'nice', 'fine' là tính từ nên sai vị trí.",
+   "vi": "Buổi hội thảo được tổ chức tốt và ai cũng thích.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The bus ride was ------- and we arrived on time.",
+   "options": [
+    "smoothly",
+    "smoothness",
+    "smooth",
+    "smoothen"
+   ],
+   "ans": 2,
+   "why": "Sau 'was' (be) cần tính từ → smooth (êm ái, suôn sẻ). 'smoothly' là trạng từ nên sai.",
+   "vi": "Chuyến xe buýt êm ái và chúng tôi đến đúng giờ.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The store manager ------- apologized to the customer.",
+   "options": [
+    "sincerely",
+    "sincere",
+    "sincerity",
+    "sincerities"
+   ],
+   "ans": 0,
+   "why": "Giữa chủ ngữ và động từ 'apologized' cần trạng từ → sincerely (chân thành). 'sincere' là tính từ.",
+   "vi": "Quản lý cửa hàng đã chân thành xin lỗi khách hàng.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "This discount is available for a ------- time only, so please place your order today.",
+   "options": [
+    "limiting",
+    "limited",
+    "limitedly",
+    "limit"
+   ],
+   "ans": 1,
+   "why": "Trước danh từ \"time\" cần tính từ; \"a limited time\" = thời gian có hạn (V3 dùng như tính từ, nghĩa bị động: bị giới hạn). \"limiting\" = gây hạn chế (sai nghĩa); \"limitedly\" là trạng từ; \"limit\" là danh từ/động từ.",
+   "vi": "Mức giảm giá này chỉ áp dụng trong thời gian có hạn, vì vậy hãy đặt hàng ngay hôm nay.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The company has been ------- successful in Asian markets.",
+   "options": [
+    "extreme",
+    "extremity",
+    "extremes",
+    "extremely"
+   ],
+   "ans": 3,
+   "why": "Chỗ trống đứng trước tính từ 'successful' nên cần trạng từ → extremely (cực kỳ). 'extreme' là tính từ.",
+   "vi": "Công ty cực kỳ thành công ở các thị trường châu Á.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "Customers find the new app very -------.",
+   "options": [
+    "conveniently",
+    "convenient",
+    "convenience",
+    "conveniences"
+   ],
+   "ans": 1,
+   "why": "Cấu trúc find + O + adj, sau 'very' cần tính từ → convenient. 'conveniently' là trạng từ.",
+   "vi": "Khách hàng thấy ứng dụng mới rất tiện lợi.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The designers are working ------- with the sales team.",
+   "options": [
+    "close",
+    "closeness",
+    "closed",
+    "closely"
+   ],
+   "ans": 3,
+   "why": "Chỗ trống bổ nghĩa cho động từ 'working' → trạng từ closely (chặt chẽ). 'close' là tính từ, không dùng với nghĩa này.",
+   "vi": "Các nhà thiết kế đang làm việc chặt chẽ với nhóm bán hàng.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "A ------- increase in demand surprised the retailer.",
+   "options": [
+    "sudden",
+    "suddenly",
+    "suddenness",
+    "suddens"
+   ],
+   "ans": 0,
+   "why": "Sau 'A' và trước danh từ 'increase' cần tính từ → sudden (đột ngột). 'suddenly' là trạng từ nên không đứng trước danh từ.",
+   "vi": "Nhu cầu tăng đột ngột khiến nhà bán lẻ ngạc nhiên.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Employees were ------- about the schedule change.",
+   "options": [
+    "confusing",
+    "confusion",
+    "confused",
+    "confusingly"
+   ],
+   "ans": 2,
+   "why": "Nhân viên là người cảm thấy bối rối → -ed: confused. 'confusing' dùng cho việc gây bối rối.",
+   "vi": "Nhân viên bối rối về việc thay đổi lịch.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Each sales representative has a monthly sales ------- of 50 new clients.",
+   "options": [
+    "brand",
+    "retail",
+    "sponsor",
+    "target"
+   ],
+   "ans": 3,
+   "why": "'sales target' = chỉ tiêu/mục tiêu doanh số (ở đây: 50 khách hàng mới mỗi tháng). 'brand' là thương hiệu, 'retail' là bán lẻ, 'sponsor' là nhà tài trợ nên không hợp nghĩa.",
+   "vi": "Mỗi nhân viên kinh doanh có chỉ tiêu doanh số hằng tháng là 50 khách hàng mới.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please check the ------- before ordering more printer paper.",
+   "options": [
+    "campaign",
+    "inventory",
+    "survey",
+    "brand"
+   ],
+   "ans": 1,
+   "why": "'check the inventory' = kiểm tra hàng tồn kho trước khi đặt thêm giấy in. Các từ còn lại không hợp nghĩa.",
+   "vi": "Vui lòng kiểm tra hàng tồn kho trước khi đặt thêm giấy in.",
+   "tag": "vocab"
+  }
+ ]
+}

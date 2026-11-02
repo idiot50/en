@@ -1,0 +1,1933 @@
+{
+ "day": 9,
+ "title": "Mệnh đề quan hệ, mệnh đề danh từ & So sánh",
+ "icon": "🔗",
+ "goal": "Sau hôm nay bạn chọn đúng who/which/whose/where, phân biệt được what/whether/that, dùng đúng so sánh hơn và nhất, và biết cách chọn câu chèn trong Part 6.",
+ "why": "Mệnh đề quan hệ, mệnh đề danh từ và so sánh chiếm khoảng 4-5 câu mỗi đề (Part 5 + Part 6), cộng thêm khoảng 1 câu chèn câu mỗi đoạn Part 6.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 45
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d9-l1",
+   "title": "1. Mệnh đề quan hệ là gì? who / which / that",
+   "intro": "Mệnh đề quan hệ là một 'câu nhỏ' đứng ngay sau một danh từ để nói rõ hơn về danh từ đó. Danh từ đứng trước gọi là tiền ngữ (danh từ được bổ nghĩa). Từ nối hai phần là đại từ quan hệ (who, which, that...). Hãy nghĩ nó như một cái 'móc' gắn thông tin thêm vào danh từ.",
+   "points": [
+    {
+     "rule": "Công thức: **Danh từ (tiền ngữ) + đại từ quan hệ + mệnh đề bổ nghĩa**. Đại từ quan hệ vừa nối câu, vừa đóng vai chủ ngữ hoặc tân ngữ trong mệnh đề nhỏ.",
+     "examples": [
+      {
+       "en": "The manager **who** leads the team is very experienced.",
+       "vi": "Người quản lý dẫn dắt nhóm rất có kinh nghiệm."
+      },
+      {
+       "en": "The report **which** she wrote was clear and short.",
+       "vi": "Bản báo cáo mà cô ấy viết rất rõ ràng và ngắn gọn."
+      }
+     ]
+    },
+    {
+     "rule": "**who** dùng cho NGƯỜI. **which** dùng cho VẬT. **that** dùng được cho cả người lẫn vật (nhưng không đứng sau dấu phẩy và không đứng sau giới từ).",
+     "examples": [
+      {
+       "en": "Employees **who** complete the course will get a certificate.",
+       "vi": "Nhân viên hoàn thành khóa học sẽ nhận chứng chỉ."
+      },
+      {
+       "en": "The printer **that** is on the third floor is broken.",
+       "vi": "Chiếc máy in ở tầng ba bị hỏng."
+      }
+     ]
+    },
+    {
+     "rule": "Nếu mệnh đề quan hệ chỉ cho thêm thông tin phụ (có thể bỏ đi mà câu vẫn đủ nghĩa), nó nằm giữa dấu phẩy và chỉ dùng **who / which**, KHÔNG dùng that.",
+     "examples": [
+      {
+       "en": "Our new software, **which** was released last week, is very popular.",
+       "vi": "Phần mềm mới của chúng tôi, được phát hành tuần trước, rất được ưa chuộng."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Tiền ngữ",
+     "Đại từ quan hệ",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "Người",
+      "who / that",
+      "the tenant who rents the office"
+     ],
+     [
+      "Vật",
+      "which / that",
+      "the lease which expires in May"
+     ],
+     [
+      "Sau dấu phẩy",
+      "who / which (không that)",
+      "Mr. Cho, who manages the branch,"
+     ]
+    ]
+   },
+   "traps": [
+    "Tiếng Việt dùng 'mà' cho mọi trường hợp nên dễ chọn sai who/which. Hãy nhìn tiền ngữ: người hay vật?",
+    "Đừng chọn 'what' làm đại từ quan hệ: what không có tiền ngữ đứng trước (xem bài 3)."
+   ],
+   "tip": "Nhìn từ ngay TRƯỚC chỗ trống: là người -> who, là vật -> which/that."
+  },
+  {
+   "id": "d9-l2",
+   "title": "2. Chọn đại từ quan hệ: thiếu gì phía sau? whose / where / whom",
+   "intro": "Bí quyết nhanh nhất: nhìn PHẦN SAU chỗ trống. Hỏi: phần sau thiếu chủ ngữ (S), thiếu tân ngữ (O), hay đã là một câu đủ rồi? Mỗi trường hợp ứng với một đại từ quan hệ khác nhau.",
+   "points": [
+    {
+     "rule": "Sau chỗ trống là **động từ ngay** (thiếu chủ ngữ) -> dùng **who / which / that**.",
+     "examples": [
+      {
+       "en": "The candidate **who** applied yesterday has a degree in finance.",
+       "vi": "Ứng viên nộp đơn hôm qua có bằng tài chính."
+      }
+     ]
+    },
+    {
+     "rule": "Sau chỗ trống là **S + V** nhưng thiếu tân ngữ (O) của động từ -> dùng **which / that / whom** (có thể bỏ). Ví dụ 'the report (that) we reviewed' — reviewed thiếu tân ngữ, tân ngữ chính là 'the report'.",
+     "examples": [
+      {
+       "en": "The proposal **which** the board approved was submitted by Ms. Lin.",
+       "vi": "Đề xuất mà hội đồng đã phê duyệt do cô Lin nộp."
+      }
+     ]
+    },
+    {
+     "rule": "Sau chỗ trống là **danh từ + động từ** và danh từ đó THUỘC VỀ tiền ngữ -> dùng **whose** (nghĩa 'của'). Công thức: **tiền ngữ + whose + N + V**.",
+     "examples": [
+      {
+       "en": "We met an architect **whose** designs won several awards.",
+       "vi": "Chúng tôi đã gặp một kiến trúc sư có các thiết kế đoạt nhiều giải."
+      },
+      {
+       "en": "The building **whose** roof was damaged will be repaired.",
+       "vi": "Tòa nhà có mái bị hư hại sẽ được sửa."
+      }
+     ]
+    },
+    {
+     "rule": "Tiền ngữ là NƠI CHỐN và sau chỗ trống là **một câu đầy đủ (S + V + ...)** -> dùng **where** (= in/at which).",
+     "examples": [
+      {
+       "en": "This is the office **where** our staff meets clients.",
+       "vi": "Đây là văn phòng nơi nhân viên chúng tôi gặp khách hàng."
+      }
+     ]
+    },
+    {
+     "rule": "**whom** = dạng tân ngữ của who, chỉ NGƯỜI, thường đứng ngay sau giới từ: to whom, with whom, for whom. Ở mức 650 bạn chỉ cần NHẬN RA nó.",
+     "examples": [
+      {
+       "en": "Mr. Kim is the manager to **whom** you should send the form.",
+       "vi": "Ông Kim là người quản lý mà bạn nên gửi mẫu đơn đến."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Phần SAU chỗ trống",
+     "Đại từ",
+     "Mẹo"
+    ],
+    "rows": [
+     [
+      "Động từ (thiếu S)",
+      "who / which / that",
+      "người -> who, vật -> which"
+     ],
+     [
+      "S + V, thiếu O",
+      "which / that / whom",
+      "có thể lược bỏ"
+     ],
+     [
+      "Danh từ + V (sở hữu)",
+      "whose",
+      "whose + N, không có mạo từ"
+     ],
+     [
+      "Câu đủ S + V + ...",
+      "where (nơi chốn)",
+      "where = in which"
+     ],
+     [
+      "Sau giới từ",
+      "whom / which",
+      "không dùng that"
+     ]
+    ]
+   },
+   "traps": [
+    "'which' + câu đủ (không thiếu gì) là SAI khi tiền ngữ chỉ nơi chốn: phải dùng where.",
+    "whose + danh từ KHÔNG đi kèm a/the: 'whose the roof' là sai."
+   ],
+   "tip": "Ba bước: (1) tiền ngữ là gì? (2) phần sau thiếu S, thiếu O hay đủ câu? (3) có sở hữu không (whose)?"
+  },
+  {
+   "id": "d9-l3",
+   "title": "3. Mệnh đề danh từ: what / whether / that",
+   "intro": "Mệnh đề danh từ là một 'câu nhỏ' đóng vai một DANH TỪ: có thể làm chủ ngữ, tân ngữ của động từ. Nó khác mệnh đề quan hệ ở chỗ nó KHÔNG đứng sau một danh từ để bổ nghĩa, mà tự đứng ở vị trí của danh từ.",
+   "points": [
+    {
+     "rule": "**that + câu ĐẦY ĐỦ** = 'rằng...'. Thường đi sau động từ như say, know, show, suggest, announce. Phía sau that không thiếu gì.",
+     "examples": [
+      {
+       "en": "The report shows **that** sales increased by 12 percent.",
+       "vi": "Báo cáo cho thấy doanh số tăng 12 phần trăm."
+      }
+     ]
+    },
+    {
+     "rule": "**what + câu THIẾU chủ ngữ hoặc tân ngữ** = 'điều mà / cái mà'. What tự mang nghĩa 'the thing which', nên không cần danh từ phía trước.",
+     "examples": [
+      {
+       "en": "**What** the manager decided was announced today.",
+       "vi": "Điều mà người quản lý quyết định đã được thông báo hôm nay."
+      },
+      {
+       "en": "I do not know **what** the new policy means.",
+       "vi": "Tôi không biết chính sách mới có nghĩa là gì."
+      }
+     ]
+    },
+    {
+     "rule": "**whether + câu đầy đủ** = 'liệu có... hay không'. Dùng khi có sự lựa chọn/nghi vấn: decide, ask, not sure, depend on. Có thể đi với 'or not' hoặc 'to V'. Whether đứng được đầu câu làm chủ ngữ, còn 'that' thì ít khi.",
+     "examples": [
+      {
+       "en": "We have not decided **whether** to move the office.",
+       "vi": "Chúng tôi chưa quyết định có nên dời văn phòng hay không."
+      },
+      {
+       "en": "**Whether** the shipment arrives on time depends on the weather.",
+       "vi": "Việc lô hàng có đến đúng giờ hay không tùy thuộc thời tiết."
+      }
+     ]
+    },
+    {
+     "rule": "Các từ nghi vấn cũng mở đầu mệnh đề danh từ: **who, when, where, why, how, which**. Mệnh đề danh từ làm chủ ngữ được xem là SỐ ÍT: 'What clients value most **is** reliability.'",
+     "examples": [
+      {
+       "en": "Nobody knows **who** will be the new director.",
+       "vi": "Không ai biết ai sẽ là giám đốc mới."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Từ mở đầu",
+     "Phía sau",
+     "Nghĩa"
+    ],
+    "rows": [
+     [
+      "that",
+      "câu đủ thành phần (S + V ...)",
+      "rằng"
+     ],
+     [
+      "what",
+      "thiếu S hoặc O",
+      "điều mà / cái mà"
+     ],
+     [
+      "whether",
+      "câu đủ (có lựa chọn)",
+      "liệu có... hay không"
+     ],
+     [
+      "who / when / where / how",
+      "tùy từ",
+      "ai / khi nào / ở đâu / như thế nào"
+     ]
+    ]
+   },
+   "traps": [
+    "Khác biệt what vs that: câu phía sau còn THIẾU thành phần -> what; đã ĐỦ -> that.",
+    "Không dùng 'if' sau giới từ hay đứng đầu câu; whether an toàn hơn trong mọi vị trí."
+   ],
+   "tip": "Thấy 'or not' hoặc 'whether ... or' -> chọn whether. Thấy câu sau đủ thành phần và động từ chỉ nói/biết -> that."
+  },
+  {
+   "id": "d9-l4",
+   "title": "4. So sánh hơn, so sánh nhất và vài ghi chú nhanh",
+   "intro": "So sánh dùng để đặt hai (hoặc nhiều) thứ cạnh nhau. TOEIC hay hỏi dạng đúng của tính từ/trạng từ. Quy tắc dựa trên độ dài của từ: từ ngắn thêm -er/-est, từ dài dùng more/most.",
+   "points": [
+    {
+     "rule": "**So sánh hơn**: từ ngắn (1 âm tiết) + **-er than**; từ 2 âm tiết tận cùng -y đổi y -> i rồi thêm -er (easy -> easier, busy -> busier); các từ dài khác (2 âm tiết trở lên) dùng **more + adj + than**. Bất quy tắc: good -> better, bad -> worse.",
+     "examples": [
+      {
+       "en": "This laptop is **lighter than** the old model.",
+       "vi": "Máy tính xách tay này nhẹ hơn mẫu cũ."
+      },
+      {
+       "en": "The new route is **more efficient than** the old one.",
+       "vi": "Tuyến đường mới hiệu quả hơn tuyến cũ."
+      }
+     ]
+    },
+    {
+     "rule": "**So sánh nhất**: **the + -est** / **the most + adj** + (in/of ...). 'One of the + so sánh nhất + danh từ SỐ NHIỀU'.",
+     "examples": [
+      {
+       "en": "Boston has **the highest** sales of all our branches.",
+       "vi": "Boston có doanh số cao nhất trong tất cả chi nhánh."
+      },
+      {
+       "en": "Ms. Wong is one of **the most skilled engineers** in the firm.",
+       "vi": "Cô Wong là một trong những kỹ sư giỏi nhất công ty."
+      }
+     ]
+    },
+    {
+     "rule": "**as + adj/adv + as** = 'bằng', và phủ định **not as ... as** = 'không bằng'. Ở giữa luôn dùng dạng gốc (không -er).",
+     "examples": [
+      {
+       "en": "Our delivery is **as fast as** our competitors'.",
+       "vi": "Giao hàng của chúng tôi nhanh bằng các đối thủ."
+      }
+     ]
+    },
+    {
+     "rule": "Muốn nhấn mạnh 'hơn nhiều' dùng **much / far / even / still / a lot + so sánh hơn**. KHÔNG dùng very / so / too trước so sánh hơn.",
+     "examples": [
+      {
+       "en": "The renovation cost **far more** than we expected.",
+       "vi": "Việc cải tạo tốn kém hơn nhiều so với dự kiến."
+      },
+      {
+       "en": "The second plan is **even better** than the first.",
+       "vi": "Kế hoạch thứ hai còn tốt hơn kế hoạch đầu."
+      }
+     ]
+    },
+    {
+     "rule": "**Ghi chú nhận biết nhanh (mức 650).** (1) Điều kiện loại 2: **If + S + quá khứ, S + would + V** = giả định không có thật ở hiện tại. (2) Sau request/require/recommend/insist/suggest + that: động từ **nguyên mẫu**, không chia (The landlord requested that tenants **pay** ...). (3) **not ... until** = 'mãi đến khi mới'.",
+     "examples": [
+      {
+       "en": "If we had a larger budget, we **would renovate** the lobby.",
+       "vi": "Nếu có ngân sách lớn hơn, chúng tôi sẽ cải tạo sảnh."
+      },
+      {
+       "en": "The manager insisted that every employee **take** the course.",
+       "vi": "Quản lý yêu cầu mọi nhân viên phải học khóa này."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Loại",
+     "Công thức",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "Hơn (ngắn)",
+      "adj-er + than",
+      "cheaper than"
+     ],
+     [
+      "Hơn (dài)",
+      "more + adj + than",
+      "more expensive than"
+     ],
+     [
+      "Nhất",
+      "the -est / the most + adj",
+      "the oldest / the most reliable"
+     ],
+     [
+      "Bằng",
+      "as + adj + as",
+      "as fast as"
+     ],
+     [
+      "Nhấn mạnh",
+      "much/far/even + hơn",
+      "far more useful"
+     ]
+    ]
+   },
+   "traps": [
+    "'more' + tính từ đã có -er là sai: 'more cheaper'.",
+    "'very' không dùng trước so sánh hơn: 'very better' sai, phải 'much better'."
+   ],
+   "tip": "Thấy 'than' -> so sánh hơn. Thấy 'the' + 'of all/in the company' -> so sánh nhất."
+  },
+  {
+   "id": "d9-l5",
+   "title": "5. Part 6: chọn câu điền vào đoạn văn",
+   "intro": "Trong Part 6, mỗi đoạn có một câu bị bỏ trống và bạn phải chọn CẢ CÂU phù hợp. Đừng dịch cả bốn câu rồi đoán: hãy tìm manh mối ở câu TRƯỚC và câu SAU chỗ trống.",
+   "points": [
+    {
+     "rule": "**Manh mối đại từ**: câu sau có It, They, This, These, Its mà chưa có danh từ nào đứng trước -> câu cần chọn phải chứa danh từ tương ứng (số ít/số nhiều đúng).",
+     "examples": [
+      {
+       "en": "The unit you asked about is still available. **It** includes two bedrooms.",
+       "vi": "Căn hộ bạn hỏi vẫn còn trống. Nó có hai phòng ngủ."
+      }
+     ]
+    },
+    {
+     "rule": "**Manh mối từ nối**: In the meantime / During that time / However / As a result ở câu sau cho biết câu cần chọn phải nói về thời gian, sự đối lập hoặc nguyên nhân phù hợp.",
+     "examples": [
+      {
+       "en": "The inspection will last until noon. **During that time**, the elevators will be out of service.",
+       "vi": "Việc kiểm tra kéo dài đến trưa. Trong thời gian đó thang máy sẽ ngừng hoạt động."
+      }
+     ]
+    },
+    {
+     "rule": "**Manh mối lặp từ khóa**: câu đúng thường lặp lại danh từ/chủ đề của câu liền trước hoặc liền sau (hours, tenants, the inspection...). Câu sai thường nói đề tài khác hoặc sai thì.",
+     "examples": [
+      {
+       "en": "The center will extend its hours. It will now open at 5:30 A.M.",
+       "vi": "Trung tâm sẽ kéo dài giờ mở cửa. Từ nay mở lúc 5:30 sáng."
+      }
+     ]
+    }
+   ],
+   "traps": [
+    "Câu 'nghe có vẻ liên quan' nhưng không giải thích đại từ/từ nối ở câu sau thì vẫn SAI.",
+    "Kiểm tra thì của câu: đoạn đang nói tương lai thì câu chèn không thể là quá khứ vô cớ."
+   ],
+   "tip": "Đọc câu trước và câu sau chỗ trống trước tiên, gạch chân đại từ, từ nối, thời gian; rồi loại ba đáp án không khớp."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d9-p1",
+   "title": "Bài 1: Chọn đại từ quan hệ",
+   "instr": "Nhìn tiền ngữ và phần sau chỗ trống để chọn who/which/whose/where/whom/that.",
+   "lesson": "d9-l2",
+   "items": [
+    {
+     "q": "The candidate ------- applied for the position has five years of experience.",
+     "options": [
+      "which",
+      "whose",
+      "who",
+      "where"
+     ],
+     "ans": 2,
+     "why": "Tiền ngữ 'candidate' là người và phía sau là động từ 'applied' (thiếu chủ ngữ) -> who. 'which' dùng cho vật, 'whose' cần danh từ theo sau.",
+     "vi": "Ứng viên nộp đơn vào vị trí này có năm năm kinh nghiệm.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "The report ------- the committee reviewed yesterday was very detailed.",
+     "options": [
+      "who",
+      "which",
+      "whose",
+      "where"
+     ],
+     "ans": 1,
+     "why": "'the report' là vật, 'the committee reviewed' thiếu tân ngữ -> which. 'who' chỉ người.",
+     "vi": "Bản báo cáo mà ủy ban xem xét hôm qua rất chi tiết.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "We hired an architect ------- team won several awards.",
+     "options": [
+      "whose",
+      "who",
+      "whom",
+      "which"
+     ],
+     "ans": 0,
+     "why": "'team' là danh từ thuộc về architect, theo sau chỗ trống là danh từ + động từ -> whose. Các đại từ còn lại không biểu thị sở hữu.",
+     "vi": "Chúng tôi đã thuê một kiến trúc sư có đội ngũ đoạt nhiều giải.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "The conference center ------- the workshop will take place has 300 seats.",
+     "options": [
+      "which",
+      "who",
+      "whose",
+      "where"
+     ],
+     "ans": 3,
+     "why": "Tiền ngữ là nơi chốn và sau chỗ trống là câu đủ 'the workshop will take place' -> where. 'which' thiếu giới từ 'in which'.",
+     "vi": "Trung tâm hội nghị nơi diễn ra hội thảo có 300 chỗ ngồi.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "Employees ------- complete the training will receive a certificate.",
+     "options": [
+      "whom",
+      "whose",
+      "who",
+      "which"
+     ],
+     "ans": 2,
+     "why": "Tiền ngữ chỉ người, sau chỗ trống là động từ 'complete' -> who. 'whom' là tân ngữ, không đứng trước động từ.",
+     "vi": "Nhân viên hoàn thành khóa đào tạo sẽ nhận chứng chỉ.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "Mr. Park is the manager to ------- all requests should be sent.",
+     "options": [
+      "who",
+      "whom",
+      "which",
+      "whose"
+     ],
+     "ans": 1,
+     "why": "Sau giới từ 'to' và tiền ngữ chỉ người phải dùng whom. 'who' không đứng sau giới từ.",
+     "vi": "Ông Park là người quản lý mà mọi yêu cầu nên được gửi đến.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "The new software, ------- was released last week, has many useful features.",
+     "options": [
+      "which",
+      "that",
+      "what",
+      "who"
+     ],
+     "ans": 0,
+     "why": "Mệnh đề nằm giữa dấu phẩy, tiền ngữ là vật -> which. 'that' không dùng sau dấu phẩy.",
+     "vi": "Phần mềm mới, được phát hành tuần trước, có nhiều tính năng hữu ích.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "The brochure ------- describes our services is available at the front desk.",
+     "options": [
+      "whom",
+      "what",
+      "where",
+      "that"
+     ],
+     "ans": 3,
+     "why": "Tiền ngữ 'brochure' là vật, sau chỗ trống là động từ 'describes' -> that (hoặc which). 'what' không đứng sau danh từ.",
+     "vi": "Tờ giới thiệu mô tả các dịch vụ của chúng tôi có sẵn ở quầy lễ tân.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "A tenant is a person ------- rents an apartment or office from a landlord.",
+     "options": [
+      "which",
+      "whose",
+      "who",
+      "whom"
+     ],
+     "ans": 2,
+     "why": "Tiền ngữ 'a person' + động từ 'rents' -> who. 'whom' không đứng trước động từ làm chủ ngữ.",
+     "vi": "Người thuê nhà là người thuê căn hộ hoặc văn phòng từ chủ nhà.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "The building ------- roof was damaged by the storm will be repaired next month.",
+     "options": [
+      "whose",
+      "which",
+      "that",
+      "where"
+     ],
+     "ans": 0,
+     "why": "Sau chỗ trống là 'roof was damaged' — danh từ thuộc về 'the building' -> whose. 'which/that' không đi trước danh từ sở hữu.",
+     "vi": "Tòa nhà có mái bị hư hại do bão sẽ được sửa vào tháng sau.",
+     "tag": "relative-clause"
+    }
+   ]
+  },
+  {
+   "id": "d9-p2",
+   "title": "Bài 2: Mệnh đề danh từ what / whether / that",
+   "instr": "Chọn từ mở đầu mệnh đề danh từ.",
+   "lesson": "d9-l3",
+   "items": [
+    {
+     "q": "Please tell us ------- or not you can attend the meeting.",
+     "options": [
+      "that",
+      "whether",
+      "what",
+      "which"
+     ],
+     "ans": 1,
+     "why": "'or not' đi với whether (liệu có hay không). 'that' và 'what' không đi với 'or not'.",
+     "vi": "Vui lòng cho chúng tôi biết bạn có thể dự họp hay không.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "------- the manager decided was announced at the staff meeting.",
+     "options": [
+      "That",
+      "Whether",
+      "Which",
+      "What"
+     ],
+     "ans": 3,
+     "why": "'decided' còn thiếu tân ngữ, nên cần what (= điều mà). 'That' cần câu phía sau đầy đủ.",
+     "vi": "Điều mà người quản lý quyết định đã được thông báo tại cuộc họp nhân viên.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "The report shows ------- our sales increased by 12 percent last quarter.",
+     "options": [
+      "that",
+      "what",
+      "who",
+      "whose"
+     ],
+     "ans": 0,
+     "why": "'our sales increased by 12 percent' là câu đầy đủ -> that. 'what' đòi hỏi phần sau thiếu thành phần.",
+     "vi": "Báo cáo cho thấy doanh số của chúng tôi quý trước tăng 12 phần trăm.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "We have not decided ------- to move the office to a larger building.",
+     "options": [
+      "that",
+      "which",
+      "whether",
+      "who"
+     ],
+     "ans": 2,
+     "why": "'whether to V' diễn đạt liệu có nên làm gì. 'that' không đi với 'to V'.",
+     "vi": "Chúng tôi chưa quyết định có dời văn phòng sang tòa nhà lớn hơn hay không.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "------- the shipment will arrive on time depends on the weather.",
+     "options": [
+      "What",
+      "Which",
+      "Whom",
+      "Whether"
+     ],
+     "ans": 3,
+     "why": "Phía sau là câu đủ (the shipment will arrive on time) và nghĩa là 'liệu có... hay không' -> Whether làm chủ ngữ của 'depends'. 'What' cần phía sau thiếu thành phần.",
+     "vi": "Việc lô hàng có đến đúng giờ hay không phụ thuộc vào thời tiết.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "The survey will help us understand ------- our customers want.",
+     "options": [
+      "that",
+      "what",
+      "whether",
+      "how"
+     ],
+     "ans": 1,
+     "why": "'want' thiếu tân ngữ nên dùng what (điều mà khách hàng muốn). 'that/whether' cần câu đủ, 'how' sai nghĩa.",
+     "vi": "Khảo sát sẽ giúp chúng tôi hiểu khách hàng muốn gì.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "Ms. Diaz asked ------- the conference room was available on Friday.",
+     "options": [
+      "what",
+      "whether",
+      "that",
+      "whose"
+     ],
+     "ans": 1,
+     "why": "'asked' + câu đủ (the conference room was available) mang nghĩa 'liệu có... hay không' -> whether. 'what' cần phía sau thiếu thành phần; 'that' không đi sau 'ask' với nghĩa hỏi.",
+     "vi": "Cô Diaz hỏi liệu phòng hội nghị có trống vào thứ Sáu hay không.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "Nobody knows ------- will be appointed as the new director.",
+     "options": [
+      "whom",
+      "whether",
+      "who",
+      "that"
+     ],
+     "ans": 2,
+     "why": "Sau chỗ trống là 'will be appointed' (thiếu chủ ngữ chỉ người) -> who. 'whom' không làm chủ ngữ.",
+     "vi": "Không ai biết ai sẽ được bổ nhiệm làm giám đốc mới.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "What our clients value most ------- reliability.",
+     "options": [
+      "is",
+      "are",
+      "being",
+      "to be"
+     ],
+     "ans": 0,
+     "why": "Mệnh đề danh từ làm chủ ngữ được xem là số ít nên động từ chính là 'is'. 'being/to be' không phải động từ chính chia thì.",
+     "vi": "Điều khách hàng coi trọng nhất là sự đáng tin cậy.",
+     "tag": "noun-clause"
+    }
+   ]
+  },
+  {
+   "id": "d9-p3",
+   "title": "Bài 3: So sánh",
+   "instr": "Chọn dạng so sánh đúng.",
+   "lesson": "d9-l4",
+   "items": [
+    {
+     "q": "This laptop is ------- than the older model.",
+     "options": [
+      "light",
+      "lightest",
+      "the lightest",
+      "lighter"
+     ],
+     "ans": 3,
+     "why": "Có 'than' -> so sánh hơn, tính từ ngắn thêm -er: lighter.",
+     "vi": "Máy tính này nhẹ hơn mẫu cũ.",
+     "tag": "comparison"
+    },
+    {
+     "q": "Of all the branch offices, the Boston office has ------- sales.",
+     "options": [
+      "higher",
+      "high",
+      "highly",
+      "the highest"
+     ],
+     "ans": 3,
+     "why": "'Of all' -> so sánh nhất: the highest. 'higher' dùng khi có 'than'.",
+     "vi": "Trong tất cả chi nhánh, chi nhánh Boston có doanh số cao nhất.",
+     "tag": "comparison"
+    },
+    {
+     "q": "The new route is ------- efficient than the old one.",
+     "options": [
+      "most",
+      "more",
+      "much",
+      "as"
+     ],
+     "ans": 1,
+     "why": "Tính từ dài 'efficient' + 'than' -> more efficient. 'most' dùng cho so sánh nhất.",
+     "vi": "Tuyến đường mới hiệu quả hơn tuyến cũ.",
+     "tag": "comparison"
+    },
+    {
+     "q": "Our delivery is as ------- as our competitors'.",
+     "options": [
+      "faster",
+      "fastest",
+      "fast",
+      "more fast"
+     ],
+     "ans": 2,
+     "why": "Cấu trúc as...as dùng dạng gốc của tính từ: as fast as.",
+     "vi": "Giao hàng của chúng tôi nhanh bằng các đối thủ.",
+     "tag": "comparison"
+    },
+    {
+     "q": "The new design is ------- more attractive than the previous one.",
+     "options": [
+      "far",
+      "very",
+      "so",
+      "too"
+     ],
+     "ans": 0,
+     "why": "Nhấn mạnh so sánh hơn dùng much/far/even. 'very/so/too' không đứng trước more.",
+     "vi": "Thiết kế mới hấp dẫn hơn nhiều so với thiết kế trước.",
+     "tag": "comparison"
+    },
+    {
+     "q": "Ms. Wong is one of the ------- engineers in the company.",
+     "options": [
+      "more skilled",
+      "skilled",
+      "most skilled",
+      "skillfully"
+     ],
+     "ans": 2,
+     "why": "'one of the + so sánh nhất + danh từ số nhiều' -> most skilled. 'more skilled' cần 'than'.",
+     "vi": "Cô Wong là một trong những kỹ sư giỏi nhất công ty.",
+     "tag": "comparison"
+    },
+    {
+     "q": "The renovation cost ------- than we expected.",
+     "options": [
+      "much",
+      "more",
+      "most",
+      "many"
+     ],
+     "ans": 1,
+     "why": "'cost' là động từ; 'more than' = nhiều hơn. 'much than' sai cấu trúc.",
+     "vi": "Việc cải tạo tốn kém hơn chúng tôi dự kiến.",
+     "tag": "comparison"
+    },
+    {
+     "q": "Of all the suppliers, Delta is the ------- reliable.",
+     "options": [
+      "more",
+      "mostly",
+      "much",
+      "most"
+     ],
+     "ans": 3,
+     "why": "'Of all' + 'the' -> so sánh nhất: the most reliable. 'mostly' là trạng từ.",
+     "vi": "Trong tất cả nhà cung cấp, Delta đáng tin cậy nhất.",
+     "tag": "comparison"
+    },
+    {
+     "q": "Mr. Kim usually arrives ------- than his colleagues.",
+     "options": [
+      "earlier",
+      "early",
+      "earliest",
+      "the earliest"
+     ],
+     "ans": 0,
+     "why": "Có 'than' -> so sánh hơn của trạng từ early là earlier.",
+     "vi": "Ông Kim thường đến sớm hơn các đồng nghiệp.",
+     "tag": "comparison"
+    },
+    {
+     "q": "Our new office is not as ------- as the old one.",
+     "options": [
+      "spacious",
+      "more spacious",
+      "most spacious",
+      "spaciously"
+     ],
+     "ans": 0,
+     "why": "not as ... as dùng dạng gốc: not as spacious as. 'spaciously' là trạng từ.",
+     "vi": "Văn phòng mới của chúng tôi không rộng bằng văn phòng cũ.",
+     "tag": "comparison"
+    }
+   ]
+  },
+  {
+   "id": "d9-p4",
+   "title": "Bài 4: Tổng hợp và Part 6 chèn câu",
+   "instr": "Chọn đáp án đúng; ba câu cuối là dạng chèn câu của Part 6.",
+   "lesson": "d9-l5",
+   "items": [
+    {
+     "q": "Please contact the supervisor ------- office is on the second floor.",
+     "options": [
+      "who",
+      "which",
+      "where",
+      "whose"
+     ],
+     "ans": 3,
+     "why": "'office' thuộc về supervisor -> whose. 'who' không đi trước danh từ có sở hữu.",
+     "vi": "Vui lòng liên hệ người giám sát có văn phòng ở tầng hai.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "The warehouse ------- we store the spare parts is being expanded.",
+     "options": [
+      "which",
+      "whose",
+      "where",
+      "who"
+     ],
+     "ans": 2,
+     "why": "Tiền ngữ là nơi chốn, sau chỗ trống là câu đủ 'we store the spare parts' -> where.",
+     "vi": "Nhà kho nơi chúng tôi lưu phụ tùng đang được mở rộng.",
+     "tag": "relative-clause"
+    },
+    {
+     "q": "------- the lease will be renewed has not been decided yet.",
+     "options": [
+      "What",
+      "Whether",
+      "Whom",
+      "Whose"
+     ],
+     "ans": 1,
+     "why": "'has not been decided' + câu đủ -> Whether (liệu hợp đồng có được gia hạn). 'What' đòi thiếu thành phần.",
+     "vi": "Việc hợp đồng thuê có được gia hạn hay không vẫn chưa được quyết định.",
+     "tag": "noun-clause"
+    },
+    {
+     "q": "The Westside apartment is ------- more expensive than the one downtown.",
+     "options": [
+      "very",
+      "such",
+      "more",
+      "even"
+     ],
+     "ans": 3,
+     "why": "Nhấn mạnh so sánh hơn dùng even/much/far; 'very' không đứng trước 'more'.",
+     "vi": "Căn hộ ở Westside còn đắt hơn căn ở trung tâm.",
+     "tag": "comparison"
+    },
+    {
+     "q": "The landlord requested that all tenants ------- the rent by the fifth of each month.",
+     "options": [
+      "pay",
+      "pays",
+      "paid",
+      "paying"
+     ],
+     "ans": 0,
+     "why": "Sau request that + S, động từ ở dạng nguyên mẫu (không chia): pay.",
+     "vi": "Chủ nhà yêu cầu tất cả người thuê trả tiền thuê trước ngày mùng năm hàng tháng.",
+     "tag": "subjunctive"
+    },
+    {
+     "q": "If we had a larger budget, we ------- the lobby this year.",
+     "options": [
+      "renovate",
+      "will renovate",
+      "would renovate",
+      "have renovated"
+     ],
+     "ans": 2,
+     "why": "Mệnh đề If dùng quá khứ (had) -> mệnh đề chính dùng would + V. 'will renovate' là điều kiện loại 1.",
+     "vi": "Nếu có ngân sách lớn hơn, năm nay chúng tôi sẽ cải tạo sảnh.",
+     "tag": "conditional"
+    },
+    {
+     "q": "Chọn câu phù hợp nhất điền vào chỗ trống.",
+     "options": [
+      "The elevators were last inspected in October.",
+      "The inspection is expected to last from 9 A.M. until noon.",
+      "Several tenants have asked for faster elevators.",
+      "Rent for next month is due on the first."
+     ],
+     "ans": 1,
+     "why": "'During that time' cần một câu trước đó nêu khoảng thời gian: 9 A.M. đến trưa. Câu 'last inspected in October' liên quan nhưng không cho khoảng thời gian.",
+     "vi": "Việc kiểm tra dự kiến kéo dài từ 9 giờ sáng đến trưa.",
+     "tag": "part6-sentence",
+     "ctx": "To all tenants: The building's two elevators will be inspected on Tuesday, March 4. ------- During that time, both elevators will be out of service. Please use the stairs and allow extra time to reach your offices."
+    },
+    {
+     "q": "Chọn câu phù hợp nhất điền vào chỗ trống.",
+     "options": [
+      "Membership fees will rise by ten percent next year.",
+      "The center was founded in 2008.",
+      "The center will now open at 5:30 A.M. and close at 10 P.M.",
+      "Our trainers are certified by national associations."
+     ],
+     "ans": 2,
+     "why": "Câu trước nói về việc kéo dài giờ mở cửa, câu sau nhắc 'evening sessions' nên câu chèn phải nêu giờ mở/đóng cửa cụ thể.",
+     "vi": "Từ nay trung tâm sẽ mở cửa lúc 5:30 sáng và đóng cửa lúc 10 giờ tối.",
+     "tag": "part6-sentence",
+     "ctx": "Dear members, Beginning next week, the Riverside Fitness Center will extend its weekday hours. ------- Members who prefer a quieter workout may find the evening sessions especially convenient."
+    },
+    {
+     "q": "Chọn câu phù hợp nhất điền vào chỗ trống.",
+     "options": [
+      "Several apartments in the neighborhood have recently been sold.",
+      "The building's heating system was replaced last winter.",
+      "Rental payments can be made online.",
+      "The unit you asked about is still available for immediate rental."
+     ],
+     "ans": 3,
+     "why": "Câu sau dùng 'It' (số ít) liệt kê phòng ốc nên câu chèn phải có danh từ số ít chỉ căn hộ: 'The unit'. 'Several apartments' là số nhiều và 'heating system' không có phòng ngủ.",
+     "vi": "Căn hộ bạn hỏi vẫn còn cho thuê ngay.",
+     "tag": "part6-sentence",
+     "ctx": "Thank you for your interest in the apartment at 45 Maple Street. ------- It includes two bedrooms, a modern kitchen, and a private balcony. We would be happy to arrange a viewing at your convenience."
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Bất động sản, cơ sở vật chất & sức khỏe",
+  "words": [
+   {
+    "w": "tenant",
+    "pos": "n",
+    "ipa": "/ˈtenənt/",
+    "vi": "người thuê nhà",
+    "ex": "The tenant paid the rent on time.",
+    "exvi": "Người thuê nhà trả tiền thuê đúng hạn.",
+    "fam": "tenancy (n)",
+    "colloc": [
+     "a tenant of the building",
+     "tenant rights"
+    ]
+   },
+   {
+    "w": "landlord",
+    "pos": "n",
+    "ipa": "/ˈlændlɔːrd/",
+    "vi": "chủ nhà",
+    "ex": "The landlord will repair the heater.",
+    "exvi": "Chủ nhà sẽ sửa lò sưởi.",
+    "fam": "—",
+    "colloc": [
+     "contact the landlord"
+    ]
+   },
+   {
+    "w": "lease",
+    "pos": "n/v",
+    "ipa": "/liːs/",
+    "vi": "hợp đồng thuê; cho thuê",
+    "ex": "We signed a two-year lease for the office.",
+    "exvi": "Chúng tôi ký hợp đồng thuê văn phòng hai năm.",
+    "fam": "leasing (n)",
+    "colloc": [
+     "sign a lease",
+     "lease an office"
+    ]
+   },
+   {
+    "w": "renovate",
+    "pos": "v",
+    "ipa": "/ˈrenəveɪt/",
+    "vi": "cải tạo, tu sửa",
+    "ex": "The hotel plans to renovate its lobby.",
+    "exvi": "Khách sạn dự định cải tạo sảnh.",
+    "fam": "renovation (n)",
+    "colloc": [
+     "renovate a building",
+     "under renovation"
+    ]
+   },
+   {
+    "w": "property",
+    "pos": "n",
+    "ipa": "/ˈprɑːpərti/",
+    "vi": "bất động sản, tài sản",
+    "ex": "The property is located near the station.",
+    "exvi": "Bất động sản này nằm gần nhà ga.",
+    "fam": "—",
+    "colloc": [
+     "commercial property",
+     "property tax"
+    ]
+   },
+   {
+    "w": "facility",
+    "pos": "n",
+    "ipa": "/fəˈsɪləti/",
+    "vi": "cơ sở, tiện nghi",
+    "ex": "The new facility will open in June.",
+    "exvi": "Cơ sở mới sẽ mở vào tháng Sáu.",
+    "fam": "facilitate (v)",
+    "colloc": [
+     "a research facility",
+     "sports facilities"
+    ]
+   },
+   {
+    "w": "maintenance",
+    "pos": "n",
+    "ipa": "/ˈmeɪntənəns/",
+    "vi": "bảo trì, bảo dưỡng",
+    "ex": "Regular maintenance prevents breakdowns.",
+    "exvi": "Bảo trì định kỳ ngăn ngừa hỏng hóc.",
+    "fam": "maintain (v)",
+    "colloc": [
+     "routine maintenance",
+     "maintenance staff"
+    ]
+   },
+   {
+    "w": "inspect",
+    "pos": "v",
+    "ipa": "/ɪnˈspekt/",
+    "vi": "kiểm tra, thanh tra",
+    "ex": "Officials will inspect the building.",
+    "exvi": "Các viên chức sẽ kiểm tra tòa nhà.",
+    "fam": "inspection (n), inspector (n)",
+    "colloc": [
+     "inspect the equipment",
+     "safety inspection"
+    ]
+   },
+   {
+    "w": "vacant",
+    "pos": "adj",
+    "ipa": "/ˈveɪkənt/",
+    "vi": "còn trống",
+    "ex": "The apartment is vacant now.",
+    "exvi": "Căn hộ hiện đang trống.",
+    "fam": "vacancy (n)",
+    "colloc": [
+     "a vacant position",
+     "vacant lot"
+    ]
+   },
+   {
+    "w": "spacious",
+    "pos": "adj",
+    "ipa": "/ˈspeɪʃəs/",
+    "vi": "rộng rãi",
+    "ex": "The spacious lobby impressed visitors.",
+    "exvi": "Sảnh rộng rãi gây ấn tượng với khách.",
+    "fam": "space (n)",
+    "colloc": [
+     "a spacious office"
+    ]
+   },
+   {
+    "w": "relocate",
+    "pos": "v",
+    "ipa": "/ˌriːˈloʊkeɪt/",
+    "vi": "chuyển địa điểm",
+    "ex": "The company will relocate to Busan.",
+    "exvi": "Công ty sẽ chuyển đến Busan.",
+    "fam": "relocation (n)",
+    "colloc": [
+     "relocate to",
+     "relocation package"
+    ]
+   },
+   {
+    "w": "utilities",
+    "pos": "n",
+    "ipa": "/juːˈtɪlətiz/",
+    "vi": "tiện ích (điện, nước, gas)",
+    "ex": "Utilities are included in the rent.",
+    "exvi": "Tiền điện nước đã gồm trong tiền thuê.",
+    "fam": "utility (n)",
+    "colloc": [
+     "pay the utilities"
+    ]
+   },
+   {
+    "w": "premises",
+    "pos": "n",
+    "ipa": "/ˈpremɪsɪz/",
+    "vi": "khuôn viên, cơ sở",
+    "ex": "No smoking on the premises.",
+    "exvi": "Cấm hút thuốc trong khuôn viên.",
+    "fam": "—",
+    "colloc": [
+     "on the premises",
+     "company premises"
+    ]
+   },
+   {
+    "w": "occupy",
+    "pos": "v",
+    "ipa": "/ˈɑːkjupaɪ/",
+    "vi": "chiếm, sử dụng (không gian)",
+    "ex": "Our team occupies the third floor.",
+    "exvi": "Nhóm chúng tôi sử dụng tầng ba.",
+    "fam": "occupant (n), occupancy (n)",
+    "colloc": [
+     "occupy a space"
+    ]
+   },
+   {
+    "w": "deposit",
+    "pos": "n/v",
+    "ipa": "/dɪˈpɑːzɪt/",
+    "vi": "tiền đặt cọc; gửi tiền",
+    "ex": "The security deposit will be refunded.",
+    "exvi": "Tiền đặt cọc sẽ được hoàn lại.",
+    "fam": "—",
+    "colloc": [
+     "a security deposit",
+     "make a deposit"
+    ]
+   },
+   {
+    "w": "contractor",
+    "pos": "n",
+    "ipa": "/ˈkɑːntræktər/",
+    "vi": "nhà thầu",
+    "ex": "The contractor will repair the roof.",
+    "exvi": "Nhà thầu sẽ sửa mái nhà.",
+    "fam": "contract (n/v)",
+    "colloc": [
+     "hire a contractor"
+    ]
+   },
+   {
+    "w": "expand",
+    "pos": "v",
+    "ipa": "/ɪkˈspænd/",
+    "vi": "mở rộng",
+    "ex": "The firm plans to expand its office.",
+    "exvi": "Công ty dự định mở rộng văn phòng.",
+    "fam": "expansion (n)",
+    "colloc": [
+     "expand operations"
+    ]
+   },
+   {
+    "w": "appointment",
+    "pos": "n",
+    "ipa": "/əˈpɔɪntmənt/",
+    "vi": "cuộc hẹn",
+    "ex": "Please make an appointment with Dr. Chen.",
+    "exvi": "Vui lòng đặt lịch hẹn với bác sĩ Chen.",
+    "fam": "appoint (v)",
+    "colloc": [
+     "make an appointment",
+     "schedule an appointment"
+    ]
+   },
+   {
+    "w": "physician",
+    "pos": "n",
+    "ipa": "/fɪˈzɪʃn/",
+    "vi": "bác sĩ",
+    "ex": "Our physician is available on Mondays.",
+    "exvi": "Bác sĩ của chúng tôi có mặt vào thứ Hai.",
+    "fam": "—",
+    "colloc": [
+     "a family physician"
+    ]
+   },
+   {
+    "w": "prescription",
+    "pos": "n",
+    "ipa": "/prɪˈskrɪpʃn/",
+    "vi": "đơn thuốc",
+    "ex": "Pick up your prescription at the pharmacy.",
+    "exvi": "Hãy lấy đơn thuốc ở nhà thuốc.",
+    "fam": "prescribe (v)",
+    "colloc": [
+     "fill a prescription"
+    ]
+   },
+   {
+    "w": "wellness",
+    "pos": "n",
+    "ipa": "/ˈwelnəs/",
+    "vi": "sức khỏe, sự khỏe mạnh",
+    "ex": "The company offers a wellness program.",
+    "exvi": "Công ty có chương trình chăm sóc sức khỏe.",
+    "fam": "well (adj)",
+    "colloc": [
+     "wellness program"
+    ]
+   },
+   {
+    "w": "insurance",
+    "pos": "n",
+    "ipa": "/ɪnˈʃʊrəns/",
+    "vi": "bảo hiểm",
+    "ex": "Health insurance covers medical costs.",
+    "exvi": "Bảo hiểm y tế chi trả chi phí y tế.",
+    "fam": "insure (v)",
+    "colloc": [
+     "health insurance",
+     "insurance policy"
+    ]
+   },
+   {
+    "w": "furnished",
+    "pos": "adj",
+    "ipa": "/ˈfɜːrnɪʃt/",
+    "vi": "có đồ nội thất",
+    "ex": "The apartment is fully furnished.",
+    "exvi": "Căn hộ có đủ nội thất.",
+    "fam": "furnish (v), furniture (n)",
+    "colloc": [
+     "a furnished apartment"
+    ]
+   },
+   {
+    "w": "amenity",
+    "pos": "n",
+    "ipa": "/əˈmenəti/",
+    "vi": "tiện nghi",
+    "ex": "The building has many amenities.",
+    "exvi": "Tòa nhà có nhiều tiện nghi.",
+    "fam": "—",
+    "colloc": [
+     "on-site amenities"
+    ]
+   },
+   {
+    "w": "nearby",
+    "pos": "adj/adv",
+    "ipa": "/ˌnɪrˈbaɪ/",
+    "vi": "gần đó",
+    "ex": "There is a nearby train station.",
+    "exvi": "Có một ga tàu gần đó.",
+    "fam": "—",
+    "colloc": [
+     "a nearby store"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "The ------- must pay the monthly rent to the landlord by the fifth.",
+   "options": [
+    "tenant",
+    "contractor",
+    "physician",
+    "landlord"
+   ],
+   "ans": 0,
+   "why": "Người trả tiền thuê cho landlord là tenant (người thuê nhà).",
+   "vi": "Người thuê nhà phải trả tiền thuê hàng tháng cho chủ nhà trước ngày mùng năm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "We signed a two-year ------- for the office space.",
+   "options": [
+    "utilities",
+    "lease",
+    "amenity",
+    "wellness"
+   ],
+   "ans": 1,
+   "why": "'sign a lease' = ký hợp đồng thuê; các từ còn lại không đi với sign.",
+   "vi": "Chúng tôi ký hợp đồng thuê văn phòng hai năm.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The hotel plans to ------- its lobby before the summer season.",
+   "options": [
+    "renovate",
+    "deposit",
+    "prescribe",
+    "occupy"
+   ],
+   "ans": 0,
+   "why": "'renovate its lobby' = cải tạo sảnh; các động từ còn lại không hợp nghĩa.",
+   "vi": "Khách sạn dự định cải tạo sảnh trước mùa hè.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Smoking is not permitted anywhere on the ------- of the hospital.",
+   "options": [
+    "prescriptions",
+    "appointments",
+    "utilities",
+    "premises"
+   ],
+   "ans": 3,
+   "why": "'on the premises' = trong khuôn viên; là cụm cố định.",
+   "vi": "Không được hút thuốc ở bất cứ đâu trong khuôn viên bệnh viện.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Please make an ------- with Dr. Chen before visiting the clinic.",
+   "options": [
+    "amenity",
+    "maintenance",
+    "appointment",
+    "insurance"
+   ],
+   "ans": 2,
+   "why": "'make an appointment' = đặt lịch hẹn.",
+   "vi": "Vui lòng đặt lịch hẹn với bác sĩ Chen trước khi đến phòng khám.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The landlord will return the security ------- when the tenant moves out.",
+   "options": [
+    "lease",
+    "deposit",
+    "premises",
+    "facility"
+   ],
+   "ans": 1,
+   "why": "'security deposit' = tiền đặt cọc.",
+   "vi": "Chủ nhà sẽ trả lại tiền đặt cọc khi người thuê chuyển đi.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- of the heating system is done every autumn.",
+   "options": [
+    "maintain",
+    "maintained",
+    "maintainable",
+    "maintenance"
+   ],
+   "ans": 3,
+   "why": "Sau 'The' cần danh từ: maintenance (sự bảo trì). 'maintain' là động từ.",
+   "vi": "Việc bảo trì hệ thống sưởi được thực hiện mỗi mùa thu.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The apartment is ------- ; it comes with a sofa, a bed, and a dining table.",
+   "options": [
+    "furnished",
+    "vacant",
+    "nearby",
+    "spacious"
+   ],
+   "ans": 0,
+   "why": "Có sofa, giường, bàn ăn nghĩa là đã có đồ nội thất: furnished. 'vacant' chỉ trống, chưa chắc có nội thất.",
+   "vi": "Căn hộ có đồ nội thất: có sofa, giường và bàn ăn.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Hotel guests often shop at a ------- grocery store.",
+   "options": [
+    "nearly",
+    "nearness",
+    "nearby",
+    "nears"
+   ],
+   "ans": 2,
+   "why": "Trước danh từ cần tính từ: nearby (gần đó). 'nearly' là trạng từ.",
+   "vi": "Khách của khách sạn thường mua sắm ở một cửa hàng tạp hóa gần đó.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The company needs a larger space because it plans to ------- its research division.",
+   "options": [
+    "occupy",
+    "expand",
+    "deposit",
+    "prescribe"
+   ],
+   "ans": 1,
+   "why": "Cần không gian lớn hơn vì muốn mở rộng bộ phận nghiên cứu -> expand.",
+   "vi": "Công ty cần không gian lớn hơn vì dự định mở rộng bộ phận nghiên cứu.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "Ms. Alvarez, ------- manages the Seoul branch, will visit headquarters next week.",
+   "options": [
+    "that",
+    "which",
+    "who",
+    "whose"
+   ],
+   "ans": 2,
+   "why": "Mệnh đề giữa hai dấu phẩy, tiền ngữ là người, thiếu chủ ngữ -> who. 'that' không dùng sau dấu phẩy.",
+   "vi": "Bà Alvarez, người quản lý chi nhánh Seoul, sẽ đến trụ sở tuần tới.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "The seminar ------- topic is workplace safety will be held on Friday.",
+   "options": [
+    "that",
+    "whose",
+    "who",
+    "whom"
+   ],
+   "ans": 1,
+   "why": "'topic' thuộc về seminar -> whose. 'that' không biểu thị sở hữu.",
+   "vi": "Buổi hội thảo có chủ đề an toàn nơi làm việc sẽ diễn ra vào thứ Sáu.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "The printer ------- is on the third floor is out of order.",
+   "options": [
+    "who",
+    "whose",
+    "what",
+    "which"
+   ],
+   "ans": 3,
+   "why": "Tiền ngữ là vật, thiếu chủ ngữ -> which. 'who' chỉ người, 'what' không đứng sau danh từ.",
+   "vi": "Máy in ở tầng ba đang hỏng.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "The city ------- our company plans to build its new plant has offered tax incentives.",
+   "options": [
+    "where",
+    "which",
+    "who",
+    "whose"
+   ],
+   "ans": 0,
+   "why": "Tiền ngữ là nơi chốn, sau đó là câu đủ -> where. 'which' sẽ cần giới từ 'in which'.",
+   "vi": "Thành phố nơi công ty chúng tôi định xây nhà máy mới đã đưa ra ưu đãi thuế.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "The committee will decide ------- the project should be postponed.",
+   "options": [
+    "what",
+    "whether",
+    "which",
+    "whose"
+   ],
+   "ans": 1,
+   "why": "Cần mệnh đề danh từ diễn đạt lựa chọn: whether. 'what/which/whose' không phù hợp với câu đủ.",
+   "vi": "Ủy ban sẽ quyết định liệu có nên hoãn dự án hay không.",
+   "tag": "noun-clause"
+  },
+  {
+   "q": "------- is most important for this job is good teamwork.",
+   "options": [
+    "That",
+    "Whether",
+    "What",
+    "Who"
+   ],
+   "ans": 2,
+   "why": "Chủ ngữ là mệnh đề danh từ thiếu chủ ngữ: 'What is most important' = điều quan trọng nhất. 'That' cần câu đủ.",
+   "vi": "Điều quan trọng nhất cho công việc này là tinh thần làm việc nhóm tốt.",
+   "tag": "noun-clause"
+  },
+  {
+   "q": "The survey results suggest ------- customers prefer online ordering.",
+   "options": [
+    "that",
+    "what",
+    "whom",
+    "whose"
+   ],
+   "ans": 0,
+   "why": "'customers prefer online ordering' là câu đủ -> that. 'what' cần thiếu thành phần.",
+   "vi": "Kết quả khảo sát cho thấy khách hàng thích đặt hàng trực tuyến.",
+   "tag": "noun-clause"
+  },
+  {
+   "q": "Fuel prices are ------- this year than last year.",
+   "options": [
+    "low",
+    "lowest",
+    "the lowest",
+    "lower"
+   ],
+   "ans": 3,
+   "why": "Có 'than' -> so sánh hơn: lower.",
+   "vi": "Giá nhiên liệu năm nay thấp hơn năm ngoái.",
+   "tag": "comparison"
+  },
+  {
+   "q": "Among the three candidates, Ms. Cho is the ------- qualified.",
+   "options": [
+    "more",
+    "much",
+    "most",
+    "very"
+   ],
+   "ans": 2,
+   "why": "'Among the three' + 'the' -> so sánh nhất: the most qualified.",
+   "vi": "Trong ba ứng viên, cô Cho là người có trình độ phù hợp nhất.",
+   "tag": "comparison"
+  },
+  {
+   "q": "The new printer works ------- more quickly than the old one.",
+   "options": [
+    "very",
+    "so",
+    "too",
+    "much"
+   ],
+   "ans": 3,
+   "why": "Dùng much để nhấn mạnh so sánh hơn; very/so/too không đứng trước 'more'.",
+   "vi": "Máy in mới chạy nhanh hơn nhiều so với máy cũ.",
+   "tag": "comparison"
+  },
+  {
+   "q": "The training session was not as ------- as I had expected.",
+   "options": [
+    "helpful",
+    "more helpful",
+    "most helpful",
+    "helpfully"
+   ],
+   "ans": 0,
+   "why": "Cấu trúc not as ... as dùng tính từ dạng gốc: helpful.",
+   "vi": "Buổi đào tạo không hữu ích như tôi mong đợi.",
+   "tag": "comparison"
+  },
+  {
+   "q": "Our firm is one of the largest ------- in the region.",
+   "options": [
+    "employer",
+    "employers",
+    "employed",
+    "employing"
+   ],
+   "ans": 1,
+   "why": "'one of the + so sánh nhất + danh từ số nhiều' -> employers.",
+   "vi": "Công ty chúng tôi là một trong những nhà tuyển dụng lớn nhất khu vực.",
+   "tag": "comparison"
+  },
+  {
+   "q": "The manager insisted that every employee ------- the safety course.",
+   "options": [
+    "takes",
+    "take",
+    "took",
+    "taking"
+   ],
+   "ans": 1,
+   "why": "Sau insist that + S, động từ nguyên mẫu: take.",
+   "vi": "Quản lý khăng khăng yêu cầu mọi nhân viên phải học khóa an toàn.",
+   "tag": "subjunctive"
+  },
+  {
+   "q": "The new tenants could not move in ------- the previous tenants had left.",
+   "options": [
+    "during",
+    "so that",
+    "until",
+    "because of"
+   ],
+   "ans": 2,
+   "why": "'not ... until' = mãi đến khi... mới. 'so that' (để mà) sai nghĩa; 'during/because of' là giới từ nên không đi với mệnh đề.",
+   "vi": "Những người thuê mới không thể chuyển vào cho đến khi người thuê trước rời đi.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "All ------- are included in the rent, so you do not pay separately for water or electricity.",
+   "options": [
+    "utilities",
+    "premises",
+    "contractors",
+    "appointments"
+   ],
+   "ans": 0,
+   "why": "Điện nước đã gồm trong tiền thuê -> utilities.",
+   "vi": "Tất cả tiền điện nước đã gồm trong tiền thuê, nên bạn không phải trả riêng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- will repair the roof next week.",
+   "options": [
+    "physician",
+    "prescription",
+    "wellness",
+    "contractor"
+   ],
+   "ans": 3,
+   "why": "Người sửa mái nhà là nhà thầu: contractor.",
+   "vi": "Nhà thầu sẽ sửa mái nhà vào tuần tới.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The company decided to ------- to a bigger office downtown.",
+   "options": [
+    "inspect",
+    "insure",
+    "relocate",
+    "furnish"
+   ],
+   "ans": 2,
+   "why": "'relocate to' = chuyển đến; các động từ khác không đi với 'to a bigger office'.",
+   "vi": "Công ty quyết định chuyển đến văn phòng lớn hơn ở trung tâm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The apartment is ------- ; you can move in immediately.",
+   "options": [
+    "vacant",
+    "spacious",
+    "nearby",
+    "insured"
+   ],
+   "ans": 0,
+   "why": "Có thể chuyển vào ngay nghĩa là căn hộ còn trống: vacant.",
+   "vi": "Căn hộ còn trống; bạn có thể chuyển vào ngay.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Employees can enroll in the company's ------- program, which includes free yoga classes.",
+   "options": [
+    "lease",
+    "deposit",
+    "premises",
+    "wellness"
+   ],
+   "ans": 3,
+   "why": "'wellness program' = chương trình chăm sóc sức khỏe; có lớp yoga miễn phí.",
+   "vi": "Nhân viên có thể đăng ký chương trình sức khỏe của công ty, gồm các lớp yoga miễn phí.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Health ------- covers most medical costs for employees.",
+   "options": [
+    "amenity",
+    "insurance",
+    "landlord",
+    "property"
+   ],
+   "ans": 1,
+   "why": "'health insurance' = bảo hiểm y tế, chi trả chi phí y tế.",
+   "vi": "Bảo hiểm y tế chi trả hầu hết chi phí y tế cho nhân viên.",
+   "tag": "collocation"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "The designer ------- created our logo has opened her own studio.",
+   "options": [
+    "which",
+    "whose",
+    "where",
+    "who"
+   ],
+   "ans": 3,
+   "why": "Tiền ngữ chỉ người, thiếu chủ ngữ -> who.",
+   "vi": "Nhà thiết kế đã tạo logo của chúng tôi đã mở studio riêng.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "The article ------- we read in class was about green buildings.",
+   "options": [
+    "which",
+    "who",
+    "whose",
+    "where"
+   ],
+   "ans": 0,
+   "why": "'we read' thiếu tân ngữ, tiền ngữ là vật -> which.",
+   "vi": "Bài báo chúng tôi đọc trong lớp nói về các tòa nhà xanh.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "She is the engineer ------- proposal won the contract.",
+   "options": [
+    "who",
+    "whose",
+    "whom",
+    "which"
+   ],
+   "ans": 1,
+   "why": "'proposal' thuộc về engineer -> whose.",
+   "vi": "Cô ấy là kỹ sư có đề xuất trúng hợp đồng.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "The hall ------- the awards ceremony was held has since been renovated.",
+   "options": [
+    "which",
+    "who",
+    "where",
+    "whose"
+   ],
+   "ans": 2,
+   "why": "Tiền ngữ là nơi chốn + câu đủ -> where.",
+   "vi": "Hội trường nơi tổ chức lễ trao giải sau đó đã được cải tạo.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "The consultant with ------- we met yesterday recommended a new supplier.",
+   "options": [
+    "who",
+    "whose",
+    "whom",
+    "which"
+   ],
+   "ans": 2,
+   "why": "Sau giới từ 'with' và tiền ngữ chỉ người dùng whom.",
+   "vi": "Chuyên gia tư vấn mà chúng tôi gặp hôm qua đã giới thiệu một nhà cung cấp mới.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "This is the best proposal ------- we have received this year.",
+   "options": [
+    "who",
+    "whose",
+    "what",
+    "that"
+   ],
+   "ans": 3,
+   "why": "Tiền ngữ là vật và có 'the best' nên that thích hợp; 'who/whose/what' sai.",
+   "vi": "Đây là đề xuất tốt nhất chúng tôi nhận được năm nay.",
+   "tag": "relative-clause"
+  },
+  {
+   "q": "I am not sure ------- the shipment has arrived.",
+   "options": [
+    "whether",
+    "what",
+    "which",
+    "whose"
+   ],
+   "ans": 0,
+   "why": "'not sure' + câu đủ diễn đạt nghi vấn có/không -> whether.",
+   "vi": "Tôi không chắc lô hàng đã đến chưa.",
+   "tag": "noun-clause"
+  },
+  {
+   "q": "The director explained ------- the new policy means for part-time staff.",
+   "options": [
+    "that",
+    "what",
+    "whether",
+    "who"
+   ],
+   "ans": 1,
+   "why": "'means' thiếu tân ngữ -> what. 'that/whether' cần câu đủ.",
+   "vi": "Giám đốc giải thích chính sách mới có ý nghĩa gì với nhân viên bán thời gian.",
+   "tag": "noun-clause"
+  },
+  {
+   "q": "It is clear ------- the demand for housing is rising.",
+   "options": [
+    "that",
+    "what",
+    "whose",
+    "whom"
+   ],
+   "ans": 0,
+   "why": "Câu sau đủ thành phần, 'It is clear that ...' -> that.",
+   "vi": "Rõ ràng nhu cầu nhà ở đang tăng.",
+   "tag": "noun-clause"
+  },
+  {
+   "q": "Train tickets are ------- than airline tickets on this route.",
+   "options": [
+    "cheap",
+    "cheaper",
+    "cheapest",
+    "the cheapest"
+   ],
+   "ans": 1,
+   "why": "Có 'than' -> so sánh hơn: cheaper.",
+   "vi": "Vé tàu rẻ hơn vé máy bay trên tuyến này.",
+   "tag": "comparison"
+  },
+  {
+   "q": "The Harbor Hotel is the ------- of the three hotels in the city.",
+   "options": [
+    "old",
+    "older",
+    "oldest",
+    "oldness"
+   ],
+   "ans": 2,
+   "why": "Có 'the' và 'of the three' -> so sánh nhất: oldest.",
+   "vi": "Khách sạn Harbor là khách sạn lâu đời nhất trong ba khách sạn của thành phố.",
+   "tag": "comparison"
+  },
+  {
+   "q": "She speaks ------- fluently than her colleagues.",
+   "options": [
+    "most",
+    "much",
+    "very",
+    "more"
+   ],
+   "ans": 3,
+   "why": "Trạng từ dài 'fluently' + than -> more fluently.",
+   "vi": "Cô ấy nói trôi chảy hơn các đồng nghiệp.",
+   "tag": "comparison"
+  },
+  {
+   "q": "Our rates are as ------- as any other firm's.",
+   "options": [
+    "competitively",
+    "more competitive",
+    "competitive",
+    "competition"
+   ],
+   "ans": 2,
+   "why": "as ... as dùng tính từ dạng gốc: competitive.",
+   "vi": "Mức giá của chúng tôi cạnh tranh như bất kỳ công ty nào khác.",
+   "tag": "comparison"
+  },
+  {
+   "q": "The second proposal was ------- better than the first.",
+   "options": [
+    "very",
+    "more",
+    "most",
+    "even"
+   ],
+   "ans": 3,
+   "why": "even dùng nhấn mạnh so sánh hơn; 'very better' sai.",
+   "vi": "Đề xuất thứ hai còn tốt hơn đề xuất đầu tiên.",
+   "tag": "comparison"
+  },
+  {
+   "q": "The doctor recommended that the patient ------- more water.",
+   "options": [
+    "drinks",
+    "drink",
+    "drank",
+    "drinking"
+   ],
+   "ans": 1,
+   "why": "Sau recommend that + S, động từ nguyên mẫu: drink.",
+   "vi": "Bác sĩ khuyên bệnh nhân uống nhiều nước hơn.",
+   "tag": "subjunctive"
+  },
+  {
+   "q": "If the rent were lower, more people ------- in this neighborhood.",
+   "options": [
+    "would live",
+    "live",
+    "will live",
+    "lived"
+   ],
+   "ans": 0,
+   "why": "Mệnh đề If dùng were (loại 2) -> would + V.",
+   "vi": "Nếu tiền thuê thấp hơn, sẽ có nhiều người sống ở khu này hơn.",
+   "tag": "conditional"
+  },
+  {
+   "q": "The lease will not take effect ------- both parties have signed it.",
+   "options": [
+    "despite",
+    "during",
+    "until",
+    "between"
+   ],
+   "ans": 2,
+   "why": "'not ... until' + mệnh đề; despite/during là giới từ.",
+   "vi": "Hợp đồng thuê sẽ không có hiệu lực cho đến khi cả hai bên ký.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "The building has several ------- , including a gym and a rooftop garden.",
+   "options": [
+    "utilities",
+    "appointments",
+    "deposits",
+    "amenities"
+   ],
+   "ans": 3,
+   "why": "Gym và vườn trên mái là tiện nghi: amenities. Utilities là điện nước.",
+   "vi": "Tòa nhà có nhiều tiện nghi, gồm phòng gym và vườn trên mái.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please ------- the equipment before each use to make sure it is safe.",
+   "options": [
+    "occupy",
+    "inspect",
+    "lease",
+    "expand"
+   ],
+   "ans": 1,
+   "why": "Kiểm tra thiết bị cho an toàn -> inspect.",
+   "vi": "Vui lòng kiểm tra thiết bị trước mỗi lần dùng để đảm bảo an toàn.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Dr. Kim is a ------- who specializes in heart disease.",
+   "options": [
+    "physician",
+    "tenant",
+    "landlord",
+    "contractor"
+   ],
+   "ans": 0,
+   "why": "Người chuyên về bệnh tim là bác sĩ: physician.",
+   "vi": "Bác sĩ Kim là bác sĩ chuyên về bệnh tim.",
+   "tag": "vocab"
+  }
+ ]
+}

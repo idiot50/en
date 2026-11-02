@@ -1,0 +1,1916 @@
+{
+ "day": 2,
+ "title": "Danh từ & Mạo từ",
+ "icon": "🏷️",
+ "goal": "Sau hôm nay bạn nhận ra vị trí của danh từ, phân biệt danh từ chỉ người và chỉ vật, biết danh từ đếm được và không đếm được, và dùng đúng a / an / the.",
+ "why": "Chỗ trống cần danh từ chiếm khoảng 7% câu ngữ pháp (2-3 câu mỗi đề), cộng với các câu về danh từ đếm được và mạo từ.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 40
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d2-l1",
+   "title": "1. Danh từ là gì và đứng ở đâu?",
+   "intro": "Danh từ (noun) là từ gọi tên người, vật, nơi chốn, sự việc hoặc ý tưởng: manager, report, office, decision. Trong các câu chọn dạng từ ở Part 5, chỗ trống cần danh từ là loại hay gặp nhất (khoảng 7% câu ngữ pháp). Chỉ cần nhớ vài \"điểm đứng\" của danh từ là bạn làm được.",
+   "points": [
+    {
+     "rule": "Danh từ đứng **sau mạo từ** a / an / the và **sau tính từ sở hữu** (my, your, his, her, our, their, its). Công thức: `a/an/the/your + (adj) + N`.",
+     "examples": [
+      {
+       "en": "The **announcement** surprised us.",
+       "vi": "Thông báo đó làm chúng tôi ngạc nhiên."
+      },
+      {
+       "en": "Please check your **schedule**.",
+       "vi": "Vui lòng kiểm tra lịch của bạn."
+      }
+     ]
+    },
+    {
+     "rule": "Danh từ đứng **sau tính từ**: `adj + N`. Nếu chỗ trống nằm sau một tính từ và trước động từ hoặc dấu chấm, thường cần danh từ.",
+     "examples": [
+      {
+       "en": "We received **positive** **feedback**.",
+       "vi": "Chúng tôi nhận được phản hồi tích cực."
+      }
+     ]
+    },
+    {
+     "rule": "Danh từ đứng **sau giới từ** (of, for, in, with, on, at, by...) và làm **chủ ngữ / tân ngữ** của câu.",
+     "examples": [
+      {
+       "en": "We are pleased with the **performance** of the team.",
+       "vi": "Chúng tôi hài lòng với thành tích của nhóm."
+      },
+      {
+       "en": "**Sales** increased in March.",
+       "vi": "Doanh số tăng vào tháng Ba."
+      }
+     ]
+    },
+    {
+     "rule": "Cấu trúc hay gặp: **the + N + of + N** và **upon receipt of / upon completion of**. Sau \"the\" và trước \"of\" gần như chắc chắn là danh từ (đuôi -tion, -ment, -ance, -ity...).",
+     "examples": [
+      {
+       "en": "The **completion** of the project is near.",
+       "vi": "Dự án sắp hoàn thành."
+      },
+      {
+       "en": "Upon **receipt** of your payment, we will ship the order.",
+       "vi": "Ngay khi nhận được thanh toán, chúng tôi sẽ giao hàng."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Đứng sau...",
+     "Ví dụ",
+     "Cần"
+    ],
+    "rows": [
+     [
+      "a / an / the",
+      "the ___ of the plan",
+      "Danh từ"
+     ],
+     [
+      "my / your / our / their / its",
+      "our ___ will start",
+      "Danh từ"
+     ],
+     [
+      "tính từ",
+      "a new ___",
+      "Danh từ"
+     ],
+     [
+      "giới từ",
+      "for the ___ / with ___",
+      "Danh từ"
+     ],
+     [
+      "động từ (làm tân ngữ)",
+      "approved the ___",
+      "Danh từ"
+     ]
+    ]
+   },
+   "traps": [
+    "Đáp án đuôi -ing có thể là danh động từ nhưng TOEIC thường ưu tiên danh từ thật (-tion, -ment...) sau \"the ... of\".",
+    "Danh từ số nhiều hoặc không đếm được có thể đứng một mình, không cần mạo từ, khi nói chung chung (Sales increased. / Information is important.)."
+   ],
+   "tip": "Thấy \"the ___ of\" hoặc \"your ___\" → khoanh danh từ đuôi -tion/-ment/-ance/-ity trước, rồi mới xét nghĩa."
+  },
+  {
+   "id": "d2-l2",
+   "title": "2. Danh từ chỉ người, chỉ vật và danh từ ghép",
+   "intro": "Nhiều danh từ cùng gốc nhưng một từ chỉ NGƯỜI, một từ chỉ VẬT/ĐIỀU TRỪU TƯỢNG. TOEIC rất thích bẫy này: applicant hay application? attendee hay attendance? Chọn theo nghĩa của câu.",
+   "points": [
+    {
+     "rule": "**Danh từ chỉ người** thường có đuôi -er, -or, -ant, -ent, -ee, -ist. **Danh từ chỉ vật/việc** thường có đuôi -tion, -ment, -ance, -ence, -ity, -ship. Người thì làm được hành động (nộp, ký, tham dự); vật thì được nộp/được xem xét.",
+     "examples": [
+      {
+       "en": "The **applicant** brought a copy of her résumé.",
+       "vi": "Ứng viên mang theo bản sao sơ yếu lý lịch."
+      },
+      {
+       "en": "Her **application** was incomplete.",
+       "vi": "Đơn xin việc của cô ấy chưa đầy đủ."
+      }
+     ]
+    },
+    {
+     "rule": "Các cặp hay thi: applicant / application, attendee / attendance, supervisor / supervision, recruiter / recruitment, instructor / instruction(s), representative / representation, consultant / consultation.",
+     "examples": [
+      {
+       "en": "The **supervisor** reviews each report.",
+       "vi": "Người giám sát xem xét từng báo cáo."
+      },
+      {
+       "en": "New workers need close **supervision**.",
+       "vi": "Công nhân mới cần được giám sát chặt chẽ."
+      }
+     ]
+    },
+    {
+     "rule": "**Danh từ ghép (compound noun)** là hai danh từ đứng liền nhau, danh từ đầu bổ nghĩa cho danh từ sau và thường ở dạng số ít (trừ một số từ như sales, savings, customs...). Ví dụ: safety regulations, sales department, delivery address, loyalty program.",
+     "examples": [
+      {
+       "en": "Please follow all **safety regulations**.",
+       "vi": "Vui lòng tuân thủ mọi quy định an toàn."
+      },
+      {
+       "en": "The **sales department** hired two people.",
+       "vi": "Phòng kinh doanh đã tuyển hai người."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Người",
+     "Vật / ý tưởng",
+     "Nghĩa"
+    ],
+    "rows": [
+     [
+      "applicant",
+      "application",
+      "người nộp đơn / đơn xin"
+     ],
+     [
+      "attendee",
+      "attendance",
+      "người tham dự / sự tham dự"
+     ],
+     [
+      "supervisor",
+      "supervision",
+      "người giám sát / sự giám sát"
+     ],
+     [
+      "recruiter",
+      "recruitment",
+      "người tuyển dụng / việc tuyển dụng"
+     ],
+     [
+      "instructor",
+      "instruction",
+      "giảng viên / hướng dẫn"
+     ]
+    ]
+   },
+   "traps": [
+    "Hai đáp án đều là danh từ đúng vị trí: phải dựa vào nghĩa – ai đó làm hành động thì chọn từ chỉ người.",
+    "Danh từ ghép: người Việt hay chọn tính từ thay cho danh từ đầu (chọn \"safe regulations\" thay vì \"safety regulations\")."
+   ],
+   "tip": "Tự hỏi: chỗ trống là \"một người\" hay \"một thứ\"? Có động từ như interview, hire, sign, attend đi cùng thì thường là người."
+  },
+  {
+   "id": "d2-l3",
+   "title": "3. Danh từ đếm được và không đếm được",
+   "intro": "Danh từ đếm được (countable) là danh từ bạn đếm 1, 2, 3... được: report, branch, employee. Danh từ không đếm được (uncountable) là danh từ chỉ khối chung: information, equipment, advice. Hai loại này đi với mạo từ và -s khác nhau.",
+   "points": [
+    {
+     "rule": "**Đếm được số ít** phải có mạo từ/sở hữu: a report, the report, my report. **Đếm được số nhiều** thêm -s/-es (reports, branches, offices), không dùng a/an.",
+     "examples": [
+      {
+       "en": "The firm opened three new **branches**.",
+       "vi": "Công ty mở ba chi nhánh mới."
+      },
+      {
+       "en": "Mr. Oh wrote a **complaint**.",
+       "vi": "Ông Oh viết một lá đơn khiếu nại."
+      }
+     ]
+    },
+    {
+     "rule": "**Không đếm được**: không thêm -s, không dùng a/an. Hay gặp: information, equipment, advice, furniture, luggage/baggage, news, traffic, experience (nghĩa kinh nghiệm), training. Riêng **staff** là danh từ tập hợp (cả đội ngũ nhân viên): không thêm -s; muốn đếm người thì nói staff members (five staff members).",
+     "examples": [
+      {
+       "en": "The brochure contains useful **information**.",
+       "vi": "Tờ rơi có thông tin hữu ích."
+      },
+      {
+       "en": "The company bought new **equipment**.",
+       "vi": "Công ty đã mua thiết bị mới."
+      }
+     ]
+    },
+    {
+     "rule": "Muốn đếm danh từ không đếm được, dùng **a piece of / pieces of**: a piece of advice, two pieces of furniture.",
+     "examples": [
+      {
+       "en": "The company donated three **pieces of** furniture.",
+       "vi": "Công ty đã tặng ba món đồ nội thất."
+      }
+     ]
+    },
+    {
+     "rule": "Các từ chỉ số lượng cụ thể (two, three, five...) luôn đi với danh từ đếm được số nhiều.",
+     "examples": [
+      {
+       "en": "We hired five new **employees**.",
+       "vi": "Chúng tôi đã tuyển năm nhân viên mới."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Không đếm được",
+     "Dạng sai",
+     "Cách đếm"
+    ],
+    "rows": [
+     [
+      "information",
+      "informations, an information",
+      "a piece of information"
+     ],
+     [
+      "equipment",
+      "equipments, an equipment",
+      "a piece of equipment"
+     ],
+     [
+      "advice",
+      "advices, an advice",
+      "a piece of advice"
+     ],
+     [
+      "furniture",
+      "furnitures",
+      "a piece of furniture"
+     ],
+     [
+      "luggage / baggage",
+      "luggages",
+      "a piece of luggage"
+     ]
+    ]
+   },
+   "traps": [
+    "Người Việt hay thêm -s vào information, equipment, advice, furniture – luôn sai.",
+    "Danh từ số ít đếm được không đứng một mình: \"Mr. Oh wrote complaint\" sai; phải là \"a complaint\"."
+   ],
+   "tip": "Gặp 4 đáp án gồm dạng có -s và dạng không -s: kiểm tra trước chỗ trống có a/an hay số đếm không, rồi nhớ danh từ đó đếm được hay không."
+  },
+  {
+   "id": "d2-l4",
+   "title": "4. Mạo từ a / an / the cơ bản",
+   "intro": "Mạo từ (article) là từ nhỏ đứng trước danh từ: a, an, the. Tiếng Việt không có loại từ này nên người học hay quên. Chỉ cần nhớ ba quy tắc.",
+   "points": [
+    {
+     "rule": "**a / an** dùng với danh từ đếm được SỐ ÍT, nói về người/vật chưa xác định (lần nhắc đầu). Chọn theo ÂM đầu, không theo chữ cái: **an** + nguyên âm (an interview, an hour, an honest review); **a** + phụ âm (a university, a one-year contract, a European bank, a new printer).",
+     "examples": [
+      {
+       "en": "Mr. Hall has **an** interview at 10 a.m.",
+       "vi": "Ông Hall có buổi phỏng vấn lúc 10 giờ sáng."
+      },
+      {
+       "en": "Dr. Park teaches at **a** university in Seoul.",
+       "vi": "Tiến sĩ Park dạy ở một trường đại học tại Seoul."
+      }
+     ]
+    },
+    {
+     "rule": "**the** dùng khi người nói và người nghe đều biết là cái nào: nhắc lần thứ hai, hoặc là duy nhất (the first quarter, the only copy, the same project, the CEO of our company).",
+     "examples": [
+      {
+       "en": "We ordered a printer. **The** printer arrived on Monday.",
+       "vi": "Chúng tôi đặt một máy in. Máy in đó đã đến vào thứ Hai."
+      },
+      {
+       "en": "This is **the** only copy of the contract.",
+       "vi": "Đây là bản duy nhất của hợp đồng."
+      }
+     ]
+    },
+    {
+     "rule": "**Không dùng mạo từ** (zero article) trước danh từ số nhiều hoặc không đếm được khi nói chung: employees, furniture, information.",
+     "examples": [
+      {
+       "en": "The office has modern **furniture**.",
+       "vi": "Văn phòng có nội thất hiện đại."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Tình huống",
+     "Mạo từ",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "Số ít, lần nhắc đầu, âm phụ âm",
+      "a",
+      "a new printer"
+     ],
+     [
+      "Số ít, lần nhắc đầu, âm nguyên âm",
+      "an",
+      "an hour, an umbrella"
+     ],
+     [
+      "Đã nhắc / duy nhất / xác định",
+      "the",
+      "the only copy, the same project"
+     ],
+     [
+      "Số nhiều hoặc không đếm được nói chung",
+      "(không dùng)",
+      "employees, furniture"
+     ]
+    ]
+   },
+   "traps": [
+    "\"an hour\" nhưng \"a university\": chọn theo âm đọc, không theo chữ cái.",
+    "Không bao giờ dùng a/an với danh từ không đếm được hay số nhiều."
+   ],
+   "tip": "Có chữ \"only\", \"same\", \"first\", \"second\" ngay trước danh từ → gần như luôn là \"the\" (the only copy, the same project). Riêng cụm thời gian last week / last year / next month thì KHÔNG có the."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d2-p1",
+   "title": "Bài 1: Vị trí của danh từ",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d2-l1",
+   "items": [
+    {
+     "q": "Please read the ------- carefully before you begin.",
+     "options": [
+      "instruct",
+      "instructive",
+      "instructions",
+      "instructively"
+     ],
+     "ans": 2,
+     "why": "Sau mạo từ the cần danh từ: instructions. Instruct là động từ, instructive là tính từ, instructively là trạng từ.",
+     "vi": "Vui lòng đọc kỹ hướng dẫn trước khi bắt đầu.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Our new ------- starts next month.",
+     "options": [
+      "strategy",
+      "strategic",
+      "strategically",
+      "strategize"
+     ],
+     "ans": 0,
+     "why": "Sau Our new (sở hữu + tính từ) cần danh từ làm chủ ngữ: strategy. Strategic là tính từ.",
+     "vi": "Chiến lược mới của chúng tôi bắt đầu từ tháng sau.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "We appreciate your ------- in this matter.",
+     "options": [
+      "cooperate",
+      "cooperative",
+      "cooperatively",
+      "cooperation"
+     ],
+     "ans": 3,
+     "why": "Sau tính từ sở hữu your cần danh từ: cooperation. Cooperative là tính từ.",
+     "vi": "Chúng tôi trân trọng sự hợp tác của bạn trong việc này.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "------- of the new model begin in June.",
+     "options": [
+      "Sell",
+      "Sales",
+      "Sold",
+      "Sellable"
+     ],
+     "ans": 1,
+     "why": "Chỗ trống là chủ ngữ ở đầu câu nên cần danh từ: Sales (số nhiều khớp với begin). Các từ còn lại không phải danh từ.",
+     "vi": "Việc bán mẫu mới bắt đầu vào tháng Sáu.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The ------- of the new software saved us time.",
+     "options": [
+      "install",
+      "installation",
+      "installed",
+      "installs"
+     ],
+     "ans": 1,
+     "why": "Sau The và trước of cần danh từ: installation. Install, installed, installs đều là dạng động từ.",
+     "vi": "Việc cài đặt phần mềm mới giúp chúng tôi tiết kiệm thời gian.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Ms. Moon has strong ------- of financial software.",
+     "options": [
+      "know",
+      "knowledgeable",
+      "knowledgeably",
+      "knowledge"
+     ],
+     "ans": 3,
+     "why": "Sau tính từ strong cần danh từ: knowledge (kiến thức, không đếm được nên không cần a). Knowledgeable là tính từ, knowledgeably là trạng từ, know là động từ.",
+     "vi": "Cô Moon có kiến thức vững về phần mềm tài chính.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The company will provide ------- for all new staff.",
+     "options": [
+      "training",
+      "train",
+      "trained",
+      "trainer"
+     ],
+     "ans": 0,
+     "why": "Sau động từ provide cần danh từ làm tân ngữ: training (không đếm được, không cần mạo từ). Trainer số ít đếm được thiếu mạo từ nên sai.",
+     "vi": "Công ty sẽ cung cấp đào tạo cho mọi nhân viên mới.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Mr. Lim's ------- impressed the committee.",
+     "options": [
+      "propose",
+      "proposed",
+      "proposal",
+      "proposes"
+     ],
+     "ans": 2,
+     "why": "Sau sở hữu cách Mr. Lim's cần danh từ: proposal. Các từ còn lại là dạng động từ.",
+     "vi": "Đề xuất của ông Lim đã gây ấn tượng với ủy ban.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Fast ------- is one of our priorities.",
+     "options": [
+      "deliver",
+      "delivered",
+      "delivery",
+      "deliveries"
+     ],
+     "ans": 2,
+     "why": "Sau tính từ Fast cần danh từ làm chủ ngữ; động từ is số ít nên chọn delivery. Deliveries số nhiều không khớp với is.",
+     "vi": "Giao hàng nhanh là một trong những ưu tiên của chúng tôi.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "There was a sharp ------- in energy costs.",
+     "options": [
+      "increase",
+      "increased",
+      "increasing",
+      "increasingly"
+     ],
+     "ans": 0,
+     "why": "Sau a sharp cần danh từ số ít: increase. Increased/increasing/increasingly không phải danh từ.",
+     "vi": "Đã có một đợt tăng mạnh chi phí năng lượng.",
+     "tag": "word-form-noun"
+    }
+   ]
+  },
+  {
+   "id": "d2-p2",
+   "title": "Bài 2: Danh từ chỉ người, chỉ vật và danh từ ghép",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d2-l2",
+   "items": [
+    {
+     "q": "The ------- brought a copy of her résumé.",
+     "options": [
+      "application",
+      "apply",
+      "applicant",
+      "applied"
+     ],
+     "ans": 2,
+     "why": "Ai đó mang theo (brought) sơ yếu lý lịch phải là người: applicant. Application là đơn (vật).",
+     "vi": "Ứng viên mang theo bản sao sơ yếu lý lịch của mình.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Her ------- was rejected because it was incomplete.",
+     "options": [
+      "application",
+      "applicant",
+      "apply",
+      "applied"
+     ],
+     "ans": 0,
+     "why": "Thứ \"chưa đầy đủ\" và bị từ chối là đơn xin việc: application. Applicant là người.",
+     "vi": "Đơn của cô ấy bị từ chối vì chưa đầy đủ.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The ------- at the workshop took notes during the session.",
+     "options": [
+      "attendance",
+      "attend",
+      "attending",
+      "attendee"
+     ],
+     "ans": 3,
+     "why": "Người ghi chú là người tham dự: attendee. Attendance là sự tham dự (vật).",
+     "vi": "Người tham dự hội thảo đã ghi chú trong suốt buổi học.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Employee ------- at the monthly meeting is required.",
+     "options": [
+      "attendee",
+      "attendance",
+      "attend",
+      "attendant"
+     ],
+     "ans": 1,
+     "why": "Cần danh từ chỉ việc có mặt: attendance (sự tham dự). Attendee là người, không hợp nghĩa với \"is required\".",
+     "vi": "Việc nhân viên có mặt tại cuộc họp hằng tháng là bắt buộc.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The ------- reviews each report before it is sent.",
+     "options": [
+      "supervision",
+      "supervisor",
+      "supervise",
+      "supervisory"
+     ],
+     "ans": 1,
+     "why": "Người xem xét báo cáo là người: supervisor. Supervision là sự giám sát.",
+     "vi": "Người giám sát xem xét từng báo cáo trước khi gửi đi.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "New workers need close ------- during the first month.",
+     "options": [
+      "supervisor",
+      "supervise",
+      "supervised",
+      "supervision"
+     ],
+     "ans": 3,
+     "why": "Sau tính từ close cần danh từ không đếm được chỉ việc giám sát: supervision. Supervisor số ít đếm được thiếu mạo từ.",
+     "vi": "Công nhân mới cần được giám sát chặt chẽ trong tháng đầu tiên.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Please follow all ------- regulations in the factory.",
+     "options": [
+      "safety",
+      "safe",
+      "safely",
+      "saving"
+     ],
+     "ans": 0,
+     "why": "Danh từ ghép: safety regulations (quy định an toàn). Safe là tính từ, safely là trạng từ.",
+     "vi": "Vui lòng tuân thủ mọi quy định an toàn trong nhà máy.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The ------- department hired two new people.",
+     "options": [
+      "sale",
+      "sell",
+      "sales",
+      "sold"
+     ],
+     "ans": 2,
+     "why": "Danh từ ghép cố định: sales department (phòng kinh doanh) luôn dùng dạng sales; \"sale department\" là sai. Sell, sold là dạng động từ.",
+     "vi": "Phòng kinh doanh đã tuyển hai người mới.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Our ------- campaign will begin in January.",
+     "options": [
+      "recruit",
+      "recruiter",
+      "recruitment",
+      "recruited"
+     ],
+     "ans": 2,
+     "why": "Danh từ ghép: recruitment campaign (chiến dịch tuyển dụng). Recruiter là người nên không bổ nghĩa cho campaign.",
+     "vi": "Chiến dịch tuyển dụng của chúng tôi sẽ bắt đầu vào tháng Giêng.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The ------- from the bank explained the loan options.",
+     "options": [
+      "representative",
+      "represent",
+      "representation",
+      "represented"
+     ],
+     "ans": 0,
+     "why": "Người giải thích là người: representative (đại diện). Representation là sự đại diện.",
+     "vi": "Đại diện từ ngân hàng đã giải thích các lựa chọn vay.",
+     "tag": "word-form-noun"
+    }
+   ]
+  },
+  {
+   "id": "d2-p3",
+   "title": "Bài 3: Đếm được và không đếm được",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d2-l3",
+   "items": [
+    {
+     "q": "The brochure contains useful ------- about local hotels.",
+     "options": [
+      "informations",
+      "informs",
+      "information",
+      "informed"
+     ],
+     "ans": 2,
+     "why": "Information là danh từ không đếm được, không thêm -s. Informs/informed là dạng động từ.",
+     "vi": "Tờ rơi có thông tin hữu ích về các khách sạn địa phương.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "The company bought new ------- for the factory.",
+     "options": [
+      "equipment",
+      "equipments",
+      "equipped",
+      "equips"
+     ],
+     "ans": 0,
+     "why": "Equipment là danh từ không đếm được nên không có -s. Equipped/equips là dạng động từ.",
+     "vi": "Công ty đã mua thiết bị mới cho nhà máy.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "Ms. Lee gave us excellent ------- on how to write a résumé.",
+     "options": [
+      "advices",
+      "advise",
+      "advised",
+      "advice"
+     ],
+     "ans": 3,
+     "why": "Advice (danh từ, không đếm được) khác advise (động từ). Không thêm -s.",
+     "vi": "Cô Lee cho chúng tôi lời khuyên rất hay về cách viết sơ yếu lý lịch.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "The airline lost my ------- during the transfer.",
+     "options": [
+      "luggages",
+      "luggage",
+      "a luggage",
+      "lugging"
+     ],
+     "ans": 1,
+     "why": "Luggage (hành lý) là danh từ không đếm được: không thêm -s, không dùng a. Sau my chỉ dùng luggage. \"lugging\" là V-ing của lug (kéo lê), sai nghĩa và sai từ loại.",
+     "vi": "Hãng hàng không làm mất hành lý của tôi trong lúc chuyển chuyến.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "The company opened three new ------- in Asia.",
+     "options": [
+      "branch",
+      "branches",
+      "branched",
+      "branching"
+     ],
+     "ans": 1,
+     "why": "Sau số đếm three cần danh từ đếm được số nhiều: branches.",
+     "vi": "Công ty đã mở ba chi nhánh mới ở châu Á.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "Our firm has two ------- in Chicago.",
+     "options": [
+      "office",
+      "officer",
+      "official",
+      "offices"
+     ],
+     "ans": 3,
+     "why": "Sau số đếm two cần danh từ số nhiều: offices. Officer là người, official là tính từ/danh từ chỉ người.",
+     "vi": "Công ty chúng tôi có hai văn phòng ở Chicago.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "The company donated three ------- of furniture to the school.",
+     "options": [
+      "pieces",
+      "piece",
+      "pieced",
+      "pace"
+     ],
+     "ans": 0,
+     "why": "Furniture không đếm được nên đếm bằng pieces of (sau số three cần số nhiều).",
+     "vi": "Công ty tặng ba món nội thất cho trường học.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "The ------- about the merger spread quickly.",
+     "options": [
+      "a new",
+      "a news",
+      "news",
+      "new"
+     ],
+     "ans": 2,
+     "why": "News là danh từ không đếm được (dù có -s), không thêm -es hay a. New là tính từ.",
+     "vi": "Tin về vụ sáp nhập lan nhanh chóng.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "Heavy ------- delayed the bus this morning.",
+     "options": [
+      "traffics",
+      "a traffic",
+      "traffic",
+      "trafficked"
+     ],
+     "ans": 2,
+     "why": "Traffic là danh từ không đếm được: không -s, không a.",
+     "vi": "Giao thông đông đúc đã làm xe buýt trễ sáng nay.",
+     "tag": "noun-countable"
+    },
+    {
+     "q": "Mr. Oh wrote a ------- to the manager.",
+     "options": [
+      "complaint",
+      "complaints",
+      "complain",
+      "complained"
+     ],
+     "ans": 0,
+     "why": "Sau mạo từ a cần danh từ đếm được số ít: complaint. Complaints số nhiều không đi với a.",
+     "vi": "Ông Oh đã viết thư khiếu nại gửi quản lý.",
+     "tag": "noun-countable"
+    }
+   ]
+  },
+  {
+   "id": "d2-p4",
+   "title": "Bài 4: Mạo từ a / an / the",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d2-l4",
+   "items": [
+    {
+     "q": "Mr. Hall has ------- interview at 10 a.m. tomorrow.",
+     "options": [
+      "a",
+      "these",
+      "an",
+      "two"
+     ],
+     "ans": 2,
+     "why": "Interview mở đầu bằng nguyên âm nên dùng an. These/two cần danh từ số nhiều.",
+     "vi": "Ông Hall có buổi phỏng vấn lúc 10 giờ sáng mai.",
+     "tag": "article"
+    },
+    {
+     "q": "The meeting will last ------- hour.",
+     "options": [
+      "an",
+      "a",
+      "these",
+      "many"
+     ],
+     "ans": 0,
+     "why": "Hour có âm đầu là nguyên âm (h câm) nên dùng an. These/many cần số nhiều.",
+     "vi": "Cuộc họp sẽ kéo dài một giờ.",
+     "tag": "article"
+    },
+    {
+     "q": "Dr. Park teaches at ------- university in Seoul.",
+     "options": [
+      "an",
+      "these",
+      "two",
+      "a"
+     ],
+     "ans": 3,
+     "why": "University bắt đầu bằng âm /j/ (phụ âm) nên dùng a. An sai âm.",
+     "vi": "Tiến sĩ Park dạy ở một trường đại học tại Seoul.",
+     "tag": "article"
+    },
+    {
+     "q": "Ms. Cruz ordered a printer and a scanner. ------- printer arrived on Monday.",
+     "options": [
+      "A",
+      "The",
+      "An",
+      "Some"
+     ],
+     "ans": 1,
+     "why": "Máy in đã được nhắc ở câu trước nên dùng The. Some không đi với danh từ số ít.",
+     "vi": "Cô Cruz đặt một máy in và một máy quét. Máy in đến vào thứ Hai.",
+     "tag": "article"
+    },
+    {
+     "q": "This is ------- only copy of the contract, so please keep it safe.",
+     "options": [
+      "a",
+      "the",
+      "an",
+      "these"
+     ],
+     "ans": 1,
+     "why": "Trước only (duy nhất) dùng the. A/an không dùng với \"only copy\" ở nghĩa xác định.",
+     "vi": "Đây là bản duy nhất của hợp đồng nên hãy giữ cẩn thận.",
+     "tag": "article"
+    },
+    {
+     "q": "The office has modern ------- and a large meeting room.",
+     "options": [
+      "a furniture",
+      "furnitures",
+      "an furniture",
+      "furniture"
+     ],
+     "ans": 3,
+     "why": "Furniture là danh từ không đếm được: không a/an, không -s.",
+     "vi": "Văn phòng có nội thất hiện đại và một phòng họp lớn.",
+     "tag": "article"
+    },
+    {
+     "q": "Both teams are working on ------- same project.",
+     "options": [
+      "the",
+      "a",
+      "an",
+      "these"
+     ],
+     "ans": 0,
+     "why": "Trước same luôn dùng the.",
+     "vi": "Cả hai nhóm đang làm cùng một dự án.",
+     "tag": "article"
+    },
+    {
+     "q": "Ms. Ito was promoted after ------- successful year.",
+     "options": [
+      "an",
+      "these",
+      "a",
+      "two"
+     ],
+     "ans": 2,
+     "why": "Successful bắt đầu bằng phụ âm /s/ nên dùng a. Two/these không khớp danh từ số ít year.",
+     "vi": "Cô Ito được thăng chức sau một năm thành công.",
+     "tag": "article"
+    },
+    {
+     "q": "She wrote ------- honest review of the hotel.",
+     "options": [
+      "a",
+      "these",
+      "an",
+      "two"
+     ],
+     "ans": 2,
+     "why": "Honest có h câm, bắt đầu bằng âm nguyên âm nên dùng an.",
+     "vi": "Cô ấy viết một bài đánh giá trung thực về khách sạn.",
+     "tag": "article"
+    },
+    {
+     "q": "The firm signed ------- one-year contract with the supplier.",
+     "options": [
+      "a",
+      "an",
+      "these",
+      "two"
+     ],
+     "ans": 0,
+     "why": "One bắt đầu bằng âm /w/ (phụ âm) nên dùng a. Two/these không hợp với danh từ số ít contract.",
+     "vi": "Công ty đã ký hợp đồng một năm với nhà cung cấp.",
+     "tag": "article"
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Tuyển dụng & nhân sự",
+  "words": [
+   {
+    "w": "applicant",
+    "pos": "n",
+    "ipa": "/ˈæplɪkənt/",
+    "vi": "người nộp đơn, ứng viên",
+    "ex": "Each applicant must bring a photo ID.",
+    "exvi": "Mỗi ứng viên phải mang theo giấy tờ có ảnh.",
+    "fam": "apply (v), application (n)",
+    "colloc": [
+     "job applicant",
+     "qualified applicant"
+    ]
+   },
+   {
+    "w": "candidate",
+    "pos": "n",
+    "ipa": "/ˈkændɪdeɪt/",
+    "vi": "ứng viên",
+    "ex": "We are seeking a qualified candidate for the position.",
+    "exvi": "Chúng tôi đang tìm ứng viên đủ năng lực cho vị trí này.",
+    "fam": "candidacy (n)",
+    "colloc": [
+     "strong candidate",
+     "shortlist of candidates"
+    ]
+   },
+   {
+    "w": "résumé",
+    "pos": "n",
+    "ipa": "/ˈrezəmeɪ/",
+    "vi": "sơ yếu lý lịch",
+    "ex": "Please attach your résumé to the e-mail.",
+    "exvi": "Vui lòng đính kèm sơ yếu lý lịch vào email.",
+    "fam": "—",
+    "colloc": [
+     "update a résumé",
+     "submit a résumé"
+    ]
+   },
+   {
+    "w": "vacancy",
+    "pos": "n",
+    "ipa": "/ˈveɪkənsi/",
+    "vi": "vị trí còn trống",
+    "ex": "There is a vacancy in the accounting department.",
+    "exvi": "Phòng kế toán đang có một vị trí trống.",
+    "fam": "vacant (adj)",
+    "colloc": [
+     "fill a vacancy",
+     "job vacancy"
+    ]
+   },
+   {
+    "w": "position",
+    "pos": "n",
+    "ipa": "/pəˈzɪʃn/",
+    "vi": "vị trí, chức vụ",
+    "ex": "She applied for a position in marketing.",
+    "exvi": "Cô ấy ứng tuyển vào một vị trí ở phòng tiếp thị.",
+    "fam": "position (v)",
+    "colloc": [
+     "apply for a position",
+     "open position"
+    ]
+   },
+   {
+    "w": "qualification",
+    "pos": "n",
+    "ipa": "/ˌkwɑːlɪfɪˈkeɪʃn/",
+    "vi": "trình độ, bằng cấp",
+    "ex": "List your qualifications on your résumé.",
+    "exvi": "Hãy liệt kê trình độ của bạn trong sơ yếu lý lịch.",
+    "fam": "qualify (v), qualified (adj)",
+    "colloc": [
+     "required qualifications",
+     "meet the qualifications"
+    ]
+   },
+   {
+    "w": "requirement",
+    "pos": "n",
+    "ipa": "/rɪˈkwaɪərmənt/",
+    "vi": "yêu cầu",
+    "ex": "Applicants must meet all the requirements.",
+    "exvi": "Ứng viên phải đáp ứng mọi yêu cầu.",
+    "fam": "require (v), required (adj)",
+    "colloc": [
+     "meet the requirements",
+     "minimum requirement"
+    ]
+   },
+   {
+    "w": "recruit",
+    "pos": "v",
+    "ipa": "/rɪˈkruːt/",
+    "vi": "tuyển dụng",
+    "ex": "The firm recruits new graduates every spring.",
+    "exvi": "Công ty tuyển sinh viên mới ra trường mỗi mùa xuân.",
+    "fam": "recruitment (n), recruiter (n)",
+    "colloc": [
+     "recruit new staff",
+     "recruit talent"
+    ]
+   },
+   {
+    "w": "hire",
+    "pos": "v",
+    "ipa": "/ˈhaɪər/",
+    "vi": "thuê, tuyển",
+    "ex": "We plan to hire three sales assistants.",
+    "exvi": "Chúng tôi dự định tuyển ba trợ lý kinh doanh.",
+    "fam": "hiring (n)",
+    "colloc": [
+     "hire a consultant",
+     "newly hired"
+    ]
+   },
+   {
+    "w": "interview",
+    "pos": "n/v",
+    "ipa": "/ˈɪntərvjuː/",
+    "vi": "cuộc phỏng vấn; phỏng vấn",
+    "ex": "The interview will take about thirty minutes.",
+    "exvi": "Buổi phỏng vấn sẽ kéo dài khoảng ba mươi phút.",
+    "fam": "interviewer (n), interviewee (n)",
+    "colloc": [
+     "job interview",
+     "conduct an interview"
+    ]
+   },
+   {
+    "w": "employer",
+    "pos": "n",
+    "ipa": "/ɪmˈplɔɪər/",
+    "vi": "nhà tuyển dụng, chủ lao động",
+    "ex": "Her employer offers flexible hours.",
+    "exvi": "Chủ lao động của cô ấy cho giờ làm linh hoạt.",
+    "fam": "employ (v), employee (n), employment (n)",
+    "colloc": [
+     "current employer",
+     "potential employer"
+    ]
+   },
+   {
+    "w": "employee",
+    "pos": "n",
+    "ipa": "/ɪmˈplɔɪiː/",
+    "vi": "nhân viên",
+    "ex": "The new employee starts on Monday.",
+    "exvi": "Nhân viên mới bắt đầu làm vào thứ Hai.",
+    "fam": "employ (v), employer (n), employment (n)",
+    "colloc": [
+     "full-time employee",
+     "new employee"
+    ]
+   },
+   {
+    "w": "supervisor",
+    "pos": "n",
+    "ipa": "/ˈsuːpərvaɪzər/",
+    "vi": "người giám sát",
+    "ex": "Please ask your supervisor for approval.",
+    "exvi": "Vui lòng xin sự đồng ý từ người giám sát của bạn.",
+    "fam": "supervise (v), supervision (n)",
+    "colloc": [
+     "direct supervisor",
+     "floor supervisor"
+    ]
+   },
+   {
+    "w": "salary",
+    "pos": "n",
+    "ipa": "/ˈsæləri/",
+    "vi": "lương",
+    "ex": "The salary depends on your experience.",
+    "exvi": "Mức lương phụ thuộc vào kinh nghiệm của bạn.",
+    "fam": "—",
+    "colloc": [
+     "annual salary",
+     "salary increase"
+    ]
+   },
+   {
+    "w": "benefit",
+    "pos": "n/v",
+    "ipa": "/ˈbenɪfɪt/",
+    "vi": "phúc lợi; mang lại lợi ích",
+    "ex": "The benefits include health insurance.",
+    "exvi": "Phúc lợi bao gồm bảo hiểm y tế.",
+    "fam": "beneficial (adj)",
+    "colloc": [
+     "health benefits",
+     "benefit package"
+    ]
+   },
+   {
+    "w": "promotion",
+    "pos": "n",
+    "ipa": "/prəˈmoʊʃn/",
+    "vi": "sự thăng chức; sự quảng bá",
+    "ex": "Ms. Tan received a promotion last year.",
+    "exvi": "Cô Tan được thăng chức năm ngoái.",
+    "fam": "promote (v), promotional (adj)",
+    "colloc": [
+     "receive a promotion",
+     "sales promotion"
+    ]
+   },
+   {
+    "w": "training",
+    "pos": "n",
+    "ipa": "/ˈtreɪnɪŋ/",
+    "vi": "đào tạo, tập huấn",
+    "ex": "The firm provides on-the-job training.",
+    "exvi": "Công ty cung cấp đào tạo tại chỗ.",
+    "fam": "train (v), trainer (n), trainee (n)",
+    "colloc": [
+     "on-the-job training",
+     "training session"
+    ]
+   },
+   {
+    "w": "orientation",
+    "pos": "n",
+    "ipa": "/ˌɔːriənˈteɪʃn/",
+    "vi": "buổi định hướng cho nhân viên mới",
+    "ex": "Orientation begins at 9 a.m. on Monday.",
+    "exvi": "Buổi định hướng bắt đầu lúc 9 giờ sáng thứ Hai.",
+    "fam": "orient (v)",
+    "colloc": [
+     "attend orientation",
+     "orientation session"
+    ]
+   },
+   {
+    "w": "reference",
+    "pos": "n",
+    "ipa": "/ˈrefrəns/",
+    "vi": "thư/người giới thiệu; sự tham khảo",
+    "ex": "Please provide two references from former employers.",
+    "exvi": "Vui lòng cung cấp hai người giới thiệu từ nhà tuyển dụng cũ.",
+    "fam": "refer (v)",
+    "colloc": [
+     "provide references",
+     "reference letter"
+    ]
+   },
+   {
+    "w": "contract",
+    "pos": "n",
+    "ipa": "/ˈkɑːntrækt/",
+    "vi": "hợp đồng",
+    "ex": "The contract is valid for one year.",
+    "exvi": "Hợp đồng có hiệu lực một năm.",
+    "fam": "contractor (n), contractual (adj)",
+    "colloc": [
+     "sign a contract",
+     "renew a contract"
+    ]
+   },
+   {
+    "w": "resign",
+    "pos": "v",
+    "ipa": "/rɪˈzaɪn/",
+    "vi": "từ chức, xin nghỉ việc",
+    "ex": "Mr. Hale resigned to start his own business.",
+    "exvi": "Ông Hale xin nghỉ để khởi nghiệp.",
+    "fam": "resignation (n)",
+    "colloc": [
+     "resign from a position",
+     "letter of resignation"
+    ]
+   },
+   {
+    "w": "experience",
+    "pos": "n",
+    "ipa": "/ɪkˈspɪriəns/",
+    "vi": "kinh nghiệm",
+    "ex": "Ms. Silva has ten years of experience.",
+    "exvi": "Cô Silva có mười năm kinh nghiệm.",
+    "fam": "experienced (adj)",
+    "colloc": [
+     "work experience",
+     "years of experience"
+    ]
+   },
+   {
+    "w": "skill",
+    "pos": "n",
+    "ipa": "/skɪl/",
+    "vi": "kỹ năng",
+    "ex": "Communication skills are important in this job.",
+    "exvi": "Kỹ năng giao tiếp quan trọng trong công việc này.",
+    "fam": "skilled (adj)",
+    "colloc": [
+     "communication skills",
+     "technical skills"
+    ]
+   },
+   {
+    "w": "evaluate",
+    "pos": "v",
+    "ipa": "/ɪˈvæljueɪt/",
+    "vi": "đánh giá",
+    "ex": "Managers evaluate each employee once a year.",
+    "exvi": "Các quản lý đánh giá từng nhân viên mỗi năm một lần.",
+    "fam": "evaluation (n)",
+    "colloc": [
+     "evaluate performance",
+     "performance evaluation"
+    ]
+   },
+   {
+    "w": "personnel",
+    "pos": "n",
+    "ipa": "/ˌpɜːrsəˈnel/",
+    "vi": "nhân sự, bộ phận nhân sự",
+    "ex": "The personnel department keeps all employee records.",
+    "exvi": "Phòng nhân sự lưu mọi hồ sơ nhân viên.",
+    "fam": "—",
+    "colloc": [
+     "personnel department",
+     "security personnel"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "Ms. Silva has ten years of ------- in project management.",
+   "options": [
+    "salary",
+    "vacancy",
+    "experience",
+    "reference"
+   ],
+   "ans": 2,
+   "why": "Cụm years of experience = số năm kinh nghiệm.",
+   "vi": "Cô Silva có mười năm kinh nghiệm quản lý dự án.",
+   "tag": "vocab"
+  },
+  {
+   "q": "To ------- new staff, the company posts job ads online.",
+   "options": [
+    "recruit",
+    "resign",
+    "evaluate",
+    "retire"
+   ],
+   "ans": 0,
+   "why": "Recruit new staff = tuyển nhân viên mới.",
+   "vi": "Để tuyển nhân viên mới, công ty đăng quảng cáo việc làm trực tuyến.",
+   "tag": "vocab"
+  },
+  {
+   "q": "We plan to ------- three sales assistants next month.",
+   "options": [
+    "resign",
+    "apply",
+    "retire",
+    "hire"
+   ],
+   "ans": 3,
+   "why": "Hire + người = thuê/tuyển; resign và retire không có tân ngữ này.",
+   "vi": "Chúng tôi dự định tuyển ba trợ lý kinh doanh vào tháng sau.",
+   "tag": "vocab"
+  },
+  {
+   "q": "During the -------, you will be asked about your work history.",
+   "options": [
+    "salary",
+    "interview",
+    "benefit",
+    "promotion"
+   ],
+   "ans": 1,
+   "why": "Hỏi về lịch sử làm việc xảy ra trong buổi phỏng vấn.",
+   "vi": "Trong buổi phỏng vấn, bạn sẽ được hỏi về quá trình làm việc.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Her ------- of $60,000 a year is competitive.",
+   "options": [
+    "vacancy",
+    "salary",
+    "reference",
+    "personnel"
+   ],
+   "ans": 1,
+   "why": "Con số $60,000 a year là mức lương: salary.",
+   "vi": "Mức lương 60.000 đô la một năm của cô ấy rất cạnh tranh.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Ms. Lee was asked to provide two ------- from former employers.",
+   "options": [
+    "vacancies",
+    "salaries",
+    "orientations",
+    "references"
+   ],
+   "ans": 3,
+   "why": "Provide references from former employers = cung cấp thư/người giới thiệu từ chủ cũ.",
+   "vi": "Cô Lee được yêu cầu cung cấp hai thư giới thiệu từ chủ cũ.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- states that the work will last for one year.",
+   "options": [
+    "contract",
+    "résumé",
+    "skill",
+    "training"
+   ],
+   "ans": 0,
+   "why": "Văn bản nêu thời hạn công việc là hợp đồng: contract.",
+   "vi": "Hợp đồng nêu rõ công việc sẽ kéo dài một năm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please list your -------, such as degrees and certificates, on your résumé.",
+   "options": [
+    "vacancies",
+    "salaries",
+    "qualifications",
+    "orientations"
+   ],
+   "ans": 2,
+   "why": "Degrees and certificates là các bằng cấp: qualifications.",
+   "vi": "Vui lòng liệt kê bằng cấp, như văn bằng và chứng chỉ, trong sơ yếu lý lịch.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- department keeps records of all employees.",
+   "options": [
+    "personal",
+    "personally",
+    "personnel",
+    "personality"
+   ],
+   "ans": 2,
+   "why": "Danh từ ghép personnel department = phòng nhân sự. Personal là tính từ nghĩa riêng tư.",
+   "vi": "Phòng nhân sự lưu hồ sơ của mọi nhân viên.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The firm provides on-the-job ------- for new technicians.",
+   "options": [
+    "training",
+    "vacancy",
+    "reference",
+    "contract"
+   ],
+   "ans": 0,
+   "why": "On-the-job training = đào tạo tại chỗ.",
+   "vi": "Công ty cung cấp đào tạo tại chỗ cho kỹ thuật viên mới.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "The ------- of the old equipment cost the firm thousands of dollars.",
+   "options": [
+    "replace",
+    "replaced",
+    "replacement",
+    "replaces"
+   ],
+   "ans": 2,
+   "why": "Sau The và trước of cần danh từ: replacement.",
+   "vi": "Việc thay thế thiết bị cũ tốn của công ty hàng nghìn đô la.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Ms. Fox received a ------- for outstanding sales.",
+   "options": [
+    "promotion",
+    "promote",
+    "promoted",
+    "promotional"
+   ],
+   "ans": 0,
+   "why": "Sau mạo từ a cần danh từ: promotion (thăng chức).",
+   "vi": "Cô Fox được thăng chức vì doanh số xuất sắc.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The ------- will begin the training session at 9 a.m.",
+   "options": [
+    "instruct",
+    "instruction",
+    "instructive",
+    "instructor"
+   ],
+   "ans": 3,
+   "why": "Người bắt đầu buổi tập huấn là người: instructor. Instruction là hướng dẫn (vật).",
+   "vi": "Giảng viên sẽ bắt đầu buổi tập huấn lúc 9 giờ sáng.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Please read the safety ------- on page ten of the manual.",
+   "options": [
+    "instruct",
+    "instructions",
+    "instructor",
+    "instructed"
+   ],
+   "ans": 1,
+   "why": "Trong cuốn hướng dẫn (manual), thứ có trên trang 10 là hướng dẫn: instructions. Instructor là người nên sai nghĩa.",
+   "vi": "Vui lòng đọc hướng dẫn an toàn ở trang mười của sổ tay.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Two managers will interview each job -------.",
+   "options": [
+    "apply",
+    "applicant",
+    "application",
+    "applicable"
+   ],
+   "ans": 1,
+   "why": "Người được phỏng vấn phải là người: applicant (job applicant là danh từ ghép = người xin việc). Application là đơn xin việc (vật) nên không thể được phỏng vấn.",
+   "vi": "Hai quản lý sẽ phỏng vấn từng ứng viên.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Please check the ------- address on the box.",
+   "options": [
+    "deliver",
+    "delivered",
+    "delivers",
+    "delivery"
+   ],
+   "ans": 3,
+   "why": "Danh từ ghép: delivery address (địa chỉ giao hàng).",
+   "vi": "Vui lòng kiểm tra địa chỉ giao hàng trên hộp.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "We need to buy new office ------- for the new branch.",
+   "options": [
+    "equipment",
+    "equipments",
+    "equipped",
+    "equips"
+   ],
+   "ans": 0,
+   "why": "Equipment là danh từ không đếm được, không thêm -s.",
+   "vi": "Chúng ta cần mua thiết bị văn phòng mới cho chi nhánh mới.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "I need your ------- about the job offer.",
+   "options": [
+    "advices",
+    "advise",
+    "advice",
+    "advised"
+   ],
+   "ans": 2,
+   "why": "Advice là danh từ không đếm được; advise là động từ.",
+   "vi": "Tôi cần lời khuyên của bạn về lời mời làm việc.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "The firm hired five new ------- last month.",
+   "options": [
+    "employee",
+    "employ",
+    "employees",
+    "employment"
+   ],
+   "ans": 2,
+   "why": "Sau số five cần danh từ số nhiều: employees.",
+   "vi": "Công ty đã tuyển năm nhân viên mới vào tháng trước.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "Mr. Dunn left ------- umbrella in the taxi.",
+   "options": [
+    "an",
+    "a",
+    "these",
+    "two"
+   ],
+   "ans": 0,
+   "why": "Umbrella bắt đầu bằng âm nguyên âm nên dùng an. Two/these cần số nhiều.",
+   "vi": "Ông Dunn để quên một cái ô trong taxi.",
+   "tag": "article"
+  },
+  {
+   "q": "The CEO described a new marketing plan. ------- plan will start in May.",
+   "options": [
+    "A",
+    "An",
+    "Some",
+    "The"
+   ],
+   "ans": 3,
+   "why": "Plan đã được nhắc ở câu trước nên dùng The. Some không đi với danh từ số ít.",
+   "vi": "CEO mô tả một kế hoạch tiếp thị mới. Kế hoạch đó sẽ bắt đầu vào tháng Năm.",
+   "tag": "article"
+  },
+  {
+   "q": "Ms. Davis has ten years of ------- in accounting.",
+   "options": [
+    "experiences",
+    "experience",
+    "an experience",
+    "experienced"
+   ],
+   "ans": 1,
+   "why": "Experience (kinh nghiệm) không đếm được: years of experience. Experienced là tính từ.",
+   "vi": "Cô Davis có mười năm kinh nghiệm kế toán.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "Our ------- program offers free coffee to returning guests.",
+   "options": [
+    "loyal",
+    "loyalty",
+    "loyally",
+    "loyalist"
+   ],
+   "ans": 1,
+   "why": "Danh từ ghép: loyalty program (chương trình khách hàng thân thiết).",
+   "vi": "Chương trình khách hàng thân thiết của chúng tôi tặng cà phê miễn phí cho khách quay lại.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The new tax law will have a major ------- on small businesses.",
+   "options": [
+    "impacts",
+    "impacted",
+    "impacting",
+    "impact"
+   ],
+   "ans": 3,
+   "why": "Sau a major cần danh từ số ít: impact. Impacts số nhiều không đi với a.",
+   "vi": "Luật thuế mới sẽ có tác động lớn đến các doanh nghiệp nhỏ.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "The company is currently seeking a qualified ------- for the accounting position.",
+   "options": [
+    "candidate",
+    "reference",
+    "contract",
+    "salary"
+   ],
+   "ans": 0,
+   "why": "Seeking a qualified ... for the position = tìm ứng viên: candidate.",
+   "vi": "Công ty hiện đang tìm một ứng viên đủ năng lực cho vị trí kế toán.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Ms. Tan has a job ------- with the hiring manager at 2 p.m.",
+   "options": [
+    "vacancy",
+    "reference",
+    "interview",
+    "contract"
+   ],
+   "ans": 2,
+   "why": "Job interview = buổi phỏng vấn xin việc; hợp với việc gặp quản lý tuyển dụng lúc 2 giờ.",
+   "vi": "Cô Tan có buổi phỏng vấn xin việc với quản lý tuyển dụng lúc 2 giờ chiều.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Applicants must meet all the ------- listed in the job advertisement.",
+   "options": [
+    "salaries",
+    "orientations",
+    "requirements",
+    "vacancies"
+   ],
+   "ans": 2,
+   "why": "Meet the requirements = đáp ứng các yêu cầu.",
+   "vi": "Ứng viên phải đáp ứng mọi yêu cầu nêu trong quảng cáo tuyển dụng.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The ------- offered by the firm include health insurance and paid vacation.",
+   "options": [
+    "benefits",
+    "vacancies",
+    "references",
+    "résumés"
+   ],
+   "ans": 0,
+   "why": "Benefits (phúc lợi) bao gồm bảo hiểm y tế và nghỉ phép có lương.",
+   "vi": "Các phúc lợi công ty đưa ra gồm bảo hiểm y tế và nghỉ phép có lương.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The HR office offers ------- for new employees on their first day.",
+   "options": [
+    "interview",
+    "resign",
+    "reference",
+    "orientation"
+   ],
+   "ans": 3,
+   "why": "Orientation (không đếm được) là buổi định hướng cho nhân viên mới; interview số ít đếm được thiếu mạo từ, resign là động từ.",
+   "vi": "Phòng nhân sự tổ chức buổi định hướng cho nhân viên mới vào ngày đầu tiên.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Mr. Hale decided to ------- from his job to start his own business.",
+   "options": [
+    "hire",
+    "resign",
+    "recruit",
+    "evaluate"
+   ],
+   "ans": 1,
+   "why": "Resign from a job = xin nghỉ việc để khởi nghiệp.",
+   "vi": "Ông Hale quyết định nghỉ việc để khởi nghiệp.",
+   "tag": "vocab"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "The ------- of the survey were very positive.",
+   "options": [
+    "result",
+    "resulted",
+    "results",
+    "resulting"
+   ],
+   "ans": 2,
+   "why": "Động từ were số nhiều nên cần danh từ số nhiều: results.",
+   "vi": "Kết quả khảo sát rất tích cực.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "Please submit your ------- to the personnel office by Friday.",
+   "options": [
+    "application",
+    "apply",
+    "applicant",
+    "applicable"
+   ],
+   "ans": 0,
+   "why": "Thứ nộp (submit) cùng your là đơn: application. Applicant là người.",
+   "vi": "Vui lòng nộp đơn xin việc cho phòng nhân sự trước thứ Sáu.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The new ------- will report to the sales director.",
+   "options": [
+    "employ",
+    "employment",
+    "employed",
+    "employee"
+   ],
+   "ans": 3,
+   "why": "Người báo cáo cho giám đốc là nhân viên: employee. Employment là việc làm.",
+   "vi": "Nhân viên mới sẽ báo cáo cho giám đốc kinh doanh.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Thank you for your ------- in our program.",
+   "options": [
+    "interested",
+    "interest",
+    "interesting",
+    "interestingly"
+   ],
+   "ans": 1,
+   "why": "Sau your cần danh từ: interest.",
+   "vi": "Cảm ơn sự quan tâm của bạn tới chương trình của chúng tôi.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The firm values the ------- of its staff.",
+   "options": [
+    "dedicate",
+    "dedication",
+    "dedicated",
+    "dedicatedly"
+   ],
+   "ans": 1,
+   "why": "Sau the và trước of cần danh từ: dedication.",
+   "vi": "Công ty đánh giá cao sự tận tâm của nhân viên.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "He asked his ------- for a letter of recommendation.",
+   "options": [
+    "supervision",
+    "supervise",
+    "supervised",
+    "supervisor"
+   ],
+   "ans": 3,
+   "why": "Người được nhờ viết thư là người: supervisor. Supervision là sự giám sát.",
+   "vi": "Anh ấy nhờ người giám sát viết thư giới thiệu.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Mr. Evans gave us ------- about the local market.",
+   "options": [
+    "information",
+    "an information",
+    "informations",
+    "a information"
+   ],
+   "ans": 0,
+   "why": "Information không đếm được: không a/an, không -s.",
+   "vi": "Ông Evans cho chúng tôi thông tin về thị trường địa phương.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "Passengers may bring one piece of ------- on the flight.",
+   "options": [
+    "baggages",
+    "a baggage",
+    "baggage",
+    "bagged"
+   ],
+   "ans": 2,
+   "why": "Baggage là danh từ không đếm được: one piece of baggage.",
+   "vi": "Hành khách được mang một kiện hành lý lên chuyến bay.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "Fifty ------- attended the seminar.",
+   "options": [
+    "participant",
+    "participate",
+    "participants",
+    "participation"
+   ],
+   "ans": 2,
+   "why": "Sau số Fifty cần danh từ đếm được số nhiều chỉ người: participants. Participant là số ít, participation là sự tham gia (vật).",
+   "vi": "Năm mươi người tham gia đã dự hội thảo.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "Our ------- policy allows returns within thirty days.",
+   "options": [
+    "refund",
+    "refunded",
+    "refunding",
+    "refunder"
+   ],
+   "ans": 0,
+   "why": "Danh từ ghép: refund policy (chính sách hoàn tiền).",
+   "vi": "Chính sách hoàn tiền của chúng tôi cho phép trả hàng trong ba mươi ngày.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The ------- gave a short talk about teamwork.",
+   "options": [
+    "speak",
+    "spoken",
+    "speech",
+    "speaker"
+   ],
+   "ans": 3,
+   "why": "Người nói là người: speaker. Speech là bài phát biểu (vật).",
+   "vi": "Diễn giả đã có một bài nói ngắn về tinh thần đồng đội.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "She works at ------- European bank.",
+   "options": [
+    "an",
+    "a",
+    "these",
+    "two"
+   ],
+   "ans": 1,
+   "why": "European bắt đầu bằng âm /j/ (phụ âm) nên dùng a.",
+   "vi": "Cô ấy làm việc tại một ngân hàng châu Âu.",
+   "tag": "article"
+  },
+  {
+   "q": "We need ------- new printer for the front office.",
+   "options": [
+    "an",
+    "a",
+    "these",
+    "two"
+   ],
+   "ans": 1,
+   "why": "New bắt đầu bằng phụ âm /n/ nên dùng a; an sai âm.",
+   "vi": "Chúng tôi cần một máy in mới cho quầy lễ tân.",
+   "tag": "article"
+  },
+  {
+   "q": "The two companies signed ------- agreement last week.",
+   "options": [
+    "a",
+    "these",
+    "two",
+    "an"
+   ],
+   "ans": 3,
+   "why": "Agreement bắt đầu bằng nguyên âm nên dùng an.",
+   "vi": "Hai công ty đã ký một thỏa thuận vào tuần trước.",
+   "tag": "article"
+  },
+  {
+   "q": "Please confirm your ------- time with the airline.",
+   "options": [
+    "departure",
+    "depart",
+    "departing",
+    "departed"
+   ],
+   "ans": 0,
+   "why": "Danh từ ghép: departure time (giờ khởi hành).",
+   "vi": "Vui lòng xác nhận giờ khởi hành với hãng hàng không.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "We hired three ------- last quarter.",
+   "options": [
+    "consult",
+    "consultant",
+    "consultants",
+    "consulting"
+   ],
+   "ans": 2,
+   "why": "Sau số three cần danh từ số nhiều: consultants.",
+   "vi": "Chúng tôi đã thuê ba tư vấn viên vào quý trước.",
+   "tag": "noun-countable"
+  },
+  {
+   "q": "Our ------- is to deliver on time.",
+   "options": [
+    "commit",
+    "commits",
+    "commitment",
+    "committed"
+   ],
+   "ans": 2,
+   "why": "Sau Our cần danh từ: commitment (cam kết).",
+   "vi": "Cam kết của chúng tôi là giao hàng đúng hạn.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The company has a ------- in its accounting department.",
+   "options": [
+    "vacancy",
+    "salary",
+    "reference",
+    "skill"
+   ],
+   "ans": 0,
+   "why": "A vacancy in a department = một vị trí trống ở phòng ban.",
+   "vi": "Công ty có một vị trí trống ở phòng kế toán.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Applicants should attach their ------- to the e-mail.",
+   "options": [
+    "vacancies",
+    "benefits",
+    "contracts",
+    "résumés"
+   ],
+   "ans": 3,
+   "why": "Ứng viên đính kèm sơ yếu lý lịch: résumés.",
+   "vi": "Ứng viên nên đính kèm sơ yếu lý lịch vào email.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Managers ------- each employee's performance once a year.",
+   "options": [
+    "resign",
+    "evaluate",
+    "retire",
+    "hire"
+   ],
+   "ans": 1,
+   "why": "Evaluate performance = đánh giá hiệu suất làm việc.",
+   "vi": "Các quản lý đánh giá hiệu suất của từng nhân viên mỗi năm một lần.",
+   "tag": "vocab"
+  }
+ ]
+}

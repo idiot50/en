@@ -1,0 +1,1949 @@
+{
+ "day": 5,
+ "title": "Thì động từ, giới từ thời gian & câu điều kiện if",
+ "icon": "⏰",
+ "goal": "Sau hôm nay bạn nhận ra thì đúng của động từ chỉ qua một từ chỉ thời gian, biết when/if/before không đi với will, và chọn đúng giới từ thời gian.",
+ "why": "Thì động từ và giới từ thời gian chiếm khoảng 4-6 câu mỗi đề Part 5/6, và đây là loại câu làm nhanh vì tín hiệu rất rõ.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 40
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d5-l1",
+   "title": "1. Ba thì cơ bản: hiện tại đơn, hiện tại tiếp diễn, quá khứ đơn",
+   "intro": "Thì (tense) là cách động từ đổi dạng để cho biết hành động xảy ra LÚC NÀO. Trong TOEIC, bạn không cần dịch cả câu: chỉ cần tìm một từ chỉ thời gian (như every day, now, last week) là chọn được thì đúng. Hôm nay ta học 3 thì đầu tiên.",
+   "points": [
+    {
+     "rule": "**Hiện tại đơn** — dùng cho thói quen, sự thật, lịch làm việc cố định. Công thức: `S + V (thêm -s/-es nếu chủ ngữ là he/she/it hoặc danh từ số ít)`. Dấu hiệu: every day/week, usually, always, often, on Mondays, once a month.",
+     "examples": [
+      {
+       "en": "The manager **reviews** the sales report every Friday.",
+       "vi": "Quản lý xem lại báo cáo doanh số vào mỗi thứ Sáu."
+      },
+      {
+       "en": "Our staff **start** work at 8:30 a.m.",
+       "vi": "Nhân viên của chúng tôi bắt đầu làm việc lúc 8:30 sáng."
+      }
+     ]
+    },
+    {
+     "rule": "**Hiện tại tiếp diễn** — hành động ĐANG xảy ra hoặc tạm thời. Công thức: `S + am/is/are + V-ing`. Dấu hiệu: now, right now, at the moment, currently, these days, this week, look!",
+     "examples": [
+      {
+       "en": "The technicians **are repairing** the printer right now.",
+       "vi": "Các kỹ thuật viên đang sửa máy in ngay lúc này."
+      },
+      {
+       "en": "We **are hiring** two new designers this month.",
+       "vi": "Tháng này chúng tôi đang tuyển hai nhà thiết kế mới."
+      }
+     ]
+    },
+    {
+     "rule": "**Quá khứ đơn** — hành động đã xảy ra và KẾT THÚC ở một mốc quá khứ rõ ràng. Công thức: `S + V2` (động từ thêm -ed, hoặc dạng bất quy tắc: go → went, send → sent, make → made). Dấu hiệu: yesterday, last week/month/year, two days ago, in 2022, on June 3 (đã qua).",
+     "examples": [
+      {
+       "en": "Ms. Lee **sent** the invoice two days ago.",
+       "vi": "Cô Lee đã gửi hóa đơn cách đây hai ngày."
+      },
+      {
+       "en": "The company **opened** a new branch last year.",
+       "vi": "Công ty đã mở một chi nhánh mới vào năm ngoái."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Thì",
+     "Công thức",
+     "Dấu hiệu",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "Hiện tại đơn",
+      "S + V(s/es)",
+      "every day, usually, always, on Mondays",
+      "She checks e-mails every morning."
+     ],
+     [
+      "Hiện tại tiếp diễn",
+      "S + am/is/are + V-ing",
+      "now, at the moment, currently, this week",
+      "He is meeting a client now."
+     ],
+     [
+      "Quá khứ đơn",
+      "S + V2",
+      "yesterday, last week, ago, in 2021",
+      "We signed the contract last week."
+     ]
+    ]
+   },
+   "traps": [
+    "Có **ago**, **yesterday** hoặc **last + mốc** (last week, last year) thì dùng quá khứ đơn, không dùng hiện tại hoàn thành. Ngoại lệ cần nhớ: **over/in the last + khoảng thời gian** (over the last three years) lại là dấu hiệu của hiện tại hoàn thành.",
+    "Quên -s với chủ ngữ số ít: **The bank open** (sai) → The bank **opens**.",
+    "Các động từ chỉ trạng thái như know, need, want, like, have (sở hữu) hiếm khi chia tiếp diễn."
+   ],
+   "tip": "Gạch chân từ chỉ thời gian trước tiên: every → hiện tại đơn; now/at the moment → tiếp diễn; last/ago/yesterday → quá khứ đơn."
+  },
+  {
+   "id": "d5-l2",
+   "title": "2. Hiện tại hoàn thành và các cách nói tương lai",
+   "intro": "Hiện tại hoàn thành nối quá khứ với hiện tại, còn tương lai có tới 3-4 cách nói. TOEIC chỉ hỏi những dấu hiệu rất quen thuộc, bạn nhớ bảng dưới đây là đủ.",
+   "points": [
+    {
+     "rule": "**Hiện tại hoàn thành**: `S + have/has + V3` (V3 = quá khứ phân từ; với động từ thường V3 giống V2, như worked, opened; bất quy tắc: write → written, begin → begun). Dùng khi hành động bắt đầu trong quá khứ và kéo dài đến nay, hoặc đã xong nhưng còn liên quan hiện tại. Chủ ngữ số ít dùng **has**, số nhiều dùng **have**.",
+     "examples": [
+      {
+       "en": "Mr. Kang **has worked** here since 2019.",
+       "vi": "Ông Kang làm việc ở đây từ năm 2019."
+      },
+      {
+       "en": "We **have** already **booked** the venue.",
+       "vi": "Chúng tôi đã đặt xong địa điểm."
+      }
+     ]
+    },
+    {
+     "rule": "Dấu hiệu của hiện tại hoàn thành: **since** + mốc thời gian (since 2020, since May), **for** + khoảng thời gian (for three years), already, yet, just, recently, so far, over the past/last few years, **since + mệnh đề quá khứ** (since the company moved).",
+     "examples": [
+      {
+       "en": "Sales **have increased** steadily over the past three years.",
+       "vi": "Doanh số đã tăng đều trong ba năm qua."
+      },
+      {
+       "en": "The report **has** not **arrived** yet.",
+       "vi": "Báo cáo vẫn chưa đến."
+      }
+     ]
+    },
+    {
+     "rule": "**Quá khứ đơn hay hiện tại hoàn thành?** Có mốc quá khứ xác định (yesterday, last week, ago, in 2020) → quá khứ đơn. Có since/for/already/yet/over the past years → hiện tại hoàn thành.",
+     "examples": [
+      {
+       "en": "We **moved** to this office in 2020. / We **have been** here since 2020.",
+       "vi": "Chúng tôi chuyển đến văn phòng này năm 2020. / Chúng tôi ở đây từ năm 2020."
+      }
+     ]
+    },
+    {
+     "rule": "**Tương lai**: (1) `will + V` — quyết định, hứa hẹn, dự đoán; (2) `am/is/are going to + V` — dự định hoặc có căn cứ rõ ràng; (3) **hiện tại tiếp diễn** — kế hoạch đã sắp xếp (we are meeting …); (4) hiện tại đơn — lịch cố định (The train leaves at 9). Dấu hiệu: tomorrow, next week, soon, in two days, by + mốc tương lai.",
+     "examples": [
+      {
+       "en": "The CEO **will announce** the results next week.",
+       "vi": "Tổng giám đốc sẽ công bố kết quả vào tuần sau."
+      },
+      {
+       "en": "We **are flying** to Tokyo on Monday; the tickets are booked.",
+       "vi": "Chúng tôi sẽ bay đi Tokyo vào thứ Hai; vé đã đặt rồi."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Thì",
+     "Công thức",
+     "Dấu hiệu"
+    ],
+    "rows": [
+     [
+      "Hiện tại hoàn thành",
+      "have/has + V3",
+      "since, for, already, yet, recently, over the past years"
+     ],
+     [
+      "Tương lai (will)",
+      "will + V",
+      "tomorrow, next week, soon, in two days"
+     ],
+     [
+      "Tương lai (dự định)",
+      "be going to + V",
+      "kế hoạch, có căn cứ rõ ràng"
+     ],
+     [
+      "Kế hoạch đã sắp xếp",
+      "am/is/are + V-ing",
+      "next Friday, tomorrow + đã đặt vé/hẹn"
+     ]
+    ]
+   },
+   "traps": [
+    "**Since** + mốc (since 2019) và **for** + khoảng (for six years) khác nhau. Nếu sau since là cả một mệnh đề quá khứ đơn (since he joined the company), thì mệnh đề chính vẫn dùng hiện tại hoàn thành: He **has worked** here since he joined.",
+    "Có yesterday/last year/ago mà chọn have + V3 là bẫy rất phổ biến.",
+    "Sau will luôn là động từ nguyên mẫu: will **send**, không phải will sent/sending."
+   ],
+   "tip": "Thấy since, for + khoảng thời gian, already, yet, recently, over the past… → nghĩ ngay tới have/has + V3."
+  },
+  {
+   "id": "d5-l3",
+   "title": "3. Mệnh đề thời gian và điều kiện loại 1 (if)",
+   "intro": "Mệnh đề (clause) là nhóm từ có chủ ngữ và động từ. Khi một mệnh đề bắt đầu bằng từ chỉ thời gian (when, before…) hoặc điều kiện (if, unless), có một quy tắc \"vàng\" mà TOEIC rất hay hỏi: dù nói về tương lai, ta KHÔNG dùng will trong mệnh đề đó mà dùng hiện tại đơn.",
+   "points": [
+    {
+     "rule": "Mệnh đề thời gian: **when, before, after, as soon as, once, until, by the time** + `S + V(hiện tại)`, mệnh đề chính dùng will. Công thức: `S + will + V + when/before/after + S + V(hiện tại)`.",
+     "examples": [
+      {
+       "en": "We will start **as soon as** everyone **arrives**.",
+       "vi": "Chúng ta sẽ bắt đầu ngay khi mọi người đến."
+      },
+      {
+       "en": "Please call me **before** you **sign** the contract.",
+       "vi": "Vui lòng gọi cho tôi trước khi bạn ký hợp đồng."
+      }
+     ]
+    },
+    {
+     "rule": "Điều kiện loại 1 (khả năng có thật ở tương lai): `If + S + V(hiện tại), S + will + V` hoặc `If + S + V(hiện tại), please + V`. **Unless** = if … not (nếu không), sau unless động từ KHÔNG phủ định.",
+     "examples": [
+      {
+       "en": "If you **have** any questions, please contact the HR office.",
+       "vi": "Nếu bạn có câu hỏi nào, vui lòng liên hệ phòng nhân sự."
+      },
+      {
+       "en": "**Unless** the supplier **confirms** the date, we will postpone the launch.",
+       "vi": "Trừ khi nhà cung cấp xác nhận ngày, chúng tôi sẽ hoãn buổi ra mắt."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Loại từ nối",
+     "Từ",
+     "Động từ sau từ nối"
+    ],
+    "rows": [
+     [
+      "Thời gian",
+      "when, before, after, as soon as, once, until",
+      "hiện tại đơn (không will)"
+     ],
+     [
+      "Điều kiện",
+      "if, unless",
+      "hiện tại đơn (không will)"
+     ],
+     [
+      "Mệnh đề chính",
+      "—",
+      "will + V / please + V"
+     ]
+    ]
+   },
+   "traps": [
+    "**If you will have** / **when he will arrive** là lỗi kinh điển, hãy chọn have / arrives.",
+    "Unless đã mang nghĩa phủ định, nên không viết unless you do not …",
+    "Chủ ngữ số ít (everyone, the manager) thì động từ thêm -s: when everyone arrives."
+   ],
+   "tip": "Có if/when/before/after/as soon as/once/until/unless đứng trước chỗ trống → loại đáp án có will/would, chọn hiện tại đơn (chú ý -s)."
+  },
+  {
+   "id": "d5-l4",
+   "title": "4. Giới từ chỉ thời gian",
+   "intro": "Giới từ (preposition) là từ đứng trước danh từ để chỉ thời gian, nơi chốn… Giới từ thời gian chiếm khá nhiều câu Part 5. Cách học tốt nhất là học theo cặp dễ nhầm.",
+   "points": [
+    {
+     "rule": "**at / on / in**: **at** + giờ, điểm (at 9 a.m., at noon); **on** + thứ, ngày (on Monday, on June 3); **in** + tháng, năm, mùa, buổi (in May, in 2025, in the morning).",
+     "examples": [
+      {
+       "en": "The meeting starts **at** 2 p.m. **on** Thursday.",
+       "vi": "Cuộc họp bắt đầu lúc 2 giờ chiều thứ Năm."
+      },
+      {
+       "en": "The store opened **in** April.",
+       "vi": "Cửa hàng đã khai trương vào tháng Tư."
+      }
+     ]
+    },
+    {
+     "rule": "**by** = muộn nhất là (hạn chót, hành động xảy ra trước hoặc đúng mốc); **until** = cho đến khi (trạng thái kéo dài liên tục tới mốc).",
+     "examples": [
+      {
+       "en": "Please submit the form **by** Friday.",
+       "vi": "Vui lòng nộp mẫu đơn muộn nhất vào thứ Sáu."
+      },
+      {
+       "en": "The office will be closed **until** Monday.",
+       "vi": "Văn phòng sẽ đóng cửa đến thứ Hai."
+      }
+     ]
+    },
+    {
+     "rule": "**for** + khoảng thời gian (for two weeks); **during** + sự kiện/giai đoạn (during the meeting, during the holiday); **within** + khoảng thời gian = trong vòng (within 24 hours); **since** + mốc thời gian = từ khi; **from … to** = từ … đến.",
+     "examples": [
+      {
+       "en": "She will be away **for** two weeks.",
+       "vi": "Cô ấy sẽ vắng mặt hai tuần."
+      },
+      {
+       "en": "Refunds are processed **within** five business days.",
+       "vi": "Tiền hoàn lại được xử lý trong vòng năm ngày làm việc."
+      },
+      {
+       "en": "Our hotline is open **from** 9 a.m. **to** 6 p.m.",
+       "vi": "Đường dây nóng mở từ 9 giờ sáng đến 6 giờ chiều."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Giới từ",
+     "Dùng với",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "at / on / in",
+      "giờ / ngày, thứ / tháng, năm",
+      "at 5 p.m., on Monday, in March"
+     ],
+     [
+      "by / until",
+      "hạn chót / kéo dài đến",
+      "by Friday, until Friday"
+     ],
+     [
+      "for / during",
+      "khoảng thời gian / sự kiện",
+      "for 3 hours, during the break"
+     ],
+     [
+      "within / since",
+      "trong vòng / từ mốc",
+      "within a week, since 2020"
+     ]
+    ]
+   },
+   "traps": [
+    "**by** và **until**: nộp/hoàn thành một việc trước hạn → by; ở lại/đóng cửa/kéo dài liên tục → until.",
+    "**for** + số lượng thời gian (for ten years), **during** + danh từ sự kiện/giai đoạn (during the conference). Không nói during two weeks; muốn nói khoảng thời gian thì dùng for two weeks.",
+    "**since** đi với mốc (since 2018), không đi với khoảng (since ten years là sai)."
+   ],
+   "tip": "Nhìn từ ngay sau chỗ trống: là con số + đơn vị (two weeks) → for/within; là một sự kiện (the meeting) → during; là một thứ/ngày/tháng → on/in."
+  },
+  {
+   "id": "d5-l5",
+   "title": "5. Part 6: chọn thì theo mạch đoạn văn",
+   "intro": "Ở Part 6, chỗ trống nằm trong một đoạn thư, thông báo. Tín hiệu thời gian có thể nằm ở câu trước hoặc câu sau chứ không chỉ trong cùng một câu. Hãy đọc cả đoạn trước khi chọn.",
+   "points": [
+    {
+     "rule": "**Tìm manh mối thời gian trong cả đoạn**: ngày tháng, last week, next month, \"Thank you for your order\" (đã đặt → quá khứ), \"We are pleased to announce…\" (sắp/đang diễn ra).",
+     "examples": [
+      {
+       "en": "Our new store **opens** next week. We **will offer** a 10% discount.",
+       "vi": "Cửa hàng mới sẽ mở vào tuần sau. Chúng tôi sẽ giảm giá 10%."
+      }
+     ]
+    },
+    {
+     "rule": "**Giữ thì nhất quán**: kể sự việc đã xảy ra → quá khứ đơn; nói kế hoạch/ thông báo → will hoặc hiện tại tiếp diễn; kết quả hiện nay của chuyện đã xảy ra → hiện tại hoàn thành.",
+     "examples": [
+      {
+       "en": "We **received** your application on May 2. Our team **is** now **reviewing** it.",
+       "vi": "Chúng tôi đã nhận hồ sơ của bạn ngày 2/5. Nhóm của chúng tôi đang xem xét hồ sơ."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Loại văn bản",
+     "Thì hay gặp",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "Thông báo sự kiện",
+      "will / hiện tại tiếp diễn",
+      "The seminar will begin at 9."
+     ],
+     [
+      "E-mail xác nhận",
+      "quá khứ đơn + will",
+      "You booked … We will send …"
+     ],
+     [
+      "Thư tổng kết",
+      "hiện tại hoàn thành",
+      "Sales have risen since 2022."
+     ]
+    ]
+   },
+   "traps": [
+    "Chỉ nhìn một câu chứa chỗ trống mà bỏ qua câu trước/sau → bỏ lỡ tín hiệu như last Tuesday hay next week."
+   ],
+   "tip": "Đọc câu có chỗ trống, rồi lướt câu liền trước và liền sau tìm ngày tháng hoặc từ chỉ thời gian; thường chỉ cần 5 giây."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d5-p1",
+   "title": "Bài 1: Hiện tại đơn, tiếp diễn, quá khứ đơn",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d5-l1",
+   "items": [
+    {
+     "q": "Ms. Kim ------- the weekly staff meeting every Monday morning.",
+     "options": [
+      "attend",
+      "attends",
+      "attended",
+      "will attend"
+     ],
+     "ans": 1,
+     "why": "'every Monday morning' là thói quen → hiện tại đơn; chủ ngữ Ms. Kim số ít nên cần -s: attends. 'attend' thiếu -s, 'attended' là quá khứ.",
+     "vi": "Cô Kim tham dự cuộc họp nhân viên hằng tuần vào mỗi sáng thứ Hai.",
+     "tag": "tense-present"
+    },
+    {
+     "q": "The shuttle bus ------- the airport at 6:30 every morning.",
+     "options": [
+      "left",
+      "will leave",
+      "has left",
+      "leaves"
+     ],
+     "ans": 3,
+     "why": "'every morning' là thói quen lặp lại → hiện tại đơn: leaves. Các dạng còn lại chỉ quá khứ hoặc tương lai.",
+     "vi": "Xe đưa đón rời sân bay lúc 6:30 mỗi sáng.",
+     "tag": "tense-present"
+    },
+    {
+     "q": "Our sales team ------- a conference call with the Seoul office right now.",
+     "options": [
+      "is holding",
+      "holds",
+      "held",
+      "will hold"
+     ],
+     "ans": 0,
+     "why": "'right now' = đang diễn ra → hiện tại tiếp diễn: is holding. 'holds' là thói quen, không hợp với 'right now'.",
+     "vi": "Nhóm bán hàng của chúng tôi đang có cuộc gọi hội nghị với văn phòng Seoul ngay lúc này.",
+     "tag": "tense-present"
+    },
+    {
+     "q": "The marketing department ------- its quarterly report yesterday afternoon.",
+     "options": [
+      "submits",
+      "will submit",
+      "submitted",
+      "has submitted"
+     ],
+     "ans": 2,
+     "why": "'yesterday afternoon' là mốc quá khứ xác định → quá khứ đơn: submitted. 'has submitted' không dùng với yesterday.",
+     "vi": "Phòng marketing đã nộp báo cáo quý vào chiều hôm qua.",
+     "tag": "tense-past"
+    },
+    {
+     "q": "Mr. Park ------- the keynote speech at last year's convention.",
+     "options": [
+      "delivers",
+      "is delivering",
+      "delivered",
+      "will deliver"
+     ],
+     "ans": 2,
+     "why": "'last year's' chỉ quá khứ → delivered. Hiện tại/tương lai đều sai thời gian.",
+     "vi": "Ông Park đã đọc bài phát biểu chính tại hội nghị năm ngoái.",
+     "tag": "tense-past"
+    },
+    {
+     "q": "At the moment, the company ------- three new branches in Southeast Asia.",
+     "options": [
+      "is opening",
+      "opens",
+      "opened",
+      "has opened"
+     ],
+     "ans": 0,
+     "why": "'At the moment' = đang diễn ra → is opening. 'opened' là quá khứ, 'opens' là thói quen.",
+     "vi": "Hiện tại công ty đang mở ba chi nhánh mới ở Đông Nam Á.",
+     "tag": "tense-present"
+    },
+    {
+     "q": "The workshop ended two hours ago, so the room ------- empty now.",
+     "options": [
+      "was",
+      "will be",
+      "were",
+      "is"
+     ],
+     "ans": 3,
+     "why": "'now' → hiện tại đơn của be: the room is empty now. 'was/were' là quá khứ, sai với 'now' (were còn sai hòa hợp với 'the room').",
+     "vi": "Buổi hội thảo đã kết thúc cách đây hai giờ nên bây giờ căn phòng trống.",
+     "tag": "tense-present"
+    },
+    {
+     "q": "The bank ------- at 9 a.m. and closes at 5 p.m. on weekdays.",
+     "options": [
+      "open",
+      "opens",
+      "opened",
+      "opening"
+     ],
+     "ans": 1,
+     "why": "Lịch cố định → hiện tại đơn; chủ ngữ 'the bank' số ít nên opens, song song với 'closes'. 'open' thiếu -s.",
+     "vi": "Ngân hàng mở cửa lúc 9 giờ sáng và đóng cửa lúc 5 giờ chiều các ngày trong tuần.",
+     "tag": "tense-present"
+    },
+    {
+     "q": "Last month, our supplier ------- the delivery date twice.",
+     "options": [
+      "changed",
+      "changes",
+      "is changing",
+      "will change"
+     ],
+     "ans": 0,
+     "why": "'Last month' → quá khứ đơn: changed.",
+     "vi": "Tháng trước, nhà cung cấp của chúng tôi đã đổi ngày giao hàng hai lần.",
+     "tag": "tense-past"
+    },
+    {
+     "q": "Mr. Alvarez usually ------- his reports by e-mail, but this week he is delivering them by hand.",
+     "options": [
+      "is sending",
+      "sent",
+      "sends",
+      "will send"
+     ],
+     "ans": 2,
+     "why": "'usually' = thói quen → hiện tại đơn: sends. 'is sending' dành cho việc đang xảy ra tạm thời (vế sau 'this week he is delivering').",
+     "vi": "Ông Alvarez thường gửi báo cáo qua e-mail, nhưng tuần này ông đưa tận tay.",
+     "tag": "tense-present"
+    }
+   ]
+  },
+  {
+   "id": "d5-p2",
+   "title": "Bài 2: Hiện tại hoàn thành và tương lai",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d5-l2",
+   "items": [
+    {
+     "q": "We ------- this software since 2020.",
+     "options": [
+      "use",
+      "used",
+      "have used",
+      "are using"
+     ],
+     "ans": 2,
+     "why": "'since 2020' (mốc thời gian đến nay) → have used. 'used' là quá khứ đơn, không đi với since.",
+     "vi": "Chúng tôi đã dùng phần mềm này từ năm 2020.",
+     "tag": "tense-perfect"
+    },
+    {
+     "q": "The Finance Department has already ------- the invoices.",
+     "options": [
+      "approve",
+      "approving",
+      "approved",
+      "approves"
+     ],
+     "ans": 2,
+     "why": "Sau has/have cần V3: has already approved. 'approve/approves/approving' không phải V3.",
+     "vi": "Phòng Tài chính đã phê duyệt các hóa đơn rồi.",
+     "tag": "tense-perfect"
+    },
+    {
+     "q": "Sales ------- steadily for the past three years.",
+     "options": [
+      "have risen",
+      "rose",
+      "will rise",
+      "are rising"
+     ],
+     "ans": 0,
+     "why": "'for the past three years' (kéo dài đến nay) → have risen. 'rose' là quá khứ đã kết thúc.",
+     "vi": "Doanh số đã tăng đều trong ba năm qua.",
+     "tag": "tense-perfect"
+    },
+    {
+     "q": "Ms. Tan ------- with the company for ten years now.",
+     "options": [
+      "worked",
+      "works",
+      "will work",
+      "has worked"
+     ],
+     "ans": 3,
+     "why": "'for ten years now' = kéo dài từ quá khứ đến bây giờ → hiện tại hoàn thành: has worked (Ms. Tan số ít → has). 'worked' là quá khứ đã kết thúc, sai với 'now'; 'works' không đi với for + khoảng.",
+     "vi": "Cô Tan đã làm việc cho công ty được mười năm rồi.",
+     "tag": "tense-perfect"
+    },
+    {
+     "q": "Since January, the airline ------- its baggage policy twice.",
+     "options": [
+      "changed",
+      "has changed",
+      "changes",
+      "will change"
+     ],
+     "ans": 1,
+     "why": "'Since January' → hiện tại hoàn thành: has changed. 'changed' không đi với since.",
+     "vi": "Từ tháng Một, hãng hàng không đã thay đổi chính sách hành lý hai lần.",
+     "tag": "tense-perfect"
+    },
+    {
+     "q": "The shipment ------- arrived yet, so please do not unpack the boxes.",
+     "options": [
+      "has not",
+      "did not",
+      "does not",
+      "will not"
+     ],
+     "ans": 0,
+     "why": "'yet' đi với hiện tại hoàn thành: has not arrived yet. Các dạng khác ghép với 'arrived' sai ngữ pháp (did not + V nguyên mẫu).",
+     "vi": "Lô hàng vẫn chưa đến nên vui lòng đừng mở các thùng.",
+     "tag": "tense-perfect"
+    },
+    {
+     "q": "I have already bought the tickets, so we ------- to Tokyo next Friday.",
+     "options": [
+      "flew",
+      "have flown",
+      "are flying",
+      "were flying"
+     ],
+     "ans": 2,
+     "why": "'next Friday' là tương lai và vé đã mua (kế hoạch sắp xếp) → hiện tại tiếp diễn chỉ tương lai: are flying. Các dạng khác là quá khứ.",
+     "vi": "Tôi đã mua vé rồi nên chúng ta sẽ bay đi Tokyo vào thứ Sáu tới.",
+     "tag": "tense-future"
+    },
+    {
+     "q": "Ms. Lee ------- on a business trip next week, so please send documents to her assistant.",
+     "options": [
+      "was",
+      "will be",
+      "has been",
+      "had been"
+     ],
+     "ans": 1,
+     "why": "'next week' → tương lai: will be. 'was/has been/had been' đều nói về quá khứ.",
+     "vi": "Cô Lee sẽ đi công tác vào tuần sau nên vui lòng gửi tài liệu cho trợ lý của cô.",
+     "tag": "tense-future"
+    },
+    {
+     "q": "Since the merger, the number of employees ------- from 200 to 350.",
+     "options": [
+      "grew",
+      "grows",
+      "will grow",
+      "has grown"
+     ],
+     "ans": 3,
+     "why": "'Since the merger' → hiện tại hoàn thành; 'the number' số ít → has grown. 'grew' sai vì since + quá khứ đơn ở mệnh đề chính không đúng.",
+     "vi": "Từ sau vụ sáp nhập, số nhân viên đã tăng từ 200 lên 350.",
+     "tag": "tense-perfect"
+    }
+   ]
+  },
+  {
+   "id": "d5-p3",
+   "title": "Bài 3: Mệnh đề thời gian và if",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d5-l3",
+   "items": [
+    {
+     "q": "If you ------- any questions about the schedule, please contact Ms. Reyes.",
+     "options": [
+      "have",
+      "will have",
+      "would have",
+      "had"
+     ],
+     "ans": 0,
+     "why": "Mệnh đề 'if' loại 1 dùng hiện tại đơn, không dùng will: have.",
+     "vi": "Nếu bạn có câu hỏi nào về lịch trình, vui lòng liên hệ cô Reyes.",
+     "tag": "conditional"
+    },
+    {
+     "q": "We will start the presentation as soon as everyone ------- .",
+     "options": [
+      "will arrive",
+      "would arrive",
+      "arrived",
+      "arrives"
+     ],
+     "ans": 3,
+     "why": "Sau 'as soon as' dùng hiện tại đơn thay tương lai; 'everyone' số ít → arrives.",
+     "vi": "Chúng ta sẽ bắt đầu bài thuyết trình ngay khi mọi người đến.",
+     "tag": "time-clause"
+    },
+    {
+     "q": "Please call me before you ------- the contract.",
+     "options": [
+      "will sign",
+      "sign",
+      "signed",
+      "would sign"
+     ],
+     "ans": 1,
+     "why": "Sau 'before' dùng hiện tại đơn: sign (you → không -s).",
+     "vi": "Vui lòng gọi tôi trước khi bạn ký hợp đồng.",
+     "tag": "time-clause"
+    },
+    {
+     "q": "Unless the supplier ------- the delivery date, we will have to postpone the launch.",
+     "options": [
+      "confirms",
+      "will confirm",
+      "confirmed",
+      "confirming"
+     ],
+     "ans": 0,
+     "why": "Sau 'unless' dùng hiện tại đơn, chủ ngữ số ít → confirms.",
+     "vi": "Trừ khi nhà cung cấp xác nhận ngày giao hàng, chúng tôi sẽ phải hoãn buổi ra mắt.",
+     "tag": "conditional"
+    },
+    {
+     "q": "Once the manager ------- the proposal, we will begin hiring.",
+     "options": [
+      "will review",
+      "reviewed",
+      "reviews",
+      "would review"
+     ],
+     "ans": 2,
+     "why": "'Once' là từ nối thời gian → hiện tại đơn: reviews; không dùng will.",
+     "vi": "Khi quản lý xem xét xong đề xuất, chúng tôi sẽ bắt đầu tuyển dụng.",
+     "tag": "time-clause"
+    },
+    {
+     "q": "When the new employees ------- tomorrow, Ms. Han will give them a tour.",
+     "options": [
+      "will arrive",
+      "arrive",
+      "arrived",
+      "would arrive"
+     ],
+     "ans": 1,
+     "why": "'When' + tương lai dùng hiện tại đơn; employees số nhiều → arrive. 'arrived' là quá khứ, sai với 'tomorrow'.",
+     "vi": "Khi nhân viên mới đến vào ngày mai, cô Han sẽ dẫn họ đi tham quan.",
+     "tag": "time-clause"
+    },
+    {
+     "q": "If it ------- heavily this weekend, the organizers will move the festival indoors.",
+     "options": [
+      "will rain",
+      "rained",
+      "would rain",
+      "rains"
+     ],
+     "ans": 3,
+     "why": "Điều kiện loại 1: If + hiện tại đơn → rains.",
+     "vi": "Nếu cuối tuần này mưa lớn, ban tổ chức sẽ chuyển lễ hội vào trong nhà.",
+     "tag": "conditional"
+    },
+    {
+     "q": "Please let us know if you ------- unable to attend.",
+     "options": [
+      "will be",
+      "are",
+      "would be",
+      "being"
+     ],
+     "ans": 1,
+     "why": "Sau 'if' dùng hiện tại đơn của be: you are. 'will be' sai quy tắc.",
+     "vi": "Xin cho chúng tôi biết nếu bạn không thể tham dự.",
+     "tag": "conditional"
+    },
+    {
+     "q": "Do not use the copier until the technician ------- the repair.",
+     "options": [
+      "will finish",
+      "finished",
+      "would finish",
+      "finishes"
+     ],
+     "ans": 3,
+     "why": "Sau 'until' dùng hiện tại đơn; the technician số ít → finishes.",
+     "vi": "Đừng dùng máy photocopy cho đến khi kỹ thuật viên sửa xong.",
+     "tag": "time-clause"
+    }
+   ]
+  },
+  {
+   "id": "d5-p4",
+   "title": "Bài 4: Giới từ thời gian và Part 6",
+   "instr": "Chọn đáp án đúng để hoàn thành câu hoặc đoạn văn.",
+   "lesson": "d5-l4",
+   "items": [
+    {
+     "q": "Please submit the registration form ------- Friday at the latest.",
+     "options": [
+      "until",
+      "during",
+      "for",
+      "by"
+     ],
+     "ans": 3,
+     "why": "Nộp trước một hạn chót ('at the latest') → by. 'until' dùng cho trạng thái kéo dài.",
+     "vi": "Vui lòng nộp mẫu đăng ký chậm nhất là thứ Sáu.",
+     "tag": "preposition"
+    },
+    {
+     "q": "The store will remain closed ------- next Monday.",
+     "options": [
+      "until",
+      "by",
+      "within",
+      "since"
+     ],
+     "ans": 0,
+     "why": "Trạng thái 'đóng cửa' kéo dài liên tục đến một mốc → until. 'by' dành cho hành động hoàn thành trước hạn.",
+     "vi": "Cửa hàng sẽ tiếp tục đóng cửa đến thứ Hai tới.",
+     "tag": "preposition"
+    },
+    {
+     "q": "The CEO will be away ------- two weeks.",
+     "options": [
+      "during",
+      "since",
+      "for",
+      "within"
+     ],
+     "ans": 2,
+     "why": "Sau chỗ trống là khoảng thời gian (two weeks) → for. 'during' đi với sự kiện.",
+     "vi": "Tổng giám đốc sẽ vắng mặt hai tuần.",
+     "tag": "preposition"
+    },
+    {
+     "q": "Please remain seated ------- the presentation.",
+     "options": [
+      "by",
+      "within",
+      "during",
+      "since"
+     ],
+     "ans": 2,
+     "why": "'the presentation' là một sự kiện → during (trong suốt). 'by' là hạn chót, 'since' cần mốc thời gian và hiện tại hoàn thành.",
+     "vi": "Vui lòng ngồi yên trong suốt buổi thuyết trình.",
+     "tag": "preposition"
+    },
+    {
+     "q": "The courier promised to deliver the package ------- 24 hours.",
+     "options": [
+      "within",
+      "during",
+      "until",
+      "since"
+     ],
+     "ans": 0,
+     "why": "'within' + khoảng thời gian = trong vòng 24 giờ. 'during' không đi với số giờ đếm.",
+     "vi": "Bên chuyển phát hứa giao gói hàng trong vòng 24 giờ.",
+     "tag": "preposition"
+    },
+    {
+     "q": "Our office is open ------- 9 a.m. to 5 p.m.",
+     "options": [
+      "since",
+      "by",
+      "during",
+      "from"
+     ],
+     "ans": 3,
+     "why": "Cấu trúc 'from … to …' = từ … đến …. 'since' đi với mốc tới hiện tại, không có 'to'.",
+     "vi": "Văn phòng của chúng tôi mở cửa từ 9 giờ sáng đến 5 giờ chiều.",
+     "tag": "preposition"
+    },
+    {
+     "q": "The training session is scheduled ------- Tuesday, March 4.",
+     "options": [
+      "at",
+      "on",
+      "in",
+      "by"
+     ],
+     "ans": 1,
+     "why": "Trước thứ/ngày cụ thể dùng on: on Tuesday, March 4.",
+     "vi": "Buổi tập huấn được lên lịch vào thứ Ba, ngày 4 tháng 3.",
+     "tag": "preposition"
+    },
+    {
+     "q": "Mr. Doyle has been the sales director ------- 2019.",
+     "options": [
+      "since",
+      "for",
+      "from",
+      "during"
+     ],
+     "ans": 0,
+     "why": "2019 là một mốc thời gian và có has been → since. 'for' cần khoảng thời gian (for five years).",
+     "vi": "Ông Doyle là giám đốc kinh doanh từ năm 2019.",
+     "tag": "preposition"
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "examined",
+      "have examined",
+      "are examining",
+      "examine"
+     ],
+     "ans": 2,
+     "why": "Có 'now' và 'expect to finish by noon' → việc đang diễn ra: are examining.",
+     "vi": "Các kỹ thuật viên hiện đang kiểm tra sự cố và dự kiến xong trước trưa.",
+     "tag": "part6-tense",
+     "ctx": "Notice to all staff: The elevator in Building B is out of order. Technicians ------- the problem now and expect to finish by noon. Please use the stairs in the meantime."
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "completes",
+      "completed",
+      "will complete",
+      "is completing"
+     ],
+     "ans": 1,
+     "why": "'last night' là mốc quá khứ → completed.",
+     "vi": "Cửa hàng trực tuyến của chúng tôi đã hoàn tất một đợt nâng cấp lớn vào tối qua.",
+     "tag": "part6-tense",
+     "ctx": "To all customers: Our online store ------- a major upgrade last night. If you notice any problems when you log in, please contact our support team."
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "will book",
+      "booked",
+      "would book",
+      "book"
+     ],
+     "ans": 3,
+     "why": "Sau 'Once' (từ nối thời gian) dùng hiện tại đơn: you book.",
+     "vi": "Khi bạn đặt chuyến bay, vui lòng gửi lịch trình cho cô Wu.",
+     "tag": "part6-tense",
+     "ctx": "Memo: The annual sales meeting will take place in Chicago on June 12. Once you ------- your flight, please send the itinerary to Ms. Wu so that she can arrange your hotel."
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "reduced",
+      "has reduced",
+      "will reduce",
+      "reduces"
+     ],
+     "ans": 1,
+     "why": "'Since the first warehouse opened in 2015' → mệnh đề chính hiện tại hoàn thành: has reduced.",
+     "vi": "Từ khi nhà kho đầu tiên mở năm 2015, công ty đã giảm thời gian giao hàng 30%.",
+     "tag": "part6-tense",
+     "ctx": "We are pleased to announce that Hartwell Logistics has opened a second warehouse in Denver. Since the first warehouse opened in 2015, the company ------- its delivery time by 30 percent. The new facility should improve it further."
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Hội họp, lịch trình & sự kiện",
+  "words": [
+   {
+    "w": "agenda",
+    "pos": "n",
+    "ipa": "/əˈdʒendə/",
+    "vi": "chương trình nghị sự",
+    "ex": "The first item on the agenda is the budget.",
+    "exvi": "Mục đầu tiên trong chương trình nghị sự là ngân sách.",
+    "fam": "—",
+    "colloc": [
+     "set the agenda",
+     "on the agenda"
+    ]
+   },
+   {
+    "w": "attend",
+    "pos": "v",
+    "ipa": "/əˈtend/",
+    "vi": "tham dự",
+    "ex": "All managers must attend the briefing.",
+    "exvi": "Tất cả quản lý phải tham dự buổi thông tin.",
+    "fam": "attendee (n), attendance (n)",
+    "colloc": [
+     "attend a meeting",
+     "attend a seminar"
+    ]
+   },
+   {
+    "w": "attendee",
+    "pos": "n",
+    "ipa": "/ˌætenˈdiː/",
+    "vi": "người tham dự",
+    "ex": "Each attendee will receive a name tag.",
+    "exvi": "Mỗi người tham dự sẽ nhận một thẻ tên.",
+    "fam": "attend (v), attendance (n)",
+    "colloc": [
+     "conference attendee",
+     "registered attendee"
+    ]
+   },
+   {
+    "w": "postpone",
+    "pos": "v",
+    "ipa": "/pəʊstˈpəʊn/",
+    "vi": "hoãn lại",
+    "ex": "We had to postpone the launch until June.",
+    "exvi": "Chúng tôi phải hoãn buổi ra mắt đến tháng Sáu.",
+    "fam": "postponement (n)",
+    "colloc": [
+     "postpone a meeting",
+     "postpone until"
+    ]
+   },
+   {
+    "w": "reschedule",
+    "pos": "v",
+    "ipa": "/ˌriːˈskedʒuːl/",
+    "vi": "dời lịch",
+    "ex": "Can we reschedule the call for Thursday?",
+    "exvi": "Chúng ta có thể dời cuộc gọi sang thứ Năm không?",
+    "fam": "schedule (n, v)",
+    "colloc": [
+     "reschedule an appointment",
+     "reschedule for"
+    ]
+   },
+   {
+    "w": "deadline",
+    "pos": "n",
+    "ipa": "/ˈdedlaɪn/",
+    "vi": "hạn chót",
+    "ex": "The deadline for applications is May 15.",
+    "exvi": "Hạn chót nộp hồ sơ là ngày 15 tháng 5.",
+    "fam": "—",
+    "colloc": [
+     "meet a deadline",
+     "extend the deadline"
+    ]
+   },
+   {
+    "w": "venue",
+    "pos": "n",
+    "ipa": "/ˈvenjuː/",
+    "vi": "địa điểm tổ chức",
+    "ex": "The venue can hold up to 500 people.",
+    "exvi": "Địa điểm có thể chứa đến 500 người.",
+    "fam": "—",
+    "colloc": [
+     "event venue",
+     "book a venue"
+    ]
+   },
+   {
+    "w": "itinerary",
+    "pos": "n",
+    "ipa": "/aɪˈtɪnərəri/",
+    "vi": "lịch trình chuyến đi",
+    "ex": "Please check your itinerary before you leave.",
+    "exvi": "Vui lòng kiểm tra lịch trình trước khi bạn khởi hành.",
+    "fam": "—",
+    "colloc": [
+     "travel itinerary",
+     "detailed itinerary"
+    ]
+   },
+   {
+    "w": "keynote",
+    "pos": "n",
+    "ipa": "/ˈkiːnəʊt/",
+    "vi": "bài phát biểu chính",
+    "ex": "The keynote speaker will begin at 9 a.m.",
+    "exvi": "Diễn giả chính sẽ bắt đầu lúc 9 giờ sáng.",
+    "fam": "—",
+    "colloc": [
+     "keynote speaker",
+     "keynote address"
+    ]
+   },
+   {
+    "w": "session",
+    "pos": "n",
+    "ipa": "/ˈseʃn/",
+    "vi": "phiên, buổi (họp, tập huấn)",
+    "ex": "The afternoon session focuses on customer service.",
+    "exvi": "Buổi chiều tập trung vào dịch vụ khách hàng.",
+    "fam": "—",
+    "colloc": [
+     "training session",
+     "afternoon session"
+    ]
+   },
+   {
+    "w": "register",
+    "pos": "v",
+    "ipa": "/ˈredʒɪstə/",
+    "vi": "đăng ký",
+    "ex": "You must register before the end of the week.",
+    "exvi": "Bạn phải đăng ký trước cuối tuần.",
+    "fam": "registration (n)",
+    "colloc": [
+     "register for",
+     "register online"
+    ]
+   },
+   {
+    "w": "conference",
+    "pos": "n",
+    "ipa": "/ˈkɒnfərəns/",
+    "vi": "hội nghị",
+    "ex": "The conference takes place in Singapore this year.",
+    "exvi": "Hội nghị năm nay diễn ra ở Singapore.",
+    "fam": "confer (v)",
+    "colloc": [
+     "hold a conference",
+     "conference call"
+    ]
+   },
+   {
+    "w": "adjourn",
+    "pos": "v",
+    "ipa": "/əˈdʒɜːn/",
+    "vi": "bế mạc, tạm hoãn (cuộc họp)",
+    "ex": "The chairperson adjourned the meeting at noon.",
+    "exvi": "Chủ tọa đã bế mạc cuộc họp vào buổi trưa.",
+    "fam": "adjournment (n)",
+    "colloc": [
+     "adjourn the meeting",
+     "adjourn until"
+    ]
+   },
+   {
+    "w": "convene",
+    "pos": "v",
+    "ipa": "/kənˈviːn/",
+    "vi": "triệu tập, họp",
+    "ex": "The board will convene on Monday.",
+    "exvi": "Hội đồng quản trị sẽ họp vào thứ Hai.",
+    "fam": "convention (n)",
+    "colloc": [
+     "convene a meeting",
+     "convene a committee"
+    ]
+   },
+   {
+    "w": "minutes",
+    "pos": "n",
+    "ipa": "/ˈmɪnɪts/",
+    "vi": "biên bản cuộc họp",
+    "ex": "Ms. Brown will take the minutes.",
+    "exvi": "Cô Brown sẽ ghi biên bản.",
+    "fam": "—",
+    "colloc": [
+     "take the minutes",
+     "meeting minutes"
+    ]
+   },
+   {
+    "w": "participant",
+    "pos": "n",
+    "ipa": "/pɑːˈtɪsɪpənt/",
+    "vi": "người tham gia",
+    "ex": "Every participant received a certificate.",
+    "exvi": "Mỗi người tham gia đều nhận chứng chỉ.",
+    "fam": "participate (v), participation (n)",
+    "colloc": [
+     "workshop participant",
+     "active participant"
+    ]
+   },
+   {
+    "w": "organize",
+    "pos": "v",
+    "ipa": "/ˈɔːɡənaɪz/",
+    "vi": "tổ chức, sắp xếp",
+    "ex": "Ms. Ito organized the annual company picnic.",
+    "exvi": "Cô Ito đã tổ chức buổi dã ngoại thường niên của công ty.",
+    "fam": "organizer (n), organization (n)",
+    "colloc": [
+     "organize an event",
+     "well organized"
+    ]
+   },
+   {
+    "w": "confirm",
+    "pos": "v",
+    "ipa": "/kənˈfɜːm/",
+    "vi": "xác nhận",
+    "ex": "Please confirm your attendance by e-mail.",
+    "exvi": "Vui lòng xác nhận sự tham dự của bạn qua e-mail.",
+    "fam": "confirmation (n)",
+    "colloc": [
+     "confirm a reservation",
+     "confirm receipt"
+    ]
+   },
+   {
+    "w": "availability",
+    "pos": "n",
+    "ipa": "/əˌveɪləˈbɪləti/",
+    "vi": "lịch rảnh, sự sẵn có",
+    "ex": "Please send me your availability for next week.",
+    "exvi": "Vui lòng gửi cho tôi lịch rảnh của bạn tuần tới.",
+    "fam": "available (adj), unavailable (adj)",
+    "colloc": [
+     "check availability",
+     "subject to availability"
+    ]
+   },
+   {
+    "w": "conflict",
+    "pos": "n",
+    "ipa": "/ˈkɒnflɪkt/",
+    "vi": "sự xung đột (lịch)",
+    "ex": "I have a schedule conflict on Tuesday.",
+    "exvi": "Tôi bị trùng lịch vào thứ Ba.",
+    "fam": "conflict (v), conflicting (adj)",
+    "colloc": [
+     "schedule conflict",
+     "resolve a conflict"
+    ]
+   },
+   {
+    "w": "invitation",
+    "pos": "n",
+    "ipa": "/ˌɪnvɪˈteɪʃn/",
+    "vi": "lời mời, thư mời",
+    "ex": "We sent invitations to all our clients.",
+    "exvi": "Chúng tôi đã gửi thư mời cho tất cả khách hàng.",
+    "fam": "invite (v)",
+    "colloc": [
+     "send an invitation",
+     "accept an invitation"
+    ]
+   },
+   {
+    "w": "reminder",
+    "pos": "n",
+    "ipa": "/rɪˈmaɪndə/",
+    "vi": "lời nhắc",
+    "ex": "This is a reminder about tomorrow's meeting.",
+    "exvi": "Đây là lời nhắc về cuộc họp ngày mai.",
+    "fam": "remind (v)",
+    "colloc": [
+     "send a reminder",
+     "friendly reminder"
+    ]
+   },
+   {
+    "w": "upcoming",
+    "pos": "adj",
+    "ipa": "/ˈʌpkʌmɪŋ/",
+    "vi": "sắp tới",
+    "ex": "Please prepare for the upcoming audit.",
+    "exvi": "Vui lòng chuẩn bị cho đợt kiểm toán sắp tới.",
+    "fam": "—",
+    "colloc": [
+     "upcoming event",
+     "upcoming meeting"
+    ]
+   },
+   {
+    "w": "tentative",
+    "pos": "adj",
+    "ipa": "/ˈtentətɪv/",
+    "vi": "tạm thời, chưa chắc chắn",
+    "ex": "The schedule is still tentative.",
+    "exvi": "Lịch trình vẫn còn là tạm thời.",
+    "fam": "tentatively (adv)",
+    "colloc": [
+     "tentative schedule",
+     "tentative agreement"
+    ]
+   },
+   {
+    "w": "punctual",
+    "pos": "adj",
+    "ipa": "/ˈpʌŋktʃuəl/",
+    "vi": "đúng giờ",
+    "ex": "Please be punctual; the session starts at 8:00.",
+    "exvi": "Vui lòng đúng giờ; buổi họp bắt đầu lúc 8:00.",
+    "fam": "punctually (adv), punctuality (n)",
+    "colloc": [
+     "be punctual",
+     "punctual arrival"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "The ------- for Thursday's meeting includes the budget review and hiring plans.",
+   "options": [
+    "agenda",
+    "venue",
+    "minutes",
+    "itinerary"
+   ],
+   "ans": 0,
+   "why": "'agenda' là chương trình nghị sự liệt kê các mục của cuộc họp. 'venue' là địa điểm, 'minutes' là biên bản.",
+   "vi": "Chương trình nghị sự cho cuộc họp thứ Năm gồm xem lại ngân sách và kế hoạch tuyển dụng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Because of the storm, the board decided to ------- the meeting until next week.",
+   "options": [
+    "attend",
+    "register",
+    "postpone",
+    "confirm"
+   ],
+   "ans": 2,
+   "why": "'postpone ... until' = hoãn đến. 'attend' là tham dự, không nối với 'until next week'.",
+   "vi": "Vì cơn bão, hội đồng quyết định hoãn cuộc họp đến tuần sau.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- for the conference is the Grand Plaza Hotel.",
+   "options": [
+    "agenda",
+    "deadline",
+    "venue",
+    "reminder"
+   ],
+   "ans": 2,
+   "why": "Khách sạn là địa điểm → venue.",
+   "vi": "Địa điểm tổ chức hội nghị là khách sạn Grand Plaza.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Ms. Chen took the ------- during the board meeting and sent them to everyone.",
+   "options": [
+    "minutes",
+    "sessions",
+    "itineraries",
+    "deadlines"
+   ],
+   "ans": 0,
+   "why": "'take the minutes' = ghi biên bản, cụm cố định.",
+   "vi": "Cô Chen ghi biên bản trong cuộc họp hội đồng và gửi cho mọi người.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please ------- your attendance by replying to this e-mail before Friday.",
+   "options": [
+    "adjourn",
+    "postpone",
+    "convene",
+    "confirm"
+   ],
+   "ans": 3,
+   "why": "'confirm your attendance' = xác nhận sự tham dự. 'adjourn/convene' dùng cho cuộc họp, không dùng cho attendance.",
+   "vi": "Vui lòng xác nhận sự tham dự bằng cách trả lời e-mail này trước thứ Sáu.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- speaker, Dr. Lopez, will open the conference with a talk on customer trends.",
+   "options": [
+    "tentative",
+    "keynote",
+    "punctual",
+    "overdue"
+   ],
+   "ans": 1,
+   "why": "\"keynote speaker\" = diễn giả chính, người phát biểu mở màn hội nghị (cụm cố định). tentative (tạm thời), punctual (đúng giờ), overdue (quá hạn) không đi với \"speaker\" theo nghĩa này.",
+   "vi": "Diễn giả chính, tiến sĩ Lopez, sẽ khai mạc hội nghị bằng bài nói về xu hướng khách hàng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Over 300 ------- are expected at the trade show.",
+   "options": [
+    "attendees",
+    "attendance",
+    "attends",
+    "attended"
+   ],
+   "ans": 0,
+   "why": "Sau số 300 cần danh từ số nhiều chỉ người → attendees. 'attendance' là sự tham dự (không đếm được, không đi với 300).",
+   "vi": "Dự kiến hơn 300 người tham dự hội chợ thương mại.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Early ------- for the workshop closes on October 15.",
+   "options": [
+    "register",
+    "registered",
+    "registration",
+    "registers"
+   ],
+   "ans": 2,
+   "why": "Sau tính từ 'Early' cần danh từ làm chủ ngữ → registration.",
+   "vi": "Đăng ký sớm cho hội thảo sẽ đóng vào ngày 15 tháng 10.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Mr. Dunn is always ------- , so he never misses the start of a meeting.",
+   "options": [
+    "tentative",
+    "punctual",
+    "upcoming",
+    "keynote"
+   ],
+   "ans": 1,
+   "why": "Nghĩa 'không bao giờ trễ' → punctual (đúng giờ).",
+   "vi": "Ông Dunn luôn đúng giờ nên không bao giờ bỏ lỡ phần mở đầu cuộc họp.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please send me your ------- for next week so that I can avoid any schedule conflicts.",
+   "options": [
+    "minutes",
+    "venue",
+    "keynote",
+    "availability"
+   ],
+   "ans": 3,
+   "why": "'availability' = lịch rảnh, hợp với việc tránh trùng lịch.",
+   "vi": "Vui lòng gửi cho tôi lịch rảnh của bạn tuần tới để tôi tránh trùng lịch.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "The finance team usually ------- the monthly budget on the first Monday of each month.",
+   "options": [
+    "review",
+    "reviewed",
+    "is reviewing",
+    "reviews"
+   ],
+   "ans": 3,
+   "why": "'usually' + 'each month' là thói quen → hiện tại đơn; the finance team số ít → reviews.",
+   "vi": "Nhóm tài chính thường xem lại ngân sách vào thứ Hai đầu mỗi tháng.",
+   "tag": "tense-present"
+  },
+  {
+   "q": "Ms. Alvarez ------- the contract with the supplier two days ago.",
+   "options": [
+    "signs",
+    "signed",
+    "has signed",
+    "will sign"
+   ],
+   "ans": 1,
+   "why": "'two days ago' → quá khứ đơn: signed. 'has signed' không đi với ago.",
+   "vi": "Cô Alvarez đã ký hợp đồng với nhà cung cấp cách đây hai ngày.",
+   "tag": "tense-past"
+  },
+  {
+   "q": "The company ------- over 200 new employees since it expanded into Asia.",
+   "options": [
+    "has hired",
+    "hired",
+    "hires",
+    "will hire"
+   ],
+   "ans": 0,
+   "why": "Mệnh đề 'since it expanded' → mệnh đề chính hiện tại hoàn thành: has hired.",
+   "vi": "Công ty đã tuyển hơn 200 nhân viên mới kể từ khi mở rộng sang châu Á.",
+   "tag": "tense-perfect"
+  },
+  {
+   "q": "The new CEO ------- the staff at 10 a.m. tomorrow.",
+   "options": [
+    "addressed",
+    "has addressed",
+    "will address",
+    "was addressing"
+   ],
+   "ans": 2,
+   "why": "'tomorrow' → tương lai: will address. Các dạng còn lại thuộc quá khứ.",
+   "vi": "Tổng giám đốc mới sẽ phát biểu với nhân viên lúc 10 giờ sáng mai.",
+   "tag": "tense-future"
+  },
+  {
+   "q": "Please keep quiet; the board ------- an important decision at the moment.",
+   "options": [
+    "makes",
+    "is making",
+    "made",
+    "has made"
+   ],
+   "ans": 1,
+   "why": "'at the moment' → hiện tại tiếp diễn: is making. 'has made' không hợp với 'at the moment'.",
+   "vi": "Xin giữ yên lặng; hội đồng đang đưa ra một quyết định quan trọng.",
+   "tag": "tense-present"
+  },
+  {
+   "q": "We will send you a confirmation e-mail as soon as we ------- your payment.",
+   "options": [
+    "will receive",
+    "received",
+    "would receive",
+    "receive"
+   ],
+   "ans": 3,
+   "why": "Sau 'as soon as' dùng hiện tại đơn: receive (we → không -s).",
+   "vi": "Chúng tôi sẽ gửi e-mail xác nhận ngay khi nhận được khoản thanh toán của bạn.",
+   "tag": "time-clause"
+  },
+  {
+   "q": "If the keynote speaker ------- late, we will start with the panel discussion.",
+   "options": [
+    "will arrive",
+    "arrives",
+    "arriving",
+    "would arrive"
+   ],
+   "ans": 1,
+   "why": "Điều kiện loại 1: If + hiện tại đơn; speaker số ít → arrives.",
+   "vi": "Nếu diễn giả chính đến muộn, chúng ta sẽ bắt đầu bằng phần thảo luận chung.",
+   "tag": "conditional"
+  },
+  {
+   "q": "Unless you ------- a different date, the interview will take place on Wednesday.",
+   "options": [
+    "will request",
+    "requested",
+    "requesting",
+    "request"
+   ],
+   "ans": 3,
+   "why": "Sau 'unless' dùng hiện tại đơn: you request.",
+   "vi": "Trừ khi bạn yêu cầu ngày khác, buổi phỏng vấn sẽ diễn ra vào thứ Tư.",
+   "tag": "conditional"
+  },
+  {
+   "q": "All expense reports are due ------- the end of this week.",
+   "options": [
+    "by",
+    "until",
+    "during",
+    "for"
+   ],
+   "ans": 0,
+   "why": "'due' = đến hạn → by (hạn chót). 'until' dùng cho việc kéo dài.",
+   "vi": "Mọi báo cáo chi phí đến hạn chậm nhất vào cuối tuần này.",
+   "tag": "preposition"
+  },
+  {
+   "q": "The online sale will continue ------- the end of the month.",
+   "options": [
+    "by",
+    "during",
+    "until",
+    "within"
+   ],
+   "ans": 2,
+   "why": "'continue' (kéo dài liên tục) → until. 'by' dành cho hạn hoàn thành.",
+   "vi": "Đợt giảm giá trực tuyến sẽ kéo dài đến cuối tháng.",
+   "tag": "preposition"
+  },
+  {
+   "q": "You will receive a refund ------- five business days of your request.",
+   "options": [
+    "during",
+    "for",
+    "within",
+    "since"
+   ],
+   "ans": 2,
+   "why": "'within five business days' = trong vòng năm ngày làm việc.",
+   "vi": "Bạn sẽ nhận được tiền hoàn lại trong vòng năm ngày làm việc kể từ yêu cầu.",
+   "tag": "preposition"
+  },
+  {
+   "q": "The office was closed ------- the national holiday.",
+   "options": [
+    "during",
+    "by",
+    "within",
+    "since"
+   ],
+   "ans": 0,
+   "why": "'the national holiday' là một sự kiện/giai đoạn → during. 'by' là hạn chót; 'since' cần hiện tại hoàn thành (has been closed since…).",
+   "vi": "Văn phòng đã đóng cửa trong kỳ nghỉ lễ quốc gia.",
+   "tag": "preposition"
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "book",
+    "will book",
+    "are booking",
+    "booked"
+   ],
+   "ans": 3,
+   "why": "'last Tuesday' là mốc quá khứ → booked.",
+   "vi": "Bạn đã đặt phòng thứ Ba tuần trước qua trang web của chúng tôi.",
+   "tag": "part6-tense",
+   "ctx": "Dear Mr. Silva, This e-mail confirms your reservation at the Bayview Hotel. You ------- the room last Tuesday through our website, and your booking number is B-4471."
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "extended",
+    "will extend",
+    "has extended",
+    "was extending"
+   ],
+   "ans": 1,
+   "why": "'Starting next Monday' và câu sau 'It will open…' → tương lai: will extend.",
+   "vi": "Từ thứ Hai tới, thư viện sẽ kéo dài giờ mở cửa.",
+   "tag": "part6-tense",
+   "ctx": "Starting next Monday, the library ------- its opening hours. It will open at 8 a.m. instead of 9 a.m."
+  },
+  {
+   "q": "Please check the ------- before you book hotels; it shows the exact flight times.",
+   "options": [
+    "itinerary",
+    "minutes",
+    "venue",
+    "agenda"
+   ],
+   "ans": 0,
+   "why": "'itinerary' là lịch trình chuyến đi, có giờ bay.",
+   "vi": "Vui lòng kiểm tra lịch trình trước khi đặt khách sạn; nó cho biết giờ bay chính xác.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The training ------- on customer service starts at 2 p.m. in Room 5.",
+   "options": [
+    "minutes",
+    "deadline",
+    "session",
+    "venue"
+   ],
+   "ans": 2,
+   "why": "'training session' = buổi tập huấn.",
+   "vi": "Buổi tập huấn về dịch vụ khách hàng bắt đầu lúc 2 giờ chiều ở Phòng 5.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Owing to a schedule -------, I cannot attend the 3 p.m. meeting.",
+   "options": [
+    "agenda",
+    "conflict",
+    "reminder",
+    "invitation"
+   ],
+   "ans": 1,
+   "why": "'schedule conflict' = trùng lịch, cụm cố định.",
+   "vi": "Do trùng lịch, tôi không thể dự cuộc họp lúc 3 giờ chiều.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The board will ------- in the main hall to vote on the merger.",
+   "options": [
+    "postpone",
+    "register",
+    "confirm",
+    "convene"
+   ],
+   "ans": 3,
+   "why": "'convene' = họp, triệu tập, đi với 'board'.",
+   "vi": "Hội đồng quản trị sẽ họp ở sảnh chính để bỏ phiếu về vụ sáp nhập.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The dates are still -------, so please do not book flights yet.",
+   "options": [
+    "punctual",
+    "tentative",
+    "upcoming",
+    "keynote"
+   ],
+   "ans": 1,
+   "why": "'Do not book yet' → ngày chưa chắc chắn → tentative.",
+   "vi": "Các ngày vẫn chưa chắc chắn nên xin đừng đặt vé bay vội.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Thank you for your ------- to the annual gala; we are delighted to attend.",
+   "options": [
+    "attendee",
+    "minutes",
+    "session",
+    "invitation"
+   ],
+   "ans": 3,
+   "why": "Cảm ơn về 'lời mời' → invitation.",
+   "vi": "Cảm ơn lời mời dự dạ tiệc thường niên; chúng tôi rất vui được tham dự.",
+   "tag": "vocab"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "The warehouse manager ------- the inventory list every Friday.",
+   "options": [
+    "check",
+    "checked",
+    "checks",
+    "is checking"
+   ],
+   "ans": 2,
+   "why": "'every Friday' → hiện tại đơn, chủ ngữ số ít → checks.",
+   "vi": "Quản lý kho kiểm tra danh sách hàng tồn mỗi thứ Sáu.",
+   "tag": "tense-present"
+  },
+  {
+   "q": "Our CEO ------- Singapore for a trade fair last month.",
+   "options": [
+    "visited",
+    "visits",
+    "has visited",
+    "is visiting"
+   ],
+   "ans": 0,
+   "why": "'last month' → quá khứ đơn: visited.",
+   "vi": "Tổng giám đốc của chúng tôi đã đến Singapore dự hội chợ thương mại tháng trước.",
+   "tag": "tense-past"
+  },
+  {
+   "q": "Look! The technician ------- the projector in the conference room now.",
+   "options": [
+    "fixes",
+    "fixed",
+    "will fix",
+    "is fixing"
+   ],
+   "ans": 3,
+   "why": "'Look!' và 'now' → đang diễn ra → is fixing.",
+   "vi": "Nhìn kìa! Kỹ thuật viên đang sửa máy chiếu trong phòng họp.",
+   "tag": "tense-present"
+  },
+  {
+   "q": "The company ------- three new products since March.",
+   "options": [
+    "launched",
+    "has launched",
+    "launches",
+    "will launch"
+   ],
+   "ans": 1,
+   "why": "'since March' → hiện tại hoàn thành: has launched.",
+   "vi": "Công ty đã tung ra ba sản phẩm mới từ tháng Ba.",
+   "tag": "tense-perfect"
+  },
+  {
+   "q": "Ms. Okafor ------- the regional sales team since she joined in 2018.",
+   "options": [
+    "has led",
+    "led",
+    "leads",
+    "will lead"
+   ],
+   "ans": 0,
+   "why": "'since she joined in 2018' → mệnh đề chính hiện tại hoàn thành: has led.",
+   "vi": "Cô Okafor dẫn dắt nhóm bán hàng khu vực từ khi gia nhập năm 2018.",
+   "tag": "tense-perfect"
+  },
+  {
+   "q": "We have already ------- the room for the board meeting.",
+   "options": [
+    "reserve",
+    "reserving",
+    "reserved",
+    "reserves"
+   ],
+   "ans": 2,
+   "why": "Sau have cần V3: reserved.",
+   "vi": "Chúng tôi đã đặt phòng cho cuộc họp hội đồng rồi.",
+   "tag": "tense-perfect"
+  },
+  {
+   "q": "Next month, we ------- a new training program for sales staff.",
+   "options": [
+    "introduced",
+    "will introduce",
+    "have introduced",
+    "were introducing"
+   ],
+   "ans": 1,
+   "why": "'Next month' → tương lai: will introduce.",
+   "vi": "Tháng tới, chúng tôi sẽ giới thiệu chương trình đào tạo mới cho nhân viên bán hàng.",
+   "tag": "tense-future"
+  },
+  {
+   "q": "Please wait here until Ms. Park ------- you.",
+   "options": [
+    "will call",
+    "called",
+    "would call",
+    "calls"
+   ],
+   "ans": 3,
+   "why": "Sau 'until' dùng hiện tại đơn; Ms. Park số ít → calls.",
+   "vi": "Vui lòng chờ ở đây cho đến khi cô Park gọi bạn.",
+   "tag": "time-clause"
+  },
+  {
+   "q": "If you ------- the form today, we will process your refund this week.",
+   "options": [
+    "will submit",
+    "submit",
+    "submitted",
+    "would submit"
+   ],
+   "ans": 1,
+   "why": "Điều kiện loại 1: If + hiện tại đơn → submit.",
+   "vi": "Nếu hôm nay bạn nộp mẫu đơn, chúng tôi sẽ xử lý hoàn tiền trong tuần này.",
+   "tag": "conditional"
+  },
+  {
+   "q": "When the CEO ------- the lobby tomorrow, please greet her.",
+   "options": [
+    "will enter",
+    "entered",
+    "entering",
+    "enters"
+   ],
+   "ans": 3,
+   "why": "Sau 'When' dùng hiện tại đơn; the CEO số ít → enters.",
+   "vi": "Khi tổng giám đốc bước vào sảnh ngày mai, hãy chào đón bà ấy.",
+   "tag": "time-clause"
+  },
+  {
+   "q": "We cannot start the training before all participants ------- .",
+   "options": [
+    "arrive",
+    "will arrive",
+    "arrived",
+    "arriving"
+   ],
+   "ans": 0,
+   "why": "Sau 'before' dùng hiện tại đơn; participants số nhiều → arrive.",
+   "vi": "Chúng ta không thể bắt đầu tập huấn trước khi tất cả người tham gia đến.",
+   "tag": "time-clause"
+  },
+  {
+   "q": "The museum is open ------- 10 a.m. to 6 p.m. every day.",
+   "options": [
+    "since",
+    "by",
+    "from",
+    "for"
+   ],
+   "ans": 2,
+   "why": "'from … to …' = từ … đến ….",
+   "vi": "Bảo tàng mở cửa từ 10 giờ sáng đến 6 giờ chiều mỗi ngày.",
+   "tag": "preposition"
+  },
+  {
+   "q": "The annual picnic will be held ------- Saturday, July 12.",
+   "options": [
+    "at",
+    "in",
+    "on",
+    "by"
+   ],
+   "ans": 2,
+   "why": "Trước ngày cụ thể dùng on.",
+   "vi": "Buổi dã ngoại thường niên sẽ được tổ chức vào thứ Bảy, ngày 12 tháng 7.",
+   "tag": "preposition"
+  },
+  {
+   "q": "Our flight to Manila departs ------- 7:45 a.m.",
+   "options": [
+    "at",
+    "on",
+    "in",
+    "by"
+   ],
+   "ans": 0,
+   "why": "Trước giờ cụ thể dùng at.",
+   "vi": "Chuyến bay đến Manila của chúng tôi khởi hành lúc 7:45 sáng.",
+   "tag": "preposition"
+  },
+  {
+   "q": "The factory has operated without an accident ------- 2017.",
+   "options": [
+    "for",
+    "during",
+    "from",
+    "since"
+   ],
+   "ans": 3,
+   "why": "Có has operated và 2017 là mốc → since.",
+   "vi": "Nhà máy hoạt động không tai nạn từ năm 2017.",
+   "tag": "preposition"
+  },
+  {
+   "q": "Please reply ------- 48 hours of receiving this notice.",
+   "options": [
+    "for",
+    "within",
+    "by",
+    "until"
+   ],
+   "ans": 1,
+   "why": "'within 48 hours of' = trong vòng 48 giờ kể từ.",
+   "vi": "Vui lòng trả lời trong vòng 48 giờ sau khi nhận thông báo này.",
+   "tag": "preposition"
+  },
+  {
+   "q": "Mr. Costa must finish the audit ------- Thursday afternoon, so the report can be sent on Friday.",
+   "options": [
+    "by",
+    "until",
+    "during",
+    "for"
+   ],
+   "ans": 0,
+   "why": "Hoàn thành trước một hạn → by.",
+   "vi": "Ông Costa phải hoàn tất cuộc kiểm toán muộn nhất chiều thứ Năm để báo cáo gửi vào thứ Sáu.",
+   "tag": "preposition"
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "began",
+    "has begun",
+    "will begin",
+    "was beginning"
+   ],
+   "ans": 2,
+   "why": "'tomorrow' → tương lai: will begin.",
+   "vi": "Buổi định hướng sẽ bắt đầu lúc 9 giờ sáng mai ở Phòng 301.",
+   "tag": "part6-tense",
+   "ctx": "Welcome to the team! Orientation ------- tomorrow at 9 a.m. in Room 301. Please bring your ID card. If you have any questions, call the HR office."
+  },
+  {
+   "q": "We must meet the ------- for the grant application, which is June 30.",
+   "options": [
+    "agenda",
+    "deadline",
+    "venue",
+    "minutes"
+   ],
+   "ans": 1,
+   "why": "'meet the deadline' = kịp hạn chót.",
+   "vi": "Chúng ta phải kịp hạn nộp hồ sơ xin tài trợ là ngày 30 tháng 6.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Due to a scheduling conflict, we need to ------- the interview for Thursday.",
+   "options": [
+    "adjourn",
+    "attend",
+    "register",
+    "reschedule"
+   ],
+   "ans": 3,
+   "why": "'reschedule ... for Thursday' = dời lịch sang thứ Năm.",
+   "vi": "Do trùng lịch, chúng ta cần dời buổi phỏng vấn sang thứ Năm.",
+   "tag": "vocab"
+  }
+ ]
+}

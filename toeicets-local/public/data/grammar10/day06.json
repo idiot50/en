@@ -1,0 +1,1887 @@
+{
+ "day": 6,
+ "title": "Bị động & vị trí động từ chính",
+ "icon": "🏭",
+ "goal": "Sau hôm nay bạn chọn đúng chủ động hay bị động chỉ bằng cách nhìn sau chỗ trống, chia đúng bị động theo thì, và luôn tìm được động từ chính của câu.",
+ "why": "Bị động và động từ chính chiếm khoảng 4-5 câu mỗi đề Part 5/6, và là bẫy rất hay gặp ở các câu có đáp án cùng một động từ nhưng khác dạng.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 40
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d6-l1",
+   "title": "1. Bị động là gì? Chủ động hay bị động?",
+   "intro": "Trong câu CHỦ ĐỘNG (active), chủ ngữ tự thực hiện hành động: \"The manager approved the budget\". Trong câu BỊ ĐỘNG (passive), chủ ngữ là người/vật CHỊU tác động: \"The budget was approved\". Bị động rất hay gặp trong TOEIC vì văn bản kinh doanh thường quan tâm đến việc được làm, không quan tâm ai làm.",
+   "points": [
+    {
+     "rule": "Công thức bị động: `S + be + V3 (+ by + người/tổ chức làm)`. V3 là quá khứ phân từ: động từ có quy tắc thêm -ed (approved, shipped); bất quy tắc phải học (write → written, send → sent, make → made, build → built, hold → held, give → given).",
+     "examples": [
+      {
+       "en": "The invoices **are sent** to clients every month.",
+       "vi": "Các hóa đơn được gửi cho khách hàng mỗi tháng."
+      },
+      {
+       "en": "The new factory **was built** by a local company.",
+       "vi": "Nhà máy mới được xây bởi một công ty địa phương."
+      }
+     ]
+    },
+    {
+     "rule": "**Cách chọn nhanh**: nhìn SAU chỗ trống. Có tân ngữ (object — người/vật chịu hành động, như the report, a new machine) → chủ động. Không có tân ngữ, mà chủ ngữ là vật bị tác động → bị động.",
+     "examples": [
+      {
+       "en": "The team **completed** the project. (có tân ngữ: the project)",
+       "vi": "Nhóm đã hoàn thành dự án."
+      },
+      {
+       "en": "The project **was completed** on time. (không có tân ngữ)",
+       "vi": "Dự án đã được hoàn thành đúng hạn."
+      }
+     ]
+    },
+    {
+     "rule": "Gợi ý khác: có **by + người/tổ chức** sau chỗ trống, hoặc chủ ngữ là vật không thể tự hành động (the shipment, the report, the order) → bị động.",
+     "examples": [
+      {
+       "en": "All shipments **are checked** by two inspectors.",
+       "vi": "Mọi lô hàng đều được hai thanh tra kiểm tra."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "",
+     "Chủ động",
+     "Bị động"
+    ],
+    "rows": [
+     [
+      "Công thức",
+      "S + V + O",
+      "S + be + V3 (+ by …)"
+     ],
+     [
+      "Sau động từ",
+      "có tân ngữ",
+      "không có tân ngữ"
+     ],
+     [
+      "Ví dụ",
+      "The staff packed the boxes.",
+      "The boxes were packed by the staff."
+     ]
+    ]
+   },
+   "traps": [
+    "Chủ ngữ là vật (the report, the order) mà chọn động từ chủ động không có tân ngữ → sai. Ví dụ: The report **writes** by Ms. Lee (sai) → The report **is written** by Ms. Lee.",
+    "Sau be phải là V3, không phải V nguyên mẫu hay -ing: The goods are **deliver** (sai) → are **delivered**."
+   ],
+   "tip": "Nhìn sau chỗ trống: có tân ngữ → chủ động; không có và chủ ngữ là vật → bị động. Chỉ mất 3 giây."
+  },
+  {
+   "id": "d6-l2",
+   "title": "2. Bị động theo thì và với động từ khuyết thiếu",
+   "intro": "Bị động luôn là \"be + V3\"; chỉ phần BE thay đổi theo thì. Muốn chọn đúng, bạn tìm tín hiệu thời gian (since, last week, now…) để biết be nào, rồi thêm V3.",
+   "points": [
+    {
+     "rule": "Hiện tại đơn: `am/is/are + V3`. Quá khứ đơn: `was/were + V3`. Tương lai: `will be + V3`. Hiện tại hoàn thành: `has/have been + V3`. Đang diễn ra: `is/are being + V3`.",
+     "examples": [
+      {
+       "en": "Orders **are processed** within 24 hours.",
+       "vi": "Đơn hàng được xử lý trong vòng 24 giờ."
+      },
+      {
+       "en": "Your order **is being packed** right now.",
+       "vi": "Đơn hàng của bạn đang được đóng gói ngay lúc này."
+      },
+      {
+       "en": "More than 5,000 units **have been shipped** since January.",
+       "vi": "Hơn 5.000 sản phẩm đã được vận chuyển từ tháng Một."
+      }
+     ]
+    },
+    {
+     "rule": "Động từ khuyết thiếu (modal: can, may, must, should, will, would) + `be + V3`. Modal luôn đi với động từ nguyên mẫu, nên \"be\" giữ nguyên dạng.",
+     "examples": [
+      {
+       "en": "Hazardous materials **must be stored** in a locked room.",
+       "vi": "Vật liệu nguy hiểm phải được cất trong phòng khóa."
+      },
+      {
+       "en": "The results **will be announced** next week.",
+       "vi": "Kết quả sẽ được công bố vào tuần sau."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Thì",
+     "Công thức bị động",
+     "Tín hiệu",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "Hiện tại đơn",
+      "am/is/are + V3",
+      "every day, usually",
+      "Parts are tested daily."
+     ],
+     [
+      "Quá khứ đơn",
+      "was/were + V3",
+      "yesterday, last week, ago",
+      "The part was tested last week."
+     ],
+     [
+      "Tương lai",
+      "will be + V3",
+      "tomorrow, next month",
+      "It will be tested tomorrow."
+     ],
+     [
+      "Hiện tại hoàn thành",
+      "has/have been + V3",
+      "since, for, already, yet",
+      "It has been tested already."
+     ],
+     [
+      "Đang diễn ra",
+      "is/are being + V3",
+      "now, at the moment",
+      "It is being tested now."
+     ],
+     [
+      "Modal",
+      "modal + be + V3",
+      "—",
+      "It must be tested."
+     ]
+    ]
+   },
+   "traps": [
+    "**has been + V2/V-ing**: has been **ship** / has been **shipping** (sai) → has been **shipped**.",
+    "Có since/for/already → have been + V3; có last week/ago → was/were + V3 (hai cái hay bị lẫn).",
+    "will be + V3: nhớ có chữ **be**; \"will shipped\" là sai."
+   ],
+   "tip": "Hai bước: (1) tín hiệu thời gian → chọn dạng của be; (2) chắc chắn phần cuối là V3."
+  },
+  {
+   "id": "d6-l3",
+   "title": "3. Động từ không dùng bị động",
+   "intro": "Một số động từ không bao giờ có tân ngữ nên không thể chuyển thành bị động. Chúng gọi là nội động từ (intransitive verb). Khi chỗ trống thuộc nhóm này, đáp án luôn là dạng chủ động, dù chủ ngữ là vật.",
+   "points": [
+    {
+     "rule": "Các nội động từ thường gặp: **arrive, happen, occur, rise, fall, remain, stay, exist, appear, last, depend, take place**. Không bao giờ nói was arrived, was happened, was occurred, were risen.",
+     "examples": [
+      {
+       "en": "The shipment **arrived** on Tuesday.",
+       "vi": "Lô hàng đã đến vào thứ Ba."
+      },
+      {
+       "en": "Prices **rose** sharply last quarter.",
+       "vi": "Giá đã tăng mạnh trong quý trước."
+      },
+      {
+       "en": "Only two seats **remain** for the tour.",
+       "vi": "Chỉ còn hai chỗ cho chuyến tham quan."
+      }
+     ]
+    },
+    {
+     "rule": "**rise** (nội động từ: rise – rose – risen) khác **raise** (ngoại động từ: cần tân ngữ; raise – raised – raised). Giá tự tăng: prices **rise**. Công ty tăng giá: the company **raises** prices; prices **were raised**.",
+     "examples": [
+      {
+       "en": "Demand has **risen** steadily.",
+       "vi": "Nhu cầu đã tăng đều."
+      },
+      {
+       "en": "The company **raised** its prices.",
+       "vi": "Công ty đã tăng giá."
+      }
+     ]
+    },
+    {
+     "rule": "Câu bị động có thể kèm **by + người làm** (by a team of engineers). Giới từ by trong bị động chỉ người/tổ chức thực hiện.",
+     "examples": [
+      {
+       "en": "The brochure was designed **by** the marketing team.",
+       "vi": "Tờ rơi được thiết kế bởi nhóm marketing."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Động từ (không bị động)",
+     "Quá khứ",
+     "Quá khứ phân từ"
+    ],
+    "rows": [
+     [
+      "arrive",
+      "arrived",
+      "arrived"
+     ],
+     [
+      "happen",
+      "happened",
+      "happened"
+     ],
+     [
+      "occur",
+      "occurred",
+      "occurred"
+     ],
+     [
+      "rise",
+      "rose",
+      "risen"
+     ],
+     [
+      "remain",
+      "remained",
+      "remained"
+     ]
+    ]
+   },
+   "traps": [
+    "**was arrived / was happened / was occurred** hoàn toàn sai dù chủ ngữ là vật.",
+    "cost cũng không dùng bị động: The recall **cost** the company a lot (không nói was cost)."
+   ],
+   "tip": "Thấy arrive, happen, occur, rise, remain, last, take place → chọn dạng chủ động, loại ngay các đáp án be + V3."
+  },
+  {
+   "id": "d6-l4",
+   "title": "4. Mỗi mệnh đề cần một động từ chính",
+   "intro": "Một câu hoàn chỉnh cần ít nhất một động từ chính chia theo thì và chủ ngữ. V-ing một mình và to V không thể làm động từ chính. Khi trong câu chưa có động từ chính, chỗ trống thường là nơi để điền nó.",
+   "points": [
+    {
+     "rule": "Động từ chính phải chia: `S + V(s)/V2/will + V/be + V-ing/be + V3`. Các dạng không làm được động từ chính: V-ing đứng một mình, to + V, danh từ.",
+     "examples": [
+      {
+       "en": "The safety manager **is preparing** the report. (Không viết: The safety manager preparing the report.)",
+       "vi": "Quản lý an toàn đang chuẩn bị báo cáo."
+      },
+      {
+       "en": "The plant **employs** more than 500 workers.",
+       "vi": "Nhà máy thuê hơn 500 công nhân."
+      }
+     ]
+    },
+    {
+     "rule": "Nhiều khi giữa chủ ngữ và động từ có cụm chen vào (giới từ + danh từ). Bỏ cụm đó đi để tìm chủ ngữ thật và chia động từ cho đúng.",
+     "examples": [
+      {
+       "en": "The shipping department on the second floor **handles** all overseas orders.",
+       "vi": "Phòng vận chuyển ở tầng hai xử lý mọi đơn hàng nước ngoài."
+      }
+     ]
+    },
+    {
+     "rule": "**Câu mệnh lệnh** (imperative): `(Please) + V nguyên mẫu`, không có chủ ngữ. **Modal + V nguyên mẫu**: will/can/must/should/may + V (không -s, -ed, -ing).",
+     "examples": [
+      {
+       "en": "Please **read** the instructions carefully.",
+       "vi": "Vui lòng đọc kỹ hướng dẫn."
+      },
+      {
+       "en": "The courier should **deliver** the package before noon.",
+       "vi": "Nhân viên giao hàng nên giao gói hàng trước buổi trưa."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Dạng",
+     "Làm được động từ chính?",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "V chia thì",
+      "Có",
+      "He checks / checked / will check"
+     ],
+     [
+      "be + V-ing",
+      "Có",
+      "He is checking"
+     ],
+     [
+      "V-ing một mình",
+      "Không",
+      "He checking"
+     ],
+     [
+      "to + V",
+      "Không",
+      "He to check"
+     ],
+     [
+      "Danh từ",
+      "Không",
+      "He inspection"
+     ]
+    ]
+   },
+   "traps": [
+    "Chủ ngữ + chỗ trống + tân ngữ mà các đáp án có cả preparing, to prepare, preparation: chọn dạng chia thì hoặc be + V-ing.",
+    "Sau modal không thêm -s: **should delivers** (sai) → should deliver."
+   ],
+   "tip": "Nếu trong câu chưa có động từ chính chia thì → loại đáp án V-ing một mình, to V, danh từ; chọn dạng đã chia (hoặc be + V-ing)."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d6-p1",
+   "title": "Bài 1: Chủ động hay bị động?",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d6-l1",
+   "items": [
+    {
+     "q": "The new safety regulations ------- to all factory workers last week.",
+     "options": [
+      "announced",
+      "announcing",
+      "were announced",
+      "announce"
+     ],
+     "ans": 2,
+     "why": "Chủ ngữ 'regulations' là vật bị thông báo, không có tân ngữ, 'last week' → were announced. 'announced' (chủ động) cần tân ngữ.",
+     "vi": "Các quy định an toàn mới đã được thông báo cho toàn bộ công nhân nhà máy tuần trước.",
+     "tag": "passive"
+    },
+    {
+     "q": "The manager ------- the schedule after the client's complaint.",
+     "options": [
+      "revised",
+      "was revised",
+      "is revised",
+      "revising"
+     ],
+     "ans": 0,
+     "why": "Sau chỗ trống có tân ngữ 'the schedule' → chủ động: revised. 'was revised' bị động không thể đi với tân ngữ.",
+     "vi": "Quản lý đã sửa lại lịch trình sau khi khách hàng phàn nàn.",
+     "tag": "passive"
+    },
+    {
+     "q": "All shipments ------- by two inspectors before they leave the warehouse.",
+     "options": [
+      "check",
+      "checks",
+      "checking",
+      "are checked"
+     ],
+     "ans": 3,
+     "why": "'by two inspectors' và chủ ngữ là vật → bị động: are checked.",
+     "vi": "Mọi lô hàng được hai thanh tra kiểm tra trước khi rời kho.",
+     "tag": "passive"
+    },
+    {
+     "q": "Our company ------- thousands of electronic parts every day.",
+     "options": [
+      "is produced",
+      "produces",
+      "are produced",
+      "producing"
+     ],
+     "ans": 1,
+     "why": "Có tân ngữ 'thousands of electronic parts' → chủ động: produces (company số ít).",
+     "vi": "Công ty chúng tôi sản xuất hàng nghìn linh kiện điện tử mỗi ngày.",
+     "tag": "passive"
+    },
+    {
+     "q": "The conference room ------- for the board meeting on Friday.",
+     "options": [
+      "has reserved",
+      "has been reserved",
+      "reserves",
+      "reserving"
+     ],
+     "ans": 1,
+     "why": "Không có tân ngữ, phòng là vật được đặt → has been reserved.",
+     "vi": "Phòng họp đã được đặt cho cuộc họp hội đồng vào thứ Sáu.",
+     "tag": "passive"
+    },
+    {
+     "q": "Customers ------- of any delay by e-mail.",
+     "options": [
+      "will inform",
+      "informing",
+      "inform",
+      "will be informed"
+     ],
+     "ans": 3,
+     "why": "'inform sb of sth': khách hàng được thông báo → bị động: will be informed.",
+     "vi": "Khách hàng sẽ được thông báo về mọi sự chậm trễ qua e-mail.",
+     "tag": "passive"
+    },
+    {
+     "q": "Ms. Rossi ------- the training materials last night.",
+     "options": [
+      "prepared",
+      "was prepared",
+      "is prepared",
+      "preparing"
+     ],
+     "ans": 0,
+     "why": "Có tân ngữ 'the training materials' → chủ động: prepared.",
+     "vi": "Cô Rossi đã soạn tài liệu tập huấn vào tối qua.",
+     "tag": "passive"
+    },
+    {
+     "q": "The defective items ------- back to the supplier yesterday.",
+     "options": [
+      "sent",
+      "sends",
+      "were sent",
+      "are sending"
+     ],
+     "ans": 2,
+     "why": "Chủ ngữ là vật được gửi, sau chỗ trống không có tân ngữ, 'yesterday' → bị động quá khứ: were sent. 'sent' chủ động phải có tân ngữ (sent them back).",
+     "vi": "Các mặt hàng lỗi đã được gửi trả lại nhà cung cấp hôm qua.",
+     "tag": "passive"
+    },
+    {
+     "q": "A new factory ------- in the industrial park next year.",
+     "options": [
+      "will build",
+      "builds",
+      "has built",
+      "will be built"
+     ],
+     "ans": 3,
+     "why": "Không có tân ngữ, nhà máy là vật được xây, 'next year' → will be built.",
+     "vi": "Một nhà máy mới sẽ được xây trong khu công nghiệp vào năm tới.",
+     "tag": "passive"
+    },
+    {
+     "q": "The warehouse staff ------- all the boxes onto the truck before noon.",
+     "options": [
+      "were loaded",
+      "loaded",
+      "are loaded",
+      "loading"
+     ],
+     "ans": 1,
+     "why": "Có tân ngữ 'all the boxes' → chủ động: loaded.",
+     "vi": "Nhân viên kho đã chất tất cả các thùng lên xe tải trước buổi trưa.",
+     "tag": "passive"
+    }
+   ]
+  },
+  {
+   "id": "d6-p2",
+   "title": "Bài 2: Bị động theo thì và modal",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d6-l2",
+   "items": [
+    {
+     "q": "The product catalog ------- twice a year.",
+     "options": [
+      "updates",
+      "is updated",
+      "updating",
+      "update"
+     ],
+     "ans": 1,
+     "why": "Chủ ngữ là vật, không có tân ngữ → bị động hiện tại: is updated.",
+     "vi": "Danh mục sản phẩm được cập nhật hai lần mỗi năm.",
+     "tag": "passive"
+    },
+    {
+     "q": "Your order ------- right now and will be ready soon.",
+     "options": [
+      "is packed",
+      "is being packed",
+      "was packed",
+      "has packed"
+     ],
+     "ans": 1,
+     "why": "'right now' → bị động tiếp diễn: is being packed.",
+     "vi": "Đơn hàng của bạn đang được đóng gói và sẽ sớm sẵn sàng.",
+     "tag": "passive"
+    },
+    {
+     "q": "Since January, over 5,000 units ------- to retailers in Europe.",
+     "options": [
+      "were shipped",
+      "are shipped",
+      "will be shipped",
+      "have been shipped"
+     ],
+     "ans": 3,
+     "why": "'Since January' → hiện tại hoàn thành bị động: have been shipped (units số nhiều).",
+     "vi": "Từ tháng Một, hơn 5.000 sản phẩm đã được chuyển đến các nhà bán lẻ ở châu Âu.",
+     "tag": "passive"
+    },
+    {
+     "q": "The annual inspection ------- by an independent firm next month.",
+     "options": [
+      "will be conducted",
+      "was conducted",
+      "has been conducted",
+      "is conducting"
+     ],
+     "ans": 0,
+     "why": "'next month' → will be conducted.",
+     "vi": "Cuộc kiểm tra thường niên sẽ do một công ty độc lập tiến hành vào tháng tới.",
+     "tag": "passive"
+    },
+    {
+     "q": "All packages must ------- before they are sent to customers.",
+     "options": [
+      "inspect",
+      "inspected",
+      "be inspected",
+      "inspecting"
+     ],
+     "ans": 2,
+     "why": "Modal must + be + V3; các gói hàng là vật được kiểm tra.",
+     "vi": "Mọi gói hàng phải được kiểm tra trước khi gửi cho khách.",
+     "tag": "passive"
+    },
+    {
+     "q": "The new assembly line ------- last week and is already running smoothly.",
+     "options": [
+      "installed",
+      "is installed",
+      "will be installed",
+      "was installed"
+     ],
+     "ans": 3,
+     "why": "'last week' → bị động quá khứ: was installed; không có tân ngữ nên không dùng 'installed' chủ động.",
+     "vi": "Dây chuyền lắp ráp mới đã được lắp đặt tuần trước và đang chạy trơn tru.",
+     "tag": "passive"
+    },
+    {
+     "q": "The prototype ------- to the investors during tomorrow's meeting.",
+     "options": [
+      "was presented",
+      "will be presented",
+      "has been presented",
+      "is presenting"
+     ],
+     "ans": 1,
+     "why": "'tomorrow's meeting' → tương lai bị động: will be presented.",
+     "vi": "Mẫu thử sẽ được trình bày cho nhà đầu tư trong cuộc họp ngày mai.",
+     "tag": "passive"
+    },
+    {
+     "q": "The factory's old machines ------- with newer models since last year.",
+     "options": [
+      "were replaced",
+      "are replaced",
+      "have been replaced",
+      "will be replaced"
+     ],
+     "ans": 2,
+     "why": "'since last year' → hiện tại hoàn thành bị động: have been replaced.",
+     "vi": "Các máy cũ của nhà máy đã được thay bằng mẫu mới từ năm ngoái.",
+     "tag": "passive"
+    },
+    {
+     "q": "Employees' time sheets must ------- to the payroll office by Friday.",
+     "options": [
+      "be sent",
+      "send",
+      "sent",
+      "sending"
+     ],
+     "ans": 0,
+     "why": "Must + be + V3: time sheets là vật được gửi.",
+     "vi": "Bảng chấm công của nhân viên phải được gửi đến phòng lương trước thứ Sáu.",
+     "tag": "passive"
+    },
+    {
+     "q": "A refund ------- to your account within seven business days.",
+     "options": [
+      "will credit",
+      "credits",
+      "will be credited",
+      "crediting"
+     ],
+     "ans": 2,
+     "why": "Không có tân ngữ, tương lai → will be credited.",
+     "vi": "Tiền hoàn lại sẽ được ghi có vào tài khoản của bạn trong vòng bảy ngày làm việc.",
+     "tag": "passive"
+    }
+   ]
+  },
+  {
+   "id": "d6-p3",
+   "title": "Bài 3: Động từ không có bị động",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d6-l3",
+   "items": [
+    {
+     "q": "The shipment from Osaka ------- at the port on Tuesday morning.",
+     "options": [
+      "was arrived",
+      "is arrived",
+      "arriving",
+      "arrived"
+     ],
+     "ans": 3,
+     "why": "arrive là nội động từ, không có bị động → arrived.",
+     "vi": "Lô hàng từ Osaka đã đến cảng vào sáng thứ Ba.",
+     "tag": "passive"
+    },
+    {
+     "q": "The production error ------- during the night shift.",
+     "options": [
+      "occurred",
+      "was occurred",
+      "occurring",
+      "occur"
+     ],
+     "ans": 0,
+     "why": "occur không dùng bị động; chủ ngữ số ít, quá khứ → occurred.",
+     "vi": "Lỗi sản xuất đã xảy ra trong ca đêm.",
+     "tag": "passive"
+    },
+    {
+     "q": "Fuel prices ------- sharply last quarter.",
+     "options": [
+      "were risen",
+      "raised",
+      "rose",
+      "rising"
+     ],
+     "ans": 2,
+     "why": "'rise' là nội động từ (rose); 'raised' cần tân ngữ.",
+     "vi": "Giá nhiên liệu đã tăng mạnh trong quý trước.",
+     "tag": "passive"
+    },
+    {
+     "q": "Only a few seats ------- for the factory tour.",
+     "options": [
+      "are remained",
+      "remains",
+      "remaining",
+      "remain"
+     ],
+     "ans": 3,
+     "why": "remain không có bị động; 'seats' số nhiều → remain.",
+     "vi": "Chỉ còn một vài chỗ cho chuyến tham quan nhà máy.",
+     "tag": "passive"
+    },
+    {
+     "q": "A power failure ------- at the plant on Monday, but no one was hurt.",
+     "options": [
+      "was happened",
+      "happened",
+      "has been happened",
+      "happening"
+     ],
+     "ans": 1,
+     "why": "happen không dùng bị động → happened.",
+     "vi": "Một sự cố mất điện đã xảy ra ở nhà máy vào thứ Hai nhưng không ai bị thương.",
+     "tag": "passive"
+    },
+    {
+     "q": "The new engine was designed ------- a team of German engineers.",
+     "options": [
+      "with",
+      "to",
+      "by",
+      "at"
+     ],
+     "ans": 2,
+     "why": "Trong câu bị động, người thực hiện được nối bằng 'by'.",
+     "vi": "Động cơ mới được thiết kế bởi một nhóm kỹ sư người Đức.",
+     "tag": "passive"
+    },
+    {
+     "q": "The company ------- a new distribution center in Texas last year.",
+     "options": [
+      "opened",
+      "was opened",
+      "is opened",
+      "opening"
+     ],
+     "ans": 0,
+     "why": "Có tân ngữ 'a new distribution center' → chủ động: opened.",
+     "vi": "Công ty đã mở một trung tâm phân phối mới ở Texas năm ngoái.",
+     "tag": "passive"
+    },
+    {
+     "q": "The recall ------- the company millions of dollars.",
+     "options": [
+      "was cost",
+      "costed",
+      "cost",
+      "costing"
+     ],
+     "ans": 2,
+     "why": "cost không dùng bị động; quá khứ của cost là cost.",
+     "vi": "Đợt thu hồi đã khiến công ty tốn hàng triệu đô la.",
+     "tag": "passive"
+    },
+    {
+     "q": "Demand for electric vehicles ------- steadily over the past decade.",
+     "options": [
+      "has risen",
+      "has been risen",
+      "has raised",
+      "is risen"
+     ],
+     "ans": 0,
+     "why": "rise không có bị động; 'over the past decade' → has risen.",
+     "vi": "Nhu cầu về xe điện đã tăng đều trong thập kỷ qua.",
+     "tag": "passive"
+    }
+   ]
+  },
+  {
+   "id": "d6-p4",
+   "title": "Bài 4: Động từ chính, mệnh lệnh, modal",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d6-l4",
+   "items": [
+    {
+     "q": "The sales director ------- the new inventory system to all branches next month.",
+     "options": [
+      "will introduce",
+      "introducing",
+      "to introduce",
+      "introduction"
+     ],
+     "ans": 0,
+     "why": "Câu chưa có động từ chính → will introduce. V-ing, to V, danh từ không làm động từ chính.",
+     "vi": "Giám đốc kinh doanh sẽ giới thiệu hệ thống tồn kho mới đến mọi chi nhánh vào tháng tới.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "Our factory ------- more than 500 workers in three shifts.",
+     "options": [
+      "employing",
+      "to employ",
+      "employment",
+      "employs"
+     ],
+     "ans": 3,
+     "why": "Cần động từ chính chia theo chủ ngữ số ít → employs.",
+     "vi": "Nhà máy của chúng tôi thuê hơn 500 công nhân làm ba ca.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "Please ------- the assembly instructions carefully before you start.",
+     "options": [
+      "reading",
+      "read",
+      "to read",
+      "reads"
+     ],
+     "ans": 1,
+     "why": "Câu mệnh lệnh: Please + V nguyên mẫu.",
+     "vi": "Vui lòng đọc kỹ hướng dẫn lắp ráp trước khi bắt đầu.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "The warehouse manager must ------- all the deliveries before they are stored.",
+     "options": [
+      "checks",
+      "check",
+      "checking",
+      "checked"
+     ],
+     "ans": 1,
+     "why": "Sau modal must dùng động từ nguyên mẫu: check.",
+     "vi": "Quản lý kho phải kiểm tra mọi lô giao hàng trước khi cất vào kho.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "The shipping department on the second floor ------- all overseas orders every day.",
+     "options": [
+      "handling",
+      "to handle",
+      "handle",
+      "handles"
+     ],
+     "ans": 3,
+     "why": "Chủ ngữ thật là 'department' (số ít) → handles; 'handle' sai hòa hợp.",
+     "vi": "Phòng vận chuyển ở tầng hai xử lý mọi đơn hàng nước ngoài mỗi ngày.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "The inspectors ------- the production line twice a week.",
+     "options": [
+      "check",
+      "to check",
+      "checking",
+      "checks"
+     ],
+     "ans": 0,
+     "why": "Chủ ngữ số nhiều, hiện tại đơn → check; 'checks' sai hòa hợp.",
+     "vi": "Các thanh tra kiểm tra dây chuyền sản xuất hai lần mỗi tuần.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "Our supplier always ------- the parts on time.",
+     "options": [
+      "delivering",
+      "to deliver",
+      "delivers",
+      "delivery"
+     ],
+     "ans": 2,
+     "why": "Sau trạng từ 'always' cần động từ chính chia thì → delivers.",
+     "vi": "Nhà cung cấp của chúng tôi luôn giao linh kiện đúng hạn.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "Please ------- us know if the package does not arrive by Friday.",
+     "options": [
+      "lets",
+      "letting",
+      "to let",
+      "let"
+     ],
+     "ans": 3,
+     "why": "Câu mệnh lệnh: Please + V nguyên mẫu → let.",
+     "vi": "Vui lòng cho chúng tôi biết nếu gói hàng không đến trước thứ Sáu.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "The safety manager ------- the report for the executive board.",
+     "options": [
+      "preparing",
+      "is preparing",
+      "to prepare",
+      "preparation"
+     ],
+     "ans": 1,
+     "why": "V-ing đứng một mình không phải động từ chính; cần be + V-ing → is preparing.",
+     "vi": "Quản lý an toàn đang chuẩn bị báo cáo cho ban điều hành.",
+     "tag": "verb-position"
+    },
+    {
+     "q": "Many customers ------- the new packaging because it is easier to open.",
+     "options": [
+      "preferring",
+      "to prefer",
+      "prefer",
+      "preferably"
+     ],
+     "ans": 2,
+     "why": "Chủ ngữ số nhiều, cần động từ chính → prefer.",
+     "vi": "Nhiều khách hàng thích bao bì mới vì dễ mở hơn.",
+     "tag": "verb-position"
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Sản xuất, kho vận & giao hàng",
+  "words": [
+   {
+    "w": "manufacture",
+    "pos": "v",
+    "ipa": "/ˌmænjuˈfæktʃə/",
+    "vi": "sản xuất",
+    "ex": "The plant manufactures car parts.",
+    "exvi": "Nhà máy sản xuất phụ tùng ô tô.",
+    "fam": "manufacturer (n), manufacturing (n)",
+    "colloc": [
+     "manufacture goods",
+     "manufacturing plant"
+    ]
+   },
+   {
+    "w": "assemble",
+    "pos": "v",
+    "ipa": "/əˈsembl/",
+    "vi": "lắp ráp",
+    "ex": "Workers assemble the engines by hand.",
+    "exvi": "Công nhân lắp ráp động cơ bằng tay.",
+    "fam": "assembly (n)",
+    "colloc": [
+     "assemble parts",
+     "assembly line"
+    ]
+   },
+   {
+    "w": "inventory",
+    "pos": "n",
+    "ipa": "/ˈɪnvəntri/",
+    "vi": "hàng tồn kho",
+    "ex": "We check our inventory every week.",
+    "exvi": "Chúng tôi kiểm kê hàng tồn mỗi tuần.",
+    "fam": "—",
+    "colloc": [
+     "take inventory",
+     "inventory control"
+    ]
+   },
+   {
+    "w": "shipment",
+    "pos": "n",
+    "ipa": "/ˈʃɪpmənt/",
+    "vi": "lô hàng",
+    "ex": "The shipment will arrive on Monday.",
+    "exvi": "Lô hàng sẽ đến vào thứ Hai.",
+    "fam": "ship (v), shipping (n)",
+    "colloc": [
+     "a shipment of",
+     "track a shipment"
+    ]
+   },
+   {
+    "w": "deliver",
+    "pos": "v",
+    "ipa": "/dɪˈlɪvə/",
+    "vi": "giao hàng",
+    "ex": "We deliver all orders within two days.",
+    "exvi": "Chúng tôi giao mọi đơn hàng trong hai ngày.",
+    "fam": "delivery (n)",
+    "colloc": [
+     "deliver an order",
+     "on-time delivery"
+    ]
+   },
+   {
+    "w": "warehouse",
+    "pos": "n",
+    "ipa": "/ˈweəhaʊs/",
+    "vi": "nhà kho",
+    "ex": "The goods are stored in a warehouse near the port.",
+    "exvi": "Hàng hóa được cất trong một nhà kho gần cảng.",
+    "fam": "—",
+    "colloc": [
+     "warehouse space",
+     "warehouse manager"
+    ]
+   },
+   {
+    "w": "freight",
+    "pos": "n",
+    "ipa": "/freɪt/",
+    "vi": "hàng vận chuyển, cước vận tải",
+    "ex": "Air freight is faster but more expensive.",
+    "exvi": "Vận chuyển hàng không nhanh hơn nhưng đắt hơn.",
+    "fam": "—",
+    "colloc": [
+     "freight charges",
+     "air freight"
+    ]
+   },
+   {
+    "w": "cargo",
+    "pos": "n",
+    "ipa": "/ˈkɑːɡəʊ/",
+    "vi": "hàng hóa (trên tàu, máy bay)",
+    "ex": "The ship carried cargo from Busan.",
+    "exvi": "Con tàu chở hàng từ Busan.",
+    "fam": "—",
+    "colloc": [
+     "cargo ship",
+     "cargo hold"
+    ]
+   },
+   {
+    "w": "carrier",
+    "pos": "n",
+    "ipa": "/ˈkæriə/",
+    "vi": "hãng vận chuyển",
+    "ex": "We chose a reliable carrier for overseas orders.",
+    "exvi": "Chúng tôi chọn một hãng vận chuyển đáng tin cho đơn hàng nước ngoài.",
+    "fam": "carry (v)",
+    "colloc": [
+     "shipping carrier",
+     "choose a carrier"
+    ]
+   },
+   {
+    "w": "label",
+    "pos": "n",
+    "ipa": "/ˈleɪbl/",
+    "vi": "nhãn",
+    "ex": "The label shows the weight and address.",
+    "exvi": "Nhãn ghi trọng lượng và địa chỉ.",
+    "fam": "label (v)",
+    "colloc": [
+     "shipping label",
+     "attach a label"
+    ]
+   },
+   {
+    "w": "package",
+    "pos": "v",
+    "ipa": "/ˈpækɪdʒ/",
+    "vi": "đóng gói",
+    "ex": "Staff package each item carefully.",
+    "exvi": "Nhân viên đóng gói từng món cẩn thận.",
+    "fam": "package (n), packaging (n)",
+    "colloc": [
+     "package goods",
+     "packaging material"
+    ]
+   },
+   {
+    "w": "defective",
+    "pos": "adj",
+    "ipa": "/dɪˈfektɪv/",
+    "vi": "bị lỗi, hỏng",
+    "ex": "Customers returned the defective toasters.",
+    "exvi": "Khách hàng đã trả lại những chiếc máy nướng bị lỗi.",
+    "fam": "defect (n)",
+    "colloc": [
+     "defective product",
+     "defective part"
+    ]
+   },
+   {
+    "w": "durable",
+    "pos": "adj",
+    "ipa": "/ˈdjʊərəbl/",
+    "vi": "bền",
+    "ex": "These tools are durable and easy to clean.",
+    "exvi": "Những dụng cụ này bền và dễ lau chùi.",
+    "fam": "durability (n)",
+    "colloc": [
+     "durable material",
+     "highly durable"
+    ]
+   },
+   {
+    "w": "output",
+    "pos": "n",
+    "ipa": "/ˈaʊtpʊt/",
+    "vi": "sản lượng",
+    "ex": "The new machine doubled our output.",
+    "exvi": "Máy mới đã tăng gấp đôi sản lượng của chúng tôi.",
+    "fam": "—",
+    "colloc": [
+     "daily output",
+     "increase output"
+    ]
+   },
+   {
+    "w": "supplier",
+    "pos": "n",
+    "ipa": "/səˈplaɪə/",
+    "vi": "nhà cung cấp",
+    "ex": "Our supplier delivers parts every Monday.",
+    "exvi": "Nhà cung cấp của chúng tôi giao linh kiện mỗi thứ Hai.",
+    "fam": "supply (v, n)",
+    "colloc": [
+     "reliable supplier",
+     "supplier contract"
+    ]
+   },
+   {
+    "w": "stock",
+    "pos": "n",
+    "ipa": "/stɒk/",
+    "vi": "hàng trong kho",
+    "ex": "This model is out of stock.",
+    "exvi": "Mẫu này đã hết hàng.",
+    "fam": "stock (v)",
+    "colloc": [
+     "in stock",
+     "out of stock"
+    ]
+   },
+   {
+    "w": "dispatch",
+    "pos": "v",
+    "ipa": "/dɪˈspætʃ/",
+    "vi": "gửi đi, điều phối",
+    "ex": "We dispatch orders before 5 p.m. every day.",
+    "exvi": "Chúng tôi gửi đơn hàng đi trước 5 giờ chiều mỗi ngày.",
+    "fam": "dispatch (n), dispatcher (n)",
+    "colloc": [
+     "dispatch an order",
+     "dispatch date"
+    ]
+   },
+   {
+    "w": "handle",
+    "pos": "v",
+    "ipa": "/ˈhændl/",
+    "vi": "xử lý, vận chuyển",
+    "ex": "The team handles about 200 parcels daily.",
+    "exvi": "Nhóm xử lý khoảng 200 bưu kiện mỗi ngày.",
+    "fam": "handling (n)",
+    "colloc": [
+     "handle with care",
+     "handle a complaint"
+    ]
+   },
+   {
+    "w": "fragile",
+    "pos": "adj",
+    "ipa": "/ˈfrædʒaɪl/",
+    "vi": "dễ vỡ",
+    "ex": "Fragile items need extra padding.",
+    "exvi": "Hàng dễ vỡ cần lót thêm.",
+    "fam": "—",
+    "colloc": [
+     "fragile goods",
+     "handle with care"
+    ]
+   },
+   {
+    "w": "tracking",
+    "pos": "n",
+    "ipa": "/ˈtrækɪŋ/",
+    "vi": "theo dõi (đơn hàng)",
+    "ex": "Use the tracking number to find your parcel.",
+    "exvi": "Dùng mã theo dõi để tìm bưu kiện của bạn.",
+    "fam": "track (v)",
+    "colloc": [
+     "tracking number",
+     "online tracking"
+    ]
+   },
+   {
+    "w": "inspect",
+    "pos": "v",
+    "ipa": "/ɪnˈspekt/",
+    "vi": "kiểm tra",
+    "ex": "Technicians inspect every unit before shipment.",
+    "exvi": "Kỹ thuật viên kiểm tra từng sản phẩm trước khi giao.",
+    "fam": "inspection (n), inspector (n)",
+    "colloc": [
+     "inspect equipment",
+     "safety inspection"
+    ]
+   },
+   {
+    "w": "recall",
+    "pos": "n",
+    "ipa": "/ˈriːkɔːl/",
+    "vi": "sự thu hồi (sản phẩm)",
+    "ex": "The recall affected 10,000 cars.",
+    "exvi": "Đợt thu hồi ảnh hưởng đến 10.000 chiếc xe.",
+    "fam": "recall (v)",
+    "colloc": [
+     "product recall",
+     "issue a recall"
+    ]
+   },
+   {
+    "w": "transport",
+    "pos": "v",
+    "ipa": "/trænsˈpɔːt/",
+    "vi": "vận chuyển",
+    "ex": "Trucks transport the goods to the port.",
+    "exvi": "Xe tải chở hàng đến cảng.",
+    "fam": "transportation (n)",
+    "colloc": [
+     "transport goods",
+     "public transport"
+    ]
+   },
+   {
+    "w": "machinery",
+    "pos": "n",
+    "ipa": "/məˈʃiːnəri/",
+    "vi": "máy móc",
+    "ex": "The factory bought new machinery last year.",
+    "exvi": "Nhà máy đã mua máy móc mới năm ngoái.",
+    "fam": "machine (n)",
+    "colloc": [
+     "heavy machinery",
+     "operate machinery"
+    ]
+   },
+   {
+    "w": "load",
+    "pos": "v",
+    "ipa": "/ləʊd/",
+    "vi": "chất hàng lên",
+    "ex": "Workers load the truck every morning.",
+    "exvi": "Công nhân chất hàng lên xe tải mỗi sáng.",
+    "fam": "unload (v), loading (n)",
+    "colloc": [
+     "load a truck",
+     "loading dock"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "Several customers returned the ------- toasters, so the store contacted the supplier.",
+   "options": [
+    "durable",
+    "fragile",
+    "tracking",
+    "defective"
+   ],
+   "ans": 3,
+   "why": "Khách trả lại vì lỗi → defective. 'durable' (bền) không hợp với việc bị trả lại.",
+   "vi": "Vài khách hàng trả lại những chiếc máy nướng bị lỗi nên cửa hàng liên hệ nhà cung cấp.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please use the ------- number to see where your package is right now.",
+   "options": [
+    "freight",
+    "tracking",
+    "cargo",
+    "stock"
+   ],
+   "ans": 1,
+   "why": "'tracking number' = mã theo dõi đơn hàng.",
+   "vi": "Vui lòng dùng mã theo dõi để xem gói hàng đang ở đâu.",
+   "tag": "vocab"
+  },
+  {
+   "q": "These glasses are -------, so please pack them with extra care.",
+   "options": [
+    "durable",
+    "fragile",
+    "defective",
+    "punctual"
+   ],
+   "ans": 1,
+   "why": "Phải đóng gói cẩn thận vì dễ vỡ → fragile.",
+   "vi": "Những chiếc ly này dễ vỡ nên hãy đóng gói thật cẩn thận.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Sorry, this model is out of -------.",
+   "options": [
+    "load",
+    "freight",
+    "output",
+    "stock"
+   ],
+   "ans": 3,
+   "why": "'out of stock' = hết hàng.",
+   "vi": "Xin lỗi, mẫu này đã hết hàng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- charges depend on the weight and the distance.",
+   "options": [
+    "freight",
+    "label",
+    "machinery",
+    "recall"
+   ],
+   "ans": 0,
+   "why": "'freight charges' = cước vận chuyển.",
+   "vi": "Cước vận chuyển phụ thuộc vào trọng lượng và khoảng cách.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Workers on this line ------- the engine parts into complete units.",
+   "options": [
+    "handle",
+    "recall",
+    "assemble",
+    "dispatch"
+   ],
+   "ans": 2,
+   "why": "'assemble ... into' = lắp ráp thành.",
+   "vi": "Công nhân trên dây chuyền này lắp các bộ phận động cơ thành sản phẩm hoàn chỉnh.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The automaker announced a ------- of 10,000 cars because of a brake problem.",
+   "options": [
+    "shipment",
+    "label",
+    "output",
+    "recall"
+   ],
+   "ans": 3,
+   "why": "Lỗi phanh dẫn đến thu hồi → recall.",
+   "vi": "Hãng xe thông báo thu hồi 10.000 chiếc vì lỗi phanh.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- of the order was delayed by heavy snow.",
+   "options": [
+    "deliver",
+    "delivery",
+    "delivers",
+    "delivered"
+   ],
+   "ans": 1,
+   "why": "Sau 'The' và trước 'of' cần danh từ → delivery.",
+   "vi": "Việc giao đơn hàng bị trễ do tuyết dày.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Our new machines are very ------- and can be used for more than ten years.",
+   "options": [
+    "durability",
+    "durably",
+    "durable",
+    "endure"
+   ],
+   "ans": 2,
+   "why": "Sau 'very' cần tính từ → durable.",
+   "vi": "Máy mới của chúng tôi rất bền và dùng được hơn mười năm.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "A reliable ------- delivers our cargo to every port on time.",
+   "options": [
+    "carrier",
+    "label",
+    "output",
+    "stock"
+   ],
+   "ans": 0,
+   "why": "Chủ thể giao hàng = hãng vận chuyển → carrier.",
+   "vi": "Một hãng vận chuyển đáng tin giao hàng của chúng tôi đến mọi cảng đúng hạn.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "Each product ------- carefully before it leaves the factory.",
+   "options": [
+    "is inspected",
+    "inspects",
+    "inspecting",
+    "inspect"
+   ],
+   "ans": 0,
+   "why": "Chủ ngữ là vật, không có tân ngữ → bị động: is inspected.",
+   "vi": "Mỗi sản phẩm được kiểm tra cẩn thận trước khi rời nhà máy.",
+   "tag": "passive"
+  },
+  {
+   "q": "The new packaging machine ------- last Friday by a team of technicians.",
+   "options": [
+    "installed",
+    "installs",
+    "was installed",
+    "is installing"
+   ],
+   "ans": 2,
+   "why": "'by a team' + 'last Friday' → was installed.",
+   "vi": "Máy đóng gói mới đã được một nhóm kỹ thuật viên lắp đặt vào thứ Sáu tuần trước.",
+   "tag": "passive"
+  },
+  {
+   "q": "The logistics team ------- a barcode label to every shipment.",
+   "options": [
+    "is attached",
+    "attaching",
+    "attachment",
+    "attaches"
+   ],
+   "ans": 3,
+   "why": "Có tân ngữ 'a barcode label' → chủ động: attaches.",
+   "vi": "Nhóm hậu cần gắn nhãn mã vạch lên mỗi lô hàng.",
+   "tag": "passive"
+  },
+  {
+   "q": "All defective units ------- from the shelves since the recall began.",
+   "options": [
+    "were removed",
+    "have been removed",
+    "are removed",
+    "will be removed"
+   ],
+   "ans": 1,
+   "why": "'since the recall began' → hiện tại hoàn thành bị động: have been removed.",
+   "vi": "Mọi sản phẩm lỗi đã được gỡ khỏi kệ từ khi đợt thu hồi bắt đầu.",
+   "tag": "passive"
+  },
+  {
+   "q": "The final inspection report ------- to the plant manager by Friday.",
+   "options": [
+    "will submit",
+    "submits",
+    "will be submitted",
+    "submitting"
+   ],
+   "ans": 2,
+   "why": "Không có tân ngữ, tương lai → will be submitted.",
+   "vi": "Báo cáo kiểm tra cuối cùng sẽ được nộp cho quản đốc nhà máy trước thứ Sáu.",
+   "tag": "passive"
+  },
+  {
+   "q": "Hazardous materials must not ------- on passenger flights.",
+   "options": [
+    "be carried",
+    "carry",
+    "carries",
+    "carried"
+   ],
+   "ans": 0,
+   "why": "Modal + be + V3: materials là vật được chở.",
+   "vi": "Vật liệu nguy hiểm không được chở trên chuyến bay chở khách.",
+   "tag": "passive"
+  },
+  {
+   "q": "The warehouse ------- at the moment, so the entrance is blocked.",
+   "options": [
+    "is renovated",
+    "was renovated",
+    "is being renovated",
+    "has renovated"
+   ],
+   "ans": 2,
+   "why": "'at the moment' → bị động tiếp diễn: is being renovated.",
+   "vi": "Nhà kho đang được cải tạo nên lối vào bị chặn.",
+   "tag": "passive"
+  },
+  {
+   "q": "A sudden drop in demand ------- in the third quarter.",
+   "options": [
+    "occurred",
+    "was occurred",
+    "has been occurred",
+    "occurring"
+   ],
+   "ans": 0,
+   "why": "occur không có bị động → occurred.",
+   "vi": "Nhu cầu đã giảm đột ngột vào quý ba.",
+   "tag": "passive"
+  },
+  {
+   "q": "Only two machines ------- in operation after the power failure.",
+   "options": [
+    "were remained",
+    "remaining",
+    "was remained",
+    "remained"
+   ],
+   "ans": 3,
+   "why": "remain không có bị động → remained.",
+   "vi": "Chỉ còn hai máy hoạt động sau sự cố mất điện.",
+   "tag": "passive"
+  },
+  {
+   "q": "The plant's director ------- the new production schedule at yesterday's meeting.",
+   "options": [
+    "announcing",
+    "announced",
+    "to announce",
+    "announcement"
+   ],
+   "ans": 1,
+   "why": "Cần động từ chính chia thì; 'yesterday' → announced.",
+   "vi": "Giám đốc nhà máy đã công bố lịch sản xuất mới tại cuộc họp hôm qua.",
+   "tag": "verb-position"
+  },
+  {
+   "q": "Please ------- all packages at the front desk by noon.",
+   "options": [
+    "leaves",
+    "leave",
+    "leaving",
+    "to leave"
+   ],
+   "ans": 1,
+   "why": "Câu mệnh lệnh: Please + V nguyên mẫu.",
+   "vi": "Vui lòng để tất cả gói hàng ở quầy lễ tân trước buổi trưa.",
+   "tag": "verb-position"
+  },
+  {
+   "q": "The supplier will ------- the missing parts by express mail.",
+   "options": [
+    "sends",
+    "sending",
+    "sent",
+    "send"
+   ],
+   "ans": 3,
+   "why": "Sau will dùng V nguyên mẫu: send.",
+   "vi": "Nhà cung cấp sẽ gửi các linh kiện còn thiếu bằng thư chuyển phát nhanh.",
+   "tag": "verb-position"
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "was packed",
+    "packed",
+    "packs",
+    "has packed"
+   ],
+   "ans": 0,
+   "why": "Có 'by our warehouse team' và 'on May 4' → bị động quá khứ: was packed.",
+   "vi": "Đơn hàng #5521 của bạn đã được nhóm kho đóng gói vào ngày 4/5 và đang trên đường đến địa chỉ của bạn.",
+   "tag": "part6-tense",
+   "ctx": "Dear Customer, Your order #5521 ------- by our warehouse team on May 4 and is now on its way to your address. You can follow its progress with the tracking number below."
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "will inspect",
+    "inspected",
+    "will be inspected",
+    "are inspecting"
+   ],
+   "ans": 2,
+   "why": "Song song với 'cleaned by technicians' và tương lai 'next week' → will be inspected.",
+   "vi": "Trong thời gian này, mọi máy móc sẽ được kỹ thuật viên kiểm tra và làm sạch.",
+   "tag": "part6-tense",
+   "ctx": "Memo: The Dallas plant will be closed for two days next week for maintenance. During this time, all machines ------- and cleaned by technicians. Production will resume on Thursday."
+  },
+  {
+   "q": "Please make sure the ------- on the box shows the correct delivery address.",
+   "options": [
+    "cargo",
+    "output",
+    "stock",
+    "label"
+   ],
+   "ans": 3,
+   "why": "Địa chỉ giao hàng được ghi trên nhãn → label.",
+   "vi": "Hãy chắc chắn nhãn trên thùng ghi đúng địa chỉ giao hàng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Heavy ------- is imported from Germany to keep the production lines running.",
+   "options": [
+    "label",
+    "machinery",
+    "tracking",
+    "stock"
+   ],
+   "ans": 1,
+   "why": "'heavy machinery' = máy móc hạng nặng, không đếm được.",
+   "vi": "Máy móc hạng nặng được nhập từ Đức để duy trì các dây chuyền sản xuất.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Because of the new equipment, the factory's daily ------- has increased by 15 percent.",
+   "options": [
+    "recall",
+    "label",
+    "output",
+    "cargo"
+   ],
+   "ans": 2,
+   "why": "'daily output' = sản lượng hằng ngày.",
+   "vi": "Nhờ thiết bị mới, sản lượng hằng ngày của nhà máy đã tăng 15%.",
+   "tag": "vocab"
+  },
+  {
+   "q": "All outgoing orders are ------- from the main warehouse by 6 p.m.",
+   "options": [
+    "dispatched",
+    "assembled",
+    "recalled",
+    "defective"
+   ],
+   "ans": 0,
+   "why": "'dispatched from the warehouse' = được gửi đi từ kho.",
+   "vi": "Mọi đơn hàng đi được gửi từ kho chính trước 6 giờ chiều.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Our inspectors ------- every batch for flaws before shipping.",
+   "options": [
+    "load",
+    "handle",
+    "inspect",
+    "transport"
+   ],
+   "ans": 2,
+   "why": "'inspect ... for flaws' = kiểm tra lỗi.",
+   "vi": "Thanh tra của chúng tôi kiểm tra từng lô để tìm lỗi trước khi giao.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please ------- the truck before 10 a.m. so that it can leave on time.",
+   "options": [
+    "load",
+    "assemble",
+    "manufacture",
+    "recall"
+   ],
+   "ans": 0,
+   "why": "'load the truck' = chất hàng lên xe tải.",
+   "vi": "Vui lòng chất hàng lên xe tải trước 10 giờ sáng để xe rời đi đúng giờ.",
+   "tag": "vocab"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "The monthly sales report ------- to all department heads by e-mail.",
+   "options": [
+    "sends",
+    "is sent",
+    "sending",
+    "send"
+   ],
+   "ans": 1,
+   "why": "Báo cáo là vật được gửi, không có tân ngữ → is sent.",
+   "vi": "Báo cáo doanh số hằng tháng được gửi đến các trưởng phòng qua e-mail.",
+   "tag": "passive"
+  },
+  {
+   "q": "The assembly team ------- 300 units yesterday, a new record.",
+   "options": [
+    "was completed",
+    "is completed",
+    "completing",
+    "completed"
+   ],
+   "ans": 3,
+   "why": "Có tân ngữ '300 units' → chủ động: completed.",
+   "vi": "Nhóm lắp ráp đã hoàn thành 300 sản phẩm hôm qua, một kỷ lục mới.",
+   "tag": "passive"
+  },
+  {
+   "q": "A new warehouse ------- near the port next year.",
+   "options": [
+    "will be constructed",
+    "will construct",
+    "constructs",
+    "constructing"
+   ],
+   "ans": 0,
+   "why": "Không có tân ngữ, 'next year' → will be constructed.",
+   "vi": "Một nhà kho mới sẽ được xây gần cảng vào năm tới.",
+   "tag": "passive"
+  },
+  {
+   "q": "Your parcel ------- right now and will leave our facility within the hour.",
+   "options": [
+    "is prepared",
+    "prepared",
+    "is being prepared",
+    "has prepared"
+   ],
+   "ans": 2,
+   "why": "'right now' → bị động tiếp diễn: is being prepared.",
+   "vi": "Bưu kiện của bạn đang được chuẩn bị và sẽ rời cơ sở trong vòng một giờ.",
+   "tag": "passive"
+  },
+  {
+   "q": "Since 2020, more than 50 stores ------- by the company in Asia.",
+   "options": [
+    "opened",
+    "are opening",
+    "will open",
+    "have been opened"
+   ],
+   "ans": 3,
+   "why": "'Since 2020' + 'by the company' → have been opened.",
+   "vi": "Từ năm 2020, công ty đã mở hơn 50 cửa hàng ở châu Á.",
+   "tag": "passive"
+  },
+  {
+   "q": "Several errors ------- during the printing process, so the whole batch was rejected.",
+   "options": [
+    "were occurred",
+    "occurred",
+    "occurring",
+    "have occurring"
+   ],
+   "ans": 1,
+   "why": "occur không có bị động; câu có 'was rejected' cho thấy quá khứ → occurred.",
+   "vi": "Một vài lỗi đã xảy ra trong quá trình in nên cả lô bị loại.",
+   "tag": "passive"
+  },
+  {
+   "q": "The samples can ------- free of charge to any registered customer.",
+   "options": [
+    "send",
+    "sent",
+    "be sent",
+    "sending"
+   ],
+   "ans": 2,
+   "why": "Modal can + be + V3.",
+   "vi": "Mẫu thử có thể được gửi miễn phí cho bất kỳ khách hàng đã đăng ký.",
+   "tag": "passive"
+  },
+  {
+   "q": "Deposits cannot ------- after the event starts.",
+   "options": [
+    "be refunded",
+    "refund",
+    "refunded",
+    "refunding"
+   ],
+   "ans": 0,
+   "why": "Modal + be + V3: tiền đặt cọc là vật được hoàn.",
+   "vi": "Tiền đặt cọc không thể được hoàn sau khi sự kiện bắt đầu.",
+   "tag": "passive"
+  },
+  {
+   "q": "The quality control department ------- all products every morning.",
+   "options": [
+    "test",
+    "testing",
+    "tests",
+    "to test"
+   ],
+   "ans": 2,
+   "why": "Chủ ngữ số ít, thói quen 'every morning' → tests.",
+   "vi": "Phòng kiểm soát chất lượng kiểm tra mọi sản phẩm mỗi sáng.",
+   "tag": "verb-position"
+  },
+  {
+   "q": "Please ------- the fragile items separately from the heavy ones.",
+   "options": [
+    "pack",
+    "packs",
+    "packing",
+    "to pack"
+   ],
+   "ans": 0,
+   "why": "Câu mệnh lệnh: Please + V nguyên mẫu.",
+   "vi": "Vui lòng đóng gói hàng dễ vỡ tách riêng với hàng nặng.",
+   "tag": "verb-position"
+  },
+  {
+   "q": "The courier should ------- the package before noon.",
+   "options": [
+    "delivers",
+    "delivered",
+    "delivering",
+    "deliver"
+   ],
+   "ans": 3,
+   "why": "Sau modal should dùng V nguyên mẫu.",
+   "vi": "Nhân viên chuyển phát nên giao gói hàng trước buổi trưa.",
+   "tag": "verb-position"
+  },
+  {
+   "q": "At the moment, our engineers ------- a faster conveyor belt.",
+   "options": [
+    "designing",
+    "are designing",
+    "to design",
+    "designer"
+   ],
+   "ans": 1,
+   "why": "Cần động từ chính; 'at the moment' → be + V-ing: are designing.",
+   "vi": "Hiện tại các kỹ sư của chúng tôi đang thiết kế băng chuyền nhanh hơn.",
+   "tag": "verb-position"
+  },
+  {
+   "q": "The technician ------- the faulty sensor and tested the new one.",
+   "options": [
+    "was replaced",
+    "replaced",
+    "is replaced",
+    "replacing"
+   ],
+   "ans": 1,
+   "why": "Có tân ngữ 'the faulty sensor' → chủ động: replaced (song song với tested).",
+   "vi": "Kỹ thuật viên đã thay cảm biến lỗi và kiểm tra cái mới.",
+   "tag": "passive"
+  },
+  {
+   "q": "All new employees ------- to the production floor by their supervisors on the first day.",
+   "options": [
+    "introduce",
+    "introducing",
+    "introduction",
+    "are introduced"
+   ],
+   "ans": 3,
+   "why": "'by their supervisors' → bị động hiện tại: are introduced.",
+   "vi": "Mọi nhân viên mới được người giám sát giới thiệu với xưởng sản xuất vào ngày đầu tiên.",
+   "tag": "passive"
+  },
+  {
+   "q": "The merger ------- by the board last Thursday.",
+   "options": [
+    "was approved",
+    "approved",
+    "approves",
+    "approving"
+   ],
+   "ans": 0,
+   "why": "Chủ ngữ là vật, 'by the board', 'last Thursday' → was approved.",
+   "vi": "Vụ sáp nhập đã được hội đồng phê duyệt vào thứ Năm tuần trước.",
+   "tag": "passive"
+  },
+  {
+   "q": "Fuel costs ------- again since the beginning of the year.",
+   "options": [
+    "have been risen",
+    "were rising",
+    "have risen",
+    "are risen"
+   ],
+   "ans": 2,
+   "why": "rise không có bị động; 'since' → have risen.",
+   "vi": "Chi phí nhiên liệu lại tăng từ đầu năm.",
+   "tag": "passive"
+  },
+  {
+   "q": "The spare parts ------- as soon as the supplier confirms the order.",
+   "options": [
+    "will dispatch",
+    "dispatches",
+    "dispatching",
+    "will be dispatched"
+   ],
+   "ans": 3,
+   "why": "Mệnh đề chính tương lai, linh kiện là vật được gửi → will be dispatched.",
+   "vi": "Phụ tùng sẽ được gửi đi ngay khi nhà cung cấp xác nhận đơn hàng.",
+   "tag": "passive"
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "will handle",
+    "will be handled",
+    "handled",
+    "are handling"
+   ],
+   "ans": 1,
+   "why": "'Starting June 1' → tương lai; 'by a new carrier' → bị động: will be handled.",
+   "vi": "Từ ngày 1/6, việc giao hàng sẽ do một hãng vận chuyển mới đảm nhận.",
+   "tag": "part6-tense",
+   "ctx": "Starting June 1, deliveries ------- by a new carrier. Customers do not need to do anything."
+  },
+  {
+   "q": "We need to check our ------- because several items are running low.",
+   "options": [
+    "freight",
+    "recall",
+    "inventory",
+    "tracking"
+   ],
+   "ans": 2,
+   "why": "Kiểm tra hàng sắp hết → inventory (hàng tồn kho).",
+   "vi": "Chúng ta cần kiểm tra hàng tồn vì vài mặt hàng sắp hết.",
+   "tag": "vocab"
+  },
+  {
+   "q": "These boots are made of ------- leather and can last for many years.",
+   "options": [
+    "durable",
+    "defective",
+    "fragile",
+    "tentative"
+   ],
+   "ans": 0,
+   "why": "'last for many years' → bền: durable.",
+   "vi": "Đôi bốt này làm bằng da bền và dùng được nhiều năm.",
+   "tag": "vocab"
+  }
+ ]
+}

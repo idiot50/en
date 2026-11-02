@@ -1,0 +1,1967 @@
+{
+ "day": 4,
+ "title": "Đại từ, Lượng từ & Hòa hợp chủ–vị",
+ "icon": "👥",
+ "goal": "Sau hôm nay bạn chọn đúng đại từ theo vị trí, xác định được đại từ thay cho danh từ nào, dùng đúng lượng từ với danh từ đếm được/không đếm được và chia động từ đúng số ít/số nhiều.",
+ "why": "Đại từ, lượng từ và hòa hợp chủ–vị chiếm khoảng 7-8% số câu ngữ pháp (3-4 câu mỗi đề) và còn xuất hiện trong Part 6 khi hỏi đại từ thay thế.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 40
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d4-l1",
+   "title": "1. Đại từ nhân xưng, tính từ sở hữu, đại từ sở hữu, đại từ phản thân",
+   "intro": "Đại từ (pronoun) là từ dùng thay cho danh từ để khỏi lặp lại. Tiếng Anh có 4 \"bộ\" đại từ, mỗi bộ đứng ở một vị trí khác nhau. Chỉ cần nhìn vị trí chỗ trống là biết chọn bộ nào.",
+   "points": [
+    {
+     "rule": "**Đại từ chủ ngữ** (I, you, he, she, it, we, they) đứng TRƯỚC động từ, làm chủ ngữ. **Đại từ tân ngữ** (me, you, him, her, it, us, them) đứng SAU động từ hoặc SAU giới từ. Công thức: `S + V + O`, `giới từ + O`.",
+     "examples": [
+      {
+       "en": "**She** manages the Osaka office.",
+       "vi": "Cô ấy quản lý văn phòng Osaka."
+      },
+      {
+       "en": "Please send **them** the invoice.",
+       "vi": "Vui lòng gửi cho họ hóa đơn."
+      },
+      {
+       "en": "Mr. Cho will meet **us** at noon.",
+       "vi": "Ông Cho sẽ gặp chúng tôi vào buổi trưa."
+      }
+     ]
+    },
+    {
+     "rule": "**Tính từ sở hữu** (my, your, his, her, its, our, their) đứng TRƯỚC danh từ và cho biết của ai. Công thức: `my/our/their + N`. Không có danh từ sau nó thì sai.",
+     "examples": [
+      {
+       "en": "Please check **your** account.",
+       "vi": "Vui lòng kiểm tra tài khoản của bạn."
+      },
+      {
+       "en": "The company changed **its** policy.",
+       "vi": "Công ty đã thay đổi chính sách của mình."
+      }
+     ]
+    },
+    {
+     "rule": "**Đại từ sở hữu** (mine, yours, his, hers, ours, theirs) = tính từ sở hữu + danh từ, đứng MỘT MÌNH, phía sau không có danh từ. Công thức: `This desk is mine.` (= my desk).",
+     "examples": [
+      {
+       "en": "That badge is **hers**.",
+       "vi": "Thẻ đó là của cô ấy."
+      },
+      {
+       "en": "Our prices are lower than **theirs**.",
+       "vi": "Giá của chúng tôi thấp hơn giá của họ."
+      }
+     ]
+    },
+    {
+     "rule": "**Đại từ phản thân** (myself, yourself, himself, herself, itself, ourselves, themselves) dùng khi (1) tân ngữ chính là chủ ngữ: `S + V + oneself`; (2) nhấn mạnh: `S + oneself + V`; (3) trong cụm `by oneself` (một mình, tự làm).",
+     "examples": [
+      {
+       "en": "She introduced **herself** to the team.",
+       "vi": "Cô ấy tự giới thiệu với cả nhóm."
+      },
+      {
+       "en": "Mr. Ito prepared the report by **himself**.",
+       "vi": "Ông Ito tự chuẩn bị báo cáo một mình."
+      },
+      {
+       "en": "The CEO **herself** will attend.",
+       "vi": "Chính giám đốc sẽ đến dự."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Chủ ngữ",
+     "Tân ngữ",
+     "Tính từ sở hữu",
+     "Đại từ sở hữu",
+     "Phản thân"
+    ],
+    "rows": [
+     [
+      "I",
+      "me",
+      "my",
+      "mine",
+      "myself"
+     ],
+     [
+      "you",
+      "you",
+      "your",
+      "yours",
+      "yourself"
+     ],
+     [
+      "he",
+      "him",
+      "his",
+      "his",
+      "himself"
+     ],
+     [
+      "she",
+      "her",
+      "her",
+      "hers",
+      "herself"
+     ],
+     [
+      "it",
+      "it",
+      "its",
+      "—",
+      "itself"
+     ],
+     [
+      "we",
+      "us",
+      "our",
+      "ours",
+      "ourselves"
+     ],
+     [
+      "they",
+      "them",
+      "their",
+      "theirs",
+      "themselves"
+     ]
+    ]
+   },
+   "traps": [
+    "\"Ms. Brown and ------- \" : sau động từ/giới từ dùng tân ngữ: \"gave Ms. Brown and me\", nhưng làm chủ ngữ thì \"Ms. Brown and I will attend\".",
+    "Phản thân chỉ dùng khi người làm và người nhận là CÙNG một người. \"Show her around\" (người khác) ≠ \"show herself around\".",
+    "\"its\" (của nó) khác \"it's\" (= it is). Trong Part 5 \"it's\" hầu như không phải đáp án."
+   ],
+   "tip": "Mẹo nhanh: nhìn từ ngay SAU chỗ trống. Có danh từ → tính từ sở hữu. Là động từ → chủ ngữ. Không còn gì (hết câu) → tân ngữ hoặc đại từ sở hữu."
+  },
+  {
+   "id": "d4-l2",
+   "title": "2. Đại từ thay thế, another / other, those who",
+   "intro": "Trong đoạn văn (Part 6) và trong câu, bạn thường phải xác định \"it\", \"they\", \"this\" đang nói về cái gì. Quy tắc vàng: đại từ phải KHỚP về số (ít/nhiều) và loại (người/vật) với danh từ nó thay thế.",
+   "points": [
+    {
+     "rule": "**Quy tắc khớp**: danh từ số ít chỉ vật → it; số nhiều → they/them; một người nam/nữ → he/she; nhiều người → they. Hãy đọc câu TRƯỚC chỗ trống để tìm danh từ được thay thế.",
+     "examples": [
+      {
+       "en": "The new printer arrived. **It** works well.",
+       "vi": "Máy in mới đã về. Nó chạy tốt."
+      },
+      {
+       "en": "We hired two designers. **They** start Monday.",
+       "vi": "Chúng tôi đã thuê hai nhà thiết kế. Họ bắt đầu vào thứ Hai."
+      }
+     ]
+    },
+    {
+     "rule": "**those who + V** = những người nào đó (dùng khi nói chung). **each other / one another** = nhau (hai bên làm với nhau, đứng sau động từ hoặc giới từ).",
+     "examples": [
+      {
+       "en": "**Those who** want a refund should call us.",
+       "vi": "Những ai muốn hoàn tiền nên gọi cho chúng tôi."
+      },
+      {
+       "en": "The two teams often help **each other**.",
+       "vi": "Hai nhóm thường giúp đỡ lẫn nhau."
+      }
+     ]
+    },
+    {
+     "rule": "**another** = một cái khác nữa (+ N số ít, hoặc đứng một mình). **other + N số nhiều** = những cái khác. **the other** = cái còn lại (trong hai cái). **others** = những cái khác (đại từ, không có danh từ theo sau). **the others** = những cái còn lại.",
+     "examples": [
+      {
+       "en": "One printer is broken, but **the other** works.",
+       "vi": "Một máy in bị hỏng, nhưng cái còn lại chạy tốt."
+      },
+      {
+       "en": "Some people work at home; **others** come to the office.",
+       "vi": "Một số người làm ở nhà; những người khác đến văn phòng."
+      },
+      {
+       "en": "We need **another** supplier.",
+       "vi": "Chúng tôi cần thêm một nhà cung cấp khác."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Từ",
+     "Dùng với",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "another",
+      "N số ít (một cái nữa)",
+      "another meeting"
+     ],
+     [
+      "other",
+      "N số nhiều (+ N)",
+      "other options"
+     ],
+     [
+      "the other",
+      "cái còn lại (trong hai)",
+      "the other branch"
+     ],
+     [
+      "others",
+      "đại từ, không + N",
+      "Others disagree."
+     ],
+     [
+      "each other",
+      "nhau (2 bên)",
+      "help each other"
+     ]
+    ]
+   },
+   "traps": [
+    "\"other\" là tính từ nên luôn cần danh từ phía sau; không có danh từ thì dùng \"others\". \"another\" không đi với danh từ số nhiều (\"another options\" sai).",
+    "Trong Part 6, đại từ thường sai vì không khớp số: nhắc đến 2 đề xuất thì phải là \"them\", không phải \"it\"."
+   ],
+   "tip": "Part 6: gạch chân danh từ ở câu trước chỗ trống, xác định số ít hay số nhiều, người hay vật, rồi mới chọn đại từ."
+  },
+  {
+   "id": "d4-l3",
+   "title": "3. Lượng từ (quantifiers): each, every, many, much, few, little, all, most, some",
+   "intro": "Lượng từ là từ chỉ \"bao nhiêu\". Mỗi lượng từ chỉ đi với một loại danh từ nhất định, nên chỉ cần xem danh từ phía sau là số ít, số nhiều hay không đếm được (đã học ở Ngày 2).",
+   "points": [
+    {
+     "rule": "**each / every + danh từ SỐ ÍT** (động từ cũng chia số ít). **one of the + N số nhiều**. Công thức: `Each/Every + N số ít + V số ít`.",
+     "examples": [
+      {
+       "en": "**Every** employee must wear a badge.",
+       "vi": "Mọi nhân viên phải đeo thẻ."
+      },
+      {
+       "en": "**Each** department has its own budget.",
+       "vi": "Mỗi phòng ban có ngân sách riêng."
+      }
+     ]
+    },
+    {
+     "rule": "**many / a few / few / several / both / a number of + N SỐ NHIỀU đếm được**.",
+     "examples": [
+      {
+       "en": "We have **several** openings.",
+       "vi": "Chúng tôi có vài vị trí tuyển dụng."
+      },
+      {
+       "en": "**A few** seats are left.",
+       "vi": "Còn lại vài chỗ."
+      }
+     ]
+    },
+    {
+     "rule": "**much / a little / little / a great deal of + N KHÔNG ĐẾM ĐƯỢC** (information, equipment, money, time, advice).",
+     "examples": [
+      {
+       "en": "We do not have **much** time.",
+       "vi": "Chúng tôi không có nhiều thời gian."
+      },
+      {
+       "en": "There is **little** information about the plan.",
+       "vi": "Có rất ít thông tin về kế hoạch."
+      }
+     ]
+    },
+    {
+     "rule": "**all / most / some / a lot of / plenty of** đi được với cả số nhiều lẫn không đếm được. Nếu có \"of\" thì cần \"the/these/my\" sau đó: `all of the staff`, `most of the budget`, `some of the files`.",
+     "examples": [
+      {
+       "en": "**Most** of the budget was spent.",
+       "vi": "Phần lớn ngân sách đã được chi."
+      },
+      {
+       "en": "**All** employees received a bonus.",
+       "vi": "Tất cả nhân viên nhận được tiền thưởng."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Lượng từ",
+     "Đi với",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "each, every, another",
+      "N số ít",
+      "every client"
+     ],
+     [
+      "many, several, a few, both",
+      "N số nhiều",
+      "several clients"
+     ],
+     [
+      "much, a little, little",
+      "N không đếm được",
+      "much advice"
+     ],
+     [
+      "all, most, some, a lot of",
+      "số nhiều / không đếm được",
+      "most of the staff"
+     ],
+     [
+      "few / little",
+      "ít, gần như không có",
+      "few options"
+     ]
+    ]
+   },
+   "traps": [
+    "\"few / little\" (ít, gần như không có) mang nghĩa tiêu cực; \"a few / a little\" (một vài, một ít) mang nghĩa tích cực.",
+    "\"many information\" sai vì information không đếm được → \"much information\". \"every employees\" sai → \"every employee\"."
+   ],
+   "tip": "Mẹo: nhìn danh từ sau chỗ trống. Có -s → chọn lượng từ số nhiều; là information/equipment/advice/money → chọn much/little; số ít đếm được → each/every/another."
+  },
+  {
+   "id": "d4-l4",
+   "title": "4. Hòa hợp chủ ngữ – động từ (subject–verb agreement)",
+   "intro": "Hòa hợp chủ–vị nghĩa là chủ ngữ số ít thì động từ số ít (thêm -s: works, has, is), chủ ngữ số nhiều thì động từ số nhiều (work, have, are). Khó nhất là tìm đúng \"danh từ chính\" khi có nhiều từ chen giữa.",
+   "points": [
+    {
+     "rule": "**Tìm danh từ chính của chủ ngữ**: với `N1 of N2` thì động từ theo N1. Cụm chen giữa (of..., in..., together with..., as well as...) bị bỏ qua.",
+     "examples": [
+      {
+       "en": "The **manager** of the two branches **holds** a meeting weekly.",
+       "vi": "Người quản lý của hai chi nhánh họp hằng tuần."
+      },
+      {
+       "en": "The **prices** on the menu **have** changed.",
+       "vi": "Giá trên thực đơn đã thay đổi."
+      }
+     ]
+    },
+    {
+     "rule": "**each / every / one of / neither of / either of** → động từ SỐ ÍT. **a number of + N số nhiều** → động từ số nhiều; **the number of + N** → động từ số ít.",
+     "examples": [
+      {
+       "en": "**Each** of the employees **receives** a laptop.",
+       "vi": "Mỗi nhân viên nhận một laptop."
+      },
+      {
+       "en": "**A number of** customers **have** complained.",
+       "vi": "Một số khách hàng đã phàn nàn."
+      },
+      {
+       "en": "**The number of** orders **has** grown.",
+       "vi": "Số lượng đơn hàng đã tăng."
+      }
+     ]
+    },
+    {
+     "rule": "**There is/are + N**: động từ theo danh từ ĐỨNG SAU. Danh từ không đếm được (equipment, information) và V-ing làm chủ ngữ → động từ SỐ ÍT.",
+     "examples": [
+      {
+       "en": "**There are** several reasons for the delay.",
+       "vi": "Có vài lý do cho sự chậm trễ."
+      },
+      {
+       "en": "**Reviewing** feedback **is** important.",
+       "vi": "Xem xét phản hồi là điều quan trọng."
+      },
+      {
+       "en": "The **equipment** in the lab **is** inspected daily.",
+       "vi": "Thiết bị trong phòng thí nghiệm được kiểm tra hằng ngày."
+      }
+     ]
+    },
+    {
+     "rule": "**A and B** (hai chủ ngữ nối bằng and) → động từ SỐ NHIỀU.",
+     "examples": [
+      {
+       "en": "The manager and the director **are** working on the plan.",
+       "vi": "Người quản lý và giám đốc đang làm việc trên kế hoạch."
+      }
+     ]
+    }
+   ],
+   "traps": [
+    "Danh từ gần động từ nhất không phải lúc nào cũng là chủ ngữ: \"The list of finalists ------- posted\" → chủ ngữ là list (số ít) → is.",
+    "\"a number of\" (một số, nhiều) và \"the number of\" (số lượng) nhìn giống nhau nhưng động từ khác nhau."
+   ],
+   "tip": "Mẹo: gạch bỏ cụm \"of + N\" và các cụm chen giữa dấu phẩy, tìm danh từ chính, rồi mới chọn động từ số ít hay số nhiều."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d4-p1",
+   "title": "Bài 1: Đại từ nhân xưng & tính từ sở hữu",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d4-l1",
+   "items": [
+    {
+     "q": "Ms. Kim is new, so please show ------- around the office.",
+     "options": [
+      "she",
+      "hers",
+      "her",
+      "herself"
+     ],
+     "ans": 2,
+     "why": "'show' cần tân ngữ chỉ người khác (cô Kim) → her. 'herself' chỉ dùng khi chủ ngữ và tân ngữ là cùng một người; 'she' là đại từ chủ ngữ.",
+     "vi": "Cô Kim là người mới, nên hãy dẫn cô ấy đi xem văn phòng.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "The sales team met their targets, and ------- received a bonus.",
+     "options": [
+      "they",
+      "them",
+      "their",
+      "theirs"
+     ],
+     "ans": 0,
+     "why": "Chỗ trống đứng trước động từ 'received' nên cần đại từ chủ ngữ → they. 'them' là tân ngữ, 'their' cần danh từ theo sau.",
+     "vi": "Nhóm bán hàng đạt mục tiêu và họ đã nhận tiền thưởng.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Mr. Cho asked ------- to send the contract by noon.",
+     "options": [
+      "I",
+      "my",
+      "mine",
+      "me"
+     ],
+     "ans": 3,
+     "why": "Sau động từ 'asked' cần tân ngữ → me. 'I' là chủ ngữ nên không đứng sau động từ.",
+     "vi": "Ông Cho yêu cầu tôi gửi hợp đồng trước buổi trưa.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Our supplier delivered ------- order two days late.",
+     "options": [
+      "we",
+      "our",
+      "us",
+      "ours"
+     ],
+     "ans": 1,
+     "why": "Sau chỗ trống là danh từ 'order' nên cần tính từ sở hữu → our. 'ours' đứng một mình, 'us' là tân ngữ.",
+     "vi": "Nhà cung cấp đã giao đơn hàng của chúng tôi trễ hai ngày.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Thank you for your e-mail. I will reply to ------- tomorrow.",
+     "options": [
+      "its",
+      "it",
+      "itself",
+      "they"
+     ],
+     "ans": 1,
+     "why": "Sau giới từ 'to' cần tân ngữ thay cho 'e-mail' (số ít, vật) → it. 'its' cần danh từ theo sau; 'they' là chủ ngữ số nhiều.",
+     "vi": "Cảm ơn e-mail của bạn. Tôi sẽ trả lời nó vào ngày mai.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "The manager gave Ms. Brown and ------- a new assignment.",
+     "options": [
+      "I",
+      "my",
+      "mine",
+      "me"
+     ],
+     "ans": 3,
+     "why": "Sau động từ 'gave' (Ms. Brown and ...) là tân ngữ nên dùng me. 'I' chỉ dùng làm chủ ngữ.",
+     "vi": "Người quản lý giao cho cô Brown và tôi một nhiệm vụ mới.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "The director and ------- will attend the trade show.",
+     "options": [
+      "I",
+      "me",
+      "my",
+      "mine"
+     ],
+     "ans": 0,
+     "why": "'The director and ...' làm chủ ngữ trước động từ 'will attend' nên dùng I. 'me' là tân ngữ.",
+     "vi": "Giám đốc và tôi sẽ tham dự hội chợ thương mại.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "This laptop is not -------; it belongs to the finance department.",
+     "options": [
+      "my",
+      "me",
+      "mine",
+      "I"
+     ],
+     "ans": 2,
+     "why": "Cuối mệnh đề, không có danh từ sau → đại từ sở hữu mine (= my laptop). 'my' phải có danh từ theo sau.",
+     "vi": "Chiếc laptop này không phải của tôi; nó thuộc phòng tài chính.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Employees must keep ------- badges visible at all times.",
+     "options": [
+      "they",
+      "them",
+      "theirs",
+      "their"
+     ],
+     "ans": 3,
+     "why": "Trước danh từ 'badges' cần tính từ sở hữu → their. 'theirs' đứng một mình, không đứng trước danh từ.",
+     "vi": "Nhân viên phải để thẻ của họ luôn hiển thị.",
+     "tag": "pronoun"
+    }
+   ]
+  },
+  {
+   "id": "d4-p2",
+   "title": "Bài 2: Phản thân, another/other, those who & đại từ trong đoạn văn",
+   "instr": "Chọn đáp án đúng để hoàn thành câu hoặc đoạn văn.",
+   "lesson": "d4-l2",
+   "items": [
+    {
+     "q": "Mr. Ito prepared the entire presentation by -------.",
+     "options": [
+      "him",
+      "himself",
+      "his",
+      "he"
+     ],
+     "ans": 1,
+     "why": "'by oneself' = một mình, tự làm → by himself. 'him' và 'he' không đi sau 'by' với nghĩa này.",
+     "vi": "Ông Ito tự chuẩn bị toàn bộ bài thuyết trình một mình.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Ms. Han ------- will announce the merger at the meeting.",
+     "options": [
+      "her",
+      "she",
+      "herself",
+      "hers"
+     ],
+     "ans": 2,
+     "why": "Đại từ phản thân đứng sau danh từ để nhấn mạnh 'chính cô Han'. 'she' lặp lại chủ ngữ nên sai.",
+     "vi": "Chính cô Han sẽ công bố vụ sáp nhập tại cuộc họp.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "The two departments often share information with -------.",
+     "options": [
+      "each other",
+      "another",
+      "themselves",
+      "other"
+     ],
+     "ans": 0,
+     "why": "'each other' = nhau (hai phòng ban chia sẻ với nhau). 'themselves' là phản thân (tự mình), sai nghĩa; 'another' cần danh từ số ít hoặc nghĩa 'một cái khác nữa'; 'other' phải có danh từ theo sau.",
+     "vi": "Hai phòng ban thường chia sẻ thông tin với nhau.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Our current supplier is expensive, so we are looking for ------- one.",
+     "options": [
+      "other",
+      "others",
+      "another",
+      "the others"
+     ],
+     "ans": 2,
+     "why": "'another + N số ít' (một cái khác nữa) → another one. 'other' phải đi với danh từ số nhiều ('other options'), 'others' không đi với danh từ.",
+     "vi": "Nhà cung cấp hiện tại đắt, nên chúng tôi đang tìm một nhà khác.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Some employees prefer to work from home, while ------- come to the office.",
+     "options": [
+      "others",
+      "another",
+      "other",
+      "the other"
+     ],
+     "ans": 0,
+     "why": "'others' là đại từ = những người khác, không cần danh từ phía sau. 'other' là tính từ nên cần danh từ.",
+     "vi": "Một số nhân viên thích làm việc ở nhà, trong khi những người khác đến văn phòng.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "One of the two printers is broken, but ------- works well.",
+     "options": [
+      "another",
+      "others",
+      "other",
+      "the other"
+     ],
+     "ans": 3,
+     "why": "Chỉ có hai máy, một cái hỏng thì cái còn lại là 'the other'. 'another' nghĩa 'một cái nữa', không dùng khi chỉ có hai.",
+     "vi": "Một trong hai máy in bị hỏng, nhưng cái còn lại chạy tốt.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "------- who wish to join the tour should register by Monday.",
+     "options": [
+      "Them",
+      "Those",
+      "They",
+      "Which"
+     ],
+     "ans": 1,
+     "why": "Cấu trúc 'Those who + V' = những ai... 'Them' là tân ngữ, 'They who' không dùng trong tiếng Anh hiện đại.",
+     "vi": "Những ai muốn tham gia chuyến tham quan nên đăng ký trước thứ Hai.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "On her first day, the new clerk introduced ------- to everyone in the office.",
+     "options": [
+      "her",
+      "herself",
+      "she",
+      "hers"
+     ],
+     "ans": 1,
+     "why": "Người giới thiệu và người được giới thiệu là cùng một người → đại từ phản thân herself. 'her' sẽ chỉ một người khác.",
+     "vi": "Vào ngày đầu tiên, nhân viên mới tự giới thiệu mình với mọi người trong văn phòng.",
+     "tag": "pronoun"
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "They",
+      "He",
+      "We",
+      "It"
+     ],
+     "ans": 3,
+     "why": "Câu trước nói về một chiếc đèn (số ít, vật) → it. 'They' là số nhiều, 'He' chỉ người, 'We' sai chủ thể.",
+     "vi": "Chiếc đèn sẽ được vận chuyển từ kho hàng của chúng tôi vào thứ Hai.",
+     "tag": "part6-pronoun",
+     "ctx": "Dear Mr. Evans, thank you for ordering our Alpine desk lamp. ------- will be shipped from our warehouse on Monday."
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "them",
+      "it",
+      "him",
+      "they"
+     ],
+     "ans": 0,
+     "why": "Hai đề xuất (số nhiều, vật) làm tân ngữ của 'reviewed' → them. 'it' là số ít; 'they' là chủ ngữ; 'him' chỉ người.",
+     "vi": "Giám đốc đã xem xét chúng hôm qua và chọn đề xuất thứ hai.",
+     "tag": "part6-pronoun",
+     "ctx": "The marketing team has prepared two proposals for the summer campaign. The director reviewed ------- yesterday and chose the second one."
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "Her",
+      "Hers",
+      "She",
+      "Herself"
+     ],
+     "ans": 2,
+     "why": "Chỗ trống đứng trước động từ 'worked' → cần đại từ chủ ngữ, thay cho Ms. Torres → She.",
+     "vi": "Trước đó, cô ấy từng làm quản lý dự án tại một ngân hàng.",
+     "tag": "part6-pronoun",
+     "ctx": "Ms. Torres joined our firm in March. Before that, ------- worked as a project manager at a bank."
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "Them",
+      "They",
+      "That",
+      "Those"
+     ],
+     "ans": 3,
+     "why": "'Those who + V' = những ai... thay cho những ứng viên vượt qua phỏng vấn. 'They who' không tự nhiên; 'Them' là tân ngữ.",
+     "vi": "Những người vượt qua buổi phỏng vấn sẽ nhận được thư mời làm việc trước thứ Sáu.",
+     "tag": "part6-pronoun",
+     "ctx": "All applicants will be interviewed next week. ------- who pass the interview will receive an offer by Friday."
+    }
+   ]
+  },
+  {
+   "id": "d4-p3",
+   "title": "Bài 3: Lượng từ",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d4-l3",
+   "items": [
+    {
+     "q": "Every ------- must wear an ID badge.",
+     "options": [
+      "employees",
+      "employee",
+      "employ",
+      "employed"
+     ],
+     "ans": 1,
+     "why": "'Every + N số ít' → employee. 'employees' là số nhiều nên sai sau 'every'.",
+     "vi": "Mọi nhân viên phải đeo thẻ nhận dạng.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "The cafeteria offers ------- different kinds of sandwiches.",
+     "options": [
+      "much",
+      "every",
+      "several",
+      "each"
+     ],
+     "ans": 2,
+     "why": "'kinds' là danh từ số nhiều → several (vài). 'much' dùng với danh từ không đếm được; 'every/each' cần danh từ số ít.",
+     "vi": "Căng tin phục vụ nhiều loại bánh mì kẹp khác nhau.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "We have received ------- information about the new policy.",
+     "options": [
+      "much",
+      "many",
+      "few",
+      "several"
+     ],
+     "ans": 0,
+     "why": "'information' là danh từ không đếm được → much. 'many', 'few', 'several' đi với danh từ số nhiều đếm được.",
+     "vi": "Chúng tôi đã nhận được nhiều thông tin về chính sách mới.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "------- of the applicants have a degree in finance.",
+     "options": [
+      "Almost",
+      "Mostly",
+      "Most",
+      "Every"
+     ],
+     "ans": 2,
+     "why": "'Most of the + N số nhiều' = hầu hết. 'Almost' là trạng từ, không đứng trước 'of'; 'Every of' không tồn tại.",
+     "vi": "Hầu hết các ứng viên có bằng tài chính.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "There are only ------- seats left for the seminar.",
+     "options": [
+      "a few",
+      "a little",
+      "much",
+      "every"
+     ],
+     "ans": 0,
+     "why": "'seats' là danh từ số nhiều đếm được → a few. 'a little' và 'much' dùng với danh từ không đếm được.",
+     "vi": "Chỉ còn lại vài chỗ cho buổi hội thảo.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "Very ------- time remains before the deadline.",
+     "options": [
+      "few",
+      "many",
+      "several",
+      "little"
+     ],
+     "ans": 3,
+     "why": "'time' không đếm được → little. 'few', 'many', 'several' đi với danh từ số nhiều.",
+     "vi": "Còn rất ít thời gian trước hạn chót.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "------- employee is required to complete the safety course.",
+     "options": [
+      "All",
+      "Each",
+      "Many",
+      "Several"
+     ],
+     "ans": 1,
+     "why": "Danh từ 'employee' (số ít) và động từ 'is' → Each. 'All', 'Many', 'Several' cần danh từ số nhiều.",
+     "vi": "Mỗi nhân viên đều phải hoàn thành khóa học an toàn.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "Please read ------- of the instructions carefully.",
+     "options": [
+      "every",
+      "all",
+      "much",
+      "another"
+     ],
+     "ans": 1,
+     "why": "'all of the instructions' (số nhiều) → all. 'every' không đi với 'of'; 'much' dùng với danh từ không đếm được.",
+     "vi": "Vui lòng đọc kỹ tất cả các hướng dẫn.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "------- of the budget has already been spent.",
+     "options": [
+      "Many",
+      "Few",
+      "Several",
+      "Some"
+     ],
+     "ans": 3,
+     "why": "'the budget' (số ít, không đếm được) → Some of the budget. 'Many', 'Few', 'Several' cần danh từ số nhiều.",
+     "vi": "Một phần ngân sách đã được chi.",
+     "tag": "quantifier"
+    },
+    {
+     "q": "The company has ------- branches in Europe, so we can serve clients easily.",
+     "options": [
+      "many",
+      "much",
+      "every",
+      "a little"
+     ],
+     "ans": 0,
+     "why": "'branches' là danh từ số nhiều → many. 'much' và 'a little' dùng với danh từ không đếm được; 'every' cần danh từ số ít.",
+     "vi": "Công ty có nhiều chi nhánh ở châu Âu nên chúng tôi dễ phục vụ khách hàng.",
+     "tag": "quantifier"
+    }
+   ]
+  },
+  {
+   "id": "d4-p4",
+   "title": "Bài 4: Hòa hợp chủ ngữ – động từ",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d4-l4",
+   "items": [
+    {
+     "q": "The manager of the two branches ------- a meeting every Monday.",
+     "options": [
+      "hold",
+      "holding",
+      "holds",
+      "to hold"
+     ],
+     "ans": 2,
+     "why": "Chủ ngữ chính là 'manager' (số ít), 'of the two branches' chỉ chen giữa → holds. 'hold' dùng với chủ ngữ số nhiều.",
+     "vi": "Người quản lý của hai chi nhánh họp vào mỗi thứ Hai.",
+     "tag": "agreement"
+    },
+    {
+     "q": "The prices on the menu ------- changed since January.",
+     "options": [
+      "has",
+      "is",
+      "was",
+      "have"
+     ],
+     "ans": 3,
+     "why": "Chủ ngữ chính là 'prices' (số nhiều) → have changed. 'has' và 'is/was' dùng với chủ ngữ số ít.",
+     "vi": "Giá trên thực đơn đã thay đổi từ tháng Một.",
+     "tag": "agreement"
+    },
+    {
+     "q": "A list of the finalists ------- available on the website.",
+     "options": [
+      "are",
+      "is",
+      "were",
+      "be"
+     ],
+     "ans": 1,
+     "why": "Chủ ngữ chính là 'list' (số ít), 'of the finalists' chỉ chen giữa → is. 'are/were' là động từ số nhiều.",
+     "vi": "Danh sách các ứng viên vào chung kết có trên trang web.",
+     "tag": "agreement"
+    },
+    {
+     "q": "Each of the new employees ------- a laptop and a phone.",
+     "options": [
+      "receive",
+      "receiving",
+      "receives",
+      "have received"
+     ],
+     "ans": 2,
+     "why": "'Each of + N số nhiều' vẫn dùng động từ số ít → receives. 'receive' và 'have received' là số nhiều.",
+     "vi": "Mỗi nhân viên mới nhận một laptop và một điện thoại.",
+     "tag": "agreement"
+    },
+    {
+     "q": "There ------- several reasons for the delay.",
+     "options": [
+      "are",
+      "is",
+      "was",
+      "has been"
+     ],
+     "ans": 0,
+     "why": "Sau 'There' danh từ là 'several reasons' (số nhiều) → are. 'is/was/has been' là số ít.",
+     "vi": "Có vài lý do cho sự chậm trễ.",
+     "tag": "agreement"
+    },
+    {
+     "q": "Reviewing customer feedback ------- an important part of our job.",
+     "options": [
+      "are",
+      "were",
+      "is",
+      "have been"
+     ],
+     "ans": 2,
+     "why": "V-ing làm chủ ngữ được xem là số ít → is. 'are/were/have been' là dạng số nhiều.",
+     "vi": "Xem xét phản hồi của khách hàng là một phần quan trọng trong công việc của chúng tôi.",
+     "tag": "agreement"
+    },
+    {
+     "q": "The equipment in the lab ------- regularly inspected.",
+     "options": [
+      "is",
+      "are",
+      "were",
+      "have"
+     ],
+     "ans": 0,
+     "why": "'equipment' là danh từ không đếm được (số ít) → is. 'are/were/have' dùng với chủ ngữ số nhiều.",
+     "vi": "Thiết bị trong phòng thí nghiệm được kiểm tra thường xuyên.",
+     "tag": "agreement"
+    },
+    {
+     "q": "The CEO, together with two directors, ------- to attend the summit.",
+     "options": [
+      "plan",
+      "are planning",
+      "have planned",
+      "plans"
+     ],
+     "ans": 3,
+     "why": "Chủ ngữ chính là 'The CEO' (số ít); 'together with two directors' chỉ chen giữa → plans. Các đáp án còn lại là số nhiều.",
+     "vi": "Giám đốc điều hành cùng hai giám đốc khác dự định tham dự hội nghị thượng đỉnh.",
+     "tag": "agreement"
+    },
+    {
+     "q": "The number of online orders ------- grown rapidly this year.",
+     "options": [
+      "have",
+      "has",
+      "are",
+      "were"
+     ],
+     "ans": 1,
+     "why": "'The number of + N' chỉ số lượng, động từ SỐ ÍT → has grown. 'have' sẽ đúng với 'A number of'.",
+     "vi": "Số lượng đơn hàng trực tuyến đã tăng nhanh trong năm nay.",
+     "tag": "agreement"
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Dịch vụ khách hàng & mua sắm",
+  "words": [
+   {
+    "w": "refund",
+    "pos": "n/v",
+    "ipa": "/ˈriːfʌnd/",
+    "vi": "tiền hoàn lại; hoàn tiền",
+    "ex": "You can get a full refund within 30 days.",
+    "exvi": "Bạn có thể được hoàn lại toàn bộ tiền trong vòng 30 ngày.",
+    "fam": "refundable (adj)",
+    "colloc": [
+     "full refund",
+     "request a refund"
+    ]
+   },
+   {
+    "w": "complaint",
+    "pos": "n",
+    "ipa": "/kəmˈpleɪnt/",
+    "vi": "khiếu nại, phàn nàn",
+    "ex": "We received a complaint about the delay.",
+    "exvi": "Chúng tôi nhận được một khiếu nại về sự chậm trễ.",
+    "fam": "complain (v)",
+    "colloc": [
+     "file a complaint",
+     "handle a complaint"
+    ]
+   },
+   {
+    "w": "receipt",
+    "pos": "n",
+    "ipa": "/rɪˈsiːt/",
+    "vi": "biên lai, hóa đơn; sự nhận",
+    "ex": "Please keep your receipt as proof of purchase.",
+    "exvi": "Vui lòng giữ biên lai làm bằng chứng mua hàng.",
+    "fam": "receive (v), recipient (n)",
+    "colloc": [
+     "proof of receipt",
+     "upon receipt of"
+    ]
+   },
+   {
+    "w": "warranty",
+    "pos": "n",
+    "ipa": "/ˈwɔːrənti/",
+    "vi": "bảo hành",
+    "ex": "The laptop comes with a two-year warranty.",
+    "exvi": "Chiếc laptop được bảo hành hai năm.",
+    "fam": "warrant (v)",
+    "colloc": [
+     "under warranty",
+     "extended warranty"
+    ]
+   },
+   {
+    "w": "exchange",
+    "pos": "v/n",
+    "ipa": "/ɪksˈtʃeɪndʒ/",
+    "vi": "đổi (hàng)",
+    "ex": "You can exchange the shirt for a different size.",
+    "exvi": "Bạn có thể đổi áo sang cỡ khác.",
+    "fam": "exchangeable (adj)",
+    "colloc": [
+     "exchange for",
+     "exchange policy"
+    ]
+   },
+   {
+    "w": "purchase",
+    "pos": "n/v",
+    "ipa": "/ˈpɜːrtʃəs/",
+    "vi": "mua; việc mua",
+    "ex": "Proof of purchase is required for all returns.",
+    "exvi": "Cần có bằng chứng mua hàng cho mọi trường hợp trả hàng.",
+    "fam": "purchaser (n)",
+    "colloc": [
+     "make a purchase",
+     "proof of purchase"
+    ]
+   },
+   {
+    "w": "satisfaction",
+    "pos": "n",
+    "ipa": "/ˌsætɪsˈfækʃn/",
+    "vi": "sự hài lòng",
+    "ex": "Customer satisfaction is our top priority.",
+    "exvi": "Sự hài lòng của khách hàng là ưu tiên hàng đầu của chúng tôi.",
+    "fam": "satisfy (v), satisfied (adj), satisfactory (adj)",
+    "colloc": [
+     "customer satisfaction",
+     "satisfaction guaranteed"
+    ]
+   },
+   {
+    "w": "assist",
+    "pos": "v",
+    "ipa": "/əˈsɪst/",
+    "vi": "hỗ trợ, giúp đỡ",
+    "ex": "Our staff will assist you with your order.",
+    "exvi": "Nhân viên của chúng tôi sẽ hỗ trợ bạn về đơn hàng.",
+    "fam": "assistance (n), assistant (n)",
+    "colloc": [
+     "assist with",
+     "assist customers"
+    ]
+   },
+   {
+    "w": "inquiry",
+    "pos": "n",
+    "ipa": "/ɪnˈkwaɪəri/",
+    "vi": "yêu cầu hỏi thông tin",
+    "ex": "Please send your inquiry to the help desk.",
+    "exvi": "Vui lòng gửi yêu cầu của bạn tới quầy hỗ trợ.",
+    "fam": "inquire (v)",
+    "colloc": [
+     "make an inquiry",
+     "inquiry about"
+    ]
+   },
+   {
+    "w": "compensate",
+    "pos": "v",
+    "ipa": "/ˈkɑːmpenseɪt/",
+    "vi": "bồi thường",
+    "ex": "The airline will compensate passengers for the delay.",
+    "exvi": "Hãng hàng không sẽ bồi thường cho hành khách vì sự chậm trễ.",
+    "fam": "compensation (n)",
+    "colloc": [
+     "compensate for",
+     "fair compensation"
+    ]
+   },
+   {
+    "w": "apologize",
+    "pos": "v",
+    "ipa": "/əˈpɑːlədʒaɪz/",
+    "vi": "xin lỗi",
+    "ex": "We apologize for the inconvenience.",
+    "exvi": "Chúng tôi xin lỗi vì sự bất tiện.",
+    "fam": "apology (n)",
+    "colloc": [
+     "apologize for",
+     "sincerely apologize"
+    ]
+   },
+   {
+    "w": "resolve",
+    "pos": "v",
+    "ipa": "/rɪˈzɑːlv/",
+    "vi": "giải quyết",
+    "ex": "We resolved the problem within an hour.",
+    "exvi": "Chúng tôi đã giải quyết vấn đề trong vòng một giờ.",
+    "fam": "resolution (n)",
+    "colloc": [
+     "resolve a problem",
+     "resolve a complaint"
+    ]
+   },
+   {
+    "w": "courteous",
+    "pos": "adj",
+    "ipa": "/ˈkɜːrtiəs/",
+    "vi": "lịch sự, nhã nhặn",
+    "ex": "The staff were courteous and helpful.",
+    "exvi": "Nhân viên lịch sự và nhiệt tình.",
+    "fam": "courtesy (n), courteously (adv)",
+    "colloc": [
+     "courteous service",
+     "courteous staff"
+    ]
+   },
+   {
+    "w": "cashier",
+    "pos": "n",
+    "ipa": "/kæˈʃɪr/",
+    "vi": "nhân viên thu ngân",
+    "ex": "The cashier scanned each item.",
+    "exvi": "Nhân viên thu ngân quét từng món hàng.",
+    "fam": "cash (n)",
+    "colloc": [
+     "cashier counter",
+     "ask the cashier"
+    ]
+   },
+   {
+    "w": "browse",
+    "pos": "v",
+    "ipa": "/braʊz/",
+    "vi": "xem lướt, tham khảo",
+    "ex": "Shoppers can browse our catalog online.",
+    "exvi": "Người mua có thể xem danh mục sản phẩm trực tuyến.",
+    "fam": "browser (n)",
+    "colloc": [
+     "browse the catalog",
+     "browse online"
+    ]
+   },
+   {
+    "w": "checkout",
+    "pos": "n",
+    "ipa": "/ˈtʃekaʊt/",
+    "vi": "quầy thanh toán; thanh toán",
+    "ex": "The checkout line was very long.",
+    "exvi": "Hàng chờ ở quầy thanh toán rất dài.",
+    "fam": "check out (phr v)",
+    "colloc": [
+     "checkout counter",
+     "online checkout"
+    ]
+   },
+   {
+    "w": "coupon",
+    "pos": "n",
+    "ipa": "/ˈkuːpɑːn/",
+    "vi": "phiếu giảm giá",
+    "ex": "Show this coupon to get 15 percent off.",
+    "exvi": "Xuất trình phiếu này để được giảm 15 phần trăm.",
+    "fam": "—",
+    "colloc": [
+     "redeem a coupon",
+     "discount coupon"
+    ]
+   },
+   {
+    "w": "voucher",
+    "pos": "n",
+    "ipa": "/ˈvaʊtʃər/",
+    "vi": "phiếu quà tặng, phiếu thanh toán",
+    "ex": "Each guest received a lunch voucher.",
+    "exvi": "Mỗi khách nhận một phiếu ăn trưa.",
+    "fam": "—",
+    "colloc": [
+     "gift voucher",
+     "redeem a voucher"
+    ]
+   },
+   {
+    "w": "shipping",
+    "pos": "n",
+    "ipa": "/ˈʃɪpɪŋ/",
+    "vi": "vận chuyển, phí vận chuyển",
+    "ex": "Shipping is free for orders over $50.",
+    "exvi": "Miễn phí vận chuyển cho đơn hàng trên 50 đô la.",
+    "fam": "ship (v), shipment (n)",
+    "colloc": [
+     "shipping fee",
+     "free shipping"
+    ]
+   },
+   {
+    "w": "defective",
+    "pos": "adj",
+    "ipa": "/dɪˈfektɪv/",
+    "vi": "bị lỗi, hỏng",
+    "ex": "Please return any defective items.",
+    "exvi": "Vui lòng trả lại mọi sản phẩm bị lỗi.",
+    "fam": "defect (n)",
+    "colloc": [
+     "defective product",
+     "defective item"
+    ]
+   },
+   {
+    "w": "feedback",
+    "pos": "n",
+    "ipa": "/ˈfiːdbæk/",
+    "vi": "phản hồi, góp ý",
+    "ex": "We value your feedback.",
+    "exvi": "Chúng tôi coi trọng phản hồi của bạn.",
+    "fam": "—",
+    "colloc": [
+     "customer feedback",
+     "positive feedback"
+    ]
+   },
+   {
+    "w": "complimentary",
+    "pos": "adj",
+    "ipa": "/ˌkɑːmplɪˈmentri/",
+    "vi": "miễn phí, được tặng kèm",
+    "ex": "Complimentary coffee is served in the lobby.",
+    "exvi": "Cà phê miễn phí được phục vụ ở sảnh.",
+    "fam": "compliment (n/v)",
+    "colloc": [
+     "complimentary breakfast",
+     "complimentary gift"
+    ]
+   },
+   {
+    "w": "subscription",
+    "pos": "n",
+    "ipa": "/səbˈskrɪpʃn/",
+    "vi": "đăng ký dài hạn, thuê bao",
+    "ex": "Your subscription renews every year.",
+    "exvi": "Gói đăng ký của bạn gia hạn hằng năm.",
+    "fam": "subscribe (v), subscriber (n)",
+    "colloc": [
+     "annual subscription",
+     "cancel a subscription"
+    ]
+   },
+   {
+    "w": "membership",
+    "pos": "n",
+    "ipa": "/ˈmembərʃɪp/",
+    "vi": "tư cách hội viên",
+    "ex": "Membership includes free delivery.",
+    "exvi": "Tư cách hội viên bao gồm giao hàng miễn phí.",
+    "fam": "member (n)",
+    "colloc": [
+     "membership card",
+     "renew a membership"
+    ]
+   },
+   {
+    "w": "merchandise",
+    "pos": "n",
+    "ipa": "/ˈmɜːrtʃəndaɪs/",
+    "vi": "hàng hóa",
+    "ex": "All merchandise is on sale this weekend.",
+    "exvi": "Toàn bộ hàng hóa đang giảm giá vào cuối tuần này.",
+    "fam": "merchant (n)",
+    "colloc": [
+     "store merchandise",
+     "return merchandise"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "Please keep your ------- as proof of purchase.",
+   "options": [
+    "warranty",
+    "receipt",
+    "complaint",
+    "voucher"
+   ],
+   "ans": 1,
+   "why": "'receipt' = biên lai, dùng làm bằng chứng mua hàng. 'warranty' là bảo hành, 'complaint' là khiếu nại, 'voucher' là phiếu quà tặng nên không hợp nghĩa.",
+   "vi": "Vui lòng giữ biên lai làm bằng chứng mua hàng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The customer filed a ------- about the rude service.",
+   "options": [
+    "coupon",
+    "checkout",
+    "membership",
+    "complaint"
+   ],
+   "ans": 3,
+   "why": "'file a complaint' = nộp đơn khiếu nại. Các từ còn lại không đi với 'file' và 'rude service'.",
+   "vi": "Khách hàng đã nộp đơn khiếu nại về thái độ phục vụ thô lỗ.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Our staff will ------- you in finding the right product.",
+   "options": [
+    "assist",
+    "browse",
+    "exchange",
+    "purchase"
+   ],
+   "ans": 0,
+   "why": "'assist you in finding' = giúp bạn tìm. 'browse', 'exchange', 'purchase' không đi với tân ngữ 'you' theo nghĩa này.",
+   "vi": "Nhân viên sẽ hỗ trợ bạn tìm sản phẩm phù hợp.",
+   "tag": "vocab"
+  },
+  {
+   "q": "You can ------- the shirt for a different size at any store.",
+   "options": [
+    "assist",
+    "resolve",
+    "exchange",
+    "browse"
+   ],
+   "ans": 2,
+   "why": "'exchange A for B' = đổi A lấy B. 'resolve' (giải quyết) và 'browse' (xem lướt) không đi với 'for a different size'.",
+   "vi": "Bạn có thể đổi chiếc áo sang cỡ khác tại bất kỳ cửa hàng nào.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The ------- product was sent back to the manufacturer.",
+   "options": [
+    "courteous",
+    "complimentary",
+    "satisfied",
+    "defective"
+   ],
+   "ans": 3,
+   "why": "'defective product' = sản phẩm bị lỗi nên được gửi trả nhà sản xuất. Các tính từ còn lại không hợp nghĩa.",
+   "vi": "Sản phẩm bị lỗi đã được gửi trả cho nhà sản xuất.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The hotel offers ------- breakfast to all guests.",
+   "options": [
+    "defective",
+    "complimentary",
+    "courteous",
+    "shipping"
+   ],
+   "ans": 1,
+   "why": "'complimentary breakfast' = bữa sáng miễn phí. 'courteous' nói về người, 'defective' nghĩa bị lỗi.",
+   "vi": "Khách sạn phục vụ bữa sáng miễn phí cho mọi khách.",
+   "tag": "collocation"
+  },
+  {
+   "q": "We measure customer ------- with a short survey.",
+   "options": [
+    "satisfy",
+    "satisfied",
+    "satisfaction",
+    "satisfactory"
+   ],
+   "ans": 2,
+   "why": "'customer' + danh từ → customer satisfaction (sự hài lòng của khách hàng). 'satisfy' là động từ, 'satisfied/satisfactory' là tính từ.",
+   "vi": "Chúng tôi đo mức độ hài lòng của khách hàng bằng một khảo sát ngắn.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Please send any ------- about your order to our help desk.",
+   "options": [
+    "inquiries",
+    "inquire",
+    "inquiring",
+    "inquired"
+   ],
+   "ans": 0,
+   "why": "Sau 'any' và trước 'about' cần danh từ (số nhiều) → inquiries. 'inquire' là động từ.",
+   "vi": "Vui lòng gửi mọi câu hỏi về đơn hàng tới quầy hỗ trợ.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The airline will ------- passengers for the long delay.",
+   "options": [
+    "assist",
+    "exchange",
+    "compensate",
+    "browse"
+   ],
+   "ans": 2,
+   "why": "'compensate ... for the delay' = bồi thường vì sự chậm trễ. 'exchange' và 'browse' không hợp nghĩa.",
+   "vi": "Hãng hàng không sẽ bồi thường cho hành khách vì sự chậm trễ kéo dài.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Shoppers like to ------- the shelves before making a decision.",
+   "options": [
+    "browse",
+    "apologize",
+    "resolve",
+    "compensate"
+   ],
+   "ans": 0,
+   "why": "'browse the shelves' = xem lướt các kệ hàng. 'apologize', 'resolve', 'compensate' không hợp nghĩa.",
+   "vi": "Người mua thích xem lướt các kệ hàng trước khi quyết định.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "The best idea in the meeting was -------, not Mark's.",
+   "options": [
+    "her",
+    "she",
+    "herself",
+    "hers"
+   ],
+   "ans": 3,
+   "why": "Không có danh từ phía sau, cần đại từ sở hữu → hers (= her idea). 'her' phải có danh từ theo sau.",
+   "vi": "Ý tưởng hay nhất trong cuộc họp là của cô ấy, không phải của Mark.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "Please contact ------- if you have any questions about your order.",
+   "options": [
+    "we",
+    "us",
+    "our",
+    "ours"
+   ],
+   "ans": 1,
+   "why": "Sau động từ 'contact' cần tân ngữ → us. 'we' là chủ ngữ, 'our' cần danh từ theo sau.",
+   "vi": "Vui lòng liên hệ với chúng tôi nếu bạn có câu hỏi về đơn hàng.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "Few ------- can finish the audit in one day.",
+   "options": [
+    "auditor",
+    "auditors",
+    "auditing",
+    "audited"
+   ],
+   "ans": 1,
+   "why": "'Few' đi với danh từ số nhiều đếm được → auditors. 'auditor' số ít nên sai.",
+   "vi": "Rất ít kiểm toán viên có thể hoàn thành cuộc kiểm toán trong một ngày.",
+   "tag": "quantifier"
+  },
+  {
+   "q": "Every item in the store ------- a one-year warranty.",
+   "options": [
+    "have",
+    "having",
+    "are",
+    "has"
+   ],
+   "ans": 3,
+   "why": "'Every item' là số ít → has. 'have' dùng với chủ ngữ số nhiều.",
+   "vi": "Mọi mặt hàng trong cửa hàng đều được bảo hành một năm.",
+   "tag": "agreement"
+  },
+  {
+   "q": "The staff members were asked to introduce ------- to the new director.",
+   "options": [
+    "themselves",
+    "them",
+    "their",
+    "they"
+   ],
+   "ans": 0,
+   "why": "Người giới thiệu và người được giới thiệu là cùng nhóm người → themselves. 'them' sẽ chỉ nhóm khác.",
+   "vi": "Các nhân viên được yêu cầu tự giới thiệu với giám đốc mới.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "A number of customers ------- complained about the delay.",
+   "options": [
+    "has",
+    "is",
+    "have",
+    "was"
+   ],
+   "ans": 2,
+   "why": "'A number of + N số nhiều' → động từ số nhiều → have. 'has/is/was' là số ít.",
+   "vi": "Một số khách hàng đã phàn nàn về sự chậm trễ.",
+   "tag": "agreement"
+  },
+  {
+   "q": "We would like to thank ------- who attended the workshop.",
+   "options": [
+    "them",
+    "they",
+    "their",
+    "those"
+   ],
+   "ans": 3,
+   "why": "'those who + V' = những ai... 'them who' và 'they who' không dùng.",
+   "vi": "Chúng tôi xin cảm ơn những ai đã tham dự buổi hội thảo.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "There is ------- coffee left in the break room.",
+   "options": [
+    "few",
+    "little",
+    "many",
+    "several"
+   ],
+   "ans": 1,
+   "why": "'coffee' không đếm được → little. 'few', 'many', 'several' cần danh từ số nhiều.",
+   "vi": "Còn rất ít cà phê trong phòng nghỉ.",
+   "tag": "quantifier"
+  },
+  {
+   "q": "The files on my desk ------- to be sorted by tomorrow.",
+   "options": [
+    "needs",
+    "is needing",
+    "need",
+    "has needed"
+   ],
+   "ans": 2,
+   "why": "Chủ ngữ chính 'files' (số nhiều) → need. 'needs' và 'has needed' là số ít.",
+   "vi": "Các tập hồ sơ trên bàn tôi cần được sắp xếp trước ngày mai.",
+   "tag": "agreement"
+  },
+  {
+   "q": "Each of the candidates ------- interviewed twice.",
+   "options": [
+    "was",
+    "were",
+    "are",
+    "have"
+   ],
+   "ans": 0,
+   "why": "'Each of + N số nhiều' dùng động từ số ít → was. 'were/are/have' là số nhiều.",
+   "vi": "Mỗi ứng viên đều được phỏng vấn hai lần.",
+   "tag": "agreement"
+  },
+  {
+   "q": "One of the new stores ------- open until 10 p.m.",
+   "options": [
+    "stay",
+    "are staying",
+    "stays",
+    "have stayed"
+   ],
+   "ans": 2,
+   "why": "Chủ ngữ chính là 'One' (số ít), 'of the new stores' chỉ chen giữa → động từ số ít stays. 'stay', 'are staying', 'have stayed' là dạng số nhiều.",
+   "vi": "Một trong những cửa hàng mới mở cửa đến 10 giờ tối.",
+   "tag": "agreement"
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "It",
+    "They",
+    "We",
+    "He"
+   ],
+   "ans": 0,
+   "why": "Câu trước nói về 'loyalty program' (số ít, vật) → It. 'They' là số nhiều.",
+   "vi": "Chương trình này sẽ giảm giá mười phần trăm cho hội viên trên mỗi giao dịch.",
+   "tag": "part6-pronoun",
+   "ctx": "Our new loyalty program starts in May. ------- will give members a 10 percent discount on every purchase."
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "Them",
+    "Their",
+    "Theirs",
+    "They"
+   ],
+   "ans": 3,
+   "why": "Thay cho hai người (Ms. Yang và Mr. Roth) làm chủ ngữ trước 'have worked' → They.",
+   "vi": "Họ đã làm việc cùng nhau mười năm.",
+   "tag": "part6-pronoun",
+   "ctx": "Ms. Yang and Mr. Roth lead our design team. ------- have worked together for ten years."
+  },
+  {
+   "q": "The company values ------- employees and rewards their hard work.",
+   "options": [
+    "it",
+    "its",
+    "itself",
+    "them"
+   ],
+   "ans": 1,
+   "why": "Trước danh từ 'employees' cần tính từ sở hữu; 'The company' số ít → its. 'it' và 'them' là tân ngữ.",
+   "vi": "Công ty coi trọng nhân viên của mình và khen thưởng sự chăm chỉ của họ.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "Mr. Lopez ------- designed the entire brochure for the product launch.",
+   "options": [
+    "him",
+    "himself",
+    "he",
+    "his"
+   ],
+   "ans": 1,
+   "why": "Đại từ phản thân đứng sau danh từ để nhấn mạnh 'chính ông Lopez'. 'he' lặp lại chủ ngữ nên sai; 'him' là tân ngữ.",
+   "vi": "Chính ông Lopez đã thiết kế toàn bộ tờ rơi cho buổi ra mắt sản phẩm.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "Our team worked hard to ------- the customer's problem quickly.",
+   "options": [
+    "browse",
+    "subscribe",
+    "exchange",
+    "resolve"
+   ],
+   "ans": 3,
+   "why": "'resolve a problem' = giải quyết vấn đề. Các từ còn lại không đi với 'problem'.",
+   "vi": "Nhóm của chúng tôi đã nỗ lực để giải quyết nhanh vấn đề của khách hàng.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The store gave him a ------- for 15 percent off his next purchase.",
+   "options": [
+    "coupon",
+    "cashier",
+    "warranty",
+    "receipt"
+   ],
+   "ans": 0,
+   "why": "'a coupon for 15 percent off' = phiếu giảm giá 15 phần trăm. 'cashier' là nhân viên, 'warranty' là bảo hành.",
+   "vi": "Cửa hàng tặng anh ấy phiếu giảm giá 15 phần trăm cho lần mua tiếp theo.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Members enjoy free delivery as part of their -------.",
+   "options": [
+    "inquiry",
+    "complaint",
+    "membership",
+    "refund"
+   ],
+   "ans": 2,
+   "why": "'part of their membership' = một phần quyền lợi hội viên. Các từ còn lại không hợp nghĩa.",
+   "vi": "Hội viên được giao hàng miễn phí như một phần quyền lợi của họ.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please present your ------- at the counter to collect the gift.",
+   "options": [
+    "shipping",
+    "feedback",
+    "cashier",
+    "voucher"
+   ],
+   "ans": 3,
+   "why": "'present your voucher' = xuất trình phiếu quà tặng. 'shipping', 'feedback' không hợp với 'present'.",
+   "vi": "Vui lòng xuất trình phiếu tại quầy để nhận quà.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Thank you for your -------; we are using it to improve our service.",
+   "options": [
+    "refund",
+    "feedback",
+    "voucher",
+    "checkout"
+   ],
+   "ans": 1,
+   "why": "'feedback' = phản hồi, dùng để cải thiện dịch vụ. Các từ còn lại không hợp nghĩa.",
+   "vi": "Cảm ơn phản hồi của bạn; chúng tôi đang dùng nó để cải thiện dịch vụ.",
+   "tag": "vocab"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "Mr. Park gave ------- a copy of the agreement.",
+   "options": [
+    "I",
+    "my",
+    "me",
+    "mine"
+   ],
+   "ans": 2,
+   "why": "Sau động từ 'gave' cần tân ngữ → me. 'I' chỉ làm chủ ngữ.",
+   "vi": "Ông Park đưa cho tôi một bản sao thỏa thuận.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "The marketing team has finished ------- report.",
+   "options": [
+    "its",
+    "it",
+    "itself",
+    "it's"
+   ],
+   "ans": 0,
+   "why": "Trước danh từ 'report' cần tính từ sở hữu; 'The team' số ít → its. 'it's' = it is nên sai.",
+   "vi": "Nhóm marketing đã hoàn thành báo cáo của mình.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "That badge is -------, but this one is yours.",
+   "options": [
+    "he",
+    "him",
+    "his",
+    "himself"
+   ],
+   "ans": 2,
+   "why": "Không có danh từ phía sau, cần đại từ sở hữu → his. 'he' và 'him' không chỉ sở hữu.",
+   "vi": "Thẻ đó là của anh ấy, còn thẻ này là của bạn.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "Mr. Grant learned to use the new database by -------.",
+   "options": [
+    "himself",
+    "him",
+    "he",
+    "his"
+   ],
+   "ans": 0,
+   "why": "'by oneself' = tự mình, một mình → by himself. 'him', 'he', 'his' không tạo nghĩa 'tự làm' sau 'by'.",
+   "vi": "Ông Grant tự học cách sử dụng cơ sở dữ liệu mới.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "------- guest at the banquet received a gift.",
+   "options": [
+    "All",
+    "Most",
+    "Many",
+    "Every"
+   ],
+   "ans": 3,
+   "why": "Danh từ 'guest' (số ít) → Every. 'All', 'Most', 'Many' cần danh từ số nhiều.",
+   "vi": "Mỗi khách tại bữa tiệc đều nhận được một món quà.",
+   "tag": "quantifier"
+  },
+  {
+   "q": "There are ------- vacancies in the accounting department at the moment.",
+   "options": [
+    "a little",
+    "a few",
+    "much",
+    "a great deal of"
+   ],
+   "ans": 1,
+   "why": "'vacancies' số nhiều đếm được → a few. 'a little', 'much', 'a great deal of' dùng với danh từ không đếm được.",
+   "vi": "Hiện có vài vị trí trống ở phòng kế toán.",
+   "tag": "quantifier"
+  },
+  {
+   "q": "We have ------- time left, so let's finish quickly.",
+   "options": [
+    "few",
+    "little",
+    "many",
+    "several"
+   ],
+   "ans": 1,
+   "why": "'time' không đếm được → little. 'few', 'many', 'several' cần danh từ số nhiều.",
+   "vi": "Chúng ta còn rất ít thời gian, nên hãy làm xong nhanh.",
+   "tag": "quantifier"
+  },
+  {
+   "q": "The first printer we bought failed, so we had to order ------- one.",
+   "options": [
+    "other",
+    "others",
+    "the others",
+    "another"
+   ],
+   "ans": 3,
+   "why": "'another + N số ít/one' = một cái khác nữa → another one. 'other' cần danh từ số nhiều; 'others' và 'the others' không đứng trước 'one'.",
+   "vi": "Máy in đầu tiên chúng tôi mua bị hỏng, nên chúng tôi phải đặt thêm một cái khác.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "The directors of the company ------- a meeting every month.",
+   "options": [
+    "hold",
+    "holds",
+    "holding",
+    "to hold"
+   ],
+   "ans": 0,
+   "why": "Chủ ngữ chính 'directors' (số nhiều) → hold. 'holds' là số ít.",
+   "vi": "Các giám đốc của công ty họp mỗi tháng.",
+   "tag": "agreement"
+  },
+  {
+   "q": "The quality of our products ------- improved.",
+   "options": [
+    "have",
+    "are",
+    "has",
+    "were"
+   ],
+   "ans": 2,
+   "why": "Chủ ngữ chính là 'quality' (số ít) → has improved. 'products' chỉ nằm trong cụm 'of'.",
+   "vi": "Chất lượng sản phẩm của chúng tôi đã được cải thiện.",
+   "tag": "agreement"
+  },
+  {
+   "q": "Attending the trade show ------- a good way to meet clients.",
+   "options": [
+    "are",
+    "were",
+    "have been",
+    "is"
+   ],
+   "ans": 3,
+   "why": "V-ing làm chủ ngữ là số ít → is. 'are/were/have been' là số nhiều.",
+   "vi": "Tham dự hội chợ là cách hay để gặp khách hàng.",
+   "tag": "agreement"
+  },
+  {
+   "q": "Every one of the machines ------- been checked.",
+   "options": [
+    "have",
+    "has",
+    "are",
+    "were"
+   ],
+   "ans": 1,
+   "why": "'Every one' là số ít → has been checked. 'machines' chỉ nằm trong cụm 'of'.",
+   "vi": "Từng chiếc máy đều đã được kiểm tra.",
+   "tag": "agreement"
+  },
+  {
+   "q": "The manager and the director ------- on the new project.",
+   "options": [
+    "is working",
+    "works",
+    "are working",
+    "has worked"
+   ],
+   "ans": 2,
+   "why": "Hai chủ ngữ nối bằng 'and' → số nhiều → are working. 'is working', 'works', 'has worked' đều là số ít.",
+   "vi": "Người quản lý và giám đốc đang làm việc trong dự án mới.",
+   "tag": "agreement"
+  },
+  {
+   "q": "The results of the survey ------- posted on the intranet.",
+   "options": [
+    "are",
+    "is",
+    "has",
+    "was"
+   ],
+   "ans": 0,
+   "why": "Chủ ngữ chính 'results' (số nhiều) → are. 'is/was/has' là số ít.",
+   "vi": "Kết quả khảo sát được đăng trên mạng nội bộ.",
+   "tag": "agreement"
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "It",
+    "He",
+    "They",
+    "This"
+   ],
+   "ans": 2,
+   "why": "Thay cho 'three invoices' (số nhiều) làm chủ ngữ của 'need' → They. 'It' và 'This' là số ít.",
+   "vi": "Chúng cần được thanh toán trước cuối tháng.",
+   "tag": "part6-pronoun",
+   "ctx": "Mr. Silva sent three invoices to our office. ------- need to be paid by the end of the month."
+  },
+  {
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "it",
+    "they",
+    "them",
+    "its"
+   ],
+   "ans": 0,
+   "why": "Mệnh đề 'Many employees say ------- is easier...' cần chủ ngữ cho 'is', thay cho 'the new software' (số ít, vật) → it.",
+   "vi": "Nhiều nhân viên nói nó dễ sử dụng hơn phần mềm cũ.",
+   "tag": "part6-pronoun",
+   "ctx": "The new software was installed last week. Many employees say ------- is easier to use than the old one."
+  },
+  {
+   "q": "Employees will be reimbursed for ------- travel expenses.",
+   "options": [
+    "they",
+    "them",
+    "theirs",
+    "their"
+   ],
+   "ans": 3,
+   "why": "Trước danh từ 'expenses' cần tính từ sở hữu → their. 'theirs' đứng một mình.",
+   "vi": "Nhân viên sẽ được hoàn lại chi phí đi lại của họ.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "Please let ------- know if the schedule changes.",
+   "options": [
+    "I",
+    "me",
+    "my",
+    "mine"
+   ],
+   "ans": 1,
+   "why": "Sau động từ 'let' cần tân ngữ → me. 'I' chỉ làm chủ ngữ.",
+   "vi": "Vui lòng cho tôi biết nếu lịch thay đổi.",
+   "tag": "pronoun"
+  },
+  {
+   "q": "The ------- on this laptop covers repairs for two years.",
+   "options": [
+    "complaint",
+    "warranty",
+    "coupon",
+    "cashier"
+   ],
+   "ans": 1,
+   "why": "'warranty ... covers repairs' = bảo hành bao gồm sửa chữa. Các từ còn lại không hợp nghĩa.",
+   "vi": "Bảo hành của chiếc laptop này bao gồm sửa chữa trong hai năm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The airline will ------- passengers whose flights were cancelled.",
+   "options": [
+    "browse",
+    "subscribe",
+    "purchase",
+    "compensate"
+   ],
+   "ans": 3,
+   "why": "'compensate passengers' = bồi thường cho hành khách. 'browse', 'subscribe', 'purchase' không đi với tân ngữ 'passengers' theo nghĩa này.",
+   "vi": "Hãng hàng không sẽ bồi thường cho hành khách có chuyến bay bị hủy.",
+   "tag": "vocab"
+  }
+ ]
+}

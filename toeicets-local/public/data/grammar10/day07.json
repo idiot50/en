@@ -1,0 +1,1899 @@
+{
+ "day": 7,
+ "title": "To-V, V-ing & Phân từ",
+ "icon": "🔗",
+ "goal": "Sau hôm nay bạn chọn đúng to V hay V-ing sau động từ và giới từ, dùng đúng \"be expected/required to V\", và nhận ra phân từ V-ing / V3 bổ nghĩa cho danh từ.",
+ "why": "Nhóm động từ dạng to V / V-ing / phân từ xuất hiện đều đặn ở Part 5 và là loại câu trả lời được trong vài giây nếu thuộc danh sách động từ; cũng là nền để đọc câu dài ở Part 7.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 40
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d7-l1",
+   "title": "1. Động từ + to V hay + V-ing?",
+   "intro": "Trong tiếng Anh, khi hai động từ đứng cạnh nhau thì động từ thứ hai KHÔNG chia theo chủ ngữ mà phải đổi dạng: thành **to V** (to + động từ nguyên mẫu, gọi là \"động từ nguyên mẫu có to\") hoặc **V-ing** (động từ thêm -ing, gọi là \"danh động từ\"). Động từ đứng trước quyết định bạn dùng dạng nào, nên cách duy nhất là học thuộc theo nhóm. May mắn là TOEIC chỉ hay hỏi khoảng 20 động từ quen thuộc.",
+   "points": [
+    {
+     "rule": "Nhóm 1: **V + to V** — các động từ nói về dự định, mong muốn, quyết định, nhu cầu. Công thức: `S + V + to V`.",
+     "examples": [
+      {
+       "en": "We **plan to open** a new branch next year.",
+       "vi": "Chúng tôi dự định mở một chi nhánh mới vào năm sau."
+      },
+      {
+       "en": "The client **agreed to pay** in advance.",
+       "vi": "Khách hàng đã đồng ý trả trước."
+      },
+      {
+       "en": "Ms. Lee **failed to submit** the report on time.",
+       "vi": "Cô Lee đã không nộp báo cáo đúng hạn."
+      }
+     ]
+    },
+    {
+     "rule": "Nhóm 2: **V + V-ing** — các động từ nói về việc đang làm, đã làm hoặc nên làm: consider, recommend, suggest, avoid, finish, include, enjoy, postpone, delay, discuss. Công thức: `S + V + V-ing`.",
+     "examples": [
+      {
+       "en": "The manager **suggested postponing** the meeting.",
+       "vi": "Người quản lý đề nghị hoãn cuộc họp."
+      },
+      {
+       "en": "Please **avoid making** personal calls at work.",
+       "vi": "Xin hãy tránh gọi điện thoại cá nhân khi làm việc."
+      },
+      {
+       "en": "The price **includes delivering** your luggage to the hotel.",
+       "vi": "Giá đã bao gồm việc giao hành lý đến khách sạn."
+      }
+     ]
+    },
+    {
+     "rule": "Cách nhớ nhanh: nhóm **to V** thường hướng về **tương lai / mục tiêu** (plan, hope, expect, aim, decide, want, need, agree, promise, refuse, fail). Nhóm **V-ing** thường nói về chính hoạt động đó: đã/đang làm (finish, enjoy), tránh hoặc hoãn (avoid, postpone, delay), cân nhắc hoặc đề xuất (consider, suggest, recommend). Mẹo chỉ để gợi nhớ — chắc nhất vẫn là thuộc bảng.",
+     "examples": [
+      {
+       "en": "We **hope to receive** the shipment by Friday.",
+       "vi": "Chúng tôi hy vọng nhận được lô hàng trước thứ Sáu."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Nhóm",
+     "Động từ hay gặp",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "V + to V",
+      "plan, decide, agree, hope, expect, need, want, aim, promise, refuse, fail, intend, offer, manage",
+      "We aim to reduce costs."
+     ],
+     [
+      "V + V-ing",
+      "consider, recommend, suggest, avoid, finish, include, enjoy, postpone, delay, discuss, mind",
+      "She recommended hiring more staff."
+     ]
+    ]
+   },
+   "traps": [
+    "Bẫy lớn nhất: học viên thấy \"to\" là điền \"to V\" cho mọi chỗ. Hãy nhìn động từ đứng TRƯỚC chỗ trống: recommend / suggest / avoid / consider / finish đi với V-ing, KHÔNG đi với to V.",
+    "Sau động từ nhóm to V hoặc V-ing thì KHÔNG dùng động từ chia thì: sai \"We plan opens a branch\"; đúng \"We plan to open a branch\"."
+   ],
+   "tip": "Mẹo Part 5: thấy 4 đáp án là cùng một động từ ở các dạng (to open / opening / opened / opens) thì nhìn ngay động từ đứng trước chỗ trống. Thuộc danh sách trong bảng là chọn được trong 5 giây."
+  },
+  {
+   "id": "d7-l2",
+   "title": "2. V + người + to V và bị động + to V",
+   "intro": "Nhiều động từ cần một **tân ngữ** (O — người hoặc vật chịu tác động của hành động) rồi mới tới động từ thứ hai. Cấu trúc \"bảo / cho phép / khuyến khích ai làm gì\" luôn dùng **to V**. Ở dạng bị động, câu quen thuộc nhất trong TOEIC là \"be expected / scheduled / required to V\".",
+   "points": [
+    {
+     "rule": "**V + O + to V** — động từ: ask, require, allow, encourage, invite, remind, enable, urge, advise, permit, want. Công thức: `S + V + O + to V`.",
+     "examples": [
+      {
+       "en": "The manager **asked all staff to sign** the safety form.",
+       "vi": "Người quản lý yêu cầu toàn bộ nhân viên ký vào phiếu an toàn."
+      },
+      {
+       "en": "Our policy **allows employees to work** from home.",
+       "vi": "Chính sách của chúng tôi cho phép nhân viên làm việc tại nhà."
+      },
+      {
+       "en": "Ms. Park **reminded the interns to submit** their timesheets.",
+       "vi": "Cô Park nhắc các thực tập sinh nộp bảng chấm công."
+      }
+     ]
+    },
+    {
+     "rule": "**Bị động + to V**: chuyển tân ngữ lên làm chủ ngữ, giữ nguyên \"to V\". Công thức: `S + be + V3 + to V`. Bị động (be + V3) đã học ở Ngày 6.",
+     "examples": [
+      {
+       "en": "Visitors **are required to wear** their badges.",
+       "vi": "Khách tham quan phải đeo thẻ."
+      },
+      {
+       "en": "The seminar **is scheduled to begin** at 9 A.M.",
+       "vi": "Hội thảo được lên lịch bắt đầu lúc 9 giờ sáng."
+      },
+      {
+       "en": "Applicants **are expected to have** two years of experience.",
+       "vi": "Ứng viên được kỳ vọng có hai năm kinh nghiệm."
+      }
+     ]
+    },
+    {
+     "rule": "**in order to V** (để mà ...) chỉ mục đích; có thể rút gọn thành **to V**. Sau \"in order to\" luôn là động từ nguyên mẫu, không phải V-ing.",
+     "examples": [
+      {
+       "en": "We switched suppliers **in order to reduce** costs.",
+       "vi": "Chúng tôi đổi nhà cung cấp để giảm chi phí."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Chủ động",
+     "Bị động",
+     "Nghĩa"
+    ],
+    "rows": [
+     [
+      "ask sb to V",
+      "be asked to V",
+      "được yêu cầu làm gì"
+     ],
+     [
+      "require sb to V",
+      "be required to V",
+      "bị bắt buộc phải làm gì"
+     ],
+     [
+      "encourage sb to V",
+      "be encouraged to V",
+      "được khuyến khích làm gì"
+     ],
+     [
+      "expect sb to V",
+      "be expected to V",
+      "được kỳ vọng làm gì"
+     ],
+     [
+      "schedule sth to V",
+      "be scheduled to V",
+      "được lên lịch làm gì"
+     ],
+     [
+      "invite sb to V",
+      "be invited to V",
+      "được mời làm gì"
+     ]
+    ]
+   },
+   "traps": [
+    "Sai: \"The staff are required wearing helmets.\" Đúng: \"are required to wear\". Sau require / allow / ask / encourage (có tân ngữ hoặc bị động) KHÔNG dùng V-ing.",
+    "Phân biệt: \"The manager suggested postponing\" (suggest + V-ing, không cần người) khác \"The manager asked staff to postpone\" (ask + người + to V)."
+   ],
+   "tip": "Thấy \"be expected / scheduled / required / encouraged / advised / invited ------- \" thì 90% đáp án là \"to + động từ nguyên mẫu\"."
+  },
+  {
+   "id": "d7-l3",
+   "title": "3. Giới từ + V-ing",
+   "intro": "**Giới từ** (preposition) là các từ nhỏ như by, before, after, without, upon, for... Quy tắc cực kỳ quan trọng: sau giới từ, nếu muốn dùng một hành động thì phải dùng **V-ing**, tuyệt đối không dùng V nguyên mẫu hay to V.",
+   "points": [
+    {
+     "rule": "`giới từ + V-ing`: by, before, after, without, upon, on, for, instead of, besides, in addition to, thanks to.",
+     "examples": [
+      {
+       "en": "Please turn off the lights **before leaving** the office.",
+       "vi": "Vui lòng tắt đèn trước khi rời văn phòng."
+      },
+      {
+       "en": "We saved time **by automating** the process.",
+       "vi": "Chúng tôi tiết kiệm thời gian bằng cách tự động hóa quy trình."
+      },
+      {
+       "en": "**Upon receiving** the invoice, we will issue payment.",
+       "vi": "Ngay khi nhận được hóa đơn, chúng tôi sẽ thanh toán."
+      }
+     ]
+    },
+    {
+     "rule": "Cụm có chữ **to** là giới từ chứ KHÔNG phải \"to V\": look forward to, be committed to, be dedicated to, be used to, in addition to, object to, contribute to. Sau chúng là V-ing hoặc danh từ.",
+     "examples": [
+      {
+       "en": "We **look forward to seeing** you at the conference.",
+       "vi": "Chúng tôi mong được gặp bạn tại hội nghị."
+      },
+      {
+       "en": "The firm **is committed to reducing** its carbon emissions.",
+       "vi": "Công ty cam kết giảm lượng khí thải carbon."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Cụm",
+     "Công thức",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "by + V-ing",
+      "bằng cách làm gì",
+      "by working overtime"
+     ],
+     [
+      "before / after + V-ing",
+      "trước / sau khi làm gì",
+      "after completing the form"
+     ],
+     [
+      "without + V-ing",
+      "mà không làm gì",
+      "without asking permission"
+     ],
+     [
+      "upon + V-ing",
+      "ngay khi làm gì",
+      "upon arriving at the airport"
+     ],
+     [
+      "look forward to + V-ing",
+      "mong được làm gì",
+      "look forward to meeting you"
+     ],
+     [
+      "be committed / dedicated to + V-ing",
+      "cam kết làm gì",
+      "dedicated to improving service"
+     ]
+    ]
+   },
+   "traps": [
+    "Sai: \"I look forward to see you.\" Đúng: \"look forward to seeing you\" — vì \"to\" ở đây là giới từ. Mẹo thử: sau \"to\" có thể thay bằng danh từ (\"look forward to the meeting\") thì \"to\" là giới từ → V-ing.",
+    "Phân biệt \"in order to + V\" (mục đích) với \"in addition to + V-ing/N\". Chữ \"order\" cho biết là mục đích."
+   ],
+   "tip": "Chỗ trống ngay sau by / before / after / without / upon: nếu 4 đáp án có dạng V-ing thì chọn V-ing (trừ khi có danh từ phù hợp hơn như \"upon receipt of\")."
+  },
+  {
+   "id": "d7-l4",
+   "title": "4. Phân từ bổ nghĩa cho danh từ (V-ing / V3)",
+   "intro": "**Phân từ** là động từ \"đóng vai tính từ\". Có hai loại: **V-ing** (hiện tại phân từ, nghĩa chủ động — danh từ TỰ làm hành động) và **V3** (quá khứ phân từ, nghĩa bị động — danh từ BỊ tác động). Phân từ đứng trước hoặc sau danh từ để bổ nghĩa cho nó.",
+   "points": [
+    {
+     "rule": "**Đứng trước danh từ**: `V3 + N` (bị động) hoặc `V-ing + N` (chủ động). Hỏi: danh từ này tự làm hay bị làm?",
+     "examples": [
+      {
+       "en": "the **attached** file",
+       "vi": "tệp đính kèm (tệp BỊ đính kèm)"
+      },
+      {
+       "en": "a **revised** schedule",
+       "vi": "lịch đã được chỉnh sửa (lịch BỊ chỉnh sửa)"
+      },
+      {
+       "en": "the **remaining** items",
+       "vi": "các món còn lại (các món TỰ còn lại)"
+      },
+      {
+       "en": "an **increasing** number of customers",
+       "vi": "số lượng khách hàng ngày càng tăng"
+      }
+     ]
+    },
+    {
+     "rule": "**Đứng sau danh từ (rút gọn)**: danh từ + V-ing = rút gọn mệnh đề chủ động; danh từ + V3 = rút gọn mệnh đề bị động. Giúp câu gọn mà không cần thêm động từ chia thì.",
+     "examples": [
+      {
+       "en": "Employees **wishing** to attend should register today.",
+       "vi": "Nhân viên muốn tham dự nên đăng ký hôm nay. (= Employees who wish to attend)"
+      },
+      {
+       "en": "Documents **submitted** after the deadline will not be accepted.",
+       "vi": "Hồ sơ nộp sau hạn chót sẽ không được chấp nhận. (= Documents that are submitted)"
+      }
+     ]
+    },
+    {
+     "rule": "Nhớ: một câu chỉ có MỘT động từ chính chia thì. Nếu đã có động từ chính (will be accepted, should register), từ ở chỗ trống phải là phân từ chứ không phải động từ chia thì.",
+     "examples": [
+      {
+       "en": "The team **developing** the new app will meet on Friday.",
+       "vi": "Nhóm đang phát triển ứng dụng mới sẽ họp vào thứ Sáu."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Dạng",
+     "Nghĩa",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "V-ing",
+      "chủ động (tự làm / đang làm)",
+      "the team developing the app"
+     ],
+     [
+      "V3 / V-ed",
+      "bị động (bị / được làm)",
+      "a product developed in Korea"
+     ],
+     [
+      "Gợi ý nhanh",
+      "sau chỗ trống có tân ngữ (the app, to attend) → V-ing",
+      "sau chỗ trống là by + người/vật, hoặc không có tân ngữ → thường V3 (trừ remain, arrive...: the remaining seats)"
+     ]
+    ]
+   },
+   "traps": [
+    "Động từ nội động (không có bị động) như remain, arrive, occur, happen thì không có dạng V3 bị động: nói \"the remaining seats\" chứ KHÔNG nói \"the remained seats\".",
+    "Đừng nhầm phân từ với động từ chính: \"Documents submit after the deadline will be rejected\" sai vì \"submit\" thừa một động từ."
+   ],
+   "tip": "Dùng mẹo \"có tân ngữ không?\": phân từ + tân ngữ → V-ing (\"employees wishing to attend\", \"the team developing the app\"). Phân từ + by / cụm giới từ, không có tân ngữ → thường V3 (\"documents submitted by...\"). Riêng động từ không có bị động (remain, arrive, exist) luôn dùng V-ing: \"the remaining seats\"."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d7-p1",
+   "title": "Bài 1: V + to V hay V-ing",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d7-l1",
+   "items": [
+    {
+     "q": "The company plans ------- a new branch in Hanoi next year.",
+     "options": [
+      "opening",
+      "opened",
+      "to open",
+      "opens"
+     ],
+     "ans": 2,
+     "why": "\"plan\" thuộc nhóm V + to V → to open. \"opening\" sai vì plan không đi với V-ing.",
+     "vi": "Công ty dự định mở một chi nhánh mới ở Hà Nội vào năm sau.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Ms. Tran recommended ------- the contract before signing it.",
+     "options": [
+      "reviewing",
+      "to review",
+      "review",
+      "reviewed"
+     ],
+     "ans": 0,
+     "why": "\"recommend\" đi với V-ing → reviewing. \"to review\" sai vì recommend không đi với to V.",
+     "vi": "Cô Tran đề nghị xem lại hợp đồng trước khi ký.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "All candidates must finish ------- the online form by Friday.",
+     "options": [
+      "to fill out",
+      "filled out",
+      "fill out",
+      "filling out"
+     ],
+     "ans": 3,
+     "why": "\"finish\" + V-ing → filling out (điền xong). \"to fill out\" sai vì finish thuộc nhóm V-ing; \"fill out\" thiếu dạng -ing.",
+     "vi": "Tất cả ứng viên phải điền xong biểu mẫu trực tuyến trước thứ Sáu.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "We hope ------- the shipment before the holiday.",
+     "options": [
+      "receiving",
+      "to receive",
+      "received",
+      "receive"
+     ],
+     "ans": 1,
+     "why": "\"hope\" + to V → to receive. \"receiving\" sai vì hope không đi với V-ing.",
+     "vi": "Chúng tôi hy vọng nhận được lô hàng trước kỳ nghỉ lễ.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The manager suggested ------- the meeting until next week.",
+     "options": [
+      "to postpone",
+      "postponing",
+      "postponed",
+      "postpone"
+     ],
+     "ans": 1,
+     "why": "\"suggest\" + V-ing → postponing. \"to postpone\" sai vì suggest không dùng to V.",
+     "vi": "Người quản lý đề nghị hoãn cuộc họp đến tuần sau.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Mr. Kim decided ------- his flight to Singapore.",
+     "options": [
+      "cancelling",
+      "cancelled",
+      "cancels",
+      "to cancel"
+     ],
+     "ans": 3,
+     "why": "\"decide\" + to V → to cancel. \"cancelling\" sai vì decide thuộc nhóm to V.",
+     "vi": "Ông Kim quyết định hủy chuyến bay đến Singapore.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The service fee includes ------- your luggage to the hotel.",
+     "options": [
+      "delivering",
+      "to deliver",
+      "delivered",
+      "delivers"
+     ],
+     "ans": 0,
+     "why": "\"include\" + V-ing → delivering. \"to deliver\" sai; \"delivers\" là động từ chia thì nên thừa một động từ chính.",
+     "vi": "Phí dịch vụ bao gồm việc giao hành lý của bạn đến khách sạn.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Our department aims ------- customer complaints by 20 percent.",
+     "options": [
+      "reducing",
+      "reduced",
+      "to reduce",
+      "reduces"
+     ],
+     "ans": 2,
+     "why": "\"aim\" + to V → to reduce. \"reducing\" sai vì aim không đi với V-ing; \"reduces\" thừa động từ chính.",
+     "vi": "Bộ phận của chúng tôi đặt mục tiêu giảm khiếu nại của khách hàng 20 phần trăm.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Please avoid ------- personal calls during working hours.",
+     "options": [
+      "to make",
+      "made",
+      "make",
+      "making"
+     ],
+     "ans": 3,
+     "why": "\"avoid\" + V-ing → making. \"to make\" sai vì avoid thuộc nhóm V-ing.",
+     "vi": "Vui lòng tránh gọi điện thoại cá nhân trong giờ làm việc.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The vendor failed ------- the report on time.",
+     "options": [
+      "submitting",
+      "to submit",
+      "submitted",
+      "submits"
+     ],
+     "ans": 1,
+     "why": "\"fail\" + to V → to submit. \"submitting\" sai vì fail không đi với V-ing.",
+     "vi": "Nhà cung cấp đã không nộp báo cáo đúng hạn.",
+     "tag": "gerund-infinitive"
+    }
+   ]
+  },
+  {
+   "id": "d7-p2",
+   "title": "Bài 2: V + người + to V và bị động + to V",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d7-l2",
+   "items": [
+    {
+     "q": "The manager asked all staff ------- the safety form.",
+     "options": [
+      "signing",
+      "sign",
+      "to sign",
+      "signed"
+     ],
+     "ans": 2,
+     "why": "\"ask + người + to V\" → to sign. \"signing\" sai vì sau ask + O phải là to V.",
+     "vi": "Người quản lý yêu cầu tất cả nhân viên ký vào phiếu an toàn.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Visitors are required ------- their badges at all times.",
+     "options": [
+      "to wear",
+      "wearing",
+      "wear",
+      "worn"
+     ],
+     "ans": 0,
+     "why": "Bị động \"be required + to V\" → to wear. \"wearing\" sai vì require không đi với V-ing ở cấu trúc này.",
+     "vi": "Khách tham quan phải đeo thẻ mọi lúc.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Our policy allows employees ------- from home twice a week.",
+     "options": [
+      "work",
+      "working",
+      "to work",
+      "worked"
+     ],
+     "ans": 2,
+     "why": "\"allow + người + to V\" → to work. \"work\" thiếu to; \"working\" sai vì có tân ngữ \"employees\" đứng trước.",
+     "vi": "Chính sách của chúng tôi cho phép nhân viên làm việc tại nhà hai lần mỗi tuần.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The seminar is scheduled ------- at 9 A.M.",
+     "options": [
+      "to begin",
+      "begin",
+      "beginning",
+      "begins"
+     ],
+     "ans": 0,
+     "why": "\"be scheduled to V\" → to begin. \"begins\" là động từ chia thì, đã có \"is scheduled\" nên thừa.",
+     "vi": "Hội thảo được lên lịch bắt đầu lúc 9 giờ sáng.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Ms. Park reminded the interns ------- their timesheets.",
+     "options": [
+      "submitting",
+      "submit",
+      "submitted",
+      "to submit"
+     ],
+     "ans": 3,
+     "why": "\"remind + người + to V\" → to submit. \"submit\" thiếu to; \"submitting\" sai cấu trúc.",
+     "vi": "Cô Park nhắc các thực tập sinh nộp bảng chấm công của họ.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The CEO encouraged managers ------- more time with their teams.",
+     "options": [
+      "spending",
+      "to spend",
+      "spend",
+      "spent"
+     ],
+     "ans": 1,
+     "why": "\"encourage + người + to V\" → to spend. \"spending\" sai vì sau encourage + O không dùng V-ing.",
+     "vi": "Giám đốc điều hành khuyến khích các quản lý dành nhiều thời gian hơn cho nhóm của họ.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Applicants are expected ------- at least two years of experience.",
+     "options": [
+      "having",
+      "to have",
+      "have",
+      "had"
+     ],
+     "ans": 1,
+     "why": "\"be expected to V\" → to have. \"having\" sai vì cấu trúc bị động của expect dùng to V.",
+     "vi": "Ứng viên được kỳ vọng có ít nhất hai năm kinh nghiệm.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "This training program enables new hires ------- productive quickly.",
+     "options": [
+      "becoming",
+      "become",
+      "became",
+      "to become"
+     ],
+     "ans": 3,
+     "why": "\"enable + người + to V\" → to become. \"become\" thiếu to; \"became\" là động từ chia thì nên sai.",
+     "vi": "Chương trình đào tạo này giúp nhân viên mới nhanh chóng làm việc hiệu quả.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Guests are invited ------- the exhibition hall after lunch.",
+     "options": [
+      "to tour",
+      "touring",
+      "tour",
+      "toured"
+     ],
+     "ans": 0,
+     "why": "\"be invited to V\" → to tour. \"touring\" sai vì sau invite (bị động) dùng to V.",
+     "vi": "Khách được mời tham quan phòng triển lãm sau bữa trưa.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The board has asked the finance team ------- a revised budget.",
+     "options": [
+      "preparing",
+      "prepared",
+      "to prepare",
+      "prepares"
+     ],
+     "ans": 2,
+     "why": "\"ask + người + to V\" → to prepare. \"prepares\" thừa động từ chia thì; \"prepared\" không đúng cấu trúc.",
+     "vi": "Hội đồng quản trị đã yêu cầu nhóm tài chính chuẩn bị một ngân sách đã chỉnh sửa.",
+     "tag": "gerund-infinitive"
+    }
+   ]
+  },
+  {
+   "id": "d7-p3",
+   "title": "Bài 3: Giới từ + V-ing",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d7-l3",
+   "items": [
+    {
+     "q": "Please turn off all lights before ------- the office.",
+     "options": [
+      "leave",
+      "to leave",
+      "left",
+      "leaving"
+     ],
+     "ans": 3,
+     "why": "Sau giới từ \"before\" dùng V-ing → leaving. \"leave\" và \"to leave\" sai vì sau giới từ không dùng nguyên mẫu.",
+     "vi": "Vui lòng tắt hết đèn trước khi rời văn phòng.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The staff increased sales by ------- new customers online.",
+     "options": [
+      "attract",
+      "attracting",
+      "to attract",
+      "attracted"
+     ],
+     "ans": 1,
+     "why": "Sau giới từ \"by\" cần V-ing → attracting. \"to attract\" sai vì by không đi với to V.",
+     "vi": "Nhân viên đã tăng doanh số bằng cách thu hút khách hàng mới qua mạng.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Upon ------- the invoice, the accountant will issue payment.",
+     "options": [
+      "receive",
+      "to receive",
+      "receiving",
+      "received"
+     ],
+     "ans": 2,
+     "why": "\"upon\" là giới từ → receiving (và có tân ngữ \"the invoice\"). \"received\" sai vì không có nghĩa bị động ở đây.",
+     "vi": "Ngay khi nhận được hóa đơn, kế toán sẽ thanh toán.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "We look forward to ------- you at the annual conference.",
+     "options": [
+      "seeing",
+      "see",
+      "to see",
+      "seen"
+     ],
+     "ans": 0,
+     "why": "\"look forward to\" có \"to\" là giới từ → seeing. \"see\" hoặc \"to see\" là lỗi kinh điển.",
+     "vi": "Chúng tôi mong được gặp bạn tại hội nghị thường niên.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "The firm is committed to ------- its carbon emissions.",
+     "options": [
+      "reduction",
+      "reduced",
+      "reducing",
+      "reduces"
+     ],
+     "ans": 2,
+     "why": "\"be committed to\" + V-ing → reducing (có tân ngữ \"its carbon emissions\"). Danh từ \"reduction\" không thể có tân ngữ trực tiếp.",
+     "vi": "Công ty cam kết giảm lượng khí thải carbon.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Employees may not enter the lab without ------- a security badge.",
+     "options": [
+      "wearing",
+      "wear",
+      "worn",
+      "wore"
+     ],
+     "ans": 0,
+     "why": "Sau giới từ \"without\" cần V-ing → wearing. \"wear\" và \"wore\" không đứng được sau giới từ.",
+     "vi": "Nhân viên không được vào phòng thí nghiệm nếu không đeo thẻ an ninh.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "After ------- the training course, all trainees will receive a certificate.",
+     "options": [
+      "complete",
+      "completes",
+      "completed",
+      "completing"
+     ],
+     "ans": 3,
+     "why": "Sau giới từ \"after\" dùng V-ing → completing. \"completed\" cần chủ ngữ hoặc nghĩa bị động nên không hợp.",
+     "vi": "Sau khi hoàn thành khóa đào tạo, tất cả học viên sẽ nhận được chứng chỉ.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "------- to reduce costs, the company switched to a cheaper supplier.",
+     "options": [
+      "Because",
+      "In order",
+      "Although",
+      "Instead"
+     ],
+     "ans": 1,
+     "why": "\"In order to V\" chỉ mục đích → In order. Các từ còn lại không đi với \"to reduce\" theo nghĩa này.",
+     "vi": "Để giảm chi phí, công ty đã chuyển sang nhà cung cấp rẻ hơn.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "By ------- the process, we saved two hours per shipment.",
+     "options": [
+      "automate",
+      "automating",
+      "to automate",
+      "automated"
+     ],
+     "ans": 1,
+     "why": "\"By\" là giới từ → V-ing. automating + tân ngữ \"the process\".",
+     "vi": "Bằng cách tự động hóa quy trình, chúng tôi tiết kiệm được hai giờ cho mỗi lô hàng.",
+     "tag": "gerund-infinitive"
+    },
+    {
+     "q": "Before ------- a decision, the committee reviewed all proposals.",
+     "options": [
+      "make",
+      "made",
+      "to make",
+      "making"
+     ],
+     "ans": 3,
+     "why": "Sau giới từ \"before\" dùng V-ing → making. \"to make\" sai vì before không đi với to V.",
+     "vi": "Trước khi đưa ra quyết định, ủy ban đã xem xét mọi đề xuất.",
+     "tag": "gerund-infinitive"
+    }
+   ]
+  },
+  {
+   "id": "d7-p4",
+   "title": "Bài 4: Phân từ V-ing / V3",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d7-l4",
+   "items": [
+    {
+     "q": "Please open the ------- file for the updated schedule.",
+     "options": [
+      "attached",
+      "attaching",
+      "attach",
+      "attaches"
+     ],
+     "ans": 0,
+     "why": "Tệp bị đính kèm (nghĩa bị động) → attached. \"attaching\" sai vì tệp không tự đính kèm; \"attach/attaches\" là động từ.",
+     "vi": "Vui lòng mở tệp đính kèm để xem lịch đã cập nhật.",
+     "tag": "participle"
+    },
+    {
+     "q": "Employees ------- to attend the workshop should register today.",
+     "options": [
+      "wished",
+      "wish",
+      "wishing",
+      "wishes"
+     ],
+     "ans": 2,
+     "why": "Đã có động từ chính \"should register\", nên chỗ trống là phân từ chủ động → wishing (\"employees who wish\"). \"wish/wishes\" thừa động từ chính.",
+     "vi": "Nhân viên muốn tham dự hội thảo nên đăng ký hôm nay.",
+     "tag": "participle"
+    },
+    {
+     "q": "All ------- items must be returned within 30 days.",
+     "options": [
+      "damaging",
+      "damage",
+      "damages",
+      "damaged"
+     ],
+     "ans": 3,
+     "why": "Món hàng BỊ hư hỏng (bị động) → damaged. \"damaging\" nghĩa là gây hư hại nên sai nghĩa.",
+     "vi": "Tất cả hàng bị hư hỏng phải được trả lại trong vòng 30 ngày.",
+     "tag": "participle"
+    },
+    {
+     "q": "The ------- seats will be sold at the door.",
+     "options": [
+      "remained",
+      "remaining",
+      "remains",
+      "remainder"
+     ],
+     "ans": 1,
+     "why": "\"remain\" là nội động từ (không có bị động) nên dạng phân từ đúng là remaining (những ghế còn lại). \"remained seats\" sai.",
+     "vi": "Những ghế còn lại sẽ được bán tại cửa.",
+     "tag": "participle"
+    },
+    {
+     "q": "Documents ------- after the deadline will not be accepted.",
+     "options": [
+      "submitting",
+      "submit",
+      "submitted",
+      "submits"
+     ],
+     "ans": 2,
+     "why": "Hồ sơ BỊ nộp (bị động, rút gọn \"that are submitted\") → submitted. \"submitting\" sai vì hồ sơ không tự nộp.",
+     "vi": "Hồ sơ nộp sau hạn chót sẽ không được chấp nhận.",
+     "tag": "participle"
+    },
+    {
+     "q": "The ------- schedule is posted on the company website.",
+     "options": [
+      "revised",
+      "revising",
+      "revise",
+      "revises"
+     ],
+     "ans": 0,
+     "why": "Lịch được chỉnh sửa (bị động) → revised. \"revising\" sai nghĩa vì lịch không tự chỉnh sửa.",
+     "vi": "Lịch đã chỉnh sửa được đăng trên trang web công ty.",
+     "tag": "participle"
+    },
+    {
+     "q": "The team ------- the new app will meet on Friday.",
+     "options": [
+      "developed",
+      "develop",
+      "developing",
+      "develops"
+     ],
+     "ans": 2,
+     "why": "Có tân ngữ \"the new app\" và nghĩa chủ động (\"the team that is developing\") → developing. \"develops\" thừa động từ chính (đã có \"will meet\").",
+     "vi": "Nhóm đang phát triển ứng dụng mới sẽ họp vào thứ Sáu.",
+     "tag": "participle"
+    },
+    {
+     "q": "Any employee ------- overtime must get approval first.",
+     "options": [
+      "working",
+      "worked",
+      "work",
+      "works"
+     ],
+     "ans": 0,
+     "why": "Chủ động, rút gọn \"who works\" → working. \"works\" thừa động từ chính (đã có \"must get\").",
+     "vi": "Bất kỳ nhân viên nào làm thêm giờ đều phải được duyệt trước.",
+     "tag": "participle"
+    },
+    {
+     "q": "The ------- budget exceeds last year's by ten percent.",
+     "options": [
+      "proposing",
+      "propose",
+      "proposes",
+      "proposed"
+     ],
+     "ans": 3,
+     "why": "Ngân sách ĐƯỢC đề xuất (bị động) → proposed. \"proposing\" sai vì ngân sách không tự đề xuất.",
+     "vi": "Ngân sách được đề xuất vượt năm ngoái mười phần trăm.",
+     "tag": "participle"
+    },
+    {
+     "q": "Packages ------- by express mail arrive within two days.",
+     "options": [
+      "sending",
+      "sent",
+      "send",
+      "sends"
+     ],
+     "ans": 1,
+     "why": "Gói hàng ĐƯỢC gửi (bị động) + \"by\" → sent. \"sending\" sai vì gói hàng không tự gửi; \"send/sends\" thừa động từ chính (đã có \"arrive\").",
+     "vi": "Các gói hàng gửi bằng chuyển phát nhanh sẽ đến trong vòng hai ngày.",
+     "tag": "participle"
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Du lịch & đi lại",
+  "words": [
+   {
+    "w": "itinerary",
+    "pos": "n",
+    "ipa": "/aɪˈtɪnəreri/",
+    "vi": "lịch trình chuyến đi",
+    "ex": "Our itinerary includes a visit to the museum on the second day.",
+    "exvi": "Lịch trình của chúng tôi gồm chuyến tham quan bảo tàng vào ngày thứ hai.",
+    "fam": "—",
+    "colloc": [
+     "a detailed itinerary",
+     "a travel itinerary"
+    ]
+   },
+   {
+    "w": "reservation",
+    "pos": "n",
+    "ipa": "/ˌrezərˈveɪʃn/",
+    "vi": "sự đặt chỗ",
+    "ex": "I made a reservation for two nights at the hotel.",
+    "exvi": "Tôi đã đặt phòng hai đêm tại khách sạn.",
+    "fam": "reserve (v)",
+    "colloc": [
+     "make a reservation",
+     "cancel a reservation"
+    ]
+   },
+   {
+    "w": "departure",
+    "pos": "n",
+    "ipa": "/dɪˈpɑːrtʃər/",
+    "vi": "sự khởi hành",
+    "ex": "The departure of Flight 20 was postponed until noon.",
+    "exvi": "Giờ khởi hành của chuyến bay 20 bị hoãn đến trưa.",
+    "fam": "depart (v)",
+    "colloc": [
+     "departure time",
+     "departure gate"
+    ]
+   },
+   {
+    "w": "destination",
+    "pos": "n",
+    "ipa": "/ˌdestɪˈneɪʃn/",
+    "vi": "điểm đến",
+    "ex": "Bali is a popular destination for tourists.",
+    "exvi": "Bali là điểm đến phổ biến của khách du lịch.",
+    "fam": "—",
+    "colloc": [
+     "tourist destination",
+     "final destination"
+    ]
+   },
+   {
+    "w": "baggage",
+    "pos": "n",
+    "ipa": "/ˈbæɡɪdʒ/",
+    "vi": "hành lý (không đếm được)",
+    "ex": "Each passenger may bring one piece of carry-on baggage.",
+    "exvi": "Mỗi hành khách được mang một kiện hành lý xách tay.",
+    "fam": "—",
+    "colloc": [
+     "baggage claim",
+     "checked baggage"
+    ]
+   },
+   {
+    "w": "boarding",
+    "pos": "n",
+    "ipa": "/ˈbɔːrdɪŋ/",
+    "vi": "sự lên tàu/máy bay",
+    "ex": "Boarding begins thirty minutes before departure.",
+    "exvi": "Việc lên máy bay bắt đầu ba mươi phút trước giờ khởi hành.",
+    "fam": "board (v)",
+    "colloc": [
+     "boarding pass",
+     "boarding gate"
+    ]
+   },
+   {
+    "w": "fare",
+    "pos": "n",
+    "ipa": "/fer/",
+    "vi": "giá vé",
+    "ex": "The fare from Seoul to Busan is quite reasonable.",
+    "exvi": "Giá vé từ Seoul đến Busan khá hợp lý.",
+    "fam": "—",
+    "colloc": [
+     "a one-way fare",
+     "a discounted fare"
+    ]
+   },
+   {
+    "w": "passenger",
+    "pos": "n",
+    "ipa": "/ˈpæsɪndʒər/",
+    "vi": "hành khách",
+    "ex": "Passengers should arrive at the airport two hours early.",
+    "exvi": "Hành khách nên đến sân bay sớm hai tiếng.",
+    "fam": "—",
+    "colloc": [
+     "airline passenger",
+     "passenger seat"
+    ]
+   },
+   {
+    "w": "delay",
+    "pos": "v/n",
+    "ipa": "/dɪˈleɪ/",
+    "vi": "trì hoãn; sự chậm trễ",
+    "ex": "Heavy fog delayed all morning flights.",
+    "exvi": "Sương mù dày đặc làm trễ mọi chuyến bay buổi sáng.",
+    "fam": "delayed (adj)",
+    "colloc": [
+     "a flight delay",
+     "delay a shipment"
+    ]
+   },
+   {
+    "w": "accommodation",
+    "pos": "n",
+    "ipa": "/əˌkɑːməˈdeɪʃn/",
+    "vi": "chỗ ở",
+    "ex": "The conference fee includes accommodation near the venue.",
+    "exvi": "Phí hội nghị đã bao gồm chỗ ở gần địa điểm tổ chức.",
+    "fam": "accommodate (v)",
+    "colloc": [
+     "arrange accommodation",
+     "hotel accommodation"
+    ]
+   },
+   {
+    "w": "reimburse",
+    "pos": "v",
+    "ipa": "/ˌriːɪmˈbɜːrs/",
+    "vi": "hoàn trả (chi phí)",
+    "ex": "The company will reimburse you for all travel expenses.",
+    "exvi": "Công ty sẽ hoàn trả cho bạn mọi chi phí đi lại.",
+    "fam": "reimbursement (n)",
+    "colloc": [
+     "reimburse sb for sth",
+     "be reimbursed"
+    ]
+   },
+   {
+    "w": "confirm",
+    "pos": "v",
+    "ipa": "/kənˈfɜːrm/",
+    "vi": "xác nhận",
+    "ex": "Please confirm your reservation by e-mail.",
+    "exvi": "Vui lòng xác nhận việc đặt chỗ của bạn qua e-mail.",
+    "fam": "confirmation (n)",
+    "colloc": [
+     "confirm a booking",
+     "confirm receipt"
+    ]
+   },
+   {
+    "w": "valid",
+    "pos": "adj",
+    "ipa": "/ˈvælɪd/",
+    "vi": "có hiệu lực, hợp lệ",
+    "ex": "Your passport must be valid for at least six months.",
+    "exvi": "Hộ chiếu của bạn phải còn hiệu lực ít nhất sáu tháng.",
+    "fam": "validity (n), validate (v)",
+    "colloc": [
+     "a valid passport",
+     "valid until"
+    ]
+   },
+   {
+    "w": "complimentary",
+    "pos": "adj",
+    "ipa": "/ˌkɑːmplɪˈmentri/",
+    "vi": "miễn phí (được tặng)",
+    "ex": "Guests receive a complimentary breakfast with their room.",
+    "exvi": "Khách được tặng bữa sáng miễn phí kèm phòng.",
+    "fam": "compliment (n/v)",
+    "colloc": [
+     "complimentary breakfast",
+     "complimentary ticket"
+    ]
+   },
+   {
+    "w": "commute",
+    "pos": "v/n",
+    "ipa": "/kəˈmjuːt/",
+    "vi": "đi làm (quãng đường giữa nhà và nơi làm) hằng ngày",
+    "ex": "Many employees commute to the city center by train.",
+    "exvi": "Nhiều nhân viên đi làm vào trung tâm bằng tàu.",
+    "fam": "commuter (n)",
+    "colloc": [
+     "a daily commute",
+     "commute to work"
+    ]
+   },
+   {
+    "w": "shuttle",
+    "pos": "n",
+    "ipa": "/ˈʃʌtl/",
+    "vi": "xe đưa đón",
+    "ex": "A free shuttle runs between the airport and the hotel.",
+    "exvi": "Xe đưa đón miễn phí chạy giữa sân bay và khách sạn.",
+    "fam": "—",
+    "colloc": [
+     "shuttle bus",
+     "airport shuttle"
+    ]
+   },
+   {
+    "w": "voucher",
+    "pos": "n",
+    "ipa": "/ˈvaʊtʃər/",
+    "vi": "phiếu giảm giá/phiếu quà tặng",
+    "ex": "Show this voucher to get a free drink.",
+    "exvi": "Xuất trình phiếu này để nhận đồ uống miễn phí.",
+    "fam": "—",
+    "colloc": [
+     "a travel voucher",
+     "redeem a voucher"
+    ]
+   },
+   {
+    "w": "upgrade",
+    "pos": "v/n",
+    "ipa": "/ʌpˈɡreɪd/",
+    "vi": "nâng cấp (hạng vé/phòng)",
+    "ex": "You may upgrade to business class for a small fee.",
+    "exvi": "Bạn có thể nâng lên hạng thương gia với một khoản phí nhỏ.",
+    "fam": "—",
+    "colloc": [
+     "upgrade to",
+     "a free upgrade"
+    ]
+   },
+   {
+    "w": "layover",
+    "pos": "n",
+    "ipa": "/ˈleɪoʊvər/",
+    "vi": "thời gian quá cảnh chờ nối chuyến",
+    "ex": "The two-hour layover in Dubai gave us time to eat.",
+    "exvi": "Hai tiếng quá cảnh ở Dubai cho chúng tôi thời gian ăn uống.",
+    "fam": "—",
+    "colloc": [
+     "a long layover",
+     "a layover in Tokyo"
+    ]
+   },
+   {
+    "w": "customs",
+    "pos": "n",
+    "ipa": "/ˈkʌstəmz/",
+    "vi": "hải quan",
+    "ex": "Passengers must go through customs before leaving the airport.",
+    "exvi": "Hành khách phải qua hải quan trước khi rời sân bay.",
+    "fam": "—",
+    "colloc": [
+     "clear customs",
+     "customs officer"
+    ]
+   },
+   {
+    "w": "expire",
+    "pos": "v",
+    "ipa": "/ɪkˈspaɪər/",
+    "vi": "hết hạn",
+    "ex": "Your ticket will expire on December 31.",
+    "exvi": "Vé của bạn sẽ hết hạn vào ngày 31 tháng 12.",
+    "fam": "expiration (n), expired (adj)",
+    "colloc": [
+     "expire on",
+     "an expired visa"
+    ]
+   },
+   {
+    "w": "cancel",
+    "pos": "v",
+    "ipa": "/ˈkænsl/",
+    "vi": "hủy",
+    "ex": "The airline cancelled all flights because of the snow.",
+    "exvi": "Hãng hàng không đã hủy mọi chuyến bay vì tuyết.",
+    "fam": "cancellation (n)",
+    "colloc": [
+     "cancel a flight",
+     "a cancellation fee"
+    ]
+   },
+   {
+    "w": "tourist",
+    "pos": "n",
+    "ipa": "/ˈtʊrɪst/",
+    "vi": "khách du lịch",
+    "ex": "Thousands of tourists visit the old town each summer.",
+    "exvi": "Hàng nghìn khách du lịch đến thăm khu phố cổ mỗi mùa hè.",
+    "fam": "tourism (n)",
+    "colloc": [
+     "tourist attraction",
+     "tourist season"
+    ]
+   },
+   {
+    "w": "brochure",
+    "pos": "n",
+    "ipa": "/broʊˈʃʊr/",
+    "vi": "tờ rơi, sách giới thiệu",
+    "ex": "Tourists can pick up a free brochure at the information desk.",
+    "exvi": "Du khách có thể lấy một tờ rơi miễn phí ở quầy thông tin.",
+    "fam": "—",
+    "colloc": [
+     "a travel brochure",
+     "a product brochure"
+    ]
+   },
+   {
+    "w": "available",
+    "pos": "adj",
+    "ipa": "/əˈveɪləbl/",
+    "vi": "có sẵn, còn trống",
+    "ex": "Seats are available on a first-come, first-served basis.",
+    "exvi": "Chỗ ngồi còn trống theo nguyên tắc ai đến trước được trước.",
+    "fam": "availability (n)",
+    "colloc": [
+     "be available for",
+     "available seats"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "Guests receive a ------- breakfast with their room.",
+   "options": [
+    "valid",
+    "complimentary",
+    "delayed",
+    "crowded"
+   ],
+   "ans": 1,
+   "why": "complimentary = miễn phí, được tặng kèm. Các từ còn lại không hợp nghĩa với bữa sáng.",
+   "vi": "Khách được tặng bữa sáng miễn phí kèm phòng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Passengers must show a ------- passport at check-in.",
+   "options": [
+    "spacious",
+    "brief",
+    "complimentary",
+    "valid"
+   ],
+   "ans": 3,
+   "why": "valid passport = hộ chiếu còn hiệu lực. Các từ còn lại không đi với passport.",
+   "vi": "Hành khách phải xuất trình hộ chiếu còn hiệu lực khi làm thủ tục.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The airline will ------- travelers for meals during the long delay.",
+   "options": [
+    "reimburse",
+    "board",
+    "commute",
+    "upgrade"
+   ],
+   "ans": 0,
+   "why": "reimburse sb for sth = hoàn trả cho ai khoản gì. \"board\" nghĩa là lên tàu, \"commute\" là đi làm, \"upgrade\" là nâng hạng; đều không hợp.",
+   "vi": "Hãng hàng không sẽ hoàn trả tiền ăn cho hành khách trong thời gian trễ chuyến dài.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Our ------- includes a visit to the museum on the second day.",
+   "options": [
+    "fare",
+    "baggage",
+    "itinerary",
+    "voucher"
+   ],
+   "ans": 2,
+   "why": "itinerary = lịch trình chuyến đi, có thể \"include a visit\". Fare (giá vé) và baggage (hành lý) không \"bao gồm chuyến tham quan\".",
+   "vi": "Lịch trình của chúng tôi bao gồm chuyến tham quan bảo tàng vào ngày thứ hai.",
+   "tag": "vocab"
+  },
+  {
+   "q": "You may ------- to business class for a small fee.",
+   "options": [
+    "expire",
+    "depart",
+    "cancel",
+    "upgrade"
+   ],
+   "ans": 3,
+   "why": "upgrade to business class = nâng lên hạng thương gia. \"expire to\" và \"depart to\" không có nghĩa này.",
+   "vi": "Bạn có thể nâng lên hạng thương gia với một khoản phí nhỏ.",
+   "tag": "vocab"
+  },
+  {
+   "q": "All hotel ------- must be cancelled 24 hours in advance.",
+   "options": [
+    "reserve",
+    "reservations",
+    "reserved",
+    "reserving"
+   ],
+   "ans": 1,
+   "why": "Sau \"All hotel\" cần danh từ số nhiều → reservations. \"reserve/reserved/reserving\" là động từ hoặc phân từ, không làm chủ ngữ ở đây.",
+   "vi": "Mọi việc đặt phòng khách sạn phải được hủy trước 24 giờ.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The ------- of Flight 20 was postponed until noon.",
+   "options": [
+    "depart",
+    "departed",
+    "departure",
+    "departing"
+   ],
+   "ans": 2,
+   "why": "Sau mạo từ \"The\" cần danh từ → departure. Các đáp án còn lại là động từ/phân từ.",
+   "vi": "Giờ khởi hành của chuyến bay 20 bị hoãn đến trưa.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The company provides a free ------- between the airport and the hotel.",
+   "options": [
+    "shuttle",
+    "customs",
+    "layover",
+    "fare"
+   ],
+   "ans": 0,
+   "why": "free shuttle = xe đưa đón miễn phí. Customs (hải quan) và layover (quá cảnh) không phải phương tiện.",
+   "vi": "Công ty cung cấp xe đưa đón miễn phí giữa sân bay và khách sạn.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Passengers should go through ------- before leaving the airport.",
+   "options": [
+    "voucher",
+    "brochure",
+    "customs",
+    "itinerary"
+   ],
+   "ans": 2,
+   "why": "go through customs = qua hải quan. Các từ còn lại không đi với \"go through\" theo nghĩa này.",
+   "vi": "Hành khách nên qua hải quan trước khi rời sân bay.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Your ticket will ------- on December 31, so please use it soon.",
+   "options": [
+    "expire",
+    "confirm",
+    "commute",
+    "delay"
+   ],
+   "ans": 0,
+   "why": "expire = hết hạn; hợp với \"use it soon\". \"confirm\" (xác nhận), \"commute\", \"delay\" không hợp.",
+   "vi": "Vé của bạn sẽ hết hạn vào ngày 31 tháng 12 nên hãy dùng sớm.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "We expect ------- the new software by October.",
+   "options": [
+    "installing",
+    "installed",
+    "install",
+    "to install"
+   ],
+   "ans": 3,
+   "why": "\"expect\" + to V → to install. \"installing\" sai vì expect không đi với V-ing.",
+   "vi": "Chúng tôi dự kiến cài đặt phần mềm mới trước tháng Mười.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Mr. Choi enjoys ------- with clients from overseas.",
+   "options": [
+    "to work",
+    "working",
+    "work",
+    "worked"
+   ],
+   "ans": 1,
+   "why": "\"enjoy\" + V-ing → working. \"to work\" sai vì enjoy thuộc nhóm V-ing.",
+   "vi": "Ông Choi thích làm việc với khách hàng nước ngoài.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "All staff are encouraged ------- public transportation.",
+   "options": [
+    "using",
+    "to use",
+    "use",
+    "used"
+   ],
+   "ans": 1,
+   "why": "Bị động \"be encouraged + to V\" → to use. \"using\" sai cấu trúc.",
+   "vi": "Toàn bộ nhân viên được khuyến khích sử dụng phương tiện công cộng.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The ------- passengers should proceed to Gate 12.",
+   "options": [
+    "waited",
+    "wait",
+    "waits",
+    "waiting"
+   ],
+   "ans": 3,
+   "why": "Hành khách đang chờ (chủ động) → waiting. \"waited\" sai vì hành khách không \"bị chờ\". \"wait/waits\" là động từ.",
+   "vi": "Các hành khách đang chờ nên đến cổng số 12.",
+   "tag": "participle"
+  },
+  {
+   "q": "Before ------- the building, visitors must sign in.",
+   "options": [
+    "entering",
+    "enter",
+    "entered",
+    "to enter"
+   ],
+   "ans": 0,
+   "why": "Sau giới từ \"before\" dùng V-ing → entering. \"to enter\" và \"enter\" sai.",
+   "vi": "Trước khi vào tòa nhà, khách phải đăng ký.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The vendor agreed ------- the price by five percent.",
+   "options": [
+    "lowering",
+    "lowered",
+    "to lower",
+    "lowers"
+   ],
+   "ans": 2,
+   "why": "\"agree\" + to V → to lower. \"lowering\" sai vì agree không đi với V-ing.",
+   "vi": "Nhà cung cấp đồng ý hạ giá năm phần trăm.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Ms. Alvarez suggested ------- the training session to Thursday.",
+   "options": [
+    "to move",
+    "moved",
+    "moves",
+    "moving"
+   ],
+   "ans": 3,
+   "why": "\"suggest\" + V-ing → moving. \"to move\" sai vì suggest không dùng to V.",
+   "vi": "Cô Alvarez đề nghị dời buổi đào tạo sang thứ Năm.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The invoice ------- to this e-mail shows the total amount.",
+   "options": [
+    "attaching",
+    "attached",
+    "attach",
+    "attaches"
+   ],
+   "ans": 1,
+   "why": "Hóa đơn ĐƯỢC đính kèm (bị động, rút gọn) → attached. \"attaching\" sai nghĩa; \"attach/attaches\" thừa động từ chính (đã có \"shows\").",
+   "vi": "Hóa đơn đính kèm e-mail này cho thấy tổng số tiền.",
+   "tag": "participle"
+  },
+  {
+   "q": "Employees are required ------- identification at all times.",
+   "options": [
+    "carrying",
+    "carry",
+    "to carry",
+    "carried"
+   ],
+   "ans": 2,
+   "why": "\"be required to V\" → to carry. \"carrying\" sai vì require không đi với V-ing.",
+   "vi": "Nhân viên phải mang theo giấy tờ tùy thân mọi lúc.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Thank you for ------- us your feedback on the new menu.",
+   "options": [
+    "giving",
+    "give",
+    "gave",
+    "to give"
+   ],
+   "ans": 0,
+   "why": "Sau giới từ \"for\" dùng V-ing → giving. \"to give\" và \"give\" sai.",
+   "vi": "Cảm ơn bạn đã gửi cho chúng tôi ý kiến về thực đơn mới.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The meeting is expected ------- two hours.",
+   "options": [
+    "lasting",
+    "last",
+    "to last",
+    "lasts"
+   ],
+   "ans": 2,
+   "why": "\"be expected to V\" → to last. \"lasts\" là động từ chia thì nên thừa.",
+   "vi": "Cuộc họp được dự kiến kéo dài hai tiếng.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The hotel offers discounts to guests ------- more than five nights.",
+   "options": [
+    "staying",
+    "stayed",
+    "stay",
+    "stays"
+   ],
+   "ans": 0,
+   "why": "Chủ động, rút gọn \"who stay\" → staying. \"stays\" thừa động từ chính (đã có \"offers\").",
+   "vi": "Khách sạn giảm giá cho khách ở hơn năm đêm.",
+   "tag": "participle"
+  },
+  {
+   "q": "The airline refused ------- the passenger's fare.",
+   "options": [
+    "refunding",
+    "refunded",
+    "refunds",
+    "to refund"
+   ],
+   "ans": 3,
+   "why": "\"refuse\" + to V → to refund. \"refunding\" sai vì refuse không đi với V-ing.",
+   "vi": "Hãng hàng không từ chối hoàn lại tiền vé của hành khách.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "We are considering ------- a second warehouse in Busan.",
+   "options": [
+    "to open",
+    "opening",
+    "opened",
+    "open"
+   ],
+   "ans": 1,
+   "why": "\"consider\" + V-ing → opening. \"to open\" sai vì consider thuộc nhóm V-ing.",
+   "vi": "Chúng tôi đang cân nhắc mở kho thứ hai ở Busan.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Please present your ------- at the entrance to receive a free drink.",
+   "options": [
+    "delay",
+    "voucher",
+    "destination",
+    "shuttle"
+   ],
+   "ans": 1,
+   "why": "voucher = phiếu quà tặng, có thể \"present at the entrance\". Delay, destination, shuttle không hợp nghĩa.",
+   "vi": "Vui lòng xuất trình phiếu quà tặng ở cửa để nhận đồ uống miễn phí.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Ms. Jung is waiting for the ------- of her hotel booking.",
+   "options": [
+    "confirm",
+    "confirmed",
+    "confirms",
+    "confirmation"
+   ],
+   "ans": 3,
+   "why": "Sau \"the\" cần danh từ → confirmation. Các đáp án khác là động từ.",
+   "vi": "Cô Jung đang chờ xác nhận đặt phòng khách sạn.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The two-hour ------- in Dubai gave us time to visit the city.",
+   "options": [
+    "layover",
+    "fare",
+    "voucher",
+    "brochure"
+   ],
+   "ans": 0,
+   "why": "layover = thời gian chờ nối chuyến. Fare, voucher, brochure không thể \"có hai giờ\".",
+   "vi": "Hai tiếng quá cảnh ở Dubai cho chúng tôi thời gian tham quan thành phố.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Tourists can pick up a free ------- at the information desk.",
+   "options": [
+    "layover",
+    "departure",
+    "brochure",
+    "commute"
+   ],
+   "ans": 2,
+   "why": "brochure = tờ rơi; có thể \"pick up a free brochure\". Layover (quá cảnh), departure (sự khởi hành), commute (việc đi làm) không phải vật để lấy.",
+   "vi": "Du khách có thể lấy tờ rơi miễn phí ở quầy thông tin.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Seats are ------- on a first-come, first-served basis.",
+   "options": [
+    "valid",
+    "delayed",
+    "expired",
+    "available"
+   ],
+   "ans": 3,
+   "why": "available = còn sẵn, còn trống, hợp với \"first-come, first-served\". \"expired\" (hết hạn), \"valid\" (hợp lệ), \"delayed\" (bị trễ) không dùng để nói chỗ ngồi còn hay hết.",
+   "vi": "Chỗ ngồi còn trống theo nguyên tắc ai đến trước được trước.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The airline ------- all flights because of the heavy snow.",
+   "options": [
+    "reimbursed",
+    "cancelled",
+    "commuted",
+    "expired"
+   ],
+   "ans": 1,
+   "why": "cancelled = đã hủy, hợp với \"because of the heavy snow\". Các động từ khác không hợp nghĩa.",
+   "vi": "Hãng hàng không đã hủy mọi chuyến bay vì tuyết dày.",
+   "tag": "vocab"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "The committee decided ------- the vote until Monday.",
+   "options": [
+    "delaying",
+    "delayed",
+    "to delay",
+    "delays"
+   ],
+   "ans": 2,
+   "why": "\"decide\" + to V → to delay. \"delaying\" sai vì decide không đi với V-ing.",
+   "vi": "Ủy ban quyết định hoãn cuộc bỏ phiếu đến thứ Hai.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Mr. Wong avoided ------- his opinion during the meeting.",
+   "options": [
+    "giving",
+    "to give",
+    "give",
+    "gave"
+   ],
+   "ans": 0,
+   "why": "\"avoid\" + V-ing → giving. \"to give\" sai vì avoid thuộc nhóm V-ing.",
+   "vi": "Ông Wong tránh đưa ý kiến trong cuộc họp.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Ms. Yang wants her assistant ------- the files by noon.",
+   "options": [
+    "organizing",
+    "organize",
+    "to organize",
+    "organized"
+   ],
+   "ans": 2,
+   "why": "\"want + người + to V\" → to organize. \"organizing\" sai cấu trúc.",
+   "vi": "Cô Yang muốn trợ lý sắp xếp hồ sơ trước buổi trưa.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Customers are urged ------- their receipts for warranty claims.",
+   "options": [
+    "to keep",
+    "keeping",
+    "keep",
+    "kept"
+   ],
+   "ans": 0,
+   "why": "Bị động \"be urged to V\" → to keep. \"keeping\" sai cấu trúc.",
+   "vi": "Khách hàng được khuyến nghị giữ hóa đơn để bảo hành.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The new system enables managers ------- inventory in real time.",
+   "options": [
+    "tracking",
+    "track",
+    "tracked",
+    "to track"
+   ],
+   "ans": 3,
+   "why": "\"enable + người + to V\" → to track. \"tracking\" và \"track\" sai cấu trúc.",
+   "vi": "Hệ thống mới giúp quản lý theo dõi hàng tồn kho theo thời gian thực.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Staff may borrow the equipment after ------- the form.",
+   "options": [
+    "sign",
+    "signing",
+    "to sign",
+    "signed"
+   ],
+   "ans": 1,
+   "why": "Sau giới từ \"after\" dùng V-ing → signing. \"to sign\" sai.",
+   "vi": "Nhân viên có thể mượn thiết bị sau khi ký vào biểu mẫu.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The company is looking forward to ------- its new office in May.",
+   "options": [
+    "open",
+    "opening",
+    "to open",
+    "opened"
+   ],
+   "ans": 1,
+   "why": "\"look forward to\" + V-ing → opening. \"to open\" là lỗi do nhầm \"to\" với to V.",
+   "vi": "Công ty mong chờ việc khai trương văn phòng mới vào tháng Năm.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "By ------- the schedule, we finished the project early.",
+   "options": [
+    "adjust",
+    "adjusted",
+    "to adjust",
+    "adjusting"
+   ],
+   "ans": 3,
+   "why": "\"By\" là giới từ (bằng cách) → V-ing; adjusting + tân ngữ \"the schedule\". \"to adjust\" và \"adjust\" không đứng sau giới từ.",
+   "vi": "Nhờ điều chỉnh lịch, chúng tôi đã hoàn thành dự án sớm.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The ------- documents are on your desk.",
+   "options": [
+    "required",
+    "requiring",
+    "require",
+    "requires"
+   ],
+   "ans": 0,
+   "why": "Tài liệu ĐƯỢC yêu cầu (bị động) → required. \"requiring\" sai nghĩa.",
+   "vi": "Các tài liệu cần thiết đang ở trên bàn bạn.",
+   "tag": "participle"
+  },
+  {
+   "q": "Visitors ------- the factory must wear helmets.",
+   "options": [
+    "toured",
+    "tour",
+    "touring",
+    "tours"
+   ],
+   "ans": 2,
+   "why": "Chủ động, rút gọn \"who tour\" → touring. \"tours\" thừa động từ chính (đã có \"must wear\").",
+   "vi": "Khách tham quan nhà máy phải đội mũ bảo hộ.",
+   "tag": "participle"
+  },
+  {
+   "q": "The manager has promised ------- all complaints within a week.",
+   "options": [
+    "answering",
+    "answered",
+    "answers",
+    "to answer"
+   ],
+   "ans": 3,
+   "why": "\"promise\" + to V → to answer. \"answering\" sai.",
+   "vi": "Người quản lý đã hứa phản hồi mọi khiếu nại trong vòng một tuần.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Our team is responsible for ------- the monthly report.",
+   "options": [
+    "prepare",
+    "preparing",
+    "to prepare",
+    "prepared"
+   ],
+   "ans": 1,
+   "why": "Sau giới từ \"for\" dùng V-ing → preparing. \"to prepare\" sai.",
+   "vi": "Nhóm chúng tôi chịu trách nhiệm chuẩn bị báo cáo hằng tháng.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The ------- results will be announced tomorrow.",
+   "options": [
+    "combining",
+    "combine",
+    "combined",
+    "combines"
+   ],
+   "ans": 2,
+   "why": "Kết quả ĐƯỢC kết hợp (bị động) → combined. \"combining\" sai nghĩa.",
+   "vi": "Kết quả tổng hợp sẽ được công bố vào ngày mai.",
+   "tag": "participle"
+  },
+  {
+   "q": "Ms. Lopez was invited ------- on the panel.",
+   "options": [
+    "to serve",
+    "serving",
+    "serve",
+    "served"
+   ],
+   "ans": 0,
+   "why": "Bị động \"be invited to V\" → to serve. \"serving\" sai cấu trúc.",
+   "vi": "Cô Lopez được mời tham gia ban hội thảo.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The board is considering ------- the office lease.",
+   "options": [
+    "to renew",
+    "renewed",
+    "renewing",
+    "renews"
+   ],
+   "ans": 2,
+   "why": "\"consider\" + V-ing → renewing. \"to renew\" sai.",
+   "vi": "Hội đồng quản trị đang cân nhắc gia hạn hợp đồng thuê văn phòng.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Mr. Davis is scheduled ------- the keynote speech at 10 A.M.",
+   "options": [
+    "to deliver",
+    "delivering",
+    "deliver",
+    "delivered"
+   ],
+   "ans": 0,
+   "why": "\"be scheduled to V\" → to deliver. \"delivering\" sai cấu trúc.",
+   "vi": "Ông Davis được xếp lịch trình bày bài phát biểu chính lúc 10 giờ sáng.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "The firm hopes ------- its market share next year.",
+   "options": [
+    "expanding",
+    "expanded",
+    "expands",
+    "to expand"
+   ],
+   "ans": 3,
+   "why": "\"hope\" + to V → to expand. \"expanding\" sai vì hope không đi với V-ing.",
+   "vi": "Công ty hy vọng mở rộng thị phần vào năm sau.",
+   "tag": "gerund-infinitive"
+  },
+  {
+   "q": "Delegates will be provided with ------- near the conference venue.",
+   "options": [
+    "accommodate",
+    "accommodation",
+    "accommodated",
+    "accommodating"
+   ],
+   "ans": 1,
+   "why": "Sau giới từ \"with\" cần danh từ → accommodation (chỗ ở). Các đáp án khác là động từ/phân từ.",
+   "vi": "Đại biểu sẽ được bố trí chỗ ở gần địa điểm hội nghị.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Employees will be ------- for all travel expenses.",
+   "options": [
+    "boarded",
+    "reimbursed",
+    "commuted",
+    "expired"
+   ],
+   "ans": 1,
+   "why": "be reimbursed for = được hoàn trả khoản chi. Các từ khác không đi với \"for expenses\".",
+   "vi": "Nhân viên sẽ được hoàn trả mọi chi phí đi lại.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Passengers must pay the ------- before boarding.",
+   "options": [
+    "layover",
+    "brochure",
+    "customs",
+    "fare"
+   ],
+   "ans": 3,
+   "why": "pay the fare = trả tiền vé. Các từ còn lại không phải thứ để \"trả\".",
+   "vi": "Hành khách phải trả giá vé trước khi lên xe/máy bay.",
+   "tag": "vocab"
+  }
+ ]
+}

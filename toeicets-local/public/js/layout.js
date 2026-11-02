@@ -43,6 +43,9 @@ function renderShell({ active, state }) {
       <a class="nav-link ${active==='roadmap'?'active':''}" href="/roadmap">
         <span class="icon">📈</span><span>Lộ trình 650</span>
       </a>
+      <a class="nav-link ${active==='grammar10'?'active':''}" href="/grammar10">
+        <span class="icon">🗓️</span><span>Ngữ pháp 10 ngày</span>
+      </a>
       <a class="nav-link ${active==='study'?'active':''}" href="/study">
         <span class="icon">🧠</span><span>Học &amp; Ôn</span>
       </a>

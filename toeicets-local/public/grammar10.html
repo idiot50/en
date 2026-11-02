@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="robots" content="noindex, nofollow, noarchive, nosnippet"/>
+  <meta name="theme-color" content="#58CC02"/>
+  <meta name="apple-mobile-web-app-capable" content="yes"/>
+  <meta name="apple-mobile-web-app-status-bar-style" content="default"/>
+  <meta name="apple-mobile-web-app-title" content="TOEIC Quest"/>
+  <link rel="apple-touch-icon" href="/img/apple-touch-icon.png"/>
+  <link rel="manifest" href="/manifest.json"/>
+  <title>TOEIC Quest — Ngữ pháp 10 ngày</title>
+  <link rel="icon" type="image/svg+xml" href="/favicon.svg?v=10"/>
+  <link rel="alternate icon" href="/favicon.ico"/>
+  <link href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/css/style.css?v=11"/>
+  <style>
+    .g10 h2.title { font-size:27px; font-weight:900; margin-bottom:4px; }
+    .g10 .sub { color:var(--text-mute); line-height:1.6; margin-bottom:18px; }
+    .g10 .muted { color:var(--text-mute); }
+    .g10 .overall { display:flex; align-items:center; gap:14px; flex-wrap:wrap; }
+    .g10 .bar { flex:1; min-width:180px; height:14px; background:var(--bg-alt); border-radius:8px; overflow:hidden; border:1px solid var(--border); }
+    .g10 .bar > i { display:block; height:100%; background:linear-gradient(90deg,#7BD93B,var(--green)); border-radius:8px; }
+    .g10 .days { display:grid; grid-template-columns:repeat(auto-fill,minmax(250px,1fr)); gap:12px; margin-top:14px; }
+    .g10 .day-card { display:flex; flex-direction:column; gap:6px; padding:16px; border:2px solid var(--border); border-radius:16px; background:white; cursor:pointer; text-decoration:none; color:var(--text); transition:all .12s; position:relative; }
+    .g10 .day-card:hover { border-color:var(--green); transform:translateY(-2px); box-shadow:0 4px 0 var(--green-dark); }
+    .g10 .day-card.next { border-color:var(--green); box-shadow:0 0 0 3px rgba(88,204,2,.18); }
+    .g10 .day-card.passed { background:#f6fff0; }
+    .g10 .day-card .dn { font-size:12px; font-weight:900; color:var(--green-dark); letter-spacing:.06em; text-transform:uppercase; }
+    .g10 .day-card .dt { font-size:16px; font-weight:800; line-height:1.35; }
+    .g10 .day-card .dv { font-size:12.5px; color:var(--text-mute); }
+    .g10 .day-card .ic { position:absolute; right:14px; top:12px; font-size:28px; }
+    .g10 .steps { display:flex; gap:5px; margin-top:4px; }
+    .g10 .steps span { flex:1; height:6px; border-radius:4px; background:var(--bg-alt); border:1px solid var(--border); }
+    .g10 .steps span.on { background:var(--green); border-color:var(--green-dark); }
+    .g10 .tag { display:inline-block; font-size:11.5px; font-weight:800; padding:2px 9px; border-radius:20px; background:var(--green-soft); color:var(--green-dark); }
+    .g10 .tag.warn { background:#fff3dc; color:#b8650f; }
+    .g10 .tag.bad { background:#ffe5e5; color:#c0392b; }
+    .g10 .head { display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+    .g10 .head h2 { font-size:23px; font-weight:900; }
+    .g10 .sched { display:flex; flex-wrap:wrap; gap:6px; margin-top:10px; }
+    .g10 .sched span { font-size:12.5px; font-weight:700; background:var(--bg-alt); border:1px solid var(--border); border-radius:20px; padding:4px 10px; }
+    .g10 .tabs { display:flex; gap:8px; flex-wrap:wrap; margin:16px 0 14px; position:sticky; top:0; z-index:9; background:var(--bg-alt); padding:8px 0; }
+    .g10 .tab { border:2px solid var(--border); background:white; border-radius:12px; padding:9px 14px; font-weight:800; cursor:pointer; font-size:14.5px; color:var(--text); }
+    .g10 .tab.active { border-color:var(--green); background:#f3fff0; color:var(--green-dark); }
+    .g10 .tab .ok { color:var(--green); }
+    .g10 .lesson { background:white; border:2px solid var(--border); border-radius:16px; padding:18px 20px; margin-bottom:14px; }
+    .g10 .lesson h3 { font-size:19px; font-weight:900; margin-bottom:8px; }
+    .g10 .lesson .intro { line-height:1.7; font-size:15px; margin-bottom:10px; }
+    .g10 .pt { border-left:4px solid var(--green); background:#fbfff7; padding:10px 14px; border-radius:0 12px 12px 0; margin:10px 0; }
+    .g10 .pt .rule { font-size:15px; line-height:1.65; white-space:pre-line; }
+    .g10 .pt .rule b, .g10 .intro b { color:var(--green-dark); }
+    .g10 .ex { margin-top:7px; font-size:14.5px; line-height:1.55; }
+    .g10 .ex .en { font-weight:700; }
+    .g10 .ex .en b { color:#1769aa; text-decoration:underline; text-underline-offset:3px; }
+    .g10 .ex .vi { color:var(--text-mute); font-style:italic; }
+    .g10 table.gt { width:100%; border-collapse:collapse; margin:10px 0; font-size:14px; }
+    .g10 table.gt th, .g10 table.gt td { padding:8px 10px; border:1px solid var(--border); text-align:left; vertical-align:top; line-height:1.5; }
+    .g10 table.gt th { background:var(--green-soft); color:var(--green-dark); font-weight:800; }
+    .g10 .tblwrap { overflow-x:auto; }
+    .g10 .traps { background:#fff6f2; border:1.5px solid #ffcfb8; border-radius:12px; padding:10px 14px; margin-top:10px; font-size:14.5px; line-height:1.6; }
+    .g10 .traps ul { margin:4px 0 0 18px; }
+    .g10 .tip { background:#f4faff; border-left:4px solid var(--blue); border-radius:0 12px 12px 0; padding:10px 14px; margin-top:10px; font-size:14.5px; line-height:1.6; }
+    .g10 .set { background:white; border:2px solid var(--border); border-radius:16px; padding:16px 18px; margin-bottom:16px; }
+    .g10 .set-h { display:flex; align-items:center; gap:10px; flex-wrap:wrap; margin-bottom:6px; }
+    .g10 .set-h h3 { font-size:18px; font-weight:900; flex:1; }
+    .g10 .gq { padding:14px 0; border-top:1px dashed var(--border); }
+    .g10 .gq:first-of-type { border-top:none; }
+    .g10 .gq .qn { font-size:12px; font-weight:800; color:var(--text-mute); text-transform:uppercase; letter-spacing:.5px; margin-bottom:4px; display:flex; gap:8px; align-items:center; }
+    .g10 .gq .qt { font-size:16.5px; font-weight:700; margin-bottom:10px; line-height:1.5; }
+    .g10 .gq .ctx { background:var(--bg-alt); border:1px solid var(--border); border-radius:10px; padding:10px 13px; font-size:14.5px; line-height:1.65; margin-bottom:8px; white-space:pre-line; }
+    .g10 .gap { display:inline-block; min-width:64px; border-bottom:2px solid var(--text); margin:0 3px; text-align:center; color:#1769aa; font-weight:800; }
+    .g10 .options { grid-template-columns:repeat(auto-fit,minmax(200px,1fr)); }
+    .g10 .option { font-size:15px; }
+    .g10 .exp { margin-top:9px; padding:10px 13px; border-radius:10px; font-size:14px; line-height:1.6; }
+    .g10 .exp.ok { background:#f0ffe6; border-left:4px solid var(--green); }
+    .g10 .exp.no { background:#fff1f1; border-left:4px solid var(--red); }
+    .g10 .exp .vi { color:var(--text-mute); font-style:italic; margin-top:4px; }
+    .g10 .vgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:10px; }
+    .g10 .vcard { background:white; border:2px solid var(--border); border-radius:14px; padding:12px 14px; }
+    .g10 .vcard .w { font-size:18px; font-weight:900; }
+    .g10 .vcard .pos { font-size:12px; font-weight:800; color:var(--text-mute); margin-left:6px; }
+    .g10 .vcard .ipa { font-size:13px; color:var(--text-mute); }
+    .g10 .vcard .m { font-weight:700; margin:4px 0; color:var(--green-dark); }
+    .g10 .vcard .e { font-size:13.5px; line-height:1.5; }
+    .g10 .vcard .ev { font-size:13px; color:var(--text-mute); font-style:italic; }
+    .g10 .vcard .col { font-size:12.5px; margin-top:5px; color:#1769aa; }
+    .g10 .vcard .acts { display:flex; gap:6px; margin-top:8px; }
+    .g10 .iconbtn { border:1.5px solid var(--border); background:white; border-radius:9px; padding:3px 9px; cursor:pointer; font-size:13px; font-weight:700; }
+    .g10 .iconbtn:hover { border-color:var(--green); }
+    .g10 .vcard.hide-m .m, .g10 .vcard.hide-m .ev { filter:blur(5px); }
+    .g10 .timer { font-weight:900; font-size:16px; padding:6px 12px; border-radius:12px; background:white; border:2px solid var(--border); white-space:nowrap; }
+    .g10 .timer.warning { background:#ffe0e0; color:#e02020; }
+    .g10 .tbar { position:sticky; top:0; z-index:10; background:var(--bg-alt); padding:10px 0; border-bottom:2px solid var(--border); display:flex; align-items:center; gap:12px; flex-wrap:wrap; margin-bottom:10px; }
+    .g10 .grid-res { display:grid; grid-template-columns:repeat(auto-fill,minmax(42px,1fr)); gap:7px; margin-top:8px; }
+    .g10 .grid-res a { padding:8px 0; text-align:center; border-radius:9px; font-weight:800; color:white; text-decoration:none; font-size:14px; }
+    .g10 .grid-res a.ok { background:var(--green); } .g10 .grid-res a.no { background:var(--red); } .g10 .grid-res a.bl { background:var(--text-mute); }
+    .g10 .score-big { font-size:44px; font-weight:900; line-height:1; }
+    .g10 .sec-h { font-size:15px; font-weight:900; margin:18px 0 4px; padding:6px 12px; border-radius:10px; background:var(--green-soft); color:var(--green-dark); }
+    .g10 .sec-h.rev { background:#eef4ff; color:#1769aa; }
+    .g10 table.brk { border-collapse:collapse; font-size:14px; margin-top:8px; }
+    .g10 table.brk td, .g10 table.brk th { padding:5px 10px; border-bottom:1px solid var(--border); text-align:left; }
+    .g10 .floatbar { position:sticky; bottom:0; background:linear-gradient(to top,var(--bg-alt) 80%,transparent); padding:14px 0; display:flex; gap:10px; align-items:center; flex-wrap:wrap; z-index:5; }
+    .g10 code.f { font-family:inherit; font-weight:800; font-size:.95em; background:#eef4ff; color:#1f4f8f; border:1px solid #d3e3fb; border-radius:6px; padding:1px 6px; white-space:nowrap; }
+    .g10 .howto ol { margin:6px 0 0 20px; line-height:1.75; font-size:14.5px; }
+    @media (max-width:560px){ .g10 .options { grid-template-columns:1fr; } .g10 h2.title { font-size:23px; } }
+  </style>
+</head>
+<body>
+  <div class="app" id="app"></div>
+  <script src="/js/state.js?v=11"></script>
+  <script src="/js/history.js?v=2"></script>
+  <script src="/js/catalog.js?v=12"></script>
+  <script src="/js/layout.js?v=15"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-auth-compat.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-firestore-compat.js"></script>
+  <script src="/js/firebase-init.js?v=1"></script>
+  <script src="/js/auth.js?v=1"></script>
+  <script src="/js/vocab-notes.js?v=5"></script>
+  <script>
+  (function () {
+    const NDAYS = 10;
+    const TEST_TODAY = 20, TEST_REVIEW = 10, TEST_SECS = 30 * 60, PASS_PCT = 70;
+    const PKEY = 'toeic_g10_progress_v1';
+    const state = State.load();
+    const { sidebar, topbar } = renderShell({ active: 'grammar10', state });
+    const root = document.getElementById('app');
+    const L = ['A', 'B', 'C', 'D'];
+    const TAG_VI = {
+      'sentence-structure': 'Cấu trúc câu', 'word-form-noun': 'Từ loại: danh từ', 'word-form-adj': 'Từ loại: tính từ',
+      'word-form-adv': 'Từ loại: trạng từ', 'word-form-verb': 'Từ loại: động từ', article: 'Mạo từ', quantifier: 'Lượng từ',
+      'noun-countable': 'Danh từ đếm được/không đếm được', pronoun: 'Đại từ', agreement: 'Hòa hợp chủ–vị',
+      'tense-present': 'Thì hiện tại', 'tense-past': 'Thì quá khứ', 'tense-perfect': 'Thì hoàn thành', 'tense-future': 'Thì tương lai',
+      'time-clause': 'Mệnh đề thời gian/điều kiện', passive: 'Bị động', 'verb-position': 'Vị trí động từ chính',
+      'gerund-infinitive': 'To V / V-ing', participle: 'Phân từ (V-ing/V3)', preposition: 'Giới từ', conjunction: 'Liên từ',
+      'connector-adverb': 'Trạng từ liên kết', correlative: 'Liên từ tương quan', 'relative-clause': 'Mệnh đề quan hệ',
+      'noun-clause': 'Mệnh đề danh từ', comparison: 'So sánh', conditional: 'Câu điều kiện', subjunctive: 'Câu giả định',
+      collocation: 'Cụm từ cố định', 'part6-tense': 'Part 6: thì', 'part6-connector': 'Part 6: từ nối',
+      'part6-sentence': 'Part 6: chèn câu', 'part6-pronoun': 'Part 6: đại từ', vocab: 'Từ vựng'
+    };
+
+    // ---------------- helpers ----------------
+    function esc(s) { return String(s == null ? '' : s).replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;').replace(/'/g,'&#39;'); }
+    function md(s) { return esc(s).replace(/\*\*(.+?)\*\*/g, '<b>$1</b>').replace(/`([^`]+)`/g, '<code class="f">$1</code>'); }
+    function gap(s) { return md(s).replace(/-{4,}|_{4,}/g, '<span class="gap">?</span>'); }
+    function pad(n) { return String(n).padStart(2, '0'); }
+    function pct(a, b) { return b ? Math.round(a / b * 100) : 0; }
+    function todayISO() { const t = new Date(); return t.getFullYear() + '-' + pad(t.getMonth() + 1) + '-' + pad(t.getDate()); }
+    function loadP() {
+      let p;
+      try { p = JSON.parse(localStorage.getItem(PKEY) || '{}'); } catch (e) { p = null; }
+      if (!p || typeof p !== 'object' || Array.isArray(p)) p = {};
+      if (!p.days || typeof p.days !== 'object' || Array.isArray(p.days)) p.days = {};
+      p.wrong = Array.isArray(p.wrong) ? p.wrong.filter(x => typeof x === 'string') : [];
+      if (p.active && !(Array.isArray(p.active.today) && Array.isArray(p.active.review) && p.active.answers && p.active.deadline)) delete p.active;
+      return p;
+    }
+    function saveP(p) { try { localStorage.setItem(PKEY, JSON.stringify(p)); } catch (e) {} }
+    function dayP(p, n) {
+      let d = p.days[n];
+      if (!d || typeof d !== 'object') d = p.days[n] = {};
+      if (!d.sets || typeof d.sets !== 'object') d.sets = {};
+      if (!Array.isArray(d.tests)) d.tests = [];
+      return d;
+    }
+    function bestTest(dp) { return Math.max(dp && typeof dp.best === 'number' ? dp.best : -1, (dp && Array.isArray(dp.tests) ? dp.tests : []).reduce((m, t) => Math.max(m, pct(t.ok, t.n)), -1)); }
+    function stepsDone(dp, day) {
+      if (!dp) return [false, false, false, false];
+      const nSets = day ? (day.practice || []).length : 0;
+      const setsDone = Object.keys(dp.sets || {}).length;
+      return [!!dp.theory, nSets ? setsDone >= nSets : setsDone > 0, !!dp.vocab, bestTest(dp) >= PASS_PCT];
+    }
+    // deterministic shuffle
+    function rng(seed) { let s = seed >>> 0 || 1; return () => { s ^= s << 13; s >>>= 0; s ^= s >> 17; s ^= s << 5; s >>>= 0; return s / 4294967296; }; }
+    function shuffle(a, seed) { const r = rng(seed), b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; }
+    function logHist(ok) { try { if (window.Hist) Hist.add(5, ok, 'grammar'); } catch (e) {} }
+
+    const cache = {};
+    function loadDay(n) {
+      if (!cache[n]) cache[n] = fetch('/data/grammar10/day' + pad(n) + '.json').then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).catch(e => { delete cache[n]; throw e; });
+      return cache[n];
+    }
+    async function loadDays(list) { const out = {}; await Promise.all(list.map(async n => { try { out[n] = await loadDay(n); } catch (e) {} })); return out; }
+    // id: "D:t:i" test, "D:r:i" review bank, "D:p:S:i" practice set, "D:v:i" vocab practice
+    function getItem(days, id) {
+      const a = id.split(':'), d = days[+a[0]]; if (!d) return null;
+      if (a[1] === 't') return (d.test || [])[+a[2]];
+      if (a[1] === 'r') return (d.reviewBank || [])[+a[2]];
+      if (a[1] === 'v') return (d.vocabPractice || [])[+a[2]];
+      if (a[1] === 'p') return ((d.practice || [])[+a[2]] || {}).items ? d.practice[+a[2]].items[+a[3]] : null;
+      return null;
+    }
+    function addWrong(id) { const p = loadP(); if (!p.wrong.includes(id)) { p.wrong.unshift(id); p.wrong = p.wrong.slice(0, 300); saveP(p); } }
+    function dropWrong(id) { const p = loadP(); const i = p.wrong.indexOf(id); if (i >= 0) { p.wrong.splice(i, 1); saveP(p); } }
+
+    function page(inner) {
+      root.innerHTML = sidebar + `<main class="main g10">${topbar}${inner}</main>`;
+      window.scrollTo(0, 0);
+    }
+    let lastSearch = null;
+    function go(qs) { history.pushState(null, '', location.pathname + qs); route(); }
+    // Fragment jumps (#q-…) also fire popstate; only re-route when the query actually changed.
+    window.addEventListener('popstate', () => { if (location.search === lastSearch) return; if (timerId && !confirmLeave()) { history.pushState(null, '', location.pathname + lastSearch); return; } route(); });
+    window.addEventListener('beforeunload', e => { if (timerId) { e.preventDefault(); e.returnValue = ''; } });
+    document.addEventListener('click', e => {
+      const j = e.target.closest('a[data-jump]');
+      if (j) { e.preventDefault(); const t = document.getElementById(j.getAttribute('data-jump')); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'center' }); return; }
+      const a = e.target.closest('a[data-go]');
+      if (a) { e.preventDefault(); if (!confirmLeave()) return; go(a.getAttribute('data-go')); }
+    });
+
+    // ---------------- question rendering ----------------
+    function qHtml(it, id, num, badge) {
+      return `<div class="gq" data-id="${esc(id)}" id="q-${esc(id).replace(/:/g, '-')}">
+        <div class="qn">Câu ${num}${badge ? ` <span class="tag">${esc(badge)}</span>` : ''}</div>
+        ${it.ctx ? `<div class="ctx">${gap(it.ctx)}</div>` : ''}
+        <div class="qt">${gap(it.q)}</div>
+        <div class="options">${(it.options || []).map((o, i) => `<button class="option" data-i="${i}"><span class="letter">${L[i]}</span><span>${esc(o)}</span></button>`).join('')}</div>
+        <div class="exp-slot"></div>
+      </div>`;
+    }
+    function expHtml(it, chosen) {
+      const ok = chosen === it.ans;
+      const head = chosen == null ? `⏺ Chưa trả lời — đáp án đúng: <b>${L[it.ans]}. ${esc(it.options[it.ans])}</b>`
+        : ok ? `✅ <b>Đúng!</b>` : `❌ <b>Sai.</b> Đáp án đúng: <b>${L[it.ans]}. ${esc(it.options[it.ans])}</b>`;
+      return `<div class="exp ${ok ? 'ok' : 'no'}">${head}<div>💡 ${md(it.why)}</div>${it.vi ? `<div class="vi">🇻🇳 ${esc(it.vi)}</div>` : ''}</div>`;
+    }
+    function markOptions(box, it, chosen) {
+      box.querySelectorAll('.option').forEach(b => {
+        const i = +b.dataset.i; b.disabled = true;
+        b.classList.remove('selected');
+        if (i === it.ans) b.classList.add('correct');
+        else if (i === chosen) b.classList.add('wrong');
+      });
+      box.querySelector('.exp-slot').innerHTML = expHtml(it, chosen);
+    }
+    // instant-feedback quiz on a container. items: [{id,it}] ; onAnswer(id, ok) ; onDone(ok,total)
+    function bindInstant(container, entries, onAnswer, onDone) {
+      let answered = 0, correct = 0;
+      const map = {}; entries.forEach(e => map[e.id] = e.it);
+      container.querySelectorAll('.gq').forEach(box => {
+        box.addEventListener('click', ev => {
+          const b = ev.target.closest('.option'); if (!b || b.disabled) return;
+          const id = box.dataset.id, it = map[id], ch = +b.dataset.i, ok = ch === it.ans;
+          markOptions(box, it, ch);
+          answered++; if (ok) correct++;
+          logHist(ok);
+          if (onAnswer) onAnswer(id, ok);
+          if (answered === entries.length && onDone) onDone(correct, entries.length);
+        });
+      });
+    }
+
+    // ---------------- home ----------------
+    async function renderHome() {
+      page(`<h2 class="title">🗓️ Ngữ pháp TOEIC 10 ngày</h2>
+        <p class="sub">Dành cho người <b>mất gốc</b>: 10 ngày × 2–3 giờ để có đủ nền ngữ pháp bắt đầu <b>luyện đề mục tiêu 650</b>.
+        Mỗi ngày gồm <b>lý thuyết → luyện tập → từ vựng → bài kiểm tra 30 phút</b> (câu của hôm nay + câu ôn lại các ngày trước).</p>
+        <div class="card"><p class="muted">Đang tải…</p></div>`);
+      const all = await loadDays(Array.from({ length: NDAYS }, (_, i) => i + 1));
+      const p = loadP();
+      let next = 0, totalSteps = 0;
+      for (let n = 1; n <= NDAYS; n++) {
+        const s = stepsDone(p.days[n], all[n]); totalSteps += s.filter(Boolean).length;
+        if (!next && !s[3]) next = n;
+      }
+      const cards = Array.from({ length: NDAYS }, (_, i) => i + 1).map(n => {
+        const d = all[n], dp = p.days[n], s = stepsDone(dp, d), b = bestTest(dp);
+        if (!d) return `<div class="day-card"><span class="dn">Ngày ${n}</span><span class="dt muted">Chưa có dữ liệu</span></div>`;
+        const tg = b < 0 ? '' : `<span class="tag ${b >= PASS_PCT ? '' : 'warn'}">KT: ${b}%</span>`;
+        return `<a class="day-card ${n === next ? 'next' : ''} ${s[3] ? 'passed' : ''}" href="?day=${n}" data-go="?day=${n}">
+          <span class="ic">${esc(d.icon || '📘')}</span>
+          <span class="dn">Ngày ${n}${n === next ? ' · học tiếp' : ''}${s[3] ? ' · ✓ đạt' : ''}</span>
+          <span class="dt">${esc(d.title)}</span>
+          <span class="dv">📚 ${esc((d.vocab || {}).theme || '')}</span>
+          <div class="steps" title="Lý thuyết · Luyện tập · Từ vựng · Kiểm tra">${s.map(x => `<span class="${x ? 'on' : ''}"></span>`).join('')}</div>
+          <div>${tg}</div>
+        </a>`;
+      }).join('');
+      const wrongN = p.wrong.length;
+      page(`<h2 class="title">🗓️ Ngữ pháp TOEIC 10 ngày</h2>
+        <p class="sub">Dành cho người <b>mất gốc</b>: 10 ngày × 2–3 giờ để có đủ nền ngữ pháp bắt đầu <b>luyện đề mục tiêu 650</b>.
+        Chủ điểm được chọn theo thống kê <b>460 câu Part 5 + 6 của 10 đề thi 2026</b> và thứ tự dạy của các giáo trình TOEIC cho người mới.</p>
+        <div class="card">
+          <div class="overall"><b>Tiến độ:</b><div class="bar"><i style="width:${pct(totalSteps, NDAYS * 4)}%"></i></div><b>${pct(totalSteps, NDAYS * 4)}%</b>
+          ${next ? `<a class="btn" href="?day=${next}" data-go="?day=${next}">▶ Học Ngày ${next}</a>` : `<span class="tag">🎉 Hoàn thành 10 ngày</span>`}
+          ${wrongN ? `<a class="btn ghost" href="?review=wrong" data-go="?review=wrong">🩹 Ôn câu sai (${wrongN})</a>` : ''}</div>
+        </div>
+        <div class="days">${cards}</div>
+        <div class="card howto" style="margin-top:16px;">
+          <h3 style="font-weight:900;">📋 Cách học mỗi ngày (2–3 giờ)</h3>
+          <ol>
+            <li><b>Lý thuyết (~50 phút):</b> đọc kỹ từng quy tắc, đọc to ví dụ, chép công thức vào vở.</li>
+            <li><b>Luyện tập (~45 phút):</b> làm từng bài, đọc giải thích của <i>cả câu đúng lẫn câu sai</i>.</li>
+            <li><b>Từ vựng (~30 phút):</b> 25 từ theo chủ đề, nghe phát âm, che nghĩa để tự kiểm tra, rồi làm bài từ vựng.</li>
+            <li><b>Kiểm tra cuối ngày (30 phút):</b> 30 câu — 20 câu bài hôm nay + 10 câu ôn các ngày trước. Đạt từ <b>${PASS_PCT}%</b> mới sang ngày mới.</li>
+            <li><b>Xem lại lỗi (~15 phút):</b> câu sai tự vào mục “Ôn câu sai”; làm lại đến khi đúng.</li>
+          </ol>
+          <p class="muted" style="margin-top:8px;font-size:13.5px;">Sau 10 ngày: chuyển sang <a href="/drill">Ôn theo Part</a> (Part 5, 6) và <a href="/quick">Kiểm tra nhanh</a> để luyện đề.</p>
+        </div>`);
+    }
+
+    // ---------------- day ----------------
+    const TABS = [['theory', '📖 Lý thuyết'], ['practice', '✏️ Luyện tập'], ['vocab', '📚 Từ vựng'], ['test', '⏱️ Kiểm tra 30\'']];
+    async function renderDay(n, tab) {
+      let d;
+      try { d = await loadDay(n); } catch (e) { page(`<div class="card">Không tải được Ngày ${n}. <a href="?" data-go="?">← Quay lại</a></div>`); return; }
+      const p = loadP(), dp = dayP(p, n), s = stepsDone(dp, d);
+      tab = TABS.some(t => t[0] === tab) ? tab : 'theory';
+      const tabs = TABS.map((t, i) => `<a class="tab ${t[0] === tab ? 'active' : ''}" href="?day=${n}&tab=${t[0]}" data-go="?day=${n}&tab=${t[0]}">${t[1]}${s[i] ? ' <span class="ok">✓</span>' : ''}</a>`).join('');
+      page(`<div class="head">
+          <a class="btn ghost small" href="?" data-go="?">← 10 ngày</a>
+          <h2>${esc(d.icon || '')} Ngày ${n}: ${esc(d.title)}</h2>
+        </div>
+        <div class="card" style="border-color:var(--blue);background:#f4faff;">
+          <div style="line-height:1.6;">🎯 <b>Mục tiêu:</b> ${md(d.goal)}</div>
+          ${d.why ? `<div style="line-height:1.6;margin-top:4px;">📊 <b>Vì sao quan trọng:</b> ${md(d.why)}</div>` : ''}
+          <div class="sched">${(d.schedule || []).map(x => `<span>${esc(x.label)} · ${x.min}′</span>`).join('')}</div>
+        </div>
+        <div class="tabs">${tabs}</div>
+        <div id="tabbody"></div>
+        <div class="floatbar" id="navbar"></div>`);
+      const body = document.getElementById('tabbody');
+      if (tab === 'theory') renderTheory(n, d, body);
+      else if (tab === 'practice') renderPractice(n, d, body);
+      else if (tab === 'vocab') renderVocab(n, d, body);
+      else renderTestIntro(n, d, body);
+      const ti = TABS.findIndex(t => t[0] === tab), nb = document.getElementById('navbar');
+      const nextTab = TABS[ti + 1];
+      if (nextTab && tab !== 'test') nb.innerHTML = `<a class="btn blue" href="?day=${n}&tab=${nextTab[0]}" data-go="?day=${n}&tab=${nextTab[0]}">Tiếp: ${nextTab[1]} →</a>`;
+    }
+
+    function renderTheory(n, d, body) {
+      const html = (d.lessons || []).map(l => `<div class="lesson" id="${esc(l.id)}">
+          <h3>${esc(l.title)}</h3>
+          ${l.intro ? `<div class="intro">${md(l.intro)}</div>` : ''}
+          ${(l.points || []).map(pt => `<div class="pt"><div class="rule">${md(pt.rule)}</div>
+            ${(pt.examples || []).map(x => `<div class="ex"><div class="en">▸ ${md(x.en)}</div>${x.vi ? `<div class="vi">${esc(x.vi)}</div>` : ''}</div>`).join('')}</div>`).join('')}
+          ${l.table && l.table.rows ? `<div class="tblwrap"><table class="gt"><thead><tr>${(l.table.head || []).map(h => `<th>${md(h)}</th>`).join('')}</tr></thead>
+            <tbody>${l.table.rows.map(r => `<tr>${r.map(c => `<td>${md(c)}</td>`).join('')}</tr>`).join('')}</tbody></table></div>` : ''}
+          ${l.traps && l.traps.length ? `<div class="traps">⚠️ <b>Bẫy hay gặp</b><ul>${l.traps.map(t => `<li>${md(t)}</li>`).join('')}</ul></div>` : ''}
+          ${l.tip ? `<div class="tip">💡 <b>Mẹo:</b> ${md(l.tip)}</div>` : ''}
+        </div>`).join('');
+      const done = !!loadP().days[n] && loadP().days[n].theory;
+      body.innerHTML = html + `<div style="text-align:center;margin:10px 0 4px;">
+        <button class="btn" id="theory-done">${done ? '✓ Đã học xong lý thuyết' : '✅ Tôi đã học xong lý thuyết'}</button></div>`;
+      document.getElementById('theory-done').onclick = () => {
+        const p = loadP(); dayP(p, n).theory = true; saveP(p); go(`?day=${n}&tab=practice`);
+      };
+    }
+
+    function setBlock(n, d, sIdx, set, container, before) {
+      const p = loadP(), prev = (dayP(p, n).sets || {})[set.id];
+      const entries = (set.items || []).map((it, i) => ({ id: `${n}:p:${sIdx}:${i}`, it }));
+      const box = document.createElement('div'); box.className = 'set';
+      box.innerHTML = `<div class="set-h"><h3>${esc(set.title)}</h3>
+          ${prev ? `<span class="tag ${pct(prev.ok, prev.n) >= PASS_PCT ? '' : 'warn'}">Lần trước: ${prev.ok}/${prev.n}</span>` : ''}
+          <button class="iconbtn redo">↻ Làm lại</button></div>
+        ${set.instr ? `<p class="muted" style="margin-bottom:6px;">${md(set.instr)}</p>` : ''}
+        <div class="qs">${entries.map((e, i) => qHtml(e.it, e.id, i + 1)).join('')}</div>
+        <div class="set-res"></div>`;
+      container.insertBefore(box, before || null);
+      box.querySelector('.redo').onclick = () => { const nxt = box.nextSibling; box.remove(); setBlock(n, d, sIdx, set, container, nxt); };
+      bindInstant(box.querySelector('.qs'), entries, (id, ok) => { if (!ok) addWrong(id); else dropWrong(id); }, (ok, tot) => {
+        const p2 = loadP(), dp = dayP(p2, n), old = dp.sets[set.id];
+        if (!old || ok >= old.ok) dp.sets[set.id] = { ok, n: tot, at: todayISO() };
+        saveP(p2);
+        box.querySelector('.set-res').innerHTML = `<div class="exp ${pct(ok, tot) >= PASS_PCT ? 'ok' : 'no'}" style="font-size:15px;">
+          Kết quả: <b>${ok}/${tot}</b> (${pct(ok, tot)}%). ${pct(ok, tot) >= PASS_PCT ? 'Tốt lắm! 👍' : 'Hãy đọc lại phần lý thuyết liên quan rồi bấm “Làm lại”.'}</div>`;
+      });
+    }
+    function renderPractice(n, d, body) {
+      body.innerHTML = `<p class="muted" style="margin-bottom:10px;">Bấm chọn đáp án — hệ thống chấm ngay và giải thích. Câu sai được lưu vào <b>Ôn câu sai</b>.</p>`;
+      (d.practice || []).forEach((set, i) => setBlock(n, d, i, set, body));
+    }
+
+    function renderVocab(n, d, body) {
+      const v = d.vocab || { words: [] };
+      body.innerHTML = `<div class="card" style="margin-bottom:12px;">
+          <div style="display:flex;gap:10px;align-items:center;flex-wrap:wrap;">
+            <b style="font-size:17px;">📚 Chủ đề: ${esc(v.theme || '')}</b><span class="tag">${(v.words || []).length} từ</span>
+            <span style="flex:1"></span>
+            <button class="iconbtn" id="hide-m">🙈 Che nghĩa</button>
+          </div>
+          <p class="muted" style="margin-top:6px;font-size:13.5px;">Bấm 🔊 để nghe, “Che nghĩa” để tự kiểm tra, ➕ để lưu từ vào <a href="/notes">Sổ từ vựng</a>.</p>
+        </div>
+        <div class="vgrid">${(v.words || []).map((w, i) => `<div class="vcard" data-i="${i}">
+          <div><span class="w">${esc(w.w)}</span><span class="pos">(${esc(w.pos)})</span></div>
+          <div class="ipa">${esc(w.ipa || '')}</div>
+          <div class="m">${esc(w.vi)}</div>
+          ${w.fam ? `<div class="ipa">Họ từ: ${esc(w.fam)}</div>` : ''}
+          <div class="e">${md(w.ex)}</div><div class="ev">${esc(w.exvi || '')}</div>
+          ${w.colloc && w.colloc.length ? `<div class="col">🔗 ${w.colloc.map(esc).join(' · ')}</div>` : ''}
+          <div class="acts"><button class="iconbtn sp">🔊</button><button class="iconbtn spx">🔊 Câu</button><button class="iconbtn sv">➕ Lưu</button></div>
+        </div>`).join('')}</div>
+        <div class="set" style="margin-top:16px;"><div class="set-h"><h3>✏️ Bài tập từ vựng</h3></div><div class="qs" id="vq"></div><div class="set-res" id="vres"></div></div>`;
+      const speak = t => { try { if (window.VocabNotes) VocabNotes.speak(t); } catch (e) {} };
+      body.querySelectorAll('.vcard').forEach(c => {
+        const w = v.words[+c.dataset.i];
+        c.querySelector('.sp').onclick = () => speak(w.w);
+        c.querySelector('.spx').onclick = () => speak(String(w.ex || '').replace(/\*\*/g, ''));
+        c.querySelector('.sv').onclick = e => {
+          try { VocabNotes.add({ w: w.w, type: w.pos, mean: w.vi, ipa: w.ipa, src: `Ngữ pháp 10 ngày · Ngày ${n}` }); e.target.textContent = '✓ Đã lưu'; } catch (er) {}
+        };
+      });
+      document.getElementById('hide-m').onclick = e => {
+        const on = !body.querySelector('.vcard.hide-m');
+        body.querySelectorAll('.vcard').forEach(c => c.classList.toggle('hide-m', on));
+        e.target.textContent = on ? '👀 Hiện nghĩa' : '🙈 Che nghĩa';
+      };
+      const entries = (d.vocabPractice || []).map((it, i) => ({ id: `${n}:v:${i}`, it }));
+      const vq = document.getElementById('vq');
+      vq.innerHTML = entries.map((e, i) => qHtml(e.it, e.id, i + 1)).join('');
+      bindInstant(vq, entries, (id, ok) => { if (!ok) addWrong(id); else dropWrong(id); }, (ok, tot) => {
+        const p = loadP(), dp = dayP(p, n);
+        if (!dp.vocab || ok >= dp.vocab.ok) dp.vocab = { ok, n: tot, at: todayISO() };
+        saveP(p);
+        document.getElementById('vres').innerHTML = `<div class="exp ${pct(ok, tot) >= PASS_PCT ? 'ok' : 'no'}">Kết quả: <b>${ok}/${tot}</b>. ${pct(ok, tot) >= PASS_PCT ? 'Giỏi! Giờ làm bài kiểm tra 30 phút nhé.' : 'Ôn lại thẻ từ rồi tải lại trang để làm lại.'}</div>`;
+      });
+    }
+
+    // ---------------- end-of-day test ----------------
+    // Spread TEST_REVIEW slots over earlier days: 1 each, the rest weighted toward recent days.
+    function reviewQuota(n) {
+      const prev = Array.from({ length: n - 1 }, (_, i) => i + 1);
+      const q = {}; prev.forEach(k => q[k] = 0);
+      let left = TEST_REVIEW;
+      if (prev.length <= TEST_REVIEW) { prev.forEach(k => q[k] = 1); left -= prev.length; }
+      const wsum = prev.reduce((a, k) => a + k, 0);
+      const raw = prev.map(k => ({ k, v: left * k / wsum }));
+      raw.forEach(r => q[r.k] += Math.floor(r.v));
+      let rest = TEST_REVIEW - prev.reduce((a, k) => a + q[k], 0);
+      raw.sort((a, b) => (b.v % 1) - (a.v % 1) || b.k - a.k).forEach(r => { if (rest > 0) { q[r.k]++; rest--; } });
+      return q;
+    }
+    function buildTest(n, days, seed) {
+      const d = days[n];
+      const today = shuffle((d.test || []).map((_, i) => `${n}:t:${i}`), seed).slice(0, TEST_TODAY);
+      let review = [];
+      if (n === 1) review = shuffle((d.reviewBank || []).map((_, i) => `1:r:${i}`), seed + 7).slice(0, TEST_REVIEW);
+      else {
+        const q = reviewQuota(n);
+        Object.keys(q).forEach(k => {
+          const bank = (days[k] && days[k].reviewBank) || [];
+          review = review.concat(shuffle(bank.map((_, i) => `${k}:r:${i}`), seed + (+k) * 31).slice(0, q[k]));
+        });
+        review.sort((a, b) => (+a.split(':')[0]) - (+b.split(':')[0]));
+      }
+      return { today, review };
+    }
+    function renderTestIntro(n, d, body) {
+      const p = loadP(), dp = dayP(p, n), act = p.active && p.active.day === n ? p.active : null;
+      const hist = (dp.tests || []).slice(-5).reverse();
+      const q = n > 1 ? reviewQuota(n) : null;
+      body.innerHTML = `<div class="card">
+          <h3 style="font-weight:900;font-size:19px;">⏱️ Bài kiểm tra cuối Ngày ${n}</h3>
+          <ul style="margin:8px 0 0 20px;line-height:1.8;">
+            <li><b>30 câu — 30 phút</b>, hết giờ tự nộp bài.</li>
+            <li><b>${TEST_TODAY} câu</b> kiến thức hôm nay${n === 1 ? ` + <b>${TEST_REVIEW} câu</b> củng cố thêm` : ` + <b>${TEST_REVIEW} câu ôn bài cũ</b> (${Object.keys(q).filter(k => q[k]).map(k => `Ngày ${k}: ${q[k]}`).join(', ')})`}.</li>
+            <li>Đạt khi đúng từ <b>${PASS_PCT}%</b> (${Math.ceil((TEST_TODAY + TEST_REVIEW) * PASS_PCT / 100)}/${TEST_TODAY + TEST_REVIEW} câu). Mỗi lần làm lại, thứ tự câu được trộn và phần ôn được chọn khác đi.</li>
+          </ul>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+            ${act ? `<button class="btn gold" id="resume">▶ Tiếp tục bài đang làm</button>` : ''}
+            <button class="btn" id="start">${act ? '↻ Làm bài mới' : '▶ Bắt đầu'}</button>
+          </div>
+        </div>
+        ${hist.length ? `<div class="card" style="margin-top:12px;"><b>Các lần làm gần đây</b>
+          <table class="brk"><tr><th>Ngày làm</th><th>Điểm</th><th>Hôm nay</th><th>Ôn bài cũ</th></tr>
+          ${hist.map(t => `<tr><td>${esc(t.at)}</td><td><b>${t.ok}/${t.n}</b> (${pct(t.ok, t.n)}%)</td><td>${t.todayOk}/${t.todayN}</td><td>${t.revOk}/${t.revN}</td></tr>`).join('')}</table></div>` : ''}`;
+      if (act) document.getElementById('resume').onclick = () => runTest(n, act);
+      document.getElementById('start').onclick = async ev => {
+        const btn = ev.currentTarget; btn.disabled = true;
+        const days = await loadDays(Array.from({ length: n }, (_, i) => i + 1));
+        const missing = Array.from({ length: n }, (_, i) => i + 1).filter(k => !days[k]);
+        if (missing.length) { btn.disabled = false; alert('Không tải được dữ liệu Ngày ' + missing.join(', ') + '. Kiểm tra kết nối mạng rồi thử lại.'); return; }
+        if (!document.getElementById('tabbody')) return;
+        const seed = (Date.now() % 100000) + n * 1000;
+        const t = buildTest(n, days, seed);
+        const p2 = loadP();
+        p2.active = { day: n, today: t.today, review: t.review, answers: {}, deadline: Date.now() + TEST_SECS * 1000 };
+        saveP(p2); runTest(n, p2.active);
+      };
+    }
+    let timerId = null;
+    function confirmLeave() {
+      const p = loadP();
+      if (timerId && p.active) return confirm('Bài kiểm tra đang làm dở. Rời trang? (Bạn có thể quay lại tiếp tục trước khi hết giờ.)');
+      return true;
+    }
+    async function runTest(n, act) {
+      const days = await loadDays(Array.from(new Set(act.today.concat(act.review).map(x => +x.split(':')[0]))));
+      const body = document.getElementById('tabbody');
+      if (!body || new URLSearchParams(location.search).get('day') != n) return;   // user navigated away while loading
+      // only questions whose data loaded (a stale/missing file must not leave phantom "unanswered" items)
+      act.today = act.today.filter(id => getItem(days, id)); act.review = act.review.filter(id => getItem(days, id));
+      const ids = act.today.concat(act.review);
+      if (!ids.length) { body.innerHTML = '<div class="card">Không tải được câu hỏi. Kiểm tra kết nối mạng rồi thử lại.</div>'; return; }
+      Object.keys(act.answers).forEach(id => { const it = getItem(days, id); if (!it || !(act.answers[id] >= 0 && act.answers[id] < it.options.length)) delete act.answers[id]; });
+      const sameTest = p => p.active && p.active.deadline === act.deadline;
+      document.getElementById('navbar').innerHTML = '';
+      document.querySelector('.tabs').style.display = 'none';
+      let num = 0;
+      const block = (list, rev) => list.map(id => { const it = getItem(days, id); if (!it) return ''; num++; return qHtml(it, id, num, rev ? `Ôn Ngày ${id.split(':')[0]}` : ''); }).join('');
+      body.innerHTML = `<div class="tbar"><span class="timer" id="timer">30:00</span><b id="cnt">0/${ids.length}</b>
+          <span style="flex:1"></span><button class="btn small" id="submit">📤 Nộp bài</button></div>
+        <div class="set">
+          <div class="sec-h">📘 Phần 1 — Kiến thức Ngày ${n}</div>${block(act.today, false)}
+          ${act.review.length ? `<div class="sec-h rev">🔁 Phần 2 — ${n === 1 ? 'Củng cố thêm' : 'Ôn bài cũ'}</div>${block(act.review, n > 1)}` : ''}
+        </div>`;
+      const cnt = () => document.getElementById('cnt').textContent = `${Object.keys(act.answers).length}/${ids.length}`;
+      body.querySelectorAll('.gq').forEach(box => {
+        const id = box.dataset.id;
+        if (act.answers[id] != null) { const o = box.querySelector(`.option[data-i="${act.answers[id]}"]`); if (o) o.classList.add('selected'); }
+        box.addEventListener('click', ev => {
+          const b = ev.target.closest('.option'); if (!b || !timerId) return;
+          box.querySelectorAll('.option').forEach(x => x.classList.remove('selected'));
+          b.classList.add('selected'); act.answers[id] = +b.dataset.i;
+          const p = loadP(); if (sameTest(p)) { p.active.answers = act.answers; saveP(p); } cnt();
+        });
+      });
+      cnt();
+      const tick = () => {
+        const left = Math.max(0, Math.round((act.deadline - Date.now()) / 1000));
+        const el = document.getElementById('timer'); if (!el) { clearInterval(timerId); timerId = null; return; }
+        el.textContent = `${pad(Math.floor(left / 60))}:${pad(left % 60)}`;
+        el.classList.toggle('warning', left <= 120);
+        if (left <= 0) { finish(true); }
+      };
+      clearInterval(timerId); timerId = setInterval(tick, 1000); tick();
+      document.getElementById('submit').onclick = () => {
+        const miss = ids.length - Object.keys(act.answers).length;
+        if (miss && !confirm(`Còn ${miss} câu chưa làm. Nộp bài?`)) return;
+        finish(false);
+      };
+      function finish(timeout) {
+        if (!timerId) return;
+        clearInterval(timerId); timerId = null;
+        const res = ids.map(id => { const it = getItem(days, id); const ch = act.answers[id]; return { id, it, ch, ok: it && ch === it.ans }; }).filter(r => r.it);
+        const todaySet = new Set(act.today);
+        const tr = res.filter(r => todaySet.has(r.id)), rr = res.filter(r => !todaySet.has(r.id));
+        const ok = res.filter(r => r.ok).length;
+        const rec = { at: todayISO(), ok, n: res.length, todayOk: tr.filter(r => r.ok).length, todayN: tr.length, revOk: rr.filter(r => r.ok).length, revN: rr.length };
+        const p = loadP(), dp = dayP(p, n);
+        dp.tests.push(rec); dp.tests = dp.tests.slice(-20);
+        dp.best = Math.max(typeof dp.best === 'number' ? dp.best : -1, pct(rec.ok, rec.n));
+        if (sameTest(p)) delete p.active;
+        saveP(p);
+        res.forEach(r => { if (!r.ok) addWrong(r.id); else dropWrong(r.id); logHist(r.ok); });
+        // A test resumed long after its deadline auto-submits at once: don't log 30 phantom minutes.
+        const late = Date.now() - act.deadline > 5000;
+        try { if (window.Hist && !late) Hist.addSeconds(Math.max(0, Math.min(TEST_SECS, TEST_SECS - Math.round((act.deadline - Date.now()) / 1000)))); } catch (e) {}
+        showResult(n, res, rec, timeout);
+      }
+    }
+    function showResult(n, res, rec, timeout) {
+      const body = document.getElementById('tabbody');
+      document.querySelector('.tabs').style.display = '';
+      const P = pct(rec.ok, rec.n), passed = P >= PASS_PCT;
+      // breakdown by tag
+      const byTag = {};
+      res.forEach(r => { const k = (r.it.tag || 'khác'); const e = byTag[k] || (byTag[k] = { n: 0, ok: 0 }); e.n++; if (r.ok) e.ok++; });
+      const weak = Object.keys(byTag).filter(k => byTag[k].ok < byTag[k].n).sort((a, b) => pct(byTag[a].ok, byTag[a].n) - pct(byTag[b].ok, byTag[b].n));
+      body.innerHTML = `<div class="card" style="border-color:${passed ? 'var(--green)' : 'var(--red)'};">
+          ${timeout ? '<p class="muted">⏰ Hết giờ — bài đã được nộp tự động.</p>' : ''}
+          <div style="display:flex;gap:18px;align-items:center;flex-wrap:wrap;">
+            <div class="score-big" style="color:${passed ? 'var(--green-dark)' : 'var(--red)'};">${rec.ok}/${rec.n}</div>
+            <div><div style="font-weight:900;font-size:18px;">${P}% — ${passed ? (P >= 85 ? '🏆 Xuất sắc! Sẵn sàng cho ngày tiếp theo.' : '✅ Đạt! Có thể sang ngày tiếp theo.') : '📚 Chưa đạt — xem lại lỗi sai và học lại lý thuyết.'}</div>
+            <div class="muted">Kiến thức hôm nay: <b>${rec.todayOk}/${rec.todayN}</b> · Ôn bài cũ: <b>${rec.revOk}/${rec.revN}</b></div></div>
+          </div>
+          ${weak.length ? `<p style="margin-top:10px;"><b>Chủ điểm cần ôn thêm:</b> ${weak.slice(0, 6).map(k => `<span class="tag bad">${esc(TAG_VI[k] || k)} ${byTag[k].ok}/${byTag[k].n}</span>`).join(' ')}</p>` : ''}
+          <div class="grid-res">${res.map((r, i) => `<a href="#" data-jump="q-${esc(r.id).replace(/:/g, '-')}" class="${r.ch == null ? 'bl' : r.ok ? 'ok' : 'no'}">${i + 1}</a>`).join('')}</div>
+          <div style="margin-top:14px;display:flex;gap:10px;flex-wrap:wrap;">
+            ${passed && n < NDAYS ? `<a class="btn" href="?day=${n + 1}" data-go="?day=${n + 1}">Sang Ngày ${n + 1} →</a>` : ''}
+            <a class="btn ghost" href="?day=${n}&tab=test" data-go="?day=${n}&tab=test">↻ Làm lại bài kiểm tra</a>
+            <a class="btn ghost" href="?day=${n}&tab=theory" data-go="?day=${n}&tab=theory">📖 Xem lại lý thuyết</a>
+          </div>
+        </div>
+        <div class="set" style="margin-top:14px;"><h3 style="font-weight:900;margin-bottom:6px;">📝 Chữa bài</h3>
+          ${res.map((r, i) => qHtml(r.it, r.id, i + 1, r.id.split(':')[0] != n ? `Ôn Ngày ${r.id.split(':')[0]}` : '')).join('')}</div>`;
+      body.querySelectorAll('.gq').forEach((box, i) => markOptions(box, res[i].it, res[i].ch));
+      window.scrollTo(0, 0);
+    }
+
+    // ---------------- wrong-answer review ----------------
+    async function renderWrong() {
+      const p = loadP();
+      const ids = p.wrong.slice(0, 40);
+      const days = await loadDays(Array.from(new Set(ids.map(x => +x.split(':')[0]))));
+      const entries = ids.map(id => ({ id, it: getItem(days, id) })).filter(e => e.it);
+      page(`<div class="head"><a class="btn ghost small" href="?" data-go="?">← 10 ngày</a><h2>🩹 Ôn câu sai</h2>
+          <span class="tag">${p.wrong.length} câu</span></div>
+        <p class="sub">Làm lại các câu đã sai (tối đa 40 câu mới nhất mỗi lượt). Trả lời đúng → câu tự rời khỏi danh sách.</p>
+        ${entries.length ? `<div class="set"><div class="qs" id="wq">${entries.map((e, i) => qHtml(e.it, e.id, i + 1, `Ngày ${e.id.split(':')[0]}`)).join('')}</div><div id="wres"></div></div>`
+          : `<div class="card">🎉 Không còn câu sai nào. <a href="?" data-go="?">Về trang 10 ngày</a></div>`}`);
+      if (!entries.length) return;
+      bindInstant(document.getElementById('wq'), entries, (id, ok) => { if (ok) dropWrong(id); }, (ok, tot) => {
+        document.getElementById('wres').innerHTML = `<div class="exp ${pct(ok, tot) >= PASS_PCT ? 'ok' : 'no'}">Đúng ${ok}/${tot}. <a href="?review=wrong" data-go="?review=wrong">Làm lượt tiếp →</a></div>`;
+      });
+    }
+
+    function route() {
+      clearInterval(timerId); timerId = null;
+      lastSearch = location.search;
+      const q = new URLSearchParams(location.search);
+      const day = parseInt(q.get('day'), 10);
+      if (q.get('review') === 'wrong') renderWrong();
+      else if (day >= 1 && day <= NDAYS) renderDay(day, q.get('tab'));
+      else renderHome();
+    }
+    route();
+  })();
+  </script>
+</body>
+</html>

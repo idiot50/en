@@ -1,0 +1,1905 @@
+{
+ "day": 8,
+ "title": "Giới từ, Liên từ, Từ nối & Collocation",
+ "icon": "🔀",
+ "goal": "Sau hôm nay bạn phân biệt được giới từ, liên từ và trạng từ liên kết, chọn từ nối đúng theo logic ở Part 5 và Part 6, thuộc các cặp tương quan và collocation giới từ thường gặp.",
+ "why": "Từ nối và giới từ chiếm khoảng 15 câu mỗi 100 câu ngữ pháp, cộng thêm các câu từ nối và chèn câu của Part 6; đây là nhóm nhìn một lần là giải được nếu nắm quy tắc.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 45
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d8-l1",
+   "title": "1. Ba loại từ nối: giới từ, liên từ, trạng từ liên kết",
+   "intro": "Từ nối là những từ dùng để nối ý. Trong TOEIC, nhiều từ nối có NGHĨA giống nhau (vì / mặc dù...) nhưng khác nhau ở NGỮ PHÁP: đứng trước cụm danh từ, trước một mệnh đề, hay đứng ở đầu một câu mới. **Mệnh đề** là nhóm từ có đủ chủ ngữ + động từ (S + V). **Cụm danh từ** chỉ có danh từ (không có động từ chia thì). Bước 1 luôn là: nhìn xem sau chỗ trống là gì.",
+   "points": [
+    {
+     "rule": "**Giới từ** + cụm danh từ / V-ing: `Giới từ + N` (không có động từ chia thì phía sau).",
+     "examples": [
+      {
+       "en": "**Despite** the heavy rain, the concert went ahead.",
+       "vi": "Mặc dù mưa lớn, buổi hòa nhạc vẫn diễn ra."
+      },
+      {
+       "en": "The flight was delayed **because of** a technical problem.",
+       "vi": "Chuyến bay bị hoãn vì sự cố kỹ thuật."
+      }
+     ]
+    },
+    {
+     "rule": "**Liên từ** + mệnh đề: `Liên từ + S + V`. Liên từ nối hai mệnh đề trong cùng một câu.",
+     "examples": [
+      {
+       "en": "**Although** the shipment arrived late, the client accepted it.",
+       "vi": "Mặc dù lô hàng đến trễ, khách hàng vẫn nhận."
+      },
+      {
+       "en": "Call me **if** you have any questions.",
+       "vi": "Hãy gọi tôi nếu bạn có câu hỏi."
+      }
+     ]
+    },
+    {
+     "rule": "**Trạng từ liên kết** đứng đầu câu/giữa hai câu, có dấu phẩy: `. However, S + V` hoặc `; therefore, S + V`. Nó KHÔNG nối hai mệnh đề bằng dấu phẩy đơn thuần.",
+     "examples": [
+      {
+       "en": "Costs have risen. **However**, demand remains strong.",
+       "vi": "Chi phí đã tăng. Tuy nhiên, nhu cầu vẫn mạnh."
+      },
+      {
+       "en": "The software is easy to use. **Moreover**, it is affordable.",
+       "vi": "Phần mềm dễ dùng. Hơn nữa, giá cũng phải chăng."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Nghĩa",
+     "Giới từ + N",
+     "Liên từ + S V",
+     "Trạng từ + dấu phẩy"
+    ],
+    "rows": [
+     [
+      "Vì / do",
+      "because of, due to, owing to",
+      "because, since, now that",
+      "therefore, as a result"
+     ],
+     [
+      "Mặc dù / tương phản",
+      "despite, in spite of",
+      "although, even though, while, whereas",
+      "however, nevertheless"
+     ],
+     [
+      "Nếu / điều kiện",
+      "in case of, without",
+      "if, unless, as long as, provided that",
+      "otherwise"
+     ],
+     [
+      "Thời gian",
+      "during, prior to, throughout",
+      "when, while, once, until",
+      "then, afterward"
+     ],
+     [
+      "Thêm ý",
+      "in addition to, along with",
+      "—",
+      "moreover, in addition, furthermore"
+     ]
+    ]
+   },
+   "traps": [
+    "Although vs Despite: sau \"although / even though\" là mệnh đề (S + V); sau \"despite / in spite of\" là danh từ hoặc V-ing. Sai: \"Despite the rain was heavy\"; đúng: \"Despite the heavy rain\" hoặc \"Although the rain was heavy\".",
+    "Because vs because of: because + S V; because of + N. \"However\" không bao giờ nối hai mệnh đề chỉ bằng dấu phẩy."
+   ],
+   "tip": "Mẹo 3 giây: nhìn từ ngay SAU chỗ trống. Có động từ chia thì (S + V) → liên từ. Chỉ là danh từ → giới từ. Chỗ trống đầu câu + dấu phẩy sau nó → trạng từ liên kết."
+  },
+  {
+   "id": "d8-l2",
+   "title": "2. Chọn từ nối theo logic: tương phản, nguyên nhân, điều kiện",
+   "intro": "Sau khi biết ngữ pháp (cụm danh từ hay mệnh đề), bạn cần kiểm tra **ý nghĩa**: hai ý đối lập, hay ý này là lý do của ý kia, hay ý này là điều kiện của ý kia? Đáp án đúng phải đúng cả ngữ pháp lẫn logic.",
+   "points": [
+    {
+     "rule": "**Tương phản**: although / even though / while / whereas (+ mệnh đề); however / nevertheless (+ dấu phẩy). \"Whereas / while\" đối chiếu hai sự việc song song.",
+     "examples": [
+      {
+       "en": "Sales in Asia grew, **whereas** sales in Europe fell.",
+       "vi": "Doanh số châu Á tăng, trong khi doanh số châu Âu giảm."
+      }
+     ]
+    },
+    {
+     "rule": "**Nguyên nhân / mục đích**: because, since, now that (vì bây giờ đã...) chỉ nguyên nhân; **so that** (để mà) chỉ mục đích.",
+     "examples": [
+      {
+       "en": "**Now that** the contract is signed, we can hire staff.",
+       "vi": "Giờ hợp đồng đã ký, chúng tôi có thể tuyển nhân viên."
+      },
+      {
+       "en": "We added shifts **so that** all orders could ship by Friday.",
+       "vi": "Chúng tôi thêm ca để mọi đơn hàng kịp gửi trước thứ Sáu."
+      }
+     ]
+    },
+    {
+     "rule": "**Điều kiện**: if (nếu), unless (trừ khi = nếu không), as long as / provided that (miễn là). Sau chúng dùng hiện tại, không dùng will.",
+     "examples": [
+      {
+       "en": "You will not get a refund **unless** you return the item within 14 days.",
+       "vi": "Bạn sẽ không được hoàn tiền trừ khi trả hàng trong 14 ngày."
+      },
+      {
+       "en": "Staff may use the gym **as long as** they sign the agreement.",
+       "vi": "Nhân viên được dùng phòng gym miễn là họ ký thỏa thuận."
+      }
+     ]
+    }
+   ],
+   "traps": [
+    "\"Unless\" đã mang nghĩa phủ định; đừng thêm \"not\": sai \"unless you do not pay\".",
+    "Part 6 hay đặt trạng từ liên kết ở đầu câu: hãy đọc câu TRƯỚC để biết câu sau tương phản (however), bổ sung (moreover) hay hệ quả (therefore)."
+   ],
+   "tip": "Tự hỏi: câu sau đi cùng hướng (moreover), ngược hướng (however), là kết quả (therefore) hay là điều kiện (otherwise)?"
+  },
+  {
+   "id": "d8-l3",
+   "title": "3. Liên từ tương quan và so/such ... that",
+   "intro": "**Liên từ tương quan** là cặp từ luôn đi cùng nhau để nối hai thành phần giống nhau: không thể thiếu một nửa hoặc ghép sai cặp. Đây là loại câu \"học thuộc là đúng\".",
+   "points": [
+    {
+     "rule": "Các cặp cần nhớ: **both ... and**, **either ... or**, **neither ... nor**, **not only ... but also**, **whether ... or**.",
+     "examples": [
+      {
+       "en": "Applicants must submit **both** a résumé **and** a cover letter.",
+       "vi": "Ứng viên phải nộp cả sơ yếu lý lịch lẫn thư xin việc."
+      },
+      {
+       "en": "You may pay **either** by card **or** by transfer.",
+       "vi": "Bạn có thể trả bằng thẻ hoặc chuyển khoản."
+      },
+      {
+       "en": "The workshop is **not only** informative **but also** free.",
+       "vi": "Hội thảo không chỉ bổ ích mà còn miễn phí."
+      }
+     ]
+    },
+    {
+     "rule": "**so + tính từ/trạng từ + that** và **such + (a/an) + (tính từ) + danh từ + that**: nhận biết \"quá ... đến nỗi ...\".",
+     "examples": [
+      {
+       "en": "The demand was **so** high **that** the factory ran day and night.",
+       "vi": "Nhu cầu cao đến mức nhà máy chạy cả ngày lẫn đêm."
+      },
+      {
+       "en": "It was **such** a successful campaign **that** the budget doubled.",
+       "vi": "Đó là chiến dịch thành công đến mức ngân sách được tăng gấp đôi."
+      }
+     ]
+    },
+    {
+     "rule": "Giới từ nơi chốn cơ bản: **at** (địa điểm cụ thể), **on** (trên bề mặt, tầng, tên đường), **in** (trong thành phố, không gian kín); **between** (giữa hai) vs **among** (giữa ba trở lên).",
+     "examples": [
+      {
+       "en": "Our office is **on** the fifth floor.",
+       "vi": "Văn phòng chúng tôi ở tầng năm."
+      },
+      {
+       "en": "The contract was signed **between** the two companies.",
+       "vi": "Hợp đồng được ký giữa hai công ty."
+      }
+     ]
+    }
+   ],
+   "traps": [
+    "Sai: \"either ... nor\", \"neither ... or\". Mỗi cặp cố định: either-or, neither-nor.",
+    "so + tính từ (không có danh từ); such + (a/an) + danh từ. Sai: \"so a successful campaign\"."
+   ],
+   "tip": "Thấy chữ \"both / either / neither / not only\" ở trước chỗ trống thì đáp án là nửa còn lại của cặp."
+  },
+  {
+   "id": "d8-l4",
+   "title": "4. Collocation: tính từ/động từ + giới từ",
+   "intro": "**Collocation** là cặp từ luôn đi cùng nhau. Với giới từ, không có quy tắc để suy luận: phải học thuộc cả cụm. Đây là câu điểm dễ nhất trong Part 5 nếu bạn thuộc.",
+   "points": [
+    {
+     "rule": "Tính từ + giới từ: **responsible for**, **eligible for**, **subject to**, **familiar with**, **aware of**, **committed to**.",
+     "examples": [
+      {
+       "en": "Staff are **responsible for** keeping work areas clean.",
+       "vi": "Nhân viên chịu trách nhiệm giữ khu làm việc sạch sẽ."
+      },
+      {
+       "en": "Prices are **subject to** change without notice.",
+       "vi": "Giá có thể thay đổi mà không báo trước."
+      }
+     ]
+    },
+    {
+     "rule": "Động từ + giới từ: **comply with**, **participate in**, **respond to**, **apply for**, **depend on**.",
+     "examples": [
+      {
+       "en": "Please **comply with** the safety regulations.",
+       "vi": "Vui lòng tuân thủ các quy định an toàn."
+      },
+      {
+       "en": "Ms. Cho will **respond to** your inquiry soon.",
+       "vi": "Cô Cho sẽ sớm trả lời yêu cầu của bạn."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Cụm",
+     "Nghĩa",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "responsible for",
+      "chịu trách nhiệm về",
+      "responsible for training"
+     ],
+     [
+      "eligible for",
+      "đủ điều kiện nhận",
+      "eligible for a bonus"
+     ],
+     [
+      "subject to",
+      "tùy thuộc / có thể bị",
+      "subject to approval"
+     ],
+     [
+      "familiar with",
+      "quen thuộc với",
+      "familiar with the software"
+     ],
+     [
+      "aware of",
+      "nhận thức về",
+      "aware of the policy"
+     ],
+     [
+      "comply with",
+      "tuân thủ",
+      "comply with rules"
+     ],
+     [
+      "participate in",
+      "tham gia",
+      "participate in a survey"
+     ],
+     [
+      "respond to",
+      "phản hồi",
+      "respond to an e-mail"
+     ],
+     [
+      "apply for / depend on",
+      "xin việc / phụ thuộc",
+      "apply for a job; depend on weather"
+     ]
+    ]
+   },
+   "traps": [
+    "Đừng dịch từng chữ sang tiếng Việt để chọn giới từ (\"tham gia vào\" ≠ participate at). Cứ thuộc cả cụm."
+   ],
+   "tip": "Nhìn 4 đáp án là 4 giới từ (for / to / with / in): chỉ cần nhớ cụm đứng trước chỗ trống, làm trong 3 giây."
+  },
+  {
+   "id": "d8-l5",
+   "title": "5. Part 6: từ nối theo mạch văn và chèn câu",
+   "intro": "Ở Part 6, từ nối không còn nằm trong một câu mà nối giữa các câu. Bạn phải đọc câu trước và câu sau. Dạng **chèn câu** (sentence insertion) cho 4 câu hoàn chỉnh, bạn chọn câu hợp mạch nhất.",
+   "points": [
+    {
+     "rule": "Từ nối giữa các câu: nhìn quan hệ ý. Cùng hướng → moreover / in addition; ngược → however / nevertheless; hệ quả → therefore / as a result; điều kiện ngược → otherwise.",
+     "examples": [
+      {
+       "en": "Online sales rose by 20 percent. **However**, in-store sales dropped by 5 percent.",
+       "vi": "Doanh số trực tuyến tăng 20 phần trăm. Tuy nhiên, doanh số tại cửa hàng giảm 5 phần trăm."
+      }
+     ]
+    },
+    {
+     "rule": "Chèn câu: tìm MANH MỐI ở câu trước và sau chỗ trống: đại từ (it, they, this), từ nối (however, for that reason, in the meantime), danh từ lặp lại, thời gian, hoặc lý do/kết quả bị thiếu.",
+     "examples": [
+      {
+       "en": "The chairs are out of stock. **We expect a new shipment on March 12.** In the meantime, we can send a similar model.",
+       "vi": "Ghế đã hết hàng. Chúng tôi dự kiến nhận hàng mới ngày 12/3. Trong thời gian chờ, chúng tôi có thể gửi mẫu tương tự."
+      }
+     ]
+    }
+   ],
+   "traps": [
+    "Câu chèn sai thường: (1) lạc đề, (2) lặp lại ý đã có, (3) đúng chủ đề nhưng không khớp với từ nối ở câu sau (ví dụ \"However\" cần ý tích cực phía trước)."
+   ],
+   "tip": "Đọc câu SAU chỗ trống trước: nếu nó bắt đầu bằng từ nối hoặc đại từ, câu cần chèn phải cung cấp điều mà từ đó đang nhắc tới."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d8-p1",
+   "title": "Bài 1: Giới từ, liên từ hay trạng từ?",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d8-l1",
+   "items": [
+    {
+     "q": "------- the heavy rain, the outdoor concert went ahead as planned.",
+     "options": [
+      "Although",
+      "Despite",
+      "However",
+      "Because"
+     ],
+     "ans": 1,
+     "why": "Sau chỗ trống là cụm danh từ \"the heavy rain\" → giới từ Despite. \"Although\" cần mệnh đề; \"However\" phải có dấu phẩy và đứng ở câu mới.",
+     "vi": "Mặc dù mưa lớn, buổi hòa nhạc ngoài trời vẫn diễn ra theo kế hoạch.",
+     "tag": "preposition"
+    },
+    {
+     "q": "The flight was delayed ------- a technical problem.",
+     "options": [
+      "because",
+      "even though",
+      "therefore",
+      "because of"
+     ],
+     "ans": 3,
+     "why": "Sau chỗ trống là danh từ \"a technical problem\" → because of. \"because\" cần mệnh đề; \"therefore\" không đứng ở vị trí này.",
+     "vi": "Chuyến bay bị hoãn do sự cố kỹ thuật.",
+     "tag": "preposition"
+    },
+    {
+     "q": "------- the shipment arrived late, the client accepted it.",
+     "options": [
+      "Although",
+      "Despite",
+      "In spite of",
+      "During"
+     ],
+     "ans": 0,
+     "why": "Sau chỗ trống là mệnh đề (the shipment arrived) → liên từ Although. Despite / In spite of / During cần danh từ.",
+     "vi": "Mặc dù lô hàng đến trễ, khách hàng vẫn nhận.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "Costs have risen sharply; -------, demand for our products remains strong.",
+     "options": [
+      "although",
+      "despite",
+      "however",
+      "because"
+     ],
+     "ans": 2,
+     "why": "Có dấu chấm phẩy và dấu phẩy sau chỗ trống, hai ý tương phản → trạng từ however. Although/despite/because không đi với dấu phẩy kiểu này.",
+     "vi": "Chi phí tăng mạnh; tuy nhiên, nhu cầu về sản phẩm vẫn mạnh.",
+     "tag": "connector-adverb"
+    },
+    {
+     "q": "Please call me ------- you have any questions about the schedule.",
+     "options": [
+      "despite",
+      "however",
+      "if",
+      "due to"
+     ],
+     "ans": 2,
+     "why": "Sau chỗ trống là mệnh đề (you have...) và nghĩa điều kiện → if. Despite/due to cần danh từ; however cần dấu phẩy.",
+     "vi": "Hãy gọi tôi nếu bạn có câu hỏi nào về lịch trình.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "Ms. Han was promoted ------- her outstanding sales record.",
+     "options": [
+      "due to",
+      "because",
+      "so that",
+      "whereas"
+     ],
+     "ans": 0,
+     "why": "Sau chỗ trống là cụm danh từ → giới từ due to (do). \"because/so that/whereas\" cần mệnh đề.",
+     "vi": "Cô Han được thăng chức nhờ thành tích bán hàng xuất sắc.",
+     "tag": "preposition"
+    },
+    {
+     "q": "------- the training session, participants must silence their phones.",
+     "options": [
+      "While",
+      "Although",
+      "Because",
+      "During"
+     ],
+     "ans": 3,
+     "why": "Sau chỗ trống là cụm danh từ \"the training session\" (không có động từ) → giới từ During. While/Although/Because cần mệnh đề.",
+     "vi": "Trong buổi đào tạo, người tham dự phải tắt tiếng điện thoại.",
+     "tag": "preposition"
+    },
+    {
+     "q": "Employees will receive a bonus ------- the company meets its annual target.",
+     "options": [
+      "instead of",
+      "provided that",
+      "in addition to",
+      "prior to"
+     ],
+     "ans": 1,
+     "why": "Sau chỗ trống là mệnh đề và nghĩa điều kiện → provided that. Các cụm còn lại là giới từ, cần danh từ.",
+     "vi": "Nhân viên sẽ nhận thưởng với điều kiện công ty đạt mục tiêu hằng năm.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "------- his lack of experience, Mr. Berg was offered the position.",
+     "options": [
+      "In spite of",
+      "Even though",
+      "Moreover",
+      "Because"
+     ],
+     "ans": 0,
+     "why": "Sau chỗ trống là cụm danh từ \"his lack of experience\" → In spite of. Even though/Because cần mệnh đề; Moreover cần dấu phẩy.",
+     "vi": "Dù thiếu kinh nghiệm, ông Berg vẫn được mời vào vị trí này.",
+     "tag": "preposition"
+    },
+    {
+     "q": "The software is easy to use. -------, it is very affordable.",
+     "options": [
+      "Because",
+      "Despite",
+      "Moreover",
+      "Although"
+     ],
+     "ans": 2,
+     "why": "Đứng đầu câu mới có dấu phẩy và thêm ý cùng hướng → trạng từ Moreover. Các từ còn lại không đứng trước dấu phẩy theo cách này.",
+     "vi": "Phần mềm dễ sử dụng. Hơn nữa, giá cũng rất phải chăng.",
+     "tag": "connector-adverb"
+    },
+    {
+     "q": "The new store opened on schedule ------- it was still under construction a month ago.",
+     "options": [
+      "in spite of",
+      "even though",
+      "nevertheless",
+      "due to"
+     ],
+     "ans": 1,
+     "why": "Sau chỗ trống là mệnh đề, nghĩa tương phản → even though. In spite of/due to cần danh từ; nevertheless cần dấu câu và không nối mệnh đề như vậy.",
+     "vi": "Cửa hàng mới khai trương đúng kế hoạch dù một tháng trước vẫn đang xây dựng.",
+     "tag": "conjunction"
+    }
+   ]
+  },
+  {
+   "id": "d8-p2",
+   "title": "Bài 2: Chọn từ nối theo logic",
+   "instr": "Chọn đáp án đúng. Kiểm tra cả ngữ pháp lẫn ý nghĩa.",
+   "lesson": "d8-l2",
+   "items": [
+    {
+     "q": "The seminar was cancelled ------- too few people had registered.",
+     "options": [
+      "although",
+      "so that",
+      "until",
+      "because"
+     ],
+     "ans": 3,
+     "why": "Ý nguyên nhân: ít người đăng ký → hội thảo bị hủy → because. \"although\" (tương phản) sai logic.",
+     "vi": "Hội thảo bị hủy vì có quá ít người đăng ký.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "------- the budget was limited, the team completed the renovation.",
+     "options": [
+      "Because",
+      "Although",
+      "Unless",
+      "Once"
+     ],
+     "ans": 1,
+     "why": "Hai ý tương phản (ngân sách hạn chế nhưng vẫn hoàn thành) → Although. \"Because\" sai logic.",
+     "vi": "Mặc dù ngân sách hạn chế, nhóm vẫn hoàn thành việc cải tạo.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "You will not receive a refund ------- you return the item within 14 days.",
+     "options": [
+      "although",
+      "because",
+      "so that",
+      "unless"
+     ],
+     "ans": 3,
+     "why": "Điều kiện phủ định: trừ khi trả hàng trong 14 ngày thì không hoàn tiền → unless.",
+     "vi": "Bạn sẽ không được hoàn tiền trừ khi trả hàng trong 14 ngày.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "The manager arranged extra shifts ------- all orders could be shipped by Friday.",
+     "options": [
+      "so that",
+      "even though",
+      "unless",
+      "whereas"
+     ],
+     "ans": 0,
+     "why": "Chỉ mục đích (để mà) → so that. \"even though/whereas\" sai nghĩa.",
+     "vi": "Quản lý sắp xếp thêm ca để mọi đơn hàng kịp gửi trước thứ Sáu.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "Sales in Asia grew by 8 percent, ------- sales in Europe fell.",
+     "options": [
+      "because",
+      "so that",
+      "whereas",
+      "if"
+     ],
+     "ans": 2,
+     "why": "Đối chiếu hai vế trái ngược (tăng / giảm) → whereas.",
+     "vi": "Doanh số châu Á tăng 8 phần trăm, trong khi doanh số châu Âu giảm.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "------- the contract has been signed, we can begin hiring staff.",
+     "options": [
+      "Even though",
+      "Unless",
+      "Now that",
+      "Whereas"
+     ],
+     "ans": 2,
+     "why": "\"Now that\" = vì bây giờ đã..., chỉ nguyên nhân hiện tại. \"Even though/Whereas\" tương phản nên sai logic.",
+     "vi": "Giờ hợp đồng đã được ký, chúng tôi có thể bắt đầu tuyển nhân viên.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "Employees may use the gym ------- they sign the safety agreement.",
+     "options": [
+      "as long as",
+      "in spite of",
+      "because of",
+      "even though"
+     ],
+     "ans": 0,
+     "why": "Sau chỗ trống là mệnh đề + điều kiện → as long as. \"in spite of/because of\" cần danh từ; \"even though\" sai nghĩa.",
+     "vi": "Nhân viên được dùng phòng gym miễn là họ ký thỏa thuận an toàn.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "Ms. Ito asked for a refund ------- the camera was damaged.",
+     "options": [
+      "although",
+      "so that",
+      "whereas",
+      "because"
+     ],
+     "ans": 3,
+     "why": "Lý do xin hoàn tiền: máy ảnh bị hỏng → because. Các từ còn lại sai logic.",
+     "vi": "Cô Ito yêu cầu hoàn tiền vì máy ảnh bị hỏng.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "Because",
+      "Despite",
+      "Unless",
+      "Although"
+     ],
+     "ans": 1,
+     "why": "Sau chỗ trống là cụm danh từ \"the closure\" → giới từ. Ý: đóng cửa nhưng vẫn mua được trên mạng (tương phản) → Despite. \"Although\" cần mệnh đề; \"Because\" sai logic.",
+     "vi": "Mặc dù cửa hàng đóng cửa, bạn vẫn có thể đặt hàng trên trang web của chúng tôi.",
+     "tag": "part6-connector",
+     "ctx": "Dear Customers,\n\nOur downtown store will be closed from May 3 to May 10 for renovation. ------- the closure, you can still order any product on our Web site and have it delivered to your door. We apologize for the inconvenience."
+    },
+    {
+     "q": "Chọn từ phù hợp điền vào chỗ trống.",
+     "options": [
+      "However",
+      "Therefore",
+      "Moreover",
+      "Otherwise"
+     ],
+     "ans": 0,
+     "why": "Câu trước nói doanh số trực tuyến tăng, câu sau nói doanh số tại cửa hàng giảm → tương phản → However. Therefore/Moreover/Otherwise sai logic.",
+     "vi": "Tuy nhiên, doanh số tại cửa hàng giảm 5 phần trăm.",
+     "tag": "part6-connector",
+     "ctx": "The Marketing Team's report shows that online sales rose by 20 percent in March. -------, in-store sales dropped by 5 percent."
+    }
+   ]
+  },
+  {
+   "id": "d8-p3",
+   "title": "Bài 3: Liên từ tương quan, so/such, giới từ nơi chốn",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d8-l3",
+   "items": [
+    {
+     "q": "Applicants must submit both a résumé ------- a cover letter.",
+     "options": [
+      "or",
+      "nor",
+      "and",
+      "but"
+     ],
+     "ans": 2,
+     "why": "Cặp cố định \"both ... and\" → and.",
+     "vi": "Ứng viên phải nộp cả sơ yếu lý lịch lẫn thư xin việc.",
+     "tag": "correlative"
+    },
+    {
+     "q": "You may pay either by credit card ------- by bank transfer.",
+     "options": [
+      "and",
+      "or",
+      "nor",
+      "but"
+     ],
+     "ans": 1,
+     "why": "Cặp cố định \"either ... or\" → or.",
+     "vi": "Bạn có thể trả bằng thẻ tín dụng hoặc chuyển khoản.",
+     "tag": "correlative"
+    },
+    {
+     "q": "Neither the manager ------- the assistants were aware of the change.",
+     "options": [
+      "or",
+      "and",
+      "but",
+      "nor"
+     ],
+     "ans": 3,
+     "why": "Cặp cố định \"neither ... nor\" → nor.",
+     "vi": "Cả quản lý lẫn các trợ lý đều không biết về sự thay đổi.",
+     "tag": "correlative"
+    },
+    {
+     "q": "The workshop is not only informative ------- also free of charge.",
+     "options": [
+      "and",
+      "but",
+      "or",
+      "nor"
+     ],
+     "ans": 1,
+     "why": "Cặp cố định \"not only ... but also\" → but.",
+     "vi": "Hội thảo không chỉ bổ ích mà còn miễn phí.",
+     "tag": "correlative"
+    },
+    {
+     "q": "The demand was ------- high that the factory ran day and night.",
+     "options": [
+      "such",
+      "very",
+      "too",
+      "so"
+     ],
+     "ans": 3,
+     "why": "\"so + tính từ + that\" → so. \"such\" cần danh từ.",
+     "vi": "Nhu cầu cao đến mức nhà máy chạy cả ngày lẫn đêm.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "It was ------- a successful campaign that the firm doubled its budget.",
+     "options": [
+      "such",
+      "so",
+      "very",
+      "too"
+     ],
+     "ans": 0,
+     "why": "\"such + a + tính từ + danh từ + that\" → such. \"so a successful\" sai.",
+     "vi": "Đó là chiến dịch thành công đến mức công ty tăng gấp đôi ngân sách.",
+     "tag": "conjunction"
+    },
+    {
+     "q": "Please let us know ------- you will attend the dinner or not.",
+     "options": [
+      "that",
+      "what",
+      "whether",
+      "which"
+     ],
+     "ans": 2,
+     "why": "\"whether ... or not\" (liệu có ... hay không) → whether.",
+     "vi": "Vui lòng cho chúng tôi biết bạn có dự bữa tối hay không.",
+     "tag": "correlative"
+    },
+    {
+     "q": "The contract was signed ------- the two companies.",
+     "options": [
+      "among",
+      "during",
+      "between",
+      "within"
+     ],
+     "ans": 2,
+     "why": "Hợp đồng giữa hai bên → between. \"among\" dùng cho ba trở lên.",
+     "vi": "Hợp đồng được ký giữa hai công ty.",
+     "tag": "preposition"
+    },
+    {
+     "q": "Our office is located ------- the fifth floor.",
+     "options": [
+      "on",
+      "at",
+      "in",
+      "by"
+     ],
+     "ans": 0,
+     "why": "Tầng của tòa nhà dùng \"on the fifth floor\".",
+     "vi": "Văn phòng chúng tôi nằm ở tầng năm.",
+     "tag": "preposition"
+    },
+    {
+     "q": "The proposal was popular ------- the employees of all three departments.",
+     "options": [
+      "between",
+      "during",
+      "except",
+      "among"
+     ],
+     "ans": 3,
+     "why": "Nhóm từ ba trở lên → among. \"between\" chỉ hai.",
+     "vi": "Đề xuất được nhân viên của cả ba phòng ban ưa chuộng.",
+     "tag": "preposition"
+    }
+   ]
+  },
+  {
+   "id": "d8-p4",
+   "title": "Bài 4: Collocation và chèn câu Part 6",
+   "instr": "Chọn đáp án đúng. Các câu có đoạn văn: chọn câu hợp mạch nhất.",
+   "lesson": "d8-l4",
+   "items": [
+    {
+     "q": "Employees are responsible ------- keeping their work areas clean.",
+     "options": [
+      "with",
+      "for",
+      "at",
+      "in"
+     ],
+     "ans": 1,
+     "why": "Cụm cố định \"responsible for\".",
+     "vi": "Nhân viên chịu trách nhiệm giữ khu vực làm việc sạch sẽ.",
+     "tag": "collocation"
+    },
+    {
+     "q": "Only full-time staff are eligible ------- the health plan.",
+     "options": [
+      "for",
+      "with",
+      "of",
+      "at"
+     ],
+     "ans": 0,
+     "why": "Cụm cố định \"eligible for\" + danh từ.",
+     "vi": "Chỉ nhân viên toàn thời gian đủ điều kiện hưởng bảo hiểm sức khỏe.",
+     "tag": "collocation"
+    },
+    {
+     "q": "All prices are subject ------- change without notice.",
+     "options": [
+      "for",
+      "with",
+      "to",
+      "on"
+     ],
+     "ans": 2,
+     "why": "Cụm cố định \"subject to\".",
+     "vi": "Mọi giá đều có thể thay đổi mà không báo trước.",
+     "tag": "collocation"
+    },
+    {
+     "q": "Please comply ------- the safety regulations at all times.",
+     "options": [
+      "to",
+      "with",
+      "for",
+      "of"
+     ],
+     "ans": 1,
+     "why": "Cụm cố định \"comply with\".",
+     "vi": "Vui lòng luôn tuân thủ các quy định an toàn.",
+     "tag": "collocation"
+    },
+    {
+     "q": "More than 200 people participated ------- the charity run.",
+     "options": [
+      "at",
+      "with",
+      "for",
+      "in"
+     ],
+     "ans": 3,
+     "why": "Cụm cố định \"participate in\".",
+     "vi": "Hơn 200 người đã tham gia cuộc chạy từ thiện.",
+     "tag": "collocation"
+    },
+    {
+     "q": "Ms. Cho will respond ------- your inquiry within two business days.",
+     "options": [
+      "for",
+      "to",
+      "on",
+      "about"
+     ],
+     "ans": 1,
+     "why": "Cụm cố định \"respond to\".",
+     "vi": "Cô Cho sẽ trả lời yêu cầu của bạn trong vòng hai ngày làm việc.",
+     "tag": "collocation"
+    },
+    {
+     "ctx": "To: All Employees\nSubject: Parking Lot Closure\n\nThe east parking lot will be closed from June 5 to June 9 for resurfacing. -------  For that reason, employees who normally park there should use the lot behind the warehouse.",
+     "q": "Chọn câu thích hợp điền vào chỗ trống.",
+     "options": [
+      "The warehouse was built in 2015 by a local contractor.",
+      "Resurfacing of the road in front of the building was completed last year.",
+      "Parking fees will increase by five percent next month.",
+      "The work cannot be done while cars are parked on the surface."
+     ],
+     "ans": 3,
+     "why": "Câu sau chỗ trống mở đầu bằng \"For that reason\", nên câu chèn phải nêu lý do vì sao không thể đỗ xe ở bãi đông. Các câu còn lại không đưa ra lý do.",
+     "vi": "Công việc không thể thực hiện khi xe đang đỗ trên mặt bãi.",
+     "tag": "part6-sentence"
+    },
+    {
+     "ctx": "Dear Ms. Reyes,\n\nThank you for your order of 50 office chairs. Unfortunately, the chairs you selected are temporarily out of stock. ------- In the meantime, we can send you a similar model at the same price if you wish.",
+     "q": "Chọn câu thích hợp điền vào chỗ trống.",
+     "options": [
+      "We expect to receive a new shipment from our supplier on March 12.",
+      "We have been selling office furniture for more than thirty years.",
+      "Many customers have praised the comfort of our chairs.",
+      "The chairs are available in black and gray."
+     ],
+     "ans": 0,
+     "why": "\"In the meantime\" ở câu sau cần một khoảng thời gian chờ, nên câu chèn nói về lô hàng mới sắp về. Các câu khác không tạo ra khoảng chờ (hoặc mâu thuẫn với \"hết hàng\").",
+     "vi": "Chúng tôi dự kiến nhận lô hàng mới từ nhà cung cấp vào ngày 12 tháng 3.",
+     "tag": "part6-sentence"
+    },
+    {
+     "ctx": "Registration for the Annual Logistics Forum is now open. ------- However, seating is limited, so early registration is recommended.",
+     "q": "Chọn câu thích hợp điền vào chỗ trống.",
+     "options": [
+      "Seating is limited to 200 people.",
+      "Last year's forum was held in Busan.",
+      "Attendance is free for all members of the association.",
+      "Unfortunately, the forum has been postponed until next year."
+     ],
+     "ans": 2,
+     "why": "Câu sau mở bằng \"However, seating is limited\" nên câu trước phải là một ý tích cực (tham dự miễn phí) để tạo tương phản. (A) lặp lại ý \"chỗ ngồi có hạn\"; (B) lạc đề; (D) mâu thuẫn với câu đầu \"Registration… is now open\".",
+     "vi": "Việc tham dự miễn phí cho mọi thành viên của hiệp hội.",
+     "tag": "part6-sentence"
+    },
+    {
+     "ctx": "Starting next month, all expense reports must be submitted through the new online system. ------- For this reason, reports sent by e-mail will no longer be processed.",
+     "q": "Chọn câu thích hợp điền vào chỗ trống.",
+     "options": [
+      "The finance department is located on the third floor.",
+      "Employees who travel often should keep all receipts.",
+      "The old e-mail process caused many errors and long delays.",
+      "The online system will be available in three languages."
+     ],
+     "ans": 2,
+     "why": "Câu sau mở bằng \"For this reason\", nên câu chèn phải nêu lý do bỏ quy trình e-mail: nhiều lỗi và chậm. Các câu khác không phải lý do.",
+     "vi": "Quy trình e-mail cũ gây nhiều lỗi và chậm trễ kéo dài.",
+     "tag": "part6-sentence"
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Tài chính, ngân sách & ngân hàng",
+  "words": [
+   {
+    "w": "budget",
+    "pos": "n/v",
+    "ipa": "/ˈbʌdʒɪt/",
+    "vi": "ngân sách; lập ngân sách",
+    "ex": "Each department must stay within its budget.",
+    "exvi": "Mỗi phòng ban phải nằm trong ngân sách của mình.",
+    "fam": "budgetary (adj)",
+    "colloc": [
+     "stay within budget",
+     "a tight budget"
+    ]
+   },
+   {
+    "w": "expense",
+    "pos": "n",
+    "ipa": "/ɪkˈspens/",
+    "vi": "chi phí",
+    "ex": "The company covers all travel expenses.",
+    "exvi": "Công ty chi trả mọi chi phí đi lại.",
+    "fam": "expensive (adj)",
+    "colloc": [
+     "travel expenses",
+     "an expense report"
+    ]
+   },
+   {
+    "w": "revenue",
+    "pos": "n",
+    "ipa": "/ˈrevənuː/",
+    "vi": "doanh thu",
+    "ex": "Revenue rose 12 percent thanks to overseas sales.",
+    "exvi": "Doanh thu tăng 12 phần trăm nhờ doanh số nước ngoài.",
+    "fam": "—",
+    "colloc": [
+     "annual revenue",
+     "generate revenue"
+    ]
+   },
+   {
+    "w": "profit",
+    "pos": "n",
+    "ipa": "/ˈprɑːfɪt/",
+    "vi": "lợi nhuận",
+    "ex": "The firm made a profit for the third year in a row.",
+    "exvi": "Công ty có lãi năm thứ ba liên tiếp.",
+    "fam": "profitable (adj), profitably (adv)",
+    "colloc": [
+     "make a profit",
+     "profit margin"
+    ]
+   },
+   {
+    "w": "deposit",
+    "pos": "n/v",
+    "ipa": "/dɪˈpɑːzɪt/",
+    "vi": "tiền gửi/đặt cọc; gửi tiền",
+    "ex": "Please deposit $200 into your savings account.",
+    "exvi": "Vui lòng gửi 200 đô la vào tài khoản tiết kiệm.",
+    "fam": "—",
+    "colloc": [
+     "make a deposit",
+     "security deposit"
+    ]
+   },
+   {
+    "w": "withdraw",
+    "pos": "v",
+    "ipa": "/wɪðˈdrɔː/",
+    "vi": "rút (tiền)",
+    "ex": "You can withdraw cash from any of our ATMs.",
+    "exvi": "Bạn có thể rút tiền mặt ở mọi máy ATM của chúng tôi.",
+    "fam": "withdrawal (n)",
+    "colloc": [
+     "withdraw cash",
+     "withdraw from an account"
+    ]
+   },
+   {
+    "w": "balance",
+    "pos": "n/v",
+    "ipa": "/ˈbæləns/",
+    "vi": "số dư; cân bằng",
+    "ex": "Please check your account balance online.",
+    "exvi": "Vui lòng kiểm tra số dư tài khoản trực tuyến.",
+    "fam": "—",
+    "colloc": [
+     "account balance",
+     "outstanding balance"
+    ]
+   },
+   {
+    "w": "interest",
+    "pos": "n",
+    "ipa": "/ˈɪntrəst/",
+    "vi": "tiền lãi; sự quan tâm",
+    "ex": "The interest on the loan is 4 percent a year.",
+    "exvi": "Lãi suất khoản vay là 4 phần trăm một năm.",
+    "fam": "interested (adj), interesting (adj)",
+    "colloc": [
+     "interest rate",
+     "pay interest"
+    ]
+   },
+   {
+    "w": "loan",
+    "pos": "n/v",
+    "ipa": "/loʊn/",
+    "vi": "khoản vay",
+    "ex": "The bank offers low-interest loans to small businesses.",
+    "exvi": "Ngân hàng cho doanh nghiệp nhỏ vay lãi thấp.",
+    "fam": "—",
+    "colloc": [
+     "apply for a loan",
+     "a bank loan"
+    ]
+   },
+   {
+    "w": "invoice",
+    "pos": "n/v",
+    "ipa": "/ˈɪnvɔɪs/",
+    "vi": "hóa đơn",
+    "ex": "The accounting department sent an invoice for the services.",
+    "exvi": "Phòng kế toán đã gửi hóa đơn cho các dịch vụ.",
+    "fam": "—",
+    "colloc": [
+     "issue an invoice",
+     "an overdue invoice"
+    ]
+   },
+   {
+    "w": "payment",
+    "pos": "n",
+    "ipa": "/ˈpeɪmənt/",
+    "vi": "khoản thanh toán",
+    "ex": "Payment is due within thirty days.",
+    "exvi": "Khoản thanh toán đến hạn trong vòng ba mươi ngày.",
+    "fam": "pay (v), payable (adj)",
+    "colloc": [
+     "make a payment",
+     "late payment"
+    ]
+   },
+   {
+    "w": "account",
+    "pos": "n",
+    "ipa": "/əˈkaʊnt/",
+    "vi": "tài khoản",
+    "ex": "Mr. Lee opened a savings account at the bank.",
+    "exvi": "Ông Lee đã mở tài khoản tiết kiệm ở ngân hàng.",
+    "fam": "accountant (n), accounting (n)",
+    "colloc": [
+     "open an account",
+     "checking account"
+    ]
+   },
+   {
+    "w": "investment",
+    "pos": "n",
+    "ipa": "/ɪnˈvestmənt/",
+    "vi": "khoản đầu tư",
+    "ex": "The new plant is a major investment for the company.",
+    "exvi": "Nhà máy mới là một khoản đầu tư lớn của công ty.",
+    "fam": "invest (v), investor (n)",
+    "colloc": [
+     "make an investment",
+     "return on investment"
+    ]
+   },
+   {
+    "w": "fund",
+    "pos": "n/v",
+    "ipa": "/fʌnd/",
+    "vi": "quỹ; tài trợ",
+    "ex": "The charity raised funds for the new library.",
+    "exvi": "Tổ chức từ thiện quyên góp quỹ cho thư viện mới.",
+    "fam": "funding (n)",
+    "colloc": [
+     "raise funds",
+     "a research fund"
+    ]
+   },
+   {
+    "w": "tax",
+    "pos": "n/v",
+    "ipa": "/tæks/",
+    "vi": "thuế",
+    "ex": "Prices include all applicable taxes.",
+    "exvi": "Giá đã gồm mọi loại thuế áp dụng.",
+    "fam": "taxation (n), taxable (adj)",
+    "colloc": [
+     "income tax",
+     "tax return"
+    ]
+   },
+   {
+    "w": "deduct",
+    "pos": "v",
+    "ipa": "/dɪˈdʌkt/",
+    "vi": "khấu trừ",
+    "ex": "Our accountant will deduct the tax from your salary.",
+    "exvi": "Kế toán sẽ khấu trừ thuế từ lương của bạn.",
+    "fam": "deduction (n), deductible (adj)",
+    "colloc": [
+     "deduct from",
+     "tax deduction"
+    ]
+   },
+   {
+    "w": "estimate",
+    "pos": "n/v",
+    "ipa": "/ˈestɪmət/",
+    "vi": "bản ước tính; ước tính",
+    "ex": "The contractor gave us a written estimate.",
+    "exvi": "Nhà thầu đưa cho chúng tôi bản ước tính bằng văn bản.",
+    "fam": "estimation (n)",
+    "colloc": [
+     "a rough estimate",
+     "estimate the cost"
+    ]
+   },
+   {
+    "w": "audit",
+    "pos": "n/v",
+    "ipa": "/ˈɔːdɪt/",
+    "vi": "kiểm toán",
+    "ex": "The auditor will audit the financial records next week.",
+    "exvi": "Kiểm toán viên sẽ kiểm toán hồ sơ tài chính vào tuần sau.",
+    "fam": "auditor (n)",
+    "colloc": [
+     "conduct an audit",
+     "an annual audit"
+    ]
+   },
+   {
+    "w": "refund",
+    "pos": "n/v",
+    "ipa": "/ˈriːfʌnd/",
+    "vi": "hoàn tiền",
+    "ex": "Customers can request a full refund within 30 days.",
+    "exvi": "Khách hàng có thể yêu cầu hoàn tiền đầy đủ trong 30 ngày.",
+    "fam": "refundable (adj)",
+    "colloc": [
+     "request a refund",
+     "a full refund"
+    ]
+   },
+   {
+    "w": "fiscal",
+    "pos": "adj",
+    "ipa": "/ˈfɪskl/",
+    "vi": "(thuộc) tài chính/năm tài chính",
+    "ex": "The company's fiscal year ends on June 30.",
+    "exvi": "Năm tài chính của công ty kết thúc vào ngày 30 tháng 6.",
+    "fam": "—",
+    "colloc": [
+     "fiscal year",
+     "fiscal policy"
+    ]
+   },
+   {
+    "w": "income",
+    "pos": "n",
+    "ipa": "/ˈɪnkʌm/",
+    "vi": "thu nhập",
+    "ex": "Her monthly income increased after the promotion.",
+    "exvi": "Thu nhập hằng tháng của cô tăng sau khi thăng chức.",
+    "fam": "—",
+    "colloc": [
+     "annual income",
+     "income tax"
+    ]
+   },
+   {
+    "w": "statement",
+    "pos": "n",
+    "ipa": "/ˈsteɪtmənt/",
+    "vi": "sao kê; bản báo cáo",
+    "ex": "The statement shows all payments made during the month.",
+    "exvi": "Bản sao kê cho thấy mọi khoản thanh toán trong tháng.",
+    "fam": "state (v)",
+    "colloc": [
+     "a bank statement",
+     "a financial statement"
+    ]
+   },
+   {
+    "w": "mortgage",
+    "pos": "n",
+    "ipa": "/ˈmɔːrɡɪdʒ/",
+    "vi": "khoản vay thế chấp mua nhà",
+    "ex": "Mr. Park took out a mortgage to buy his first house.",
+    "exvi": "Ông Park vay thế chấp để mua căn nhà đầu tiên.",
+    "fam": "—",
+    "colloc": [
+     "pay off a mortgage",
+     "a mortgage rate"
+    ]
+   },
+   {
+    "w": "overdue",
+    "pos": "adj",
+    "ipa": "/ˌoʊvərˈduː/",
+    "vi": "quá hạn",
+    "ex": "Your account is overdue; please pay immediately.",
+    "exvi": "Tài khoản của bạn đã quá hạn; vui lòng thanh toán ngay.",
+    "fam": "—",
+    "colloc": [
+     "an overdue payment",
+     "overdue notice"
+    ]
+   },
+   {
+    "w": "afford",
+    "pos": "v",
+    "ipa": "/əˈfɔːrd/",
+    "vi": "đủ khả năng chi trả",
+    "ex": "We cannot afford to hire more staff this year.",
+    "exvi": "Chúng tôi không đủ khả năng thuê thêm nhân viên năm nay.",
+    "fam": "affordable (adj)",
+    "colloc": [
+     "afford to V",
+     "affordable prices"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "The bank charges ------- on the money you borrow.",
+   "options": [
+    "interest",
+    "invoice",
+    "audit",
+    "statement"
+   ],
+   "ans": 0,
+   "why": "interest = tiền lãi phải trả trên khoản vay. Invoice, audit, statement không bị \"charge\" theo cách này.",
+   "vi": "Ngân hàng tính lãi trên số tiền bạn vay.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The accounting department sent an ------- for the consulting services.",
+   "options": [
+    "interest",
+    "fund",
+    "mortgage",
+    "invoice"
+   ],
+   "ans": 3,
+   "why": "invoice = hóa đơn cho dịch vụ. Mortgage và interest không được \"gửi\" cho dịch vụ tư vấn.",
+   "vi": "Phòng kế toán đã gửi hóa đơn cho dịch vụ tư vấn.",
+   "tag": "vocab"
+  },
+  {
+   "q": "You can ------- cash from any of our ATMs.",
+   "options": [
+    "estimate",
+    "withdraw",
+    "audit",
+    "deduct"
+   ],
+   "ans": 1,
+   "why": "withdraw cash = rút tiền mặt. Các động từ khác không hợp với ATM.",
+   "vi": "Bạn có thể rút tiền mặt ở mọi máy ATM của chúng tôi.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The company's ------- year ends on June 30.",
+   "options": [
+    "fiscal",
+    "affordable",
+    "overdue",
+    "refundable"
+   ],
+   "ans": 0,
+   "why": "fiscal year = năm tài chính (năm dùng để tính sổ sách, có ngày kết thúc cố định). \"overdue year\", \"affordable year\", \"refundable year\" đều vô nghĩa.",
+   "vi": "Năm tài chính của công ty kết thúc vào ngày 30 tháng 6.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Mr. Park took out a ------- to buy his first house.",
+   "options": [
+    "revenue",
+    "budget",
+    "mortgage",
+    "refund"
+   ],
+   "ans": 2,
+   "why": "mortgage = vay thế chấp mua nhà. Revenue/budget/refund không \"take out\" để mua nhà.",
+   "vi": "Ông Park vay thế chấp để mua căn nhà đầu tiên.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The company's ------- increased by 12 percent thanks to strong overseas sales.",
+   "options": [
+    "mortgage",
+    "revenue",
+    "invoice",
+    "fund"
+   ],
+   "ans": 1,
+   "why": "revenue = doanh thu, tăng nhờ doanh số. Mortgage, invoice, fund không hợp nghĩa.",
+   "vi": "Doanh thu công ty tăng 12 phần trăm nhờ doanh số nước ngoài mạnh.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Several ------- are expected to join the new fund.",
+   "options": [
+    "invest",
+    "invested",
+    "investing",
+    "investors"
+   ],
+   "ans": 3,
+   "why": "Sau \"Several\" cần danh từ số nhiều chỉ người → investors. Các đáp án khác là động từ/phân từ.",
+   "vi": "Một số nhà đầu tư dự kiến sẽ tham gia quỹ mới.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Our accountant will ------- the tax from your salary.",
+   "options": [
+    "estimate",
+    "deduct",
+    "deposit",
+    "audit"
+   ],
+   "ans": 1,
+   "why": "deduct from = khấu trừ từ. Estimate/deposit/audit không hợp nghĩa.",
+   "vi": "Kế toán sẽ khấu trừ thuế từ lương của bạn.",
+   "tag": "vocab"
+  },
+  {
+   "q": "We cannot ------- to hire more staff this year.",
+   "options": [
+    "deposit",
+    "refund",
+    "audit",
+    "afford"
+   ],
+   "ans": 3,
+   "why": "afford to V = đủ khả năng làm gì. Các động từ khác không đi với to V.",
+   "vi": "Chúng tôi không đủ khả năng thuê thêm nhân viên năm nay.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Your account is -------; please pay immediately.",
+   "options": [
+    "overdue",
+    "fiscal",
+    "quarterly",
+    "complimentary"
+   ],
+   "ans": 0,
+   "why": "overdue = quá hạn thanh toán, hợp với \"pay immediately\". Các từ khác không mô tả tài khoản.",
+   "vi": "Tài khoản của bạn đã quá hạn; vui lòng thanh toán ngay.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "------- the road construction, the delivery arrived on time.",
+   "options": [
+    "Although",
+    "Because",
+    "In spite of",
+    "However"
+   ],
+   "ans": 2,
+   "why": "Sau chỗ trống là cụm danh từ → giới từ In spite of. Although/Because cần mệnh đề.",
+   "vi": "Mặc dù có thi công đường, hàng vẫn đến đúng giờ.",
+   "tag": "preposition"
+  },
+  {
+   "q": "We could not hold the outdoor event ------- the strong wind.",
+   "options": [
+    "because",
+    "so that",
+    "because of",
+    "whereas"
+   ],
+   "ans": 2,
+   "why": "Sau chỗ trống là danh từ → because of. \"because\" cần mệnh đề.",
+   "vi": "Chúng tôi không thể tổ chức sự kiện ngoài trời vì gió mạnh.",
+   "tag": "preposition"
+  },
+  {
+   "q": "------- the office is small, it is located in the city center.",
+   "options": [
+    "Although",
+    "Despite",
+    "Because of",
+    "Instead of"
+   ],
+   "ans": 0,
+   "why": "Sau chỗ trống là mệnh đề (the office is small) → Although. Despite/Because of/Instead of cần danh từ.",
+   "vi": "Dù văn phòng nhỏ, nó nằm ở trung tâm thành phố.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "Mr. Lim is skilled in design. -------, he speaks three languages.",
+   "options": [
+    "Because",
+    "Although",
+    "Despite",
+    "In addition"
+   ],
+   "ans": 3,
+   "why": "Câu mới có dấu phẩy, thêm ý cùng hướng → In addition. Các từ khác không đứng trước dấu phẩy.",
+   "vi": "Ông Lim giỏi thiết kế. Ngoài ra, ông nói được ba thứ tiếng.",
+   "tag": "connector-adverb"
+  },
+  {
+   "q": "The company must reduce costs; -------, it will have to lay off workers.",
+   "options": [
+    "whereas",
+    "otherwise",
+    "although",
+    "because"
+   ],
+   "ans": 1,
+   "why": "Có dấu chấm phẩy và dấu phẩy, nghĩa \"nếu không thì\" → otherwise. Whereas/although/because là liên từ nên sai.",
+   "vi": "Công ty phải giảm chi phí; nếu không, sẽ phải sa thải nhân viên.",
+   "tag": "connector-adverb"
+  },
+  {
+   "q": "Neither the director ------- the board members approved the plan.",
+   "options": [
+    "nor",
+    "and",
+    "or",
+    "but"
+   ],
+   "ans": 0,
+   "why": "Cặp cố định \"neither ... nor\".",
+   "vi": "Cả giám đốc lẫn các thành viên hội đồng đều không duyệt kế hoạch.",
+   "tag": "correlative"
+  },
+  {
+   "q": "You will be charged a late fee ------- the payment arrives after the due date.",
+   "options": [
+    "despite",
+    "instead of",
+    "if",
+    "whereas"
+   ],
+   "ans": 2,
+   "why": "Sau chỗ trống là mệnh đề, nghĩa điều kiện → if. Despite/instead of cần danh từ; whereas sai nghĩa.",
+   "vi": "Bạn sẽ bị tính phí trễ nếu khoản thanh toán đến sau hạn.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "The speaker was ------- inspiring that everyone applauded.",
+   "options": [
+    "such",
+    "so",
+    "very",
+    "too"
+   ],
+   "ans": 1,
+   "why": "\"so + tính từ + that\" → so. \"such\" cần danh từ.",
+   "vi": "Diễn giả truyền cảm hứng đến nỗi mọi người đều vỗ tay.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "Ms. Gomez is not familiar ------- the new accounting software.",
+   "options": [
+    "to",
+    "of",
+    "for",
+    "with"
+   ],
+   "ans": 3,
+   "why": "Cụm cố định \"familiar with\".",
+   "vi": "Cô Gomez chưa quen với phần mềm kế toán mới.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Customers should be aware ------- the return policy.",
+   "options": [
+    "for",
+    "of",
+    "with",
+    "on"
+   ],
+   "ans": 1,
+   "why": "Cụm cố định \"aware of\".",
+   "vi": "Khách hàng nên biết về chính sách đổi trả.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Interested candidates should apply ------- the position online.",
+   "options": [
+    "with",
+    "at",
+    "of",
+    "for"
+   ],
+   "ans": 3,
+   "why": "Cụm cố định \"apply for\".",
+   "vi": "Ứng viên quan tâm nên nộp đơn vào vị trí này trực tuyến.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The meeting will be postponed ------- the manager returns.",
+   "options": [
+    "until",
+    "during",
+    "despite",
+    "because of"
+   ],
+   "ans": 0,
+   "why": "Sau chỗ trống là mệnh đề (the manager returns) → until. During/despite/because of cần danh từ.",
+   "vi": "Cuộc họp sẽ hoãn cho đến khi quản lý quay lại.",
+   "tag": "conjunction"
+  },
+  {
+   "ctx": "Our survey showed that most customers like the new packaging. -------, some say it is hard to open.",
+   "q": "Chọn từ phù hợp điền vào chỗ trống.",
+   "options": [
+    "Therefore",
+    "Moreover",
+    "However",
+    "Because"
+   ],
+   "ans": 2,
+   "why": "Câu trước tích cực (khách thích bao bì), câu sau trái chiều (khó mở) → However.",
+   "vi": "Tuy nhiên, một số khách nói khó mở.",
+   "tag": "part6-connector"
+  },
+  {
+   "ctx": "Dear Mr. Okafor,\n\nYour application for the sales manager position has been received. ------- We will contact you by e-mail within two weeks if you are selected for an interview.",
+   "q": "Chọn câu thích hợp điền vào chỗ trống.",
+   "options": [
+    "Our offices are closed on public holidays.",
+    "All sales managers must have a driver's license.",
+    "Thank you for your interest in working with Dalton Corp.",
+    "We received more than 300 applications last year."
+   ],
+   "ans": 2,
+   "why": "Thư vừa xác nhận đã nhận đơn, câu cảm ơn là hợp mạch nhất; các câu khác lạc mạch hoặc không liên quan đến đơn này.",
+   "vi": "Cảm ơn bạn đã quan tâm đến cơ hội làm việc tại Dalton Corp.",
+   "tag": "part6-sentence"
+  },
+  {
+   "q": "The conference was a success ------- the limited budget.",
+   "options": [
+    "despite",
+    "although",
+    "because",
+    "unless"
+   ],
+   "ans": 0,
+   "why": "Sau chỗ trống là cụm danh từ \"the limited budget\" → giới từ despite. Although/because/unless cần mệnh đề.",
+   "vi": "Hội nghị thành công dù ngân sách hạn chế.",
+   "tag": "preposition"
+  },
+  {
+   "q": "Please check your account ------- online before making a transfer.",
+   "options": [
+    "audit",
+    "fiscal",
+    "estimate",
+    "balance"
+   ],
+   "ans": 3,
+   "why": "account balance = số dư tài khoản. Các từ còn lại không hợp.",
+   "vi": "Vui lòng kiểm tra số dư tài khoản trực tuyến trước khi chuyển khoản.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The auditor will ------- the company's financial records next week.",
+   "options": [
+    "deposit",
+    "audit",
+    "afford",
+    "deduct"
+   ],
+   "ans": 1,
+   "why": "audit = kiểm toán hồ sơ. Các động từ khác không hợp.",
+   "vi": "Kiểm toán viên sẽ kiểm toán hồ sơ tài chính của công ty vào tuần sau.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Each department must stay within its ------- this year.",
+   "options": [
+    "budget",
+    "mortgage",
+    "refund",
+    "loan"
+   ],
+   "ans": 0,
+   "why": "stay within budget = nằm trong ngân sách. Các danh từ khác không hợp.",
+   "vi": "Mỗi phòng ban phải nằm trong ngân sách của mình năm nay.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Customers who are not satisfied can request a full ------- within 30 days.",
+   "options": [
+    "audit",
+    "fund",
+    "refund",
+    "tax"
+   ],
+   "ans": 2,
+   "why": "request a full refund = yêu cầu hoàn tiền đầy đủ. Các từ khác không hợp.",
+   "vi": "Khách hàng không hài lòng có thể yêu cầu hoàn tiền đầy đủ trong 30 ngày.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The bank offers low-interest ------- to small businesses.",
+   "options": [
+    "audits",
+    "loans",
+    "invoices",
+    "statements"
+   ],
+   "ans": 1,
+   "why": "low-interest loans = khoản vay lãi thấp. Audits/invoices/statements không đi với \"low-interest\".",
+   "vi": "Ngân hàng cung cấp các khoản vay lãi thấp cho doanh nghiệp nhỏ.",
+   "tag": "vocab"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "------- his illness, Mr. Evans attended the meeting.",
+   "options": [
+    "Although",
+    "Because",
+    "However",
+    "Despite"
+   ],
+   "ans": 3,
+   "why": "Sau chỗ trống là danh từ \"his illness\" → Despite. Although/Because cần mệnh đề.",
+   "vi": "Dù bị ốm, ông Evans vẫn dự họp.",
+   "tag": "preposition"
+  },
+  {
+   "q": "The train was late ------- a signal failure.",
+   "options": [
+    "although",
+    "due to",
+    "because",
+    "while"
+   ],
+   "ans": 1,
+   "why": "Sau chỗ trống là danh từ → due to. Các từ còn lại cần mệnh đề.",
+   "vi": "Tàu đến trễ do lỗi tín hiệu.",
+   "tag": "preposition"
+  },
+  {
+   "q": "------- the warranty has expired, we will repair the printer free of charge.",
+   "options": [
+    "Because of",
+    "Despite",
+    "In spite of",
+    "Even though"
+   ],
+   "ans": 3,
+   "why": "Sau chỗ trống là mệnh đề, nghĩa tương phản → Even though. Các giới từ cần danh từ.",
+   "vi": "Dù bảo hành đã hết hạn, chúng tôi vẫn sửa máy in miễn phí.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "We missed the deadline. -------, the client agreed to a new date.",
+   "options": [
+    "Nevertheless",
+    "Because",
+    "Despite",
+    "Unless"
+   ],
+   "ans": 0,
+   "why": "Đầu câu mới có dấu phẩy, ý tương phản → Nevertheless. Because/Despite/Unless không đứng trước dấu phẩy.",
+   "vi": "Chúng tôi trễ hạn. Dù vậy, khách hàng đồng ý ngày mới.",
+   "tag": "connector-adverb"
+  },
+  {
+   "q": "Sales increased ------- the economy slowed.",
+   "options": [
+    "during",
+    "despite",
+    "while",
+    "because of"
+   ],
+   "ans": 2,
+   "why": "Sau chỗ trống là mệnh đề, nghĩa tương phản → while. Các từ khác cần danh từ.",
+   "vi": "Doanh số tăng trong khi nền kinh tế chậm lại.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "The store will refund your money ------- you keep the receipt.",
+   "options": [
+    "instead of",
+    "because of",
+    "as long as",
+    "in spite of"
+   ],
+   "ans": 2,
+   "why": "Sau chỗ trống là mệnh đề + điều kiện → as long as. Các cụm khác cần danh từ.",
+   "vi": "Cửa hàng sẽ hoàn tiền miễn là bạn giữ hóa đơn.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "Customers can pay ------- by cash or by card.",
+   "options": [
+    "either",
+    "both",
+    "neither",
+    "not only"
+   ],
+   "ans": 0,
+   "why": "Có \"or\" phía sau → cặp \"either ... or\".",
+   "vi": "Khách có thể trả bằng tiền mặt hoặc bằng thẻ.",
+   "tag": "correlative"
+  },
+  {
+   "q": "She is both an accountant ------- a lawyer.",
+   "options": [
+    "or",
+    "but",
+    "nor",
+    "and"
+   ],
+   "ans": 3,
+   "why": "Cặp \"both ... and\".",
+   "vi": "Cô vừa là kế toán vừa là luật sư.",
+   "tag": "correlative"
+  },
+  {
+   "q": "The new phone is ------- expensive that few people can afford it.",
+   "options": [
+    "such",
+    "so",
+    "too",
+    "very"
+   ],
+   "ans": 1,
+   "why": "\"so + tính từ + that\" → so.",
+   "vi": "Điện thoại mới đắt đến nỗi ít người mua nổi.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "It was ------- an interesting idea that everyone supported it.",
+   "options": [
+    "such",
+    "so",
+    "very",
+    "too"
+   ],
+   "ans": 0,
+   "why": "\"such + an + tính từ + danh từ + that\" → such.",
+   "vi": "Đó là ý tưởng thú vị đến mức mọi người đều ủng hộ.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "Employees must be familiar ------- the evacuation procedures.",
+   "options": [
+    "of",
+    "for",
+    "with",
+    "at"
+   ],
+   "ans": 2,
+   "why": "Cụm \"familiar with\".",
+   "vi": "Nhân viên phải quen thuộc với quy trình sơ tán.",
+   "tag": "collocation"
+  },
+  {
+   "q": "This offer is subject ------- approval by the manager.",
+   "options": [
+    "for",
+    "to",
+    "with",
+    "of"
+   ],
+   "ans": 1,
+   "why": "Cụm \"subject to\".",
+   "vi": "Ưu đãi này tùy thuộc vào sự phê duyệt của quản lý.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Mr. Singh is responsible ------- training new employees.",
+   "options": [
+    "to",
+    "with",
+    "at",
+    "for"
+   ],
+   "ans": 3,
+   "why": "\"responsible for\" + V-ing.",
+   "vi": "Ông Singh chịu trách nhiệm đào tạo nhân viên mới.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The budget depends ------- the number of staff we hire.",
+   "options": [
+    "of",
+    "on",
+    "to",
+    "with"
+   ],
+   "ans": 1,
+   "why": "Cụm \"depend on\".",
+   "vi": "Ngân sách phụ thuộc vào số nhân viên chúng tôi tuyển.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Everyone is welcome to participate ------- the discussion.",
+   "options": [
+    "on",
+    "at",
+    "to",
+    "in"
+   ],
+   "ans": 3,
+   "why": "Cụm \"participate in\".",
+   "vi": "Mọi người đều được hoan nghênh tham gia thảo luận.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Our shop is ------- the post office and the bank.",
+   "options": [
+    "between",
+    "among",
+    "within",
+    "during"
+   ],
+   "ans": 0,
+   "why": "Hai địa điểm → between.",
+   "vi": "Cửa hàng chúng tôi nằm giữa bưu điện và ngân hàng.",
+   "tag": "preposition"
+  },
+  {
+   "q": "The company moved to a larger site ------- it needed more space.",
+   "options": [
+    "because of",
+    "despite",
+    "because",
+    "although"
+   ],
+   "ans": 2,
+   "why": "Sau chỗ trống là mệnh đề, nghĩa nguyên nhân → because. \"because of/despite\" cần danh từ; \"although\" sai logic.",
+   "vi": "Công ty chuyển sang địa điểm lớn hơn vì cần thêm không gian.",
+   "tag": "conjunction"
+  },
+  {
+   "q": "Please ------- $200 into your savings account.",
+   "options": [
+    "audit",
+    "estimate",
+    "deposit",
+    "afford"
+   ],
+   "ans": 2,
+   "why": "deposit into an account = gửi tiền vào tài khoản. Các động từ khác không hợp.",
+   "vi": "Vui lòng gửi 200 đô la vào tài khoản tiết kiệm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- shows all payments made during the month.",
+   "options": [
+    "statement",
+    "mortgage",
+    "loan",
+    "fiscal"
+   ],
+   "ans": 0,
+   "why": "statement = bản sao kê. Mortgage/loan là khoản vay; fiscal là tính từ.",
+   "vi": "Bản sao kê cho thấy mọi khoản thanh toán trong tháng.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- on the loan is 4 percent a year.",
+   "options": [
+    "invoice",
+    "balance",
+    "statement",
+    "interest"
+   ],
+   "ans": 3,
+   "why": "interest = lãi suất, tính theo phần trăm mỗi năm. Các từ khác không hợp.",
+   "vi": "Lãi suất của khoản vay là 4 phần trăm một năm.",
+   "tag": "vocab"
+  }
+ ]
+}

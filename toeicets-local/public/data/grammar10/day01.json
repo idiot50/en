@@ -1,0 +1,1949 @@
+{
+ "day": 1,
+ "title": "Nền móng: Cấu trúc câu & Từ loại",
+ "icon": "🧱",
+ "goal": "Sau hôm nay bạn nhận ra được chủ ngữ, động từ, tân ngữ, bổ ngữ trong câu, biết 4 từ loại chính và chọn đúng dạng từ (danh từ, tính từ, trạng từ, động từ) chỉ bằng cách nhìn hai bên chỗ trống và đuôi từ.",
+ "why": "Câu hỏi chọn dạng từ chiếm khoảng 19% câu ngữ pháp trong Part 5 và Part 6 (khoảng 5-6 câu mỗi đề) và là loại câu dễ nhất để ăn điểm vì không cần dịch cả câu.",
+ "schedule": [
+  {
+   "label": "Lý thuyết ngữ pháp",
+   "min": 40
+  },
+  {
+   "label": "Luyện tập",
+   "min": 50
+  },
+  {
+   "label": "Từ vựng",
+   "min": 30
+  },
+  {
+   "label": "Bài kiểm tra cuối ngày",
+   "min": 30
+  },
+  {
+   "label": "Xem lại lỗi sai",
+   "min": 15
+  }
+ ],
+ "lessons": [
+  {
+   "id": "d1-l1",
+   "title": "1. Câu tiếng Anh gồm những gì? (S, V, O, C)",
+   "intro": "Mọi câu tiếng Anh đều được ghép từ vài \"mảnh\" quen thuộc. Nếu bạn nhìn ra được mảnh nào đang bị thiếu trong chỗ trống, bạn đã gần như trả lời xong câu hỏi Part 5. Hôm nay ta học 4 mảnh ghép: chủ ngữ, động từ, tân ngữ, bổ ngữ.",
+   "points": [
+    {
+     "rule": "**Chủ ngữ (S – Subject)** là người/vật thực hiện hành động hoặc được nói tới. Thường đứng đầu câu. Công thức tối thiểu: `S + V`.",
+     "examples": [
+      {
+       "en": "The **shipment** arrived.",
+       "vi": "Lô hàng đã đến."
+      },
+      {
+       "en": "**Ms. Lee** works here.",
+       "vi": "Cô Lee làm việc ở đây."
+      }
+     ]
+    },
+    {
+     "rule": "**Động từ (V – Verb)** chỉ hành động hoặc trạng thái. Mỗi câu hoàn chỉnh PHẢI có ít nhất một động từ chính đã chia (ví dụ: approved, works, will start). Dạng V-ing hoặc to V đứng một mình không phải động từ chính.",
+     "examples": [
+      {
+       "en": "The manager **approved** the budget.",
+       "vi": "Quản lý đã phê duyệt ngân sách."
+      }
+     ]
+    },
+    {
+     "rule": "**Tân ngữ (O – Object)** là người/vật chịu tác động của hành động, đứng ngay sau động từ. Công thức: `S + V + O`. Hỏi \"V cái gì?\" – câu trả lời là O.",
+     "examples": [
+      {
+       "en": "Our team **completed the report**.",
+       "vi": "Nhóm chúng tôi đã hoàn thành báo cáo."
+      }
+     ]
+    },
+    {
+     "rule": "**Bổ ngữ (C – Complement)** là từ bổ sung ý nghĩa cho chủ ngữ, đứng sau động từ nối (be, become, seem, look, remain, stay, feel). C là tính từ hoặc danh từ. Công thức: `S + be/linking V + C`. Sau động từ nối KHÔNG dùng trạng từ.",
+     "examples": [
+      {
+       "en": "The new office is **spacious**.",
+       "vi": "Văn phòng mới rộng rãi."
+      },
+      {
+       "en": "Mr. Kim became the **director**.",
+       "vi": "Ông Kim trở thành giám đốc."
+      },
+      {
+       "en": "The plan seems **reasonable**.",
+       "vi": "Kế hoạch có vẻ hợp lý."
+      }
+     ]
+    },
+    {
+     "rule": "**Mẫu 4: `S + V + O + tính từ`** với keep / make / find / consider: tính từ mô tả trạng thái của tân ngữ. Vì là tính từ nên không đổi thành trạng từ.",
+     "examples": [
+      {
+       "en": "Weekly updates keep our clients **informed**.",
+       "vi": "Các cập nhật hằng tuần giúp khách hàng luôn nắm thông tin."
+      },
+      {
+       "en": "The new system makes searches **simple**.",
+       "vi": "Hệ thống mới làm việc tìm kiếm trở nên đơn giản."
+      },
+      {
+       "en": "Most staff find the schedule **flexible**.",
+       "vi": "Hầu hết nhân viên thấy lịch làm việc linh hoạt."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Mẫu câu",
+     "Công thức",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "1",
+      "S + V",
+      "The meeting ended."
+     ],
+     [
+      "2",
+      "S + V + O",
+      "She sent the invoice."
+     ],
+     [
+      "3",
+      "S + be/linking V + C",
+      "The report is ready."
+     ],
+     [
+      "4",
+      "S + V + O + adj",
+      "Good lighting keeps the office comfortable."
+     ]
+    ]
+   },
+   "traps": [
+    "Sau động từ nối (be, become, seem, look, remain) cần TÍNH TỪ, không dùng trạng từ: \"looks comfortable\" chứ không phải \"looks comfortably\".",
+    "Sau keep/make/find + tân ngữ cần TÍNH TỪ: người Việt hay dịch \"làm cho một cách dễ dàng\" rồi chọn trạng từ – sai."
+   ],
+   "tip": "Thấy chỗ trống đứng ngay sau một động từ nối hoặc sau \"keep/make/find + tân ngữ\", hãy nghĩ ngay tới tính từ."
+  },
+  {
+   "id": "d1-l2",
+   "title": "2. Bốn từ loại chính và vị trí của chúng",
+   "intro": "Từ loại (part of speech) là \"vai\" của một từ trong câu. TOEIC Part 5 rất hay cho 4 đáp án cùng một gốc từ nhưng khác từ loại (ví dụ: decide, decision, decisive, decisively). Bạn chỉ cần biết chỗ trống cần vai nào.",
+   "points": [
+    {
+     "rule": "**Danh từ (noun)** là tên người, vật, nơi chốn, ý tưởng. Đứng sau a/an/the, tính từ sở hữu (my, your, our...), tính từ; làm chủ ngữ, tân ngữ, hoặc đứng sau giới từ.",
+     "examples": [
+      {
+       "en": "The **manager** approved the **plan**.",
+       "vi": "Quản lý đã duyệt kế hoạch."
+      },
+      {
+       "en": "Please check your **schedule**.",
+       "vi": "Vui lòng kiểm tra lịch của bạn."
+      }
+     ]
+    },
+    {
+     "rule": "**Tính từ (adjective)** mô tả danh từ. Đứng TRƯỚC danh từ hoặc SAU động từ nối. Công thức: `adj + N` hoặc `be + adj`.",
+     "examples": [
+      {
+       "en": "We hired a **qualified** assistant.",
+       "vi": "Chúng tôi đã thuê một trợ lý đủ năng lực."
+      },
+      {
+       "en": "The room is **available**.",
+       "vi": "Phòng còn trống."
+      }
+     ]
+    },
+    {
+     "rule": "**Trạng từ (adverb)** bổ nghĩa cho động từ, tính từ, trạng từ khác hoặc cả câu; trả lời \"như thế nào?\". Thường là tính từ + -ly. Có thể bỏ ra mà câu vẫn đủ. Công thức: `S + adv + V`, `V + O + adv`, `adv + adj`.",
+     "examples": [
+      {
+       "en": "Ms. Cole **promptly** answered the email.",
+       "vi": "Cô Cole đã trả lời email ngay lập tức."
+      },
+      {
+       "en": "The printer is **remarkably** reliable.",
+       "vi": "Máy in đáng tin cậy một cách đáng kinh ngạc."
+      }
+     ]
+    },
+    {
+     "rule": "**Động từ (verb)** đứng sau chủ ngữ. Sau will, can, must, should, to thì dùng động từ nguyên mẫu (không chia). Công thức: `will/can/must + V`.",
+     "examples": [
+      {
+       "en": "We will **review** every report.",
+       "vi": "Chúng tôi sẽ xem lại mọi báo cáo."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Từ loại",
+     "Vai trò",
+     "Vị trí điển hình"
+    ],
+    "rows": [
+     [
+      "Danh từ",
+      "Tên người/vật/ý tưởng",
+      "the ___ ; your ___ ; adj + ___ ; giới từ + ___"
+     ],
+     [
+      "Tính từ",
+      "Mô tả danh từ",
+      "___ + N ; be + ___ ; keep/make + O + ___"
+     ],
+     [
+      "Trạng từ",
+      "Bổ nghĩa V/adj/adv/câu",
+      "S + ___ + V ; ___ + adj ; V + O + ___"
+     ],
+     [
+      "Động từ",
+      "Hành động/trạng thái",
+      "S + ___ ; will/can/must + ___"
+     ]
+    ]
+   },
+   "traps": [
+    "Tính từ vs trạng từ: \"a ___ presentation\" cần tính từ (persuasive); \"___ answered\" cần trạng từ (promptly).",
+    "Có từ vừa là danh từ vừa là động từ (increase, plan, update, review): hãy nhìn từ đứng trước chỗ trống (a/an/the → danh từ)."
+   ],
+   "tip": "Quy tắc nhanh: sau a/an/the/tính từ sở hữu + (tính từ) → DANH TỪ; giữa chủ ngữ và động từ → TRẠNG TỪ; trước danh từ → TÍNH TỪ."
+  },
+  {
+   "id": "d1-l3",
+   "title": "3. Nhận diện từ loại qua đuôi từ (hậu tố)",
+   "intro": "Hậu tố (suffix) là phần đuôi của từ. Chỉ cần nhìn đuôi, bạn đoán được từ loại mà không cần biết nghĩa. Đây là \"bí kíp\" làm bài từ loại nhanh nhất.",
+   "points": [
+    {
+     "rule": "**Đuôi danh từ** (thường gặp): -tion, -sion, -ment, -ness, -ity, -ance/-ence, -ship (chỉ vật/ý tưởng); -er, -or, -ant, -ent, -ee, -ist (thường chỉ người).",
+     "examples": [
+      {
+       "en": "The **completion** of the project is near.",
+       "vi": "Dự án sắp hoàn thành."
+      },
+      {
+       "en": "Ms. Cho works as a **consultant**.",
+       "vi": "Cô Cho làm tư vấn viên."
+      }
+     ]
+    },
+    {
+     "rule": "**Đuôi tính từ** (thường gặp): -ive, -able/-ible, -ful, -al, -ous, -ent/-ant, -ic, -less.",
+     "examples": [
+      {
+       "en": "He gave an **effective** presentation.",
+       "vi": "Anh ấy có bài thuyết trình hiệu quả."
+      },
+      {
+       "en": "The hotel offers **special** rates.",
+       "vi": "Khách sạn có mức giá đặc biệt."
+      }
+     ]
+    },
+    {
+     "rule": "**Đuôi trạng từ**: thường là -ly (tính từ + ly). Ví dụ: careful → carefully.",
+     "examples": [
+      {
+       "en": "The teams worked **efficiently**.",
+       "vi": "Các nhóm làm việc hiệu quả."
+      }
+     ]
+    },
+    {
+     "rule": "**Đuôi động từ** (thường gặp): -ize/-ise, -en, -ify, -ate.",
+     "examples": [
+      {
+       "en": "We need to **standardize** our procedures.",
+       "vi": "Chúng ta cần chuẩn hóa quy trình."
+      },
+      {
+       "en": "Please **verify** your address.",
+       "vi": "Vui lòng xác minh địa chỉ."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Hậu tố",
+     "Từ loại",
+     "Ví dụ"
+    ],
+    "rows": [
+     [
+      "-tion / -ment / -ness / -ity",
+      "Danh từ (vật/ý)",
+      "application, payment, reliability"
+     ],
+     [
+      "-er / -or / -ant / -ee",
+      "Danh từ (người)",
+      "manager, supervisor, assistant, employee"
+     ],
+     [
+      "-ive / -able / -ful / -al / -ous",
+      "Tính từ",
+      "effective, available, helpful, special"
+     ],
+     [
+      "-ly",
+      "Trạng từ",
+      "efficiently, promptly"
+     ],
+     [
+      "-ize / -en / -ify / -ate",
+      "Động từ",
+      "modernize, shorten, verify, demonstrate"
+     ]
+    ]
+   },
+   "traps": [
+    "Một số từ đuôi -ly lại là TÍNH TỪ (friendly, costly, timely) – sẽ học kỹ ở Ngày 3.",
+    "Không phải đuôi -al nào cũng là tính từ: approval, proposal, rental là danh từ. Luôn kiểm tra thêm vị trí chỗ trống.",
+    "Hậu tố chỉ là gợi ý \"thường đúng\": representative, objective là DANH TỪ dù đuôi -ive; candidate, certificate là danh từ và accurate là tính từ dù đuôi -ate. Luôn kết hợp với vị trí chỗ trống."
+   ],
+   "tip": "Nhìn 4 đáp án: gạch chân đuôi từ, ghi nhanh N / adj / adv / V cạnh mỗi đáp án rồi chọn theo vị trí."
+  },
+  {
+   "id": "d1-l4",
+   "title": "4. Quy trình 4 bước giải câu từ loại",
+   "intro": "Bạn không cần dịch cả câu. Chỉ cần nhìn hai bên chỗ trống là đủ chọn đúng ở hầu hết câu từ loại. Dưới đây là quy trình 10 giây.",
+   "points": [
+    {
+     "rule": "**Bước 1**: nhìn 4 đáp án – có cùng gốc không? Nếu có, đây là câu từ loại. **Bước 2**: nhìn từ NGAY TRƯỚC và NGAY SAU chỗ trống. **Bước 3**: xác định loại từ cần điền theo bảng bên dưới. **Bước 4**: kiểm tra nghĩa nếu còn 2 đáp án cùng từ loại.",
+     "examples": [
+      {
+       "en": "Ms. Reyes **carefully** reviews every contract.",
+       "vi": "Cô Reyes xem xét kỹ mọi hợp đồng. (Chỗ trống giữa chủ ngữ và động từ → trạng từ.)"
+      }
+     ]
+    },
+    {
+     "rule": "Ví dụ 1: \"Our new ------- starts next month.\" Trước chỗ trống có adj \"new\" + sở hữu \"Our\" → cần DANH TỪ (product).",
+     "examples": [
+      {
+       "en": "Our new **product** starts shipping next month.",
+       "vi": "Sản phẩm mới của chúng tôi bắt đầu giao hàng vào tháng sau."
+      }
+     ]
+    },
+    {
+     "rule": "Ví dụ 2: \"The clients were ------- with our service.\" Sau be → cần TÍNH TỪ (satisfied).",
+     "examples": [
+      {
+       "en": "The clients were **satisfied** with our service.",
+       "vi": "Khách hàng hài lòng với dịch vụ."
+      }
+     ]
+    },
+    {
+     "rule": "Ví dụ 3: \"We will ------- the system next year.\" Sau will → ĐỘNG TỪ nguyên mẫu (modernize).",
+     "examples": [
+      {
+       "en": "We will **modernize** the system next year.",
+       "vi": "Chúng tôi sẽ hiện đại hóa hệ thống vào năm sau."
+      }
+     ]
+    }
+   ],
+   "table": {
+    "head": [
+     "Nhìn thấy...",
+     "Chỗ trống cần"
+    ],
+    "rows": [
+     [
+      "a / an / the / my / our / adj + ___",
+      "Danh từ"
+     ],
+     [
+      "giới từ (of, for, in, with...) + ___",
+      "Danh từ"
+     ],
+     [
+      "be / become / seem / look + ___",
+      "Tính từ"
+     ],
+     [
+      "keep / make / find + O + ___",
+      "Tính từ"
+     ],
+     [
+      "___ + danh từ",
+      "Tính từ"
+     ],
+     [
+      "S + ___ + V ; ___ + adj ; V + O + ___",
+      "Trạng từ"
+     ],
+     [
+      "will / can / must / to + ___",
+      "Động từ nguyên mẫu"
+     ],
+     [
+      "S + ___ + (không có động từ nào khác)",
+      "Động từ chính đã chia"
+     ]
+    ]
+   },
+   "traps": [
+    "Hai đáp án cùng từ loại (vd: employee/employer) thì phải dựa vào nghĩa.",
+    "Đừng bị cuốn vào từ nghe quen tai: chọn theo vị trí trước, nghĩa sau."
+   ],
+   "tip": "Nếu 4 đáp án là cùng gốc từ, bạn có thể làm đúng mà chưa cần đọc hết câu – tiết kiệm thời gian cho các câu từ vựng khó."
+  }
+ ],
+ "practice": [
+  {
+   "id": "d1-p1",
+   "title": "Bài 1: Thành phần câu & động từ nối",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d1-l1",
+   "items": [
+    {
+     "q": "Ms. Lee ------- the quarterly report yesterday.",
+     "options": [
+      "completion",
+      "completely",
+      "completed",
+      "completing"
+     ],
+     "ans": 2,
+     "why": "Sau chủ ngữ Ms. Lee cần một động từ chính; \"yesterday\" báo quá khứ nên chọn completed. Completion là danh từ, completely là trạng từ, completing (V-ing) đứng một mình không làm động từ chính.",
+     "vi": "Cô Lee đã hoàn thành báo cáo quý vào hôm qua.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "The new office layout looks ------- to most staff.",
+     "options": [
+      "comfortable",
+      "comfort",
+      "comfortably",
+      "comforts"
+     ],
+     "ans": 0,
+     "why": "Looks là động từ nối nên sau nó cần tính từ: comfortable. Trạng từ comfortably không đứng sau động từ nối.",
+     "vi": "Cách bố trí văn phòng mới có vẻ thoải mái với hầu hết nhân viên.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "Weekly updates keep our clients -------.",
+     "options": [
+      "inform",
+      "information",
+      "informing",
+      "informed"
+     ],
+     "ans": 3,
+     "why": "Mẫu keep + tân ngữ + tính từ: informed (được cập nhật thông tin) là tính từ. Information là danh từ, inform là động từ nên không điền được.",
+     "vi": "Các cập nhật hằng tuần giúp khách hàng của chúng tôi luôn nắm thông tin.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "The new filing system makes searches -------.",
+     "options": [
+      "simply",
+      "simple",
+      "simplicity",
+      "simplify"
+     ],
+     "ans": 1,
+     "why": "Make + tân ngữ (searches) + tính từ → simple. Trạng từ simply bổ nghĩa động từ, không dùng để mô tả tân ngữ.",
+     "vi": "Hệ thống lưu trữ mới làm việc tìm kiếm trở nên đơn giản.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "Our assistants ------- all invoices every Friday.",
+     "options": [
+      "processing",
+      "process",
+      "to process",
+      "processor"
+     ],
+     "ans": 1,
+     "why": "Sau chủ ngữ Our assistants cần động từ chính. Processing và to process không làm động từ chính đứng một mình; processor là danh từ.",
+     "vi": "Các trợ lý của chúng tôi xử lý toàn bộ hóa đơn vào mỗi thứ Sáu.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "The shipment ------- at the warehouse this morning.",
+     "options": [
+      "arrival",
+      "arriving",
+      "arrive",
+      "arrived"
+     ],
+     "ans": 3,
+     "why": "Cần động từ chính ở quá khứ (this morning, chủ ngữ số ít): arrived. Arrival là danh từ, arriving không đủ làm động từ chính, arrive sai thì.",
+     "vi": "Lô hàng đã đến kho sáng nay.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "The conference room is ------- for the meeting.",
+     "options": [
+      "available",
+      "availability",
+      "availabilities",
+      "avail"
+     ],
+     "ans": 0,
+     "why": "Sau động từ nối is cần tính từ: available. Availability là danh từ, availabilities không tồn tại.",
+     "vi": "Phòng hội nghị còn trống cho cuộc họp.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "Online ordering became ------- among our customers.",
+     "options": [
+      "popularity",
+      "popularly",
+      "popular",
+      "popularize"
+     ],
+     "ans": 2,
+     "why": "Became là động từ nối nên cần tính từ popular làm bổ ngữ. Popularly là trạng từ; popularize là động từ.",
+     "vi": "Việc đặt hàng trực tuyến trở nên phổ biến trong khách hàng của chúng tôi.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "Ms. Tanaka is the ------- of the design team.",
+     "options": [
+      "manage",
+      "managerial",
+      "manager",
+      "managed"
+     ],
+     "ans": 2,
+     "why": "Sau mạo từ the và trước of cần danh từ chỉ người: manager. Managerial là tính từ nên không đứng ở vị trí này.",
+     "vi": "Bà Tanaka là quản lý của nhóm thiết kế.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "Most customers find the new website ------- to use.",
+     "options": [
+      "easy",
+      "ease",
+      "easily",
+      "easiness"
+     ],
+     "ans": 0,
+     "why": "Mẫu find + tân ngữ + tính từ: easy. Easily là trạng từ nên không dùng để mô tả website sau find.",
+     "vi": "Hầu hết khách hàng thấy trang web mới dễ sử dụng.",
+     "tag": "sentence-structure"
+    }
+   ]
+  },
+  {
+   "id": "d1-p2",
+   "title": "Bài 2: Vị trí của danh từ, tính từ, trạng từ, động từ",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d1-l2",
+   "items": [
+    {
+     "q": "The company made an ------- about the new policy.",
+     "options": [
+      "announce",
+      "announced",
+      "announcement",
+      "announcing"
+     ],
+     "ans": 2,
+     "why": "Sau mạo từ an cần danh từ: announcement. Các dạng còn lại là động từ hoặc dạng động từ.",
+     "vi": "Công ty đã đưa ra một thông báo về chính sách mới.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Ms. Park gave a ------- presentation about sales.",
+     "options": [
+      "persuasive",
+      "persuade",
+      "persuasively",
+      "persuasion"
+     ],
+     "ans": 0,
+     "why": "Giữa mạo từ a và danh từ presentation cần tính từ: persuasive. Persuasively là trạng từ, persuade là động từ.",
+     "vi": "Cô Park đã có bài thuyết trình thuyết phục về doanh số.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Ms. Cole ------- answered every customer email.",
+     "options": [
+      "prompt",
+      "promptness",
+      "prompted",
+      "promptly"
+     ],
+     "ans": 3,
+     "why": "Giữa chủ ngữ và động từ answered cần trạng từ: promptly. Prompt là tính từ, promptness là danh từ.",
+     "vi": "Cô Cole trả lời mọi email của khách hàng ngay lập tức.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The new printer is ------- reliable.",
+     "options": [
+      "remark",
+      "remarkably",
+      "remarkable",
+      "remarks"
+     ],
+     "ans": 1,
+     "why": "Cần từ bổ nghĩa cho tính từ reliable → trạng từ remarkably. Remarkable là tính từ nên không bổ nghĩa cho tính từ khác.",
+     "vi": "Máy in mới đáng tin cậy một cách đáng kinh ngạc.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "Please send us your ------- by Friday.",
+     "options": [
+      "confirm",
+      "confirmation",
+      "confirming",
+      "confirmed"
+     ],
+     "ans": 1,
+     "why": "Sau tính từ sở hữu your cần danh từ: confirmation. Các đáp án khác là dạng động từ.",
+     "vi": "Vui lòng gửi cho chúng tôi xác nhận của bạn trước thứ Sáu.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The ------- of the report took three weeks.",
+     "options": [
+      "complete",
+      "completed",
+      "completely",
+      "completion"
+     ],
+     "ans": 3,
+     "why": "Sau The và trước of cần danh từ: completion. Complete (động từ/tính từ), completed (tính từ) và completely (trạng từ) đều không đúng vị trí.",
+     "vi": "Việc hoàn thành báo cáo mất ba tuần.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Her ------- at the firm begins next week.",
+     "options": [
+      "employment",
+      "employ",
+      "employed",
+      "employing"
+     ],
+     "ans": 0,
+     "why": "Sau tính từ sở hữu Her cần danh từ chủ ngữ: employment (việc làm). Employ là động từ.",
+     "vi": "Công việc của cô ấy tại công ty bắt đầu từ tuần sau.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The seminar was very ------- for new managers.",
+     "options": [
+      "help",
+      "helpfully",
+      "helpful",
+      "helpfulness"
+     ],
+     "ans": 2,
+     "why": "Sau was + very cần tính từ: helpful. Helpfully là trạng từ, helpfulness là danh từ.",
+     "vi": "Buổi hội thảo rất hữu ích cho các quản lý mới.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "We will ------- all expense reports by Friday.",
+     "options": [
+      "reviewer",
+      "reviews",
+      "review",
+      "reviewed"
+     ],
+     "ans": 2,
+     "why": "Sau will cần động từ nguyên mẫu: review. Reviews, reviewed đã chia; reviewer là danh từ.",
+     "vi": "Chúng tôi sẽ xem xét mọi báo cáo chi phí trước thứ Sáu.",
+     "tag": "word-form-verb"
+    },
+    {
+     "q": "The hotel offers ------- parking to all guests.",
+     "options": [
+      "free",
+      "freely",
+      "freedom",
+      "freed"
+     ],
+     "ans": 0,
+     "why": "Trước danh từ parking cần tính từ: free (miễn phí). Freely là trạng từ, freedom là danh từ.",
+     "vi": "Khách sạn cung cấp chỗ đậu xe miễn phí cho mọi khách.",
+     "tag": "word-form-adj"
+    }
+   ]
+  },
+  {
+   "id": "d1-p3",
+   "title": "Bài 3: Nhận diện từ loại qua hậu tố",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d1-l3",
+   "items": [
+    {
+     "q": "The company will ------- its software next year.",
+     "options": [
+      "modern",
+      "modernly",
+      "modernize",
+      "modernization"
+     ],
+     "ans": 2,
+     "why": "Sau will cần động từ nguyên mẫu; đuôi -ize là đuôi động từ: modernize. Modern là tính từ, modernization là danh từ.",
+     "vi": "Công ty sẽ hiện đại hóa phần mềm của mình vào năm sau.",
+     "tag": "word-form-verb"
+    },
+    {
+     "q": "New machines can ------- the production process.",
+     "options": [
+      "shorten",
+      "short",
+      "shortly",
+      "shortness"
+     ],
+     "ans": 0,
+     "why": "Sau can cần động từ; đuôi -en tạo động từ: shorten. Short là tính từ, shortly là trạng từ.",
+     "vi": "Máy móc mới có thể rút ngắn quy trình sản xuất.",
+     "tag": "word-form-verb"
+    },
+    {
+     "q": "Please ------- your travel dates by email.",
+     "options": [
+      "verification",
+      "verifiable",
+      "verifiably",
+      "verify"
+     ],
+     "ans": 3,
+     "why": "Câu mệnh lệnh Please + động từ nguyên mẫu; đuôi -ify là động từ: verify.",
+     "vi": "Vui lòng xác minh ngày đi lại của bạn qua email.",
+     "tag": "word-form-verb"
+    },
+    {
+     "q": "The supervisor will ------- the new software to the staff.",
+     "options": [
+      "demonstration",
+      "demonstrate",
+      "demonstrative",
+      "demonstratively"
+     ],
+     "ans": 1,
+     "why": "Sau will cần động từ nguyên mẫu; đuôi -ate là đuôi động từ: demonstrate. Demonstration là danh từ.",
+     "vi": "Người giám sát sẽ trình diễn phần mềm mới cho nhân viên.",
+     "tag": "word-form-verb"
+    },
+    {
+     "q": "Ms. Cho works as a ------- for a large firm.",
+     "options": [
+      "consult",
+      "consultant",
+      "consultation",
+      "consultative"
+     ],
+     "ans": 1,
+     "why": "Sau as a cần danh từ chỉ người làm nghề: consultant (đuôi -ant). Consultation là buổi tư vấn (vật), không hợp nghĩa.",
+     "vi": "Cô Cho làm tư vấn viên cho một công ty lớn.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The company is known for the ------- of its products.",
+     "options": [
+      "reliable",
+      "reliably",
+      "rely",
+      "reliability"
+     ],
+     "ans": 3,
+     "why": "Sau the và trước of cần danh từ; đuôi -ity là danh từ: reliability.",
+     "vi": "Công ty nổi tiếng về độ tin cậy của sản phẩm.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "The manager gave an ------- answer to the question.",
+     "options": [
+      "effective",
+      "effect",
+      "effectively",
+      "effectiveness"
+     ],
+     "ans": 0,
+     "why": "Giữa an và danh từ answer cần tính từ; đuôi -ive là tính từ: effective.",
+     "vi": "Người quản lý đã đưa ra câu trả lời hiệu quả cho câu hỏi.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The two teams worked ------- to finish the project.",
+     "options": [
+      "efficient",
+      "efficiency",
+      "efficiently",
+      "efficiencies"
+     ],
+     "ans": 2,
+     "why": "Bổ nghĩa cho động từ worked cần trạng từ đuôi -ly: efficiently. Efficient là tính từ.",
+     "vi": "Hai nhóm làm việc hiệu quả để hoàn thành dự án.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The hotel offers ------- rates for groups.",
+     "options": [
+      "specially",
+      "specialize",
+      "special",
+      "specialization"
+     ],
+     "ans": 2,
+     "why": "Trước danh từ rates cần tính từ: special. Specially là trạng từ, specialize là động từ.",
+     "vi": "Khách sạn có mức giá đặc biệt cho nhóm khách.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Ms. Kim was ------- during the meeting, so she took notes.",
+     "options": [
+      "attentive",
+      "attend",
+      "attention",
+      "attentively"
+     ],
+     "ans": 0,
+     "why": "Sau was cần tính từ; đuôi -ive là tính từ: attentive (chăm chú). Attention là danh từ.",
+     "vi": "Cô Kim chăm chú trong cuộc họp nên đã ghi chú.",
+     "tag": "word-form-adj"
+    }
+   ]
+  },
+  {
+   "id": "d1-p4",
+   "title": "Bài 4: Quy trình giải câu từ loại",
+   "instr": "Chọn đáp án đúng để hoàn thành câu.",
+   "lesson": "d1-l4",
+   "items": [
+    {
+     "q": "A ------- increase in sales surprised the analysts.",
+     "options": [
+      "sharply",
+      "sharpen",
+      "sharp",
+      "sharpness"
+     ],
+     "ans": 2,
+     "why": "Giữa a và danh từ increase cần tính từ: sharp. Sharply là trạng từ, sharpen là động từ.",
+     "vi": "Mức tăng mạnh của doanh số làm các nhà phân tích ngạc nhiên.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Ms. Reyes ------- reviews every contract before signing.",
+     "options": [
+      "carefully",
+      "careful",
+      "care",
+      "caring"
+     ],
+     "ans": 0,
+     "why": "Chỗ trống nằm giữa chủ ngữ và động từ reviews → trạng từ: carefully.",
+     "vi": "Cô Reyes xem xét kỹ lưỡng mọi hợp đồng trước khi ký.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The clients were ------- with the quality of our service.",
+     "options": [
+      "satisfy",
+      "satisfaction",
+      "satisfactorily",
+      "satisfied"
+     ],
+     "ans": 3,
+     "why": "Sau were cần tính từ: satisfied. Satisfaction là danh từ, satisfactorily là trạng từ.",
+     "vi": "Khách hàng hài lòng với chất lượng dịch vụ của chúng tôi.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Our new ------- is very popular with young customers.",
+     "options": [
+      "productive",
+      "product",
+      "productively",
+      "produced"
+     ],
+     "ans": 1,
+     "why": "Sau Our new cần danh từ chủ ngữ: product. Các từ còn lại là tính từ/trạng từ/dạng động từ.",
+     "vi": "Sản phẩm mới của chúng tôi rất được khách hàng trẻ ưa chuộng.",
+     "tag": "word-form-noun"
+    },
+    {
+     "q": "Good lighting makes the parking lot -------.",
+     "options": [
+      "safely",
+      "safe",
+      "safety",
+      "safes"
+     ],
+     "ans": 1,
+     "why": "Make + tân ngữ + tính từ: safe. Safely là trạng từ, safety là danh từ.",
+     "vi": "Ánh sáng tốt làm bãi đậu xe an toàn.",
+     "tag": "sentence-structure"
+    },
+    {
+     "q": "Mr. Han spoke ------- about the budget at the meeting.",
+     "options": [
+      "confident",
+      "confidence",
+      "confide",
+      "confidently"
+     ],
+     "ans": 3,
+     "why": "Bổ nghĩa cho động từ spoke cần trạng từ: confidently. Confident là tính từ.",
+     "vi": "Ông Han nói tự tin về ngân sách trong cuộc họp.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "Please make sure the printer is ------- before you leave.",
+     "options": [
+      "operational",
+      "operation",
+      "operate",
+      "operationally"
+     ],
+     "ans": 0,
+     "why": "Sau is cần tính từ: operational (hoạt động được). Operation là danh từ.",
+     "vi": "Vui lòng đảm bảo máy in hoạt động được trước khi bạn rời đi.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "The board reached a ------- decision about the budget.",
+     "options": [
+      "finally",
+      "finalize",
+      "final",
+      "finality"
+     ],
+     "ans": 2,
+     "why": "Giữa a và danh từ decision cần tính từ: final. Finally là trạng từ, finalize là động từ.",
+     "vi": "Hội đồng đã đạt quyết định cuối cùng về ngân sách.",
+     "tag": "word-form-adj"
+    },
+    {
+     "q": "Our company has ------- improved its customer service.",
+     "options": [
+      "significant",
+      "significance",
+      "significantly",
+      "signify"
+     ],
+     "ans": 2,
+     "why": "Giữa has và improved cần trạng từ: significantly. Significant là tính từ.",
+     "vi": "Công ty chúng tôi đã cải thiện đáng kể dịch vụ khách hàng.",
+     "tag": "word-form-adv"
+    },
+    {
+     "q": "The company needs a ------- plan to reduce costs.",
+     "options": [
+      "flexible",
+      "flex",
+      "flexibly",
+      "flexibility"
+     ],
+     "ans": 0,
+     "why": "Giữa a và danh từ plan cần tính từ: flexible. Flexibly là trạng từ, flexibility là danh từ.",
+     "vi": "Công ty cần một kế hoạch linh hoạt để giảm chi phí.",
+     "tag": "word-form-adj"
+    }
+   ]
+  }
+ ],
+ "vocab": {
+  "theme": "Văn phòng & công việc hằng ngày",
+  "words": [
+   {
+    "w": "submit",
+    "pos": "v",
+    "ipa": "/səbˈmɪt/",
+    "vi": "nộp, đệ trình",
+    "ex": "Please submit your expense report by Friday.",
+    "exvi": "Vui lòng nộp báo cáo chi phí trước thứ Sáu.",
+    "fam": "submission (n)",
+    "colloc": [
+     "submit a proposal",
+     "submit an application"
+    ]
+   },
+   {
+    "w": "schedule",
+    "pos": "n/v",
+    "ipa": "/ˈskedʒuːl/",
+    "vi": "lịch trình; lên lịch",
+    "ex": "The schedule for the workshop has changed.",
+    "exvi": "Lịch của buổi hội thảo đã thay đổi.",
+    "fam": "scheduled (adj), scheduling (n)",
+    "colloc": [
+     "on schedule",
+     "schedule a meeting"
+    ]
+   },
+   {
+    "w": "attend",
+    "pos": "v",
+    "ipa": "/əˈtend/",
+    "vi": "tham dự",
+    "ex": "All staff must attend the safety training.",
+    "exvi": "Toàn bộ nhân viên phải tham dự buổi tập huấn an toàn.",
+    "fam": "attendance (n), attendee (n)",
+    "colloc": [
+     "attend a meeting",
+     "attend a seminar"
+    ]
+   },
+   {
+    "w": "review",
+    "pos": "v/n",
+    "ipa": "/rɪˈvjuː/",
+    "vi": "xem xét, đánh giá",
+    "ex": "Please review the attached contract.",
+    "exvi": "Vui lòng xem lại hợp đồng đính kèm.",
+    "fam": "reviewer (n)",
+    "colloc": [
+     "review a document",
+     "performance review"
+    ]
+   },
+   {
+    "w": "approve",
+    "pos": "v",
+    "ipa": "/əˈpruːv/",
+    "vi": "phê duyệt",
+    "ex": "The director approved the new budget.",
+    "exvi": "Giám đốc đã phê duyệt ngân sách mới.",
+    "fam": "approval (n), approved (adj)",
+    "colloc": [
+     "approve a request",
+     "approve a plan"
+    ]
+   },
+   {
+    "w": "assign",
+    "pos": "v",
+    "ipa": "/əˈsaɪn/",
+    "vi": "giao (việc)",
+    "ex": "The manager assigned a new task to Ms. Park.",
+    "exvi": "Quản lý giao một nhiệm vụ mới cho cô Park.",
+    "fam": "assignment (n)",
+    "colloc": [
+     "assign a task",
+     "be assigned to a team"
+    ]
+   },
+   {
+    "w": "deadline",
+    "pos": "n",
+    "ipa": "/ˈdedlaɪn/",
+    "vi": "hạn chót",
+    "ex": "We must meet the deadline for the proposal.",
+    "exvi": "Chúng ta phải kịp hạn chót nộp đề xuất.",
+    "fam": "—",
+    "colloc": [
+     "meet a deadline",
+     "extend a deadline"
+    ]
+   },
+   {
+    "w": "colleague",
+    "pos": "n",
+    "ipa": "/ˈkɑːliːɡ/",
+    "vi": "đồng nghiệp",
+    "ex": "I asked a colleague to check my report.",
+    "exvi": "Tôi nhờ một đồng nghiệp kiểm tra báo cáo của mình.",
+    "fam": "—",
+    "colloc": [
+     "a former colleague",
+     "colleagues in the department"
+    ]
+   },
+   {
+    "w": "department",
+    "pos": "n",
+    "ipa": "/dɪˈpɑːrtmənt/",
+    "vi": "phòng, ban",
+    "ex": "She works in the accounting department.",
+    "exvi": "Cô ấy làm ở phòng kế toán.",
+    "fam": "departmental (adj)",
+    "colloc": [
+     "sales department",
+     "department head"
+    ]
+   },
+   {
+    "w": "document",
+    "pos": "n/v",
+    "ipa": "/ˈdɑːkjumənt/",
+    "vi": "tài liệu; ghi lại bằng văn bản",
+    "ex": "Please save the document before you leave.",
+    "exvi": "Vui lòng lưu tài liệu trước khi rời đi.",
+    "fam": "documentation (n)",
+    "colloc": [
+     "attach a document",
+     "legal document"
+    ]
+   },
+   {
+    "w": "appointment",
+    "pos": "n",
+    "ipa": "/əˈpɔɪntmənt/",
+    "vi": "cuộc hẹn",
+    "ex": "I have an appointment with a client at 3 p.m.",
+    "exvi": "Tôi có cuộc hẹn với khách hàng lúc 3 giờ chiều.",
+    "fam": "appoint (v)",
+    "colloc": [
+     "make an appointment",
+     "cancel an appointment"
+    ]
+   },
+   {
+    "w": "agenda",
+    "pos": "n",
+    "ipa": "/əˈdʒendə/",
+    "vi": "chương trình nghị sự",
+    "ex": "The agenda includes three main topics.",
+    "exvi": "Chương trình nghị sự gồm ba chủ đề chính.",
+    "fam": "—",
+    "colloc": [
+     "meeting agenda",
+     "on the agenda"
+    ]
+   },
+   {
+    "w": "task",
+    "pos": "n",
+    "ipa": "/tæsk/",
+    "vi": "nhiệm vụ, công việc",
+    "ex": "Her first task is to update the database.",
+    "exvi": "Nhiệm vụ đầu tiên của cô ấy là cập nhật cơ sở dữ liệu.",
+    "fam": "—",
+    "colloc": [
+     "complete a task",
+     "daily tasks"
+    ]
+   },
+   {
+    "w": "revise",
+    "pos": "v",
+    "ipa": "/rɪˈvaɪz/",
+    "vi": "chỉnh sửa, sửa đổi",
+    "ex": "Mr. Wu revised the schedule after the meeting.",
+    "exvi": "Ông Wu đã chỉnh sửa lịch sau cuộc họp.",
+    "fam": "revision (n), revised (adj)",
+    "colloc": [
+     "revise a draft",
+     "revised schedule"
+    ]
+   },
+   {
+    "w": "reply",
+    "pos": "v/n",
+    "ipa": "/rɪˈplaɪ/",
+    "vi": "trả lời",
+    "ex": "Please reply to this email by Monday.",
+    "exvi": "Vui lòng trả lời email này trước thứ Hai.",
+    "fam": "—",
+    "colloc": [
+     "reply to an email",
+     "prompt reply"
+    ]
+   },
+   {
+    "w": "organize",
+    "pos": "v",
+    "ipa": "/ˈɔːrɡənaɪz/",
+    "vi": "tổ chức, sắp xếp",
+    "ex": "She organized the annual company picnic.",
+    "exvi": "Cô ấy đã tổ chức buổi dã ngoại thường niên của công ty.",
+    "fam": "organization (n), organized (adj)",
+    "colloc": [
+     "organize an event",
+     "organize files"
+    ]
+   },
+   {
+    "w": "prepare",
+    "pos": "v",
+    "ipa": "/prɪˈper/",
+    "vi": "chuẩn bị",
+    "ex": "We need to prepare the presentation today.",
+    "exvi": "Hôm nay chúng ta cần chuẩn bị bài thuyết trình.",
+    "fam": "preparation (n), prepared (adj)",
+    "colloc": [
+     "prepare a report",
+     "prepare for a meeting"
+    ]
+   },
+   {
+    "w": "update",
+    "pos": "v/n",
+    "ipa": "/ʌpˈdeɪt/",
+    "vi": "cập nhật",
+    "ex": "Please update the client list every week.",
+    "exvi": "Vui lòng cập nhật danh sách khách hàng mỗi tuần.",
+    "fam": "updated (adj)",
+    "colloc": [
+     "update a file",
+     "send an update"
+    ]
+   },
+   {
+    "w": "workload",
+    "pos": "n",
+    "ipa": "/ˈwɜːrkloʊd/",
+    "vi": "khối lượng công việc",
+    "ex": "The team has a heavy workload this month.",
+    "exvi": "Nhóm có khối lượng công việc nặng trong tháng này.",
+    "fam": "—",
+    "colloc": [
+     "heavy workload",
+     "reduce the workload"
+    ]
+   },
+   {
+    "w": "reminder",
+    "pos": "n",
+    "ipa": "/rɪˈmaɪndər/",
+    "vi": "lời nhắc",
+    "ex": "I sent a reminder about the meeting.",
+    "exvi": "Tôi đã gửi lời nhắc về cuộc họp.",
+    "fam": "remind (v)",
+    "colloc": [
+     "send a reminder",
+     "friendly reminder"
+    ]
+   },
+   {
+    "w": "notify",
+    "pos": "v",
+    "ipa": "/ˈnoʊtɪfaɪ/",
+    "vi": "thông báo cho",
+    "ex": "We will notify you when the order ships.",
+    "exvi": "Chúng tôi sẽ thông báo cho bạn khi đơn hàng được gửi đi.",
+    "fam": "notification (n)",
+    "colloc": [
+     "notify employees",
+     "notify in advance"
+    ]
+   },
+   {
+    "w": "complete",
+    "pos": "v/adj",
+    "ipa": "/kəmˈpliːt/",
+    "vi": "hoàn thành; đầy đủ",
+    "ex": "Please complete the form and return it.",
+    "exvi": "Vui lòng điền đầy đủ biểu mẫu và gửi lại.",
+    "fam": "completion (n), completely (adv)",
+    "colloc": [
+     "complete a form",
+     "complete a project"
+    ]
+   },
+   {
+    "w": "available",
+    "pos": "adj",
+    "ipa": "/əˈveɪləbl/",
+    "vi": "có sẵn, rảnh",
+    "ex": "Dr. Lee is not available until Thursday.",
+    "exvi": "Bác sĩ Lee không rảnh cho đến thứ Năm.",
+    "fam": "availability (n), unavailable (adj)",
+    "colloc": [
+     "readily available",
+     "available for a meeting"
+    ]
+   },
+   {
+    "w": "urgent",
+    "pos": "adj",
+    "ipa": "/ˈɜːrdʒənt/",
+    "vi": "khẩn cấp",
+    "ex": "I received an urgent message from the client.",
+    "exvi": "Tôi nhận được tin nhắn khẩn từ khách hàng.",
+    "fam": "urgency (n), urgently (adv)",
+    "colloc": [
+     "an urgent matter",
+     "urgent request"
+    ]
+   },
+   {
+    "w": "efficient",
+    "pos": "adj",
+    "ipa": "/ɪˈfɪʃnt/",
+    "vi": "hiệu quả, làm việc năng suất",
+    "ex": "The new software is more efficient than the old one.",
+    "exvi": "Phần mềm mới hiệu quả hơn phần mềm cũ.",
+    "fam": "efficiency (n), efficiently (adv)",
+    "colloc": [
+     "efficient use of time",
+     "efficient service"
+    ]
+   }
+  ]
+ },
+ "vocabPractice": [
+  {
+   "q": "All staff are required to ------- the safety workshop on Friday.",
+   "options": [
+    "reply",
+    "revise",
+    "attend",
+    "update"
+   ],
+   "ans": 2,
+   "why": "Attend = tham dự (a workshop). Reply/revise/update không đi với workshop theo nghĩa này.",
+   "vi": "Toàn bộ nhân viên phải tham dự buổi tập huấn an toàn vào thứ Sáu.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Please ------- the attached contract and let me know your comments.",
+   "options": [
+    "review",
+    "attend",
+    "notify",
+    "assign"
+   ],
+   "ans": 0,
+   "why": "Review = xem xét; hợp với \"cho tôi biết nhận xét\". Các từ khác không đi với contract trong ngữ cảnh này.",
+   "vi": "Vui lòng xem lại hợp đồng đính kèm và cho tôi biết nhận xét.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The director must ------- the budget before we can order new computers.",
+   "options": [
+    "reply",
+    "notify",
+    "attend",
+    "approve"
+   ],
+   "ans": 3,
+   "why": "Approve = phê duyệt ngân sách trước khi đặt mua.",
+   "vi": "Giám đốc phải phê duyệt ngân sách trước khi chúng ta đặt mua máy tính mới.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Ms. Tran asked her ------- to cover her shift on Saturday.",
+   "options": [
+    "deadline",
+    "colleague",
+    "memo",
+    "agenda"
+   ],
+   "ans": 1,
+   "why": "Chỉ có colleague (đồng nghiệp) mới có thể thay ca; deadline, memo, agenda là vật.",
+   "vi": "Cô Tran nhờ đồng nghiệp làm thay ca của mình vào thứ Bảy.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Which ------- do you work in, sales or marketing?",
+   "options": [
+    "appointment",
+    "department",
+    "workload",
+    "reminder"
+   ],
+   "ans": 1,
+   "why": "Sales hay marketing là tên phòng ban → department.",
+   "vi": "Bạn làm ở phòng nào, kinh doanh hay tiếp thị?",
+   "tag": "vocab"
+  },
+  {
+   "q": "An ------- message from the CEO asked everyone to stay in the building.",
+   "options": [
+    "efficient",
+    "available",
+    "complete",
+    "urgent"
+   ],
+   "ans": 3,
+   "why": "Tin nhắn yêu cầu mọi người ở lại tòa nhà là tin khẩn: urgent.",
+   "vi": "Một tin nhắn khẩn từ CEO yêu cầu mọi người ở lại trong tòa nhà.",
+   "tag": "vocab"
+  },
+  {
+   "q": "A ------- was sent to all employees about the new schedule.",
+   "options": [
+    "notification",
+    "notify",
+    "notified",
+    "notifying"
+   ],
+   "ans": 0,
+   "why": "Sau mạo từ A cần danh từ: notification (thông báo).",
+   "vi": "Một thông báo về lịch mới đã được gửi tới toàn thể nhân viên.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Mr. Chen has not yet ------- to my invitation.",
+   "options": [
+    "attended",
+    "approved",
+    "replied",
+    "assigned"
+   ],
+   "ans": 2,
+   "why": "Cụm reply to = trả lời. Các động từ khác không đi với giới từ to theo nghĩa này.",
+   "vi": "Ông Chen vẫn chưa trả lời lời mời của tôi.",
+   "tag": "collocation"
+  },
+  {
+   "q": "Please send me an ------- on the project.",
+   "options": [
+    "updated",
+    "updating",
+    "update",
+    "updates"
+   ],
+   "ans": 2,
+   "why": "Sau mạo từ an cần danh từ số ít: update (bản cập nhật). Updates số nhiều, không đi với an.",
+   "vi": "Vui lòng gửi cho tôi bản cập nhật về dự án.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Mr. Garcia sent a friendly ------- about Monday's staff meeting.",
+   "options": [
+    "reminder",
+    "workload",
+    "deadline",
+    "department"
+   ],
+   "ans": 0,
+   "why": "Friendly reminder = lời nhắc nhẹ nhàng; gửi (send) một lời nhắc về cuộc họp là hợp nghĩa. Workload, deadline, department không \"gửi\" được.",
+   "vi": "Ông Garcia đã gửi một lời nhắc nhẹ nhàng về cuộc họp nhân viên hôm thứ Hai.",
+   "tag": "vocab"
+  }
+ ],
+ "test": [
+  {
+   "q": "The finance team ------- the annual budget last week.",
+   "options": [
+    "preparation",
+    "preparing",
+    "prepared",
+    "prepare"
+   ],
+   "ans": 2,
+   "why": "Cần động từ chính ở quá khứ (last week): prepared. Preparation là danh từ, preparing không đủ làm động từ chính.",
+   "vi": "Nhóm tài chính đã chuẩn bị ngân sách năm vào tuần trước.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "The conference schedule seems ------- to all participants.",
+   "options": [
+    "clear",
+    "clearly",
+    "clarity",
+    "clearing"
+   ],
+   "ans": 0,
+   "why": "Seems là động từ nối nên sau đó cần tính từ: clear. Clearly là trạng từ.",
+   "vi": "Lịch hội nghị có vẻ rõ ràng với mọi người tham dự.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "Please keep the meeting room ------- after use.",
+   "options": [
+    "tidily",
+    "tidiness",
+    "tide",
+    "tidy"
+   ],
+   "ans": 3,
+   "why": "Keep + tân ngữ + tính từ: tidy. Tidily là trạng từ, tidiness là danh từ.",
+   "vi": "Vui lòng giữ phòng họp gọn gàng sau khi sử dụng.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "The new app makes online banking ------- for older customers.",
+   "options": [
+    "accessibly",
+    "accessible",
+    "access",
+    "accessing"
+   ],
+   "ans": 1,
+   "why": "Make + tân ngữ + tính từ: accessible (dễ tiếp cận). Đuôi -ible là tính từ.",
+   "vi": "Ứng dụng mới giúp ngân hàng trực tuyến dễ tiếp cận với khách hàng lớn tuổi.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "Mr. Lopez submitted a ------- explanation for the delay.",
+   "options": [
+    "detail",
+    "detailed",
+    "details",
+    "detailing"
+   ],
+   "ans": 1,
+   "why": "Giữa a và danh từ explanation cần tính từ: detailed. Detail/details là danh từ nên không đứng đúng vị trí này.",
+   "vi": "Ông Lopez đã nộp lời giải thích chi tiết về sự chậm trễ.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The factory has ------- increased its output.",
+   "options": [
+    "steady",
+    "steadiness",
+    "steadied",
+    "steadily"
+   ],
+   "ans": 3,
+   "why": "Giữa has và increased cần trạng từ: steadily. Steady là tính từ.",
+   "vi": "Nhà máy đã tăng sản lượng đều đặn.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The ------- of our Seoul office created fifty new jobs.",
+   "options": [
+    "expansion",
+    "expand",
+    "expanded",
+    "expansive"
+   ],
+   "ans": 0,
+   "why": "Sau The và trước of cần danh từ; đuôi -sion là danh từ: expansion.",
+   "vi": "Việc mở rộng văn phòng Seoul đã tạo ra năm mươi việc làm mới.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Employees must show proper ------- at the entrance.",
+   "options": [
+    "identify",
+    "identifiable",
+    "identification",
+    "identified"
+   ],
+   "ans": 2,
+   "why": "Sau tính từ proper cần danh từ: identification (giấy tờ nhận dạng).",
+   "vi": "Nhân viên phải xuất trình giấy tờ nhận dạng hợp lệ ở cổng vào.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "We need to ------- our travel procedures.",
+   "options": [
+    "standard",
+    "standardization",
+    "standardize",
+    "standardly"
+   ],
+   "ans": 2,
+   "why": "Sau to cần động từ nguyên mẫu; đuôi -ize là động từ: standardize.",
+   "vi": "Chúng ta cần chuẩn hóa quy trình đi công tác.",
+   "tag": "word-form-verb"
+  },
+  {
+   "q": "A ------- employee is a valuable asset.",
+   "options": [
+    "productive",
+    "product",
+    "productively",
+    "productivity"
+   ],
+   "ans": 0,
+   "why": "Giữa A và danh từ employee cần tính từ: productive. Productively là trạng từ.",
+   "vi": "Một nhân viên làm việc năng suất là tài sản quý giá.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The new model is ------- popular among young buyers.",
+   "options": [
+    "extreme",
+    "extremity",
+    "extremes",
+    "extremely"
+   ],
+   "ans": 3,
+   "why": "Bổ nghĩa cho tính từ popular cần trạng từ: extremely.",
+   "vi": "Mẫu mới cực kỳ được người mua trẻ ưa chuộng.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "Ms. Sato ------- the sales figures to the board.",
+   "options": [
+    "presentable",
+    "presented",
+    "presentation",
+    "presenting"
+   ],
+   "ans": 1,
+   "why": "Sau chủ ngữ cần động từ chính đã chia: presented.",
+   "vi": "Cô Sato đã trình bày số liệu bán hàng cho hội đồng.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "------- from several departments attended the workshop.",
+   "options": [
+    "Represent",
+    "Representatives",
+    "Representing",
+    "Represented"
+   ],
+   "ans": 1,
+   "why": "Chỗ trống làm chủ ngữ nên cần danh từ: Representatives (đại diện). Các từ còn lại là dạng động từ.",
+   "vi": "Đại diện của nhiều phòng ban đã tham dự buổi hội thảo.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The new office location is very ------- to public transportation.",
+   "options": [
+    "convenience",
+    "conveniently",
+    "convene",
+    "convenient"
+   ],
+   "ans": 3,
+   "why": "Sau is very cần tính từ: convenient. Đuôi -ent là tính từ.",
+   "vi": "Vị trí văn phòng mới rất thuận tiện để đi lại bằng phương tiện công cộng.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "Please ------- your expense report to the accounting department by noon.",
+   "options": [
+    "submit",
+    "attend",
+    "reply",
+    "organize"
+   ],
+   "ans": 0,
+   "why": "Submit a report to a department = nộp báo cáo cho phòng ban.",
+   "vi": "Vui lòng nộp báo cáo chi phí cho phòng kế toán trước buổi trưa.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The ------- for today's meeting includes three items.",
+   "options": [
+    "deadline",
+    "workload",
+    "agenda",
+    "reminder"
+   ],
+   "ans": 2,
+   "why": "Agenda = chương trình nghị sự, gồm các mục thảo luận.",
+   "vi": "Chương trình nghị sự của cuộc họp hôm nay gồm ba mục.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Staff must meet the ------- for submitting expense reports.",
+   "options": [
+    "colleague",
+    "appointment",
+    "deadline",
+    "department"
+   ],
+   "ans": 2,
+   "why": "Collocation meet the deadline = kịp hạn chót.",
+   "vi": "Nhân viên phải kịp hạn chót nộp báo cáo chi phí.",
+   "tag": "collocation"
+  },
+  {
+   "q": "The manager will ------- tasks to each team member.",
+   "options": [
+    "assign",
+    "reply",
+    "revise",
+    "attend"
+   ],
+   "ans": 0,
+   "why": "Assign tasks to = giao việc cho.",
+   "vi": "Quản lý sẽ giao nhiệm vụ cho từng thành viên trong nhóm.",
+   "tag": "vocab"
+  },
+  {
+   "q": "The IT department will ------- all employees when the system is back online.",
+   "options": [
+    "revise",
+    "approve",
+    "attend",
+    "notify"
+   ],
+   "ans": 3,
+   "why": "Notify somebody when... = thông báo cho ai khi...",
+   "vi": "Phòng CNTT sẽ thông báo cho toàn bộ nhân viên khi hệ thống hoạt động lại.",
+   "tag": "vocab"
+  },
+  {
+   "q": "She is a very ------- worker who rarely wastes time.",
+   "options": [
+    "urgent",
+    "efficient",
+    "complete",
+    "revised"
+   ],
+   "ans": 1,
+   "why": "Người ít lãng phí thời gian là người làm việc hiệu quả: efficient.",
+   "vi": "Cô ấy là nhân viên rất hiệu quả, hiếm khi lãng phí thời gian.",
+   "tag": "vocab"
+  }
+ ],
+ "reviewBank": [
+  {
+   "q": "The audit team ------- all records in March.",
+   "options": [
+    "reviewer",
+    "reviewing",
+    "reviewed",
+    "reviewable"
+   ],
+   "ans": 2,
+   "why": "Cần động từ chính đã chia sau chủ ngữ: reviewed. Reviewer là danh từ, reviewing không làm động từ chính đứng một mình.",
+   "vi": "Nhóm kiểm toán đã xem xét toàn bộ hồ sơ vào tháng Ba.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "The new policy seems ------- to everyone.",
+   "options": [
+    "fair",
+    "fairly",
+    "fairness",
+    "fairs"
+   ],
+   "ans": 0,
+   "why": "Seems là động từ nối nên cần tính từ: fair. Fairly là trạng từ.",
+   "vi": "Chính sách mới có vẻ công bằng với mọi người.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "Good lighting makes the office ------- to work in.",
+   "options": [
+    "pleasantly",
+    "pleasure",
+    "please",
+    "pleasant"
+   ],
+   "ans": 3,
+   "why": "Make + tân ngữ + tính từ: pleasant. Pleasure là danh từ.",
+   "vi": "Ánh sáng tốt làm văn phòng dễ chịu để làm việc.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "Most guests found the staff -------.",
+   "options": [
+    "politely",
+    "polite",
+    "politeness",
+    "impolitely"
+   ],
+   "ans": 1,
+   "why": "Find + tân ngữ + tính từ: polite. Politely là trạng từ.",
+   "vi": "Hầu hết khách thấy nhân viên lịch sự.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "The ------- of the warehouse will take two months.",
+   "options": [
+    "renovate",
+    "renovation",
+    "renovated",
+    "renovates"
+   ],
+   "ans": 1,
+   "why": "Sau The và trước of cần danh từ; đuôi -tion là danh từ: renovation.",
+   "vi": "Việc cải tạo nhà kho sẽ mất hai tháng.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "Ms. Alvarez gave a very ------- speech at the dinner.",
+   "options": [
+    "impress",
+    "impressively",
+    "impression",
+    "impressive"
+   ],
+   "ans": 3,
+   "why": "Sau very và trước danh từ speech cần tính từ: impressive.",
+   "vi": "Bà Alvarez có bài phát biểu rất ấn tượng trong bữa tối.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The accountant ------- checked all the figures.",
+   "options": [
+    "thoroughly",
+    "thorough",
+    "thoroughness",
+    "throughout"
+   ],
+   "ans": 0,
+   "why": "Giữa chủ ngữ và động từ cần trạng từ: thoroughly.",
+   "vi": "Kế toán viên đã kiểm tra kỹ toàn bộ số liệu.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "The results were ------- positive.",
+   "options": [
+    "surprise",
+    "surprising",
+    "surprisingly",
+    "surprised"
+   ],
+   "ans": 2,
+   "why": "Bổ nghĩa cho tính từ positive cần trạng từ: surprisingly.",
+   "vi": "Kết quả tích cực một cách đáng ngạc nhiên.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "Please ------- the screws before moving the shelf.",
+   "options": [
+    "tight",
+    "tightly",
+    "tighten",
+    "tightness"
+   ],
+   "ans": 2,
+   "why": "Câu mệnh lệnh cần động từ; đuôi -en là động từ: tighten.",
+   "vi": "Vui lòng siết chặt các ốc vít trước khi di chuyển kệ.",
+   "tag": "word-form-verb"
+  },
+  {
+   "q": "The firm plans to ------- its operations in Asia.",
+   "options": [
+    "centralize",
+    "central",
+    "centrally",
+    "centralization"
+   ],
+   "ans": 0,
+   "why": "Sau to cần động từ nguyên mẫu; đuôi -ize là đuôi động từ: centralize (tập trung về một chỗ). Central là tính từ, centralization là danh từ.",
+   "vi": "Công ty dự định tập trung hóa các hoạt động của mình tại châu Á.",
+   "tag": "word-form-verb"
+  },
+  {
+   "q": "Please ------- the delivery address.",
+   "options": [
+    "specific",
+    "specifically",
+    "specification",
+    "specify"
+   ],
+   "ans": 3,
+   "why": "Câu mệnh lệnh cần động từ; đuôi -ify là động từ: specify.",
+   "vi": "Vui lòng nêu rõ địa chỉ giao hàng.",
+   "tag": "word-form-verb"
+  },
+  {
+   "q": "The ------- of the data is very important.",
+   "options": [
+    "accurate",
+    "accuracy",
+    "accurately",
+    "accuse"
+   ],
+   "ans": 1,
+   "why": "Sau The và trước of cần danh từ: accuracy.",
+   "vi": "Độ chính xác của dữ liệu rất quan trọng.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "An experienced ------- will lead the training.",
+   "options": [
+    "train",
+    "trainer",
+    "training",
+    "trained"
+   ],
+   "ans": 1,
+   "why": "Sau An experienced cần danh từ chỉ người làm chủ ngữ: trainer (đuôi -er).",
+   "vi": "Một huấn luyện viên giàu kinh nghiệm sẽ dẫn dắt buổi tập huấn.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "We offer ------- delivery on all orders.",
+   "options": [
+    "rely",
+    "reliably",
+    "reliability",
+    "reliable"
+   ],
+   "ans": 3,
+   "why": "Trước danh từ delivery cần tính từ: reliable.",
+   "vi": "Chúng tôi giao hàng đáng tin cậy cho mọi đơn hàng.",
+   "tag": "word-form-adj"
+  },
+  {
+   "q": "The meeting ended ------- after the vote.",
+   "options": [
+    "quickly",
+    "quick",
+    "quickness",
+    "quicken"
+   ],
+   "ans": 0,
+   "why": "Bổ nghĩa cho động từ ended cần trạng từ: quickly.",
+   "vi": "Cuộc họp kết thúc nhanh chóng sau cuộc bỏ phiếu.",
+   "tag": "word-form-adv"
+  },
+  {
+   "q": "Our ------- to quality has not changed.",
+   "options": [
+    "commit",
+    "committed",
+    "commitment",
+    "committing"
+   ],
+   "ans": 2,
+   "why": "Sau tính từ sở hữu Our cần danh từ: commitment (đuôi -ment).",
+   "vi": "Cam kết của chúng tôi về chất lượng không thay đổi.",
+   "tag": "word-form-noun"
+  },
+  {
+   "q": "The new employee seemed ------- on his first day.",
+   "options": [
+    "nerve",
+    "nervously",
+    "nervous",
+    "nervousness"
+   ],
+   "ans": 2,
+   "why": "Seemed là động từ nối nên cần tính từ: nervous.",
+   "vi": "Nhân viên mới có vẻ lo lắng vào ngày đầu tiên.",
+   "tag": "sentence-structure"
+  },
+  {
+   "q": "Ms. Kim will ------- the draft after hearing the feedback.",
+   "options": [
+    "revise",
+    "attend",
+    "assign",
+    "reply"
+   ],
+   "ans": 0,
+   "why": "Revise = chỉnh sửa bản thảo sau khi nghe phản hồi.",
+   "vi": "Cô Kim sẽ chỉnh sửa bản thảo sau khi nghe phản hồi.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Mr. Wu was out sick, so I took over his -------.",
+   "options": [
+    "memo",
+    "reminder",
+    "receipt",
+    "workload"
+   ],
+   "ans": 3,
+   "why": "Took over his workload = đảm nhận khối lượng công việc của anh ấy.",
+   "vi": "Ông Wu nghỉ ốm nên tôi đảm nhận khối lượng công việc của ông ấy.",
+   "tag": "vocab"
+  },
+  {
+   "q": "Dr. Lee is not ------- today, so please call tomorrow.",
+   "options": [
+    "complete",
+    "available",
+    "urgent",
+    "efficient"
+   ],
+   "ans": 1,
+   "why": "Not available = không rảnh/không có mặt; hợp với \"gọi lại ngày mai\".",
+   "vi": "Bác sĩ Lee hôm nay không rảnh, vui lòng gọi lại vào ngày mai.",
+   "tag": "vocab"
+  }
+ ]
+}
