@@ -60,6 +60,12 @@
     .ls-qa .ls-one { padding:12px 0; border-top:1px dashed var(--border); }
     .ls-qa .ls-one:first-of-type { border-top:none; }
     .ls-cd { font-weight:800; color:var(--blue-dark); margin-right:auto; }
+    .vi-line { display:block; margin-top:3px; font-size:13.5px; font-weight:600; font-style:italic; color:#2f7d32; line-height:1.4; }
+    .ls-q .vi-line { font-size:14px; }
+    .ls-line { font-size:14.5px; line-height:1.6; padding:6px 0; border-bottom:1px dashed var(--border); }
+    .ls-line:last-child { border-bottom:none; }
+    .ls-exp { font-size:14px; line-height:1.65; padding:0 0 6px; }
+    .ls-novi .vi-line, .ls-novi .vi-block { display:none !important; }
     .ls-cd a { color:var(--blue); }
     .group-toolbar { position:sticky; bottom:0; background:linear-gradient(to top, var(--bg-alt) 80%, transparent); padding:16px 0; display:flex; gap:10px; align-items:center; z-index:5; flex-wrap:wrap; }
     .au-errbox { background:#fff0f0; border:2px solid var(--red); border-radius:12px; padding:12px 14px; margin-bottom:12px; font-size:14px; line-height:1.6; }
@@ -107,6 +113,61 @@
 
     const yearLabel = id => (Catalog.YEARS.find(y => y.id === id)?.label) || id;
     const qNum = q => (q['Question Number'] || '').toString().replace(/\.0+$/, '');
+
+    // Vietnamese meaning, shown with the script on the 2nd play (toggle persisted, default on)
+    let showVi = localStorage.getItem('toeicets_listen_vi') !== '0';
+    // Pull the Vietnamese translation of the question and of each option out of the free-form
+    // "Explain" column. The sets come from several sources, so every layout seen in the data is handled:
+    //   "Dịch câu hỏi: …\nA: …"   "Câu hỏi: …\nA. …"   "A Anh ấy …"   "Dịch A: …"   plain lines in option order
+    //   "Dịch đáp án: (A) …; (B) …"   "Dịch các đáp án: A. … - B. …"   "Đáp án A (Kẹo): Sai - …"
+    //   "A: To repair a computer (Để sửa máy tính)"
+    function parseVi(explain, letters) {
+      const out = { q: '', opt: {} };
+      const t = String(explain || '').replace(/\r/g, '');
+      if (!t.trim()) return out;
+      const VI = /[àáạảãâầấậẩẫăằắặẳẵèéẹẻẽêềếệểễìíịỉĩòóọỏõôồốộổỗơờớợởỡùúụủũưừứựửữỳýỵỷỹđ]/i;
+      const strip = s => String(s).trim().replace(/^['"“”‘’]+|['"“”‘’.;]+$/g, '').trim();
+      const viOf = s => {
+        s = strip(s);
+        const m = s.match(/^([^()]*[A-Za-z][^()]*)\(([^()]*)\)\s*$/);
+        if (m && VI.test(m[2]) && !VI.test(m[1])) return strip(m[2]);
+        return s;
+      };
+      const lines = t.split('\n').map(l => l.trim()).filter(Boolean);
+      const isMeta = l => /^(Chọn|Đáp án đúng|Giải thích|Dẫn chứng|Bẫy|Mẹo|Lưu ý|Từ vựng|\d+\.)/i.test(l);
+      for (const l of lines) {
+        const m = l.match(/^(?:Dịch câu hỏi|Câu hỏi|Question)\s*:\s*(.+)$/i);
+        if (m) { out.q = viOf(m[1]); break; }
+      }
+      for (const l of lines) {
+        const m = l.match(/^Dịch (?:các )?đáp án\s*:\s*(.+)$/i);
+        if (!m) continue;
+        m[1].split(/(?:^|\s*[;–-]\s+|;\s*)(?=\(?[A-D][.)]|\([A-D]\))/).forEach(seg => {
+          const x = seg.match(/^\(?([A-D])[.)]\)?\s*(.+)$/); if (x) out.opt[x[1]] = viOf(x[2]);
+        });
+      }
+      for (const l of lines) {
+        let m = l.match(/^Đáp án\s+([A-D])\s*\(([^)]+)\)/i);
+        if (m) { if (!out.opt[m[1]]) out.opt[m[1]] = viOf(m[2]); continue; }
+        m = l.match(/^(?:Dịch\s+)?\(?([A-D])\)?(?:\s*[:.)–-]\s*|\s+)(.+)$/);
+        if (m && !out.opt[m[1]]) { const v = viOf(m[2]); if (v) out.opt[m[1]] = v; }
+      }
+      if (!Object.keys(out.opt).length) {
+        const plain = lines.filter(l => !isMeta(l) && !/^(?:Dịch câu hỏi|Câu hỏi|Question)\s*:/i.test(l));
+        if (plain.length === letters.length || plain.length === letters.length + 1) {
+          const off = plain.length - letters.length;
+          if (off && !out.q) out.q = viOf(plain[0]);
+          letters.forEach((L, i) => { const v = viOf(plain[i + off]); if (v) out.opt[L] = v; });
+        }
+      }
+      if (!out.q && Object.keys(out.opt).length) {
+        const first = lines[0];
+        if (first && !/^(?:Dịch\s+)?\(?[A-D]\)?(?:\s*[:.)–-]|\s)/.test(first) && !isMeta(first) && !/^Đáp án/i.test(first)) out.q = viOf(first);
+      }
+      return out;
+    }
+    const sameText = (a, b) => String(a || '').toLowerCase().replace(/[^a-z0-9]+/g, '') === String(b || '').toLowerCase().replace(/[^a-z0-9]+/g, '');
+    const viLine = (vi, en) => (vi && !sameText(vi, en)) ? `<span class="vi-line">${esc(vi)}</span>` : '';
 
     // =================== PICKER ===================
     function renderPicker() {
@@ -260,12 +321,13 @@
               <button class="spd ${speed === 1 ? 'active' : ''}" data-s="1">1x</button>
               <button class="spd ${speed === 1.25 ? 'active' : ''}" data-s="1.25">⚡ 1.25x</button>
               <label class="ls-auto"><input type="checkbox" id="ls-auto" ${auto ? 'checked' : ''}/> ⏭ Tự chuyển</label>
+              <label class="ls-auto" title="Hiện nghĩa tiếng Việt cùng script ở lần nghe 2"><input type="checkbox" id="ls-vi" ${showVi ? 'checked' : ''}/> 🇻🇳 Nghĩa</label>
             </div>
           </div>
           ${imgsHtml}
           <span class="au-slot" id="ls-au-slot"></span>
           <div class="ls-status" id="ls-status">⏳ Đang chuẩn bị…</div>
-          <div id="ls-script" style="display:none;"></div>
+          <div id="ls-script" class="${showVi ? '' : 'ls-novi'}" style="display:none;"></div>
           <div class="group-toolbar" id="ls-toolbar">
             <button class="btn ghost" id="ls-replay">🔁 Nghe lại (2 lần)</button>
             <span style="flex:1"></span>
@@ -280,6 +342,10 @@
       document.getElementById('ls-auto').addEventListener('change', e => {
         auto = e.target.checked; localStorage.setItem('toeicets_listen_auto', auto ? '1' : '0');
         if (!auto) cancelCd();
+      });
+      document.getElementById('ls-vi').addEventListener('change', e => {
+        showVi = e.target.checked; localStorage.setItem('toeicets_listen_vi', showVi ? '1' : '0');
+        const box = document.getElementById('ls-script'); if (box) box.classList.toggle('ls-novi', !showVi);
       });
       root.querySelectorAll('.spd[data-s]').forEach(b => b.addEventListener('click', () => {
         speed = parseFloat(b.dataset.s); localStorage.setItem('toeicets_listen_speed', String(speed));
@@ -303,35 +369,48 @@
       const rows = clip.rows, first = rows[0], part = clip.part;
       const optRow = (q, letters) => {
         const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
+        const vi = parseVi(q.Explain, letters);
         return letters.filter(L => (q[L] || '') !== '').map(L =>
           `<button class="option ${L === correct ? 'correct' : ''}" disabled>
-             <span class="letter">${L}</span><span>${esc(q[L] || '')}</span>
+             <span class="letter">${L}</span><span>${esc(q[L] || '')}${viLine(vi.opt[L], q[L])}</span>
            </button>`).join('');
       };
+      // Full Vietnamese explanation (translation + why), collapsed under the script
+      const explainHtml = q => (q.Explain || '').trim()
+        ? `<details class="ls-qa vi-block"><summary>🇻🇳 Dịch &amp; giải thích</summary><div class="ls-exp">${nl2br(q.Explain)}</div></details>` : '';
       if (part === 1) {
         const correct = (first.Answer || '').trim().toUpperCase().charAt(0);
         return `<div class="reveal-block"><div class="heading">📜 Lời thoại — đáp án đúng (câu ${qNum(first)}): ${correct}</div>
-            <div class="ls-opts">${optRow(first, ['A', 'B', 'C', 'D'])}</div></div>`;
+            <div class="ls-opts">${optRow(first, ['A', 'B', 'C', 'D'])}</div></div>${explainHtml(first)}`;
       }
       if (part === 2) {
         const correct = (first.Answer || '').trim().toUpperCase().charAt(0);
+        const qv = parseVi(first.Explain, ['A', 'B', 'C']).q;
         return `<div class="reveal-block"><div class="heading">📜 Lời thoại — đáp án đúng (câu ${qNum(first)}): ${correct}</div>
-            ${first.Question ? `<div class="ls-q">${esc(first.Question)}</div>` : ''}
-            <div class="ls-opts">${optRow(first, ['A', 'B', 'C'])}</div></div>`;
+            ${first.Question ? `<div class="ls-q">${esc(first.Question)}${viLine(qv, first.Question)}</div>` : ''}
+            <div class="ls-opts">${optRow(first, ['A', 'B', 'C'])}</div></div>${explainHtml(first)}`;
       }
       // Part 3 / 4: full English script, Vietnamese translation, and the questions + key.
-      const scriptHtml = first.Text
-        ? `<div class="reveal-block"><div class="heading">📜 Script bài nghe</div><div class="body">${nl2br(first.Text)}</div></div>` : '';
       const trans = Array.from(new Set(rows.map(q => q.Transcript || q.Translate || '').filter(Boolean)));
-      const transHtml = trans.length
-        ? `<div class="reveal-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(trans.join('\n\n'))}</div></div>` : '';
+      // When the translation has one line per script line (~98% of clips), put each Vietnamese line
+      // right under its English line; otherwise keep the translation as its own block.
+      const enLines = String(first.Text || '').split('\n').map(s => s.trim()).filter(Boolean);
+      const viLines = trans.length === 1 ? trans[0].split('\n').map(s => s.trim()).filter(Boolean) : [];
+      const paired = enLines.length > 0 && enLines.length === viLines.length;
+      const scriptHtml = !first.Text ? ''
+        : paired
+          ? `<div class="reveal-block"><div class="heading">📜 Script bài nghe <span class="vi-block">· kèm nghĩa</span></div>
+               ${enLines.map((en, i) => `<div class="ls-line">${esc(en)}<span class="vi-line">${esc(viLines[i])}</span></div>`).join('')}</div>`
+          : `<div class="reveal-block"><div class="heading">📜 Script bài nghe</div><div class="body">${nl2br(first.Text)}</div></div>`;
+      const transHtml = trans.length && !paired
+        ? `<div class="reveal-block vi-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(trans.join('\n\n'))}</div></div>` : '';
       const hasQ = rows.some(q => q.Question);
       const qaHtml = hasQ
         ? `<details class="ls-qa"><summary>📋 Câu hỏi &amp; đáp án (${rows.length} câu)</summary>
              ${rows.map(q => {
           const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
           return `<div class="ls-one">
-                 <div class="ls-q" style="font-size:15px;">${qNum(q) ? esc(qNum(q)) + '. ' : ''}${esc(q.Question || '')}</div>
+                 <div class="ls-q" style="font-size:15px;">${qNum(q) ? esc(qNum(q)) + '. ' : ''}${esc(q.Question || '')}${viLine(parseVi(q.Explain, ['A', 'B', 'C', 'D']).q, q.Question)}</div>
                  <div class="ls-opts">${optRow(q, ['A', 'B', 'C', 'D'])}</div>
                </div>`;
         }).join('')}
