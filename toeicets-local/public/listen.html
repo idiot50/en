@@ -73,6 +73,40 @@
     .ls-line:last-child { border-bottom:none; }
     .ls-exp { font-size:14px; line-height:1.65; padding:0 0 6px; }
     .ls-novi .vi-line, .ls-novi .vi-block { display:none !important; }
+    /* Phone: give the screen to the text — compact chrome, readable text */
+    @media (max-width: 600px) {
+      body.ls-playing .m-head { display:none; }
+      body.ls-playing .main { padding:6px 10px 0; }
+      .ls-header { padding:4px 0; margin-bottom:4px; gap:10px; }
+      .ls-header .close { width:30px; height:30px; }
+      .ls-header .progress-bar { height:10px; }
+      .ls-bar { margin-bottom:6px; gap:6px; flex-wrap:nowrap; }
+      .ls-meta { font-size:11.5px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; min-width:0; flex:1; }
+      .ls-tools { flex-wrap:nowrap; gap:5px; flex:none; }
+      .ls-tools .lbl, .group-toolbar .lbl { display:none; }
+      .spd:not(.active) { display:none; }
+      .spd, .ls-auto { padding:4px 8px; font-size:12px; border-radius:8px; }
+      .au-slot { margin-bottom:6px; }
+      .au-slot audio { height:34px; display:block; }
+      .ls-status { padding:5px 10px; font-size:12.5px; margin-bottom:8px; border-radius:9px; }
+      .ls-imgs { margin-bottom:6px; }
+      .ls-imgs .q-image { max-height:34vh; width:auto; max-width:100%; object-fit:contain; margin-bottom:6px; }
+      .reveal-block { margin-top:8px; padding:9px 11px; border-radius:9px; }
+      .reveal-block .heading { font-size:11.5px; margin-bottom:4px; }
+      .reveal-block .body { font-size:15.5px; line-height:1.6; }
+      .ls-line { font-size:15.5px; line-height:1.55; padding:5px 0; }
+      .vi-line { font-size:14px; }
+      .ls-q { font-size:15.5px !important; margin-bottom:6px; }
+      .ls-opts .option { width:100%; padding:8px 10px; margin-bottom:5px; border-bottom-width:2px; border-radius:10px; font-size:15px; gap:9px; }
+      .ls-opts .option .letter { width:24px; height:24px; font-size:12.5px; flex:none; }
+      .ls-qa { margin-top:10px; }
+      .ls-qa-open { padding:8px 11px; }
+      .ls-qa-h { padding:0 0 4px; font-size:13px; }
+      #ls-preq .ls-one, .ls-qa .ls-one { padding:7px 0; }
+      .group-toolbar { padding:6px 0 8px; gap:8px; flex-wrap:nowrap; }
+      .group-toolbar .btn { padding:9px 14px; font-size:13.5px; }
+      .ls-cd { font-size:12.5px; }
+    }
     .ls-cd a { color:var(--blue); }
     .group-toolbar { position:sticky; bottom:0; background:linear-gradient(to top, var(--bg-alt) 80%, transparent); padding:16px 0; display:flex; gap:10px; align-items:center; z-index:5; flex-wrap:wrap; }
     .au-errbox { background:#fff0f0; border:2px solid var(--red); border-radius:12px; padding:12px 14px; margin-bottom:12px; font-size:14px; line-height:1.6; }
@@ -178,6 +212,7 @@
 
     // =================== PICKER ===================
     function renderPicker() {
+      document.body.classList.remove('ls-playing');
       cancelCd();
       const yearsChips = Catalog.YEARS.map(y =>
         `<button class="ct-chip ${y.id === year ? 'active' : ''}" data-y="${esc(y.id)}">${esc(y.label)}</button>`).join('');
@@ -299,6 +334,7 @@
     function renderClip() {
       cancelCd();
       if (idx >= clips.length) { renderDone(); return; }
+      document.body.classList.add('ls-playing');
       const clip = clips[idx];
       picks = {};
       const rows = clip.rows;
@@ -328,8 +364,8 @@
               <button class="spd ${speed === 0.75 ? 'active' : ''}" data-s="0.75">🐢 0.75x</button>
               <button class="spd ${speed === 1 ? 'active' : ''}" data-s="1">1x</button>
               <button class="spd ${speed === 1.25 ? 'active' : ''}" data-s="1.25">⚡ 1.25x</button>
-              <label class="ls-auto"><input type="checkbox" id="ls-auto" ${auto ? 'checked' : ''}/> ⏭ Tự chuyển</label>
-              <label class="ls-auto" title="Hiện nghĩa tiếng Việt cùng script ở lần nghe 2"><input type="checkbox" id="ls-vi" ${showVi ? 'checked' : ''}/> 🇻🇳 Nghĩa</label>
+              <label class="ls-auto"><input type="checkbox" id="ls-auto" ${auto ? 'checked' : ''}/> ⏭<span class="lbl"> Tự chuyển</span></label>
+              <label class="ls-auto" title="Hiện nghĩa tiếng Việt cùng script ở lần nghe 2"><input type="checkbox" id="ls-vi" ${showVi ? 'checked' : ''}/> 🇻🇳<span class="lbl"> Nghĩa</span></label>
             </div>
           </div>
           ${imgsHtml}
@@ -338,7 +374,7 @@
           <div id="ls-preq" style="display:none;"></div>
           <div id="ls-script" class="${showVi ? '' : 'ls-novi'}" style="display:none;"></div>
           <div class="group-toolbar" id="ls-toolbar">
-            <button class="btn ghost" id="ls-replay">🔁 Nghe lại (2 lần)</button>
+            <button class="btn ghost" id="ls-replay">🔁 Nghe lại<span class="lbl"> (2 lần)</span></button>
             <span style="flex:1"></span>
             <button class="btn blue" id="ls-next">${isLast ? 'Hoàn thành ✓' : 'Câu tiếp →'}</button>
           </div>
@@ -357,6 +393,11 @@
         const box = document.getElementById('ls-script'); if (box) box.classList.toggle('ls-novi', !showVi);
       });
       root.querySelectorAll('.spd[data-s]').forEach(b => b.addEventListener('click', () => {
+        // On a phone only the current speed is shown: tapping it cycles 0.75 → 1 → 1.25.
+        if (b.classList.contains('active') && window.matchMedia('(max-width: 600px)').matches) {
+          const all = Array.from(root.querySelectorAll('.spd[data-s]'));
+          b = all[(all.indexOf(b) + 1) % all.length];
+        }
         speed = parseFloat(b.dataset.s); localStorage.setItem('toeicets_listen_speed', String(speed));
         root.querySelectorAll('.spd[data-s]').forEach(x => x.classList.toggle('active', x === b));
         if (lsAudio) lsAudio.playbackRate = speed;
@@ -583,6 +624,7 @@
     }
 
     function renderDone() {
+      document.body.classList.remove('ls-playing');
       cancelCd();
       root.innerHTML = sidebar + `<main class="main">
         <div class="modal" style="margin:40px auto;max-width:620px;">
