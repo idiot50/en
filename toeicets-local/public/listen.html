@@ -59,6 +59,13 @@
     .ls-qa[open] > summary::before { content:'▾ '; }
     .ls-qa .ls-one { padding:12px 0; border-top:1px dashed var(--border); }
     .ls-qa .ls-one:first-of-type { border-top:none; }
+    .ls-qa-open { padding:12px 16px; }
+    .ls-qa-h { font-weight:800; font-size:14px; color:var(--blue-dark); padding:2px 0 8px; display:flex; align-items:center; gap:10px; flex-wrap:wrap; }
+    .ls-score { font-size:12.5px; font-weight:900; color:#c0392b; background:#ffe5e5; border-radius:20px; padding:2px 10px; }
+    .ls-score.ok { color:var(--green-dark); background:var(--green-soft); }
+    #ls-preq .ls-one { padding:10px 0; border-top:1px dashed var(--border); }
+    #ls-preq .ls-one:first-of-type { border-top:none; }
+    #ls-preq .option { cursor:pointer; }
     .ls-cd { font-weight:800; color:var(--blue-dark); margin-right:auto; }
     .vi-line { display:block; margin-top:3px; font-size:13.5px; font-weight:600; font-style:italic; color:#2f7d32; line-height:1.4; }
     .ls-q .vi-line { font-size:14px; }
@@ -293,6 +300,7 @@
       cancelCd();
       if (idx >= clips.length) { renderDone(); return; }
       const clip = clips[idx];
+      picks = {};
       const rows = clip.rows;
       const first = rows[0];
       const pct = Math.round(idx / clips.length * 100);
@@ -327,6 +335,7 @@
           ${imgsHtml}
           <span class="au-slot" id="ls-au-slot"></span>
           <div class="ls-status" id="ls-status">⏳ Đang chuẩn bị…</div>
+          <div id="ls-preq" style="display:none;"></div>
           <div id="ls-script" class="${showVi ? '' : 'ls-novi'}" style="display:none;"></div>
           <div class="group-toolbar" id="ls-toolbar">
             <button class="btn ghost" id="ls-replay">🔁 Nghe lại (2 lần)</button>
@@ -367,11 +376,11 @@
     // ---- Script (revealed on the 2nd play) ----
     function buildScript(clip) {
       const rows = clip.rows, first = rows[0], part = clip.part;
-      const optRow = (q, letters) => {
+      const optRow = (q, letters, chosen) => {
         const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
         const vi = parseVi(q.Explain, letters);
         return letters.filter(L => (q[L] || '') !== '').map(L =>
-          `<button class="option ${L === correct ? 'correct' : ''}" disabled>
+          `<button class="option ${L === correct ? 'correct' : (L === chosen ? 'wrong' : '')}" disabled>
              <span class="letter">${L}</span><span>${esc(q[L] || '')}${viLine(vi.opt[L], q[L])}</span>
            </button>`).join('');
       };
@@ -405,24 +414,54 @@
       const transHtml = trans.length && !paired
         ? `<div class="reveal-block vi-block" style="border-left-color:var(--green);"><div class="heading">🇻🇳 Bản dịch</div><div class="body">${nl2br(trans.join('\n\n'))}</div></div>` : '';
       const hasQ = rows.some(q => q.Question);
+      // Score of what the learner picked during the 1st play
+      const keyOf = q => (q.Answer || '').trim().toUpperCase().charAt(0);
+      const nPicked = rows.filter((q, i) => picks[i]).length;
+      const nRight = rows.filter((q, i) => picks[i] && picks[i] === keyOf(q)).length;
       const qaHtml = hasQ
-        ? `<details class="ls-qa"><summary>📋 Câu hỏi &amp; đáp án (${rows.length} câu)</summary>
-             ${rows.map(q => {
-          const correct = (q.Answer || '').trim().toUpperCase().charAt(0);
-          return `<div class="ls-one">
+        ? `<div class="ls-qa ls-qa-open"><div class="ls-qa-h">📋 Câu hỏi &amp; đáp án (${rows.length} câu)
+             ${nPicked ? `<span class="ls-score ${nRight === rows.length ? 'ok' : ''}">Bạn đúng ${nRight}/${rows.length}</span>` : ''}</div>
+             ${rows.map((q, i) => `<div class="ls-one">
                  <div class="ls-q" style="font-size:15px;">${qNum(q) ? esc(qNum(q)) + '. ' : ''}${esc(q.Question || '')}${viLine(parseVi(q.Explain, ['A', 'B', 'C', 'D']).q, q.Question)}</div>
-                 <div class="ls-opts">${optRow(q, ['A', 'B', 'C', 'D'])}</div>
-               </div>`;
-        }).join('')}
-           </details>` : '';
+                 <div class="ls-opts">${optRow(q, ['A', 'B', 'C', 'D'], picks[i])}</div>
+               </div>`).join('')}
+           </div>` : '';
       return scriptHtml + transHtml + qaHtml;
     }
 
     function showScript(clip) {
+      hidePreQ();
       const box = document.getElementById('ls-script');
       if (!box) return;
       box.innerHTML = buildScript(clip);
       box.style.display = '';
+    }
+
+    // ---- Part 3/4: questions + options (no key) during the 1st play, like the test booklet ----
+    let picks = {};   // question index in the clip → letter the learner chose
+    function showPreQ(clip) {
+      const box = document.getElementById('ls-preq');
+      if (!box) return;
+      const rows = clip.rows.filter(q => q.Question);
+      if (clip.part < 3 || !rows.length) { box.style.display = 'none'; box.innerHTML = ''; return; }
+      box.innerHTML = `<div class="reveal-block" style="border-left-color:var(--gold);">
+          <div class="heading">❓ Câu hỏi — vừa nghe vừa chọn đáp án</div>
+          ${clip.rows.map((q, i) => !q.Question ? '' : `<div class="ls-one" data-i="${i}">
+              <div class="ls-q" style="font-size:15px;">${qNum(q) ? esc(qNum(q)) + '. ' : ''}${esc(q.Question)}</div>
+              <div class="ls-opts">${['A', 'B', 'C', 'D'].filter(L => (q[L] || '') !== '').map(L =>
+                `<button class="option ${picks[i] === L ? 'selected' : ''}" data-l="${L}"><span class="letter">${L}</span><span>${esc(q[L])}</span></button>`).join('')}</div>
+            </div>`).join('')}
+          <div class="muted" style="font-size:12.5px;margin-top:6px;">Đáp án và script sẽ hiện ở lần nghe thứ 2.</div></div>`;
+      box.style.display = '';
+      box.querySelectorAll('.ls-one').forEach(one => one.addEventListener('click', e => {
+        const b = e.target.closest('.option'); if (!b) return;
+        picks[+one.dataset.i] = b.dataset.l;
+        one.querySelectorAll('.option').forEach(x => x.classList.toggle('selected', x === b));
+      }));
+    }
+    function hidePreQ() {
+      const box = document.getElementById('ls-preq');
+      if (box) { box.style.display = 'none'; box.innerHTML = ''; }
     }
     function hideScript() {
       const box = document.getElementById('ls-script');
@@ -480,6 +519,7 @@
       cancelCd();
       playNum = 1; clipDone = false;
       hideScript();
+      if (clips[idx]) showPreQ(clips[idx]);
       setStatus('p1', '🙈 Lần 1/2 · nghe chay — chưa hiện script, thử đoán ý');
       try { au.currentTime = 0; } catch (e) {}
       au.playbackRate = speed;
