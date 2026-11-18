@@ -76,6 +76,12 @@
     .g10 .exp { margin-top:9px; padding:10px 13px; border-radius:10px; font-size:14px; line-height:1.6; }
     .g10 .exp.ok { background:#f0ffe6; border-left:4px solid var(--green); }
     .g10 .exp.no { background:#fff1f1; border-left:4px solid var(--red); }
+    .g10 .exp .why { white-space:pre-line; }
+    .g10 .gq .src { font-size:12px; color:var(--text-mute); font-weight:600; margin-left:6px; }
+    .g10 .xsel { display:flex; gap:8px; flex-wrap:wrap; margin:0 0 12px; }
+    .g10 .xsel a { padding:7px 13px; border-radius:999px; border:2px solid var(--border); background:var(--bg-card, #fff); font-weight:800; font-size:14px; text-decoration:none; color:inherit; }
+    .g10 .xsel a.active { border-color:var(--blue); background:#eaf6ff; color:var(--blue-dark, var(--blue)); }
+    .g10 .xsel a .ok { color:var(--green-dark, var(--green)); }
     .g10 .exp .vi { color:var(--text-mute); font-style:italic; margin-top:4px; }
     .g10 .vgrid { display:grid; grid-template-columns:repeat(auto-fill,minmax(270px,1fr)); gap:10px; }
     .g10 .vcard { background:white; border:2px solid var(--border); border-radius:14px; padding:12px 14px; }
@@ -182,13 +188,25 @@
       if (!cache[n]) cache[n] = fetch('/data/grammar10/day' + pad(n) + '.json').then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).catch(e => { delete cache[n]; throw e; });
       return cache[n];
     }
+    const xcache = {};
+    // "Luyện tập 2, 3, …": real Part 5/6 questions from the app's tests (optional file per day)
+    function loadExtra(n) {
+      if (!xcache[n]) xcache[n] = fetch('/data/grammar10/extra/day' + pad(n) + '.json').then(r => { if (!r.ok) throw new Error('HTTP ' + r.status); return r.json(); }).catch(e => { delete xcache[n]; throw e; });
+      return xcache[n];
+    }
+    async function attachExtra(days, ids) {
+      const need = Array.from(new Set(ids.filter(x => x.split(':')[1] === 'x').map(x => +x.split(':')[0])));
+      await Promise.all(need.map(async k => { if (!days[k]) return; try { days[k] = Object.assign({}, days[k], { extra: await loadExtra(k) }); } catch (e) {} }));
+      return days;
+    }
     async function loadDays(list) { const out = {}; await Promise.all(list.map(async n => { try { out[n] = await loadDay(n); } catch (e) {} })); return out; }
-    // id: "D:t:i" test, "D:r:i" review bank, "D:p:S:i" practice set, "D:v:i" vocab practice
+    // id: "D:t:i" test, "D:r:i" review bank, "D:p:S:i" practice set, "D:v:i" vocab practice, "D:x:K:i" extra practice K (real exam items)
     function getItem(days, id) {
       const a = id.split(':'), d = days[+a[0]]; if (!d) return null;
       if (a[1] === 't') return (d.test || [])[+a[2]];
       if (a[1] === 'r') return (d.reviewBank || [])[+a[2]];
       if (a[1] === 'v') return (d.vocabPractice || [])[+a[2]];
+      if (a[1] === 'x') { const x = d.extra && d.extra.practices && d.extra.practices[+a[2]]; return x ? x.items[+a[3]] : null; }
       if (a[1] === 'p') return ((d.practice || [])[+a[2]] || {}).items ? d.practice[+a[2]].items[+a[3]] : null;
       return null;
     }
@@ -214,7 +232,7 @@
     // ---------------- question rendering ----------------
     function qHtml(it, id, num, badge) {
       return `<div class="gq" data-id="${esc(id)}" id="q-${esc(id).replace(/:/g, '-')}">
-        <div class="qn">Câu ${num}${badge ? ` <span class="tag">${esc(badge)}</span>` : ''}</div>
+        <div class="qn">Câu ${num}${badge ? ` <span class="tag">${esc(badge)}</span>` : ''}${it.src ? `<span class="src">📄 ${esc(it.src)}</span>` : ''}</div>
         ${it.ctx ? `<div class="ctx">${gap(it.ctx)}</div>` : ''}
         <div class="qt">${gap(it.q)}</div>
         <div class="options">${(it.options || []).map((o, i) => `<button class="option" data-i="${i}"><span class="letter">${L[i]}</span><span>${esc(o)}</span></button>`).join('')}</div>
@@ -225,7 +243,7 @@
       const ok = chosen === it.ans;
       const head = chosen == null ? `⏺ Chưa trả lời — đáp án đúng: <b>${L[it.ans]}. ${esc(it.options[it.ans])}</b>`
         : ok ? `✅ <b>Đúng!</b>` : `❌ <b>Sai.</b> Đáp án đúng: <b>${L[it.ans]}. ${esc(it.options[it.ans])}</b>`;
-      return `<div class="exp ${ok ? 'ok' : 'no'}">${head}<div>💡 ${md(it.why)}</div>${it.vi ? `<div class="vi">🇻🇳 ${esc(it.vi)}</div>` : ''}</div>`;
+      return `<div class="exp ${ok ? 'ok' : 'no'}">${head}<div class="why">💡 ${md(it.why)}</div>${it.vi ? `<div class="vi">🇻🇳 ${esc(it.vi)}</div>` : ''}</div>`;
     }
     function markOptions(box, it, chosen) {
       box.querySelectorAll('.option').forEach(b => {
@@ -293,7 +311,7 @@
           <h3 style="font-weight:900;">📋 Cách học mỗi ngày (2–3 giờ)</h3>
           <ol>
             <li><b>Lý thuyết (~50 phút):</b> đọc kỹ từng quy tắc, đọc to ví dụ, chép công thức vào vở.</li>
-            <li><b>Luyện tập (~45 phút):</b> làm từng bài, đọc giải thích của <i>cả câu đúng lẫn câu sai</i>.</li>
+            <li><b>Luyện tập (~45 phút):</b> làm từng bài, đọc giải thích của <i>cả câu đúng lẫn câu sai</i>. Còn thời gian thì làm thêm <b>Luyện tập 2, 3…</b> — câu Part 5 + Part 6 trích từ đề thật theo chủ điểm của ngày.</li>
             <li><b>Từ vựng (~30 phút):</b> 25 từ theo chủ đề, nghe phát âm, che nghĩa để tự kiểm tra, rồi làm bài từ vựng.</li>
             <li><b>Kiểm tra cuối ngày (30 phút):</b> 30 câu — 20 câu bài hôm nay + 10 câu ôn các ngày trước. Đạt từ <b>${PASS_PCT}%</b> mới sang ngày mới.</li>
             <li><b>Xem lại lỗi (~15 phút):</b> câu sai tự vào mục “Ôn câu sai”; làm lại đến khi đúng.</li>
@@ -351,9 +369,10 @@
       };
     }
 
-    function setBlock(n, d, sIdx, set, container, before) {
-      const p = loadP(), prev = (dayP(p, n).sets || {})[set.id];
-      const entries = (set.items || []).map((it, i) => ({ id: `${n}:p:${sIdx}:${i}`, it }));
+    // set: {id,title,instr,items}; idOf(i) -> wrong-list id; store: 'sets' (Luyện tập 1, counts toward the day step) or 'xsets' (extra practices)
+    function setBlock(n, set, idOf, store, container, before) {
+      const p = loadP(), dp0 = dayP(p, n), prev = (dp0[store] || {})[set.id];
+      const entries = (set.items || []).map((it, i) => ({ id: idOf(i), it }));
       const box = document.createElement('div'); box.className = 'set';
       box.innerHTML = `<div class="set-h"><h3>${esc(set.title)}</h3>
           ${prev ? `<span class="tag ${pct(prev.ok, prev.n) >= PASS_PCT ? '' : 'warn'}">Lần trước: ${prev.ok}/${prev.n}</span>` : ''}
@@ -362,18 +381,50 @@
         <div class="qs">${entries.map((e, i) => qHtml(e.it, e.id, i + 1)).join('')}</div>
         <div class="set-res"></div>`;
       container.insertBefore(box, before || null);
-      box.querySelector('.redo').onclick = () => { const nxt = box.nextSibling; box.remove(); setBlock(n, d, sIdx, set, container, nxt); };
+      box.querySelector('.redo').onclick = () => { const nxt = box.nextSibling; box.remove(); setBlock(n, set, idOf, store, container, nxt); };
       bindInstant(box.querySelector('.qs'), entries, (id, ok) => { if (!ok) addWrong(id); else dropWrong(id); }, (ok, tot) => {
-        const p2 = loadP(), dp = dayP(p2, n), old = dp.sets[set.id];
-        if (!old || ok >= old.ok) dp.sets[set.id] = { ok, n: tot, at: todayISO() };
+        const p2 = loadP(), dp = dayP(p2, n);
+        if (!dp[store] || typeof dp[store] !== 'object') dp[store] = {};
+        const old = dp[store][set.id];
+        if (!old || ok >= old.ok) dp[store][set.id] = { ok, n: tot, at: todayISO() };
         saveP(p2);
         box.querySelector('.set-res').innerHTML = `<div class="exp ${pct(ok, tot) >= PASS_PCT ? 'ok' : 'no'}" style="font-size:15px;">
           Kết quả: <b>${ok}/${tot}</b> (${pct(ok, tot)}%). ${pct(ok, tot) >= PASS_PCT ? 'Tốt lắm! 👍' : 'Hãy đọc lại phần lý thuyết liên quan rồi bấm “Làm lại”.'}</div>`;
       });
     }
-    function renderPractice(n, d, body) {
-      body.innerHTML = `<p class="muted" style="margin-bottom:10px;">Bấm chọn đáp án — hệ thống chấm ngay và giải thích. Câu sai được lưu vào <b>Ôn câu sai</b>.</p>`;
-      (d.practice || []).forEach((set, i) => setBlock(n, d, i, set, body));
+    const XBLOCK = 10;
+    async function renderPractice(n, d, body) {
+      const k = Math.max(0, parseInt(new URLSearchParams(location.search).get('set'), 10) || 0);
+      body.innerHTML = `<div class="xsel" id="xsel"><a class="active" href="?day=${n}&tab=practice" data-go="?day=${n}&tab=practice">Luyện tập 1</a></div>
+        <p class="muted" id="xnote" style="margin-bottom:10px;">Bấm chọn đáp án — hệ thống chấm ngay và giải thích. Câu sai được lưu vào <b>Ôn câu sai</b>.</p>
+        <div id="xbody"></div>`;
+      const xb = document.getElementById('xbody');
+      if (!k) (d.practice || []).forEach((set, i) => setBlock(n, set, j => `${n}:p:${i}:${j}`, 'sets', xb));
+      let x = null;
+      try { x = await loadExtra(n); } catch (e) {}
+      if (!document.getElementById('xsel')) return;   // navigated away while loading
+      const prs = (x && x.practices) || [];
+      const xs = dayP(loadP(), n).xsets || {};
+      const doneOf = (pr, pi) => Array.from({ length: Math.ceil(pr.items.length / XBLOCK) }, (_, b) => xs[`${pr.id}-${b + 1}`]).filter(Boolean).length;
+      document.getElementById('xsel').innerHTML = [`<a class="${k ? '' : 'active'}" href="?day=${n}&tab=practice" data-go="?day=${n}&tab=practice">Luyện tập 1</a>`]
+        .concat(prs.map((pr, pi) => { const nb = Math.ceil(pr.items.length / XBLOCK), dn = doneOf(pr, pi);
+          return `<a class="${k === pi + 1 ? 'active' : ''}" href="?day=${n}&tab=practice&set=${pi + 1}" data-go="?day=${n}&tab=practice&set=${pi + 1}" title="${pr.items.length} câu đề thật">${esc(pr.title)}${dn ? (dn >= nb ? ' <span class="ok">✓</span>' : ` <small>${dn}/${nb}</small>`) : ''}</a>`; })).join('');
+      if (!k) {
+        if (prs.length) xb.insertAdjacentHTML('beforeend', `<div class="card" style="margin-top:12px;">📝 Làm xong? Ôn thêm với <b>${prs.length} bài luyện tập câu đề thật</b> (Part 5 + Part 6) theo chủ điểm hôm nay:
+          ${prs.map((pr, pi) => `<a class="btn ghost small" style="margin:4px 4px 0 0;" href="?day=${n}&tab=practice&set=${pi + 1}" data-go="?day=${n}&tab=practice&set=${pi + 1}">${esc(pr.title)} →</a>`).join('')}</div>`);
+        return;
+      }
+      const pr = prs[k - 1];
+      if (!pr) { xb.innerHTML = `<div class="card">${x ? 'Không có bài luyện tập này.' : 'Không tải được bài luyện tập. Kiểm tra kết nối mạng rồi thử lại.'} <a href="?day=${n}&tab=practice" data-go="?day=${n}&tab=practice">← Luyện tập 1</a></div>`; return; }
+      const nP6 = pr.items.filter(it => it.ctx).length;
+      document.getElementById('xnote').innerHTML = `<b>${pr.items.length} câu đề thật</b> (${pr.items.length - nP6} câu Part 5${nP6 ? ` + ${nP6} câu Part 6` : ''}) về <b>${esc(x.title || '')}</b>, trích từ 60 đề thi trong ứng dụng. Chấm ngay, có giải thích; câu sai vào <b>Ôn câu sai</b>.`;
+      for (let b = 0; b * XBLOCK < pr.items.length; b++) {
+        const items = pr.items.slice(b * XBLOCK, (b + 1) * XBLOCK);
+        const isP6 = items.every(it => it.ctx);
+        const set = { id: `${pr.id}-${b + 1}`, title: `Phần ${b + 1} · ${isP6 ? 'Part 6 (đoạn văn)' : 'Part 5'}`, instr: isP6 ? 'Đọc đoạn văn, chọn đáp án điền vào chỗ trống (ô dấu ?).' : '', items };
+        setBlock(n, set, j => `${n}:x:${k - 1}:${b * XBLOCK + j}`, 'xsets', xb);
+      }
+      if (k < prs.length) xb.insertAdjacentHTML('beforeend', `<div style="text-align:center;margin:12px 0;"><a class="btn blue" href="?day=${n}&tab=practice&set=${k + 1}" data-go="?day=${n}&tab=practice&set=${k + 1}">${esc(prs[k].title)} →</a></div>`);
     }
 
     function renderVocab(n, d, body) {
@@ -587,7 +638,7 @@
     async function renderWrong() {
       const p = loadP();
       const ids = p.wrong.slice(0, 40);
-      const days = await loadDays(Array.from(new Set(ids.map(x => +x.split(':')[0]))));
+      const days = await attachExtra(await loadDays(Array.from(new Set(ids.map(x => +x.split(':')[0])))), ids);
       const entries = ids.map(id => ({ id, it: getItem(days, id) })).filter(e => e.it);
       page(`<div class="head"><a class="btn ghost small" href="?" data-go="?">← 10 ngày</a><h2>🩹 Ôn câu sai</h2>
           <span class="tag">${p.wrong.length} câu</span></div>
