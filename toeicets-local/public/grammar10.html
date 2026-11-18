@@ -116,7 +116,7 @@
 <body>
   <div class="app" id="app"></div>
   <script src="/js/state.js?v=11"></script>
-  <script src="/js/history.js?v=2"></script>
+  <script src="/js/history.js?v=3"></script>
   <script src="/js/catalog.js?v=12"></script>
   <script src="/js/layout.js?v=17"></script>
   <script src="https://www.gstatic.com/firebasejs/10.12.2/firebase-app-compat.js"></script>
@@ -181,7 +181,11 @@
     // deterministic shuffle
     function rng(seed) { let s = seed >>> 0 || 1; return () => { s ^= s << 13; s >>>= 0; s ^= s >> 17; s ^= s << 5; s >>>= 0; return s / 4294967296; }; }
     function shuffle(a, seed) { const r = rng(seed), b = a.slice(); for (let i = b.length - 1; i > 0; i--) { const j = Math.floor(r() * (i + 1)); [b[i], b[j]] = [b[j], b[i]]; } return b; }
-    function logHist(ok) { try { if (window.Hist) Hist.add(5, ok, 'grammar'); } catch (e) {} }
+    // Study history: every answer counts under "Ngữ pháp 10 ngày"; passage items (ctx) are Part 6.
+    function logHist(ok, it) { try { if (window.Hist) Hist.add(it && it.ctx ? 6 : 5, ok, 'grammar10'); } catch (e) {} }
+    // Practice time: seconds between answers, capped so an idle tab doesn't count.
+    let lastAns = Date.now();
+    function logTime() { const now = Date.now(), s = Math.round(Math.min(now - lastAns, 180000) / 1000); lastAns = now; try { if (window.Hist && s > 0) Hist.addSeconds(s); } catch (e) {} }
 
     const cache = {};
     function loadDay(n) {
@@ -214,6 +218,7 @@
     function dropWrong(id) { const p = loadP(); const i = p.wrong.indexOf(id); if (i >= 0) { p.wrong.splice(i, 1); saveP(p); } }
 
     function page(inner) {
+      lastAns = Date.now();
       root.innerHTML = sidebar + `<main class="main g10">${topbar}${inner}</main>`;
       window.scrollTo(0, 0);
     }
@@ -264,7 +269,7 @@
           const id = box.dataset.id, it = map[id], ch = +b.dataset.i, ok = ch === it.ans;
           markOptions(box, it, ch);
           answered++; if (ok) correct++;
-          logHist(ok);
+          logHist(ok, it); logTime();
           if (onAnswer) onAnswer(id, ok);
           if (answered === entries.length && onDone) onDone(correct, entries.length);
         });
@@ -598,7 +603,7 @@
         dp.best = Math.max(typeof dp.best === 'number' ? dp.best : -1, pct(rec.ok, rec.n));
         if (sameTest(p)) delete p.active;
         saveP(p);
-        res.forEach(r => { if (!r.ok) addWrong(r.id); else dropWrong(r.id); logHist(r.ok); });
+        res.forEach(r => { if (!r.ok) addWrong(r.id); else dropWrong(r.id); logHist(r.ok, r.it); });
         // A test resumed long after its deadline auto-submits at once: don't log 30 phantom minutes.
         const late = Date.now() - act.deadline > 5000;
         try { if (window.Hist && !late) Hist.addSeconds(Math.max(0, Math.min(TEST_SECS, TEST_SECS - Math.round((act.deadline - Date.now()) / 1000)))); } catch (e) {}

@@ -3,7 +3,7 @@
 //   { days: { "YYYY-MM-DD": {
 //       parts: { "1": {n, ok}, ..., "7": {n, ok} },   // n = câu đã làm, ok = câu đúng
 //       feats: { "drill": {n, ok}, "quick": {...}, "test": {...}, "part2": {...},
-//                "dictation": {...}, "mistakes": {...}, "grammar": {...}, "study": {...} },
+//                "dictation": {...}, "mistakes": {...}, "grammar": {...}, "grammar10": {...}, "study": {...} },
 //       secs: <seconds studied>                        // optional, best-effort
 //   } } }
 // Kept small on purpose: only counters, never the questions themselves.
@@ -19,6 +19,7 @@ window.Hist = (function () {
     dictation: { icon: '✍️', label: 'Chép chính tả' },
     mistakes:  { icon: '🩹', label: 'Sổ lỗi sai' },
     grammar:   { icon: '🎯', label: 'Luyện ngữ pháp' },
+    grammar10: { icon: '🗓️', label: 'Ngữ pháp 10 ngày' },
     study:     { icon: '🧠', label: 'Học & Ôn' },
     other:     { icon: '📌', label: 'Khác' }
   };
